@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+.superpowers/
+.claude/settings.local.json
+.claude/worktrees/
+tmp/
+
+# Course material lives in Google Drive, not here
+*.pdf
+*.mp4
+
+# Rendered decks are regenerated from plan/slides.md
+*.pptx
