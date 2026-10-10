@@ -21,6 +21,14 @@ The plan must integrate:
 **Format rule:** max 10 slides. What the board must *decide* goes in the
 slides; everything that *supports* it goes in annexes.
 
+**Team:** Grupo 11, 5 members. Teammate onboarding lives in `README.md`; keep
+it in sync when the workflow changes.
+
+**Everything is generated.** `plan/slides.md` (Marp-compatible markdown, one
+slide per `---`) is the only deck source; `scripts/build-deck.sh` renders it
+to `out/` (gitignored) with Marp and pandoc so formats can be compared. Never
+edit a rendered deck; fix the markdown and rebuild.
+
 ## Key dates
 
 | Milestone | Date |
@@ -41,6 +49,7 @@ slides; everything that *supports* it goes in annexes.
 | `plan/annexes/` | One file per annex, referenced from the slides |
 | `defense/` | Storyline, objection bank, evidence map |
 | `reviews/` | Output of board reviews and peer review, dated |
+| `scripts/build-deck.sh` | Renders the deck: `all` (default), `marp` or `pandoc` |
 
 ## Sources
 

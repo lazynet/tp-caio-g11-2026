@@ -12,3 +12,6 @@ tmp/
 
 # Rendered decks are regenerated from plan/slides.md
 *.pptx
+
+# Rendered decks (scripts/build-deck.sh)
+out/
