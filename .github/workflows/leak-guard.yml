@@ -26,7 +26,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      # Binario oficial en vez de gitleaks-action: la action arma el rango
+      # "<raíz>^..HEAD" en el primer push y falla porque la raíz no tiene padre.
       - name: Credenciales en toda la historia
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/repo" \
+            ghcr.io/gitleaks/gitleaks:v8.21.2 git /repo --redact --verbose
