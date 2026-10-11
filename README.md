@@ -92,7 +92,7 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
    El `-c core.symlinks=true` solo importa en Windows; en macOS y Linux no cambia nada.
 
 2. Abrí tu agente ahí: `claude`, `codex`, o la carpeta en VS Code con el chat de Copilot.
-3. Pedile: *"leé AGENTS.md y material/README.md y contame en qué estado está el plan"*.
+3. Pedile: *"leé AGENTS.md y material/index.md y contame en qué estado está el plan"*.
 4. Generá el deck: `./scripts/build-deck.sh` (o pedíselo al agente) y abrí
    `out/deck-marp.html` en el navegador.
 
@@ -102,12 +102,19 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 |---|---|---|
 | `plan/slides.md` | las 10 slides, fuente única del deck | `caio` integra |
 | `plan/annexes/` | un anexo por tema: el detalle que sostiene cada slide | el agente dueño del tema |
-| `context/` | datos **públicos** o anonimizados de Flexibility, con su fuente | Martin (tiene el acceso) |
+| `context/` | datos **públicos** o anonimizados de Flexibility, un archivo por hecho, con su fuente | Martin (tiene el acceso) |
 | `private/` | datos internos reales — **solo local, nunca se versiona** | Martin |
-| `material/` | índice del material de la cursada por sección del plan | — |
+| `material/` | una ficha por unidad y por framework de la cursada, y qué sección del plan respalda cada uno | — |
 | `defense/` | storyline, objeciones, evidencia | `caio` + `board` |
+| `defense/evidence/` | una ficha por evidencia: qué objeción responde y de dónde sale | `caio` + `board` |
 | `reviews/` | revisiones del board y del peer review, con fecha | `board` |
 | `out/` | decks generados — **no se versiona ni se edita** | el script |
+
+`context/`, `material/` y `defense/evidence/` siguen el formato abierto
+[OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md):
+un archivo markdown por concepto, con su fuente arriba y links entre fichas. Para
+ver qué hay, abrí el `index.md` de cada carpeta. Las reglas están en `AGENTS.md`,
+"Bases de conocimiento (OKF)"; si escribís con un agente, ya las conoce.
 
 ## Los agentes
 

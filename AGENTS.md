@@ -52,11 +52,11 @@ no se edita nunca: se corrige el markdown y se regenera.
 
 | Path | Qué tiene |
 |---|---|
-| `context/` | Datos de Flexibility en los que se apoya el plan, cada uno con su fuente |
-| `material/` | Índice del material de la cursada: qué unidad o framework respalda cada sección |
+| `context/` | Bundle OKF: hechos y supuestos sobre Flexibility, cada uno con su fuente |
+| `material/` | Bundle OKF: unidades y frameworks de la cursada, y qué sección del plan respalda cada uno |
 | `plan/slides.md` | Las 10 slides, fuente única del deck |
 | `plan/annexes/` | Un archivo por anexo, referenciado desde las slides |
-| `defense/` | Storyline, banco de objeciones, mapa de evidencia |
+| `defense/` | Storyline, banco de objeciones; `defense/evidence/` es un bundle OKF |
 | `reviews/` | Revisiones del board y del peer review, con fecha |
 | `scripts/build-deck.sh` | Genera el deck: `all` (default), `marp` o `pandoc` |
 | `.claude/agents/` | Los agentes por rol, fuente única para todas las herramientas |
@@ -66,7 +66,7 @@ no se edita nunca: se corrige el markdown y se regenera.
 
 - Material de la cursada (PDFs, frameworks): carpeta de Google Drive de Martin.
   La ruta local está en `private/sources.md`, que no se versiona. Los PDFs no se
-  copian al repo; si no tenés acceso, usá `material/README.md`.
+  copian al repo; si no tenés acceso, usá `material/index.md`.
 - Notebook consolidado: https://notebook.google.com/notebook/57ec4d6d-41a0-4030-9273-9bfc94cfb4ae
   (los agentes no pueden leerlo; los extractos se pegan en `material/`).
 
@@ -95,6 +95,29 @@ en forks, clones y caches. Por eso:
   activa `scripts/setup.sh`) y en GitHub Actions (`leak-guard`). Revisa patrones
   fijos y una denylist privada (`.leak-denylist` local, secreto `LEAK_DENYLIST`
   en GitHub). Nunca uses `git commit --no-verify` para saltearlo.
+
+## Bases de conocimiento (OKF)
+
+`context/`, `material/` y `defense/evidence/` siguen
+[OKF v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md):
+un archivo por concepto, con frontmatter YAML, y links markdown absolutos al
+bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recorrer.
+
+- **`type` es obligatorio.** Usamos `Hecho` y `Supuesto` en `context/`; `Unidad`,
+  `Framework`, `Programa`, `Mapa` y `Hueco` en `material/`; `Evidencia` en
+  `defense/evidence/`. Si necesitás un tipo nuevo, sumalo acá.
+- **También van** `title`, `description` (una oración), `sources` con un `id` por
+  fuente y `generated: { by, at }`. Cada afirmación cita su fuente con una nota al
+  pie cuya etiqueta es el `id`: `[^m1u2]`. Un `Hecho` sin `sources` no es un hecho.
+- **Confianza.** Quien escribe va en `generated.by` (`claude-code/<modelo>`,
+  `codex/<modelo>` o `human:<usuario-github>`). Cuando una persona chequea el
+  concepto contra la fuente, se agrega en `verified`. Sin `verified`, la cifra no
+  va en una slide.
+- **Ciclo de vida.** `status: draft` hasta verificar; las cautelas van en una
+  sección `# Cautelas` del concepto.
+- **Índices.** La raíz de cada bundle tiene un `index.md` con `okf_version` como
+  único frontmatter. Al sumar un concepto, se agrega su línea con la `description`.
+- **Chequeo automático:** `scripts/okf-check.sh` corre en el pre-commit y en CI.
 
 ## Reglas
 

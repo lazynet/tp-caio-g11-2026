@@ -1,0 +1,17 @@
+# Las bases de conocimiento (context/, material/, defense/evidence/) siguen OKF v0.2.
+name: okf-check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  okf-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bundles OKF conformes
+        run: scripts/okf-check.sh
