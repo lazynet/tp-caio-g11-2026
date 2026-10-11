@@ -1,5 +1,8 @@
 # Plan Maestro CAIO — Flexibility · Grupo 11
 
+**Equipo:** Gabriela Temporale · Martin Vago · Pablo Ces · Eduardo Chaparro ·
+Rafael Cioffi · Nicolas Tanos
+
 Repo del Trabajo Integrador Final de la Diplomatura CAIO (UTN BA): un Plan
 Maestro del CAIO a 12 meses para Flexibility, presentado en 10 slides más anexos.
 

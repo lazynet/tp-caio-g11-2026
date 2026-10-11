@@ -21,7 +21,7 @@ The plan must integrate:
 **Format rule:** max 10 slides. What the board must *decide* goes in the
 slides; everything that *supports* it goes in annexes.
 
-**Team:** Grupo 11, 5 members. Teammate onboarding lives in `README.md`; keep
+**Team:** Grupo 11, 6 members (see `README.md`). Teammate onboarding lives in `README.md`; keep
 it in sync when the workflow changes.
 
 **Everything is generated.** `plan/slides.md` (Marp-compatible markdown, one
