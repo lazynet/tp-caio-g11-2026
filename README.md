@@ -15,17 +15,57 @@ que la vea otro equipo.
 
 ## Qué necesitás
 
-| Herramienta | Para qué | Cómo |
-|---|---|---|
-| Cuenta de GitHub | escribir en el repo | [github.com/signup](https://github.com/signup) |
-| git y [GitHub CLI](https://cli.github.com) | bajar y subir cambios | `brew install git gh` y después `gh auth login` |
-| Un agente de IA | trabajar con los agentes por rol | cualquiera de los tres: [Claude Code](https://claude.com/claude-code), [Codex](https://developers.openai.com/codex) o VS Code con GitHub Copilot |
-| Node.js | generar el deck con Marp | `brew install node` |
-| pandoc | generar el pptx editable | `brew install pandoc` |
-| Un editor de markdown | leer y editar | cualquiera (VS Code, Obsidian, etc.) |
+| Herramienta | Para qué |
+|---|---|
+| Cuenta de GitHub ([github.com/signup](https://github.com/signup)) | escribir en el repo |
+| git y [GitHub CLI](https://cli.github.com) (`gh`) | bajar y subir cambios |
+| Un agente de IA: [Claude Code](https://claude.com/claude-code), [Codex](https://developers.openai.com/codex) o VS Code con GitHub Copilot | trabajar con los agentes por rol |
+| Node.js 18 o más nuevo | generar el deck con Marp |
+| Chrome, Edge o Chromium | Marp lo usa para exportar pdf y pptx |
+| pandoc | generar el pptx editable |
+| Un editor de markdown (VS Code, Obsidian, etc.) | leer y editar |
 
 No necesitás saber programar: todo es markdown, y el agente corre los comandos
 por vos si se lo pedís.
+
+### Instalación según tu sistema
+
+**macOS** (con [Homebrew](https://brew.sh)):
+
+```bash
+brew install git gh node pandoc
+gh auth login
+```
+
+**Windows** (PowerShell; `winget` viene con Windows 10 y 11):
+
+```powershell
+winget install Git.Git GitHub.cli OpenJS.NodeJS.LTS JohnMacFarlane.Pandoc
+gh auth login
+```
+
+Después usá **Git Bash** (se instala con Git) para todos los comandos de este
+README: los scripts son bash y no corren en PowerShell ni en `cmd`. Edge ya
+viene instalado, así que Marp no necesita nada más.
+
+Para que Claude Code encuentre el skill `board-review` hace falta que git cree
+symlinks: activá el **Modo de desarrollador** (Configuración → Sistema → Para
+programadores) y cloná con el flag que figura en
+[Primeros 15 minutos](#primeros-15-minutos). Si preferís evitarte esto, usá
+[WSL](https://learn.microsoft.com/windows/wsl/install) y seguí las
+instrucciones de Linux adentro de WSL.
+
+**Linux** (Debian o Ubuntu 24.04+):
+
+```bash
+sudo apt install git gh nodejs npm pandoc chromium
+gh auth login
+```
+
+Si tu distro trae un Node más viejo que 18 (`node --version`), instalalo desde
+[nodejs.org](https://nodejs.org). Si `gh` no está en tus repos, seguí
+[las instrucciones oficiales](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
+En Fedora: `sudo dnf install git gh nodejs pandoc chromium`.
 
 ## Cómo sumarte
 
@@ -44,10 +84,12 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 1. Cloná el repo y activá el chequeo de datos privados:
 
    ```bash
-   gh repo clone lazynet/tp-caio-g11-2026
+   gh repo clone lazynet/tp-caio-g11-2026 -- -c core.symlinks=true
    cd tp-caio-g11-2026
    ./scripts/setup.sh
    ```
+
+   El `-c core.symlinks=true` solo importa en Windows; en macOS y Linux no cambia nada.
 
 2. Abrí tu agente ahí: `claude`, `codex`, o la carpeta en VS Code con el chat de Copilot.
 3. Pedile: *"leé AGENTS.md y material/README.md y contame en qué estado está el plan"*.

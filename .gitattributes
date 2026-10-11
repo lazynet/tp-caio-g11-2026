@@ -1,0 +1,3 @@
+# Los scripts corren en bash también desde Windows: con fin de línea CRLF se rompen.
+*.sh text eol=lf
+.githooks/* text eol=lf
