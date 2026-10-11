@@ -15,3 +15,7 @@ tmp/
 
 # Decks generados (scripts/build-deck.sh)
 out/
+
+# Datos privados: nunca se versionan (repo público)
+private/
+.leak-denylist

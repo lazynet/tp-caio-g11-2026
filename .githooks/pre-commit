@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# El repo es público: lo que se pushea no se puede despublicar. Este chequeo corre
+# antes de cada commit, que es el último punto donde un dato privado todavía no salió.
+exec "$(git rev-parse --show-toplevel)/scripts/leak-check.sh" --staged

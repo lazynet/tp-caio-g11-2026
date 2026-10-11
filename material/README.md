@@ -1,9 +1,8 @@
 # material
 
 Índice del material de la cursada: qué documento respalda cada sección del plan.
-Los PDFs viven en Drive y no se copian al repo:
-
-`~/Library/CloudStorage/GoogleDrive-martin@example.invalid/Mi unidad/Personales/Diplomatura Chief AI Officer (CAIO)/`
+Los PDFs viven en la carpeta de Drive de Martin y no se copian al repo. La ruta
+local está en `private/sources.md` (no versionado).
 
 Los extractos del notebook se pegan acá, cada uno con la unidad de origen.
 

@@ -1,0 +1,27 @@
+name: Sumarme al equipo
+description: Pedí acceso de escritura al repo del Grupo 11.
+title: "Sumarme: <tu usuario de GitHub>"
+labels: [acceso]
+body:
+  - type: input
+    id: usuario
+    attributes:
+      label: Usuario de GitHub
+      placeholder: ej. gabitemporale
+    validations:
+      required: true
+  - type: input
+    id: nombre
+    attributes:
+      label: Nombre y apellido
+    validations:
+      required: true
+  - type: checkboxes
+    id: reglas
+    attributes:
+      label: Reglas del repo
+      options:
+        - label: Leí la sección "Datos privados de Flexibility" de AGENTS.md y entiendo que el repo es público.
+          required: true
+        - label: Después de clonar voy a correr scripts/setup.sh para activar el chequeo de datos privados.
+          required: true

@@ -1,4 +1,4 @@
-# AGENTS.md — tp-caio-2026
+# AGENTS.md — tp-caio-g11-2026
 
 `AGENTS.md` es el contrato portable para los agentes de IA: Claude Code, Codex y
 GitHub Copilot lo leen de forma nativa. Las reglas del repo van acá; no agregues
@@ -64,21 +64,42 @@ no se edita nunca: se corrige el markdown y se regenera.
 
 ## Fuentes
 
-- Material de la cursada (PDFs, frameworks): Google Drive de Martin,
-  `~/Library/CloudStorage/GoogleDrive-martin@example.invalid/Mi unidad/Personales/Diplomatura Chief AI Officer (CAIO)/`.
-  Se lee desde ahí y los PDFs no se copian al repo. Si no tenés acceso, usá
-  `material/README.md`.
+- Material de la cursada (PDFs, frameworks): carpeta de Google Drive de Martin.
+  La ruta local está en `private/sources.md`, que no se versiona. Los PDFs no se
+  copian al repo; si no tenés acceso, usá `material/README.md`.
 - Notebook consolidado: https://notebook.google.com/notebook/57ec4d6d-41a0-4030-9273-9bfc94cfb4ae
   (los agentes no pueden leerlo; los extractos se pegan en `material/`).
 
+## Datos privados de Flexibility
+
+**El repo es público** (github.com/lazynet/tp-caio-g11-2026). Lo que se pushea no se
+puede despublicar: aunque después se borre o el repo pase a privado, puede quedar
+en forks, clones y caches. Por eso:
+
+- **Nunca se versiona** ningún dato interno de Flexibility: nombres de clientes,
+  proyectos internos, personas, montos de contratos, tarifas, P&L, headcount,
+  mails o rutas corporativas, credenciales.
+- **El dato real vive en `private/`**, que está en `.gitignore` y existe solo en
+  la máquina de quien tiene acceso (Martin). Los agentes pueden leerlo para
+  razonar, pero lo que escriben fuera de `private/` sale anonimizado.
+- **Cómo se anonimiza:** clientes como "Cliente A (banco)" o "Cliente B
+  (fintech)"; cifras como rangos, ratios o índices (base 100); personas por rol
+  ("CFO", "Chief Architect"). Si un dato no se puede anonimizar sin perder
+  sentido, no va.
+- `context/` tiene solo hechos públicos (sitio web, prensa, LinkedIn) o ya
+  anonimizados, cada uno con su fuente.
+- **Antes de escribir cualquier archivo fuera de `private/`**, el agente revisa
+  que no contenga nada de lo anterior. Si tenés acceso a fuentes internas de
+  Flexibility (repos, colecciones QMD `flex-*`, Drive), extremá el cuidado.
+- **Chequeo automático:** `scripts/leak-check.sh` corre en cada commit (hook que
+  activa `scripts/setup.sh`) y en GitHub Actions (`leak-guard`). Revisa patrones
+  fijos y una denylist privada (`.leak-denylist` local, secreto `LEAK_DENYLIST`
+  en GitHub). Nunca uses `git commit --no-verify` para saltearlo.
+
 ## Reglas
 
-- **La audiencia es toda la cohorte.** Compañeros, el equipo de peer review y los
-  docentes leen todo lo que está en `plan/`, `defense/` y `reviews/`. Los datos
-  internos de Flexibility (nombres de clientes, montos de contratos, tarifas,
-  P&L, headcount por persona) nunca van ahí tal cual: se usan rangos, ratios o
-  clientes anonimizados. La fuente real queda solo en `context/`, con
-  `confidential: true` en el frontmatter.
+- **La audiencia es toda la cohorte**, y además cualquiera en internet: aplicá
+  siempre la sección anterior.
 - **Todo número tiene fuente.** Una cifra en una slide se rastrea hasta un anexo,
   y el anexo dice el supuesto o la fuente. Los supuestos se marcan como tales.
 - **Un dueño por sección.** Cada slide o anexo declara su agente dueño en el

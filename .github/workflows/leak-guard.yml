@@ -1,0 +1,32 @@
+# Red de contención: el pre-commit local es la defensa principal, porque cuando
+# este workflow corre el push ya es público. Si falla, hay que purgar el dato de la
+# historia (ver README, "Si se filtró algo").
+name: leak-guard
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  leak-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Datos privados de Flexibility
+        env:
+          LEAK_DENYLIST: ${{ secrets.LEAK_DENYLIST }}
+        run: scripts/leak-check.sh --all
+
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Credenciales en toda la historia
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
