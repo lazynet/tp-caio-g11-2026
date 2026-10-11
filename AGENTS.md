@@ -1,94 +1,109 @@
 # AGENTS.md — tp-caio-2026
 
-`AGENTS.md` is the portable contract for coding agents. Keep repository rules
-here; do not add a `CLAUDE.md`. Verify with `lh repo instructions .`.
+`AGENTS.md` es el contrato portable para los agentes de IA: Claude Code, Codex y
+GitHub Copilot lo leen de forma nativa. Las reglas del repo van acá; no agregues
+un `CLAUDE.md`, porque Claude Code deja de leer este archivo si existe uno.
 
-## What this repo owns
+## Idioma
 
-The final integrative assignment (Trabajo Integrador Final) of the UTN BA
-*Diplomatura Chief AI Officer (CAIO)*: a **12-month CAIO Master Plan** for
-**Flexibility** (flexibility SRL, Argentine software provider to fintech and
-banking clients), defended before a board.
+**Todo en español rioplatense**: la conversación con el equipo, los documentos,
+las definiciones de agentes y skills, los comentarios en scripts y los mensajes
+de commit. Registro ejecutivo en los entregables y voseo en todo el repo.
+Solo quedan en inglés los nombres de archivos y carpetas, las claves de
+frontmatter y los identificadores de código, porque las herramientas los esperan así.
 
-The plan must integrate:
+## Qué es este repo
 
-- Integral strategy: architecture, governance, security, people plan, finance.
-- Technical, financial and cultural roadmap, with milestones and success criteria.
-- Financial storytelling for a skeptical CFO.
-- Risk-adjusted roadmap: scenarios, contingencies, reversible vs irreversible decisions.
-- Defense prep: storyline, anticipated objections, evidence.
+El Trabajo Integrador Final de la *Diplomatura Chief AI Officer (CAIO)* de UTN BA:
+un **Plan Maestro del CAIO a 12 meses** para **Flexibility** (flexibility SRL,
+empresa argentina que desarrolla software para fintech y bancos), defendido ante
+un board.
 
-**Format rule:** max 10 slides. What the board must *decide* goes in the
-slides; everything that *supports* it goes in annexes.
+El plan tiene que integrar:
 
-**Team:** Grupo 11, 6 members (see `README.md`). Teammate onboarding lives in `README.md`; keep
-it in sync when the workflow changes.
+- Estrategia integral: arquitectura, gobierno, seguridad, people plan y finanzas.
+- Roadmap técnico, financiero y cultural, con hitos y criterios de éxito.
+- Financial storytelling para un CFO escéptico.
+- Roadmap ajustado por riesgo: escenarios, contingencias, decisiones reversibles e irreversibles.
+- Preparación de la defensa: storyline, objeciones anticipadas, evidencia.
 
-**Everything is generated.** `plan/slides.md` (Marp-compatible markdown, one
-slide per `---`) is the only deck source; `scripts/build-deck.sh` renders it
-to `out/` (gitignored) with Marp and pandoc so formats can be compared. Never
-edit a rendered deck; fix the markdown and rebuild.
+**Regla de formato:** máximo 10 slides. Lo que el board tiene que *decidir* va en
+las slides; lo que lo *sustenta*, en los anexos.
 
-## Key dates
+**Equipo:** Grupo 11, 6 integrantes (ver `README.md`). El onboarding del equipo
+está en `README.md`: mantenelo al día cuando cambie la forma de trabajo.
 
-| Milestone | Date |
+**Todo se genera.** `plan/slides.md` (markdown compatible con Marp, una slide por
+`---`) es la única fuente del deck. `scripts/build-deck.sh` lo renderiza en
+`out/` (fuera de git) con Marp y pandoc para comparar formatos. Un deck generado
+no se edita nunca: se corrige el markdown y se regenera.
+
+## Fechas
+
+| Hito | Fecha |
 |---|---|
-| Team formed + scope chosen | 2026-10-13 (suggested) |
-| Version for peer review | 2026-10-27 |
-| Final delivery | 2026-10-28 → 2026-11-04 |
-| Top-3 voting | 2026-11-05 → 2026-11-08 |
-| Board defense (tentative) | 2026-11-10 18:30 |
+| Equipo y alcance | 2026-10-13 (sugerido) |
+| Versión para peer review | 2026-10-27 |
+| Entrega final | 2026-10-28 → 2026-11-04 |
+| Votación top 3 | 2026-11-05 → 2026-11-08 |
+| Defensa ante el board (tentativo) | 2026-11-10 18:30 |
 
-## Layout
+## Estructura
 
-| Path | Holds |
+| Path | Qué tiene |
 |---|---|
-| `context/` | Facts about Flexibility the plan rests on, each with its source |
-| `material/` | Index of course material: which unit/framework backs which section |
-| `plan/slides.md` | The 10 slides — source of truth for the deck |
-| `plan/annexes/` | One file per annex, referenced from the slides |
-| `defense/` | Storyline, objection bank, evidence map |
-| `reviews/` | Output of board reviews and peer review, dated |
-| `scripts/build-deck.sh` | Renders the deck: `all` (default), `marp` or `pandoc` |
+| `context/` | Datos de Flexibility en los que se apoya el plan, cada uno con su fuente |
+| `material/` | Índice del material de la cursada: qué unidad o framework respalda cada sección |
+| `plan/slides.md` | Las 10 slides, fuente única del deck |
+| `plan/annexes/` | Un archivo por anexo, referenciado desde las slides |
+| `defense/` | Storyline, banco de objeciones, mapa de evidencia |
+| `reviews/` | Revisiones del board y del peer review, con fecha |
+| `scripts/build-deck.sh` | Genera el deck: `all` (default), `marp` o `pandoc` |
+| `.claude/agents/` | Los agentes por rol, fuente única para todas las herramientas |
+| `.agents/skills/` | Skills portables; `.claude/skills` es un symlink a esta carpeta |
 
-## Sources
+## Fuentes
 
-- Course material (PDFs, frameworks): Google Drive
+- Material de la cursada (PDFs, frameworks): Google Drive de Martin,
   `~/Library/CloudStorage/GoogleDrive-martin@example.invalid/Mi unidad/Personales/Diplomatura Chief AI Officer (CAIO)/`.
-  Read from there; never copy the PDFs into the repo.
-- Consolidated notebook: https://notebook.google.com/notebook/57ec4d6d-41a0-4030-9273-9bfc94cfb4ae
-  (not reachable by agents; Martin pastes excerpts into `material/`).
-- Class notes: LazyMind `2-Areas/Trabajo/Reuniones/* - Diplomatura Chief AI Officer (CAIO)*`
-  (QMD collection `lazy-lazymind-areas`).
+  Se lee desde ahí y los PDFs no se copian al repo. Si no tenés acceso, usá
+  `material/README.md`.
+- Notebook consolidado: https://notebook.google.com/notebook/57ec4d6d-41a0-4030-9273-9bfc94cfb4ae
+  (los agentes no pueden leerlo; los extractos se pegan en `material/`).
 
-## Rules
+## Reglas
 
-- **Audience is the whole cohort.** Peers, another team and the teaching staff
-  read everything in `plan/`, `defense/` and `reviews/`. Flexibility internal
-  data (client names, contract figures, rates, P&L, headcount by person) never
-  lands there verbatim: use ranges, ratios or anonymized clients, and record the
-  real source only in `context/` with `confidential: true` in frontmatter.
-  Agents with access to `flex-*` QMD collections must apply this before writing.
-- **Every number has a source.** A figure in a slide traces to an annex, and the
-  annex states the assumption or the source. Assumptions are labeled as such.
-- **One owner per section.** Each slide/annex declares its owner agent in
-  frontmatter (`owner: finance`); others propose, the owner writes.
-- **Board review before peer review.** Run `/board-review` on any slide set
-  before it goes to the team or the peer-review team.
-- Deliverable content is in Spanish (rioplatense, executive register). File
-  names, frontmatter keys and this contract stay in English.
-- Commits: `type: short description`, no trailers.
+- **La audiencia es toda la cohorte.** Compañeros, el equipo de peer review y los
+  docentes leen todo lo que está en `plan/`, `defense/` y `reviews/`. Los datos
+  internos de Flexibility (nombres de clientes, montos de contratos, tarifas,
+  P&L, headcount por persona) nunca van ahí tal cual: se usan rangos, ratios o
+  clientes anonimizados. La fuente real queda solo en `context/`, con
+  `confidential: true` en el frontmatter.
+- **Todo número tiene fuente.** Una cifra en una slide se rastrea hasta un anexo,
+  y el anexo dice el supuesto o la fuente. Los supuestos se marcan como tales.
+- **Un dueño por sección.** Cada slide o anexo declara su agente dueño en el
+  frontmatter (`owner: finance`). Los demás proponen; el dueño escribe.
+- **Board antes del peer review.** Corré el skill `board-review` sobre cualquier
+  set de slides antes de que lo vea el equipo o el equipo revisor.
+- Commits: `tipo: descripción corta` en español, sin trailers.
 
-## Agents
+## Agentes
 
-Synthetic copilots per role in `.claude/agents/`. Each owns a lens, not a file
-tree; `caio` integrates.
+Copilotos sintéticos por rol, definidos en `.claude/agents/`. Cada uno es dueño
+de una mirada, no de un árbol de archivos; `caio` integra.
 
-| Agent | Owns | Slide/annex focus |
+| Agente | Es dueño de | Foco en slides y anexos |
 |---|---|---|
-| `caio` | Storyline, integration, risk-adjusted roadmap | Exec summary, roadmap, decisions asked |
-| `architect` | Target architecture, platform, data, technical roadmap | Architecture + tech milestones |
-| `governance` | AI governance, security, compliance, responsible AI | Operating model, policies, controls |
-| `people` | People plan, org design, change and cultural roadmap | Talent, adoption, culture milestones |
-| `finance` | Business case, budget, ROI, CFO narrative | Financial storytelling, scenarios |
-| `board` | Adversarial review as board / skeptical CFO / grader | Objections, gaps vs assignment |
+| `caio` | Storyline, integración, roadmap ajustado por riesgo | Resumen ejecutivo, roadmap, decisiones que se piden |
+| `architect` | Arquitectura objetivo, plataforma, datos, roadmap técnico | Arquitectura e hitos técnicos |
+| `governance` | Gobierno de IA, seguridad, compliance, IA responsable | Modelo operativo, políticas, controles |
+| `people` | People plan, diseño organizacional, cambio y roadmap cultural | Talento, adopción, hitos culturales |
+| `finance` | Business case, presupuesto, ROI, relato para el CFO | Financial storytelling, escenarios |
+| `board` | Revisión adversarial como board, CFO escéptico y corrector | Objeciones, brechas contra la consigna |
+
+Cómo se usan en cada herramienta:
+
+- **Claude Code** y **GitHub Copilot (VS Code)** cargan `.claude/agents/` solos.
+- **Codex** no permite elegir un agente personalizado al lanzar un subagente
+  (probado con codex-cli 0.162.1). Para usar un rol, lanzá un subagente con el
+  contenido de `.claude/agents/<rol>.md` como instrucciones, o adoptá ese rol vos mismo.

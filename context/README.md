@@ -1,5 +1,5 @@
 # context
 
-One file per fact cluster about Flexibility (business, clients, team, current AI use).
-Frontmatter: `source:` and `confidential: true|false`. Confidential facts are
-summarized, never copied, into `plan/`.
+Un archivo por tema sobre Flexibility (negocio, clientes, equipo, uso actual de IA).
+Frontmatter: `source:` y `confidential: true|false`. Lo confidencial se resume en
+`plan/`, nunca se copia tal cual.

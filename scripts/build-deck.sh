@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Render plan/slides.md with every available renderer so alternatives can be compared.
-# Output goes to out/ (gitignored): decks are build artifacts, never edited by hand.
+# Renderiza plan/slides.md con cada renderer disponible para comparar alternativas.
+# La salida va a out/ (fuera de git): los decks son artefactos generados, nunca se editan a mano.
 set -euo pipefail
 
 root="$(cd "$(dirname "$0")/.." && pwd)"
@@ -10,7 +10,7 @@ mkdir -p "$out"
 
 renderer="${1:-all}"
 
-# Marp version pinned so every teammate renders the same deck.
+# Versión de Marp fija para que todo el equipo genere el mismo deck.
 marp() { npx -y @marp-team/marp-cli@4.1.2 --allow-local-files "$@"; }
 
 if [[ "$renderer" == all || "$renderer" == marp ]]; then
@@ -20,7 +20,7 @@ if [[ "$renderer" == all || "$renderer" == marp ]]; then
 fi
 
 if [[ "$renderer" == all || "$renderer" == pandoc ]]; then
-  # Pandoc pptx keeps text editable; Marp pptx exports slides as images.
+  # El pptx de pandoc deja el texto editable; el de Marp exporta las slides como imagen.
   pandoc "$src" -o "$out/deck-pandoc.pptx"
 fi
 

@@ -15,7 +15,7 @@ que la vea otro equipo.
 | Herramienta | Para qué | Cómo |
 |---|---|---|
 | git + acceso al repo | bajar y subir cambios | _(remote a definir — ver Pendientes)_ |
-| Un agente de código | trabajar con los agentes por rol | [Claude Code](https://claude.com/claude-code) (recomendado) o Codex |
+| Un agente de IA | trabajar con los agentes por rol | cualquiera de los tres: [Claude Code](https://claude.com/claude-code), [Codex](https://developers.openai.com/codex) o VS Code con GitHub Copilot |
 | Node.js | generar el deck con Marp | `brew install node` |
 | pandoc | generar el pptx editable | `brew install pandoc` |
 | Un editor de markdown | leer y editar | cualquiera (VS Code, Obsidian, etc.) |
@@ -26,7 +26,7 @@ por vos si se lo pedís.
 ## Primeros 15 minutos
 
 1. Cloná el repo y entrá a la carpeta.
-2. Abrí Claude Code ahí: `claude`.
+2. Abrí tu agente ahí: `claude`, `codex`, o la carpeta en VS Code con el chat de Copilot.
 3. Pedile: *"leé AGENTS.md y material/README.md y contame en qué estado está el plan"*.
 4. Generá el deck: `./scripts/build-deck.sh` (o pedíselo al agente) y abrí
    `out/deck-marp.html` en el navegador.
@@ -56,15 +56,24 @@ Cada agente es un copiloto con una mirada. Se invocan por nombre:
 | `finance` | inversión, ROI, escenarios, el relato para el CFO |
 | `board` | que te destroce una sección antes que lo haga el board real |
 
-Ejemplos en Claude Code:
+Ejemplos:
 
 - *"Con el agente finance, armá el borrador de plan/annexes/finance.md"*
 - *"Usá architect para proponer 2 alternativas de arquitectura con tradeoffs"*
-- `/board-review plan/` corre las cuatro miradas en paralelo y después el board,
-  y deja el resultado en `reviews/`.
+- *"Corré el skill board-review sobre plan/"*: las cuatro miradas en paralelo,
+  después el board, y el resultado queda en `reviews/`. En Claude Code y Copilot
+  también podés escribir `/board-review plan/`.
 
-En **Codex** los agentes no se cargan solos: pedile *"actuá como el agente
-definido en .claude/agents/finance.md"*.
+Todos leen las mismas definiciones, pero cada herramienta las carga distinto:
+
+| Herramienta | Instrucciones (`AGENTS.md`) | Agentes por rol | Skill `board-review` |
+|---|---|---|---|
+| Claude Code | automático | automático (`.claude/agents/`) | automático |
+| VS Code + Copilot | automático (lo fija `.vscode/settings.json`) | automático (`.claude/agents/`) | automático |
+| Codex | automático | **no**: pedile *"lanzá un subagente con las instrucciones de .claude/agents/finance.md"* | automático (`.agents/skills/`) |
+
+Las definiciones viven una sola vez en `.claude/agents/` y `.agents/skills/`.
+No las copies a otras carpetas para "tu" herramienta: se desincronizan.
 
 ## Cómo trabajamos
 
@@ -74,8 +83,8 @@ definido en .claude/agents/finance.md"*.
 3. **Nada confidencial de Flexibility en `plan/`.** El plan lo leen los
    compañeros, el equipo de peer review y los docentes. Nombres de clientes,
    tarifas y P&L van en rangos o anonimizados.
-4. **Board antes de compartir.** Corré `/board-review` sobre lo tuyo antes de
-   pedir review humano.
+4. **Board antes de compartir.** Corré el skill `board-review` sobre lo tuyo
+   antes de pedir review humano.
 5. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se corrige
    en `plan/slides.md` y se regenera.
 

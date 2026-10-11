@@ -5,10 +5,10 @@ marp: true
 paginate: true
 ---
 
-<!-- Source of truth for the deck. Never edit a rendered deck: run scripts/build-deck.sh.
-     One slide per `---`, one `#` title each. Max 10 slides. Each slide states the
-     decision it asks the board for and points to its annex. Structure below is a
-     draft skeleton derived from the assignment, not agreed content. -->
+<!-- Fuente única del deck. Nunca edites un deck generado: corré scripts/build-deck.sh.
+     Una slide por `---`, con un título `#` cada una. Máximo 10 slides. Cada slide dice
+     qué decisión le pide al board y apunta a su anexo. La estructura de abajo es un
+     esqueleto borrador derivado de la consigna, no contenido acordado. -->
 
 # Plan Maestro CAIO — Flexibility
 

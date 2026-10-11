@@ -6,12 +6,12 @@
 .claude/worktrees/
 tmp/
 
-# Course material lives in Google Drive, not here
+# El material de la cursada vive en Google Drive, no acá
 *.pdf
 *.mp4
 
-# Rendered decks are regenerated from plan/slides.md
+# Los decks se regeneran desde plan/slides.md
 *.pptx
 
-# Rendered decks (scripts/build-deck.sh)
+# Decks generados (scripts/build-deck.sh)
 out/
