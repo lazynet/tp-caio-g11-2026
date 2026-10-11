@@ -221,5 +221,5 @@ al script, no se arma a mano.
 
 - [x] Dónde colaboramos: GitHub, `lazynet/tp-caio-g11-2026` (público hasta que estemos todos)
 - [ ] Formato del deck final (ver "Generar el deck")
-- [ ] Alcance dentro de Flexibility: organización completa, un área o un equipo
+- [x] Alcance: Flexibility completa, en dos frentes: IA para operar mejor puertas adentro e IA en el producto que se les vende a bancos y fintech
 - [ ] Material de M3U4 (cierre y defensa del Plan Maestro), que no tenemos
