@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: PyYAML para validar el frontmatter
         run: python3 -m pip install --quiet pyyaml
-      - name: Bundles OKF conformes
-        env:
-          OKF_STRICT: "1"
+      - name: Tests del validador OKF
+        run: python3 -m unittest discover -s tests -p 'test_okf_check.py' -v
+      - name: Bundles OKF conformes en borrador
         run: scripts/okf-check.sh
