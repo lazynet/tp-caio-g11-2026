@@ -79,8 +79,8 @@ algo falla, contalo y corregí este README.
 ### Python y PyYAML
 
 Los chequeos son Python: el de datos privados usa solo la biblioteca estándar;
-el de OKF necesita **PyYAML** y falla sin él. `plan-check` en borrador usa
-stdlib; en entrega necesita PyYAML para validar las fichas utilizadas. CI usa
+el de OKF y el del deck (`plan-check`, en los dos modos) necesitan **PyYAML** y
+fallan sin él. CI usa
 Python 3.11 o más nuevo. Después de clonar, instalá PyYAML en un entorno
 virtual `.venv` dentro del repo (no se versiona), nunca con `pip` global:
 
@@ -103,9 +103,9 @@ export CAIO_PYTHON=python
 ```
 
 Activá el `.venv` (y en Windows exportá `CAIO_PYTHON`) en cada terminal antes de
-commitear o correr scripts: el hook pre-commit corre `scripts/okf-check.sh` y
-necesita PyYAML. Si el agente commitea por vos, pedile que active el `.venv`
-primero. Un `alias python3=python` no sirve: los scripts no heredan alias.
+commitear o correr scripts: el hook pre-commit corre `scripts/okf-check.sh
+--staged` y necesita PyYAML. Si el agente commitea por vos, pedile que active
+el `.venv` primero. Un `alias python3=python` no sirve: los scripts no heredan alias.
 Sin `CAIO_PYTHON`, los scripts usan `python3`.
 
 ## Cómo sumarte
@@ -248,13 +248,14 @@ anonimizados y supuestos, nunca el dato real.
 
 | Capa | Qué hace | Dónde |
 |---|---|---|
-| Hook pre-commit | frena el commit si encuentra un dato prohibido en lo que está staged | tu máquina, lo activa `scripts/setup.sh` |
+| Hook pre-commit | frena el commit si encuentra un dato prohibido en lo que está staged, y valida los bundles OKF del índice completo | tu máquina, lo activa `scripts/setup.sh` |
 | `leak-guard` en PR | repite el chequeo sobre todo el repo (parcial si no recibe la denylist) y gitleaks busca credenciales en la historia | GitHub Actions |
 | `leak-guard` en push | lo mismo en modo estricto: falla si falta la denylist. Detecta, no previene: el push ya es público | GitHub Actions |
 
-El chequeo combina patrones fijos (mails corporativos, claves, CUIT, archivos
-marcados confidenciales, cualquier cosa en `private/`) con una denylist privada
-de nombres que vive fuera del repo. No uses nunca `git commit --no-verify`.
+El chequeo combina patrones fijos (claves privadas, CUIT, archivos marcados
+confidenciales, cualquier cosa en `private/` y mails corporativos, solo del
+dominio del candidato actual) con una denylist privada de nombres que vive fuera
+del repo. No uses nunca `git commit --no-verify`.
 Ninguna capa garantiza que no se filtre nada: la defensa principal es no
 escribir el dato. Que el secreto `LEAK_DENYLIST` y las reglas de la rama estén
 configurados en GitHub no está verificado en este README.
@@ -268,8 +269,14 @@ configurados en GitHub no está verificado en este README.
 ```
 
 Sin `.leak-denylist` (ni `LEAK_DENYLIST`) la revisión sale **PARCIAL**: solo
-patrones fijos. Para no publicar nombres ni valores en logs, cada hallazgo dice
-solo categoría, número de archivo y línea (`✗ archivo #3, línea 12: CUIT`). El
+patrones fijos. La cobertura es texto UTF-8: binarios, archivos con NUL, UTF-16
+o PDF se omiten (`⚠ archivo #N: omisión`), la revisión queda **PARCIAL** y
+`--strict` la rechaza. Un symlink se revisa por su contenido (la ruta que
+guarda), nunca siguiendo el destino. **COMPLETA** quiere decir que corrió con
+denylist y sin omisiones, no que el repo esté libre de datos privados.
+
+Para no publicar nombres ni valores en logs, cada hallazgo dice solo categoría,
+número de archivo y línea (`✗ archivo #3, línea 12: CUIT`). El
 número es la posición en el listado de git (separado por NUL) del modo que
 corriste. Para ver solo ese archivo en tu máquina, desde la raíz del repo y sin
 pegar el listado en ningún lado (el `3` es el número del hallazgo):
@@ -300,7 +307,11 @@ Separa por NUL, así que funciona aunque el nombre tenga espacios o saltos de l�
 ```
 
 Antes de renderizar, el script corre `plan-check.py --mode draft` y corta si la
-estructura del deck no es válida.
+estructura del deck no es válida. Separá slides solo con `---` o `***` en su
+propia línea: se rechazan variantes con espacios (`- - -`) o `___`. Los links
+locales van en Markdown (`[anexo](annexes/finance.md)`); `href`/`src` locales
+en HTML se rechazan. El frontmatter se lee como YAML seguro y no admite claves
+duplicadas.
 
 | Salida | Sirve para |
 |---|---|
@@ -317,14 +328,15 @@ Corré estos chequeos desde la raíz del repo, con el `.venv` activo. En Windows
 donde dice `python3` usá `python`.
 
 ```bash
-./scripts/okf-check.sh                                    # bundles OKF, modo borrador (el del hook y CI)
+./scripts/okf-check.sh                                    # bundles OKF de tu working tree, borrador (CI lo corre sobre el checkout)
+./scripts/okf-check.sh --staged                           # índice completo, borrador (como el hook)
 ./scripts/okf-check.sh --delivery --path material/unidades/m1u2-portfolio-100-dias.md
 python3 scripts/plan-check.py --mode draft                # estructura del deck
 python3 scripts/plan-check.py --mode delivery             # el deck, como para entregar
 ```
 
-`okf-check` necesita PyYAML en los dos modos. `plan-check` en borrador usa
-stdlib; en entrega necesita PyYAML para validar las fichas utilizadas.
+`okf-check` y `plan-check` necesitan PyYAML en los dos modos; en entrega,
+`plan-check` además valida con `okf-check` las fichas que usa el deck.
 
 - **Borrador** acepta fichas `draft` con faltantes identificados. Toda ficha
   nueva declara `status`; una sin `status` se lee como `draft`.

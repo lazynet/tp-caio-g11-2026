@@ -40,8 +40,9 @@ board tiene que *decidir* va en las slides; lo que lo *sustenta*, en los anexos.
 **Equipo:** Grupo 11, 6 integrantes (ver `README.md`). El onboarding del equipo
 está en `README.md`: mantenelo al día cuando cambie la forma de trabajo.
 
-**Todo se genera.** `plan/slides.md` (markdown compatible con Marp, una slide por
-`---`) es la única fuente del deck. `scripts/build-deck.sh` lo renderiza en
+**Todo se genera.** `plan/slides.md` (markdown compatible con Marp, slides
+separadas por `---` o `***` compactos; links locales en Markdown, no en HTML) es
+la única fuente del deck. `scripts/build-deck.sh` lo renderiza en
 `out/` (fuera de git) con Marp y pandoc para comparar formatos. Un deck generado
 no se edita nunca: se corrige el markdown y se regenera. Requisitos (Python
 3.11+, PyYAML en `.venv`, `CAIO_PYTHON`) y comandos de chequeo en `README.md`.
@@ -104,7 +105,9 @@ analice, sea cual sea el caso elegido:
 - **Chequeo automático:** `scripts/leak-check.sh` corre en cada commit (hook que
   activa `scripts/setup.sh`) y en GitHub Actions (`leak-guard`). Revisa patrones
   fijos y una denylist privada (`.leak-denylist` local, secreto `LEAK_DENYLIST`
-  en GitHub). Nunca uses `git commit --no-verify` para saltearlo.
+  en GitHub). Cubre solo texto UTF-8: lo que omite deja la revisión PARCIAL y
+  `--strict` la rechaza. COMPLETA no certifica que no haya datos privados.
+  Nunca uses `git commit --no-verify` para saltearlo.
 
 ## Bases de conocimiento (OKF)
 
@@ -138,9 +141,10 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   no: toda cifra de una slide o anexo entregado remonta a una ficha `verified`.
 - **Índices.** La raíz de cada bundle tiene un `index.md` con `okf_version` como
   único frontmatter. Al sumar un concepto, se agrega su línea con la `description`.
-- **Chequeo automático:** `scripts/okf-check.sh` corre en el pre-commit y en CI
-  en modo borrador; `--delivery` y `plan-check.py --mode delivery` validan
-  estructura y revisión declarada, no la verdad del contenido.
+- **Chequeo automático:** `scripts/okf-check.sh` corre en borrador en el
+  pre-commit (índice completo, `--staged`) y en CI (árbol versionado); YAML
+  seguro, sin claves duplicadas. `--delivery` y `plan-check.py --mode delivery`
+  validan estructura y revisión declarada, no la verdad del contenido.
 
 ## Reglas
 
