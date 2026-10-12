@@ -21,13 +21,31 @@ Antes de lanzar a nadie, dejá por escrito:
 
 - **Objetivo:** paths exactos. Focalizada: el argumento es obligatorio; si falta,
   preguntá. Integral: sin argumento es `plan/`, y lo decís.
-- **Versión:** `git rev-parse HEAD` (SHA base) y `git status --short -- <objetivo>`.
-  Si el objetivo está sucio, anotá el estado y guardá `git diff -- <objetivo>`
-  junto a la revisión: sin eso nadie sabe qué texto se revisó.
+- **Versión (captura inmutable):** los revisores leen una copia capturada, nunca
+  paths vivos que otro revisor o el equipo pueda tocar. Capturá en memoria:
+  1. SHA base (`git rev-parse HEAD`) y `git status --short -- <objetivo>`.
+  2. Tracked: `git diff HEAD -- <objetivo>` completo (junta staged y unstaged,
+     también con staging parcial; un `git diff` sin `HEAD` pierde lo staged).
+  3. Nuevos sin trackear: `git ls-files --others --exclude-standard -- <objetivo>`
+     y, por cada uno, los bytes completos y su sha256. Un hash solo no reconstruye
+     el texto.
+  4. Los bytes completos de cada archivo revisado (tracked y nuevo) y de las
+     fuentes que cita, cada uno con su sha256.
+  5. Verificación: repetí `git status` y los hashes. Si algo cambió durante la
+     captura, descartá el paquete y reintentá; no revises una mezcla de versiones.
+
+  Todo revisor recibe exactamente ese paquete. Con `--chat` o sin escritura, el
+  paquete vive en memoria: ni diff ni copias en archivos temporales.
 - **Criterios:** la consigna del TIF tal como la resume `.claude/agents/board.md`
   (no un framework de la cursada) y la mirada del rol. Una cifra se acepta solo
-  si remonta a una ficha `verified` con bloque `verified:`; que el texto sea
-  consistente consigo mismo no la aprueba.
+  si remonta a una ficha `verified` con bloque `verified:`. Distinguí dos
+  niveles:
+  - **Focalizada sobre un borrador:** una cifra trazable a una ficha `draft` o a
+    un supuesto marcado se discute como **supuesto de borrador**; el revisor
+    nombra la verificación pendiente. Eso no la aprueba para entrega.
+  - **Integral (peer review y entrega):** exige ficha `verified` con el bloque
+    `verified:` que pide `AGENTS.md`; que el texto sea consistente consigo mismo
+    no la aprueba.
 - **Evaluable:** si el objetivo es un setup o un esqueleto provisional (por
   ejemplo, títulos de `plan/slides.md` sin contenido ni acuerdo del equipo),
   no lo revises como si fuera un plan. Devolvé "no evaluable" con lo que falta.
@@ -79,9 +97,13 @@ no pudo leer algo (archivo ausente, fuente sin acceso), lo reporta aparte como
   autoriza. Si hay duda, modo chat y ofrecé guardar. Cualquier prohibición de
   escritura del usuario prevalece sobre este skill y sobre el contrato de `board`.
 - No commitees la revisión: eso lo decide el equipo.
+- **Datos privados:** nunca se copian a `reviews/` ni se publican; el reporte
+  los anonimiza (ver "Datos privados" en `AGENTS.md`). Un snapshot crudo con
+  datos privados, si el usuario autoriza conservarlo, va solo en `private/`.
 
-El reporte (guardado o en chat) lleva: SHA base y estado o diff del objetivo si
-estaba sucio; paths revisados; criterios usados; modo, tandas y si hubo
+El reporte (guardado o en chat) lleva: SHA base, status, `git diff HEAD` del
+objetivo y lista de archivos nuevos con su sha256 (y su contenido, salvo que
+sea dato privado); paths revisados; criterios usados; modo, tandas y si hubo
 aislamiento o ejecución secuencial; veredicto por sombrero del board (integral o
 `board`); hallazgos ordenados por severidad con ubicación, dueño y condición de
 cierre; limitaciones de acceso en sección aparte; y las 5 preguntas más difíciles
