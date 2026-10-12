@@ -78,8 +78,9 @@ algo falla, contalo y corregí este README.
 
 ### Python y PyYAML
 
-Los chequeos son Python: el de datos privados y el del deck usan solo la
-biblioteca estándar; el de OKF necesita **PyYAML** y falla sin él. CI usa
+Los chequeos son Python: el de datos privados usa solo la biblioteca estándar;
+el de OKF necesita **PyYAML** y falla sin él. `plan-check` en borrador usa
+stdlib; en entrega necesita PyYAML para validar las fichas utilizadas. CI usa
 Python 3.11 o más nuevo. Después de clonar, instalá PyYAML en un entorno
 virtual `.venv` dentro del repo (no se versiona), nunca con `pip` global:
 
@@ -322,8 +323,8 @@ python3 scripts/plan-check.py --mode draft                # estructura del deck
 python3 scripts/plan-check.py --mode delivery             # el deck, como para entregar
 ```
 
-`okf-check` necesita PyYAML en los dos modos; `plan-check.py` usa solo la
-biblioteca estándar en los dos modos.
+`okf-check` necesita PyYAML en los dos modos. `plan-check` en borrador usa
+stdlib; en entrega necesita PyYAML para validar las fichas utilizadas.
 
 - **Borrador** acepta fichas `draft` con faltantes identificados. Toda ficha
   nueva declara `status`; una sin `status` se lee como `draft`.
