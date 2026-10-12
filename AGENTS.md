@@ -106,8 +106,8 @@ analice, sea cual sea el caso elegido:
   activa `scripts/setup.sh`) y en GitHub Actions (`leak-guard`). Revisa patrones
   fijos y una denylist privada (`.leak-denylist` local, secreto `LEAK_DENYLIST`
   en GitHub). Cubre solo texto UTF-8: lo que omite deja la revisión PARCIAL y
-  `--strict` la rechaza. COMPLETA no certifica que no haya datos privados.
-  Nunca uses `git commit --no-verify` para saltearlo.
+  `--strict` la rechaza. Ni COMPLETA ni `--strict` certifican que no haya datos
+  privados. Nunca uses `git commit --no-verify` para saltearlo.
 
 ## Bases de conocimiento (OKF)
 

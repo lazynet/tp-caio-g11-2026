@@ -265,8 +265,11 @@ configurados en GitHub no está verificado en este README.
 ```bash
 ./scripts/leak-check.sh                 # lo staged, como el hook
 ./scripts/leak-check.sh --all           # todos los archivos versionados
-./scripts/leak-check.sh --all --strict  # falla si no hay denylist
+./scripts/leak-check.sh --all --strict  # falla si no hay denylist o si omite algo
 ```
+
+Que `--strict` pase no certifica que no haya datos privados: solo dice que no
+encontró los patrones ni los términos de la denylist en lo que pudo leer.
 
 Sin `.leak-denylist` (ni `LEAK_DENYLIST`) la revisión sale **PARCIAL**: solo
 patrones fijos. La cobertura es texto UTF-8: binarios, archivos con NUL, UTF-16
