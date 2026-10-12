@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Python evita diferencias de arrays entre Bash 3.2 y Bash 5.
 # --strict exige denylist; el default admite una revisión parcial de borradores.
+# CAIO_PYTHON elige el intérprete: en Windows suele ser python, no python3.
 set -euo pipefail
-exec python3 - "$@" <<'PY'
+exec "${CAIO_PYTHON:-python3}" - "$@" <<'PY'
 import os
 import subprocess
 import sys

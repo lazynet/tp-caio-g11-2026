@@ -43,7 +43,8 @@ está en `README.md`: mantenelo al día cuando cambie la forma de trabajo.
 **Todo se genera.** `plan/slides.md` (markdown compatible con Marp, una slide por
 `---`) es la única fuente del deck. `scripts/build-deck.sh` lo renderiza en
 `out/` (fuera de git) con Marp y pandoc para comparar formatos. Un deck generado
-no se edita nunca: se corrige el markdown y se regenera.
+no se edita nunca: se corrige el markdown y se regenera. Requisitos (Python
+3.11+, PyYAML en `.venv`, `CAIO_PYTHON`) y comandos de chequeo en `README.md`.
 
 ## Fechas
 
@@ -137,7 +138,9 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   no: toda cifra de una slide o anexo entregado remonta a una ficha `verified`.
 - **Índices.** La raíz de cada bundle tiene un `index.md` con `okf_version` como
   único frontmatter. Al sumar un concepto, se agrega su línea con la `description`.
-- **Chequeo automático:** `scripts/okf-check.sh` corre en el pre-commit y en CI.
+- **Chequeo automático:** `scripts/okf-check.sh` corre en el pre-commit y en CI
+  en modo borrador; `--delivery` y `plan-check.py --mode delivery` validan
+  estructura y revisión declarada, no la verdad del contenido.
 
 ## Reglas
 
@@ -185,7 +188,9 @@ todas las herramientas las carguen igual:
   disponibles. Invocarlos de punta a punta está pendiente de probar.
 - **GitHub Copilot (VS Code):** `.vscode/settings.json` activa
   `chat.useAgentsMdFile`; la carga de agentes y skills está pendiente de probar.
-- **Codex:** observado con codex-cli 0.162.1 que no deja elegir un agente
-  personalizado al lanzar un subagente. Práctica que funcionó: lanzar un
-  subagente genérico con el contenido de `.claude/agents/<rol>.md` como
-  instrucciones, o adoptar ese rol vos mismo.
+- **Codex:** observado que lee este contrato y que, con briefs, ejecuta roles
+  como subagentes genéricos y edita y valida en worktrees. Con codex-cli 0.162.1
+  no deja elegir un agente personalizado: pasale el contenido de
+  `.claude/agents/<rol>.md` como instrucciones, o adoptá el rol vos mismo. Eso no
+  prueba que descubra roles ni invoque skills solo.
+- **Windows y Linux:** los scripts no están probados ahí.

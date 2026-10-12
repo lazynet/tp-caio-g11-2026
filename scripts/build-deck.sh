@@ -16,7 +16,8 @@ case "$renderer" in
   all|marp|pandoc|html) ;;
   *) echo "Renderer inválido: $renderer. Usá all, marp, pandoc o html." >&2; exit 2 ;;
 esac
-python3 "$root/scripts/plan-check.py" --mode draft
+# CAIO_PYTHON elige el intérprete: en Windows suele ser python, no python3.
+"${CAIO_PYTHON:-python3}" "$root/scripts/plan-check.py" --mode draft
 mkdir -p "$out"
 
 # Versión de Marp fija para que todo el equipo genere el mismo deck.

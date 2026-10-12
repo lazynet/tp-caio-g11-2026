@@ -25,6 +25,7 @@ que la vea otro equipo.
 | Cuenta de GitHub ([github.com/signup](https://github.com/signup)) | escribir en el repo |
 | git y [GitHub CLI](https://cli.github.com) (`gh`) | bajar y subir cambios |
 | Un agente de IA: [Claude Code](https://claude.com/claude-code), [Codex](https://developers.openai.com/codex) o VS Code con GitHub Copilot | trabajar con los agentes por rol |
+| Python 3.11 o más nuevo, con PyYAML | correr los chequeos (datos privados, OKF, deck) |
 | Node.js 18 o más nuevo | generar el deck con Marp |
 | Chrome, Edge o Chromium | Marp lo usa para exportar pdf y pptx |
 | pandoc | generar el pptx editable |
@@ -38,14 +39,14 @@ por vos si se lo pedís.
 **macOS** (con [Homebrew](https://brew.sh)):
 
 ```bash
-brew install git gh node pandoc
+brew install git gh node pandoc python
 gh auth login
 ```
 
 **Windows** (PowerShell; `winget` viene con Windows 10 y 11):
 
 ```powershell
-winget install Git.Git GitHub.cli OpenJS.NodeJS.LTS JohnMacFarlane.Pandoc
+winget install Git.Git GitHub.cli OpenJS.NodeJS.LTS JohnMacFarlane.Pandoc Python.Python.3.12
 gh auth login
 ```
 
@@ -63,14 +64,48 @@ instrucciones de Linux adentro de WSL.
 **Linux** (Debian o Ubuntu 24.04+):
 
 ```bash
-sudo apt install git gh nodejs npm pandoc chromium
+sudo apt install git gh nodejs npm pandoc chromium python3 python3-venv
 gh auth login
 ```
 
 Si tu distro trae un Node más viejo que 18 (`node --version`), instalalo desde
 [nodejs.org](https://nodejs.org). Si `gh` no está en tus repos, seguí
 [las instrucciones oficiales](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
-En Fedora: `sudo dnf install git gh nodejs pandoc chromium`.
+En Fedora: `sudo dnf install git gh nodejs pandoc chromium python3`.
+
+Las instrucciones de Windows y Linux todavía no están probadas en este repo. Si
+algo falla, contalo y corregí este README.
+
+### Python y PyYAML
+
+Los chequeos son Python: el de datos privados y el del deck usan solo la
+biblioteca estándar; el de OKF necesita **PyYAML** y falla sin él. CI usa
+Python 3.11 o más nuevo. Después de clonar, instalá PyYAML en un entorno
+virtual `.venv` dentro del repo (no se versiona), nunca con `pip` global:
+
+**macOS y Linux:**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install pyyaml
+```
+
+**Windows (Git Bash):** ahí Python se llama `python` (o `py`), no `python3`, y
+los scripts lo eligen con la variable `CAIO_PYTHON`:
+
+```bash
+python -m venv .venv
+source .venv/Scripts/activate
+python -m pip install pyyaml
+export CAIO_PYTHON=python
+```
+
+Activá el `.venv` (y en Windows exportá `CAIO_PYTHON`) en cada terminal antes de
+commitear o correr scripts: el hook pre-commit corre `scripts/okf-check.sh` y
+necesita PyYAML. Si el agente commitea por vos, pedile que active el `.venv`
+primero. Un `alias python3=python` no sirve: los scripts no heredan alias.
+Sin `CAIO_PYTHON`, los scripts usan `python3`.
 
 ## Cómo sumarte
 
@@ -95,6 +130,7 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
    ```
 
    El `-c core.symlinks=true` solo importa en Windows; en macOS y Linux no cambia nada.
+   Después creá el `.venv` con PyYAML (ver [Python y PyYAML](#python-y-pyyaml)).
 
 2. Abrí tu agente ahí: `claude`, `codex`, o la carpeta en VS Code con el chat de Copilot.
 3. Pedile: *"leé AGENTS.md y material/index.md y contame en qué estado está el plan"*.
@@ -141,11 +177,16 @@ Ejemplos:
 
 - *"Con el agente finance, armá el borrador de plan/annexes/finance.md"*
 - *"Usá architect para proponer 2 alternativas de arquitectura con tradeoffs"*
-- *"Con el agente board, revisá solo plan/annexes/finance.md"*: revisión
-  focalizada de un borrador.
-- *"Corré el skill board-review sobre plan/"*: las cuatro miradas en paralelo,
-  después el board, y el resultado queda en `reviews/`. Es la revisión integral,
-  para antes del peer review y de la entrega.
+- *"Corré board-review sobre plan/annexes/finance.md"*: revisión focalizada de
+  un borrador, con un solo revisor pertinente. El path es obligatorio.
+- *"Corré board-review --integral y guardá la revisión en reviews/"*: las cuatro
+  miradas y después el board consolida, sobre `plan/` si no das otro objetivo.
+  Es para antes del peer review y de la entrega.
+- *"Corré board-review sobre plan/annexes/finance.md --chat"*: la revisión vuelve
+  en la conversación y no se escribe ningún archivo.
+
+Ni el skill ni el agente `board` escriben en `reviews/` si no se lo pedís; ante
+la duda responden en el chat y te ofrecen guardar.
 
 Cada agente devuelve lo mismo, adaptado a su rol: problema, evidencia o
 supuesto, alternativas, recomendación, dependencias, costo, riesgo, responsable
@@ -158,7 +199,7 @@ cargue igual. Esto es lo que sabemos hoy:
 |---|---|---|---|
 | Claude Code | observado | listados como disponibles; invocación a probar | listado como disponible; invocación a probar |
 | VS Code + Copilot | configurado en `.vscode/settings.json`; a probar | a probar | a probar |
-| Codex | documentado por OpenAI; a probar acá | **no** deja elegirlos (observado con codex-cli 0.162.1): pedile *"lanzá un subagente con las instrucciones de .claude/agents/finance.md"* | a probar |
+| Codex | observado: leyó `AGENTS.md` y siguió el contrato | **no** deja elegirlos (codex-cli 0.162.1); funcionó lanzar subagentes genéricos con el rol de `.claude/agents/<rol>.md` como instrucciones | descubrimiento e invocación automáticos a probar |
 
 Si probás una celda "a probar", contalo en el grupo y actualizá la tabla.
 Las definiciones viven una sola vez en `.claude/agents/` y `.agents/skills/`.
@@ -179,9 +220,9 @@ No las copies a otras carpetas para "tu" herramienta: se desincronizan.
    con su evidencia; no se inventa consenso.
 6. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se corrige
    en `plan/slides.md` y se regenera.
-7. **Cambios a `main` por pull request.** Trabajá en una rama, abrí un PR, y se
-   mergea cuando pasa el chequeo `leak-guard`. Si no sabés cómo, pedíselo a tu
-   agente: *"commiteá esto en una rama nueva y abrí un PR"*.
+7. **Cambios a `main` por pull request.** Trabajá en una rama, abrí un PR, y
+   mergealo recién cuando pasen los chequeos de GitHub Actions. Si no sabés
+   cómo, pedíselo a tu agente: *"commiteá esto en una rama nueva y abrí un PR"*.
 
 ## Datos privados
 
@@ -206,13 +247,35 @@ anonimizados y supuestos, nunca el dato real.
 
 | Capa | Qué hace | Dónde |
 |---|---|---|
-| Hook pre-commit | frena el commit si encuentra un dato prohibido | tu máquina, lo activa `scripts/setup.sh` |
-| `leak-guard` | repite el chequeo y busca credenciales en toda la historia | GitHub Actions, en cada push y PR |
-| Push protection | rechaza pushes con tokens o claves conocidas | GitHub |
+| Hook pre-commit | frena el commit si encuentra un dato prohibido en lo que está staged | tu máquina, lo activa `scripts/setup.sh` |
+| `leak-guard` en PR | repite el chequeo sobre todo el repo (parcial si no recibe la denylist) y gitleaks busca credenciales en la historia | GitHub Actions |
+| `leak-guard` en push | lo mismo en modo estricto: falla si falta la denylist. Detecta, no previene: el push ya es público | GitHub Actions |
 
 El chequeo combina patrones fijos (mails corporativos, claves, CUIT, archivos
 marcados confidenciales, cualquier cosa en `private/`) con una denylist privada
 de nombres que vive fuera del repo. No uses nunca `git commit --no-verify`.
+Ninguna capa garantiza que no se filtre nada: la defensa principal es no
+escribir el dato. Que el secreto `LEAK_DENYLIST` y las reglas de la rama estén
+configurados en GitHub no está verificado en este README.
+
+`scripts/leak-check.sh` usa solo Python estándar y git:
+
+```bash
+./scripts/leak-check.sh                 # lo staged, como el hook
+./scripts/leak-check.sh --all           # todos los archivos versionados
+./scripts/leak-check.sh --all --strict  # falla si no hay denylist
+```
+
+Sin `.leak-denylist` (ni `LEAK_DENYLIST`) la revisión sale **PARCIAL**: solo
+patrones fijos. Para no publicar nombres ni valores en logs, cada hallazgo dice
+solo categoría, número de archivo y línea (`✗ archivo #3, línea 12: CUIT`). El
+número es la posición en el listado de git del modo que corriste; para ubicarlo
+en tu máquina, desde la raíz del repo y sin pegar ese listado en ningún lado:
+
+```bash
+git diff --cached --name-only -z --diff-filter=ACMR | tr '\0' '\n' | sed -n 3p  # staged
+git ls-files -z | tr '\0' '\n' | sed -n 3p                                       # --all
+```
 
 ### Si se filtró algo
 
@@ -228,7 +291,11 @@ de nombres que vive fuera del repo. No uses nunca `git commit --no-verify`.
 ./scripts/build-deck.sh          # todos los formatos
 ./scripts/build-deck.sh marp     # solo Marp: html, pdf, pptx
 ./scripts/build-deck.sh pandoc   # solo pandoc: pptx
+./scripts/build-deck.sh html     # solo el html de Marp, lo más rápido
 ```
+
+Antes de renderizar, el script corre `plan-check.py --mode draft` y corta si la
+estructura del deck no es válida.
 
 | Salida | Sirve para |
 |---|---|
@@ -238,6 +305,30 @@ de nombres que vive fuera del repo. No uses nunca `git commit --no-verify`.
 
 Estamos probando alternativas: si alguien quiere sumar otro renderer, se agrega
 al script, no se arma a mano.
+
+## Validar
+
+Corré estos chequeos desde la raíz del repo, con el `.venv` activo. En Windows,
+donde dice `python3` usá `python`.
+
+```bash
+./scripts/okf-check.sh                                    # bundles OKF, modo borrador (el del hook y CI)
+./scripts/okf-check.sh --delivery --path context/ --path material/unidades/
+python3 scripts/plan-check.py --mode draft                # estructura del deck
+python3 scripts/plan-check.py --mode delivery             # el deck, como para entregar
+```
+
+- **Borrador** acepta fichas `draft` con faltantes identificados. Toda ficha
+  nueva declara `status`; una sin `status` se lee como `draft`.
+- **Entrega** (`--delivery`, con `--path` para las fichas que usa la entrega;
+  `--mode delivery` para el deck) exige `status: verified` con el bloque
+  `verified:` de una persona y un deck sin pendientes. `--path` acepta solo
+  archivos o carpetas de `context/`, `material/` y `defense/evidence/`.
+- Hoy, en setup, `okf-check.sh --delivery` sin paths y `plan-check.py --mode
+  delivery` **tienen que fallar**: si pasan, algo está mal.
+- Los chequeos validan estructura y que la revisión humana esté declarada. No
+  prueban que una cifra sea cierta ni que el plan esté completo: eso lo revisan
+  personas.
 
 ## Fechas
 
