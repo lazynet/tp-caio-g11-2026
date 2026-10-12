@@ -2,8 +2,11 @@
 
 import argparse
 import re
+import subprocess
 import sys
+import tempfile
 from collections import Counter
+from contextlib import ExitStack
 from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -72,12 +75,18 @@ def iso_date(value):
 
 def markdown(text):
     text = re.sub(r"(?ms)^\s*(`{3,}|~{3,}).*?^\s*\1\s*$", "", text)
-    return re.sub(r"`+[^`\n]*`+", "", text)
+    text = re.sub(r"`+[^`\n]*`+", "", text)
+    return re.sub(r"<!--.*?(?:-->|\Z)", "", text, flags=re.S)
+
+
+def reference_label(label):
+    return " ".join(label.split()).casefold()
 
 
 def anchors(text):
     result, counts = set(), Counter()
-    for heading in re.findall(r"(?m)^ {0,3}#{1,6}\s+(.+?)\s*#*\s*$", markdown(text)):
+    text = markdown(text)
+    for heading in re.findall(r"(?m)^ {0,3}#{1,6}\s+(.+?)\s*#*\s*$", text):
         heading = re.sub(r"\[([^]]+)\]\([^)]*\)", r"\1", heading)
         slug = re.sub(r"[^\w\- ]", "", heading.lower()).replace(" ", "-")
         result.add(slug if not counts[slug] else f"{slug}-{counts[slug]}")
@@ -101,6 +110,8 @@ class Checker:
         gaps = self.root / "material/huecos.md"
         documented = bool(re.search(r"(?mi)^#{1,6}\s+Cautelas\s*\n\s*\S", body))
         if gaps.is_file():
+            if not gaps.resolve().is_relative_to(self.root / "material"):
+                raise ValueError("huecos fuera del bundle")
             documented |= path.name in gaps.read_text(encoding="utf-8")
         if not self.delivery and documented:
             self.warnings.append(
@@ -217,14 +228,18 @@ class Checker:
 
     def links(self, path, body, base):
         clean = markdown(body)
-        definitions = dict(re.findall(r"(?m)^ {0,3}\[([^\]^][^]]*)\]:\s*(\S+)", clean))
+        definitions = {}
+        for label, target in re.findall(
+            r"(?m)^ {0,3}\[([^\]^][^]]*)\]:\s*(\S+)", clean
+        ):
+            definitions.setdefault(reference_label(label), target)
         targets = re.findall(
             r"!?\[[^]\n]+\]\(\s*(<[^>]+>|[^\s)]+)(?:\s+[^)]*)?\)", clean
         )
-        for label, ref in re.findall(r"\[([^]\n]+)\]\[([^]\n]*)\]", clean):
+        for label, ref in re.findall(r"\[([^]]+)\]\[([^]]*)\]", clean):
             if label.startswith("^") or ref.startswith("^"):
                 continue
-            key = ref or label
+            key = reference_label(ref or label)
             if key not in definitions:
                 self.error(path, f"referencia Markdown sin definición: {key}")
             else:
@@ -287,6 +302,11 @@ class Checker:
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--staged",
+        action="store_true",
+        help="validar solo el snapshot completo del índice, en borrador; paths relativos al repo",
+    )
+    parser.add_argument(
         "--root", type=Path, default=Path(__file__).resolve().parents[1]
     )
     parser.add_argument(
@@ -304,13 +324,62 @@ def main(argv=None):
         "paths", nargs="*", help="selección adicional de paths del repo"
     )
     args = parser.parse_args(argv)
-    checker = Checker(args.root, args.delivery)
+    if args.staged and args.delivery:
+        parser.error("--staged solo admite modo borrador")
     try:
-        paths = checker.select(args.path + args.paths)
-        for path in paths:
-            checker.check(path)
+        with ExitStack() as stack:
+            root = args.root.resolve()
+            selections = args.path + args.paths
+            if args.staged:
+                result = subprocess.run(
+                    ["git", "-C", str(root), "rev-parse", "--show-toplevel"],
+                    capture_output=True,
+                    check=True,
+                    text=True,
+                )
+                if Path(result.stdout.strip()).resolve() != root:
+                    raise ValueError("--root debe ser la raíz del repo Git")
+                if any(Path(selection).is_absolute() for selection in selections):
+                    raise ValueError("--staged exige paths relativos al repo")
+                temporary = root / "tmp"
+                if temporary.is_symlink():
+                    raise ValueError("tmp no puede ser un symlink")
+                temporary.mkdir(exist_ok=True)
+                snapshot = stack.enter_context(
+                    tempfile.TemporaryDirectory(prefix="okf-index-", dir=temporary)
+                )
+                subprocess.run(
+                    [
+                        "git",
+                        "-C",
+                        str(root),
+                        "checkout-index",
+                        "--all",
+                        "--ignore-skip-worktree-bits",
+                        f"--prefix={snapshot}/",
+                    ],
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                    check=True,
+                )
+                root = Path(snapshot)
+            checker = Checker(root, args.delivery)
+            paths = checker.select(selections)
+            for path in paths:
+                checker.check(path)
+    except subprocess.CalledProcessError:
+        print(
+            "✗ okf-check: no se pudo leer el índice o crear su snapshot",
+            file=sys.stderr,
+        )
+        return 1
     except (ValueError, OSError, UnicodeError) as exc:
-        print(f"✗ okf-check: {exc}", file=sys.stderr)
+        message = (
+            "falló la selección, lectura o snapshot del índice"
+            if args.staged
+            else str(exc)
+        )
+        print(f"✗ okf-check: {message}", file=sys.stderr)
         return 1
     for message in checker.warnings + checker.errors:
         print(message, file=sys.stderr)

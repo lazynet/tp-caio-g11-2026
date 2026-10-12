@@ -2,6 +2,7 @@
 
 import importlib.util
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -326,6 +327,163 @@ class CheckerTests(unittest.TestCase):
 
     def test_bundle_type_boundary(self):
         self.assertTrue(self.check(self.concept(path="material/sample.md")).errors)
+
+    def test_comments_do_not_create_links_or_citations(self):
+        meta = META.split("sources:")[0].replace("Hecho", "Supuesto")
+        hidden = "<!--\n[Ir](/missing.md) [Ir][ghost] [^ghost]\n[^ghost]: Oculta.\n-->"
+        self.assertEqual(
+            self.check(self.concept(meta, "Propuesta.\n" + hidden)).errors, []
+        )
+        self.assertTrue(self.check(self.concept(body="<!--" + BODY + "--> ")).errors)
+        self.assertTrue(
+            self.check(self.concept(meta, hidden + "\n[Ir](/missing.md)")).errors
+        )
+        self.assertTrue(
+            self.check(self.concept(meta, hidden + "\nDato.[^ghost]")).errors
+        )
+
+    def test_reference_labels_ignore_case_and_normalize_whitespace(self):
+        self.concept(path="context/target.md")
+        for link in [
+            "[Ir][SRC]\n\n[src]: /target.md",
+            "[Ir][  Public\t source ]\n\n[public   SOURCE]: /target.md",
+            "[Public\n source][]\n\n[public SOURCE]: /target.md",
+        ]:
+            with self.subTest(link=link):
+                self.assertEqual(self.check(self.concept(body=BODY + link)).errors, [])
+        self.assertTrue(
+            self.check(self.concept(body=BODY + "[Ir][SRC]\n[src]: /missing.md")).errors
+        )
+
+
+class StagedTests(unittest.TestCase):
+    write = CheckerTests.write
+    concept = CheckerTests.concept
+    cli = CheckerTests.cli
+
+    def setUp(self):
+        CheckerTests.setUp(self)
+        self.git("init", "-q")
+        self.concept()
+        self.git("add", "context", "material", "defense")
+
+    def git(self, *args):
+        return subprocess.run(
+            ["git", "-C", str(self.root), *args],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+
+    def test_invalid_index_valid_worktree_rejected(self):
+        self.concept(META.replace("Hecho", "Invalid"))
+        self.git("add", "context/sample.md")
+        self.concept()
+        self.assertNotEqual(self.cli("--staged").returncode, 0)
+        self.assertEqual(self.cli().returncode, 0)
+
+    def test_valid_index_invalid_worktree_accepted(self):
+        before = self.git("ls-files", "--stage").stdout
+        self.concept(META.replace("Hecho", "Invalid"))
+        self.assertEqual(self.cli("--staged").returncode, 0)
+        self.assertNotEqual(self.cli().returncode, 0)
+        self.assertEqual(self.git("ls-files", "--stage").stdout, before)
+        self.assertEqual(list((self.root / "tmp").iterdir()), [])
+
+    def test_unstaged_target_cannot_repair_index_link(self):
+        self.concept(body=BODY + "[Ir](/target.md#real)")
+        self.git("add", "context/sample.md")
+        self.concept(body=BODY + "\n# Real\n", path="context/target.md")
+        self.assertNotEqual(self.cli("--staged").returncode, 0)
+        self.assertEqual(self.cli().returncode, 0)
+        self.git("add", "context/target.md")
+        self.concept(body=BODY + "\n# Otra\n", path="context/target.md")
+        self.assertEqual(self.cli("--staged").returncode, 0)
+
+    def test_untracked_invalid_file_is_not_reviewed(self):
+        self.write("context/untracked.md", "INVALID")
+        self.assertEqual(self.cli("--staged").returncode, 0)
+        self.assertNotEqual(self.cli().returncode, 0)
+
+    def test_staged_selection_and_errors(self):
+        self.assertEqual(
+            self.cli("--staged", "--path", "context/sample.md").returncode, 0
+        )
+        for args in [
+            ("--delivery",),
+            ("--path", "context/untracked.md"),
+            ("--path", str(self.root / "context/sample.md")),
+            ("--path", "../context"),
+        ]:
+            with self.subTest(args=args):
+                self.assertNotEqual(self.cli("--staged", *args).returncode, 0)
+        self.write("context/untracked.md", "SYNTHETIC_SECRET")
+        self.git("add", "context/untracked.md")
+        self.write("context/untracked.md", "---\n")
+        self.git(
+            "update-index",
+            "--cacheinfo",
+            "100644," + "1" * 40 + ",context/untracked.md",
+        )
+        result = self.cli("--staged")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertNotIn("SYNTHETIC_SECRET", result.stdout + result.stderr)
+        self.assertEqual(list((self.root / "tmp").iterdir()), [])
+
+    def test_staged_symlink_cannot_read_ignored_gap(self):
+        secret = self.write("ignored.md", "SYNTHETIC_SECRET sample.md")
+        self.write(".gitignore", "ignored.md\n")
+        (self.root / "material/huecos.md").symlink_to(secret)
+        self.concept("type: Supuesto\n", "Propuesta.\n")
+        self.git("add", "context/sample.md", "material/huecos.md")
+        result = self.cli("--staged", "--path", "context/sample.md")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertNotIn("SYNTHETIC_SECRET", result.stdout + result.stderr)
+
+    def test_staged_git_and_read_errors_fail_without_content(self):
+        nested = self.cli("--staged", "--root", str(self.root / "context"))
+        self.assertNotEqual(nested.returncode, 0)
+        path = self.root / "context/sample.md"
+        path.write_bytes(b"SYNTHETIC_SECRET\xff")
+        self.git("add", "context/sample.md")
+        result = self.cli("--staged")
+        self.assertNotEqual(result.returncode, 0)
+        self.assertNotIn("SYNTHETIC_SECRET", result.stdout + result.stderr)
+        self.assertEqual(list((self.root / "tmp").iterdir()), [])
+
+    def test_full_pre_commit_hook_uses_index(self):
+        source = Path(__file__).resolve().parents[1]
+        for relative in [
+            ".githooks/pre-commit",
+            "scripts/leak-check.sh",
+            "scripts/okf-check.sh",
+        ]:
+            target = self.root / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source / relative, target)
+        shutil.copy2(SCRIPT, self.root / "scripts/okf-check.py")
+        self.git("add", ".githooks", "scripts")
+        self.git("config", "core.hooksPath", ".githooks")
+        env = dict(os.environ, CAIO_PYTHON=sys.executable)
+
+        def hook():
+            return subprocess.run(
+                [str(self.root / ".githooks/pre-commit")],
+                cwd=self.root,
+                env=env,
+                capture_output=True,
+                text=True,
+            )
+
+        self.concept(META.replace("Hecho", "Invalid"))
+        self.git("add", "context/sample.md")
+        self.concept()
+        self.assertNotEqual(hook().returncode, 0)
+        self.git("add", "context/sample.md")
+        self.concept(META.replace("Hecho", "Invalid"))
+        result = hook()
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("okf-check", result.stdout)
 
 
 if __name__ == "__main__":
