@@ -10,21 +10,23 @@ sources:
   - id: m3u2-visual
     resource: UTNBA_CAIO_M3_U2_Resumen_visual.pdf
     title: M3U2, resumen visual (solo imagen)
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-11T20:56:00Z }
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:20:00Z }
 ---
 
 # Contenido
 
-- **Slides:** literacy en 3 niveles, programa de champions, estrategias de
-  transición; transparencia, co-diseño, victorias tempranas.[^m3u2-slides]
-- **Resumen visual:** literacy por rol (ejecutivos, mandos medios, colaboradores),
-  champions en 4 fases, Prompt Challenge de 2 semanas, frenos a la
-  adopción.[^m3u2-visual]
+Cuatro bloques en las slides, más un resumen visual de tres páginas:
+
+- **AI Literacy estratificada:** tres niveles de competencia y, en el resumen, literacy por rol. Ver [AI Literacy estratificada](/conceptos/m3u2-ai-literacy-niveles.md).[^m3u2-slides][^m3u2-visual]
+- **Red de AI Champions:** perfil, roles y cuatro fases. Ver [Programa de AI Champions](/conceptos/m3u2-programa-champions.md).[^m3u2-slides][^m3u2-visual]
+- **Psicología de la automatización:** reacciones, frenos y estrategias de transición (transparencia, recualificación, co-diseño, victorias tempranas). Ver [Frenos y transición](/conceptos/m3u2-frenos-y-transicion.md).[^m3u2-slides][^m3u2-visual]
+- **Caso práctico:** [Prompt Challenge](/conceptos/m3u2-prompt-challenge.md) de dos semanas y el caso Logística Sur.[^m3u2-visual]
 
 # Cautelas
 
-Las slides dicen "60% menos resistencia" sin fuente. No va en una slide del plan
-sin fuente primaria.
+Las slides dicen "60% menos resistencia" sin fuente. Se buscó el origen y no se
+encontró un estudio primario; no va en una slide del plan. Detalle en
+[Frenos y transición](/conceptos/m3u2-frenos-y-transicion.md).
 
 # Respalda
 
