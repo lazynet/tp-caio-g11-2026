@@ -1,13 +1,18 @@
-# Plan Maestro CAIO — Flexibility · Grupo 11
+# Plan Maestro CAIO · Grupo 11
 
 **Equipo:** Gabriela Temporale · Martin Vago · Pablo Ces · Eduardo Chaparro ·
 Rafael Cioffi · Nicolas Tanos
 
 Repo del Trabajo Integrador Final de la Diplomatura CAIO (UTN BA): un Plan
-Maestro del CAIO a 12 meses para Flexibility, presentado en 10 slides más anexos.
+Maestro del CAIO a 12 meses, presentado en 10 slides como máximo (incluyendo
+portada y equipo) más anexos.
 
-> **El repo es público.** Ningún dato interno de Flexibility entra acá: ver
-> [Datos privados](#datos-privados) antes de escribir nada.
+**Estado:** estamos en setup. El caso todavía no está elegido; Flexibility
+(software para fintech y bancos) es un candidato. Ver
+[Pendientes del equipo](#pendientes-del-equipo).
+
+> **El repo es público.** Ningún dato interno de ninguna organización entra acá:
+> ver [Datos privados](#datos-privados) antes de escribir nada.
 
 Acá no se escriben slides a mano. Se escribe markdown y el deck se **genera**.
 Los agentes de IA del repo ayudan a producir cada sección y a atacarla antes de
@@ -20,6 +25,7 @@ que la vea otro equipo.
 | Cuenta de GitHub ([github.com/signup](https://github.com/signup)) | escribir en el repo |
 | git y [GitHub CLI](https://cli.github.com) (`gh`) | bajar y subir cambios |
 | Un agente de IA: [Claude Code](https://claude.com/claude-code), [Codex](https://developers.openai.com/codex) o VS Code con GitHub Copilot | trabajar con los agentes por rol |
+| Python 3.11 o más nuevo, con PyYAML | correr los chequeos (datos privados, OKF, deck) |
 | Node.js 18 o más nuevo | generar el deck con Marp |
 | Chrome, Edge o Chromium | Marp lo usa para exportar pdf y pptx |
 | pandoc | generar el pptx editable |
@@ -33,14 +39,14 @@ por vos si se lo pedís.
 **macOS** (con [Homebrew](https://brew.sh)):
 
 ```bash
-brew install git gh node pandoc
+brew install git gh node pandoc python
 gh auth login
 ```
 
 **Windows** (PowerShell; `winget` viene con Windows 10 y 11):
 
 ```powershell
-winget install Git.Git GitHub.cli OpenJS.NodeJS.LTS JohnMacFarlane.Pandoc
+winget install Git.Git GitHub.cli OpenJS.NodeJS.LTS JohnMacFarlane.Pandoc Python.Python.3.12
 gh auth login
 ```
 
@@ -58,14 +64,49 @@ instrucciones de Linux adentro de WSL.
 **Linux** (Debian o Ubuntu 24.04+):
 
 ```bash
-sudo apt install git gh nodejs npm pandoc chromium
+sudo apt install git gh nodejs npm pandoc chromium python3 python3-venv
 gh auth login
 ```
 
 Si tu distro trae un Node más viejo que 18 (`node --version`), instalalo desde
 [nodejs.org](https://nodejs.org). Si `gh` no está en tus repos, seguí
 [las instrucciones oficiales](https://github.com/cli/cli/blob/trunk/docs/install_linux.md).
-En Fedora: `sudo dnf install git gh nodejs pandoc chromium`.
+En Fedora: `sudo dnf install git gh nodejs pandoc chromium python3`.
+
+Las instrucciones de Windows y Linux todavía no están probadas en este repo. Si
+algo falla, contalo y corregí este README.
+
+### Python y PyYAML
+
+Los chequeos son Python: el de datos privados usa solo la biblioteca estándar;
+el de OKF y el del deck (`plan-check`, en los dos modos) necesitan **PyYAML** y
+fallan sin él. CI usa
+Python 3.11 o más nuevo. Después de clonar, instalá PyYAML en un entorno
+virtual `.venv` dentro del repo (no se versiona), nunca con `pip` global:
+
+**macOS y Linux:**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install pyyaml
+```
+
+**Windows (Git Bash):** ahí Python se llama `python` (o `py`), no `python3`, y
+los scripts lo eligen con la variable `CAIO_PYTHON`:
+
+```bash
+python -m venv .venv
+source .venv/Scripts/activate
+python -m pip install pyyaml
+export CAIO_PYTHON=python
+```
+
+Activá el `.venv` (y en Windows exportá `CAIO_PYTHON`) en cada terminal antes de
+commitear o correr scripts: el hook pre-commit corre `scripts/okf-check.sh
+--staged` y necesita PyYAML. Si el agente commitea por vos, pedile que active
+el `.venv` primero. Un `alias python3=python` no sirve: los scripts no heredan alias.
+Sin `CAIO_PYTHON`, los scripts usan `python3`.
 
 ## Cómo sumarte
 
@@ -90,6 +131,7 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
    ```
 
    El `-c core.symlinks=true` solo importa en Windows; en macOS y Linux no cambia nada.
+   Después creá el `.venv` con PyYAML (ver [Python y PyYAML](#python-y-pyyaml)).
 
 2. Abrí tu agente ahí: `claude`, `codex`, o la carpeta en VS Code con el chat de Copilot.
 3. Pedile: *"leé AGENTS.md y material/index.md y contame en qué estado está el plan"*.
@@ -98,17 +140,20 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 
 ## Cómo está organizado
 
-| Carpeta | Qué hay | Quién escribe |
+| Carpeta | Qué hay | Agente dueño |
 |---|---|---|
-| `plan/slides.md` | las 10 slides, fuente única del deck | `caio` integra |
-| `plan/annexes/` | un anexo por tema: el detalle que sostiene cada slide | el agente dueño del tema |
-| `context/` | datos **públicos** o anonimizados de Flexibility, un archivo por hecho, con su fuente | Martin (tiene el acceso) |
-| `private/` | datos internos reales — **solo local, nunca se versiona** | Martin |
+| `plan/slides.md` | las 10 slides, fuente única del deck | `caio`, único editor; los demás le proponen |
+| `plan/annexes/` | un anexo por tema: el detalle que sostiene cada slide | el agente dueño del tema (`owner:`) |
+| `context/` | hechos **públicos** o anonimizados del caso y supuestos, uno por archivo, con su fuente; vacío hasta que elijamos caso | — |
+| `private/` | datos internos reales — **solo local, nunca se versiona** | quien tenga el acceso |
 | `material/` | una ficha por unidad y por framework de la cursada, y qué sección del plan respalda cada uno | — |
-| `defense/` | storyline, objeciones, evidencia | `caio` + `board` |
-| `defense/evidence/` | una ficha por evidencia: qué objeción responde y de dónde sale | `caio` + `board` |
+| `defense/` | storyline, objeciones, evidencia | `caio`; `board` aporta desde `reviews/` |
+| `defense/evidence/` | una ficha por evidencia: qué objeción responde y de dónde sale | `caio` |
 | `reviews/` | revisiones del board y del peer review, con fecha | `board` |
 | `out/` | decks generados — **no se versiona ni se edita** | el script |
+
+El agente dueño no es el responsable humano: quién del grupo se hace cargo de
+cada sección se decide cuando elijamos caso.
 
 `context/`, `material/` y `defense/evidence/` siguen el formato abierto
 [OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md):
@@ -133,34 +178,52 @@ Ejemplos:
 
 - *"Con el agente finance, armá el borrador de plan/annexes/finance.md"*
 - *"Usá architect para proponer 2 alternativas de arquitectura con tradeoffs"*
-- *"Corré el skill board-review sobre plan/"*: las cuatro miradas en paralelo,
-  después el board, y el resultado queda en `reviews/`. En Claude Code y Copilot
-  también podés escribir `/board-review plan/`.
+- *"Corré board-review sobre plan/annexes/finance.md"*: revisión focalizada de
+  un borrador, con un solo revisor pertinente. El path es obligatorio.
+- *"Corré board-review --integral y guardá la revisión en reviews/"*: las cuatro
+  miradas y después el board consolida, sobre `plan/` si no das otro objetivo.
+  Es para antes del peer review y de la entrega.
+- *"Corré board-review sobre plan/annexes/finance.md --chat"*: la revisión vuelve
+  en la conversación y no se escribe ningún archivo.
 
-Todos leen las mismas definiciones, pero cada herramienta las carga distinto:
+Ni el skill ni el agente `board` escriben en `reviews/` si no se lo pedís; ante
+la duda responden en el chat y te ofrecen guardar.
+
+Cada agente devuelve lo mismo, adaptado a su rol: problema, evidencia o
+supuesto, alternativas, recomendación, dependencias, costo, riesgo, responsable
+humano, criterio de éxito y condición de abandono (ver `AGENTS.md`).
+
+Las definiciones son compartidas, pero eso no prueba que cada herramienta las
+cargue igual. Esto es lo que sabemos hoy:
 
 | Herramienta | Instrucciones (`AGENTS.md`) | Agentes por rol | Skill `board-review` |
 |---|---|---|---|
-| Claude Code | automático | automático (`.claude/agents/`) | automático |
-| VS Code + Copilot | automático (lo fija `.vscode/settings.json`) | automático (`.claude/agents/`) | automático |
-| Codex | automático | **no**: pedile *"lanzá un subagente con las instrucciones de .claude/agents/finance.md"* | automático (`.agents/skills/`) |
+| Claude Code | observado | listados como disponibles; invocación a probar | listado como disponible; invocación a probar |
+| VS Code + Copilot | configurado en `.vscode/settings.json`; a probar | a probar | a probar |
+| Codex | observado: leyó `AGENTS.md` y ejecutó briefs en worktrees | **no** deja elegirlos (codex-cli 0.162.1); alternativa: pasarle `.claude/agents/<rol>.md` como instrucciones, no probada rol por rol | a probar |
 
+Si probás una celda "a probar", contalo en el grupo y actualizá la tabla.
 Las definiciones viven una sola vez en `.claude/agents/` y `.agents/skills/`.
 No las copies a otras carpetas para "tu" herramienta: se desincronizan.
 
 ## Cómo trabajamos
 
 1. **Una sección, un dueño.** Antes de arrancar un anexo, avisá en el grupo cuál
-   tomás. Cada anexo declara `owner:` arriba.
-2. **Todo número tiene fuente.** Si es un supuesto, se marca como supuesto.
-3. **Nada interno de Flexibility en el repo.** Ver [Datos privados](#datos-privados).
-4. **Board antes de compartir.** Corré el skill `board-review` sobre lo tuyo
-   antes de pedir review humano.
-5. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se corrige
+   tomás. Cada anexo declara su agente dueño (`owner:`) arriba; las slides las
+   edita solo `caio`, y los demás le proponen cambios.
+2. **Todo número tiene fuente.** Si es un supuesto, se marca como supuesto. Una
+   cifra entra a la entrega solo si una persona la verificó contra la fuente.
+3. **Nada interno de ninguna organización en el repo.** Ver [Datos privados](#datos-privados).
+4. **Revisión a la medida.** Para compartir el borrador de una sección alcanza
+   con una revisión focalizada y feedback humano; el `board-review` completo va
+   antes del peer review y de la entrega.
+5. **Desacuerdos a la vista.** Si dos miradas chocan, se dejan las alternativas
+   con su evidencia; no se inventa consenso.
+6. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se corrige
    en `plan/slides.md` y se regenera.
-6. **Cambios a `main` por pull request.** Trabajá en una rama, abrí un PR, y se
-   mergea cuando pasa el chequeo `leak-guard`. Si no sabés cómo, pedíselo a tu
-   agente: *"commiteá esto en una rama nueva y abrí un PR"*.
+7. **Cambios a `main` por pull request.** Trabajá en una rama, abrí un PR, y
+   mergealo recién cuando pasen los chequeos de GitHub Actions. Si no sabés
+   cómo, pedíselo a tu agente: *"commiteá esto en una rama nueva y abrí un PR"*.
 
 ## Datos privados
 
@@ -168,27 +231,66 @@ El repo es público: cualquiera en internet lo puede leer, y lo que se pushea no
 se puede despublicar. Borrarlo después o pasar el repo a privado no alcanza,
 porque puede haber quedado en clones, forks o caches.
 
-**Nunca entra al repo:** nombres de clientes o de proyectos internos de
-Flexibility, nombres de personas de Flexibility, montos de contratos, tarifas,
-P&L, headcount, mails o rutas corporativas, credenciales.
+La regla vale para cualquier organización que analicemos, sea cual sea el caso.
+
+**Nunca entra al repo:** nombres de clientes o de proyectos internos, nombres de
+personas de la organización, montos de contratos, tarifas, P&L, headcount,
+mails o rutas corporativas, credenciales.
 
 **Cómo se escribe en cambio:** "Cliente A (banco)", "Cliente B (fintech)";
 cifras en rangos, ratios o índice base 100; personas por rol ("el CFO").
 
-**Dónde va el dato real:** en `private/`, que no se versiona. Solo Martin tiene
-esos datos.
+**Dónde va el dato real:** solo en `private/`, que no se versiona y existe solo
+en la máquina de quien tiene el acceso. `context/` lleva hechos públicos o
+anonimizados y supuestos, nunca el dato real.
 
 **Qué te protege:**
 
 | Capa | Qué hace | Dónde |
 |---|---|---|
-| Hook pre-commit | frena el commit si encuentra un dato prohibido | tu máquina, lo activa `scripts/setup.sh` |
-| `leak-guard` | repite el chequeo y busca credenciales en toda la historia | GitHub Actions, en cada push y PR |
-| Push protection | rechaza pushes con tokens o claves conocidas | GitHub |
+| Hook pre-commit | frena el commit si encuentra un dato prohibido en lo que está staged, y valida los bundles OKF del índice completo | tu máquina, lo activa `scripts/setup.sh` |
+| `leak-guard` en PR | repite el chequeo sobre todo el repo (parcial si no recibe la denylist) y gitleaks busca credenciales en la historia | GitHub Actions |
+| `leak-guard` en push | lo mismo en modo estricto: falla si falta la denylist. Detecta, no previene: el push ya es público | GitHub Actions |
 
-El chequeo combina patrones fijos (mails corporativos, claves, CUIT, archivos
-marcados confidenciales, cualquier cosa en `private/`) con una denylist privada
-de nombres que vive fuera del repo. No uses nunca `git commit --no-verify`.
+El chequeo combina patrones fijos (claves privadas, CUIT, archivos marcados
+confidenciales, cualquier cosa en `private/` y mails corporativos, solo del
+dominio del candidato actual) con una denylist privada de nombres que vive fuera
+del repo. No uses nunca `git commit --no-verify`.
+Ninguna capa garantiza que no se filtre nada: la defensa principal es no
+escribir el dato. Que el secreto `LEAK_DENYLIST` y las reglas de la rama estén
+configurados en GitHub no está verificado en este README.
+
+`scripts/leak-check.sh` usa solo Python estándar y git:
+
+```bash
+./scripts/leak-check.sh                 # lo staged, como el hook
+./scripts/leak-check.sh --all           # todos los archivos versionados
+./scripts/leak-check.sh --all --strict  # falla si no hay denylist o si omite algo
+```
+
+Que `--strict` pase no certifica que no haya datos privados: solo dice que no
+encontró los patrones ni los términos de la denylist en lo que pudo leer.
+
+Sin `.leak-denylist` (ni `LEAK_DENYLIST`) la revisión sale **PARCIAL**: solo
+patrones fijos. La cobertura es texto UTF-8: binarios, archivos con NUL, UTF-16
+o PDF se omiten (`⚠ archivo #N: omisión`), la revisión queda **PARCIAL** y
+`--strict` la rechaza. Un symlink se revisa por su contenido (la ruta que
+guarda), nunca siguiendo el destino. **COMPLETA** quiere decir que corrió con
+denylist y sin omisiones, no que el repo esté libre de datos privados.
+
+Para no publicar nombres ni valores en logs, cada hallazgo dice solo categoría,
+número de archivo y línea (`✗ archivo #3, línea 12: CUIT`). El
+número es la posición en el listado de git (separado por NUL) del modo que
+corriste. Para ver solo ese archivo en tu máquina, desde la raíz del repo y sin
+pegar el listado en ningún lado (el `3` es el número del hallazgo):
+
+```bash
+sel='import os,subprocess,sys; out=subprocess.run(["git",*sys.argv[2:]],stdout=subprocess.PIPE,check=True).stdout; print(repr(os.fsdecode([p for p in out.split(b"\0") if p][int(sys.argv[1])-1])))'
+python3 -c "$sel" 3 diff --cached --name-only -z --diff-filter=ACMR  # staged
+python3 -c "$sel" 3 ls-files -z                                       # --all
+```
+
+Separa por NUL, así que funciona aunque el nombre tenga espacios o saltos de línea.
 
 ### Si se filtró algo
 
@@ -204,7 +306,15 @@ de nombres que vive fuera del repo. No uses nunca `git commit --no-verify`.
 ./scripts/build-deck.sh          # todos los formatos
 ./scripts/build-deck.sh marp     # solo Marp: html, pdf, pptx
 ./scripts/build-deck.sh pandoc   # solo pandoc: pptx
+./scripts/build-deck.sh html     # solo el html de Marp, lo más rápido
 ```
+
+Antes de renderizar, el script corre `plan-check.py --mode draft` y corta si la
+estructura del deck no es válida. Separá slides solo con `---` o `***` en su
+propia línea: se rechazan variantes con espacios (`- - -`) o `___`. Los links
+locales van en Markdown (`[anexo](annexes/finance.md)`); `href`/`src` locales
+en HTML se rechazan. El frontmatter se lee como YAML seguro y no admite claves
+duplicadas.
 
 | Salida | Sirve para |
 |---|---|
@@ -214,6 +324,36 @@ de nombres que vive fuera del repo. No uses nunca `git commit --no-verify`.
 
 Estamos probando alternativas: si alguien quiere sumar otro renderer, se agrega
 al script, no se arma a mano.
+
+## Validar
+
+Corré estos chequeos desde la raíz del repo, con el `.venv` activo. En Windows,
+donde dice `python3` usá `python`.
+
+```bash
+./scripts/okf-check.sh                                    # bundles OKF de tu working tree, borrador (CI lo corre sobre el checkout)
+./scripts/okf-check.sh --staged                           # índice completo, borrador (como el hook)
+./scripts/okf-check.sh --delivery --path material/unidades/m1u2-portfolio-100-dias.md
+python3 scripts/plan-check.py --mode draft                # estructura del deck
+python3 scripts/plan-check.py --mode delivery             # el deck, como para entregar
+```
+
+`okf-check` y `plan-check` necesitan PyYAML en los dos modos; en entrega,
+`plan-check` además valida con `okf-check` las fichas que usa el deck.
+
+- **Borrador** acepta fichas `draft` con faltantes identificados. Toda ficha
+  nueva declara `status`; una sin `status` se lee como `draft`.
+- **Entrega** (`--delivery`, con `--path` para las fichas que usa la entrega;
+  `--mode delivery` para el deck) exige `status: verified` con el bloque
+  `verified:` de una persona y un deck sin pendientes. `--path` acepta solo
+  archivos o carpetas de `context/`, `material/` y `defense/evidence/`: pasá
+  las fichas que de verdad cita la entrega. El ejemplo de arriba es una ficha
+  real y hoy falla porque sigue en `draft`.
+- Hoy, en setup, `okf-check.sh --delivery` sin paths y `plan-check.py --mode
+  delivery` **tienen que fallar**: si pasan, algo está mal.
+- Los chequeos validan estructura y que la revisión humana esté declarada. No
+  prueban que una cifra sea cierta ni que el plan esté completo: eso lo revisan
+  personas.
 
 ## Fechas
 
@@ -227,6 +367,9 @@ al script, no se arma a mano.
 ## Pendientes del equipo
 
 - [x] Dónde colaboramos: GitHub, `lazynet/tp-caio-g11-2026` (público hasta que estemos todos)
+- [x] Diplomatura, plan a 12 meses y tope de 10 slides incluyendo portada y equipo
+- [ ] Caso: Flexibility es candidato, no está elegido
+- [ ] Alcance del caso, una vez elegido
+- [ ] Responsables humanos de cada sección
 - [ ] Formato del deck final (ver "Generar el deck")
-- [x] Alcance: Flexibility completa, en dos frentes: IA para operar mejor puertas adentro e IA en el producto que se les vende a bancos y fintech
 - [ ] Material de M3U4 (cierre y defensa del Plan Maestro), que no tenemos

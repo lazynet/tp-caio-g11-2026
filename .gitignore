@@ -6,6 +6,10 @@
 .claude/worktrees/
 tmp/
 
+# Entorno de Python y caches de los chequeos y tests
+.venv/
+__pycache__/
+
 # El material de la cursada vive en Google Drive, no acá
 *.pdf
 *.mp4

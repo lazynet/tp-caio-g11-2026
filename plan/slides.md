@@ -10,46 +10,65 @@ paginate: true
      qué decisión le pide al board y apunta a su anexo. La estructura de abajo es un
      esqueleto borrador derivado de la consigna, no contenido acordado. -->
 
-# Plan Maestro CAIO — Flexibility
+# Plan Maestro CAIO — caso pendiente
 
 Grupo 11 · Diplomatura CAIO · UTN BA
 
----
+**Setup del trabajo. Títulos provisionales; no es un plan completo.**
 
-# 1. Qué le pedimos al board
-
----
-
-# 2. Punto de partida
+Pendiente: elegir caso, alcance y responsables humanos con el equipo.
+Pedido inicial al board: pendiente de definir a partir del problema elegido.
 
 ---
 
-# 3. Visión y portfolio a 12 meses
+# Punto de partida
+
+Pendiente: problema, contexto y evidencia del caso.
 
 ---
 
-# 4. Arquitectura objetivo
+# Visión y portfolio a 12 meses
+
+Pendiente: alternativas, recomendación y criterios de priorización.
 
 ---
 
-# 5. Gobierno y seguridad
+# Arquitectura objetivo
+
+Pendiente: datos, plataforma, dependencias e hitos técnicos.
 
 ---
 
-# 6. Personas y cultura
+# Gobierno y seguridad
+
+Pendiente: derechos de decisión, controles y riesgos del caso.
 
 ---
 
-# 7. Roadmap técnico, financiero y cultural
+# Personas y cultura
+
+Pendiente: roles, capacidad, adopción y responsables humanos.
 
 ---
 
-# 8. Business case
+# Roadmap técnico, financiero y cultural
+
+Pendiente: hitos, gates, criterios de éxito y condiciones de abandono.
 
 ---
 
-# 9. Riesgos, escenarios y decisiones reversibles
+# Business case
+
+Pendiente: costos, beneficios, supuestos y trazabilidad a anexos.
 
 ---
 
-# 10. Decisiones y próximos 100 días
+# Riesgos, escenarios y decisiones reversibles
+
+Pendiente: escenarios, contingencias y decisiones irreversibles.
+
+---
+
+# Equipo y preparación de la defensa
+
+Pendiente: integrantes, responsabilidades acordadas, objeciones y evidencia.

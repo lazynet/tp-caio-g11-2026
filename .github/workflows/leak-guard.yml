@@ -15,10 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Datos privados de Flexibility
+      - name: Regresiones del scanner
+        run: python3 -m unittest discover -s tests -p test_leak_check.py -v
+      - name: Datos privados (push estricto, PR parcial si falta denylist)
         env:
           LEAK_DENYLIST: ${{ secrets.LEAK_DENYLIST }}
-        run: scripts/leak-check.sh --all
+        run: |
+          if [ "${{ github.event_name }}" = push ]; then
+            scripts/leak-check.sh --all --strict
+          else
+            scripts/leak-check.sh --all
+          fi
 
   gitleaks:
     runs-on: ubuntu-latest

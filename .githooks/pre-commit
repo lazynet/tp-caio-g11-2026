@@ -4,4 +4,4 @@
 set -euo pipefail
 root="$(git rev-parse --show-toplevel)"
 "$root/scripts/leak-check.sh" --staged
-"$root/scripts/okf-check.sh"
+"$root/scripts/okf-check.sh" --staged
