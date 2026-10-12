@@ -33,7 +33,7 @@ La calificación depende de la EFIO. Los certificados del Centro de e-Learning U
 
 # Criterios de evaluación del TIF
 
-El programa **no publica una rúbrica ni criterios de evaluación** del Trabajo Integrador Final; solo dice que la EFIO es una tarea con consigna específica, individual o grupal. Los criterios del TIF (el enunciado) están fuera de este PDF; para lo que pide el plan, ver el `AGENTS.md` del repo; como rúbrica de referencia, el bundle tiene la [CAIE](/frameworks/caie.md).
+El programa **no publica una rúbrica ni criterios de evaluación** del Trabajo Integrador Final; solo dice que la EFIO es una tarea con consigna específica, individual o grupal. Los criterios del TIF (el enunciado) están fuera de este PDF; para lo que pide el plan, ver el `AGENTS.md` del repo. La [CAIE](/frameworks/caie.md) evalúa capacidades y madurez de sistemas de IA: puede servir dentro del plan, pero no sustituye la rúbrica del TIF.
 
 # Metodología
 

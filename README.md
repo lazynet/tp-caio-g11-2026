@@ -1,13 +1,18 @@
-# Plan Maestro CAIO — Flexibility · Grupo 11
+# Plan Maestro CAIO · Grupo 11
 
 **Equipo:** Gabriela Temporale · Martin Vago · Pablo Ces · Eduardo Chaparro ·
 Rafael Cioffi · Nicolas Tanos
 
 Repo del Trabajo Integrador Final de la Diplomatura CAIO (UTN BA): un Plan
-Maestro del CAIO a 12 meses para Flexibility, presentado en 10 slides más anexos.
+Maestro del CAIO a 12 meses, presentado en 10 slides como máximo (incluyendo
+portada y equipo) más anexos.
 
-> **El repo es público.** Ningún dato interno de Flexibility entra acá: ver
-> [Datos privados](#datos-privados) antes de escribir nada.
+**Estado:** estamos en setup. El caso todavía no está elegido; Flexibility
+(software para fintech y bancos) es un candidato. Ver
+[Pendientes del equipo](#pendientes-del-equipo).
+
+> **El repo es público.** Ningún dato interno de ninguna organización entra acá:
+> ver [Datos privados](#datos-privados) antes de escribir nada.
 
 Acá no se escriben slides a mano. Se escribe markdown y el deck se **genera**.
 Los agentes de IA del repo ayudan a producir cada sección y a atacarla antes de
@@ -98,17 +103,20 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 
 ## Cómo está organizado
 
-| Carpeta | Qué hay | Quién escribe |
+| Carpeta | Qué hay | Agente dueño |
 |---|---|---|
-| `plan/slides.md` | las 10 slides, fuente única del deck | `caio` integra |
-| `plan/annexes/` | un anexo por tema: el detalle que sostiene cada slide | el agente dueño del tema |
-| `context/` | datos **públicos** o anonimizados de Flexibility, un archivo por hecho, con su fuente | Martin (tiene el acceso) |
-| `private/` | datos internos reales — **solo local, nunca se versiona** | Martin |
+| `plan/slides.md` | las 10 slides, fuente única del deck | `caio`, único editor; los demás le proponen |
+| `plan/annexes/` | un anexo por tema: el detalle que sostiene cada slide | el agente dueño del tema (`owner:`) |
+| `context/` | hechos **públicos** o anonimizados del caso y supuestos, uno por archivo, con su fuente; vacío hasta que elijamos caso | — |
+| `private/` | datos internos reales — **solo local, nunca se versiona** | quien tenga el acceso |
 | `material/` | una ficha por unidad y por framework de la cursada, y qué sección del plan respalda cada uno | — |
-| `defense/` | storyline, objeciones, evidencia | `caio` + `board` |
-| `defense/evidence/` | una ficha por evidencia: qué objeción responde y de dónde sale | `caio` + `board` |
+| `defense/` | storyline, objeciones, evidencia | `caio`; `board` aporta desde `reviews/` |
+| `defense/evidence/` | una ficha por evidencia: qué objeción responde y de dónde sale | `caio` |
 | `reviews/` | revisiones del board y del peer review, con fecha | `board` |
 | `out/` | decks generados — **no se versiona ni se edita** | el script |
+
+El agente dueño no es el responsable humano: quién del grupo se hace cargo de
+cada sección se decide cuando elijamos caso.
 
 `context/`, `material/` y `defense/evidence/` siguen el formato abierto
 [OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md):
@@ -133,32 +141,45 @@ Ejemplos:
 
 - *"Con el agente finance, armá el borrador de plan/annexes/finance.md"*
 - *"Usá architect para proponer 2 alternativas de arquitectura con tradeoffs"*
+- *"Con el agente board, revisá solo plan/annexes/finance.md"*: revisión
+  focalizada de un borrador.
 - *"Corré el skill board-review sobre plan/"*: las cuatro miradas en paralelo,
-  después el board, y el resultado queda en `reviews/`. En Claude Code y Copilot
-  también podés escribir `/board-review plan/`.
+  después el board, y el resultado queda en `reviews/`. Es la revisión integral,
+  para antes del peer review y de la entrega.
 
-Todos leen las mismas definiciones, pero cada herramienta las carga distinto:
+Cada agente devuelve lo mismo, adaptado a su rol: problema, evidencia o
+supuesto, alternativas, recomendación, dependencias, costo, riesgo, responsable
+humano, criterio de éxito y condición de abandono (ver `AGENTS.md`).
+
+Las definiciones son compartidas, pero eso no prueba que cada herramienta las
+cargue igual. Esto es lo que sabemos hoy:
 
 | Herramienta | Instrucciones (`AGENTS.md`) | Agentes por rol | Skill `board-review` |
 |---|---|---|---|
-| Claude Code | automático | automático (`.claude/agents/`) | automático |
-| VS Code + Copilot | automático (lo fija `.vscode/settings.json`) | automático (`.claude/agents/`) | automático |
-| Codex | automático | **no**: pedile *"lanzá un subagente con las instrucciones de .claude/agents/finance.md"* | automático (`.agents/skills/`) |
+| Claude Code | observado | listados como disponibles; invocación a probar | listado como disponible; invocación a probar |
+| VS Code + Copilot | configurado en `.vscode/settings.json`; a probar | a probar | a probar |
+| Codex | documentado por OpenAI; a probar acá | **no** deja elegirlos (observado con codex-cli 0.162.1): pedile *"lanzá un subagente con las instrucciones de .claude/agents/finance.md"* | a probar |
 
+Si probás una celda "a probar", contalo en el grupo y actualizá la tabla.
 Las definiciones viven una sola vez en `.claude/agents/` y `.agents/skills/`.
 No las copies a otras carpetas para "tu" herramienta: se desincronizan.
 
 ## Cómo trabajamos
 
 1. **Una sección, un dueño.** Antes de arrancar un anexo, avisá en el grupo cuál
-   tomás. Cada anexo declara `owner:` arriba.
-2. **Todo número tiene fuente.** Si es un supuesto, se marca como supuesto.
-3. **Nada interno de Flexibility en el repo.** Ver [Datos privados](#datos-privados).
-4. **Board antes de compartir.** Corré el skill `board-review` sobre lo tuyo
-   antes de pedir review humano.
-5. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se corrige
+   tomás. Cada anexo declara su agente dueño (`owner:`) arriba; las slides las
+   edita solo `caio`, y los demás le proponen cambios.
+2. **Todo número tiene fuente.** Si es un supuesto, se marca como supuesto. Una
+   cifra entra a la entrega solo si una persona la verificó contra la fuente.
+3. **Nada interno de ninguna organización en el repo.** Ver [Datos privados](#datos-privados).
+4. **Revisión a la medida.** Para compartir el borrador de una sección alcanza
+   con una revisión focalizada y feedback humano; el `board-review` completo va
+   antes del peer review y de la entrega.
+5. **Desacuerdos a la vista.** Si dos miradas chocan, se dejan las alternativas
+   con su evidencia; no se inventa consenso.
+6. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se corrige
    en `plan/slides.md` y se regenera.
-6. **Cambios a `main` por pull request.** Trabajá en una rama, abrí un PR, y se
+7. **Cambios a `main` por pull request.** Trabajá en una rama, abrí un PR, y se
    mergea cuando pasa el chequeo `leak-guard`. Si no sabés cómo, pedíselo a tu
    agente: *"commiteá esto en una rama nueva y abrí un PR"*.
 
@@ -168,15 +189,18 @@ El repo es público: cualquiera en internet lo puede leer, y lo que se pushea no
 se puede despublicar. Borrarlo después o pasar el repo a privado no alcanza,
 porque puede haber quedado en clones, forks o caches.
 
-**Nunca entra al repo:** nombres de clientes o de proyectos internos de
-Flexibility, nombres de personas de Flexibility, montos de contratos, tarifas,
-P&L, headcount, mails o rutas corporativas, credenciales.
+La regla vale para cualquier organización que analicemos, sea cual sea el caso.
+
+**Nunca entra al repo:** nombres de clientes o de proyectos internos, nombres de
+personas de la organización, montos de contratos, tarifas, P&L, headcount,
+mails o rutas corporativas, credenciales.
 
 **Cómo se escribe en cambio:** "Cliente A (banco)", "Cliente B (fintech)";
 cifras en rangos, ratios o índice base 100; personas por rol ("el CFO").
 
-**Dónde va el dato real:** en `private/`, que no se versiona. Solo Martin tiene
-esos datos.
+**Dónde va el dato real:** solo en `private/`, que no se versiona y existe solo
+en la máquina de quien tiene el acceso. `context/` lleva hechos públicos o
+anonimizados y supuestos, nunca el dato real.
 
 **Qué te protege:**
 
@@ -227,6 +251,9 @@ al script, no se arma a mano.
 ## Pendientes del equipo
 
 - [x] Dónde colaboramos: GitHub, `lazynet/tp-caio-g11-2026` (público hasta que estemos todos)
+- [x] Diplomatura, plan a 12 meses y tope de 10 slides incluyendo portada y equipo
+- [ ] Caso: Flexibility es candidato, no está elegido
+- [ ] Alcance del caso, una vez elegido
+- [ ] Responsables humanos de cada sección
 - [ ] Formato del deck final (ver "Generar el deck")
-- [x] Alcance: Flexibility completa, en dos frentes: IA para operar mejor puertas adentro e IA en el producto que se les vende a bancos y fintech
 - [ ] Material de M3U4 (cierre y defensa del Plan Maestro), que no tenemos
