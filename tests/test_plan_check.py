@@ -243,6 +243,143 @@ class PlanCheckTests(unittest.TestCase):
         self.write("# Portada\n***\n# Equipo")
         self.assertEqual(self.result()["slides"], 2)
 
+    def test_noncanonical_horizontal_rules_rejected(self):
+        for separator in (
+            "___",
+            "- - -",
+            "* * *",
+            "_ _ _",
+            "----",
+            "****",
+            "____",
+            "  -\t- -  ",
+        ):
+            with self.subTest(separator=separator):
+                self.write(f"\n{separator}\n".join(f"# Slide {i}" for i in range(11)))
+                for mode in ("draft", "delivery"):
+                    self.assertTrue(
+                        any(
+                            "Separador no admitido" in e
+                            for e in self.result(mode)["errors"]
+                        )
+                    )
+        for separator in ("---", "***", "   ---\t"):
+            self.write(f"# Deck\n{separator}\n# Equipo")
+            self.assertEqual(self.result("delivery")["errors"], [])
+            self.assertEqual(self.result()["slides"], 2)
+        self.write("# Deck\n<!--\n___\n-->\n```\n- - -\n```\n`___`")
+        self.assertEqual(self.result("delivery")["errors"], [])
+
+    def test_local_html_links_rejected_direct_and_via_annex(self):
+        self.concept()
+        annex = self.root / "plan/annex.md"
+        for destination in (
+            "/context/source.md",
+            "/context/missing.md",
+            "../context/source.md",
+            "../context/missing.md",
+        ):
+            for attribute in ("href", "src"):
+                for syntax in (f'"{destination}"', f"'{destination}'", destination):
+                    html = f"<a {attribute}={syntax}>Fuente</a>"
+                    for indirect in (False, True):
+                        with self.subTest(
+                            destination=destination,
+                            attribute=attribute,
+                            syntax=syntax,
+                            indirect=indirect,
+                        ):
+                            annex.write_text(f"# Anexo\n{html}")
+                            self.write(
+                                "# Deck\n[Anexo](annex.md)"
+                                if indirect
+                                else f"# Deck\n{html}"
+                            )
+                            for mode in ("draft", "delivery"):
+                                self.assertTrue(
+                                    any(
+                                        "Enlace HTML local no admitido" in e
+                                        for e in self.result(mode)["errors"]
+                                    )
+                                )
+        self.write(
+            '# Deck\n<a href="https://example.org/missing">Web</a>\n<img src="//example.org/image">\n<a href="#deck">Inicio</a>\n<a id="custom"></a>'
+        )
+        with patch.object(
+            checker,
+            "resolve_link",
+            side_effect=AssertionError("No leer links HTML externos"),
+        ):
+            self.assertEqual(self.result("delivery")["errors"], [])
+        self.write(
+            '# Deck\n`<a href="missing.md">TODO</a>`\n<!-- <img src="missing.png"> -->\n```html\n<a href="missing.md">TODO</a>\n```'
+        )
+        self.assertEqual(self.result("delivery")["errors"], [])
+
+    def test_yaml_syntax_duplicates_mapping_and_types(self):
+        valid = "owner: caio\nstatus: ready\nmarp: true"
+        for metadata in (
+            valid + "\ninvalid: [",
+            valid + "\nstatus: draft",
+            "status: draft\n" + valid,
+            "[caio, ready, true]",
+            "null",
+            "owner: [caio]\nstatus: ready\nmarp: true",
+            "owner: caio\nstatus: [ready]\nmarp: true",
+            'owner: caio\nstatus: ready\nmarp: "true"',
+            valid + "\nextra: {key: one, key: two}",
+            valid + "\n? [key]\n: value",
+            valid + "\nextra: !!python/object:bad {}",
+        ):
+            with self.subTest(metadata=metadata):
+                self.write(metadata=metadata)
+                for mode in ("draft", "delivery"):
+                    self.assertTrue(self.result(mode)["errors"])
+        for metadata in (
+            valid,
+            "{owner: caio, status: ready, marp: true}",
+            valid + "\nextra: {nested: [one, two]}",
+        ):
+            self.write(metadata=metadata)
+            self.assertEqual(self.result("delivery")["errors"], [])
+
+    def test_missing_yaml_dependency_keeps_cli_json_clean(self):
+        self.write()
+        result = subprocess.run(
+            [
+                "python3",
+                "-S",
+                str(REPO / "scripts/plan-check.py"),
+                "--root",
+                str(self.root),
+                "--json",
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("PyYAML", json.loads(result.stdout)["errors"][0])
+        self.assertEqual(result.stderr, "")
+
+    def test_code_comments_ignored_with_visible_pending_line_numbers(self):
+        body = "# Deck\n`[falso](missing.md) TODO`\n``[falso](missing.md) ` TODO``\n<!--\nTODO\n[falso](missing.md)\n-->\n~~~~markdown\nTODO\n[falso](missing.md)\n~~~~\n```\nTODO\n```\nTODO: real"
+        self.write(body)
+        result = self.result("delivery")
+        self.assertEqual(result["references"], [])
+        self.assertEqual(result["pending"], ["plan/slides.md:20: TODO: real"])
+        self.assertEqual(len(result["errors"]), 1)
+        self.write(body.replace("TODO: real", "[Real](missing.md)"))
+        self.assertTrue(
+            any("Referencia local rota" in e for e in self.result()["errors"])
+        )
+        annex = self.root / "plan/annex.md"
+        annex.write_text(
+            "# Anexo\n<!--\nTODO\n-->\n`TODO [falso](missing.md)`\n```\nTODO\n```\nTODO: real"
+        )
+        self.write("# Deck\n[Anexo](annex.md)")
+        self.assertEqual(self.result()["pending"], ["plan/annex.md:9: TODO: real"])
+
     def test_empty_slide_rejected(self):
         self.write("# Portada\n---\n")
         self.assertTrue(self.result()["errors"])

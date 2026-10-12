@@ -6,6 +6,7 @@ import re
 import subprocess
 import sys
 import unicodedata
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -46,16 +47,48 @@ def split_frontmatter(text):
     end = next((i for i in range(1, len(lines)) if lines[i].strip() == "---"), None)
     if end is None:
         raise ValueError("Frontmatter sin cierre")
-    metadata = {}
-    for line in lines[1:end]:
-        match = re.fullmatch(r"([\w-]+):\s*(.*?)\s*", line)
-        if match:
-            metadata[match[1]] = match[2].strip("\"'")
+    try:
+        import yaml
+    except ImportError as exc:
+        raise ValueError("plan-check necesita PyYAML también en borrador") from exc
+
+    class UniqueLoader(yaml.SafeLoader):
+        pass
+
+    def unique_mapping(loader, node):
+        mapping = {}
+        for key_node, value_node in node.value:
+            key = loader.construct_object(key_node)
+            if key in mapping:
+                raise ValueError(f"Clave YAML duplicada: {key}")
+            mapping[key] = loader.construct_object(value_node)
+        return mapping
+
+    UniqueLoader.add_constructor(
+        yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, unique_mapping
+    )
+    try:
+        metadata = yaml.load("\n".join(lines[1:end]), Loader=UniqueLoader)
+    except (yaml.YAMLError, TypeError) as exc:
+        raise ValueError(f"Frontmatter YAML inválido: {exc}") from exc
+    if not isinstance(metadata, dict):
+        raise ValueError("El frontmatter debe ser un mapping YAML")
+    for key, expected in (("owner", str), ("status", str), ("marp", bool)):
+        if type(metadata.get(key)) is not expected:
+            raise ValueError(
+                f"Tipo YAML inválido para {key}: se exige {expected.__name__}"
+            )
     return metadata, "\n".join(lines[end + 1 :])
 
 
 def visible(text):
     # Los ejemplos de código no son slides ni referencias navegables.
+    text = re.sub(
+        r"<!--.*?(?:-->|\Z)",
+        lambda match: "\n" * match[0].count("\n"),
+        text,
+        flags=re.DOTALL,
+    )
     result, fence = [], None
     for line in text.splitlines():
         match = re.match(r"^\s{0,3}(`{3,}|~{3,})", line)
@@ -68,7 +101,27 @@ def visible(text):
             result.append("")
         else:
             result.append(line if fence is None else "")
-    return re.sub(r"<!--.*?-->", "", "\n".join(result), flags=re.DOTALL)
+    text = "\n".join(result)
+    return re.sub(
+        r"(?<!`)(`+)(?!`)(.*?)(?<!`)\1(?!`)",
+        lambda match: re.sub(r"[^\n]", "\ufffc", match[0]),
+        text,
+        flags=re.DOTALL,
+    )
+
+
+def local_html_links(text):
+    class LinkParser(HTMLParser):
+        def handle_starttag(self, tag, attrs):
+            for key, destination in attrs:
+                if key in ("href", "src") and destination is not None:
+                    parsed = urlsplit(destination.strip())
+                    if not parsed.scheme and not parsed.netloc and parsed.path:
+                        destinations.append(destination)
+
+    destinations = []
+    LinkParser().feed(visible(text))
+    return destinations
 
 
 def anchors(text):
@@ -152,7 +205,7 @@ def check(root, deck, mode):
         return {"slides": 0, "errors": [str(exc)], "pending": [], "references": []}
     if metadata.get("owner") != "caio":
         errors.append("El owner del deck debe ser caio")
-    if metadata.get("marp") != "true":
+    if metadata.get("marp") is not True:
         errors.append("El deck debe declarar marp: true")
     if metadata.get("status") not in ("draft", "ready"):
         errors.append(
@@ -160,7 +213,18 @@ def check(root, deck, mode):
         )
     if mode == "delivery" and metadata.get("status") == "draft":
         errors.append("Entrega rechazada: deck declarado draft")
-    slides = re.split(r"^\s{0,3}(?:---|\*\*\*)\s*$", visible(body), flags=re.MULTILINE)
+    for line_number, line in enumerate(visible(body).splitlines(), 1):
+        if re.fullmatch(
+            r" {0,3}(?:-(?:[ \t]*-){2,}|\*(?:[ \t]*\*){2,}|_(?:[ \t]*_){2,})[ \t]*",
+            line,
+        ):
+            if line.strip() not in ("---", "***"):
+                errors.append(
+                    f"Separador no admitido en cuerpo:{line_number}: usá --- o *** compactos"
+                )
+    slides = re.split(
+        r"^ {0,3}(?:---|\*\*\*)[ \t]*$", visible(body), flags=re.MULTILINE
+    )
     count = len(slides)
     if count > 10:
         errors.append(
@@ -176,6 +240,10 @@ def check(root, deck, mode):
         seen.add(origin)
         documents[origin] = content
         edges[origin] = set()
+        for destination in local_html_links(content):
+            errors.append(
+                f"{origin.relative_to(root)}: Enlace HTML local no admitido: {destination}; usá Markdown"
+            )
         used_links = set(links(content, include_definitions=False))
         for destination in links(content):
             try:
@@ -202,7 +270,9 @@ def check(root, deck, mode):
             elif kind is None:
                 queue.append(target)
     for origin in sorted(delivered | evidence):
-        for line_number, line in enumerate(documents.get(origin, "").splitlines(), 1):
+        for line_number, line in enumerate(
+            visible(documents.get(origin, "")).splitlines(), 1
+        ):
             if re.search(
                 r"\b(pendiente\w*|TODO|TBD|FIXME|por definir|falta evidencia|sin evidencia|esqueleto)\b",
                 line,
