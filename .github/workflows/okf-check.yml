@@ -13,5 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: PyYAML para validar el frontmatter
+        run: python3 -m pip install --quiet pyyaml
       - name: Bundles OKF conformes
+        env:
+          OKF_STRICT: "1"
         run: scripts/okf-check.sh

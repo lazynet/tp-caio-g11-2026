@@ -21,6 +21,23 @@ frontmatter() {
   awk 'NR == 1 { if ($0 != "---") exit; next } $0 == "---" { exit } { print }' "$1"
 }
 
+# Un frontmatter que el grep acepta puede no parsear (comillas sin escapar) y romper
+# a cualquier consumidor. Si hay PyYAML se valida; CI lo exige con OKF_STRICT=1.
+parse_yaml='import sys, yaml
+try:
+    yaml.safe_load(sys.stdin)
+except yaml.YAMLError as e:
+    sys.exit(str(e).splitlines()[0])'
+yaml_ok=""
+if python3 -c 'import yaml' 2>/dev/null; then
+  yaml_ok=1
+elif [[ "${OKF_STRICT:-}" == 1 ]]; then
+  echo "✗ OKF_STRICT=1 necesita python3 con PyYAML" >&2
+  exit 1
+else
+  echo "ⓘ sin PyYAML: no se valida la sintaxis YAML (pip install pyyaml)" >&2
+fi
+
 for bundle in "${bundles[@]}"; do
   [[ -d "$bundle" ]] || continue
   while IFS= read -r file; do
@@ -42,6 +59,8 @@ for bundle in "${bundles[@]}"; do
           fail "$file" "falta el frontmatter YAML"
         elif ! grep -qE '^type:[[:space:]]*[^[:space:]]' <<<"$fm"; then
           fail "$file" "falta type en el frontmatter"
+        elif [[ -n "$yaml_ok" ]] && ! err="$(python3 -c "$parse_yaml" <<<"$fm" 2>&1)"; then
+          fail "$file" "el frontmatter no es YAML válido: $err"
         fi
         ;;
     esac

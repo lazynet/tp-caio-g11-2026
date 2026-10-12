@@ -6,7 +6,7 @@ tags: [m1, cautelas, compliance, verificacion]
 sources:
   - id: ai-act-comision
     resource: https://commission.europa.eu/news/ai-act-enters-force-2024-08-01_en
-    title: "Comisión Europea, "AI Act enters into force" (01-08-2024)"
+    title: 'Comisión Europea, "AI Act enters into force" (01-08-2024)'
   - id: ai-act-eurlex
     resource: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
     title: "Reglamento (UE) 2024/1689, DOUE L, 12-07-2024"

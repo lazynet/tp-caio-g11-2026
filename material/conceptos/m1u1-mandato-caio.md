@@ -6,7 +6,7 @@ tags: [m1, caio, rol]
 sources:
   - id: ai-act-comision
     resource: https://commission.europa.eu/news/ai-act-enters-force-2024-08-01_en
-    title: "Comisión Europea, "AI Act enters into force" (01-08-2024)"
+    title: 'Comisión Europea, "AI Act enters into force" (01-08-2024)'
   - id: m1u1-corta
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_1_Unidad_1 (2).pdf
     title: "M1U1 corta, pp. 2-5 y 8-9"
