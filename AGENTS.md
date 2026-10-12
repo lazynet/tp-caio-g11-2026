@@ -104,8 +104,10 @@ un archivo por concepto, con frontmatter YAML, y links markdown absolutos al
 bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recorrer.
 
 - **`type` es obligatorio.** Usamos `Hecho` y `Supuesto` en `context/`; `Unidad`,
-  `Framework`, `Programa`, `Mapa` y `Hueco` en `material/`; `Evidencia` en
-  `defense/evidence/`. Si necesitás un tipo nuevo, sumalo acá.
+  `Framework`, `Concepto`, `Caso`, `Apunte de clase`, `Programa`, `Mapa` y `Hueco`
+  en `material/`; `Evidencia` en `defense/evidence/`. Si necesitás un tipo nuevo,
+  sumalo acá. Para buscar algo en `material/`, empezá por `material/index.md` y
+  `material/mapa-plan-fuentes.md`; antes de usar una cifra, mirá `material/huecos.md`.
 - **También van** `title`, `description` (una oración), `sources` con un `id` por
   fuente y `generated: { by, at }`. Cada afirmación cita su fuente con una nota al
   pie cuya etiqueta es el `id`: `[^m1u2]`. Un `Hecho` sin `sources` no es un hecho.
