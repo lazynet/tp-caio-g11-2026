@@ -1,0 +1,17 @@
+name: plan-check
+on: [push, pull_request]
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # El checker y sus tests usan solo la biblioteca estándar de Python.
+      - run: python3 tests/test_plan_check.py -v
+      - run: python3 scripts/plan-check.py --mode draft
+      - run: bash scripts/build-deck.sh html

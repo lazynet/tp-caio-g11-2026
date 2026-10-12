@@ -6,15 +6,26 @@ set -euo pipefail
 root="$(cd "$(dirname "$0")/.." && pwd)"
 src="$root/plan/slides.md"
 out="$root/out"
-mkdir -p "$out"
 
 renderer="${1:-all}"
+if [[ $# -gt 1 ]]; then
+  echo "Uso: $0 [all|marp|pandoc|html]" >&2
+  exit 2
+fi
+case "$renderer" in
+  all|marp|pandoc|html) ;;
+  *) echo "Renderer inválido: $renderer. Usá all, marp, pandoc o html." >&2; exit 2 ;;
+esac
+python3 "$root/scripts/plan-check.py" --mode draft
+mkdir -p "$out"
 
 # Versión de Marp fija para que todo el equipo genere el mismo deck.
 marp() { npx -y @marp-team/marp-cli@4.1.2 --allow-local-files "$@"; }
 
-if [[ "$renderer" == all || "$renderer" == marp ]]; then
+if [[ "$renderer" == all || "$renderer" == marp || "$renderer" == html ]]; then
   marp "$src" -o "$out/deck-marp.html"
+fi
+if [[ "$renderer" == all || "$renderer" == marp ]]; then
   marp "$src" --pdf -o "$out/deck-marp.pdf"
   marp "$src" --pptx -o "$out/deck-marp.pptx"
 fi
