@@ -199,7 +199,7 @@ cargue igual. Esto es lo que sabemos hoy:
 |---|---|---|---|
 | Claude Code | observado | listados como disponibles; invocación a probar | listado como disponible; invocación a probar |
 | VS Code + Copilot | configurado en `.vscode/settings.json`; a probar | a probar | a probar |
-| Codex | observado: leyó `AGENTS.md` y siguió el contrato | **no** deja elegirlos (codex-cli 0.162.1); funcionó lanzar subagentes genéricos con el rol de `.claude/agents/<rol>.md` como instrucciones | descubrimiento e invocación automáticos a probar |
+| Codex | observado: leyó `AGENTS.md` y ejecutó briefs en worktrees | **no** deja elegirlos (codex-cli 0.162.1); alternativa: pasarle `.claude/agents/<rol>.md` como instrucciones, no probada rol por rol | a probar |
 
 Si probás una celda "a probar", contalo en el grupo y actualizá la tabla.
 Las definiciones viven una sola vez en `.claude/agents/` y `.agents/skills/`.
@@ -269,13 +269,17 @@ configurados en GitHub no está verificado en este README.
 Sin `.leak-denylist` (ni `LEAK_DENYLIST`) la revisión sale **PARCIAL**: solo
 patrones fijos. Para no publicar nombres ni valores en logs, cada hallazgo dice
 solo categoría, número de archivo y línea (`✗ archivo #3, línea 12: CUIT`). El
-número es la posición en el listado de git del modo que corriste; para ubicarlo
-en tu máquina, desde la raíz del repo y sin pegar ese listado en ningún lado:
+número es la posición en el listado de git (separado por NUL) del modo que
+corriste. Para ver solo ese archivo en tu máquina, desde la raíz del repo y sin
+pegar el listado en ningún lado (el `3` es el número del hallazgo):
 
 ```bash
-git diff --cached --name-only -z --diff-filter=ACMR | tr '\0' '\n' | sed -n 3p  # staged
-git ls-files -z | tr '\0' '\n' | sed -n 3p                                       # --all
+sel='import os,subprocess,sys; out=subprocess.run(["git",*sys.argv[2:]],stdout=subprocess.PIPE,check=True).stdout; print(repr(os.fsdecode([p for p in out.split(b"\0") if p][int(sys.argv[1])-1])))'
+python3 -c "$sel" 3 diff --cached --name-only -z --diff-filter=ACMR  # staged
+python3 -c "$sel" 3 ls-files -z                                       # --all
 ```
+
+Separa por NUL, así que funciona aunque el nombre tenga espacios o saltos de línea.
 
 ### Si se filtró algo
 
@@ -313,17 +317,22 @@ donde dice `python3` usá `python`.
 
 ```bash
 ./scripts/okf-check.sh                                    # bundles OKF, modo borrador (el del hook y CI)
-./scripts/okf-check.sh --delivery --path context/ --path material/unidades/
+./scripts/okf-check.sh --delivery --path material/unidades/m1u2-portfolio-100-dias.md
 python3 scripts/plan-check.py --mode draft                # estructura del deck
 python3 scripts/plan-check.py --mode delivery             # el deck, como para entregar
 ```
+
+`okf-check` necesita PyYAML en los dos modos; `plan-check.py` usa solo la
+biblioteca estándar en los dos modos.
 
 - **Borrador** acepta fichas `draft` con faltantes identificados. Toda ficha
   nueva declara `status`; una sin `status` se lee como `draft`.
 - **Entrega** (`--delivery`, con `--path` para las fichas que usa la entrega;
   `--mode delivery` para el deck) exige `status: verified` con el bloque
   `verified:` de una persona y un deck sin pendientes. `--path` acepta solo
-  archivos o carpetas de `context/`, `material/` y `defense/evidence/`.
+  archivos o carpetas de `context/`, `material/` y `defense/evidence/`: pasá
+  las fichas que de verdad cita la entrega. El ejemplo de arriba es una ficha
+  real y hoy falla porque sigue en `draft`.
 - Hoy, en setup, `okf-check.sh --delivery` sin paths y `plan-check.py --mode
   delivery` **tienen que fallar**: si pasan, algo está mal.
 - Los chequeos validan estructura y que la revisión humana esté declarada. No

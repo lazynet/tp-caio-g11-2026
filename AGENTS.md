@@ -188,9 +188,9 @@ todas las herramientas las carguen igual:
   disponibles. Invocarlos de punta a punta está pendiente de probar.
 - **GitHub Copilot (VS Code):** `.vscode/settings.json` activa
   `chat.useAgentsMdFile`; la carga de agentes y skills está pendiente de probar.
-- **Codex:** observado que lee este contrato y que, con briefs, ejecuta roles
-  como subagentes genéricos y edita y valida en worktrees. Con codex-cli 0.162.1
-  no deja elegir un agente personalizado: pasale el contenido de
-  `.claude/agents/<rol>.md` como instrucciones, o adoptá el rol vos mismo. Eso no
-  prueba que descubra roles ni invoque skills solo.
+- **Codex:** observado que lee este contrato y ejecuta briefs, editando y
+  validando en worktrees. Con codex-cli 0.162.1 no deja elegir un agente
+  personalizado; alternativa: pasarle el contenido de `.claude/agents/<rol>.md`
+  como instrucciones, o adoptar el rol. No está probado rol por rol, ni que
+  descubra roles o invoque skills solo.
 - **Windows y Linux:** los scripts no están probados ahí.
