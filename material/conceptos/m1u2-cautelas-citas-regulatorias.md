@@ -57,7 +57,7 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 - Publicado en el Diario Oficial el **12 de julio de 2024**.[^ai-act-eurlex]
 - Entró en vigor el **1 de agosto de 2024**, según la Comisión Europea.[^ai-act-comision]
 - M1U1 dice "en vigor desde julio de 2024", lo que es incorrecto; M1U2 dice "aprobación ... en junio de 2024", que alude a la firma del acto, no a su entrada en vigor.[^m1u1-extendida][^m1u2]
-- El calendario de aplicación escalonada (2025-02-02, 2025-08-02, 2026-08-02 y siguientes) está en [EU AI Act](/frameworks/eu-ai-act.md). No verifiqué en esta pasada si hubo modificaciones posteriores al calendario; antes de citar fechas en una slide, chequear el texto consolidado en EUR-Lex.[^ai-act-eurlex]
+- El calendario de aplicación escalonada (2025-02-02, 2025-08-02, 2026-08-02 y siguientes) está en [EU AI Act](/frameworks/eu-ai-act.md). El AI Omnibus (Reg. UE 2026/1744) modificó ese calendario: ver [calendario y sanciones](/frameworks/eu-ai-act-calendario-sanciones.md). Antes de citar fechas en una slide, chequear el texto consolidado en EUR-Lex.[^ai-act-eurlex]
 
 # ISO/IEC 42001 y Estrategia de IA 2024 de España
 

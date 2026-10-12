@@ -47,9 +47,10 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-12T01:40:00Z }
 
 # Pendiente de verificar
 
-* **EU AI Act tras el Omnibus:** cotejar contra el texto oficial de EUR-Lex el art. 4
-  (AI literacy, que parece más liviano que el "exige" del curso), las guidelines del
-  2026-07-20 y la fecha de los arts. 43 y 49.
+* **EU AI Act tras el Omnibus:** las fechas y el nuevo art. 4 (AI literacy: "apoyar
+  el desarrollo", más liviano que el "exige" del curso) se leyeron de una copia del
+  DOUE y coinciden entre las fichas. Falta cotejarlos contra el ELI oficial de
+  EUR-Lex, junto con las guidelines del 2026-07-20 y la fecha de los arts. 43 y 49.
 * **Alcance del AI Act sobre Flexibility:** decidir con el equipo si alcanza a sus
   clientes (art. 2.1.c).
 * **SIGEN 197/2026:** no se leyó el anexo.

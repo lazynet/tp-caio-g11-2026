@@ -61,8 +61,11 @@ Otros cambios que no menciona el curso:[^abreu-omnibus][^ertico-omnibus]
 La lectura dice que el art. 4, modificado, "exige a providers y deployers tomar
 medidas" de AI literacy (p. 11). Cooley y Abreu describen el cambio en sentido
 contrario: ya no se exige "asegurar" la competencia del personal, y la Comisión y los
-Estados miembros "apoyan y facilitan".[^m1u4-lectura][^cooley-omnibus][^abreu-omnibus] Se
-trata como **corrección pendiente** hasta leer el texto consolidado. Ver
+Estados miembros "apoyan y facilitan".[^m1u4-lectura][^cooley-omnibus][^abreu-omnibus] La
+ficha [proveedor y desplegador](/frameworks/eu-ai-act-proveedor-desplegador.md) leyó
+una copia del DOUE del Reg. 2026/1744 y confirma el cambio: "adoptarán medidas para
+apoyar el desarrollo" de la alfabetización, sin exigir un nivel garantizado. Falta
+cotejarlo contra el ELI oficial antes de llevarlo a una slide. Ver
 [champions y literacy](/conceptos/m1u4-champions-y-literacy.md).
 
 ## Qué no se verificó
