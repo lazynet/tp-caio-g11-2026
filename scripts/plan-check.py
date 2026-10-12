@@ -3,9 +3,40 @@
 import argparse
 import json
 import re
+import subprocess
+import sys
 import unicodedata
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+
+
+def evidence_kind(path, root):
+    for name in ("context", "material", "defense/evidence"):
+        if path.is_relative_to(root / name):
+            return "navigation" if path.name == "index.md" else "concept"
+    return None
+
+
+def validate_evidence(root, evidence):
+    if not evidence:
+        return []
+    command = [
+        sys.executable,
+        str(Path(__file__).with_name("okf-check.py")),
+        "--root",
+        str(root),
+        "--delivery",
+    ]
+    for path in sorted(evidence):
+        command.extend(["--path", str(path.relative_to(root))])
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, check=False)
+    except (OSError, UnicodeError) as exc:
+        return [f"Entrega rechazada: no se pudo ejecutar okf-check: {exc}"]
+    if result.returncode:
+        detail = (result.stderr or result.stdout).strip()
+        return [f"Entrega rechazada por okf-check (exit {result.returncode}): {detail}"]
+    return []
 
 
 def split_frontmatter(text):
@@ -58,20 +89,27 @@ def anchors(text):
     return result
 
 
-def links(text):
+def links(text, include_definitions=True):
     text = visible(text)
-    definitions = dict(
-        re.findall(r"^\s{0,3}\[([^\]^]+)\]:\s*<?([^\s>]+)>?", text, re.MULTILINE)
-    )
+    definitions = {
+        " ".join(key.lower().split()): destination
+        for key, destination in re.findall(
+            r"^\s{0,3}\[([^\]^]+)\]:\s*<?([^\s>]+)>?", text, re.MULTILINE
+        )
+    }
     for destination in re.findall(
         r"!?\[[^\]]*\]\(\s*(<[^>]+>|[^\s)]+)(?:\s+[^)]*)?\)", text
     ):
         yield destination.strip("<>")
     for label, reference in re.findall(r"!?\[([^\]]+)\]\[([^\]]*)\]", text):
-        key = reference or label
+        key = " ".join((reference or label).lower().split())
         yield definitions.get(key, f"__undefined_reference__/{key}")
-    for destination in definitions.values():
-        yield destination
+    for key in re.findall(r"\[([^\]^]+)\](?![\[(:])", text):
+        key = " ".join(key.lower().split())
+        if key in definitions:
+            yield definitions[key]
+    if include_definitions:
+        yield from definitions.values()
 
 
 def resolve_link(origin, destination, root):
@@ -130,13 +168,41 @@ def check(root, deck, mode):
         )
     if any(not slide.strip() for slide in slides):
         errors.append("Hay slides vacías")
-    queue, seen = [(deck, text)], set()
+    queue, seen, documents, edges = [(deck, text)], set(), {}, {}
     while queue:
         origin, content = queue.pop(0)
         if origin in seen:
             continue
         seen.add(origin)
-        for line_number, line in enumerate(content.splitlines(), 1):
+        documents[origin] = content
+        edges[origin] = set()
+        used_links = set(links(content, include_definitions=False))
+        for destination in links(content):
+            try:
+                target = resolve_link(origin, destination, root)
+                if target is not None:
+                    references.add(str(target.relative_to(root)))
+                    if target.suffix.lower() == ".md" and destination in used_links:
+                        edges[origin].add(target)
+                    if target.suffix.lower() == ".md" and target not in seen:
+                        queue.append((target, target.read_text(encoding="utf-8")))
+            except (OSError, ValueError) as exc:
+                errors.append(f"{origin.relative_to(root)}: {exc}")
+    # La navegación conserva el chequeo de links, pero no amplía el respaldo.
+    delivered, evidence, queue = set(), set(), [deck]
+    while queue:
+        origin = queue.pop()
+        if origin in delivered:
+            continue
+        delivered.add(origin)
+        for target in edges.get(origin, ()):
+            kind = evidence_kind(target, root)
+            if kind == "concept":
+                evidence.add(target)
+            elif kind is None:
+                queue.append(target)
+    for origin in sorted(delivered | evidence):
+        for line_number, line in enumerate(documents.get(origin, "").splitlines(), 1):
             if re.search(
                 r"\b(pendiente\w*|TODO|TBD|FIXME|por definir|falta evidencia|sin evidencia|esqueleto)\b",
                 line,
@@ -145,27 +211,26 @@ def check(root, deck, mode):
                 pending.append(
                     f"{origin.relative_to(root)}:{line_number}: {line.strip()}"
                 )
-        for destination in links(content):
-            try:
-                target = resolve_link(origin, destination, root)
-                if target is not None:
-                    references.add(str(target.relative_to(root)))
-                    if target.suffix.lower() == ".md" and target not in seen:
-                        queue.append((target, target.read_text(encoding="utf-8")))
-            except (OSError, ValueError) as exc:
-                errors.append(f"{origin.relative_to(root)}: {exc}")
     if mode == "delivery" and pending:
         errors.extend(f"Entrega rechazada por pendiente: {item}" for item in pending)
+    if mode == "delivery":
+        errors.extend(validate_evidence(root, evidence))
     return {
         "slides": count,
         "errors": errors,
         "pending": pending,
         "references": sorted(references),
+        "evidence": sorted(str(path.relative_to(root)) for path in evidence),
     }
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        epilog="Solo valida fichas enlazadas desde documentos entregados; índices y links "
+        "relacionados son navegación. No detecta cifras sin cita ni juzga semántica: "
+        "se requieren board y revisión humana. ready solo descarta borrador explícito.",
+    )
     parser.add_argument("--mode", choices=("draft", "delivery"), default="draft")
     parser.add_argument(
         "--root", type=Path, default=Path(__file__).resolve().parents[1]
