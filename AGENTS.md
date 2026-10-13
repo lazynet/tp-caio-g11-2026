@@ -19,12 +19,12 @@ un **Plan Maestro del CAIO a 12 meses** para una organización, defendido ante u
 
 **Estado (setup):**
 
-- **Acordado:** la diplomatura, el plan a 12 meses y el tope de diez slides,
-  incluyendo portada y equipo.
-- **Pendiente:** el caso, su alcance, los responsables humanos de cada sección y
-  el formato final del deck. Flexibility (empresa argentina de software para
-  fintech y bancos) es un **candidato**, no el caso elegido: no apliques sus
-  restricciones a todo caso ni redactes el plan antes de que el equipo elija.
+- **Acordado:** la diplomatura, el plan a 12 meses y la entrega: un único PDF de
+  menos de 10 MB, con máximo diez slides (portada y equipo incluidas) y anexos.
+- **Pendiente:** el caso, su alcance y los responsables humanos de cada sección.
+  Flexibility (empresa argentina de software para fintech y bancos) es un
+  **candidato**, no el caso elegido: no apliques sus restricciones a todo caso
+  ni redactes el plan antes de que el equipo elija.
 
 El plan tiene que integrar:
 
@@ -34,18 +34,18 @@ El plan tiene que integrar:
 - Roadmap ajustado por riesgo: escenarios, contingencias, decisiones reversibles e irreversibles.
 - Preparación de la defensa: storyline, objeciones anticipadas, evidencia.
 
-**Regla de formato:** máximo 10 slides, incluyendo portada y equipo. Lo que el
-board tiene que *decidir* va en las slides; lo que lo *sustenta*, en los anexos.
+**Regla de formato:** lo que el board tiene que *decidir* va en las slides; lo que
+lo *sustenta*, en anexos de evidencia procesada (`plan/annexes/_template.md`).
 
 **Equipo:** Grupo 11, 8 integrantes (ver `README.md`). El onboarding del equipo
 está en `README.md`: mantenelo al día cuando cambie la forma de trabajo.
 
 **Todo se genera.** `plan/slides.md` (markdown compatible con Marp, slides
 separadas por `---` o `***` compactos; links locales en Markdown, no en HTML) es
-la única fuente del deck. `scripts/build-deck.sh` lo renderiza en
-`out/` (fuera de git) con Marp y pandoc para comparar formatos. Un deck generado
-no se edita nunca: se corrige el markdown y se regenera. Requisitos (Python
-3.11+, PyYAML en `.venv`, `CAIO_PYTHON`) y comandos de chequeo en `README.md`.
+la única fuente del deck. `scripts/build-deck.sh` lo renderiza en `out/` (fuera
+de git) y arma `out/entrega.pdf` (deck + anexos), el único entregable. Nada
+generado se edita: se corrige el markdown y se regenera. Requisitos (Python
+3.11+, PyYAML y pypdf en `.venv`, `CAIO_PYTHON`) y chequeos en `README.md`.
 
 ## Fechas
 
@@ -64,10 +64,10 @@ no se edita nunca: se corrige el markdown y se regenera. Requisitos (Python
 | `context/` | Bundle OKF: hechos públicos o anonimizados y supuestos sobre el caso, cada uno con su fuente |
 | `material/` | Bundle OKF: unidades y frameworks de la cursada, y qué sección del plan respalda cada uno |
 | `plan/slides.md` | Las 10 slides, fuente única del deck |
-| `plan/annexes/` | Un archivo por anexo, referenciado desde las slides |
+| `plan/annexes/` | Un anexo por archivo (`NN-tema.md` desde `_template.md`), referenciado desde las slides |
 | `defense/` | Storyline, banco de objeciones; `defense/evidence/` es un bundle OKF |
 | `reviews/` | Revisiones del board y del peer review, con fecha |
-| `scripts/build-deck.sh` | Genera el deck: `all` (default), `marp` o `pandoc` |
+| `scripts/build-deck.sh` | Genera el deck y la entrega: `all` (default), `entrega`, `marp`, `pandoc` o `html` |
 | `.claude/agents/` | Los agentes por rol, fuente única para todas las herramientas |
 | `.agents/skills/` | Skills portables; `.claude/skills` es un symlink a esta carpeta |
 
