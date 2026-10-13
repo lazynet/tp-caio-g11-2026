@@ -21,7 +21,7 @@ body:
     attributes:
       label: Reglas del repo
       options:
-        - label: Leí la sección "Datos privados de Flexibility" de AGENTS.md y entiendo que el repo es público.
+        - label: Leí la sección "Datos privados" de AGENTS.md y entiendo que el repo es público.
           required: true
         - label: Después de clonar voy a correr scripts/setup.sh para activar el chequeo de datos privados.
           required: true
