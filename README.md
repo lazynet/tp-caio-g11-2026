@@ -1,7 +1,7 @@
 # Plan Maestro CAIO · Grupo 11
 
 **Equipo:** Gabriela Temporale · Martin Vago · Pablo Ces · Eduardo Chaparro ·
-Rafael Cioffi · Nicolas Tanos
+Rafael Cioffi · Nicolás Tanos · Luciano De Corso · Maximiliano Zerr Morinigo
 
 Repo del Trabajo Integrador Final de la Diplomatura CAIO (UTN BA): un Plan
 Maestro del CAIO a 12 meses, presentado en 10 slides como máximo (incluyendo

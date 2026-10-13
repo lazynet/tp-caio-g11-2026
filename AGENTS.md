@@ -37,7 +37,7 @@ El plan tiene que integrar:
 **Regla de formato:** máximo 10 slides, incluyendo portada y equipo. Lo que el
 board tiene que *decidir* va en las slides; lo que lo *sustenta*, en los anexos.
 
-**Equipo:** Grupo 11, 6 integrantes (ver `README.md`). El onboarding del equipo
+**Equipo:** Grupo 11, 8 integrantes (ver `README.md`). El onboarding del equipo
 está en `README.md`: mantenelo al día cuando cambie la forma de trabajo.
 
 **Todo se genera.** `plan/slides.md` (markdown compatible con Marp, slides
