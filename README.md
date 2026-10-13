@@ -221,9 +221,12 @@ No las copies a otras carpetas para "tu" herramienta: se desincronizan.
    con su evidencia; no se inventa consenso.
 6. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se corrige
    en `plan/slides.md` y se regenera.
-7. **Cambios a `main` por pull request.** Trabajá en una rama, abrí un PR, y
-   mergealo recién cuando pasen los chequeos de GitHub Actions. Si no sabés
-   cómo, pedíselo a tu agente: *"commiteá esto en una rama nueva y abrí un PR"*.
+7. **Cambios a `main` por pull request.** GitHub no acepta push directo a
+   `main`: trabajá en una rama y abrí un PR. Cada PR le pide review a Martin
+   automáticamente (`.github/CODEOWNERS`) y no se puede mergear sin su
+   aprobación. Antes de pedirla, esperá que pasen los chequeos de GitHub
+   Actions. Si no sabés cómo, pedíselo a tu agente: *"commiteá esto en una rama
+   nueva y abrí un PR"*.
 
 ## Datos privados
 
@@ -257,8 +260,9 @@ confidenciales, cualquier cosa en `private/` y mails corporativos, solo del
 dominio del candidato actual) con una denylist privada de nombres que vive fuera
 del repo. No uses nunca `git commit --no-verify`.
 Ninguna capa garantiza que no se filtre nada: la defensa principal es no
-escribir el dato. Que el secreto `LEAK_DENYLIST` y las reglas de la rama estén
-configurados en GitHub no está verificado en este README.
+escribir el dato. La protección de `main` exige la aprobación de Martin, pero
+no exige que pasen los chequeos. Que el secreto `LEAK_DENYLIST` esté
+configurado en GitHub no está verificado en este README.
 
 `scripts/leak-check.sh` usa solo Python estándar y git:
 
