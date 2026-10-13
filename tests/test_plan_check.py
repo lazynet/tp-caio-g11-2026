@@ -30,6 +30,17 @@ class PlanCheckTests(unittest.TestCase):
     def result(self, mode="draft"):
         return checker.check(self.root, self.deck, mode)
 
+    def annex(self, name="finance.md", body="", owner="finance", status="ready"):
+        target = self.root / "plan/annexes" / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        sections = "".join(f"## {s}\n\nTexto.\n\n" for s in checker.ANNEX_SECTIONS)
+        target.write_text(
+            f"---\nowner: {owner}\nstatus: {status}\ntitle: Anexo\n---\n"
+            f"# Anexo\n{body}\n{sections}",
+            encoding="utf-8",
+        )
+        return target
+
     def concept(
         self,
         path="context/source.md",
@@ -145,10 +156,8 @@ class PlanCheckTests(unittest.TestCase):
                 "sources: [{id: public, resource: 'https://example.org'}]\ntitle: Fuente",
             )
         )
-        annex = self.root / "plan/annexes/finance.md"
-        annex.parent.mkdir()
-        annex.write_text(
-            "# Finanzas\n[Fuente](/material/source.md)\n[Defensa](/defense/storyline.md)"
+        annex = self.annex(
+            body="[Fuente](/material/source.md)\n[Defensa](/defense/storyline.md)"
         )
         (self.root / "defense/storyline.md").write_text(
             "# Defensa\n[Fuente](evidence/source.md)"
@@ -411,9 +420,11 @@ class PlanCheckTests(unittest.TestCase):
         self.assertEqual(self.result("delivery")["errors"], [])
 
     def test_relative_root_links_and_anchors(self):
-        annex = self.root / "plan/annexes/architecture.md"
-        annex.parent.mkdir()
-        annex.write_text('# Diseño técnico\n# Diseño técnico\n<a id="custom"></a>\n')
+        self.annex(
+            "architecture.md",
+            body='# Diseño técnico\n# Diseño técnico\n<a id="custom"></a>',
+            owner="architect",
+        )
         self.write(
             "# Deck\n[Anexo](annexes/architecture.md#diseño-técnico)\n"
             "[Duplicado](/plan/annexes/architecture.md#diseño-técnico-1)\n"
@@ -423,6 +434,44 @@ class PlanCheckTests(unittest.TestCase):
         self.assertEqual(self.result()["references"], ["plan/annexes/architecture.md"])
         self.write("# Deck\n[Anexo](annexes/architecture.md#ausente)")
         self.assertTrue(any("Anchor inexistente" in e for e in self.result()["errors"]))
+
+    def test_annex_requires_frontmatter_owner_and_sections(self):
+        self.write("# Deck\n[Anexo](annexes/finance.md)")
+        annex = self.annex()
+        self.assertEqual(self.result()["errors"], [])
+        annex.write_text(annex.read_text().replace("## Decisiones", "## Otra cosa"))
+        self.assertTrue(
+            any("falta la sección ## Decisiones" in e for e in self.result()["errors"])
+        )
+        self.annex(owner="board")
+        self.assertTrue(any("owner del anexo" in e for e in self.result()["errors"]))
+        annex.write_text("# Sin frontmatter\n")
+        self.assertTrue(any("Falta frontmatter" in e for e in self.result()["errors"]))
+
+    def test_annex_delivery_rejects_draft_and_unreferenced(self):
+        self.write("# Deck\n[Anexo](annexes/finance.md)")
+        self.annex()
+        self.assertEqual(self.result("delivery")["errors"], [])
+        self.annex(status="draft")
+        self.assertTrue(
+            any("anexo declarado draft" in e for e in self.result("delivery")["errors"])
+        )
+        self.annex()
+        self.annex("people.md", owner="people")
+        self.assertEqual(self.result()["errors"], [])
+        self.assertTrue(
+            any("no referenciado" in e for e in self.result("delivery")["errors"])
+        )
+
+    def test_underscore_annex_is_template(self):
+        (self.root / "plan/annexes").mkdir(parents=True)
+        (self.root / "plan/annexes/_template.md").write_text("# Sin estructura\n")
+        self.write("# Deck")
+        self.assertEqual(self.result("delivery")["errors"], [])
+
+    def test_repo_template_passes_annex_check(self):
+        template = REPO / "plan/annexes/_template.md"
+        self.assertEqual(checker.check_annex(template, REPO, "draft"), [])
 
     def test_broken_local_reference(self):
         self.write("# Deck\n[Anexo](annexes/missing.md)")

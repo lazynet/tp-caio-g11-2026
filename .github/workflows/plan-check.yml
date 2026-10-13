@@ -14,5 +14,6 @@ jobs:
       # El puente de entrega reutiliza el validador OKF y su parser YAML.
       - run: python3 -m pip install PyYAML
       - run: python3 tests/test_plan_check.py -v
+      - run: python3 tests/test_build_delivery.py -v
       - run: python3 scripts/plan-check.py --mode draft
       - run: bash scripts/build-deck.sh html

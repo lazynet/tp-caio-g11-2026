@@ -4,8 +4,8 @@
 Rafael Cioffi · Nicolás Tanos · Luciano De Corso · Maximiliano Zerr Morinigo
 
 Repo del Trabajo Integrador Final de la Diplomatura CAIO (UTN BA): un Plan
-Maestro del CAIO a 12 meses, presentado en 10 slides como máximo (incluyendo
-portada y equipo) más anexos.
+Maestro del CAIO a 12 meses, entregado en un único PDF de menos de 10 MB: 10
+slides como máximo (incluyendo portada y equipo) más anexos.
 
 **Estado:** estamos en setup. El caso todavía no está elegido; Flexibility
 (software para fintech y bancos) es un candidato. Ver
@@ -25,10 +25,10 @@ que la vea otro equipo.
 | Cuenta de GitHub ([github.com/signup](https://github.com/signup)) | escribir en el repo |
 | git y [GitHub CLI](https://cli.github.com) (`gh`) | bajar y subir cambios |
 | Un agente de IA: [Claude Code](https://claude.com/claude-code), [Codex](https://developers.openai.com/codex) o VS Code con GitHub Copilot | trabajar con los agentes por rol |
-| Python 3.11 o más nuevo, con PyYAML | correr los chequeos (datos privados, OKF, deck) |
+| Python 3.11 o más nuevo, con PyYAML y pypdf | correr los chequeos (datos privados, OKF, deck) y armar el PDF de entrega |
 | Node.js 18 o más nuevo | generar el deck con Marp |
-| Chrome, Edge o Chromium | Marp lo usa para exportar pdf y pptx |
-| pandoc | generar el pptx editable |
+| Chrome, Edge o Chromium | Marp lo usa para exportar pdf y pptx; también imprime los anexos |
+| pandoc | generar el pptx editable y el html de los anexos |
 | Un editor de markdown (VS Code, Obsidian, etc.) | leer y editar |
 
 No necesitás saber programar: todo es markdown, y el agente corre los comandos
@@ -80,8 +80,8 @@ algo falla, contalo y corregí este README.
 
 Los chequeos son Python: el de datos privados usa solo la biblioteca estándar;
 el de OKF y el del deck (`plan-check`, en los dos modos) necesitan **PyYAML** y
-fallan sin él. CI usa
-Python 3.11 o más nuevo. Después de clonar, instalá PyYAML en un entorno
+fallan sin él; el PDF de entrega además necesita **pypdf**. CI usa
+Python 3.11 o más nuevo. Después de clonar, instalá los dos en un entorno
 virtual `.venv` dentro del repo (no se versiona), nunca con `pip` global:
 
 **macOS y Linux:**
@@ -89,7 +89,7 @@ virtual `.venv` dentro del repo (no se versiona), nunca con `pip` global:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python3 -m pip install pyyaml
+python3 -m pip install pyyaml pypdf
 ```
 
 **Windows (Git Bash):** ahí Python se llama `python` (o `py`), no `python3`, y
@@ -98,7 +98,7 @@ los scripts lo eligen con la variable `CAIO_PYTHON`:
 ```bash
 python -m venv .venv
 source .venv/Scripts/activate
-python -m pip install pyyaml
+python -m pip install pyyaml pypdf
 export CAIO_PYTHON=python
 ```
 
@@ -131,7 +131,7 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
    ```
 
    El `-c core.symlinks=true` solo importa en Windows; en macOS y Linux no cambia nada.
-   Después creá el `.venv` con PyYAML (ver [Python y PyYAML](#python-y-pyyaml)).
+   Después creá el `.venv` con PyYAML y pypdf (ver [Python y PyYAML](#python-y-pyyaml)).
 
 2. Abrí tu agente ahí: `claude`, `codex`, o la carpeta en VS Code con el chat de Copilot.
 3. Pedile: *"leé AGENTS.md y material/index.md y contame en qué estado está el plan"*.
@@ -143,14 +143,14 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 | Carpeta | Qué hay | Agente dueño |
 |---|---|---|
 | `plan/slides.md` | las 10 slides, fuente única del deck | `caio`, único editor; los demás le proponen |
-| `plan/annexes/` | un anexo por tema: el detalle que sostiene cada slide | el agente dueño del tema (`owner:`) |
+| `plan/annexes/` | un anexo por tema (`NN-tema.md`, copiado de `_template.md`): la evidencia que sostiene cada slide | el agente dueño del tema (`owner:`) |
 | `context/` | hechos **públicos** o anonimizados del caso y supuestos, uno por archivo, con su fuente; vacío hasta que elijamos caso | — |
 | `private/` | datos internos reales — **solo local, nunca se versiona** | quien tenga el acceso |
 | `material/` | una ficha por unidad y por framework de la cursada, y qué sección del plan respalda cada uno | — |
 | `defense/` | storyline, objeciones, evidencia | `caio`; `board` aporta desde `reviews/` |
 | `defense/evidence/` | una ficha por evidencia: qué objeción responde y de dónde sale | `caio` |
 | `reviews/` | revisiones del board y del peer review, con fecha | `board` |
-| `out/` | decks generados — **no se versiona ni se edita** | el script |
+| `out/` | decks generados y `entrega.pdf` — **no se versiona ni se edita** | el script |
 
 El agente dueño no es el responsable humano: quién del grupo se hace cargo de
 cada sección se decide cuando elijamos caso.
@@ -307,7 +307,8 @@ Separa por NUL, así que funciona aunque el nombre tenga espacios o saltos de l�
 ## Generar el deck
 
 ```bash
-./scripts/build-deck.sh          # todos los formatos
+./scripts/build-deck.sh          # todos los formatos y la entrega
+./scripts/build-deck.sh entrega  # solo out/entrega.pdf: deck + anexos
 ./scripts/build-deck.sh marp     # solo Marp: html, pdf, pptx
 ./scripts/build-deck.sh pandoc   # solo pandoc: pptx
 ./scripts/build-deck.sh html     # solo el html de Marp, lo más rápido
@@ -322,12 +323,32 @@ duplicadas.
 
 | Salida | Sirve para |
 |---|---|
+| `entrega.pdf` | **lo que se entrega**: el deck seguido de los anexos, en un solo PDF |
 | `deck-marp.html` / `.pdf` | revisar y presentar; el mejor diseño |
 | `deck-marp.pptx` | entregar si piden pptx (las slides van como imagen) |
 | `deck-pandoc.pptx` | pptx con texto editable, diseño básico |
 
 Estamos probando alternativas: si alguien quiere sumar otro renderer, se agrega
 al script, no se arma a mano.
+
+### La entrega y los anexos
+
+La consigna pide **un único PDF de menos de 10 MB** con la presentación y los
+anexos. `build-deck.sh entrega` lo arma en `out/entrega.pdf`: el deck de Marp y
+después cada anexo de `plan/annexes/` en orden de nombre (`01-finanzas.md`,
+`02-arquitectura.md`...), en A4. Si pasa los 10 MB, el script falla y dice el peso.
+
+Un anexo no es un depósito de datos crudos: es la **evidencia procesada** que
+deja ver al CFO o al board de dónde salió cada número de una slide. Para
+arrancar uno, copiá `plan/annexes/_template.md`, que trae la estructura que
+pidió el equipo docente: objetivo, supuestos de partida, evidencia, riesgos y
+mitigación, y decisiones. `plan-check` exige esas secciones y el frontmatter
+(`owner`, `status`, `title`); en entrega, además, que el anexo esté en `ready` y
+que una slide lo enlace. Los archivos que empiezan con `_` no se validan ni se
+entregan.
+
+En el PDF los links a los anexos no navegan: en la slide, nombrá el anexo
+("ver Anexo B — Finanzas") además de enlazarlo.
 
 ## Validar
 
@@ -375,5 +396,5 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 - [ ] Caso: Flexibility es candidato, no está elegido
 - [ ] Alcance del caso, una vez elegido
 - [ ] Responsables humanos de cada sección
-- [ ] Formato del deck final (ver "Generar el deck")
+- [x] Formato de entrega: un único PDF de menos de 10 MB con slides y anexos (ver "Generar el deck")
 - [ ] Material de M3U4 (cierre y defensa del Plan Maestro), que no tenemos

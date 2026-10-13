@@ -10,6 +10,19 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
+DECK_TYPES = (("owner", str), ("status", str), ("marp", bool))
+ANNEX_TYPES = (("owner", str), ("status", str), ("title", str))
+# board revisa pero no escribe anexos.
+ANNEX_OWNERS = ("caio", "architect", "governance", "people", "finance")
+# Estructura que pide el equipo docente para que el board vea de dónde sale cada número.
+ANNEX_SECTIONS = (
+    "Objetivo",
+    "Supuestos de partida",
+    "Evidencia",
+    "Riesgos y mitigación",
+    "Decisiones",
+)
+
 
 def evidence_kind(path, root):
     for name in ("context", "material", "defense/evidence"):
@@ -40,10 +53,10 @@ def validate_evidence(root, evidence):
     return []
 
 
-def split_frontmatter(text):
+def split_frontmatter(text, types=DECK_TYPES):
     lines = text.lstrip("\ufeff").splitlines()
     if not lines or lines[0].strip() != "---":
-        raise ValueError("Falta frontmatter del deck")
+        raise ValueError("Falta frontmatter")
     end = next((i for i in range(1, len(lines)) if lines[i].strip() == "---"), None)
     if end is None:
         raise ValueError("Frontmatter sin cierre")
@@ -73,7 +86,7 @@ def split_frontmatter(text):
         raise ValueError(f"Frontmatter YAML inválido: {exc}") from exc
     if not isinstance(metadata, dict):
         raise ValueError("El frontmatter debe ser un mapping YAML")
-    for key, expected in (("owner", str), ("status", str), ("marp", bool)):
+    for key, expected in types:
         if type(metadata.get(key)) is not expected:
             raise ValueError(
                 f"Tipo YAML inválido para {key}: se exige {expected.__name__}"
@@ -195,6 +208,37 @@ def resolve_link(origin, destination, root):
     return target
 
 
+def annex_files(root):
+    # Los archivos con _ adelante (la plantilla) no son anexos ni van a la entrega.
+    folder = root / "plan/annexes"
+    if not folder.is_dir():
+        return []
+    return sorted(p for p in folder.glob("*.md") if not p.name.startswith("_"))
+
+
+def check_annex(path, root, mode):
+    name = path.relative_to(root)
+    try:
+        metadata, body = split_frontmatter(path.read_text(encoding="utf-8"), ANNEX_TYPES)
+    except (OSError, ValueError) as exc:
+        return [f"{name}: {exc}"]
+    errors = []
+    if metadata["owner"] not in ANNEX_OWNERS:
+        errors.append(f"{name}: owner del anexo debe ser uno de {', '.join(ANNEX_OWNERS)}")
+    if metadata["status"] not in ("draft", "ready"):
+        errors.append(f"{name}: el status del anexo debe ser draft o ready")
+    if mode == "delivery" and metadata["status"] == "draft":
+        errors.append(f"Entrega rechazada: anexo declarado draft: {name}")
+    headings = {
+        heading.strip().casefold()
+        for heading in re.findall(r"^\s{0,3}##\s+(.+?)\s*#*$", visible(body), re.MULTILINE)
+    }
+    for section in ANNEX_SECTIONS:
+        if section.casefold() not in headings:
+            errors.append(f"{name}: falta la sección ## {section}")
+    return errors
+
+
 def check(root, deck, mode):
     root, deck = root.resolve(), deck.resolve()
     errors, pending, references = [], [], set()
@@ -281,6 +325,12 @@ def check(root, deck, mode):
                 pending.append(
                     f"{origin.relative_to(root)}:{line_number}: {line.strip()}"
                 )
+    for annex in annex_files(root):
+        errors.extend(check_annex(annex, root, mode))
+        if mode == "delivery" and str(annex.relative_to(root)) not in references:
+            errors.append(
+                f"Entrega rechazada: anexo no referenciado desde el deck: {annex.relative_to(root)}"
+            )
     if mode == "delivery" and pending:
         errors.extend(f"Entrega rechazada por pendiente: {item}" for item in pending)
     if mode == "delivery":
