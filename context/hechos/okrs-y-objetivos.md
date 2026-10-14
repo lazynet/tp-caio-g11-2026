@@ -28,7 +28,7 @@ con la restricción de no contratar y potenciar al equipo actual.[^interno-okr-2
 
 | Objetivo | Resultados clave propuestos |
 |---|---|
-| Productos recurrentes rentables y confiables | Rentabilidad del producto principal alineada a su modelo contractual; incidentes críticos resueltos en una hora; productos propios por encima del 30% de la facturación recurrente con al menos uno que no dependa del Cliente A; primera transacción del producto propio de medios de pago durante 2027 |
+| Productos recurrentes rentables y confiables | Rentabilidad del producto principal alineada a su modelo contractual; tiempo de resolución de incidentes críticos acotado; productos propios por encima del 30% de la facturación recurrente con al menos uno que no dependa del Cliente A; primera transacción del producto propio de medios de pago durante 2027 |
 | Eficiencia operativa con IA | 80% o más de las personas de Operaciones y Tecnología con uso activo semanal de IA; costo de tecnología por debajo de 3,5% de la facturación; +20% de *throughput* por desarrollador contra la línea de base del cuarto trimestre de 2026 |
 | Base técnica segura y con dueño | Auditoría externa de seguridad sin no conformidades mayores; 100% de los workloads productivos con dueño y runbook; costo de infraestructura compartida por persona estable |
 

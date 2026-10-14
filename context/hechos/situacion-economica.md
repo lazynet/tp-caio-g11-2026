@@ -10,19 +10,16 @@ sources:
     title: "Cierre financiero interno de agosto de 2026 (privado, anonimizado)"
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:00:00Z }
 ---
-# Facturación mensual (índice, enero de 2026 = 100)
+# Facturación
 
-| Ene | Feb | Mar | Abr | May | Jun | Jul | Ago |
-|---|---|---|---|---|---|---|---|
-| 100 | 116 | 121 | 129 | 135 | 136 | 140 | 135 |
-
-[^interno-finanzas-2026]
+La facturación mensual creció cerca de 35% entre enero y agosto de 2026, con
+subas hasta mayo y una meseta desde entonces.[^interno-finanzas-2026]
 
 # Márgenes
 
 | Indicador | Rango enero-agosto de 2026 |
 |---|---|
-| Margen EBITDA mensual | 21-30%; acumulado del período cerca de 27% |
+| Margen EBITDA mensual | 21-30% |
 
 [^interno-finanzas-2026]
 
@@ -37,7 +34,8 @@ variables que más mueven el resultado.
 
 - Las cifras surgen de un único corte interno (cierre de agosto de 2026); el
   plan no usa otros cortes.
-- No se publican montos: solo índices, rangos y ratios. El margen bruto se
-  omite porque, combinado con la dotación, permitiría estimar la facturación.
+- No se publican montos: solo rangos y ratios. El margen bruto se omite
+  porque, combinado con la dotación, permitiría estimar la facturación; la serie
+  mensual tampoco se publica porque es una huella que no cambia ninguna decisión.
 
 [^interno-finanzas-2026]: Cierre financiero interno de agosto de 2026 (privado, anonimizado)

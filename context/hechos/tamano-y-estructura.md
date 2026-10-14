@@ -13,17 +13,17 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:00:00Z }
 # Tamaño
 
 Entre 60 y 70 personas a septiembre de 2026, con un modelo mixto de nómina y
-contractors. La dotación creció alrededor de 15% desde marzo.[^interno-organigrama-2026]
+contractors. La dotación creció durante 2026.[^interno-organigrama-2026]
 
 # Áreas
 
 La dirección se organiza en un CEO con una primera línea por área (operaciones,
-finanzas, talento, experiencia de cliente, tecnología y ecosistema).[^interno-organigrama-2026]
+tecnología, finanzas, talento y áreas comerciales).[^interno-organigrama-2026]
 
 | Área | Peso aproximado | Qué hace |
 |---|---|---|
 | Operaciones | ~40% | Personas distribuidas en equipos de clientes (staffing), coordinadas por un delivery manager; no trabajan como un equipo |
-| Tecnología | ~40% | Equipo de producto del Cliente A organizado en squads, plataforma (infraestructura y DevOps), seguridad y soporte de la plataforma propia |
+| Tecnología | ~40% | Equipo de producto del Cliente A organizado en equipos, plataforma (infraestructura y DevOps), seguridad y soporte de la plataforma propia |
 | Finanzas | <10% | Planeamiento y control, compras, facturación y cobranzas, contabilidad |
 | Talento, experiencia de cliente y dirección | <15% | Personas, ventas y marketing, dirección |
 
@@ -49,5 +49,8 @@ riesgo de continuidad.[^interno-organigrama-2026]
 - El dato sirve para dimensionar, no para asignar personas.
 - No se publica el headcount exacto, ni nombres, ni datos de personas
   individuales.
+- El rango de 60 a 70 personas se mantiene porque alimenta cálculos del plan
+  (seats, poblaciones de capacitación, desarrolladores en equipos propios); es un
+  rasgo identificatorio residual.
 
 [^interno-organigrama-2026]: Organigrama y nómina, septiembre de 2026 (privado, anonimizado)

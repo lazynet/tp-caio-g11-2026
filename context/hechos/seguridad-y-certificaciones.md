@@ -1,7 +1,7 @@
 ---
 type: Hecho
 title: "Seguridad de la información y certificaciones"
-description: "La organización tiene un sistema de gestión de seguridad certificado por IRAM; el producto propio de medios de pago todavía no tiene su propio sistema de gestión certificado."
+description: "La organización tiene un sistema de gestión de seguridad certificado; el producto propio de medios de pago todavía no tiene su propio sistema de gestión certificado."
 status: draft
 tags: [caso, seguridad, compliance]
 sources:
@@ -19,7 +19,7 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:00:00Z }
 # Dos hechos que no se mezclan
 
 1. **La organización** tiene certificación ISO/IEC 27001 vigente, con renovación
-   anual; el sitio muestra el sello de sistema de gestión IRAM.[^web-empresa] [^interno-propuestas-2026]
+   anual; el sitio muestra el sello de la certificación.[^web-empresa] [^interno-propuestas-2026]
 2. **El producto propio A** (medios de pago) está construyendo su propio sistema
    de gestión de seguridad, que todavía no está certificado: no debe presentarse
    como plataforma certificada.[^interno-propuestas-2026]
@@ -40,8 +40,9 @@ personas.[^interno-okr-2026]
 
 # Cautelas
 
-- El sitio no nombra la norma del sello IRAM; la mención a ISO/IEC 27001 sale de
-  fuentes internas.
+- El sitio no nombra la norma del sello; la mención a ISO/IEC 27001 sale de
+  fuentes internas. No se nombra el organismo certificador para no sumar un rasgo
+  identificatorio.
 - No hay evidencia de controles específicos de IA (red teaming, DLP sobre
   prompts) más allá de la política de uso.
 

@@ -27,7 +27,6 @@ Respondieron los 12 participantes del piloto, de distintas áreas.[^interno-encu
 | Chocaron con el límite de uso del plan | 58% |
 | Completaron los tres cursos obligatorios | 17% |
 | No hicieron ningún curso | 50% |
-| No pagarían la herramienta de su bolsillo | 0% |
 
 **Frenos y pedidos:** el primer freno es la falta de tiempo para capacitarse (dos
 de cada tres); más de la mitad pide casos prácticos por rol en lugar de cursos
@@ -35,14 +34,14 @@ genéricos; hubo fallas de comunicación sobre la capacitación asignada. Parte
 de los participantes advierte sobre la dependencia de un solo proveedor de
 modelos y propone consumo multimodelo.[^interno-encuesta-ia-2026]
 
-**Criterios del piloto:** cumplió adopción (11 de 12 con uso frecuente, contra un
-umbral de 7) y casos de valor (al menos seis que las otras herramientas no
-resolvían, contra un umbral de 3); no cumplió la capacitación obligatoria al
-primer mes.[^interno-encuesta-ia-2026]
+**Criterios del piloto:** cumplió con holgura los umbrales de adopción (uso
+frecuente) y de casos de valor (casos que las otras herramientas no
+resolvían); no cumplió la capacitación obligatoria al primer
+mes.[^interno-encuesta-ia-2026]
 
 # Calidad de uso (análisis de prompts, abril de 2026)
 
-Sobre unas 160 conversaciones y 870 mensajes del chat corporativo:[^interno-poc-prompting-2026]
+Sobre más de un centenar de conversaciones del chat corporativo:[^interno-poc-prompting-2026]
 
 - Casi nadie da ejemplos del resultado esperado (*few-shot* en 5% o menos).
 - Las buenas prácticas se copian como plantilla, sin internalizarse.
@@ -51,10 +50,10 @@ Sobre unas 160 conversaciones y 870 mensajes del chat corporativo:[^interno-poc-
 
 # Piloto de delivery con IA
 
-Un equipo que trabajó con agentes de código desde el inicio construyó cinco
-endpoints en un día y medio (unas 2,5 horas por endpoint), comparado con un grupo
-de control del equipo convencional, con umbrales de cobertura y de *mutation
-testing* como compuertas de calidad.[^interno-propuestas-2026]
+Un equipo que trabajó con agentes de código desde el inicio construyó un lote
+chico de endpoints en menos de dos días, comparado con un grupo de control del
+equipo convencional, con umbrales de cobertura y de *mutation testing* como
+compuertas de calidad.[^interno-propuestas-2026]
 
 # Cautelas
 

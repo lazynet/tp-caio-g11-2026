@@ -20,7 +20,7 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:00:00Z }
 | Producto operado bajo suscripción para el Cliente A | 35-45% | Por debajo del promedio |
 | Staffing (staff augmentation) | 35-40% | Cercano al promedio |
 | Soporte de suscripción a la plataforma propia | 10-15% | El más alto de la empresa |
-| Proyectos a medida (squads) | 5-10% | Por debajo del promedio |
+| Proyectos a medida | 5-10% | Por debajo del promedio |
 | Productos propios en inversión y consultoría | menos de 5% | No comparable: están en inversión o arrancando |
 
 [^interno-finanzas-2026]
@@ -35,8 +35,8 @@ y ese tramo depende por completo de un solo cliente (Cliente A).[^interno-okr-20
 - **Producto propio A** (medios de pago): en construcción, pendiente de una
   habilitación regulatoria, con una fecha externa dentro del horizonte del plan
   (2027).
-- **Producto propio B** (vertical no financiero que maneja datos de categoría
-  especial bajo la Ley 25.326).
+- **Producto propio B** (maneja datos de categoría especial bajo la Ley
+  25.326).
 
 Los dos requieren inversión sostenida y todavía no facturan de forma
 relevante.[^interno-finanzas-2026]

@@ -19,13 +19,11 @@ sources:
     title: "Reportes de adopción de IA y licencias, abril a octubre de 2026 (privado, anonimizado)"
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:00:00Z }
 ---
-# Gasto de tecnología (índice, febrero de 2026 = 100)
+# Gasto de tecnología
 
-| Feb | Mar | Abr | May | Jun | Jul | Ago | Sep |
-|---|---|---|---|---|---|---|---|
-| 100 | 114 | 121 | 153 | 175 | 196 | 228 | 224 |
-
-Incluye nube, herramientas de desarrollo e IA, devengado por mes.[^interno-costos-tech-2026]
+El gasto mensual de tecnología se duplicó con creces entre febrero y septiembre de
+2026, con la mayor suba desde mayo. Incluye nube, herramientas de desarrollo e
+IA, devengado por mes.[^interno-costos-tech-2026]
 Como proporción de la facturación pasó de cerca de 2% a cerca de 4% entre enero
 y agosto de 2026.[^interno-finanzas-2026]
 
