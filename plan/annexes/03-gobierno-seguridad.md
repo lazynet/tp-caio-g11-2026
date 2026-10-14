@@ -288,8 +288,7 @@ La escala L0-L4 es una herramienta de la cursada, no un estándar oficial.
   alineación, sin buscar cumplimiento formal.
 - **La política se ratifica en el Directorio (T1).** Es un compromiso interno que se enmienda
   con costo de credibilidad, no una decisión irreversible: no firma nada con un cliente.
-  Por eso va con revisión anual y con revisión extraordinaria en G2. El Anexo F la clasifica
-  distinto y tiene que alinearse (ver D7b).
+  Por eso va con revisión anual y con revisión extraordinaria en G2.
 
 ### D7b. Catálogo de decisiones del Anexo C: ámbito, fecha y compromiso
 
