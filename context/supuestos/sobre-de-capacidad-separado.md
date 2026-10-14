@@ -9,14 +9,19 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T02:40:00Z }
 # Supuesto
 
 El sobre de la [capacidad de inversión](/supuestos/capacidad-de-inversion.md)
-(10-15% del tiempo de 10-15 personas clave, de 1 a 2,25 FTE) se lee **separado**:
+(10-15% del tiempo de 10-15 personas clave, de 1 a 2,25 FTE; el número de personas es
+un [supuesto aparte](/supuestos/personas-clave-del-sobre.md)) se lee **separado**:
 
 | Sobre | Qué cuenta | Quién lo aprueba |
 |---|---|---|
 | Tiempo clave | Fracciones de arquitectura, IA aplicada, plataforma, gobierno y liderazgo del programa | Ya está en el supuesto de capacidad |
-| Tiempo distribuido | Horas de capacitación básica, intermedia y avanzada y de champions, repartidas en la dotación (ver [poblaciones](/supuestos/poblaciones-de-capacitacion.md)) | El board, como sobre propio en G0 |
+| Tiempo distribuido | Horas de capacitación básica, intermedia y avanzada, de champions y de los ejercicios de mesa de incidentes (2 × 8 personas × 3 h al año), repartidas en la dotación (ver [poblaciones](/supuestos/poblaciones-de-capacitacion.md)) | El board, como sobre propio en G0 |
 
 La alternativa es la lectura **estricta**: todo cuenta contra 1-2,25 FTE.
+
+Regla de clasificación: las pruebas de *bypass*, el red team interno y el Council
+cuentan como tiempo clave; los ejercicios de mesa de incidentes y toda la
+capacitación, como distribuido, aunque participe alguna persona clave.
 
 # Por qué es razonable
 
