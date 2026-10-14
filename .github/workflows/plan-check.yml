@@ -12,7 +12,9 @@ jobs:
         with:
           node-version: '22'
       # El puente de entrega reutiliza el validador OKF y su parser YAML.
-      - run: python3 -m pip install PyYAML
+      - run: python3 -m pip install PyYAML pypdf
+      # Los tests de la entrega renderizan anexos con pandoc.
+      - run: sudo apt-get update && sudo apt-get install -y pandoc
       - run: python3 tests/test_plan_check.py -v
       - run: python3 tests/test_build_delivery.py -v
       - run: python3 scripts/plan-check.py --mode draft
