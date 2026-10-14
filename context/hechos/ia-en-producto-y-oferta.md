@@ -18,7 +18,7 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:00:00Z }
 ---
 # Lo que se vende hoy
 
-El sitio no menciona IA en ninguna de sus tres ofertas.[^web-empresa] En las
+El sitio no menciona IA en ninguno de sus frentes de oferta.[^web-empresa] En las
 fuentes internas no aparece ninguna funcionalidad de IA en producción en los
 productos que usan los clientes.[^interno-propuestas-2026]
 

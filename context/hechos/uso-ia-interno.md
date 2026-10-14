@@ -35,7 +35,7 @@ del comité de tecnología.[^interno-politica-ia-2026]
 | Momento | Claude | Copilot |
 |---|---|---|
 | Marzo de 2026 | Piloto aprobado por el Directorio para menos de 10 seats | Seats para desarrolladores |
-| Abril de 2026 | 10-15 seats | 20-25 seats, 95% activos |
+| Abril de 2026 | 10-15 seats | 20-25 seats, casi todos activos |
 | Octubre de 2026 | 40-45 seats, cerca de dos tercios activos en la semana | 20-25 seats, cerca de 80% activos |
 
 En abril, alrededor del 60% de la organización tenía uso detectado de Gemini
