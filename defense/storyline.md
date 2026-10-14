@@ -66,7 +66,7 @@ controles y métricas.
 - Y lo decimos segundo: en el año 1, gobierno mínimo y formación (161) o un
   piloto sobre el agente actual (47) le ganan al paquete completo (394). Por eso
   la plataforma no se compra en G0: **G1 la libera solo con una señal**
-  contractual, de precio por consumo o de cliente. Sin señal, el año cuesta ≈ 193
+  contractual, de precio por consumo o de cliente. Sin señal, el año cuesta ≈ 199
   en lugar de ≈ 400, y G2 y G3 vuelven a leer. No es un corte: es diferir.
 - Pedimos un único G0: T1 con la prueba chica, hasta 33 mil USD de caja (del
   contractor, solo su tramo de T1) más 6 de reserva de cierre, que se amplía a 15

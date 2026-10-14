@@ -27,7 +27,7 @@ capacidad, elegir hoy entre el replan de T2 y la excepción acotada, y adoptar e
 marco de gates. El resto del año no se aprueba hoy, y la plataforma de T2 no es
 un compromiso de G0: **G1 la libera solo con una señal** (contractual, de precio
 por consumo o de cliente). Sin señal, T2-T4 sigue como gobierno mínimo y
-formación (≈ 193 en el año contra ≈ 400 con señal; [Anexo E](05-business-case.md),
+formación (≈ 199 en el año contra ≈ 400 con señal; [Anexo E](05-business-case.md),
 "Recomendación de Finanzas", decidida por lazynet el 2026-10-14).
 
 Las cifras vienen del anexo que se cita. Lo que este anexo agrega son decisiones
@@ -62,7 +62,7 @@ parte. Es el mismo que cierran los Anexos [B](02-arquitectura.md) y
 | 1. T1 en su versión acotada (T1-E) | Inventario de datos, línea de base congelada, matriz superficie→control→telemetría, telemetría unificada, matriz de clientes, evidencia contractual, política ratificada, nivel básico, y la prueba chica desde la semana 5 (ver "Primeros 100 días"). El gateway pasa a T2, solo con señal en G1 | [Anexo B](02-arquitectura.md), [Anexo E](05-business-case.md) |
 | 2. Techo de caja de T1 y reserva de cierre | Hasta 33 mil USD (máximo calculado 32,2: contractor hasta 16,5, legal hasta 10, telemetría hasta 1,5 y contingencia), más una reserva de cierre de hasta 6 que solo se usa si un gate corta. Compromiso máximo de caja en G0: 39. La reserva cubre solo un corte en G1: el board se compromete a ampliarla a 15 en G1 si libera la plataforma y a 17 en G2 si libera P, antes de liberar el compromiso nuevo (ver "Contingencias") | [Anexo E](05-business-case.md), "Reserva de cierre vigente" |
 | 3. Techo de tiempo de T1 | Hasta 72 mil con la prueba chica: ~1,8 FTE de personas clave (0,80× del sobre) y ~654 h distribuidas en la dotación, como segundo sobre (62, 1,6 FTE y 590 h sin la prueba) | [Anexo E](05-business-case.md) |
-| 4. Piso de capacidad | Sobre clave de al menos 1,6 FTE en T1 (E; la prueba lleva el techo a ~1,8: ver "Cautelas"); con señal en G1, 2,2 / 2,2 / 2,1 en T2-T4 con el producto diferido y el replan de T2, o 2,5 en T2 con la excepción acotada; sin señal, ~0,9 (opción (b) de E); lectura del sobre (DP1) | [Anexo E](05-business-case.md), [Anexo B](02-arquitectura.md) |
+| 4. Piso de capacidad | Sobre clave de al menos ~1,8 FTE en T1 con la prueba chica (E; 1,6 sin ella); con señal en G1, 2,2 / 2,2 / 2,1 en T2-T4 con el producto diferido y el replan de T2, o 2,5 en T2 con la excepción acotada; sin señal, ~0,9 (opción (b) de E); lectura del sobre (DP1) | [Anexo E](05-business-case.md), [Anexo B](02-arquitectura.md) |
 | 5. Salida para el exceso de T2 (con señal en G1) | Replan de B (T2 en 2,2 FTE clave), con la **excepción** acotada de 0,3 FTE aprobada como respaldo. La excepción cubre solo la falta del 0,2 libre del contractor; sin contractor no alcanza (ver fila 8) | [Anexo B](02-arquitectura.md), [Anexo E](05-business-case.md) |
 | 6. Base mínima tras un corte | Si G1 corta, el núcleo de gobierno sigue el resto del año: hasta 41 mil de tiempo, sin caja | [Anexo E](05-business-case.md) |
 | 7. T0 (costo previo propuesto) | Autorizar, o ratificar si consta la ejecución, hasta 7 mil de tiempo | [Anexo E](05-business-case.md) |
@@ -102,7 +102,7 @@ preferencia de secuencia (base y matriz antes que herramienta), no una
 imposibilidad:
 
 - **T1-a, el gateway en laboratorio, no entra.** Pide 1,8 FTE clave contra 1,6
-  de T1-E y suma 1-3 mil de caja (36 contra 33 en el máximo;
+  de T1-E sin la prueba y suma 1-3 mil de caja (36 contra 33 en el máximo;
   [Anexo E](05-business-case.md)). La capacidad sola no lo descarta: lo descarta
   que el gateway no mide valor sin harness ni evals, que son de T2
   ([Anexo B](02-arquitectura.md)), y que con la bifurcación la plataforma se
@@ -137,7 +137,7 @@ cierre de T2 ([Anexo B](02-arquitectura.md)), que se lee en G2.
 | T2, con señal en G1 | Gateway con 2 proveedores; harness v1 y evals en CI sobre el caso de referencia; prueba de portabilidad y costo; FinOps. Sin contractor: modo control (gateway en laboratorio, bypass, FinOps) | Pasarela y DLP; prueba de bypass por superficie; red team interno; ejercicio de incidentes | Intermedio para Operaciones y staff; champions con tiempo | 71 / 106 (71 / 114 con la excepción) |
 | T3 | Caso de referencia en L2; piloto en un producto propio (L1-L2, datos sintéticos), **solo si G2 lo libera**; aislamiento por tenant | Amenazas de la función; criterios de eval; cláusula tipo, sin firma | Casos por rol; calidad de prompts | 59 / 78 (+38 / 34 si P) |
 | T4 | Gate del piloto, si existe; go/no-go de modelo propio; productividad contra la base | Red team externo e ISO 27001 extendida a IA (capa D: solo con señal contractual en G3); gate de 42001 | Traspaso del contractor; Tecnología ≥85% | 95 / 69 (+21 / 23 si P) |
-| T2-T4, sin señal en G1 | Sin gateway, harness ni caso de referencia; FinOps por persona activa con la telemetría del proveedor ([Anexo B](02-arquitectura.md), "Bifurcación en G1") | Solo capa M: política, matriz, inventario y legal; R2 y R4 quedan en política | Formación para toda la dotación; prueba extendida a la cohorte; contractor cerrado | Sin techo trimestral propio en E: año ≈ 193 (caja ≈ 39); G2 y G3 releen las señales |
+| T2-T4, sin señal en G1 | Sin gateway, harness ni caso de referencia; FinOps por persona activa con la telemetría del proveedor ([Anexo B](02-arquitectura.md), "Bifurcación en G1") | Solo capa M: política, matriz, inventario y legal; R2 y R4 quedan en política | Formación para toda la dotación; prueba extendida a la cohorte; contractor cerrado | Sin techo trimestral propio en E: año ≈ 199 (caja ≈ 39); G2 y G3 releen las señales |
 
 Techos máximos por trimestre, en miles de USD ([Anexo E](05-business-case.md)).
 T2-T4 muestran la rama con señal. Ese año, con contingencia, el producto
@@ -211,7 +211,7 @@ aunque el throughput pase.
 | G1 | Evidencia contractual registrada en `private/` y su agregado anonimizado ([Anexo C](03-gobierno-seguridad.md), D9b) | B | Registrada | Incompleta: se completa en T2, antes de G3 | Sin evidencia en G3: la capa D no se financia | Capa D de T4 |
 | G1 | Básico ≥90% de la dotación | I | ≥90% | ≥50% y <90%: se libera T2 y se rediseña el formato | <50% al cierre de T2: cambio de formato, no se repite el curso | Capacitación de T2 |
 | G1 | Uso de T1 dentro del sobre aprobado | B | Dentro | — | Excedido: T2 solo con replan de capacidad aprobado | T2 entero |
-| G1 | Señal que pague la plataforma de T2: restricción (qué restricción cuenta: DP10) o licencia para vender según el umbral contractual, anuncio del proveedor de pasar a consumo, o señal de cliente para el producto | B | Al menos una | — | Ninguna: T2-T4 corre como gobierno mínimo y formación, con la prueba extendida a la cohorte, el contractor cerrado y la reserva de cierre en 6 (≈ 193 en el año contra 394; [Anexo E](05-business-case.md), "Alternativas equivalentes"); G2 y G3 vuelven a leer las señales. No es un corte: difiere la plataforma | T2: contractor al 100%, gateway, pasarela |
+| G1 | Señal que pague la plataforma de T2: restricción (qué restricción cuenta: DP10) o licencia para vender según el umbral contractual, anuncio del proveedor de pasar a consumo, o señal de cliente para el producto | B | Al menos una | — | Ninguna: T2-T4 corre como gobierno mínimo y formación, con la prueba extendida a la cohorte, el contractor cerrado y la reserva de cierre en 6 (≈ 199 en el año contra 394; [Anexo E](05-business-case.md), "Alternativas equivalentes"); G2 y G3 vuelven a leer las señales. No es un corte: difiere la plataforma | T2: contractor al 100%, gateway, pasarela |
 | G1 | Con señal: contractor contratado (o rol interno demostrado en T1 con contractor desde T2) | B | Contratado | — | Sin contractor: G1 libera T2 en modo control de B (contingencia B; la caja de T2 baja ~27). En G2, cobertura de precio y caso de referencia quedan "sin medir", no "pasa" | T2: contractor e hitos de IA aplicada |
 | G1 | Con señal: reserva de cierre ampliada a 15 | B | Ampliada | — | No ampliada: no se libera el contractor al 100% | T2: contractor |
 | G2 | Throughput como tendencia con intervalo, sin más retrabajo; calidad incierta cuenta como espera | I | Límite inferior del intervalo ≥ +3% (método del [Anexo B](02-arquitectura.md)) | **Suspensión.** Estimado >0% con límite inferior <+3%, o muestra insuficiente: T3 sin escalado; se vuelve a medir a las 6 semanas y, si sigue en la banda, se corta el frente interno y queda la base mínima | Estimado ≤0% o daño de calidad: se corta el frente interno; queda la base mínima | T3: 59 / 78 (con señal) |
@@ -235,7 +235,7 @@ que acepta el Council llevan fecha de revisión.
 
 - **Sin señal en G1:** ni el umbral contractual, ni un anuncio de consumo, ni un
   cliente. El contractor cierra con un mes de preaviso y T2-T4 corre sin
-  plataforma (≈ 193 en el año). Si G2 trae una señal, la plataforma arranca en
+  plataforma (≈ 199 en el año). Si G2 trae una señal, la plataforma arranca en
   T3, el caso de referencia en L2 llega como pronto en T4 y un piloto de producto
   no arranca antes de T4 (lo decide `caio` en G2; [Anexo B](02-arquitectura.md),
   "Bifurcación en G1").
@@ -259,7 +259,7 @@ pesimista se muestra con los gates ejecutados y como estrés sin frenar.
 
 | Escenario | Supuestos | Qué pasa con el roadmap | Resultado del año (miles de USD) |
 |---|---|---|---|
-| Sin señal en G1 | Ninguna de las tres señales; φ, la fracción de la ganancia que se logra sin plataforma ni contractor, sin dato (0 a 1) | T2-T4 como gobierno mínimo y formación; G2 y G3 releen las señales | ≈ 193 (caja ≈ 39), sin rango propio; capacidad ≥ φ × 62; neto −193 a −131 (ROI −100% a −68%) |
+| Sin señal en G1 | Ninguna de las tres señales; φ, la fracción de la ganancia que se logra sin plataforma ni contractor, sin dato (0 a 1) | T2-T4 como gobierno mínimo y formación; G2 y G3 releen las señales | ≈ 199 (caja ≈ 39), sin rango propio; capacidad ≥ φ × 62; neto −199 a −137 (ROI −100% a −69%) |
 | Pesimista, ejecutado | Throughput 5%, rampa 0/10/30/60; sin señal de cliente | Espera en G2 (+0,5%); vence a las 6 semanas y corta el frente interno; queda la base mínima | Neto ≈ −262 (el año cuesta ~265, hasta 388). Si la espera no venciera, corta en G3 (+1,5%): ≈ −300 |
 | Pesimista, estrés sin frenar | Lo mismo, sin aplicar los gates | Base común e interno enteros | −382; −502 si el precio pasa a 12× desde T3 |
 | Base | Throughput 15%, rampa 0/25/60/100; precio plano; sin señal en G2 | Producto diferido. Condicional a que G2 y G3 pasen por límite inferior (con +3,75%, G2 pide semiancho ≤ 0,75) | Si pasan G2 y G3: ROI económico −84%, neto −332 (−409 si G2 libera el producto). Pasa G2 y no G3: ≈ −275. La espera de G2 vence y corta: ≈ −245 |
@@ -295,7 +295,7 @@ anexo de cada dueño.
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
-| El tiempo reasignado no existe: con señal en G1, el producto diferido y el replan, T2-T4 piden 2,2 / 2,2 / 2,1 FTE clave contra 1-2,25, sin holgura (3,7 / 3,1 en T3-T4 si G2 libera el producto) | Alta | Alto | Piso confirmado en G0; T1-E entra con 1,6; la excepción de T2 como respaldo (DP1) | T1 excede el sobre aprobado: T2 solo con replan |
+| El tiempo reasignado no existe: con señal en G1, el producto diferido y el replan, T2-T4 piden 2,2 / 2,2 / 2,1 FTE clave contra 1-2,25, sin holgura (3,7 / 3,1 en T3-T4 si G2 libera el producto) | Alta | Alto | Piso de ~1,8 confirmado en G0 (1,6 sin la prueba); la excepción de T2 como respaldo (DP1) | T1 excede el sobre aprobado: T2 solo con replan |
 | Con señal, el replan de T2 depende de 0,2 FTE libres del contractor, supuesto condicional del Anexo D (ver decisión "T2") | Media | Medio | Excepción acotada aprobada en G0 | Contingencias A y B |
 | Cambio a pago por consumo | Alta | Alto | El anuncio es una señal que libera la plataforma en el gate siguiente; con ella, gateway, FinOps y prueba de portabilidad y costo. Hasta entonces, la regla de 6× | Más de 6× efectivo en un trimestre |
 | Datos de un cliente llegan a un modelo externo | Media | Muy alto | Matriz, *default-deny*, pasarela; bloqueo de secretos y datos prohibidos que nunca pasa a monitoreo | Un incidente confirmado |
@@ -321,7 +321,7 @@ opción obliga a recalcular E, y la alternativa queda costeada.
 
 | Decisión | Elegida | Alternativa a la vista | Por qué | Tipo |
 |---|---|---|---|---|
-| Plataforma de T2 | Bifurcación en G1: G0 compra T1-E y la prueba chica; G1 libera contractor al 100%, gateway y pasarela solo con una señal contractual, de precio por consumo o de cliente; sin señal, T2-T4 como gobierno mínimo y formación (≈ 193 en el año) | El paquete completo desde G0 (≈ 400 con la prueba), o solo (b) o (c) todo el año, sin plataforma | En el año 1, (b) y (c) le ganan al paquete con cualquier φ; el diferencial de ~233 lo pagan solo opciones sin valor medido ([Anexo E](05-business-case.md), "Alternativas equivalentes"). Sin señal se difiere, no se corta | Reversible: G2 y G3 releen las señales |
+| Plataforma de T2 | Bifurcación en G1: G0 compra T1-E y la prueba chica; G1 libera contractor al 100%, gateway y pasarela solo con una señal contractual, de precio por consumo o de cliente; sin señal, T2-T4 como gobierno mínimo y formación (≈ 199 en el año) | El paquete completo desde G0 (≈ 400 con la prueba), o solo (b) o (c) todo el año, sin plataforma | En el año 1, (b) y (c) le ganan al paquete con cualquier φ; el diferencial de ~233 lo pagan solo opciones sin valor medido ([Anexo E](05-business-case.md), "Alternativas equivalentes"). Sin señal se difiere, no se corta | Reversible: G2 y G3 releen las señales |
 | T2 (rama con señal) | Replan de B (2,2 FTE clave, tiempo del año 217, económico 394) con la excepción como respaldo aprobado en G0 | Excepción acotada (2,5 FTE clave, tiempo 223, económico 399), que saca ~3-8 mil de horas facturables | El recurso escaso es el tiempo clave; el replan no suma caja. Depende del 0,2 libre del contractor, supuesto condicional del Anexo D ("Holgura de 0,2 FTE del contractor en T2"): se sostiene solo si el contrato lo incluye en G0; si no, rige la excepción (contingencia A). Sin contractor no alcanza ninguno: contingencia B | Reversible: el respaldo entra sin nueva aprobación |
 | Redondeo de techos | Hacia arriba: 33 de caja, 72 de tiempo con la prueba (62 sin ella), 41 de base mínima | El número redondo (32 / 71 / 40) y recortar componentes | La autorización nunca queda debajo del cálculo (32,2, 62 + 9,1 y 40,2) | Reversible |
 | Capa D del Anexo C | En la base como cota superior, con la liberación condicionada en G3 a la señal contractual | Tramo condicional como P: caja base 152 (85-220), techo de T4 59, tramo de 25 (13-36) | La evidencia contractual no depende de la señal de producto; contar el renglón y condicionar el gasto compatibiliza E y C | Reversible hasta G3 |
@@ -420,7 +420,7 @@ rigen para el plan siguiente.
 
 | # | Tensión | Alternativas | Propuesta del CAIO | Decide |
 |---|---|---|---|---|
-| DP1 | T1-E entra en el sobre clave (1,6 contra 1-2,25 FTE; ~1,8 con la prueba). Con señal en G1, T2-T4 entran solo con el producto diferido y el replan, sin holgura ([Anexo E](05-business-case.md)) | (a) Producto desde T2, ampliando el sobre a ~3,7 FTE clave, que sale de horas facturables. (b) Diferir el producto hasta la señal de G2: 2,2 / 2,2 / 2,1 con el replan de T2 de B, o 2,5 en T2 con la excepción acotada. Además, lectura del sobre: estricta (todo contra 1-2,25) o separada (horas distribuidas como segundo sobre) | (b) con el replan y la excepción como respaldo; si G2 trae la señal, el board decide ampliar el sobre de T3-T4. Lectura separada, aprobada explícitamente. Piso del sobre ≥1,6 FTE en T1, a confirmar | Board, en G0 |
+| DP1 | T1-E entra en el sobre clave (~1,8 con la prueba chica, 1,6 sin ella, contra 1-2,25 FTE). Con señal en G1, T2-T4 entran solo con el producto diferido y el replan, sin holgura ([Anexo E](05-business-case.md)) | (a) Producto desde T2, ampliando el sobre a ~3,7 FTE clave, que sale de horas facturables. (b) Diferir el producto hasta la señal de G2: 2,2 / 2,2 / 2,1 con el replan de T2 de B, o 2,5 en T2 con la excepción acotada. Además, lectura del sobre: estricta (todo contra 1-2,25) o separada (horas distribuidas como segundo sobre) | (b) con el replan y la excepción como respaldo; si G2 trae la señal, el board decide ampliar el sobre de T3-T4. Lectura separada, aprobada explícitamente. Piso del sobre ≥ ~1,8 FTE en T1, a confirmar | Board, en G0 |
 | DP2 | La caja del plan suma gasto de tecnología, contra el OKR de menos de 3,5% de la facturación | A. Mantener el resultado clave y recortar el plan. B. Medirlo sin la inversión del plan. C. Medirlo por persona activa | B o C: el OKR mide eficiencia de la base, no la inversión. Cambia cómo se mide, no lo que se gasta: el gasto del plan se informa igual | Directorio, en el presupuesto 2027 |
 | DP3 | IA aplicada en T1: rol interno de 0,3 FTE (B) o contractor B1 al 50% (D, E) | A. Rol interno, si demuestra experiencia antes de G0. B1. Contractor desde T1, que reemplaza la fracción de B en T2-T4 | B1: el recurso que no entra es el tiempo clave (1,6 contra 1,9 FTE), con ~13 mil más de caja. Choca con "no contratar" | Directorio, en G0 |
 | DP4 | Compromiso sobre el empleo ([Anexo D](04-personas-cultura.md), D3) | A. Sin compromiso. B. La ganancia por IA no se usa para desvincular en 12 meses. C. B con excepciones | C, como propone D: baja el miedo sin atar todo el margen. No es política aprobada; el costo no está cuantificado | Directorio, con asesoría laboral |
@@ -428,7 +428,7 @@ rigen para el plan siguiente.
 | DP6 | Staffing facturado por hora desincentiva el uso de IA ([Anexo E](05-business-case.md)) | A. Productividad 0 en staffing. B. Precio por resultado | A en los 12 meses; B como opción del año 2 | Directorio, año 2 |
 | DP7 | Solapes de costo que quedan ([Anexo E](05-business-case.md)): pruebas de bypass (B y C), red team (B 5-15 contra C 10-25), gateway y pasarela, seguridad. IA aplicada e infraestructura sin piloto ya están consolidadas | Contar los dos renglones o consolidar | El base cuenta los dos hasta que confirmen los dueños | `architect`, `governance` |
 | DP8 | El equilibrio a régimen pide ~17% de throughput atribuible sin producto (~23% con el producto), medido contra la base de T1. Es una exigencia propia: el OKR de +20% contra T0 la cubre solo si 1,20/(1+d) − 1 − c ≥ 16,7% (d en G1; c, el cambio del grupo que no adopta, desde G2) | A. Subir la meta. B. Vender la capacidad liberada (se calcula en `private/`). C. Apoyar el caso también en producto y riesgo, no solo en productividad | C, dicho sin vueltas ante el board; B se evalúa en G2 cuando se decide el destino de la capacidad | Directorio |
-| DP9 | Si en la semana 4 la base prospectiva no resuelve (criterio mecánico del [Anexo B](02-arquitectura.md), "Respaldo"), el base no puede pasar G2 por throughput (≈ −245, a validar por `finance`) | A. Retrospectiva como lectura contra tendencia, sin atribuir (B). B. Prolongar siempre la base a la semana 8 y correr 4 semanas la formación (B). C. Prolongarla solo si el criterio de la semana 4 lo dispara (D) | Sin propuesta propia todavía: C no atrasa la prueba ni el básico cuando la base resuelve, y B le da a G1 una lectura de σ con 5 semanas en vez de 9 ([Anexo D](04-personas-cultura.md)). Se decide antes de G0 | `people` con `architect` y `caio` |
+| DP9 | Si en la semana 4 la base prospectiva no resuelve (criterio mecánico del [Anexo B](02-arquitectura.md), "Respaldo"), el base no puede pasar G2 por throughput (≈ −265 sin crédito de capacidad, ≈ −245 si se atribuye; validado por `finance`, alternativas sin costear) | A. Retrospectiva como lectura contra tendencia, sin atribuir (B). B. Prolongar siempre la base a la semana 8 y correr 4 semanas la formación (B). C. Prolongarla solo si el criterio de la semana 4 lo dispara (D) | Sin propuesta propia todavía: C no atrasa la prueba ni el básico cuando la base resuelve, y B le da a G1 una lectura de σ con 5 semanas en vez de 9 ([Anexo D](04-personas-cultura.md)). Se decide antes de G0 | `people` con `architect` y `caio` |
 | DP10 | Qué restricción contractual cuenta como señal de G1 | A. Lectura literal de E y de la [ficha del umbral](../../context/supuestos/umbral-de-evidencia-contractual.md): un contrato que prohíbe **o** condiciona la IA de terceros es señal. B. Lectura recortada de C (D9b): cuenta solo si condiciona, es decir, acepta la IA con controles que Acme Labs debe demostrar | Sin propuesta propia. Evidencia de A: es el umbral de la ficha y el texto de E, y deja más vías para liberar la plataforma. Evidencia de B: el supuesto de partida ya es que los clientes prohíben por defecto; un contrato que solo prohíbe lo confirma, probablemente exista entre cinco bancos y liberaría la plataforma sin pedir nada que la opción (b) no compre, lo que desactiva la bifurcación. Con B, la ficha del umbral suma "cuenta en G1 solo si condiciona" | Board, en G0 |
 
 ## Cautelas
@@ -459,8 +459,6 @@ rigen para el plan siguiente.
   cartera. Este anexo no nombra un alias de cliente junto a un producto, pero sí
   vincula un producto propio con una habilitación externa de 2027, y las fichas
   de `context/` todavía tienen asociaciones que esa revisión tiene que juzgar.
-- La rama sin señal (≈ 193) es un medio sin rango propio y no tiene techos por
-  trimestre en E; que la prueba extendida no sume costo es un supuesto de E. El
-  techo de T1 sube a ~1,8 FTE clave con la prueba, y el piso que confirma G0
-  sigue en 1,6: falta que `finance` los alinee.
+- La rama sin señal (≈ 199) es un medio sin rango propio y no tiene techos por
+  trimestre en E; los compensatorios de C que suma son una cota superior.
 - Responsable humano de cada gate y de cada decisión: **pendiente**.

@@ -111,7 +111,7 @@ Ver [Anexo D — Personas y cultura](annexes/04-personas-cultura.md).
 | Techo (caja / tiempo) | 33 / 72 | 71 / 106 | 59 / 78 | 95 / 69 |
 | Pasa si | Base y política; **una señal libera la plataforma** | Throughput ≥ +3%; Tec. ≥80% | Throughput ≥ +8% | Camino a ~17% o interés contractual |
 
-Miles de USD; T2-T4, rama con señal. **G1 no corta: decide la plataforma.** Sin señal de contrato, de precio por consumo o de cliente, T2-T4 sigue como gobierno mínimo y formación (≈ 193 en el año) y G2-G3 releen. Throughput: límite inferior del intervalo; calidad incierta cuenta como espera. G2 en espera: nueva medición a las 6 semanas y, si sigue en la banda, corta el frente interno. G3 en espera: T4 con la base mínima.
+Miles de USD; T2-T4, rama con señal. **G1 no corta: decide la plataforma.** Sin señal de contrato, de precio por consumo o de cliente, T2-T4 sigue como gobierno mínimo y formación (≈ 199 en el año) y G2-G3 releen. Throughput: límite inferior del intervalo; calidad incierta cuenta como espera. G2 en espera: nueva medición a las 6 semanas y, si sigue en la banda, corta el frente interno. G3 en espera: T4 con la base mínima.
 
 **Decisión:** adoptar los gates como regla de liberación de fondos. Ver [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md).
 
@@ -121,15 +121,15 @@ Miles de USD; T2-T4, rama con señal. **G1 no corta: decide la plataforma.** Sin
 
 | Miles de USD | Sin señal en G1 | Con señal en G1 |
 |---|---|---|
-| Costo económico del año | ≈ 193 | ≈ 400 (216-584) |
+| Costo económico del año | ≈ 199 | ≈ 400 (216-584) |
 | Caja, con contingencia | ≈ 39 | 98-255 (114-314 si G2 libera el producto) |
-| Tiempo reasignado, a costo cargado | ≈ 154 | 115-320 (~3,5 FTE), más ~6 de la prueba |
+| Tiempo reasignado, a costo cargado | ≈ 160 | 115-320 (~3,5 FTE), más ~6 de la prueba |
 
 ROI a 12 meses negativo y caja cero. **En el año 1 ganan las alternativas baratas:** gobierno mínimo y formación, 161 (neto −161 a −99); piloto sobre el agente actual, 47 (−47 a +15); paquete, 394 (−332).
 
 **Decisión, el pedido G0 completo:**
 1. T1 con la prueba chica: 33 de caja (contractor, solo T1: hasta 16,5) y 6 de reserva de cierre; 72 de tiempo (~1,8 FTE clave, ~654 h).
-2. Piso: 1,6 FTE clave en T1; con señal, 2,2 / 2,2 / 2,1 en T2-T4 con el replan (respaldo: 2,5 en T2).
+2. Piso: ~1,8 FTE clave en T1; con señal, 2,2 / 2,2 / 2,1 en T2-T4 con el replan (respaldo: 2,5 en T2).
 3. G1 libera la plataforma solo con señal, y solo entonces amplía la reserva a 15 (sin señal, queda en 6). Cortar en G1: 79 en el medio, 115 hasta cerrar, 155 en el año.
 4. Si se corta, base mínima hasta 41 de tiempo; T0, propuesto, hasta 7.
 
@@ -141,7 +141,7 @@ Ver [Anexo E — Business case](annexes/05-business-case.md).
 
 | Escenario | Qué pasa | Costo económico | Capacidad liberada | Neto 12 m | ROI 12 m |
 |---|---|---|---|---|---|
-| Sin señal en G1 | Sin plataforma en T2-T4 | ≈ 193 | ≥ φ × 62 | −193 a −131 | −100% a −68% |
+| Sin señal en G1 | Sin plataforma en T2-T4 | ≈ 199 | ≥ φ × 62 | −199 a −137 | −100% a −69% |
 | Pesimista, gates | Espera en G2, vence y corta | 265 | ~3 | ≈ −262 | ≈ −99% |
 | Pesimista, sin frenar | Sin gates | 394 | 12 | −382 | −97% |
 | Base | G2 y G3 pasan (o la espera vence) | 394 (265) | 62 (~19) | −332 (≈ −245) | −84% (≈ −93%) |
