@@ -82,7 +82,7 @@ Con productividad sola, las opciones baratas ganan el año 1. La plataforma comp
 **Decisiones:**
 1. Ratificar la política de IA en T1: compromiso interno, enmendable.
 2. Sin crédito ni scoring en 12 meses; el resto, clasificado caso por caso.
-3. Financiar los controles por gate; la demostración externa (red team externo e ISO ampliada), solo con señal contractual en G3 o si G2 libera el producto.
+3. Financiar los controles por gate: gobierno mínimo siempre; controles técnicos de la plataforma si G1 encuentra una señal; la demostración externa (red team externo e ISO ampliada), solo con señal contractual en G3 o si G2 libera el producto.
 
 Ver [Anexo C — Gobierno, seguridad y compliance](annexes/03-gobierno-seguridad.md).
 
@@ -130,7 +130,7 @@ ROI a 12 meses negativo y caja cero. **En el año 1 ganan las alternativas barat
 **Decisión, el pedido G0 completo:**
 1. T1 con la prueba chica: 33 de caja (contractor, solo T1: hasta 16,5) y 6 de reserva de cierre; 72 de tiempo (~1,8 FTE clave, ~654 h).
 2. Piso: 1,6 FTE clave en T1; con señal, 2,2 / 2,2 / 2,1 en T2-T4 con el replan (respaldo: 2,5 en T2).
-3. G1 libera la plataforma solo con señal, y amplía la reserva a 15. Cortar en G1: 79 en el medio, 115 hasta cerrar, 155 en el año.
+3. G1 libera la plataforma solo con señal, y solo entonces amplía la reserva a 15 (sin señal, queda en 6). Cortar en G1: 79 en el medio, 115 hasta cerrar, 155 en el año.
 4. Si se corta, base mínima hasta 41 de tiempo; T0, propuesto, hasta 7.
 
 Ver [Anexo E — Business case](annexes/05-business-case.md).
