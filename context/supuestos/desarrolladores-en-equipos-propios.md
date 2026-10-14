@@ -4,7 +4,7 @@ title: "Desarrolladores en equipos propios y su costo"
 description: "El caso de negocio supone entre 15 y 20 desarrolladores en equipos propios (valor de cálculo 17,5) con un costo cargado de USD 2.500-7.000 por mes (valor de cálculo 4.750)."
 status: draft
 tags: [supuesto, finanzas, productividad]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T00:20:30Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T18:00:00Z }
 ---
 # Supuesto
 
@@ -12,10 +12,15 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T00:20:30Z }
 |---|---|---|
 | Desarrolladores en equipos propios (N) | 15-20 personas | 17,5 |
 | Costo cargado por desarrollador | USD 2.500-7.000 por mes | 4.750 |
+| Mínimo de personas activas para decidir un gate por valor (propuesta) | — | 15 |
 
-Equipos propios son los que trabajan sobre los productos propios y el producto
-del Cliente A; el staffing no se cuenta, porque el uso de IA ahí depende de
-cada cliente (ver [ganancia de productividad](/supuestos/ganancia-de-productividad.md)).
+Equipos propios son los que trabajan en modo producto, donde la organización
+controla las herramientas; el staffing no se cuenta, porque el uso de IA ahí
+depende de cada cliente (ver [ganancia de productividad](/supuestos/ganancia-de-productividad.md)).
+
+El mínimo de 15 reemplaza el "~20" del método de los gates: con una cohorte de
+15-20, un mínimo de 20 dejaría el gate en "muestra insuficiente" casi siempre.
+Es el piso de la cohorte, necesario pero no suficiente: decide el semiancho.
 
 # Por qué es razonable
 
@@ -29,6 +34,8 @@ cada cliente (ver [ganancia de productividad](/supuestos/ganancia-de-productivid
 
 - Un inventario por equipo que dé menos de 15 desarrolladores en equipos propios.
 - Una mezcla de seniority muy distinta de la supuesta.
+- Que la serie de T0 muestre que con 15 personas el semiancho supera 3 puntos:
+  entonces el mínimo no alcanza y el gate se reformula antes de G0.
 
 # Cautelas
 
