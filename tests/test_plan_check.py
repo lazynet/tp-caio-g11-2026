@@ -501,6 +501,12 @@ class PlanCheckTests(unittest.TestCase):
         self.write("# Deck\n[Anexo][missing]\n![Imagen](absent.png)")
         self.assertEqual(len(self.result()["errors"]), 2)
 
+    def test_adjacent_footnotes_are_not_reference_links(self):
+        self.write("# Deck\nDato.[^a][^b]\n\n[^a]: Fuente A\n[^b]: Fuente B")
+        self.assertEqual(self.result()["errors"], [])
+        self.write("# Deck\n[Anexo][missing][^a]\n\n[^a]: Fuente A")
+        self.assertEqual(len(self.result()["errors"]), 1)
+
     def test_same_document_anchor_and_escape(self):
         self.write("# Deck\n[Inicio](#deck)")
         self.assertEqual(self.result()["errors"], [])

@@ -74,7 +74,7 @@ usando los conceptos de la unidad, pensadas para practicar la defensa:
 # Relación con el plan
 
 Sirve de ejercicio de defensa para el board: la misma estructura de cinco preguntas
-se puede aplicar a Flexibility. Unidad: [M1U4](/unidades/m1u4-rol-gobernanza.md).
+se puede aplicar a Acme Labs. Unidad: [M1U4](/unidades/m1u4-rol-gobernanza.md).
 
 [^m1u4-lectura]: M1U4, lectura, sección 10 (p. 20-22)
 [^m1u4-slides]: M1U4, slide 23

@@ -7,8 +7,9 @@ Repo del Trabajo Integrador Final de la Diplomatura CAIO (UTN BA): un Plan
 Maestro del CAIO a 12 meses, entregado en un único PDF de menos de 10 MB: 10
 slides como máximo (incluyendo portada y equipo) más anexos.
 
-**Estado:** estamos en setup. El caso todavía no está elegido; Flexibility
-(software para fintech y bancos) es un candidato. Ver
+**Estado:** hay un borrador completo. El caso de trabajo es Acme Labs
+(software para fintech y bancos), la organización completa, con el OK de su CEO;
+falta que el equipo lo confirme. Ver
 [Pendientes del equipo](#pendientes-del-equipo).
 
 > **El repo es público.** Ningún dato interno de ninguna organización entra acá:
@@ -256,9 +257,9 @@ anonimizados y supuestos, nunca el dato real.
 | `leak-guard` en push | lo mismo en modo estricto: falla si falta la denylist. Detecta, no previene: el push ya es público | GitHub Actions |
 
 El chequeo combina patrones fijos (claves privadas, CUIT, archivos marcados
-confidenciales, cualquier cosa en `private/` y mails corporativos, solo del
-dominio del candidato actual) con una denylist privada de nombres que vive fuera
-del repo. No uses nunca `git commit --no-verify`.
+confidenciales y cualquier cosa en `private/`) con una denylist privada que
+vive fuera del repo y lleva los nombres y los dominios de mail de la
+organización del caso. No uses nunca `git commit --no-verify`.
 Ninguna capa garantiza que no se filtre nada: la defensa principal es no
 escribir el dato. La protección de `main` exige la aprobación de Martin, pero
 no exige que pasen los chequeos. Que el secreto `LEAK_DENYLIST` esté
@@ -393,8 +394,9 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 
 - [x] Dónde colaboramos: GitHub, `lazynet/tp-caio-g11-2026` (público hasta que estemos todos)
 - [x] Diplomatura, plan a 12 meses y tope de 10 slides incluyendo portada y equipo
-- [ ] Caso: Flexibility es candidato, no está elegido
-- [ ] Alcance del caso, una vez elegido
+- [ ] Caso: confirmar Acme Labs (propuesto, con el OK de su CEO)
+- [ ] Alcance: confirmar la organización completa (IA en el producto y en la operación interna)
+- [ ] Verificar las fichas de `context/` contra su fuente (`status: verified`)
 - [ ] Responsables humanos de cada sección
 - [x] Formato de entrega: un único PDF de menos de 10 MB con slides y anexos (ver "Generar el deck")
 - [ ] Material de M3U4 (cierre y defensa del Plan Maestro), que no tenemos

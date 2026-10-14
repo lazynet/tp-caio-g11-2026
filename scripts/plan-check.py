@@ -167,7 +167,8 @@ def links(text, include_definitions=True):
         r"!?\[[^\]]*\]\(\s*(<[^>]+>|[^\s)]+)(?:\s+[^)]*)?\)", text
     ):
         yield destination.strip("<>")
-    for label, reference in re.findall(r"!?\[([^\]]+)\]\[([^\]]*)\]", text):
+    # `[^a][^b]` son dos notas al pie seguidas, no un link por referencia.
+    for label, reference in re.findall(r"!?\[(?!\^)([^\]]+)\]\[(?!\^)([^\]]*)\]", text):
         key = " ".join((reference or label).lower().split())
         yield definitions.get(key, f"__undefined_reference__/{key}")
     for key in re.findall(r"\[([^\]^]+)\](?![\[(:])", text):
@@ -219,19 +220,25 @@ def annex_files(root):
 def check_annex(path, root, mode):
     name = path.relative_to(root)
     try:
-        metadata, body = split_frontmatter(path.read_text(encoding="utf-8"), ANNEX_TYPES)
+        metadata, body = split_frontmatter(
+            path.read_text(encoding="utf-8"), ANNEX_TYPES
+        )
     except (OSError, ValueError) as exc:
         return [f"{name}: {exc}"]
     errors = []
     if metadata["owner"] not in ANNEX_OWNERS:
-        errors.append(f"{name}: owner del anexo debe ser uno de {', '.join(ANNEX_OWNERS)}")
+        errors.append(
+            f"{name}: owner del anexo debe ser uno de {', '.join(ANNEX_OWNERS)}"
+        )
     if metadata["status"] not in ("draft", "ready"):
         errors.append(f"{name}: el status del anexo debe ser draft o ready")
     if mode == "delivery" and metadata["status"] == "draft":
         errors.append(f"Entrega rechazada: anexo declarado draft: {name}")
     headings = {
         heading.strip().casefold()
-        for heading in re.findall(r"^\s{0,3}##\s+(.+?)\s*#*$", visible(body), re.MULTILINE)
+        for heading in re.findall(
+            r"^\s{0,3}##\s+(.+?)\s*#*$", visible(body), re.MULTILINE
+        )
     }
     for section in ANNEX_SECTIONS:
         if section.casefold() not in headings:

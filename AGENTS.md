@@ -17,14 +17,20 @@ frontmatter y los identificadores de código, porque las herramientas los espera
 El Trabajo Integrador Final de la *Diplomatura Chief AI Officer (CAIO)* de UTN BA:
 un **Plan Maestro del CAIO a 12 meses** para una organización, defendido ante un board.
 
-**Estado (setup):**
+**Estado (borrador):**
 
 - **Acordado:** la diplomatura, el plan a 12 meses y la entrega: un único PDF de
   menos de 10 MB, con máximo diez slides (portada y equipo incluidas) y anexos.
-- **Pendiente:** el caso, su alcance y los responsables humanos de cada sección.
-  Flexibility (empresa argentina de software para fintech y bancos) es un
-  **candidato**, no el caso elegido: no apliques sus restricciones a todo caso
-  ni redactes el plan antes de que el equipo elija.
+- **Caso de trabajo:** Acme Labs (empresa argentina de software para fintech
+  y bancos), la **organización completa**: IA en el producto que vende y en su
+  operación interna. Lo propuso Martin con el OK del CEO; **falta registrar el
+  acuerdo del equipo**. `context/` tiene sus hechos y supuestos,
+  públicos o anonimizados.
+- **Hay un borrador completo:** deck, anexos A-F y defensa, todo en `draft`.
+- **Pendiente:** el acuerdo del equipo sobre el caso, los responsables humanos
+  de cada sección y la verificación
+  humana de las fichas de `context/` (`status: verified`), que la versión de peer
+  review necesita.
 
 El plan tiene que integrar:
 

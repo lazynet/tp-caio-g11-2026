@@ -18,7 +18,7 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
 
 # Alcance territorial (art. 2)
 
-Flexibility está fuera de la UE, pero el Reglamento no mira dónde está la
+Acme Labs está fuera de la UE, pero el Reglamento no mira dónde está la
 empresa. Aplica a (p. 45):[^eu-ai-act]
 
 - **Proveedores que comercialicen o pongan en servicio sistemas en la UE**, estén
@@ -34,7 +34,7 @@ empresa. Aplica a (p. 45):[^eu-ai-act]
 Un proveedor de un tercer país de GPAI debe nombrar representante en la UE
 (art. 54, [niveles de riesgo](/frameworks/eu-ai-act-niveles-riesgo.md)).
 
-**Cautela:** si los clientes de Flexibility son bancos locales con clientes
+**Cautela:** si los clientes de Acme Labs son bancos locales con clientes
 locales, el Reglamento puede no aplicar de forma directa. Aplica si hay clientes
 con operación en la UE o si el resultado se usa allá. El ejercicio de
 clasificación hay que hacerlo por cliente y por caso de uso. Además, un cliente
@@ -184,7 +184,7 @@ asume el art. 16 cuando (p. 67):[^eu-ai-act]
 - (c) **cambia la finalidad prevista** de un sistema (incluido un GPAI) no
   considerado de alto riesgo, de modo que pase a serlo.
 
-Para Flexibility, el escenario (a) aparece si revende o integra con marca propia
+Para Acme Labs, el escenario (a) aparece si revende o integra con marca propia
 un motor de terceros, y el (c) si toma un modelo genérico o una herramienta y lo
 orienta a evaluar solvencia: **un LLM usado para decidir crédito es alto
 riesgo**, y quien lo orienta a eso es el proveedor.
@@ -218,7 +218,7 @@ de modelos GPAI. Aquí entra el contrato con el proveedor del LLM.[^eu-ai-act]
 Además, **FRIA** (art. 27) para desplegadores de 5.b y 5.c: ver
 [Anexo III](/frameworks/eu-ai-act-anexo-iii.md).
 
-# Qué cambia para Flexibility
+# Qué cambia para Acme Labs
 
 | Pregunta | Respuesta del texto |
 |---|---|

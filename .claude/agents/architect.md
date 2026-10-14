@@ -27,7 +27,7 @@ requisitos de riesgo que define `governance`.
 ## Cómo trabajás
 
 - Las restricciones salen del caso. Si el caso es un proveedor de software para
-  clientes regulados (como Flexibility, candidato), la residencia de los datos
+  clientes regulados (como Acme Labs, el caso elegido), la residencia de los datos
   del cliente, el aislamiento entre clientes y la auditabilidad condicionan cada
   decisión; si no, decís cuáles aplican y por qué.
 - Usás el material de harness de la cursada (ventana de contexto, memoria,

@@ -41,7 +41,7 @@ así que alcanza a un proveedor argentino con clientes que operan en Europa.[^eu
   aplica desde el **2 de diciembre de 2027** (antes 2 de agosto de 2026), por
   el Omnibus. Ya rigen hoy la alfabetización, las prohibiciones, las
   obligaciones de GPAI, las sanciones y la transparencia del art. 50.[^ai-omnibus]
-- **Rol:** Flexibility es proveedor en su software (art. 16) y desplegador en
+- **Rol:** Acme Labs es proveedor en su software (art. 16) y desplegador en
   lo que opera para sí mismo (art. 26). Pasa a ser proveedor si pone su marca a
   un sistema de terceros, lo modifica sustancialmente o cambia su finalidad
   (art. 25).[^eu-ai-act]
@@ -60,7 +60,7 @@ así que alcanza a un proveedor argentino con clientes que operan en Europa.[^eu
   [calendario](/frameworks/eu-ai-act-calendario-sanciones.md).[^ai-omnibus]
 - **Abierta:** qué fecha rige para la evaluación de conformidad y el registro
   (arts. 43 y 49) tras el Omnibus. Ver el calendario.
-- **Abierta:** aplicabilidad concreta a los clientes de Flexibility (art. 2.1.c)
+- **Abierta:** aplicabilidad concreta a los clientes de Acme Labs (art. 2.1.c)
   y su tamaño como PyME, que condicionan multas y obligaciones. No se resuelve
   con el material de la cursada.
 

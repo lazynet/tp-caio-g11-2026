@@ -30,7 +30,7 @@ arquitecturas que propone `architect`.
   y la capacidad de las personas conforme a esos derechos. Si un rol que
   necesitás no existe, se lo pedís a `people`.
 - El marco regulatorio sale del caso. Si el caso es un proveedor de clientes
-  regulados (como Flexibility, candidato: banca y fintech, con exigencias BCRA
+  regulados (como Acme Labs, el caso elegido: banca y fintech, con exigencias BCRA
   que llegan por contrato), separás las obligaciones propias de las heredadas de
   los clientes. Si no, decís qué marco aplica y por qué.
 - Usás los frameworks de la cursada cuando ayudan (niveles del EU AI Act,
