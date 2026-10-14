@@ -239,9 +239,11 @@ lectura A y separe el retorno económico del retorno de caja.
 ### Caso de referencia: recorrido de datos y ficha de evaluación
 
 El harness v1, la suite de evals y la prueba de portabilidad de T2 necesitan un
-caso concreto. Con el producto diferido, ese caso tiene que ser interno. Este
-anexo propone uno **ilustrativo del método**: el caso real lo prioriza el
-portfolio de `caio`, y si es otro, se rehace esta ficha con la misma estructura.
+caso concreto. Con el producto diferido, ese caso tiene que ser interno. El
+portfolio de `caio` ([Anexo F](06-roadmap-riesgo.md)) eligió como hipótesis de
+producto un asistente de integración en la plataforma propia; este caso interno
+queda como el del frente interno y como prueba del método que ese piloto
+reutiliza. Si el portfolio cambia, se rehace esta ficha con la misma estructura.
 
 **Caso: asistente de conocimiento interno.** Responde preguntas de Tecnología y
 Operaciones sobre la documentación de los productos propios, los runbooks y los
@@ -595,8 +597,9 @@ montos de facturación.
   precio del gateway es una hipótesis que la prueba de T2 confirma o descarta en
   G2. La ganancia de throughput se valúa como horas evitadas a output fijo, no
   como caja.
-- **Riesgo que hay que nombrar:** el piloto de producto no tiene caso elegido ni
-  cliente que lo habilite todavía; el plan lo trata como hipótesis con gate. Y
+- **Riesgo que hay que nombrar:** el piloto de producto tiene hipótesis elegida
+  (asistente de integración, Anexo F) pero ningún cliente que lo habilite
+  todavía; el plan lo trata como hipótesis con gate. Y
   evals, harness y la prueba de portabilidad se concentran en un contractor.
 - **Evidencia que falta:** línea base de productividad, matriz por cliente,
   primera corrida de la ficha de evaluación y la medición de *f* × *s*; no se
@@ -624,8 +627,9 @@ montos de facturación.
   portabilidad y costo y el replan de T2 están en una
   [ficha](../../context/supuestos/umbrales-tecnicos-propuestos.md) en `draft`. La
   infraestructura sin piloto en Q3-Q4 todavía no está en la ficha de precios.
-- El caso de referencia es ilustrativo del método, no una elección de
-  portfolio; el tamaño del dataset (~200 preguntas) es una propuesta sin
+- El caso de referencia es el del frente interno y prueba el método que
+  reutiliza el piloto de producto; la hipótesis de producto la eligió el
+  portfolio de `caio` (Anexo F). El tamaño del dataset (~200 preguntas) es una propuesta sin
   cálculo de potencia estadística.
 - Que el contractor tenga 0,2 FTE sin asignar en T2 sale de leer juntos B
   (fracción de 0,8) y D (una persona al 100%); `people` lo tiene que confirmar.
