@@ -598,7 +598,7 @@ recalculan acá.
 
 | Hito de Q2 a Q4 | Con señal | Sin señal |
 |---|---|---|
-| Costo del año (E) | 394 (213-575) | ≈ 193: T0-T1 del paquete 69, prueba chica 6, T2-T4 de (b) ~114, cierre del contractor 4 |
+| Costo del año (E) | 394 (213-575) | ≈ 199: T0-T1 del paquete 69, prueba chica 6, T2-T4 de (b) ~114, cierre del contractor 4, compensatorios de C ~6 |
 | Contractor | Al 100% en T2-T4; sin contractor rige el modo control ("Exceso de T2") | No se contrata; el B1 de T1 cierra |
 | Gateway en laboratorio, bypass por superficie y FinOps con escenario de consumo (Q2) | Q2 | **Se difiere.** FinOps queda en costo por persona activa desde la telemetría del proveedor, sin costo por consulta ni por resultado (supuesto del arquitecto) |
 | Harness v1, suite de evals en CI y dataset v1 (Q2) | Q2 | **Se difiere** |
@@ -642,7 +642,7 @@ recalculan acá.
 cambio de precio o una demanda contractual). *Recomendación:* la bifurcación.
 *Dependencias:* `finance` (E) y `governance` (C) fijan el umbral y el modo de
 leer cada señal; este anexo aporta la telemetría. *Costo:* el de E; la
-diferencia entre ramas, 394 − 193 ≈ 201, es lo que no se gasta sin señal.
+diferencia entre ramas, ≈ 400 − 199 ≈ 201, es lo que no se gasta sin señal.
 *Riesgo (para `governance`):* en la rama sin señal no hay bloqueo ni registro
 en el gateway, y R2 y R4 dependen de la política. *Responsable humano:*
 pendiente. *Criterio de éxito:* en G2 la rama que corrió deja las condiciones de

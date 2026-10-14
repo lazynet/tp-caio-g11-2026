@@ -51,7 +51,7 @@ clientes ([disponibilidad de datos](/supuestos/disponibilidad-de-datos.md)).
 - Que el intermedio de Tecnología no pueda usarse como vehículo de la prueba y
   las horas de la cohorte se sumen.
 - Que extender la prueba en T2-T4 pida champions o lectura por encima de lo que
-  (b) ya paga: el año sin señal (≈ 193 en el anexo E) sube.
+  (b) ya paga: el año sin señal (≈ 199 en el anexo E) sube.
 
 # Cautelas
 

@@ -188,8 +188,8 @@ G0 elige la vía B1 (contractor desde T1) y autoriza solo su tramo de T1 (hasta
 libera en G1 solo con al menos una señal; sin ninguna, **el contractor se cierra**
 (un mes de preaviso, ~4 de caja en el medio según E), el mes se usa para
 documentar y traspasar lo hecho en T1 a la oficina del CAIO, y T2-T4 corre como
-(b): gobierno mínimo y formación, con la prueba extendida a la cohorte (≈193 en
-el año contra 394, E). G2 y G3 vuelven a leer las señales. No es un corte del
+(b): gobierno mínimo y formación, con la prueba extendida a la cohorte (≈199 en
+el año contra ≈ 400, E). G2 y G3 vuelven a leer las señales. No es un corte del
 plan: difiere la plataforma. Si el Directorio rechaza B1, la alternativa es A con
 la prueba de capacidad previa a G0, o diferir los hitos de IA aplicada de T1 (lo
 que decide `architect`).
