@@ -31,7 +31,7 @@ así que el gobierno se construye antes del primer caso, no después del primer 
 | Certificación de seguridad | ISO/IEC 27001 de la organización; un producto propio no tiene la suya | [Ficha](../../context/hechos/seguridad-y-certificaciones.md) |
 | Controles específicos de IA (red teaming, DLP sobre prompts) | Sin evidencia | [Ficha](../../context/hechos/seguridad-y-certificaciones.md) |
 | Concentración de capacidad | Gobierno y seguridad dependen de pocas personas | [Ficha](../../context/hechos/tamano-y-estructura.md) |
-| Apetito de riesgo de los clientes | Prohíben por defecto modelos externos sobre su código y datos, salvo cláusula y controles demostrables | [Supuesto](../../context/supuestos/apetito-de-riesgo-de-clientes.md) |
+| Apetito de riesgo de los clientes | Prohíben por defecto modelos externos sobre su código y datos, salvo cláusula y controles demostrables. La evidencia contractual se junta en el Q1 (D9b) | [Supuesto](../../context/supuestos/apetito-de-riesgo-de-clientes.md) |
 | Datos disponibles para IA | Internos; los datos productivos de clientes no | [Supuesto](../../context/supuestos/disponibilidad-de-datos.md) |
 | Inversión incremental del plan | 1%-3% de la facturación anual, más 10%-15% del tiempo de personas clave | [Supuesto](../../context/supuestos/capacidad-de-inversion.md) |
 | Costo cargado por rol | Tech lead 4.500-10.000 USD/mes; senior DevOps 3.000-7.500; analista funcional 2.000-5.500; staff 1.500-5.000. Rangos amplios, no calibrados contra la nómina | [Supuesto](../../context/supuestos/costo-cargado-por-rol.md) |
@@ -49,7 +49,7 @@ así que el gobierno se construye antes del primer caso, no después del primer 
 | Inventario de usos de IA | No hay | 100% de las herramientas, servidores MCP, funciones de IA embebidas y casos de producto | Objetivo propuesto por el equipo |
 | Matriz de restricciones por cliente | No hay; se valida a mano | Cubre los clientes que concentran la mayor parte de la facturación (la ficha da el alcance) | [Ficha](../../context/hechos/cartera-y-concentracion.md) |
 | Registro de riesgos de IA | No hay | Vivo, revisado cada mes por el Council | Objetivo propuesto por el equipo |
-| Controles técnicos de IA | Sin evidencia | Pasarela de salida y DLP en uso, logs de acciones de agentes, 2 red teams | Objetivo propuesto por el equipo |
+| Controles técnicos de IA | Sin evidencia | Pasarela de salida y DLP en uso, logs de acciones de agentes, red team interno; el externo, si se financia la capa D (D9b) | Objetivo propuesto por el equipo |
 | Certificación | ISO 27001 vigente | ISO 27001 con alcance extendido a IA; ISO 42001 como decisión del Q4, no como meta | [Ficha](../../context/hechos/seguridad-y-certificaciones.md) |
 
 Las metas son objetivos del equipo, no benchmarks: se calibran con la línea base que
@@ -72,13 +72,13 @@ obliga a Acme Labs de lo que le llega por contrato.
 
 | Norma o marco | Quién está obligado | Cómo llega a Acme Labs | Estado de verificación |
 |---|---|---|---|
-| BCRA Com. "A" 7777 y 7783 (gobierno de IA propia y de terceros, aviso al cliente de uso de IA, explicabilidad) | Bancos y PSP clientes | **Heredada**: por contrato y por el análisis de riesgos de terceros del cliente | Resumen de la fuente primaria. La [A 7777, sección 4.6](https://www.bcra.gob.ar/pdfs/comytexord/A7777.pdf) pide identificar los usos de IA de la entidad y de sus terceros, no solo scoring; es un texto de 2023 y su vigencia en 2026 no está cotejada |
+| BCRA Com. "A" 7777 y 7783 (gobierno de IA propia y de terceros, aviso al cliente de uso de IA, explicabilidad) | Bancos y PSP clientes | **Heredada**: por contrato y por el análisis de riesgos de terceros del cliente | Leída la [A 7777, sección 4.6](https://www.bcra.gob.ar/pdfs/comytexord/A7777.pdf) (versión 1a, vigencia 06/09/2023). **Respalda** que la entidad debe identificar y documentar el uso de IA "por sí o por terceros", asignar roles, analizar riesgos y avisar al cliente. **No respalda** que el banco le exija a Acme Labs controles concretos ni que le compre IA: eso, si existe, llega por contrato (ver D9b). La sección 10 (terceras partes) no se leyó, y la vigencia en 2026 no está cotejada |
 | BCRA Com. "A" 6885 (PSP que ofrecen cuentas de pago) | Un producto propio de medios de pago, **si** obtiene la habilitación | **Propia y directa** en ese caso | Solo verificada por encabezado y alcance |
 | Ley 21.526, arts. 39-40 (secreto financiero) | Entidades y su personal | **Heredada**: restringe qué información del banco puede salir hacia un modelo | Verificada contra la ley |
 | Ley 25.326 (datos personales; prohíbe transferir a países sin protección adecuada) | Quien trata datos personales | **Propia**: condiciona enviar datos a modelos alojados en el exterior | Verificada; el rol de Acme Labs (responsable o encargado) falta confirmarlo con asesoría legal |
 | EU AI Act (Reg. 2024/1689, modificado por el Omnibus 2026/1744) | Proveedores y desplegadores con sistemas o resultados usados en la UE (art. 2.1.c) | **No aplica por defecto**; se activa si un cliente opera en la UE o el resultado se usa allá | Fechas leídas de una copia del DOUE; falta cotejar con EUR-Lex ([huecos](../../material/huecos.md)) |
-| NIST AI RMF 1.0 | Nadie (voluntario) | **Voluntaria**: se usa como taxonomía del registro de riesgos (Govern, Map, Measure, Manage) | Confirmado en la página de NIST; el subcontrol GOVERN 1.6 no se verificó |
-| ISO/IEC 42001:2023 | Nadie (certificación voluntaria) | **Voluntaria**: se alinea, no se certifica en el año | Confirmada la edición; ver Decisiones |
+| NIST AI RMF 1.0 | Nadie (voluntario) | **Voluntaria**: cada riesgo del registro lleva su función (Govern, Map, Measure, Manage) y su evidencia; se declara alineación, no cumplimiento | Confirmado en la página de NIST; el mapeo es por función, las subcategorías (por ejemplo GOVERN 1.6) no se verificaron |
+| ISO/IEC 42001:2023 | Nadie (certificación voluntaria) | **Voluntaria**: se alinea con brecha documentada, no se certifica en el año | Confirmada la edición; ver el mapeo en Riesgos y D7 |
 | Guía SIGEN 197/2026 | Sector público nacional | **No aplica**; solo si un cliente es un organismo público | Existe; el anexo no se leyó |
 | UIF y comunicaciones del producto de medios de pago | Sujetos obligados | Sin evaluar | **Hueco**: no se verificó |
 
@@ -102,8 +102,8 @@ antirrobot y no se cotejó el texto consolidado: la fecha no va a una slide sin 
 ## Riesgos y mitigación
 
 Registro de riesgos inicial (probabilidad e impacto cualitativos, criterio del equipo
-hasta tener la línea base del Q1). Cada riesgo nombra un rol responsable; las personas
-quedan pendientes.
+hasta tener la línea base del Q1). El rol dueño de cada riesgo, su prueba y su residual
+están en la tabla siguiente; las personas quedan pendientes.
 
 | Riesgo | Prob. | Impacto | Mitigación (control) | Disparador de abandono o escalamiento |
 |---|---|---|---|---|
@@ -116,6 +116,62 @@ quedan pendientes.
 | R7. Capacidad concentrada: gobierno y seguridad dependen de pocas personas | Alta | Alto | Dos suplentes con runbooks; documentación de decisiones en el inventario | Una persona clave se va y no hay suplente entrenado: congelar altas de casos de riesgo alto |
 | R8. Dependencia de un solo proveedor de modelos y cambio de precio o límites | Media | Medio | Diseño neutral al modelo; ver [supuesto](../../context/supuestos/precio-y-dependencia-de-modelos.md) | Aumento de precio o recorte de límites que rompa el presupuesto: revisar proveedor en el Council |
 | R9. Declarar controles que no existen (certificación de un producto propio, cumplimiento de IA) | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |
+
+### Criterio de aceptación del riesgo residual
+
+Propuesta del equipo, que `caio` integra como regla de los gates. El residual se
+valora después de probar el control, no antes.
+
+| Residual (prob. / impacto) | Quién lo acepta | Condición |
+|---|---|---|
+| Baja con impacto hasta Alto, o Media con impacto Medio | Dueño del riesgo | Queda en el registro; el Council lo ve en la revisión mensual |
+| Media con impacto Medio-alto o Alto, o Baja con Muy alto | Council, con informe al CEO | Control compensatorio nombrado y fecha de revisión, como máximo el siguiente trimestral |
+| Alta con impacto Alto o mayor | Nadie | Se reduce o se suspende el uso; no hay excepción (D7b) |
+
+### Prueba, evidencia y residual de cada riesgo
+
+Cada riesgo lleva su función del NIST AI RMF, un dueño por rol (sale de D2; la persona
+queda pendiente), cómo se prueba el control y qué evidencia deja. El residual es un
+**objetivo propuesto**, no una medición: se confirma o se corrige con la prueba.
+
+| Riesgo | Función NIST | Dueño del riesgo | Prueba del control | Evidencia esperada | Residual objetivo | Acepta |
+|---|---|---|---|---|---|---|
+| R1 | Map, Manage | Responsable comercial del cliente | Revisión cruzada de la matriz contra los contratos; dato sintético marcado enviado por cada superficie (Q2) | Matriz versionada con aprobador; informe de *bypass* por superficie; bloqueos en la pasarela | Baja / Alto en el agente de terminal; Media / Alto en superficies sin pasarela | Council |
+| R2 | Measure, Manage | Dueño de negocio del caso | Red team interno (Q2) y externo (Q4) con inyección indirecta en repos y tickets sintéticos | Informe de red team con hallazgos y cierre; logs de acciones del agente | Baja / Alto | Dueño |
+| R3 | Govern, Manage | Dueño de negocio del caso | Revisión trimestral de los permisos efectivos de cada agente contra su nivel L | Inventario con nivel por agente; exportación de permisos; acta | Baja / Muy alto | Council |
+| R4 | Measure, Manage | Responsable de seguridad | Secreto sintético por superficie (ejemplo abajo) | Bloqueo y alerta en la pasarela; ticket del ejercicio de mesa | Baja / Medio-alto; Media / Medio-alto sin pasarela | Dueño; Council sin pasarela |
+| R5 | Govern, Map | Responsable de Tecnología | Cruce mensual de las novedades del proveedor contra el inventario | Inventario con fecha de revisión; configuración exportada | Media / Medio | Dueño |
+| R6 | Govern, Measure | Responsable de Tecnología | Porcentaje de solicitudes fuera de SLA, desde el registro del intake | Reporte mensual del intake | Baja / Alto | Dueño |
+| R7 | Govern | Responsable de Tecnología | El suplente corre el runbook sin el titular en el ejercicio de mesa (Q2 y Q4) | Runbooks versionados; acta del ejercicio | Media / Alto: baja poco en el año | Council |
+| R8 | Map, Manage | Responsable de Tecnología | Ensayo de portabilidad del [Anexo B](02-arquitectura.md) | Informe del ensayo con la comparación de calidad | Media / Medio | Dueño |
+| R9 | Govern | Responsable de seguridad | Muestreo trimestral de propuestas enviadas contra el registro de afirmaciones validadas | Registro de afirmaciones; muestra revisada | Baja / Muy alto | Council |
+
+### Ejemplo completo: R4, un secreto en un prompt
+
+| Paso | Contenido |
+|---|---|
+| Riesgo | Una credencial (clave de nube, token de repositorio, cadena de conexión) sale en un prompt hacia un modelo externo. Inherente: Media / Medio-alto |
+| Control | Escaneo de secretos en la pasarela antes del envío (previene), alerta al responsable de seguridad (detecta) y runbook de revocación y rotación (corrige). Dueño del control: ingeniería de seguridad |
+| Prueba (Q2) | Un juego de secretos **sintéticos** de formatos distintos, enviado por cada superficie de la matriz D8; nunca una credencial real. Criterio propuesto: en el agente de terminal, todos bloqueados y alertados; en las superficies sin pasarela se registra que no hay bloqueo, como resultado esperado y no como falla oculta. En el ejercicio de mesa se mide el tiempo de alerta a revocación; el umbral lo propone seguridad y no está medido |
+| Evidencia | Informe de la prueba por superficie y formato, logs de la pasarela con los bloqueos, ticket del ejercicio con sus tiempos y acta del Council. Es la misma evidencia que pediría la auditoría de la ISO 27001 con alcance extendido |
+| Residual | Formatos que el escaneo no reconoce (Baja / Medio-alto): lo acepta el responsable de seguridad. Superficies sin ruta por la pasarela (Media / Medio-alto): lo acepta el Council con control compensatorio (cuentas corporativas, consola de administración, rotación periódica) y revisión en el siguiente trimestral |
+| Cuándo vence la aceptación | El primer secreto expuesto por una superficie aceptada reabre la decisión (disparador de R4). El bloqueo de secretos no se relaja nunca (D9) |
+
+### NIST y la ISO 42001: mapeo, evidencia y qué no se afirma
+
+| Función NIST | Qué la implementa acá | Evidencia esperada | Elemento de sistema de gestión ([ISO 42001 según la cursada](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md)) |
+|---|---|---|---|
+| Govern | Council, derechos de decisión (D2), política, criterio de aceptación | Política ratificada, actas, matriz RACI | Políticas y responsabilidades |
+| Map | Intake (D5) con preguntas de contexto, cliente y Anexo III; matriz de restricciones; inventario | Fichas del intake, matriz, inventario | Gestión de riesgos y oportunidades |
+| Measure | Pruebas de la tabla anterior, red teams, cobertura de la pasarela | Informes de prueba y métricas de cobertura | Monitoreo |
+| Manage | Controles por trimestre (D9), incidentes, aceptación del residual | Tickets, registro de residuales aceptados, revisión trimestral | Procesos y mejora continua |
+
+**Alinear no es certificar.** El NIST AI RMF es voluntario: se declara "alineado", nunca
+"cumple". La ISO 27001 es la única certificación que el plan toca, y solo para extender
+su alcance. Para la ISO 42001 se documenta la brecha en el Q4 y certificar es una decisión
+de ese gate. La frase comercial permitida es "alineado con el NIST AI RMF, brecha frente a
+ISO 42001 documentada"; cualquier otra cae en R9. El mapeo de esta tabla es por función:
+las cláusulas de la 42001 no se cotejaron contra su texto.
 
 ## Decisiones
 
@@ -222,8 +278,9 @@ La escala L0-L4 es una herramienta de la cursada, no un estándar oficial.
   La decisión de certificar se toma en el gate del Q4 y es **reversible**.
 - **EU AI Act: tratarlo como disparador, no como obligación.** Se pregunta a cada cliente
   si opera en la UE o usa resultados allá. Si la respuesta es sí, el caso pasa a Nivel 3.
-- **El NIST AI RMF organiza el registro de riesgos** (Govern, Map, Measure, Manage) sin
-  buscar cumplimiento formal.
+- **El NIST AI RMF organiza el registro de riesgos** (Govern, Map, Measure, Manage):
+  cada riesgo lleva su función, su prueba y su evidencia (ver Riesgos). Se declara
+  alineación, sin buscar cumplimiento formal.
 - **La política se ratifica en el Directorio (T1).** Es un compromiso interno que se enmienda
   con costo de credibilidad, no una decisión irreversible: no firma nada con un cliente.
   Por eso va con revisión anual y con revisión extraordinaria en G2. El Anexo F la clasifica
@@ -290,21 +347,81 @@ Los objetivos son propuestas del equipo, a calibrar con la línea base del Q1.
 
 | Trim. | Controles | Criterio de éxito | Costo en velocidad | Condición de abandono o cambio |
 |---|---|---|---|---|
-| Q1 | Ratificar la política; inventario v1; matriz de restricciones de los clientes principales; intake en 3 niveles; plan de incidentes | Política firmada; inventario con las 3 herramientas aprobadas, los servidores MCP y la IA embebida; matriz al 100% de los clientes principales | Bajo: solo trámite. La matriz frena los casos de cliente hasta completarse | Si más del 30% de los contratos queda ambiguo a los 4 meses, se aplica *default-deny* sobre el código de ese cliente y se pide revisión legal |
+| Q1 | Ratificar la política; inventario v1; matriz de restricciones de los clientes principales y registro de la evidencia contractual (D9b); intake en 3 niveles; plan de incidentes | Política firmada; inventario con las 3 herramientas aprobadas, los servidores MCP y la IA embebida; matriz al 100% de los clientes principales | Bajo: solo trámite. La matriz frena los casos de cliente hasta completarse | Si más del 30% de los contratos queda ambiguo a los 4 meses, se aplica *default-deny* sobre el código de ese cliente y se pide revisión legal |
 | Q2 | Matriz superficie→control→telemetría (D8) con prueba de integración y de *bypass* por herramienta; pasarela con allowlist y DLP sobre prompts; escaneo de secretos; logs de acciones; red team interno; ejercicio de mesa de incidentes, que incluye la ruta de primera exposición de un secreto | Al menos el 90% de los eventos del agente de código pasa por la pasarela (denominador en D8); cada superficie restante tiene su control compensatorio y su cobertura reportada aparte; red team con hallazgos críticos cerrados | Medio: fricción en el agente de código | Si la actividad semanal de seats cae más de 15% frente a la línea base del Q1 dos meses seguidos, **solo los usos permitidos** pasan a monitoreo; el bloqueo de secretos, PII y datos prohibidos no se relaja nunca |
 | Q3 | Revisión del modelo de amenazas de la primera función de IA en el producto; criterios de *eval* para salir a producción; documentación de proveedor; cláusula tipo para contratos | Una función de IA con ficha técnica, registro de eventos, supervisión humana y cláusula tipo lista para negociar con el cliente (la firma, no antes de G4) | Medio: agrega un gate antes de salir | Si tras dos ciclos de red team persisten hallazgos críticos, la función queda en L0-L1 o se cancela |
-| Q4 | Red team externo; extensión del alcance de ISO 27001 a IA; revisión de niveles de autonomía; informe anual al Directorio; gate de certificación 42001 | Cero hallazgos críticos abiertos; brecha frente a 42001 documentada; decisión del gate registrada | Bajo | Si ningún cliente exige 42001, no se certifica; si el costo de la auditoría supera el rango de Finanzas, se difiere |
+| Q4 | Red team externo; extensión del alcance de ISO 27001 a IA; revisión de niveles de autonomía; informe anual al Directorio; gate de certificación 42001 | Cero hallazgos críticos abiertos; brecha frente a 42001 documentada; decisión del gate registrada | Bajo | Sin señal contractual ni producto liberado en G3, el red team externo y la extensión ISO (capa D, D9b) se difieren. Si ningún cliente exige 42001, no se certifica; si el costo de la auditoría supera el rango de Finanzas, se difiere |
 
-**Cautelas del plan.** Cinco puntos quedan abiertos y no se inventan:
+**Cautelas del plan.** Seis puntos quedan abiertos y no se inventan:
 
 1. La función legal es externa y su costo es un supuesto sin cotización.
 2. El rol de Acme Labs frente a la Ley 25.326 (responsable o encargado del tratamiento)
    necesita asesoría.
-3. Las normas BCRA se leyeron como resumen de fuente primaria; hay que cotejar la versión
-   vigente antes de ponerlas en una slide.
+3. De la A 7777 se leyó la sección 4.6 en la versión 1a (vigencia 06/09/2023). La
+   ficha de contexto indica una actualización de la sección de tecnología en 2026 que no
+   se cotejó, y la sección 10 (terceras partes) no se leyó. La A 7777 no prueba una
+   exigencia comercial al proveedor: eso lo prueba, o no, la evidencia contractual (D9b).
 4. Legal externo debe confirmar alcance, versión vigente, rol y excepciones de BCRA, AI Act y Ley 25.326; esta lectura no verifica ninguna ficha.
 5. La matriz de restricciones de clientes depende del área comercial y no existe todavía
    ([ficha](../../context/hechos/gobierno-y-politica-ia.md)).
+6. Los residuales del registro y los umbrales de señal son propuestas del equipo: se
+   confirman con las pruebas del Q2 y con la evidencia contractual del Q1.
+
+### D9b. Licencia para vender: qué evidencia la sostiene y qué cuesta el gobierno mínimo
+
+**Problema.** El deck dice que la base compra "licencia para venderles a bancos". Hoy eso
+se apoya en un [supuesto](../../context/supuestos/apetito-de-riesgo-de-clientes.md), no
+en contratos. La A 7777 obliga al banco a gobernar el uso de IA de sus terceros; no
+prueba que le exija controles a Acme Labs ni que le compre IA. Pedir controles tampoco es
+pedir IA: son dos señales distintas.
+
+**Tres capas, con los renglones de "Insumos para Finanzas".** El paquete se parte según
+qué riesgo reduce cada capa, para que solo la última dependa de la señal del cliente.
+
+| Capa | Renglones | Caja (USD) | Tiempo (USD) | Total (USD) | Qué reduce | Qué no reduce |
+|---|---|---|---|---|---|---|
+| M. Gobierno mínimo | Líder, seguridad, Council, matriz e inventario, legal externo, ejercicios de mesa | 8.000-20.000 | 24.650-62.150 | 32.650-82.150 | R1 por matriz y *default-deny*; R5, R6, R9; la política ratificada | R2 y R4 quedan solo en política: no hay bloqueo, log ni prueba que mostrarle a un cliente |
+| T. Controles técnicos propios | Pasarela con DLP y logs, pruebas de *bypass*, red team interno | 4.500-18.000 | 1.875-9.375 | 6.375-27.375 | R1 y R4 con bloqueo y registro; R2 probado; la evidencia del ejemplo de R4 | Las superficies sin ruta por la pasarela (residual aceptado) |
+| D. Demostración externa | Red team externo; extensión de la ISO 27001 a IA | 11.600-31.000 | — | 11.600-31.000 | R9 con evidencia de un tercero; la condición del G4 (red team externo sin críticos) | Ningún riesgo propio que T no cubra: vale si un cliente la pide o si el producto sigue |
+| **Paquete completo** | | **24.100-69.000** | **26.525-71.525** | **50.625-140.525** | | |
+
+**Recomendación.** M y T se financian por riesgo propio, haya o no señal comercial: R1 y
+R4 exponen a Acme Labs aunque no venda IA, y G2 pide *bypass* y red team interno. Solo la
+capa D queda **condicionada a la evidencia contractual**, como el tramo de producto del
+[Anexo E](05-business-case.md): se decide en G3, antes de contratarla en el Q4. Si no hay
+señal ni producto liberado, se difiere y no se gastan 11.600-31.000 de caja. La
+alternativa de quedarse solo con M ahorra 17.975-58.375 en el año, pero no reduce R2 ni R4
+con evidencia y deja sin cumplir las condiciones de G2: cierra el frente producto.
+
+**Qué evidencia se pide (Q1).** No se inventan clientes ni cláusulas: se leen los
+documentos que ya existen, con la misma lectura que arma la matriz.
+
+| Fuente | Qué se busca | Rol que la junta |
+|---|---|---|
+| Contratos vigentes de los cinco primeros clientes (más del 90% de la facturación, [ficha](../../context/hechos/cartera-y-concentracion.md)) | Cláusulas de subcontratación, confidencialidad y secreto, tratamiento y transferencia de datos, herramientas o IA | Operaciones con el área comercial |
+| Cuestionarios de evaluación de proveedores recibidos en los últimos 24 meses | Preguntas sobre IA: inventario, no entrenamiento, ubicación de datos, logs, certificaciones, y si la respuesta condiciona algo | Responsable de seguridad |
+| RFP, pliegos y pedidos de renovación de los últimos 24 meses | Requisitos de IA como condición o como puntaje | Área comercial |
+| Informes de auditoría de clientes sobre Acme Labs | Observaciones sobre IA o terceros | Responsable de seguridad |
+
+**Cómo se registra.** Una fila por documento, **solo en `private/`**: alias del cliente
+(los de la ficha de cartera, sin segmento), tipo de documento, fecha, texto del requisito, clasificación
+(prohíbe, condiciona, pide evidencia de controles, pide IA, silencio), si es condición o
+pregunta, y horizonte (vigente o renovación con fecha). Fuera de `private/` sale solo el
+agregado, sin alias ni textos, como ficha anonimizada que verifica una persona del equipo.
+
+**Umbral que la convierte en señal** (propuesta del equipo,
+[supuesto](../../context/supuestos/umbral-de-evidencia-contractual.md)):
+
+| Señal | Umbral | Qué decide |
+|---|---|---|
+| Restricción | Al menos un contrato de los cinco primeros prohíbe o condiciona la IA de terceros | La matriz y el *default-deny* pasan de prudencia a obligación contractual (capa M) |
+| Licencia para vender | Uno de los dos primeros clientes, o dos de los cinco primeros, piden evidencia de controles de IA como condición o puntaje de contratación o renovación dentro de 18 meses. Las preguntas sin consecuencia no cuentan | Financia la capa D en G3 |
+| Demanda | Un cliente pide una función de IA | Es la señal de cliente de G2 para el producto, no la de esta tabla |
+| Sin señal en G3 | Ninguna de las anteriores | La capa D se difiere; `caio` saca "licencia para vender" del deck o la presenta como hipótesis |
+
+La lectura cabe en las horas de la matriz porque son los mismos contratos. Si no
+alcanza, el faltante es de 20-40 h de analista funcional (260-1.360 USD, al costo
+horario del supuesto), que no está sumado al total.
 
 ### D10. Tensiones con otras miradas
 
@@ -346,6 +463,20 @@ No incluye licencias de las herramientas de IA ni capacitación (las cubre `arch
 `people`), ni una certificación ISO 42001 (decisión del Q4). Finanzas debe contrastar el
 total con la franja del 1%-3% de la facturación del [supuesto](../../context/supuestos/capacidad-de-inversion.md).
 
+**Cómo lo usa el [Anexo E](05-business-case.md).** Los renglones coinciden con su cuadro
+de inversión (legal 8-20, pasarela 4,5-18, red team externo e ISO 11,6-31, tiempo 27-72
+redondeado). Tres lecturas de gobierno sobre esas cifras:
+
+- **Techo de T1.** De este anexo, T1 lleva la parte de legal (hasta 10 de caja en el pedido
+  G0) y el tiempo del líder, de seguridad, del Council y de la matriz.
+- **Base mínima tras un corte.** Es el núcleo de la capa M: 25% del líder, 20% de
+  seguridad y el Council, que suman 5.740-13.410 por trimestre. Tres trimestres dan
+  17.200-40.200, que es el "hasta 40" de tiempo que E usa para un corte en G1. La pasarela
+  se suma solo si ya está instalada ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md)).
+- **Capa D condicional (D9b).** El renglón "Red team externo y auditoría ISO 27001
+  ampliada" de E (T4) depende de la señal contractual o del producto liberado; hoy E lo
+  cuenta en la base. Es una propuesta a `finance`, no un cambio de este anexo.
+
 ## Insumos para el deck
 
 - **Mensaje de la slide:** "Gobierno que habilita": un Council de 5 asientos dentro del
@@ -355,7 +486,11 @@ total con la franja del 1%-3% de la facturación del [supuesto](../../context/su
 - **Pedido al board 2:** aprobar el alcance explícito (sin decisiones de crédito ni
   scoring en 12 meses) y los topes de autonomía L0-L4 del plan.
 - **Pedido al board 3:** financiar el paquete de controles, 50.625-140.525 USD según el
-  supuesto del equipo (24.100-69.000 de caja), sujeto a cotización.
+  supuesto del equipo (24.100-69.000 de caja), sujeto a cotización. De eso, la capa de
+  demostración externa (11.600-31.000 de caja) se decide en G3 contra la evidencia
+  contractual (D9b).
+- **Mensaje sobre la licencia para vender:** hoy es un supuesto; el Q1 junta la
+  evidencia contractual y G3 decide si se paga la capa que la demuestra.
 - **Mensaje honesto:** hoy no hay inventario, registro de riesgos, matriz de clientes ni
   controles técnicos de IA con evidencia; un producto propio no está certificado.
   Decir "certificados" donde no lo estamos es el riesgo R9.
