@@ -215,13 +215,25 @@ su contrato. Todo lo de abajo es un **supuesto de people**, no un hecho.
 - **Qué lo sostiene como evidencia.** Un alcance de contrato con esos entregables
   y fechas, y la declaración del contractor de que tiene el perfil. Hoy no existe
   ninguna de las dos; se piden como condición antes de G0.
-- **Cuándo el replan no alcanza.** Si el alcance no se puede acordar así, si el
-  contractor no se aprueba, o si al cierre de T2 faltan los entregables o la
-  documentación acumulada: el 0,2 no existe, T2 queda en 2,5 FTE clave y
-  corresponde la **excepción acotada de 0,3 FTE**, que el board aprueba en G0 como
-  respaldo ([Anexo B](02-arquitectura.md), salida 2; ver DP3 y T2 en
-  [Anexo F](06-roadmap-riesgo.md)). Sin costo nuevo de caja: ya está en el cuadro
-  de [Anexo E](05-business-case.md).
+- **Cuándo el replan no alcanza, y qué cubre cada respaldo.** Son dos
+  contingencias distintas ([Anexo E](05-business-case.md), "Dos contingencias del
+  contractor"; [Anexo B](02-arquitectura.md), "Exceso de T2"):
+  - **Sin el 0,2** (el contractor existe, pero el alcance no se acordó así o al
+    cierre de T2 faltan los entregables o la documentación acumulada): T2 queda en
+    2,5 FTE clave y corresponde la **excepción acotada de 0,3 FTE**, que el board
+    aprueba en G0 como respaldo (salida 2 de B; ver DP3 y T2 en
+    [Anexo F](06-roadmap-riesgo.md)). Son ~5 mil de tiempo (3-8) y nada de caja
+    nueva: ya está en el cuadro de E.
+  - **Sin contractor** (el Directorio no lo aprueba o no se contrata a tiempo): la
+    excepción **no alcanza**. Falta toda la fracción de 0,8 FTE de IA aplicada, no
+    solo el 0,2; con fracción interna el plan pediría ~3,3 / 3,0 / 2,9 FTE clave
+    en T2-T4, contra un máximo de 2,25. Este anexo no propone cubrirlo con tiempo
+    de personas: la respuesta es el **modo control de B** (2,2 / 2,2 / 2,1 FTE
+    clave, sin harness, evals en CI, caso de referencia ni prueba de portabilidad),
+    y cubrirlo con fracción interna queda como opción del board solo si aprueba
+    explícitamente ese piso mayor. Además, sin contractor la documentación y el
+    traspaso (el 0,2 de este anexo) no tienen quién los haga: la mitigación de
+    concentración de capacidades se pierde y queda como riesgo aceptado.
 - **Costo de la hipótesis para este anexo.** Cero de caja: el 100% del contractor
   ya está en "Insumos para Finanzas". El costo es de riesgo: la documentación
   se corre y la concentración de T2 sube.
@@ -388,6 +400,7 @@ documentado.
 | Champions sin tiempo ni entregable | Media | Medio | Mandato, sponsor y entregable trimestral | Ver tabla de abandono |
 | Pérdida de una persona clave en arquitectura, seguridad o gobierno | Media | Alto | Contractor a prueba, documentación, transferencia | No hay reemplazo documentado al cierre de T3 |
 | El 0,2 del contractor no está libre en T2 y el replan de B no se sostiene | Media (supuesto sin confirmar) | Medio: T2 vuelve a 2,5 FTE clave | Alcance contractual con evals en CI y prueba de portabilidad antes de G0; excepción de 0,3 FTE aprobada como respaldo | Entregables de T2 incompletos o documentación sin recuperar al cierre de T2: rige la excepción |
+| No hay contractor (no se aprueba o no se contrata a tiempo): la excepción de 0,3 no alcanza | Media (depende del Directorio, D2) | Alto: falta toda la fracción de 0,8 FTE de IA aplicada; con fracción interna T2 pediría ~3,3 FTE clave | Modo control de B (2,2 FTE clave, sin hitos de IA aplicada) en vez de cubrirlo con tiempo; decisión del board en G0 | Sin contractor contratado al cierre de T1: G1 libera el modo control ([Anexo E](05-business-case.md)) |
 | Adopción declarada ≠ uso real (seats comprados, uso detectado) | Media | Medio | Medir uso real semanal por área, no seats | Métrica de seats sin correlato en uso |
 | Telemetría solo cubre el agente de código | Alta | Medio | Medir chat y Gemini por encuesta o telemetría ampliada, con `architect` y `governance` | Sin medición de staff al cierre de T1 |
 | Miedo al reemplazo reduce la adopción y la franqueza | Media | Medio | Comunicación transparente, D3 | Caída de uso tras un anuncio o un cambio de estructura |
@@ -398,7 +411,7 @@ documentado.
 | # | Decisión | Alternativas | Elección | Reversibilidad |
 |---|---|---|---|---|
 | D1 | Cómo medir la meta de adopción en Operaciones | A: 80% sobre Operaciones y Tecnología, como el borrador de OKR. B: 80% en Tecnología y una meta propia sobre personas **habilitadas** en Operaciones. | **B**, informando también A | Reversible: se cambia al completar la matriz |
-| D2 | Capacidad especializada en IA aplicada | A: sin incorporación, solo reasignar. B1: un contractor a prueba desde T1 (50% en T1, 100% de T2 a T4), que reemplaza la fracción de IA aplicada de B. B2: lo mismo desde T2. C: dos contrataciones en nómina. | **B1**: única forma de cubrir la concentración de capacidades sin romper la restricción de no contratar de forma masiva. **Choca con la restricción literal de "no contratar gente nueva"**: lo decide el Directorio. A es viable si ese techo se mantiene, con más riesgo de continuidad | B reversible (contrato corto); C poco reversible. Condición de B1: el 0,2 de T2 que usa el replan de B no está confirmado; si no se sostiene, rige la excepción de 0,3 FTE |
+| D2 | Capacidad especializada en IA aplicada | A: sin incorporación, solo reasignar. B1: un contractor a prueba desde T1 (50% en T1, 100% de T2 a T4), que reemplaza la fracción de IA aplicada de B. B2: lo mismo desde T2. C: dos contrataciones en nómina. | **B1**: única forma de cubrir la concentración de capacidades sin romper la restricción de no contratar de forma masiva. **Choca con la restricción literal de "no contratar gente nueva"**: lo decide el Directorio. A es viable si ese techo se mantiene, con más riesgo de continuidad | B reversible (contrato corto); C poco reversible. Condición de B1: el 0,2 de T2 que usa el replan de B no está confirmado; si no se sostiene ("sin el 0,2"), rige la excepción de 0,3 FTE. Si el Directorio rechaza D2 ("sin contractor"), la excepción no alcanza y rige el modo control de B |
 | D3 | Qué se dice sobre el empleo | A: sin compromiso. B: compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. C: compromiso con excepciones. | **Postura propuesta: C**, con el texto de "Postura sobre el empleo (propuesta)". La decide el Directorio, con asesoría laboral; no es una política aprobada. B baja más el miedo pero ata margen; A deja el freno sin respuesta | B y C poco reversibles una vez comunicados |
 | D4 | Formato de la formación | A: curso obligatorio genérico. B: casos prácticos por rol con champions, en horario laboral. | **B**, por el pedido del piloto (más de la mitad de 12 autoseleccionados) y porque la falta de tiempo fue el primer freno; el efecto del formato se mide en T2-T3 | Reversible |
 | D5 | Art. 4 del AI Act | A: esperar a decidir si alcanza a Acme Labs. B: adoptarlo como piso, con registro. | **B**, sin citar fechas ni sanciones | Reversible |
@@ -511,9 +524,11 @@ Finanzas: la facturación en USD no se publica.
 
 ## Cautelas
 
-- Las poblaciones, horas por nivel, tamaño de la red de champions y umbrales de
-  cada trimestre son **supuestos del equipo**, sin ficha propia; el equipo debe
-  convertirlos en fichas `Supuesto` o validarlos con la línea de base.
+- Las poblaciones, las horas por nivel y la red de champions son **supuestos del
+  equipo** con ficha en `draft`
+  ([poblaciones de capacitación](../../context/supuestos/poblaciones-de-capacitacion.md));
+  falta verificarla. Los umbrales de adopción de cada trimestre no tienen ficha:
+  el equipo debe convertirlos en fichas `Supuesto` o validarlos con la línea de base.
 - Las cifras de adopción vienen de fichas en `draft`; varias son rangos o
   proporciones aproximadas, y la telemetría solo mide el agente de código.
 - n=12 en el piloto, autoseleccionado: no representa a la organización ni prueba
