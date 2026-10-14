@@ -7,7 +7,7 @@ title: "Anexo A — Diagnóstico y punto de partida"
 # Anexo A — Diagnóstico y punto de partida
 
 Slide que sustenta: [Slide 2 — Punto de partida](../slides.md). El diagnóstico
-también ordena las prioridades de [Slide 3 — Tesis y pedido al board](../slides.md).
+también ordena las prioridades de [Slide 3 — Tesis](../slides.md).
 
 > **Borrador sin verificación humana.** Todas las fichas de `context/` que cita
 > este anexo están en `draft`; ninguna cifra es apta para el peer review ni para
@@ -42,7 +42,7 @@ hizo. Responsable humano de validar el puntaje: **pendiente**.
 |---|---|---|---|
 | Estrategia y liderazgo | 2 | Hay propuestas al Directorio sobre IA y un borrador de OKR 2027 con un objetivo de eficiencia con IA, pero la propuesta de oferta de IA sigue sin decidir y los OKR de la empresa son financieros y comerciales ([OKR](../../context/hechos/okrs-y-objetivos.md), [IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)) | Estrategia de IA aprobada, con dueño y atada a resultados del negocio |
 | Datos e infraestructura | 2 | La infraestructura está cerca del 3: AWS en varias cuentas, Kubernetes, GitOps, observabilidad ([stack](../../context/hechos/stack-y-plataforma.md)). Los datos, no: sin inventario formal, y los datos productivos de clientes no se pueden usar ([datos](../../context/supuestos/disponibilidad-de-datos.md)) | Inventario de datos con dueño y calidad, y una capa común para servir casos de IA |
-| Talento y cultura | 2 (Tecnología 3, Operaciones 1) | Tecnología: ~7 de cada 10 usan el agente de código. Operaciones: ~1 de cada 10, en buena parte porque el cliente fija las herramientas ([uso de IA](../../context/hechos/uso-ia-interno.md)). El piloto dio NPS +42, pero solo el 17% completó los cursos ([piloto](../../context/hechos/encuesta-y-pilotos-ia.md)). Capacidades críticas en pocas personas ([estructura](../../context/hechos/tamano-y-estructura.md)) | Capacitación por rol que se complete y suplentes para los roles críticos |
+| Talento y cultura | 2 (Tecnología 3, Operaciones 1) | Tecnología: ~7 de cada 10 usan el agente de código. Operaciones: ~1 de cada 10, en buena parte porque el cliente fija las herramientas ([uso de IA](../../context/hechos/uso-ia-interno.md)). El piloto de abril (n=12, autoseleccionado) dio NPS +42, pero solo el 17% completó los cursos ([piloto](../../context/hechos/encuesta-y-pilotos-ia.md)). Capacidades críticas en pocas personas ([estructura](../../context/hechos/tamano-y-estructura.md)) | Capacitación por rol que se complete y suplentes para los roles críticos |
 | Gobernanza y ética | 2 | Política de uso con clasificación en cuatro niveles y contrato para agentes de código, pero en borrador desde abril de 2026, sin matriz de clientes, sin inventario de casos ni registro de riesgos ([gobierno](../../context/hechos/gobierno-y-politica-ia.md)). ISO/IEC 27001 de la organización, sin controles específicos de IA verificados ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) | Política ratificada, inventario, registro de riesgos y comité operando |
 | Adopción y valor | 1 en producto, 2 en interno | Cero IA en producción en lo que se vende ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). En lo interno hay uso alto en Tecnología y un piloto con criterios cumplidos, pero sin línea de base de productividad ([productividad](../../context/supuestos/ganancia-de-productividad.md)) | Un caso en producción con valor medido contra una línea de base |
 
@@ -58,7 +58,7 @@ producto que se vende y en Operaciones.
 | Gasto de tecnología | De ~2% a ~4% de la facturación entre enero y agosto de 2026 | El OKR 2027 pide bajarlo a menos de 3,5% | [Costos](../../context/hechos/costos-tecnologia-e-ia.md) |
 | Consumo real de IA | ~12 veces lo que se paga por suscripción en el agente de código | Un cambio de precio a consumo pega en el costo | [Costos](../../context/hechos/costos-tecnologia-e-ia.md) |
 | Regulación de los clientes | El BCRA obliga a bancos y PSP a gobernar la IA propia y de terceros | Acme Labs es tercero: entra en el análisis de riesgo del cliente | [Regulación](../../context/hechos/regulacion-clientes-financieros.md) |
-| Situación económica | Facturación +35% entre enero y agosto de 2026; EBITDA mensual de 21%-30% | Hay margen para invertir por etapas | [Situación económica](../../context/hechos/situacion-economica.md) |
+| Situación económica | Facturación mensual con un crecimiento cercano a 35% entre enero y agosto de 2026; EBITDA mensual de 21%-30% | Hay margen para invertir por etapas | [Situación económica](../../context/hechos/situacion-economica.md) |
 
 ### Brechas que el plan prioriza
 
@@ -68,8 +68,10 @@ Siguiendo el paso 6 de M1U1 (dos o tres brechas críticas), el CAIO propone:
    condición para cualquier caso de IA en el producto ([Anexo C](03-gobierno-seguridad.md)).
 2. **Datos y medición:** inventario de datos y línea de base de productividad,
    incidentes y costo. Sin línea de base no hay gates ([Anexo B](02-arquitectura.md)).
-3. **Adopción y valor en el producto:** un primer piloto acotado en un producto
-   propio, con gate de scale o kill ([Anexo F](06-roadmap-riesgo.md)).
+3. **Adopción y valor en el producto:** una hipótesis de producto elegida con
+   RICE (un asistente de integración en la plataforma propia), diferida hasta
+   que un cliente dé señal en G2, con gate de scale o kill
+   ([Anexo F](06-roadmap-riesgo.md)).
 
 Talento y cultura no queda afuera: es el habilitador de las tres
 ([Anexo D](04-personas-cultura.md)). Igual que en el caso resuelto del curso, no
