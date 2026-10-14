@@ -25,6 +25,7 @@ El cierre depende de la dedicación que el gate anterior liberó:
 | Corte en | Contractor | Laboratorio | Otros |
 |---|---|---|---|
 | G1 | Un mes al 50% (dedicación de T1) | Un mes del nivel de T1 (solo telemetría) | — |
+| G1 sin señal (el contractor cierra; (b) sigue) | Un mes al 50%, ya dentro de la reserva de G0 | Telemetría, menos de 1 | Sin compromiso nuevo: la reserva no se amplía (supuesto: (b) no firma contratos con preaviso) |
 | G2 o G3, sin producto | Un mes al 100% | Un mes del nivel de T2 | — |
 | G2 o G3, con el producto liberado | Un mes al 100% | Un mes del nivel de T2 | Un mes del tenant del piloto |
 | Corte parcial que conserva el producto | Un mes de la dedicación que se deja | — (se conserva) | — |
