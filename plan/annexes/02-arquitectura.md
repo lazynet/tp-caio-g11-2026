@@ -224,22 +224,28 @@ Finanzas lo convierta en valor con la misma unidad.
 | Normalización | Se reporta estratificado por tipo de trabajo (funcionalidad, error, mantenimiento) y por tamaño del cambio (terciles de líneas modificadas); se informa la mediana y la dispersión, no solo el promedio |
 | Cohorte | Equipos propios, como los define el [supuesto](../../context/supuestos/desarrolladores-en-equipos-propios.md) (15-20 personas). Staffing queda fuera |
 | Comparador | La base prospectiva congelada (semanas 1-4 de T1) de la misma cohorte y, donde exista, un grupo que todavía no adopta. Aclaración: Tecnología ya usa IA hoy (~7 de 10), así que la ganancia se mide **sobre ese punto de partida**, no contra un mundo sin IA |
-| Calidad | Incidentes y retrabajo por cada 100 PR (reversiones y correcciones dentro de 30 días); si suben, la ganancia no cuenta |
+| Calidad | Incidentes y retrabajo por cada 100 PR (reversiones y correcciones dentro de 30 días); la ganancia se condiciona a la regla de tres casos del protocolo |
 | Ruido | Con cohortes de pocas decenas de personas, la variación entre trimestres puede superar +3%: se estima con la serie retrospectiva de T0 y los umbrales de G2 y G3 se leen con el intervalo de abajo, no como un punto |
 
-**Método del intervalo (propuesto para que F lo adopte en G2 y G3;
-[ficha](../../context/supuestos/umbrales-tecnicos-propuestos.md)).** Sin él, "tendencia
-con intervalo" no decide de forma repetible.
+**Protocolo de medición único (propuesto para que F lo adopte en G2 y G3;
+[ficha](../../context/supuestos/umbrales-tecnicos-propuestos.md)).** Se fecha en G0, con
+la serie de T0 y antes de ver un solo dato de T1: así "tendencia con intervalo" decide
+de forma repetible y nadie elige base, umbral ni regla de calidad después de ver el
+ruido. La responsabilidad humana de ratificarlo en G0 está **pendiente**.
 
 | Elemento | Propuesta |
 |---|---|
+| Base | La prospectiva congelada en las semanas 1-4 de T1, de la misma cohorte, fechada y sin edición. La serie retrospectiva de T0 estima ruido y tendencia; no es base de atribución (ver "Respaldo") |
+
 | Estimador | Cambio relativo apareado: PR aceptados por semana de cada persona activa en la ventana del gate contra su propia base congelada, agregado con los pesos de estrato (tipo y tamaño) fijados en la base. Donde exista un grupo que todavía no adopta, se resta su cambio (diferencia en diferencias); si no, se resta la tendencia estimada con la serie de T0 |
 | Intervalo | *Bootstrap* percentil remuestreando personas (no PR), 2.000 réplicas, confianza 90% bilateral. Pasa si el límite inferior ≥ el umbral de la banda; un intervalo que cruza el umbral es "espera", como dice F |
 | Precisión mínima | Semiancho ≤ 3 puntos porcentuales: con más, el intervalo no separa las bandas de +3%, +5% y +8% |
 | Muestra mínima | **15 personas activas** (el piso del supuesto de 15-20), y "activa" es tener base congelada propia y PR en al menos 6 de las 8 semanas de la ventana. Lo que discrimina es el semiancho, no N: con 15-20 personas el piso se cumple si no hay bajas |
 | Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: cuenta como "espera" y la ventana se extiende 6 semanas; la extensión suma semanas por persona, no personas, así que solo baja el ruido de cada una. Vencida, rige la regla de F. Con N < 15, esperar no lo arregla: no se decide por valor y aplica "Viabilidad" |
-| Calidad | El mismo método sobre incidentes y retrabajo por cada 100 PR: si el límite inferior del aumento es > 0, la ganancia no cuenta |
-| Viabilidad | Antes de G0, con la serie de T0, se estima el semiancho esperado con la cohorte real. Si supera 3 puntos, o la cohorte tiene menos de 15 personas, G2 no discrimina +3% y F lo reformula antes de G0 (por ejemplo, decidir solo en G3). Con los estimados del base de E (+3,75% en T2, +9% en T3), pasar exige semiancho ≤ 0,75 y ≤ 1 punto: el base no es un paso asegurado |
+| Calidad | El mismo estimador e intervalo sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, con un margen de no inferioridad δ = +10% relativo (**supuesto sin dato**; se recalibra con la tasa de T0 y se fija en G0). Tres casos. **Daño** (límite inferior > 0): la ganancia no cuenta y el gate corta aunque el throughput pase. **Incierto** (el intervalo incluye 0 y el límite superior > δ): no hay evidencia de daño, pero tampoco de no deterioro; el throughput no puede pasar, cuenta como espera (6 semanas, una vez) y, vencida, como no pasa. **No deterioro demostrado** (límite superior ≤ δ): el gate decide solo por throughput. Con pocos eventos por 100 PR el intervalo es ancho: T0 dice cuántos hay, y si no alcanzan para el tercer caso, F lo sabe antes de G0 |
+| Respaldo | Cambio de base solo por un criterio mecánico que usa datos de la base, antes de cualquier tratamiento y ciego al resultado. En la semana 4 se mide el ruido placebo: semiancho del cambio entre las semanas 1-2 y 3-4, con el mismo estimador e intervalo, proyectado a la ventana del gate con el factor que T0 calibre en G0. Si el proyectado > 3 puntos con N ≥ 15, la base "no resuelve". Lo aplica la oficina del CAIO, sin discreción, y deja constancia (fecha, N, semiancho placebo, factor, versión) que ve el Directorio en G1. **La retrospectiva no sirve para atribuir**: mezcla tendencia, estacionalidad (T1 cae en enero-marzo; supuesto), adopción previa y cambios de equipo, y no baja la dispersión entre personas, que es la que domina. Si se usa, es una lectura contra tendencia, sin atribución: no libera capital (G2 y G3 no pasan por throughput) y solo puede producir espera o corte. Alternativa con su costo, a decidir por `people` y `caio`: prolongar la base prospectiva a la semana 8 y correr 4 semanas la formación intermedia |
+| Congelamiento | Versión, δ, factor y umbral se fechan en G0 y no se editan desde que se congela la base. Un cambio posterior es un desvío: se registra con fecha y motivo, rige desde la ventana siguiente y la ventana en curso se lee con la versión anterior |
+| Viabilidad | Antes de G0, con la serie de T0, se estima σ (dispersión entre personas del cambio relativo) y el semiancho esperado con la cohorte real, también para calidad. Condición, sin dato observado: con semiancho ≈ 1,645 σ / √n, el base (+3,75% en T2, +9% en T3) pasa G2 con semiancho ≤ 0,75 (σ ≤ 1,8 con n = 15; ≤ 2,0 con n = 20; equivale a n ≥ 4,8 σ²) y G3 con ≤ 1 (σ ≤ 2,4; ≤ 2,7; n ≥ 2,7 σ²). Con el máximo permitido (3), los límites son 0,75 y 6, y ninguno pasa: la precisión mínima separa las bandas, pero no alcanza para que el base pase. Si el σ de T0 supera esos valores, el base espera en G2 y corta; F lo sabe antes de G0 y reformula (por ejemplo, decidir solo en G3 si σ ≤ 2,4 / 2,7) o presenta el base como espera-y-corte. Con N < 15 no se decide por valor |
 
 **Conversión a valor: dos lecturas que responden preguntas distintas.** Con una
 ganancia de throughput *g*:
@@ -552,11 +558,9 @@ y el estudio de la matriz. Desde la arquitectura, la propuesta es:
 | T1, semanas 5-13 | Matriz de superficies y telemetría unificada; medición contra la base, con control concurrente donde exista. **La ganancia no se atribuye antes de T2** (la rampa base es 0% en T1) | Dentro del esfuerzo de T1 |
 
 La serie retrospectiva y la base prospectiva no se mezclan: la primera estima
-ruido, la segunda es el punto de partida. **Regla de respaldo:** si en la semana 4
-la dispersión de la base prospectiva supera la tendencia que se espera medir
-(umbral a fijar con la serie de T0), la oficina del CAIO puede adoptar la serie
-retrospectiva como base, como prevé F, dejando constancia. Si el historial no
-alcanza, la ganancia no se atribuye (ver el hito de línea base).
+ruido, la segunda es el punto de partida. El respaldo es el del protocolo
+("Respaldo"): la retrospectiva nunca atribuye ganancia. Si el historial no
+alcanza, la ganancia tampoco se atribuye (ver el hito de línea base).
 
 La columna "Fr." usa las letras del [Anexo E](05-business-case.md): **B** base
 común, **I** frente interno, **P** frente producto (solo si G2 lo libera).
