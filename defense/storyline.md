@@ -8,9 +8,10 @@ y feedback.
 
 ## Tesis en una oración
 
-Acme Labs tiene que poner IA en lo que les vende a bancos y fintechs antes de
-que se lo exijan, y la forma de hacerlo sin apostar la empresa es una base común
-gobernada y financiada por gates trimestrales, donde cortar a tiempo cuesta poco.
+Acme Labs tiene que gobernar y aprender la IA que ya usa antes de que sus
+clientes se lo exijan, y pagar la plataforma para venderla solo cuando una señal
+de contrato, de precio o de cliente la justifique: gates trimestrales donde
+diferir es la regla y cortar a tiempo cuesta poco.
 
 ## Acto 1: por qué ahora (slides 1-2)
 
@@ -34,8 +35,10 @@ producto mientras el costo y la exigencia de los clientes suben.
   El producto tiene un caso elegido con RICE, un asistente de integración en la
   plataforma propia, sin datos de clientes, y **está diferido** hasta que un
   cliente dé señal en G2 ([Anexo F](../plan/annexes/06-roadmap-riesgo.md)).
-- Una arquitectura neutral al modelo y aislada por cliente, sin datos de clientes
-  en 12 meses; la cobertura de precio es una opción que la prueba de T2 confirma o
+- Gobierno, base y formación van siempre, con una prueba chica sobre el agente
+  de código que Tecnología ya usa. La plataforma (arquitectura neutral al modelo,
+  aislada por cliente, sin datos de clientes en 12 meses) se gana con una señal
+  en G1; la cobertura de precio es una opción que la prueba de T2 confirma o
   descarta ([Anexo B](../plan/annexes/02-arquitectura.md)).
 - Un gobierno liviano que habilita: Council de 5, intake en niveles, política
   ratificada ([Anexo C](../plan/annexes/03-gobierno-seguridad.md)).
@@ -60,27 +63,29 @@ controles y métricas.
   desde G2), queda al menos 16,7%. Lo que compra es
   la opción de cobertura de precio, una opción de ingreso y, si la evidencia
   contractual de T1 la confirma, licencia para venderles a bancos.
-- Por eso no pedimos el año: pedimos un único G0. T1 con hasta 33 mil USD de
-  caja (del contractor, solo su tramo de T1) más 6 de reserva de cierre, que se
-  amplía a 15 en G1 antes de pasar el contractor al 100%, 1,6 FTE clave y 590 h distribuidas. Cortar en
-  G1 cuesta 73 mil económicos en el medio, hasta 106 hasta cerrar y 146 en el
-  año si se conserva la base mínima.
-- Lo que antes no cerraba, ahora cierra justo: con el producto diferido y el
-  replan de arquitectura, T2-T4 entra en el sobre sin holgura. La excepción de
-  T2 es el respaldo si falta el 0,2 del contractor; sin contractor no alcanza:
-  los hitos de IA aplicada no arrancan y T2 corre en modo control (2,2 FTE
-  clave, caja del año 83 en lugar de 177); cubrirlo con tiempo pediría ~3,3. El
-  producto amplía el sobre solo si un cliente da una señal comercial con
-  presupuesto.
+- Y lo decimos segundo: en el año 1, gobierno mínimo y formación (161) o un
+  piloto sobre el agente actual (47) le ganan al paquete completo (394). Por eso
+  la plataforma no se compra en G0: **G1 la libera solo con una señal**
+  contractual, de precio por consumo o de cliente. Sin señal, el año cuesta ≈ 193
+  en lugar de ≈ 400, y G2 y G3 vuelven a leer. No es un corte: es diferir.
+- Pedimos un único G0: T1 con la prueba chica, hasta 33 mil USD de caja (del
+  contractor, solo su tramo de T1) más 6 de reserva de cierre, que se amplía a 15
+  en G1 solo si se libera la plataforma, y hasta 72 de tiempo (~1,8 FTE clave y
+  ~654 h distribuidas). Cortar en G1 cuesta 79 mil económicos en el medio, hasta
+  115 hasta cerrar y 155 en el año si se conserva la base mínima.
+- Con señal, T2-T4 entra en el sobre sin holgura, con el producto diferido y el
+  replan de arquitectura; la excepción de T2 es el respaldo si falta el 0,2 del
+  contractor, y sin contractor T2 corre en modo control. El producto amplía el
+  sobre solo si un cliente da una señal comercial con presupuesto.
 - Cada gate dice qué pasa si falla cada condición, y los dos frentes se cortan
   por separado. La espera de G2 vence a las 6 semanas y corta el frente interno;
-  la de G3 mantiene la base mínima, y G1 no corta: el board puede no liberar
-  T2. En el pesimista, el plan corta en T3 y pierde ≈ 262 mil, contra 382 sin frenar. Lo irreversible se decide en
-  G4 y rige después.
+  la de G3 mantiene la base mínima, y G1 no corta: decide la plataforma. En el
+  pesimista, el plan corta en T3 y pierde ≈ 262 mil, contra 382 sin frenar. Lo
+  irreversible se decide en G4 y rige después.
 
 **Cierre:** "Aprueben tres meses con techo. En marzo les traemos la línea de
-base congelada, la política ratificada, la matriz y la evidencia de clientes, y
-deciden si seguimos."
+base congelada, la política ratificada, la matriz, la evidencia de clientes y
+lo que aprendió la prueba chica, y deciden si la plataforma se ganó su lugar."
 
 ## Qué no decir
 
@@ -89,7 +94,10 @@ deciden si seguimos."
   hipótesis que se prueban en T2 y T1.
 - Que el OKR de +20% cubre el equilibrio: se miden contra bases distintas.
 - Que el escenario base pasa G2 y G3: con la regla del límite inferior, es
-  condicional a la precisión del intervalo.
+  condicional a la precisión del intervalo, y si la calidad queda incierta
+  cuenta como espera.
+- Que la plataforma se paga con productividad: en el año 1 las opciones baratas
+  ganan; la plataforma se paga solo con una señal.
 - Que los secretos están bloqueados en toda superficie: en chat, IDE y suite
   hay prohibición y control compensatorio, no bloqueo.
 - Que la señal de G2 prueba disposición a pagar: prueba interés con presupuesto
