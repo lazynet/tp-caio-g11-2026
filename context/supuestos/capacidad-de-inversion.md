@@ -11,7 +11,8 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:00:00Z }
 El Directorio puede aprobar una inversión incremental en IA de entre 1% y 3% de
 la facturación anual (licencias, consumo de modelos, capacitación y algún perfil
 especializado), más la reasignación de 10% a 15% del tiempo de un grupo acotado
-de personas clave.
+de personas clave (se supone de 10 a 15; ver
+[personas clave del sobre](/supuestos/personas-clave-del-sobre.md)).
 
 # Por qué es razonable
 
