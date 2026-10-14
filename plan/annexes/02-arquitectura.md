@@ -43,7 +43,7 @@ business case.
 | Ganancia de productividad | +10% a +25% de throughput en equipos propios (el borrador de OKR 2027 fija +20%) | [Supuesto](../../context/supuestos/ganancia-de-productividad.md), [OKR](../../context/hechos/okrs-y-objetivos.md) |
 | Inversión incremental | 1%-3% de la facturación anual, sin contrataciones masivas | [Supuesto](../../context/supuestos/capacidad-de-inversion.md) |
 | Costo cargado por rol | Rangos USD/mes, amplios y no calibrados contra la nómina: tech lead o arquitecto 4.500-10.000, IA aplicada 4.500-11.000, senior/DevOps/QA 3.000-7.500 | [Supuesto](../../context/supuestos/costo-cargado-por-rol.md) |
-| Seats necesarios para la meta de adopción | 80% de Operaciones y Tecnología ≈ 0,8 × 0,8 × (60-70) ≈ 38-45 personas activas, hoy ya cubiertas por 40-45 seats | Cálculo del equipo sobre las dos fichas de tamaño y de OKR: la meta es de activación, no de más seats |
+| Seats y adopción | Aun si se alcanzara el 80% combinado del OKR (el plan no lo alcanza, [Anexo D](04-personas-cultura.md)): 0,8 × 0,8 × (60-70) ≈ 38-45 personas activas, ya cubiertas por 40-45 seats | Cálculo del equipo sobre las fichas de tamaño y de OKR: la adopción es de activación, no de más seats |
 | No existe hoy un gateway de modelos ni un inventario formal de arquitectura | — | [Supuesto](../../context/supuestos/capacidades-ausentes.md): no consta en [stack](../../context/hechos/stack-y-plataforma.md); lo invalida cualquier inventario que lo contradiga |
 | Umbrales técnicos (evals y gate de impacto, política de ruteo, portabilidad y costo del gateway, intervalo de throughput, replan de T2) | Propuestos por este anexo, sin medición previa | [Supuesto](../../context/supuestos/umbrales-tecnicos-propuestos.md) |
 
@@ -82,10 +82,9 @@ gate humano.
 | Autonomía en los 12 meses | L1-L2 (informar, recomendar, redactar); subir a L3 se decide en G4, no antes ([Anexo C, D6](03-gobierno-seguridad.md)) | L2-L3 con code review obligatorio, como hoy; L4 solo en sandbox sin credenciales productivas ni datos de cliente |
 | Lock-in a evitar | Que el cliente herede una dependencia de un proveedor de modelos | Que el flujo de ingeniería quede atado a funciones exclusivas de uno |
 
-El producto propio A (medios de pago) todavía no tiene un sistema de gestión de
-seguridad certificado y no se presenta como plataforma certificada
-([ficha](../../context/hechos/seguridad-y-certificaciones.md)); la IA en producto
-no puede apoyarse en esa certificación.
+La certificación de seguridad vigente es de la organización, no de un producto
+([ficha](../../context/hechos/seguridad-y-certificaciones.md)): la IA en producto
+no puede presentarse como apoyada en una certificación de producto.
 
 ### Cobertura de controles por superficie
 
@@ -209,7 +208,7 @@ se informa siempre aparte.
 | Caso de referencia interno en uso | 0 | En L2 para Tecnología y Operaciones, con su ficha de evaluación pasada | Este anexo |
 | Cobertura de precio del gateway (*fc* × *s*) | Sin medir | Medida en G2 contra el umbral de E a 6× | Prueba de portabilidad y costo |
 | Cobertura de la telemetría de IA | Solo agente de código | Chat, terminal y Workspace, por persona activa y por resultado | [Ficha](../../context/hechos/uso-ia-interno.md) |
-| Personas con IA activa por semana | ~1 de 3 (org), ~7 de 10 (Tecnología), ~1 de 10 (Operaciones) | ≥ 80% de Operaciones y Tecnología | [OKR borrador](../../context/hechos/okrs-y-objetivos.md) |
+| Personas con IA activa por semana | ~1 de 3 (org), ~7 de 10 (Tecnología), ~1 de 10 (Operaciones) | Tecnología ≥ 80% desde T2 y ≥ 85% en T4; Operaciones habilitadas, aparte. El 80% combinado del OKR no se alcanza: se informa su valor real ([Anexo D](04-personas-cultura.md), H14) | [OKR borrador](../../context/hechos/okrs-y-objetivos.md), [Anexo D](04-personas-cultura.md) |
 | Throughput por desarrollador (PR aceptados por persona activa, ver definición) | Base prospectiva congelada en las semanas 1-4 de T1; serie retrospectiva de T0 solo para tendencia y ruido | +10% a +25% en equipos propios, leído como tendencia con intervalo | [Supuesto](../../context/supuestos/ganancia-de-productividad.md) |
 | Gasto de tecnología / facturación | ~4% | < 3,5% (borrador de OKR) | [OKR borrador](../../context/hechos/okrs-y-objetivos.md) |
 | Proveedores de modelos operativos detrás del gateway | 0 (supuesto) | ≥ 2, con migración ensayada | Supuesto del equipo |
@@ -223,7 +222,7 @@ Finanzas lo convierta en valor con la misma unidad.
 |---|---|
 | Unidad | Pull request aceptado: mergeado, con las compuertas de calidad aprobadas y sin reversión a los 14 días, por persona activa y por trimestre |
 | Normalización | Se reporta estratificado por tipo de trabajo (funcionalidad, error, mantenimiento) y por tamaño del cambio (terciles de líneas modificadas); se informa la mediana y la dispersión, no solo el promedio |
-| Cohorte | Equipos propios: productos propios y el producto del Cliente A, como en el [supuesto](../../context/supuestos/ganancia-de-productividad.md). Staffing queda fuera |
+| Cohorte | Equipos propios, como los define el [supuesto](../../context/supuestos/desarrolladores-en-equipos-propios.md) (15-20 personas). Staffing queda fuera |
 | Comparador | La base prospectiva congelada (semanas 1-4 de T1) de la misma cohorte y, donde exista, un grupo que todavía no adopta. Aclaración: Tecnología ya usa IA hoy (~7 de 10), así que la ganancia se mide **sobre ese punto de partida**, no contra un mundo sin IA |
 | Calidad | Incidentes y retrabajo por cada 100 PR (reversiones y correcciones dentro de 30 días); si suben, la ganancia no cuenta |
 | Ruido | Con cohortes de pocas decenas de personas, la variación entre trimestres puede superar +3%: se estima con la serie retrospectiva de T0 y los umbrales de G2 y G3 se leen con el intervalo de abajo, no como un punto |
@@ -237,9 +236,10 @@ con intervalo" no decide de forma repetible.
 | Estimador | Cambio relativo apareado: PR aceptados por semana de cada persona activa en la ventana del gate contra su propia base congelada, agregado con los pesos de estrato (tipo y tamaño) fijados en la base. Donde exista un grupo que todavía no adopta, se resta su cambio (diferencia en diferencias); si no, se resta la tendencia estimada con la serie de T0 |
 | Intervalo | *Bootstrap* percentil remuestreando personas (no PR), 2.000 réplicas, confianza 90% bilateral. Pasa si el límite inferior ≥ el umbral de la banda; un intervalo que cruza el umbral es "espera", como dice F |
 | Precisión mínima | Semiancho ≤ 3 puntos porcentuales: con más, el intervalo no separa las bandas de +3%, +5% y +8% |
-| Muestra insuficiente | Menos de ~20 personas activas, menos de 8 semanas en la ventana o semiancho > 3 puntos: no se decide por valor; cuenta como "espera", la ventana se extiende 6 semanas y se acumulan datos. Vencida la espera, rige la regla de F para esa banda; este anexo no agrega un resultado nuevo |
+| Muestra mínima | **15 personas activas** (el piso del supuesto de 15-20), y "activa" es tener base congelada propia y PR en al menos 6 de las 8 semanas de la ventana. Lo que discrimina es el semiancho, no N: con 15-20 personas el piso se cumple si no hay bajas |
+| Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: cuenta como "espera" y la ventana se extiende 6 semanas; la extensión suma semanas por persona, no personas, así que solo baja el ruido de cada una. Vencida, rige la regla de F. Con N < 15, esperar no lo arregla: no se decide por valor y aplica "Viabilidad" |
 | Calidad | El mismo método sobre incidentes y retrabajo por cada 100 PR: si el límite inferior del aumento es > 0, la ganancia no cuenta |
-| Viabilidad | Con la serie de T0 se estima el semiancho esperado antes de G0. Si con la cohorte completa supera 3 puntos, el gate de G2 no puede discriminar +3% y F tiene que reformularlo antes de G0 (por ejemplo, decidir solo en G3) |
+| Viabilidad | Antes de G0, con la serie de T0, se estima el semiancho esperado con la cohorte real. Si supera 3 puntos, o la cohorte tiene menos de 15 personas, G2 no discrimina +3% y F lo reformula antes de G0 (por ejemplo, decidir solo en G3). Con los estimados del base de E (+3,75% en T2, +9% en T3), pasar exige semiancho ≤ 0,75 y ≤ 1 punto: el base no es un paso asegurado |
 
 **Conversión a valor: dos lecturas que responden preguntas distintas.** Con una
 ganancia de throughput *g*:
@@ -361,7 +361,19 @@ Probabilidad e impacto son juicio del equipo (alta/media/baja), no medición.
 | No se puede reconstruir una decisión del sistema para el cliente regulado | Media | Alto | Trazas y registro por diseño, nivel de autonomía documentado | Si no se reconstruye una decisión desde las trazas, no pasa el gate de seguridad |
 | El caso de producto depende de lo que el cliente permita | Alta | Medio | Matriz de restricciones primero; piloto en producto propio | Ningún cliente de la matriz habilita IA a fin de Q3: el frente (a) queda en piloto propio |
 | Con el producto diferido, el piloto arranca en T3 sin preparación específica en T2 | Alta, si G2 libera P | Medio | La base de T2 (gateway, harness v1, suite de evals, aislamiento) es reutilizable; lo propio del caso (dataset sintético, integración, diseño) se hace en las primeras 3-4 semanas de T3. Las 6 semanas del SLO se cuentan desde que el piloto opera, así que G4 decide con menos evidencia | El piloto no opera a la semana 6 de T3: G4 decide sin SLO medido, y P se corta o se pasa al año 2 |
-| El contractor concentra evals, harness y la prueba de portabilidad | Media | Alto | Documentación por entregable, traspaso en T4 ([Anexo D](04-personas-cultura.md)), suite y lote versionados en el repo | Un entregable de T2 sin documentación reproducible: no cuenta para G2 |
+| El contractor concentra evals, harness y la prueba de portabilidad | Media | Alto | Documentación mínima reproducible dentro de cada entregable (abajo), manuales y traspaso en T3-T4 ([Anexo D](04-personas-cultura.md)), suite y lote versionados en el repo | Un entregable de T2 sin documentación mínima reproducible: no cuenta para G2. Control en la semana 7 de T2 (abajo) |
+
+**Documentación mínima reproducible (la que exige G2).** Es parte de cada
+entregable de T2, no del 0,2 de documentación y traspaso de D. Se distingue de
+los manuales de operación y del traspaso, que siguen en el 0,2 y se corren a
+T3-T4.
+
+| Elemento | Qué es | Horas (supuesto del equipo) | Quién, dentro de qué fracción |
+|---|---|---|---|
+| Alcance | Harness v1, suite de evals con dataset v1, evals en CI y lote de la prueba de portabilidad y costo: cuatro entregables | — | — |
+| Contenido por entregable | (1) tupla de versión registrada (ver "Versionado"); (2) instrucciones de ejecución desde el repo; (3) ADR corto por decisión de diseño; (4) resultado de una corrida, con fecha | 1-2 días-persona por entregable: 4-8 en T2, ~8-16% de los ~50 días de la fracción de 0,8 | El contractor, dentro de la fracción con que produce el entregable (el 0,8; el 0,2 del replan para evals en CI y el lote): no suma |
+| Prueba de reproducción | Otra persona corre cada entregable desde el repo y obtiene el mismo resultado | 0,5-1 día-persona por entregable: 2-4 en T2 | DevOps/QA, dentro de su 0,8 del replan (no suma) |
+| Control anticipado | Semana 7 de T2: los entregables cerrados hasta ahí tienen su documentación mínima y pasaron la reproducción | — | La dirección técnica; si falla, se activa la excepción de 0,3 FTE ahí, no al cierre de T2 |
 
 ## Decisiones
 
@@ -420,10 +432,10 @@ al modelo** (supuesto vigente) comprobada con un ensayo, no declarada.
 ### Recurso de IA aplicada: T1 y el contractor
 
 El esfuerzo técnico necesita una fracción de IA aplicada (evals, harness,
-gateway): 0,3 FTE en T1 y 0,8 en T2-T4. El contractor **reemplaza** esa
-fracción, no la complementa: en eso coinciden este anexo, el
-[Anexo D](04-personas-cultura.md) y el [Anexo E](05-business-case.md). Lo que
-sigue abierto es la vía de T1:
+gateway): 0,3 FTE en T1-b y 0,8 en T2-T4 (el 0,5 de T1 es el de T1-a, solo en
+el escenario conservador). El contractor al 50% **reemplaza** ese 0,3, no lo
+complementa, y le queda 0,2 que asigna el [Anexo D](04-personas-cultura.md).
+Lo que sigue abierto es la vía de T1:
 
 | Vía de T1 | FTE clave de este anexo en T1 | Caja | Condición |
 |---|---|---|---|
@@ -469,18 +481,13 @@ con la otra:
 | Sin el 0,2 | El contractor existe, pero su 0,2 no está libre (alcance no acordado, o documentación atrasada, [Anexo D](04-personas-cultura.md)) | 1,5 FTE (sin replan) | Salida 2: la excepción de 0,3 lleva T2 a 2,5 y lo cubre |
 | Sin contractor | Toda la IA aplicada de T2-T4 (0,8 FTE), no solo el 0,2 | 2,3 FTE con la fracción interna (alternativa C); 1,2 en modo control | La excepción de 0,3 **no alcanza** para C. La contratación es condición de inicio de los hitos de IA aplicada: sin contractor ni rol interno demostrado, no inician el harness v1, la suite de evals en CI ni la prueba de portabilidad y costo. T2 corre en **modo control** (gateway en laboratorio, bypass por superficie, FinOps) con 1,2 FTE de este anexo: arquitecto 0,4 y DevOps/QA 0,8, porque el 0,2 de evals en CI y reejecución de la prueba tampoco corre. G2 decide sin cobertura de precio (la palanca sale del deck) y sin caso de referencia en sombra, que pasa a T3 si en G2 se aprueba la vía. Infraestructura de T2: en los regímenes (a) y (c) el agente es el tráfico del gateway y el renglón se mantiene; en el (b) el gateway solo ensaya el ruteo con tráfico sintético y el renglón baja al nivel de T1-b (500-1.500 en el trimestre, supuesto del equipo) |
 
-Con la fracción interna de C, el [Anexo E](05-business-case.md) ("Dos
-contingencias del contractor") calcula para el plan completo ~3,3 / 3,0 / 2,9 FTE
-clave en T2-T4, contra un máximo de 2,25: por eso los hitos de IA aplicada no se
-inician sin contractor (ni rol interno demostrado en T1 con contractor desde T2).
-Este anexo aporta sus 2,3 / 2,3 / 2,2 y no adopta un total propio. En T3-T4, el
-modo control mantiene la base de este anexo (1,5 / 1,4 FTE) sin caso de
-referencia ni evals hasta que se apruebe una vía; el total con C y D lo calcula E.
-En modo control el gateway opera para control y telemetría (ruta del agente en
-los regímenes a y c); lo que no inicia es el ruteo a modelos más baratos y la
-caché, que son parte de la prueba de portabilidad y costo. El modo control es la
-respuesta que este anexo recomienda para "sin contractor"; la alternativa C queda
-como opción del board solo si aprueba explícitamente el exceso que E calcule.
+Con la fracción interna de C, el plan completo pediría ~3,3 / 3,0 / 2,9 FTE clave
+en T2-T4 ([Anexo E](05-business-case.md), "Dos contingencias del contractor");
+este anexo aporta 2,3 / 2,3 / 2,2 y no adopta un total propio. En modo control,
+T3-T4 mantienen la base (1,5 / 1,4 FTE) sin caso de referencia ni evals, y el
+gateway opera para control y telemetría sin ruteo a modelos más baratos ni
+caché. La alternativa C queda como opción del board solo si aprueba
+explícitamente el exceso que calcula E.
 
 ### Tensiones con otras miradas (abiertas, sin consenso inventado)
 
@@ -490,7 +497,6 @@ como opción del board solo si aprueba explícitamente el exceso que E calcule.
 | Gobierno | La política sigue en borrador y la matriz de restricciones por cliente no existe | El ruteo por clasificación y el piloto de producto dependen de ambas | `governance`: ratificación y matriz antes de Q3 |
 | Personas | Reasignar 10-15% del tiempo de pocas personas clave | Utilización 83-90% y bench < 1 FTE; restricción de no contratar | `people`: suplentes y capacidad; el especialista de IA se capacita, se reasigna o se contrata por contrato |
 | Alcance | La plataforma sirve a dos frentes | Qué caso concreto va en el producto lo define el portfolio | `caio`: este anexo no elige el caso |
-| Cobertura | [Anexo C](03-gobierno-seguridad.md) (D9, Q2) y [F](06-roadmap-riesgo.md) (G2) exigen ≥ 90% de los eventos del agente de código por la pasarela, sin condición | Este anexo adopta el denominador de C, pero condiciona el 90% al régimen comercial: en el régimen (b) el agente no se enruta y se le exige control verificado sin gateway; los casos propios van al 100%, aparte | `governance` y `caio`: adoptar la "Política de ruteo" o discrepar a la vista. El bloqueo de secretos y de datos Restringidos no pasa a monitoreo en ningún caso |
 | Precio | El deck y la defensa usan el gateway como cobertura del cambio de precio | La cobertura no está medida: depende de *fc* × *s*, de la suscripción y de la calidad | `caio`: la palanca se afirma solo si pasa la prueba de portabilidad y costo de T2 |
 | Capacidad | T1-E pide 1,6 FTE clave y 590 h distribuidas ([Anexo E](05-business-case.md)); T1 entra si el board confirma ese piso | Con el producto diferido, T2 excede el sobre en ~0,3 FTE; sin contractor, el plan pediría ~3,3 FTE clave (E) | El board, en G0: replan de B (recomendado) o excepción acotada para "sin el 0,2"; modo control para "sin contractor" (ver "Exceso de T2") |
 
@@ -703,10 +709,7 @@ montos de facturación.
 - Qué regiones o proveedores cumplen la residencia exigida por la Ley 25.326 para
   un cliente concreto es un faltante que decide legal; el anexo no lo afirma.
 - La escala L0-L4 es una herramienta pedagógica del curso, no un estándar.
-- La definición de throughput, la conversión a horas evitadas, la cobertura por
-  superficie y el calendario de T0 y T1 son propuestas de este anexo: el
-  Anexo E, el C, el D y el F deben adoptarlas o discrepar a la vista. Qué
-  superficie es enrutable no está verificado con documentación de proveedor.
+- Qué superficie es enrutable no está verificado con documentación de proveedor.
 - Las fracciones de esfuerzo y los rangos de infraestructura son supuestos del
   equipo. Los umbrales de la ficha de evaluación, el criterio de la prueba de
   portabilidad y costo y el replan de T2 están en una
@@ -718,5 +721,6 @@ montos de facturación.
   reutiliza el piloto de producto; la hipótesis de producto la eligió el
   portfolio de `caio` (Anexo F). El tamaño del dataset (~200 preguntas) es una propuesta sin
   cálculo de potencia estadística.
-- Que el contractor tenga 0,2 FTE sin asignar en T2 sale de leer juntos B
-  (fracción de 0,8) y D (una persona al 100%); `people` lo tiene que confirmar.
+- El 0,2 libre del contractor en T2 no está confirmado ([Anexo D](04-personas-cultura.md)):
+  el replan es condicional al alcance contractual de G0. Las horas de la
+  documentación mínima reproducible son supuesto del equipo.

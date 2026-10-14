@@ -4,7 +4,7 @@ title: "Umbrales técnicos propuestos por la arquitectura"
 description: "Umbrales que propone el anexo de arquitectura sin medición previa: los de la ficha de evaluación del caso de referencia (con el gate de impacto), la política de ruteo y el criterio de la prueba de portabilidad y costo del gateway, el método del intervalo de throughput y el replan de capacidad de T2."
 status: draft
 tags: [supuesto, arquitectura, evals, finops]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T12:00:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T18:00:00Z }
 ---
 # Supuesto
 
@@ -55,7 +55,8 @@ está medido. Los usa el anexo de arquitectura.
 | Estimador | Cambio relativo apareado de PR aceptados por semana de cada persona activa contra su base congelada, con pesos de estrato fijados en la base; menos el cambio de un grupo que no adopta o, si no existe, la tendencia de la serie de T0 |
 | Intervalo | *Bootstrap* percentil por persona, 2.000 réplicas, 90% bilateral; pasa si el límite inferior ≥ el umbral |
 | Precisión mínima | Semiancho ≤ 3 puntos porcentuales |
-| Muestra insuficiente | Menos de ~20 personas activas, menos de 8 semanas o semiancho > 3 puntos: cuenta como "espera" (6 semanas más); vencida, rige la regla del gate |
+| Muestra mínima | 15 personas activas (piso del supuesto de 15-20), con base congelada propia y PR en al menos 6 de 8 semanas de la ventana |
+| Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: "espera" (6 semanas más, que suman semanas y no personas); vencida, rige la regla del gate. Con N < 15 no se espera: el gate se reformula antes de G0 |
 | Calidad | Mismo método sobre incidentes y retrabajo por cada 100 PR |
 
 ## Replan de capacidad de T2 con el producto diferido
@@ -68,6 +69,12 @@ está medido. Los usa el anexo de arquitectura.
   calcula ~3,3 FTE clave para T2 con la fracción interna): los hitos de IA
   aplicada no inician y T2 corre en modo control, con 1,2 FTE del anexo de
   arquitectura (arquitecto 0,4 y DevOps/QA 0,8).
+- La documentación mínima reproducible que exige G2 es parte de cada uno de
+  los cuatro entregables de T2 (tupla de versión, instrucciones de ejecución,
+  ADR corto, corrida fechada): 1-2 días-persona por entregable del contractor
+  dentro de su 0,8, más 0,5-1 de reproducción de DevOps/QA dentro de su 0,8.
+  Manuales y traspaso quedan en el 0,2 y se corren a T3-T4. Control en la
+  semana 7 de T2: si falta, se activa ahí la excepción de 0,3 FTE.
 
 # Por qué es razonable
 
@@ -92,8 +99,12 @@ está medido. Los usa el anexo de arquitectura.
 - La primera corrida de la suite en T2: si la línea base del caso queda lejos de
   estos valores, se recalibran y la recalibración se versiona.
 - Que el contractor no tenga 0,2 FTE libres en T2 (por traspaso o
-  documentación), o que el Directorio no lo apruebe: el replan no existe y queda
-  la excepción acotada.
+  documentación): el replan no existe y rige la excepción acotada de 0,3 FTE.
+- Que el Directorio no apruebe el contractor o no se contrate a tiempo: la
+  excepción no alcanza; los hitos de IA aplicada no inician y T2 corre en modo
+  control.
+- Que la cohorte real tenga menos de 15 personas activas, o que la
+  documentación mínima de un entregable lleve más de 2 días-persona.
 - Que el proveedor confirme que enrutar el agente de código obliga a facturar
   por API: la cobertura de precio no aplica mientras la suscripción sea plana.
 - Que la serie de T0 muestre que, con la cohorte completa, el semiancho supera
