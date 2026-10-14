@@ -4,7 +4,7 @@ title: "Rampa de la ganancia de productividad"
 description: "La ganancia de throughput llega por tramos: en el escenario base, 0% del objetivo en T1, 25% en T2, 60% en T3 y 100% en T4; en el pesimista 0/10/30/60% y en el optimista 0/40/80/100%."
 status: draft
 tags: [supuesto, finanzas, productividad]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T01:10:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T02:40:00Z }
 ---
 # Supuesto
 
@@ -16,7 +16,10 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T01:10:00Z }
 
 El porcentaje es la fracción del objetivo de throughput de la
 [ganancia de productividad](/supuestos/ganancia-de-productividad.md) que se
-alcanza en cada trimestre.
+alcanza en cada trimestre. Con un objetivo g, el throughput del trimestre t es
+g × rampa_t, y es lo que miden los gates. Si se valúa como horas evitadas a
+output fijo, la fracción liberada es g × rampa_t / (1 + g × rampa_t); la rampa
+no se aplica sobre horas ya convertidas.
 
 # Por qué es razonable
 
@@ -28,14 +31,16 @@ alcanza en cada trimestre.
 
 # Qué lo invalidaría
 
-- Que la medición de T2 no muestre ganancia contra la línea de base de T0.
+- Que la medición de T2 no muestre ganancia contra la línea de base congelada en
+  T1 (ver [convenciones](/supuestos/convenciones-de-calculo.md)).
 - Que la ganancia aparezca pero se pague con más incidentes o retrabajo.
 
 # Cautelas
 
-- Las rampas pesimista y optimista las fija el anexo E (ronda 3, hallazgo H17).
-  El pesimista las combina con un objetivo de 5%, por debajo del piso de la
-  [ganancia de productividad](/supuestos/ganancia-de-productividad.md): es el
-  caso de corte, no un escenario que el plan espere.
-- La unidad de throughput y su conversión a valor las define el anexo E
-  (hallazgo H09); la rampa se aplica sobre esa definición.
+- Las rampas pesimista y optimista las fija el anexo E. El pesimista las
+  combina con un objetivo de 5%, por debajo del piso de la
+  [ganancia de productividad](/supuestos/ganancia-de-productividad.md): da +0,5%
+  en T2, +1,5% en T3 y +3% en T4. Es un caso de corte, no un escenario que el
+  plan espere; con los gates vigentes cae en espera en G2 y corta en G3.
+- La unidad de throughput y su valuación las define el anexo E; la rampa se
+  aplica sobre el throughput, no sobre su valuación.

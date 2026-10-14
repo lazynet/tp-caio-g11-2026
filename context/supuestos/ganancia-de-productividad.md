@@ -4,7 +4,7 @@ title: "Ganancia de productividad por IA en ingeniería"
 description: "El caso de negocio supone entre 10% y 25% más de throughput por desarrollador al cabo de 12 meses en los equipos propios, no en los equipos asignados a clientes."
 status: draft
 tags: [supuesto, finanzas, productividad]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:00:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T02:40:00Z }
 ---
 # Supuesto
 
@@ -23,13 +23,16 @@ cada cliente y no se cuenta.
 
 # Qué lo invalidaría
 
-- Que la línea de base del cuarto trimestre de 2026 no se mida o resulte
-  inestable.
+- Que la línea de base congelada en T1 no se mida o resulte inestable, y la
+  serie retrospectiva del cuarto trimestre de 2026 tampoco sirva de respaldo
+  (ver [convenciones](/supuestos/convenciones-de-calculo.md)).
 - Que la mejora de velocidad se pague con más incidentes o retrabajo.
 - Que el ahorro de horas no se traduzca en margen (por ejemplo, en contratos
   facturados por hora, donde menos horas es menos facturación).
 
 # Cómo verificarlo
 
-Medir la línea de base en el cuarto trimestre de 2026 y comparar trimestre a
-trimestre, junto con incidentes y retrabajo.
+Congelar la línea de base en las semanas 1-4 de T1, con la serie retrospectiva
+del cuarto trimestre de 2026 para estimar ruido, y comparar trimestre a
+trimestre, junto con incidentes y retrabajo. El resultado contra el OKR, que usa
+el cuarto trimestre de 2026, se informa al lado.

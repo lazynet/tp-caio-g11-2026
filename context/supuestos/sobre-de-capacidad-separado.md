@@ -4,7 +4,7 @@ title: "Sobre de capacidad separado en tiempo clave y distribuido"
 description: "Propuesta de Finanzas, todavía no aprobada: el tiempo de las personas clave se mide contra el sobre de 1 a 2,25 FTE, y las horas repartidas en toda la dotación forman un segundo sobre que el board aprueba en G0."
 status: draft
 tags: [supuesto, finanzas, capacidad, propuesta]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T01:10:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T02:40:00Z }
 ---
 # Supuesto
 
@@ -31,6 +31,8 @@ La alternativa es la lectura **estricta**: todo cuenta contra 1-2,25 FTE.
   y con ella ninguna versión de T1 que cumpla la meta de capacitación básica entra.
 - Que las horas distribuidas bajen la utilización facturable por debajo de la
   meta (ver [capacidad y utilización](/hechos/capacidad-y-utilizacion.md)).
+- Que el sobre clave disponible esté en el extremo inferior del rango (1 FTE): el
+  plan necesita un piso de 1,6 FTE clave en T1, y ninguna versión de T1 entra.
 
 # Cautelas
 
