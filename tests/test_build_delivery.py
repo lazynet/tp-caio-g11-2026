@@ -14,6 +14,66 @@ spec.loader.exec_module(builder)
 
 
 class BuildDeliveryTests(unittest.TestCase):
+    def test_index_uses_titles_order_and_actual_destination_pages(self):
+        from pypdf import PdfWriter
+
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            folder = root / "plan/annexes"
+            folder.mkdir(parents=True)
+            (folder / "01-a.md").write_text(
+                '---\nowner: finance\nstatus: draft\ntitle: "Anexo A — Uno & dos"\n---\n# Otro\n',
+                encoding="utf-8",
+            )
+            (folder / "02-b.md").write_text(
+                '---\nowner: finance\nstatus: draft\ntitle: ""\n---\n# Anexo B — Segundo\n',
+                encoding="utf-8",
+            )
+            writer = PdfWriter()
+            for _ in range(4):
+                writer.add_blank_page(width=595, height=842)
+            writer.add_named_destination("annex-0", 0)
+            writer.add_named_destination("annex-1", 3)
+            markup = builder.annex_index_html(root, builder.load_plan_check(), writer)
+            self.assertIn("Índice de anexos", markup)
+            self.assertIn(
+                'href="https://caio.invalid/annexes#annex-0">Anexo A — Uno &amp; dos</a>',
+                markup,
+            )
+            self.assertIn(
+                'href="https://caio.invalid/annexes#annex-1">Anexo B — Segundo</a>',
+                markup,
+            )
+            self.assertLess(markup.index("Anexo A"), markup.index("Anexo B"))
+            self.assertIn("<td>1</td>", markup)
+            self.assertIn("<td>4</td>", markup)
+            from pypdf import PdfReader
+
+            index_pdf = root / "index.pdf"
+            builder.render_annexes(root, markup, index_pdf, numbered=False)
+            index = PdfReader(index_pdf)
+            self.assertEqual(len(index.pages), 1)
+            self.assertEqual(len(index.pages[0].get("/Annots", [])), 2)
+            combined = PdfWriter()
+            combined.append(index)
+            combined.append(writer)
+            builder.rewrite_pdf_links(
+                combined, root, builder.load_plan_check().annex_files(root), {}, "main"
+            )
+            builder.check_portable_pdf(combined)
+            for annotation, target in zip(combined.pages[0]["/Annots"], (1, 4)):
+                self.assertEqual(
+                    annotation.get_object()["/A"]["/D"][0],
+                    combined.pages[target].indirect_reference,
+                )
+
+    def test_print_css_keeps_rows_whole_and_numbers_annex_pages(self):
+        self.assertIn(
+            "tr { break-inside: avoid; page-break-inside: avoid; }", builder.CSS
+        )
+        self.assertIn("@bottom-center", builder.CSS)
+        self.assertIn('content: "Anexos · página " counter(page)', builder.CSS)
+
     def test_build_cli_rejects_private_source_before_rendering(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

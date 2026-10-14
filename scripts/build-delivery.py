@@ -1,6 +1,7 @@
 """Arma out/entrega.pdf: el deck de Marp seguido de los anexos, con el tope de 10 MB."""
 
 import argparse
+import html
 import importlib.util
 import json
 import os
@@ -17,7 +18,9 @@ from urllib.parse import quote, unquote, urlsplit
 MAX_BYTES = 10_000_000
 PAGE_BREAK = '\n\n<div style="page-break-before: always"></div>\n\n'
 CSS = """
-@page { size: A4; margin: 18mm; }
+@page { size: A4; margin: 18mm;
+        @bottom-center { content: "Anexos · página " counter(page);
+                         font-size: 9pt; color: #555; } }
 body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
        font-size: 11pt; line-height: 1.45; color: #1a1a1a; max-width: none; }
 h1 { font-size: 20pt; border-bottom: 2px solid #333; padding-bottom: 4pt; }
@@ -25,6 +28,7 @@ h2 { font-size: 14pt; margin-top: 18pt; }
 table { border-collapse: collapse; width: 100%; margin: 8pt 0; font-size: 10pt; }
 th, td { border: 1px solid #999; padding: 4pt 6pt; text-align: left; vertical-align: top; }
 th { background: #eee; }
+tr { break-inside: avoid; page-break-inside: avoid; }
 img { max-width: 100%; }
 """
 
@@ -51,6 +55,41 @@ def annexes_markdown(root, checker):
 def annex_id(path, annexes, fragment=""):
     prefix = f"annex-{annexes.index(path)}"
     return f"{prefix}-{fragment}" if fragment else prefix
+
+
+def annex_index_html(root, checker, pdf):
+    annexes = checker.annex_files(root)
+    named = {name.lstrip("/"): dest for name, dest in pdf.named_destinations.items()}
+    rows = []
+    for path in annexes:
+        metadata, body = checker.split_frontmatter(
+            path.read_text(encoding="utf-8"), checker.ANNEX_TYPES
+        )
+        title = metadata.get("title")
+        if not title:
+            heading = re.search(r"^#\s+(.+)$", body, re.MULTILINE)
+            if not heading:
+                raise ValueError(f"Anexo sin título ni H1: {path.name}")
+            title = heading[1]
+        anchor = annex_id(path, annexes)
+        if anchor not in named:
+            raise ValueError(f"Destino de anexo inexistente en PDF: {anchor}")
+        page = pdf.get_destination_page_number(named[anchor])
+        if page is None or page < 0:
+            raise ValueError(f"Página de anexo inexistente: {anchor}")
+        rows.append(
+            # Chrome no exporta links a anclas que están en otro PDF.
+            f'<tr><td><a href="https://caio.invalid/annexes#{anchor}">'
+            f"{html.escape(str(title))}</a></td>"
+            f"<td>{page + 1}</td></tr>"
+        )
+    return (
+        "<h1>Índice de anexos</h1>"
+        "<p>La numeración al pie comienza en el primer anexo. "
+        "Seleccioná un título para ir a su inicio.</p>"
+        "<table><thead><tr><th>Anexo</th><th>Página de anexos</th></tr></thead>"
+        "<tbody>" + "".join(rows) + "</tbody></table>"
+    )
 
 
 def portable_target(root, origin, destination, annexes, public_ref):
@@ -204,6 +243,8 @@ def rewrite_pdf_links(writer, root, annexes, slides, public_ref):
             if not action or action.get("/S") != "/URI":
                 continue
             uri = str(action.get("/URI", ""))
+            if uri.startswith("https://caio.invalid/annexes#"):
+                uri = "#" + unquote(urlsplit(uri).fragment)
             if urlsplit(uri).scheme == "file":
                 uri = portable_target(
                     root, root / "plan/slides.md", uri, annexes, public_ref
@@ -289,11 +330,14 @@ def find_chrome():
     raise SystemExit("No encontré Chrome, Edge o Chromium: definí CHROME_PATH")
 
 
-def render_annexes(root, markup, pdf):
+def render_annexes(root, markup, pdf, *, numbered=True):
     with tempfile.TemporaryDirectory() as temp:
         temp = Path(temp)
         css, html = temp / "annexes.css", temp / "annexes.html"
-        css.write_text(CSS, encoding="utf-8")
+        css.write_text(
+            CSS if numbered else CSS + "\n@page { @bottom-center { content: none; } }",
+            encoding="utf-8",
+        )
         subprocess.run(
             [
                 "pandoc",
@@ -371,6 +415,15 @@ def main():
     if markup:
         annexes_pdf = output.with_name("anexos.pdf")
         render_annexes(root, markup, annexes_pdf)
+        index_pdf = output.with_name("indice-anexos.pdf")
+        try:
+            index_markup = annex_index_html(root, checker, PdfReader(annexes_pdf))
+        except ValueError as exc:
+            raise SystemExit(str(exc))
+        render_annexes(root, index_markup, index_pdf, numbered=False)
+        if len(PdfReader(index_pdf).pages) != 1:
+            raise SystemExit("El índice de anexos tiene que ocupar una sola página")
+        writer.append(str(index_pdf))
         writer.append(str(annexes_pdf))
     else:
         print("Aviso: no hay anexos en plan/annexes/; la entrega lleva solo el deck")
