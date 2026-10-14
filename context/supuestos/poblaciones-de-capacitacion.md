@@ -4,7 +4,7 @@ title: "Poblaciones y tiempos de capacitación en IA"
 description: "El people plan supone cerca de 65 personas en el nivel básico (6 h), 50 en el intermedio (12 h), unas 10 en el avanzado y una red de 8 champions con 10% de su jornada."
 status: draft
 tags: [supuesto, personas, capacitación]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T02:40:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T03:18:00Z }
 ---
 # Supuesto
 
@@ -41,5 +41,6 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T02:40:00Z }
   oportunidad real es la tarifa facturable, que no se publica.
 - Valores vigentes en el anexo D al 2026-10-14; la capacidad total del plan la
   consolida el anexo E.
-- El avanzado se expresa en el anexo D con 520 h por trimestre (calendario); la
-  convención de costeo es 480 h (ver [convenciones](/supuestos/convenciones-de-calculo.md)).
+- El avanzado se expresa en el anexo D con 480 h por persona-trimestre, la
+  convención de costeo (ver [convenciones](/supuestos/convenciones-de-calculo.md)):
+  480-720 h en total.
