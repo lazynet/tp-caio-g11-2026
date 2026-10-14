@@ -865,7 +865,7 @@ la prueba, el marco de gates y el producto diferido.
   con al menos una señal que pague lo que (b) no compra: restricción o licencia
   para vender según el [umbral contractual](../../context/supuestos/umbral-de-evidencia-contractual.md)
   (C la recorta: la restricción cuenta en G1 solo si condiciona el uso de IA;
-  desacuerdo a la vista que F registra y decide el board en G0, no se resuelve acá),
+  desacuerdo a la vista que F registra como DP10 y decide el board en G0, no se resuelve acá),
   anuncio del proveedor de pasar a consumo, o señal de cliente para el producto.
   Año de esta rama: ≈ **400** (216-584), el paquete más la prueba.
 - **Sin ninguna, T2-T4 corre como (b), con la prueba extendida a (c):** ≈ **199**
