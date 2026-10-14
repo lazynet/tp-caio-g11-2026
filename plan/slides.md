@@ -76,7 +76,7 @@ Con productividad sola, las opciones baratas ganan el año 1. La plataforma comp
 
 - **AI Council de 5 asientos** dentro del comité de tecnología, con CoE virtual.
 - Intake en 3 niveles: respuesta en 5 días hábiles para el riesgo medio.
-- Secretos y datos prohibidos: bloqueo técnico en la pasarela y en el equipo; en chat, IDE y suite, solo control compensatorio, con residual que acepta el Council. El primer secreto expuesto dispara la contención.
+- Secretos y datos prohibidos: bloqueo técnico en la pasarela (con señal en G1) y en el equipo; en chat, IDE y suite, solo control compensatorio, con residual que acepta el Council. El primer secreto expuesto dispara la contención.
 - Autonomía en el producto: L1-L2 en los 12 meses.
 
 **Decisiones:**
