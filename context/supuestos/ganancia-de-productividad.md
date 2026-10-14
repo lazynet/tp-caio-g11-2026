@@ -4,11 +4,11 @@ title: "Ganancia de productividad por IA en ingeniería"
 description: "El caso de negocio supone entre 10% y 25% más de throughput por desarrollador al cabo de 12 meses en los equipos propios, no en los equipos asignados a clientes."
 status: draft
 tags: [supuesto, finanzas, productividad]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T02:40:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T18:00:00Z }
 ---
 # Supuesto
 
-En los equipos que trabajan sobre productos propios y el producto del Cliente A,
+En los equipos que trabajan en modo producto, donde la organización controla las herramientas,
 el uso sistemático de agentes de código (con contrato de agente, skills y
 compuertas de calidad) eleva entre 10% y 25% el throughput por desarrollador en
 12 meses, sin bajar la calidad. En staffing el efecto depende de lo que permita

@@ -4,7 +4,7 @@ title: "Base mínima que queda después de un corte"
 description: "Si el plan se corta en un gate, se supone que la empresa conserva el resto del año un núcleo de gobierno (fracciones de liderazgo y seguridad más el comité) y la pasarela de salida si ya está instalada; si el frente producto sigue, conserva además la parte de la base común que usa."
 status: draft
 tags: [supuesto, finanzas, gobierno, riesgo]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T14:00:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T18:00:00Z }
 ---
 # Supuesto
 
@@ -40,8 +40,9 @@ supuesta es:
 # Por qué es razonable
 
 - El uso de IA sigue aunque el plan se corte (ver [uso de IA](/hechos/uso-ia-interno.md)),
-  y los clientes financieros siguen exigiendo gobierno sobre el uso de IA de sus
-  proveedores (ver [regulación](/hechos/regulacion-clientes-financieros.md)).
+  y los bancos clientes siguen obligados a gobernar la IA de sus terceros (ver
+  [regulación](/hechos/regulacion-clientes-financieros.md)). Que lo trasladen
+  al contrato con el proveedor es una hipótesis que T1 verifica.
 - La política de uso aceptable existe y hay que sostenerla (ver
   [gobierno y política](/hechos/gobierno-y-politica-ia.md)).
 
