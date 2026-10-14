@@ -124,6 +124,11 @@ class BuildDeliveryTests(unittest.TestCase):
             self.assertIn('href="#annex-1-evidencia"', markup)
             self.assertIn('id="annex-0-fn1"', markup)
             self.assertIn('id="annex-1-fn1"', markup)
+            self.assertIn(
+                '<a class="heading-link" href="#annex-0-evidencia">Evidencia</a></h1>',
+                markup,
+            )
+            self.assertNotIn("§", markup)
             self.assertIn("https://caio.invalid/slides#page-3", markup)
             self.assertIn("blob/v1/context/source.md#fuente", markup)
 

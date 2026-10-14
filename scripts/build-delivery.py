@@ -30,6 +30,7 @@ th, td { border: 1px solid #999; padding: 4pt 6pt; text-align: left; vertical-al
 th { background: #eee; }
 tr { break-inside: avoid; page-break-inside: avoid; }
 img { max-width: 100%; }
+a.heading-link { color: inherit; text-decoration: none; }
 """
 
 
@@ -193,15 +194,18 @@ def annexes_html(root, checker, public_ref):
             lambda match: match[1] + annex_id(path, annexes, match[2]),
             rendered,
         )
-        # Chrome solo exporta destinos que reciben un link. Los enlaces de
-        # sección permiten apuntar acá desde las slides del deck.
+        # Chrome solo exporta destinos que reciben un link. El título se
+        # enlaza a sí mismo, sin un símbolo visible, para que las slides del
+        # deck puedan apuntar a cada sección.
         rendered = re.sub(
-            r'(<h[1-6] id="([^"]+)"[^>]*>)',
+            r'(<h([1-6]) id="([^"]+)"[^>]*>)(.*?)(</h\2>)',
             lambda match: (
                 match[1]
-                + f'<a href="#{match[2]}" aria-label="Enlace a esta sección">§</a> '
+                + f'<a class="heading-link" href="#{match[3]}">{match[4]}</a>'
+                + match[5]
             ),
             rendered,
+            flags=re.DOTALL,
         )
         start = annex_id(path, annexes)
         parts.append(
