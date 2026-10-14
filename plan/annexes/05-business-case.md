@@ -113,11 +113,10 @@ costo de oportunidad. La columna "Fr." dice a qué frente pertenece cada rengló
 | **FTE equivalentes** | | — | **2,8** | **4,7** | **3,4** | **3,0** | **3,5 promedio** | |
 
 Año: caja 177 (98-255) y tiempo 217 (115-320); económico **394** (213-575). Los
-totales de FTE suman antes de redondear. Respecto del cuadro anterior de este
-anexo (caja 185, tiempo 224) cambian tres cosas, todas confirmadas por su dueño:
-la infraestructura de T3-T4 sin piloto baja al nivel de T2 y su incremento pasa
-a P (B); T2 usa el replan de B (−0,3 FTE clave, −5 mil de tiempo); y el avanzado
-de D se costea con 480 h (−1 mil de tiempo en T2).
+totales de FTE suman antes de redondear. Tres decisiones de los dueños definen
+este cuadro: la infraestructura de T3-T4 sin piloto queda al nivel de T2 y su
+incremento va a P (B); T2 usa el replan de B (−0,3 FTE clave, −5 mil de tiempo);
+y el avanzado de D se costea con 480 h.
 
 **Excepción acotada en lugar del replan.** Si el board elige la excepción, T2
 queda en 2,5 FTE clave y 75,2 de tiempo, y el año en tiempo 223 (118-328) y
@@ -285,9 +284,9 @@ g × rampa_t / (1 + g × rampa_t). El throughput que resulta en cada escenario:
 | Optimista | 25% | +10,0% | +20,0% | +25,0% | 114 (51-192) |
 
 La base pasa G2 (≥ +3%) y G3 (≥ +8%). El pesimista cae en "espera" en G2 y corta
-en G3 (ver "Pesimista con la regla vigente"). La versión anterior de este anexo
-aplicaba la rampa sobre las horas ya convertidas, g/(1+g) × rampa_t, y daba
-60 / 12 / 110: subestimaba levemente y no correspondía a la ficha.
+en G3 (ver "Pesimista con la regla vigente"). Aplicar la rampa sobre las horas
+ya convertidas, g/(1+g) × rampa_t, daría 60 / 12 / 110: subestima levemente y no
+corresponde a la definición de la ficha.
 
 Las dos conversiones responden preguntas distintas:
 
