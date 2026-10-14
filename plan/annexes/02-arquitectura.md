@@ -112,7 +112,7 @@ escrita al proveedor de la prueba de T2:
 |---|---|---|
 | (a) Suscripción plana y enrutar la preserva | Sí, por control y telemetría; sin efecto de precio | Ruta ≥ 90% de sus eventos y control verificado |
 | (b) Suscripción plana y enrutar obliga a facturar por API, o respuesta ambigua | **No**, mientras la suscripción sea plana | Control verificado sin gateway (*hooks*, escaneo de secretos, allowlist de MCP, telemetría existente) y ruteo ensayado en laboratorio, listo para activarse si el régimen cambia |
-| (c) El proveedor ya cobra por consumo | Sí; el gateway es además la palanca de precio | Ruta ≥ 90% de sus eventos, control verificado y *f* × *s* contra el umbral de E |
+| (c) El proveedor ya cobra por consumo | Sí; el gateway es además la palanca de precio | Ruta ≥ 90% de sus eventos, control verificado y *fc* × *s* contra el umbral de E |
 
 Los **casos propios** (producto y agentes internos nuevos) no tienen otra ruta:
 pasan al 100% por el gateway en cualquier régimen. Chat, IDE y Workspace no se
@@ -158,26 +158,32 @@ a régimen sin piloto), es ~38% a 4×, ~25% a 6× y ~13% a 12×. La prueba mide
 lo que E declara hueco. Hasta tener el resultado, el plan no afirma cobertura de
 precio.
 
-**Población y gasto elegible.** *f* y *s* se miden sobre la misma población que usa
-E: el agente de código y su consumo a precio de lista, cuya base es la suscripción
-de ese agente (19-24 mil por año en E). Chat, IDE y Workspace quedan fuera del gasto
-elegible y su exposición se informa aparte. Así, el ahorro es *f* × *s* × k ×
-suscripción, comparable con el costo del gateway de E, y el criterio es *f* × *s* ≥
-*s** de E. Con *f* ≤ 0,9, pasar a 6× pide *s* ≥ ~28%.
+**Población y gasto elegible.** Se adopta la definición del
+[Anexo E](05-business-case.md) ("Base del cálculo: el gasto elegible"), con su
+símbolo. *fc* y *s* se miden sobre la misma población: el **gasto elegible**, que
+hoy es el consumo del agente de código a precio de lista (40-45 seats, con base en
+su suscripción de 19-24 mil por año en E). *fc* es la fracción del **costo** de ese
+gasto que pasa por el gateway, no de eventos. Chat, IDE y Workspace quedan fuera del
+gasto elegible y su exposición se informa aparte. Así, el ahorro es k × gasto
+elegible × *fc* × *s*, comparable con el costo del gateway de E, y el criterio es
+*fc* × *s* ≥ el umbral de E. Con *fc* ≤ 0,9, pasar a 6× pide *s* ≥ ~28%. La
+fracción de eventos (cuatro superficies, o solo el agente según D8) es métrica de
+cobertura de controles y no se multiplica por *s*.
 
 | Qué se mide | Cómo | Resultado |
 |---|---|---|
-| Fracción enrutable (*f*) | Del consumo del agente de código, la parte que puede pasar por el gateway, ponderada por costo a precio de lista (no por eventos de las cuatro superficies). Se estima en laboratorio en Q2 con la telemetría del agente; si no hay costo por evento, se usa la fracción de eventos de D8 y se marca "estimado" | *f* del agente de código |
-| Reducción de consumo (*s*) | Reejecución en laboratorio de un lote fijo de tareas del agente de código sobre repositorios propios (nivel Confidencial, con contrato sin entrenamiento), con la mezcla de tareas de la telemetría, en tres configuraciones: modelo actual por API, ruteo a modelos más baratos para subtareas, y ruteo con caché de prefijo. Se cuentan los tokens y el costo a precio de lista | *s* = 1 − costo con ruteo / costo sin ruteo, sobre lo enrutable |
+| Fracción enrutable del costo (*fc*) | Del gasto elegible (hoy, el agente de código a precio de lista), la parte del costo que puede pasar por el gateway, ponderada por costo y no por eventos. Se estima en laboratorio en Q2 con la telemetría del agente; si no hay costo por evento, se usa como estimador la fracción de eventos de D8 y se marca "estimado". La fracción de eventos por superficie se reporta aparte, como cobertura de controles | *fc* del gasto elegible; eventos por superficie, aparte |
+| Reducción de consumo (*s*) | Reejecución en laboratorio de un lote fijo de tareas del agente de código sobre repositorios propios (nivel Confidencial, con contrato sin entrenamiento). El lote representa la misma población del gasto elegible, con la mezcla de tipos de tarea de la telemetría ponderada por costo, en tres configuraciones: modelo actual por API, ruteo a modelos más baratos para subtareas, y ruteo con caché de prefijo. Se cuentan los tokens y el costo a precio de lista | *s* = 1 − costo con ruteo / costo sin ruteo, sobre lo enrutable |
 | Calidad | La misma tarea pasa sus pruebas y la revisión de código en las tres configuraciones; para casos propios, la suite de evals del caso de referencia (abajo) | Diferencia de la tasa de éxito contra el modelo actual |
 | Suscripción | Consulta escrita al proveedor y lectura del contrato: el plan plano admite un endpoint propio, o enrutar obliga a facturar por API | Sí, no o ambiguo, con la fuente |
 | Portabilidad | El caso de referencia corre en dos proveedores detrás del gateway | Días-persona de migración |
-| Superficies fuera del gasto elegible | Chat, Workspace e IDE: no entran en *f* ni en *s* | Exposición de precio sin cobertura, declarada aparte |
+| Superficies fuera del gasto elegible | Chat, Workspace e IDE: no entran en *fc* ni en *s* | Exposición de precio sin cobertura, declarada aparte |
 
 **Criterio de aceptación** (umbrales propuestos, [ficha](../../context/supuestos/umbrales-tecnicos-propuestos.md)):
 la cobertura de precio se afirma solo si se cumplen las cuatro condiciones.
 
-1. *f* × *s* ≥ el umbral de E para k = 6× (~25%), el múltiplo que dispara el gate
+1. *fc* × *s* ≥ el umbral de E para k = 6× (~25%), con *fc* sobre el gasto
+   elegible; es el múltiplo que dispara el gate
    de FinOps en el [Anexo F](06-roadmap-riesgo.md).
 2. La tasa de éxito con ruteo no cae más de 5 puntos contra el modelo actual.
 3. Enrutar preserva la suscripción plana, o el proveedor ya cobra por consumo.
@@ -192,7 +198,7 @@ se informa siempre aparte.
 | Quién | El contractor de IA aplicada arma el lote y corre las configuraciones; DevOps/QA instrumenta el gateway; FinOps calcula *s* y la exposición. Aprueba la dirección técnica con `finance`. Responsables humanos: **pendientes** |
 | Cuándo | T2, semanas 6-11, con el gateway en laboratorio; el resultado entra en el paquete de G2 |
 | Costo | Tiempo dentro de las fracciones de T2. El consumo por API de la reejecución tiene un tope que fija FinOps dentro del renglón de infraestructura de T2: no suma caja ni tiene precio propio |
-| Qué decisión habilita (G2) | Pasa: el gateway queda como cobertura de precio. En el régimen (b) el ruteo del agente queda ensayado y listo, sin activarse mientras la suscripción sea plana; en (c) se activa. E puede valuar la palanca con *f* × *s* medidos. No pasa: la palanca "cobertura de precio" sale del deck y de la defensa; la infraestructura queda en el mínimo de control. En ningún caso el gate de cobertura obliga a enrutar el agente en el régimen (b) (E, segundo esquema) |
+| Qué decisión habilita (G2) | Pasa: el gateway queda como cobertura de precio. En el régimen (b) el ruteo del agente queda ensayado y listo, sin activarse mientras la suscripción sea plana; en (c) se activa. E puede valuar la palanca con *fc* × *s* medidos. No pasa: la palanca "cobertura de precio" sale del deck y de la defensa; la infraestructura queda en el mínimo de control. En ningún caso el gate de cobertura obliga a enrutar el agente en el régimen (b) (E, segundo esquema) |
 | Abandono | Sin lote reproducible o sin respuesta del proveedor al cierre de T2: no se afirma cobertura de precio en G2 |
 
 ### Métricas técnicas (las sostiene este anexo; Finanzas las consume)
@@ -201,7 +207,7 @@ se informa siempre aparte.
 |---|---|---|---|
 | Funcionalidades de IA en producción en lo vendido | 0 | Si G2 libera P: 1 piloto acotado evaluado con gate scale/kill (Q3-Q4). Si no: 0, por diseño | [Ficha](../../context/hechos/ia-en-producto-y-oferta.md) |
 | Caso de referencia interno en uso | 0 | En L2 para Tecnología y Operaciones, con su ficha de evaluación pasada | Este anexo |
-| Cobertura de precio del gateway (*f* × *s*) | Sin medir | Medida en G2 contra el umbral de E a 6× | Prueba de portabilidad y costo |
+| Cobertura de precio del gateway (*fc* × *s*) | Sin medir | Medida en G2 contra el umbral de E a 6× | Prueba de portabilidad y costo |
 | Cobertura de la telemetría de IA | Solo agente de código | Chat, terminal y Workspace, por persona activa y por resultado | [Ficha](../../context/hechos/uso-ia-interno.md) |
 | Personas con IA activa por semana | ~1 de 3 (org), ~7 de 10 (Tecnología), ~1 de 10 (Operaciones) | ≥ 80% de Operaciones y Tecnología | [OKR borrador](../../context/hechos/okrs-y-objetivos.md) |
 | Throughput por desarrollador (PR aceptados por persona activa, ver definición) | Base prospectiva congelada en las semanas 1-4 de T1; serie retrospectiva de T0 solo para tendencia y ruido | +10% a +25% en equipos propios, leído como tendencia con intervalo | [Supuesto](../../context/supuestos/ganancia-de-productividad.md) |
@@ -408,7 +414,7 @@ al modelo** (supuesto vigente) comprobada con un ensayo, no declarada.
 2. Gateway con al menos dos proveedores operativos.
 3. Prueba de portabilidad y costo en Q2 (ver Evidencia): el caso de referencia
    corre en dos modelos, se mide el esfuerzo de migrar en días-persona y, en la
-   misma prueba, *f* × *s*. Reemplaza el "costo moderado" supuesto por un dato.
+   misma prueba, *fc* × *s*. Reemplaza el "costo moderado" supuesto por un dato.
 4. Sin compromisos de volumen mayores a 12 meses antes del gate de Q4.
 
 ### Recurso de IA aplicada: T1 y el contractor
@@ -450,7 +456,7 @@ portabilidad y FinOps.
 | Salida | Qué cambia | FTE clave de T2 | Costo | Qué arriesga |
 |---|---|---|---|---|
 | **1. Replan de B (recomendada)** | Arquitecto 0,5 → 0,4: el 0,1 era el diseño del piloto de producto, que con P diferido pasa a T3. DevOps/QA 1,0 → 0,8: el pipeline de evals en CI y la reejecución de la prueba de portabilidad pasan al contractor, que tiene 0,2 FTE pagados y sin asignar (cubre la fracción de 0,8 con una persona al 100%, D) | 2,2: entra, con 0,05 de holgura | Baja el tiempo de T2 en ~5 mil (3,2-7,5) y no suma caja | Más concentración en el contractor (ver Riesgos). El piloto, si G2 lo libera, arranca sin diseño previo. Las condiciones de G2 no se tocan: bypass, gateway y FinOps quedan en DevOps/QA |
-| 2. Excepción acotada en G0 | El board aprueba 0,3 FTE clave por encima del sobre en T2 | 2,5 | Sin costo nuevo: ya está en el cuadro de E. Salen ~3-7 mil de horas facturables | Rompe el sobre que el propio plan pide confirmar |
+| 2. Excepción acotada en G0 | El board aprueba 0,3 FTE clave por encima del sobre en T2 | 2,5 | Sin costo nuevo: ya está en el cuadro de E. Salen ~3-7 mil de horas facturables | Rompe el sobre que el propio plan pide confirmar. Cubre solo la falta del 0,2 adicional; sin contractor no alcanza (ver la tabla de contingencias abajo y [Anexo E](05-business-case.md), "Dos contingencias del contractor") |
 | Descartada: correr hitos de T2 a T3 | Portabilidad o FinOps pasan a T3 | 2,2 | — | G2 queda sin dos de sus condiciones, y T3 no tiene holgura (0,05) |
 
 **Recomendación:** la salida 1, que el board ratifica en G0 junto con el piso de
@@ -463,10 +469,16 @@ con la otra:
 | Sin el 0,2 | El contractor existe, pero su 0,2 no está libre (alcance no acordado, o documentación atrasada, [Anexo D](04-personas-cultura.md)) | 1,5 FTE (sin replan) | Salida 2: la excepción de 0,3 lleva T2 a 2,5 y lo cubre |
 | Sin contractor | Toda la IA aplicada de T2-T4 (0,8 FTE), no solo el 0,2 | 2,3 FTE con la fracción interna (alternativa C); 1,2 en modo control | La excepción de 0,3 **no alcanza** para C. La contratación es condición de inicio de los hitos de IA aplicada: sin contractor ni rol interno demostrado, no inician el harness v1, la suite de evals en CI ni la prueba de portabilidad y costo. T2 corre en **modo control** (gateway en laboratorio, bypass por superficie, FinOps) con 1,2 FTE de este anexo: arquitecto 0,4 y DevOps/QA 0,8, porque el 0,2 de evals en CI y reejecución de la prueba tampoco corre. G2 decide sin cobertura de precio (la palanca sale del deck) y sin caso de referencia en sombra, que pasa a T3 si en G2 se aprueba la vía. Infraestructura de T2: en los regímenes (a) y (c) el agente es el tráfico del gateway y el renglón se mantiene; en el (b) el gateway solo ensaya el ruteo con tráfico sintético y el renglón baja al nivel de T1-b (500-1.500 en el trimestre, supuesto del equipo) |
 
-Con la fracción interna de C, el total de T2 lo recalculan E y F: este anexo solo
-aporta sus 2,3 FTE y no adopta una cifra total propia. En T3-T4, el modo control
-mantiene la base de este anexo (1,5 / 1,4 FTE) sin caso de referencia ni evals
-hasta que se apruebe una vía. El modo control es la
+Con la fracción interna de C, el [Anexo E](05-business-case.md) ("Dos
+contingencias del contractor") calcula para el plan completo ~3,3 / 3,0 / 2,9 FTE
+clave en T2-T4, contra un máximo de 2,25: por eso los hitos de IA aplicada no se
+inician sin contractor (ni rol interno demostrado en T1 con contractor desde T2).
+Este anexo aporta sus 2,3 / 2,3 / 2,2 y no adopta un total propio. En T3-T4, el
+modo control mantiene la base de este anexo (1,5 / 1,4 FTE) sin caso de
+referencia ni evals hasta que se apruebe una vía; el total con C y D lo calcula E.
+En modo control el gateway opera para control y telemetría (ruta del agente en
+los regímenes a y c); lo que no inicia es el ruteo a modelos más baratos y la
+caché, que son parte de la prueba de portabilidad y costo. El modo control es la
 respuesta que este anexo recomienda para "sin contractor"; la alternativa C queda
 como opción del board solo si aprueba explícitamente el exceso que E calcule.
 
@@ -479,8 +491,8 @@ como opción del board solo si aprueba explícitamente el exceso que E calcule.
 | Personas | Reasignar 10-15% del tiempo de pocas personas clave | Utilización 83-90% y bench < 1 FTE; restricción de no contratar | `people`: suplentes y capacidad; el especialista de IA se capacita, se reasigna o se contrata por contrato |
 | Alcance | La plataforma sirve a dos frentes | Qué caso concreto va en el producto lo define el portfolio | `caio`: este anexo no elige el caso |
 | Cobertura | [Anexo C](03-gobierno-seguridad.md) (D9, Q2) y [F](06-roadmap-riesgo.md) (G2) exigen ≥ 90% de los eventos del agente de código por la pasarela, sin condición | Este anexo adopta el denominador de C, pero condiciona el 90% al régimen comercial: en el régimen (b) el agente no se enruta y se le exige control verificado sin gateway; los casos propios van al 100%, aparte | `governance` y `caio`: adoptar la "Política de ruteo" o discrepar a la vista. El bloqueo de secretos y de datos Restringidos no pasa a monitoreo en ningún caso |
-| Precio | El deck y la defensa usan el gateway como cobertura del cambio de precio | La cobertura no está medida: depende de *f* × *s*, de la suscripción y de la calidad | `caio`: la palanca se afirma solo si pasa la prueba de portabilidad y costo de T2 |
-| Capacidad | T1-E pide 1,6 FTE clave y 590 h distribuidas ([Anexo E](05-business-case.md)); T1 entra si el board confirma ese piso | Con el producto diferido, T2 excede el sobre en ~0,3 FTE; sin contractor, mucho más | El board, en G0: replan de B (recomendado) o excepción acotada para "sin el 0,2"; modo control para "sin contractor" (ver "Exceso de T2") |
+| Precio | El deck y la defensa usan el gateway como cobertura del cambio de precio | La cobertura no está medida: depende de *fc* × *s*, de la suscripción y de la calidad | `caio`: la palanca se afirma solo si pasa la prueba de portabilidad y costo de T2 |
+| Capacidad | T1-E pide 1,6 FTE clave y 590 h distribuidas ([Anexo E](05-business-case.md)); T1 entra si el board confirma ese piso | Con el producto diferido, T2 excede el sobre en ~0,3 FTE; sin contractor, el plan pediría ~3,3 FTE clave (E) | El board, en G0: replan de B (recomendado) o excepción acotada para "sin el 0,2"; modo control para "sin contractor" (ver "Exceso de T2") |
 
 ## Roadmap técnico a 12 meses
 
@@ -554,7 +566,7 @@ común, **I** frente interno, **P** frente producto (solo si G2 lo libera).
 | Q2 | B | Prueba de integración y de bypass por superficie | Cobertura de control = 100% de las superficies aprobadas; casos propios 100% por gateway; agente de código ≥ 90% por gateway solo en los regímenes (a) y (c) de la "Política de ruteo"; en (b), ruteo ensayado y no activado | Superficie con bypass sin control compensatorio: queda declarada no cubierta y se lleva al Council |
 | Q2 | B | Harness v1 sobre el caso de referencia: working set con presupuesto, memoria externa, gate humano, ledger | Pasa los gates de rendimiento y seguridad de la ficha de evaluación | Dos fallas de contexto críticas sin mitigar: se reduce el alcance |
 | Q2 | B | Suite de evals en CI con el dataset v1 y trazas | Cada release corre la suite; la tupla de versión queda registrada | Sin dataset utilizable: el caso queda en L0 |
-| Q2 | B | Prueba de portabilidad y costo del gateway | Mide *f*, *s*, calidad, suscripción y días-persona; resultado en el paquete de G2 | Migrar cuesta más de 20 días-persona, o no hay lote reproducible: no se afirma cobertura de precio |
+| Q2 | B | Prueba de portabilidad y costo del gateway | Mide *fc*, *s*, calidad, suscripción y días-persona; resultado en el paquete de G2 | Migrar cuesta más de 20 días-persona, o no hay lote reproducible: no se afirma cobertura de precio |
 | Q2 | B | FinOps: costo por persona activa, por consulta del caso y por resultado, con escenario de consumo | Reporte mensual con el escenario de consumo | Costo fuera del techo de Finanzas: se frena la expansión |
 | Q3 | I | Caso de referencia en L2 para Tecnología y Operaciones | L2 en la cohorte con los gates de rendimiento, seguridad y ético; extensión a Operaciones con el de impacto | Falla dura de seguridad: se apaga el caso. Impacto debajo al vencer la espera: no se extiende |
 | Q3 | I | Extensión a staff y a equipos asignados a clientes, donde el cliente lo permita | Uso semanal medido en el gateway y la telemetría | Restricción del cliente: no se fuerza |
@@ -631,6 +643,22 @@ de Q2, a régimen cuesta 18.000-48.000 por año en lugar de 24.000-72.000. Los
 régimen](../../context/supuestos/costo-de-regimen-del-ano-2.md) ya usa el valor sin
 piloto para la base común.
 
+**Base común mínima para P (corte mixto en G3).** Este anexo confirma, con una
+corrección, el supuesto de E ([base
+mínima](../../context/supuestos/base-minima-tras-un-corte.md)):
+
+- **Confirma:** infraestructura de base al nivel de T2 (gateway, trazas y evals en
+  CI, 4.500-12.000 en T4, cota superior porque ya no corre el caso de referencia),
+  la pasarela, el contractor al 50% para las evals y el harness del piloto (sin
+  dato que lo respalde) y 0,5 FTE de DevOps/QA para operar el gateway y las evals.
+- **Corrige:** suma **0,1 FTE de arquitecto** en T4 (1.350-3.000 de tiempo, a
+  los rangos de este anexo). El piloto sigue con el gate scale/kill y el paquete
+  de cumplimiento de Q4 (aislamiento por tenant, ubicación de datos, ADR), que
+  tocan puertas de un solo sentido; sin arquitecto no hay quién firme esa
+  evidencia. El resto del arquitecto (decisión de infraestructura propia y
+  revisión de contratos) se corta con la base común.
+- Sigue siendo supuesto: lo recalcula E.
+
 Los porcentajes sobre facturación los calcula Finanzas: `context/` no publica
 montos de facturación.
 
@@ -659,7 +687,7 @@ montos de facturación.
   todavía; el plan lo trata como hipótesis con gate. Y
   evals, harness y la prueba de portabilidad se concentran en un contractor.
 - **Evidencia que falta:** línea base de productividad, matriz por cliente,
-  primera corrida de la ficha de evaluación y la medición de *f* × *s*; no se
+  primera corrida de la ficha de evaluación y la medición de *fc* × *s*; no se
   prometen números de calidad ni de ahorro hasta tenerlos.
 
 ## Cautelas

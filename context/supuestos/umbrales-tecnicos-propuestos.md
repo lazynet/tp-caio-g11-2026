@@ -34,13 +34,16 @@ está medido. Los usa el anexo de arquitectura.
   eventos por el gateway rige solo en (a) y (c), con el denominador del anexo de
   gobierno (eventos del agente según la consola del proveedor). Los casos propios
   van al 100% por el gateway, aparte.
-- *f* y *s* se miden sobre la misma población que el umbral del anexo E: el
-  consumo del agente de código a precio de lista. *f* se pondera por costo; si
-  no hay costo por evento, se usa la fracción de eventos y se marca "estimado".
-  La fracción de eventos sobre las cuatro superficies es una métrica de
-  cobertura de controles y no se multiplica por *s*. Con los valores vigentes
-  del anexo E, el umbral es ~38% a 4×, ~25% a 6× y ~13% a 12×.
-- La cobertura de precio se afirma solo si *f* × *s* alcanza el umbral del
+- Denominadores, con la definición y el símbolo del anexo E: *fc* y *s* se
+  miden sobre el **gasto elegible**, que hoy es el consumo del agente de código
+  a precio de lista. *fc* es la fracción del **costo** de ese gasto que pasa por
+  el gateway; si no hay costo por evento, se estima con la fracción de eventos
+  y se marca "estimado". El lote de *s* tiene la mezcla de tipos de tarea del
+  agente ponderada por costo. La fracción de eventos sobre las cuatro
+  superficies es una métrica de cobertura de controles y no se multiplica por
+  *s*. Con los valores vigentes del anexo E, el umbral de *fc* × *s* es ~38% a
+  4×, ~25% a 6× y ~13% a 12×.
+- La cobertura de precio se afirma solo si *fc* × *s* alcanza el umbral del
   anexo E para un múltiplo de 6× (~25%), la calidad no cae más de 5 puntos,
   enrutar preserva la suscripción plana (o el proveedor ya cobra por consumo) y
   migrar de proveedor cuesta ≤ 20 días-persona.
@@ -61,7 +64,8 @@ está medido. Los usa el anexo de arquitectura.
   DevOps/QA lo absorbe el contractor de IA aplicada, que cubre una fracción de
   0,8 FTE con una persona al 100%.
 - Sin el 0,2 (el contractor existe pero no tiene esa holgura) rige la excepción
-  acotada de 0,3 FTE. Sin contractor, la excepción no alcanza: los hitos de IA
+  acotada de 0,3 FTE. Sin contractor, la excepción no alcanza (el anexo E
+  calcula ~3,3 FTE clave para T2 con la fracción interna): los hitos de IA
   aplicada no inician y T2 corre en modo control, con 1,2 FTE del anexo de
   arquitectura (arquitecto 0,4 y DevOps/QA 0,8).
 
