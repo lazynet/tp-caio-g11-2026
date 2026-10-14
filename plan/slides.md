@@ -112,7 +112,7 @@ Ver [Anexo D — Personas y cultura](annexes/04-personas-cultura.md).
 | Pasa si | Base, política, básico ≥90% | Throughput ≥ +3%, Tecnología ≥80% | Throughput ≥ +8% | Camino a ~17% o interés contractual |
 
 - **Espera:** se sigue sin escalar y se vuelve a medir; la de throughput en G2 vence a las 6 semanas y, si no mejora, corta.
-- **Corta por frente:** sin política, no hay producto en el año; matriz ambigua al mes 4, sin piloto con ese cliente; debajo de la banda, queda la base mínima; en G4, no se financia el régimen (~53 por año de base mínima).
+- **Corta por frente:** sin política, no hay producto en el año; matriz ambigua al mes 4, sin piloto con ese cliente; debajo de la banda, queda la base mínima (en G3, el corte es del frente interno y de la base común); en G4, no se financia el régimen (~53 por año de base mínima).
 
 **Decisión:** adoptar los gates como regla de liberación de fondos. Ver [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md).
 
