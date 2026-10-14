@@ -25,6 +25,10 @@ Los costos por hora salen del [costo por rol](/supuestos/costo-cargado-por-rol.m
 sobre 160 h por mes, y las horas de la cohorte, del costo por desarrollador de
 [N y costo](/supuestos/desarrolladores-en-equipos-propios.md).
 
+En la rama sin señal de G1 (T2-T4 como (b)), la prueba chica se extiende a la
+cohorte como (c) **sin costo adicional**: usa los champions y el intermedio de
+Tecnología que la formación de (b) ya paga, y el diseño ya se hizo en T1.
+
 El piloto (c) trabaja solo sobre repositorios que la matriz habilite: sin datos de
 clientes ([disponibilidad de datos](/supuestos/disponibilidad-de-datos.md)).
 
@@ -46,6 +50,8 @@ clientes ([disponibilidad de datos](/supuestos/disponibilidad-de-datos.md)).
   personas activas: (c) y la prueba chica se achican o no arrancan.
 - Que el intermedio de Tecnología no pueda usarse como vehículo de la prueba y
   las horas de la cohorte se sumen.
+- Que extender la prueba en T2-T4 pida champions o lectura por encima de lo que
+  (b) ya paga: el año sin señal (≈ 193 en el anexo E) sube.
 
 # Cautelas
 
