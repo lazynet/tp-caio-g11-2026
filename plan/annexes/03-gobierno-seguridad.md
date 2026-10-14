@@ -88,8 +88,13 @@ vende al banco, Acme Labs es **proveedor** (art. 3.3 del AI Act) y el banco es
 registros y supervisión humana. El art. 25 lo vuelve proveedor aun cuando solo integre
 con marca propia un motor de terceros, o cuando oriente un modelo genérico a un uso de
 alto riesgo ([ficha](../../material/frameworks/eu-ai-act-proveedor-desplegador.md)). La
-consecuencia práctica: aun fuera del alcance de la UE, los bancos le van a pedir por
-contrato esa disciplina de proveedor.
+consecuencia práctica es una **hipótesis**: aun fuera del alcance de la UE, algunos
+clientes podrían pedirle por contrato esa disciplina de proveedor. Hay que separar dos
+cosas que la hipótesis mezcla. Lo que el regulador le exige al **banco** (la A 7777 lo
+obliga a gobernar el uso de IA de sus terceros) es un requisito regulatorio del cliente;
+que el banco se lo traslade a Acme Labs como condición de compra o de renovación es una
+**exigencia comercial al proveedor**, y eso no está probado. Solo la evidencia
+contractual del Q1 (D9b) la confirma o la descarta.
 
 **Calendario.** Según la ficha del Omnibus, el alto riesgo del Anexo III (que incluye el
 scoring crediticio) rige desde el 2027-12-02 ([ficha](../../material/conceptos/m1u4-ai-omnibus-sigen.md)),
@@ -136,10 +141,10 @@ queda pendiente), cómo se prueba el control y qué evidencia deja. El residual 
 
 | Riesgo | Función NIST | Dueño del riesgo | Prueba del control | Evidencia esperada | Residual objetivo | Acepta |
 |---|---|---|---|---|---|---|
-| R1 | Map, Manage | Responsable comercial del cliente | Revisión cruzada de la matriz contra los contratos; dato sintético marcado enviado por cada superficie (Q2) | Matriz versionada con aprobador; informe de *bypass* por superficie; bloqueos en la pasarela | Baja / Alto en el agente de terminal; Media / Alto en superficies sin pasarela | Council |
+| R1 | Map, Manage | Responsable comercial del cliente | Revisión cruzada de la matriz contra los contratos; dato sintético marcado enviado por cada superficie (Q2) | Matriz versionada con aprobador; informe de *bypass* por superficie; bloqueos en la pasarela | Baja / Alto en lo que pasa por la pasarela (casos propios y, en los regímenes a y c, el agente de código); Media / Alto en el resto | Council |
 | R2 | Measure, Manage | Dueño de negocio del caso | Red team interno (Q2) y externo (Q4) con inyección indirecta en repos y tickets sintéticos | Informe de red team con hallazgos y cierre; logs de acciones del agente | Baja / Alto | Dueño |
 | R3 | Govern, Manage | Dueño de negocio del caso | Revisión trimestral de los permisos efectivos de cada agente contra su nivel L | Inventario con nivel por agente; exportación de permisos; acta | Baja / Muy alto | Council |
-| R4 | Measure, Manage | Responsable de seguridad | Secreto sintético por superficie (ejemplo abajo) | Bloqueo y alerta en la pasarela; ticket del ejercicio de mesa | Baja / Medio-alto; Media / Medio-alto sin pasarela | Dueño; Council sin pasarela |
+| R4 | Measure, Manage | Responsable de seguridad | Secreto sintético por superficie (ejemplo abajo) | Bloqueo y alerta en la pasarela o en el equipo, según la superficie; ticket del ejercicio de mesa | Baja / Medio-alto donde hay bloqueo técnico; Media / Medio-alto donde solo hay control compensatorio | Dueño; Council si no hay bloqueo técnico |
 | R5 | Govern, Map | Responsable de Tecnología | Cruce mensual de las novedades del proveedor contra el inventario | Inventario con fecha de revisión; configuración exportada | Media / Medio | Dueño |
 | R6 | Govern, Measure | Responsable de Tecnología | Porcentaje de solicitudes fuera de SLA, desde el registro del intake | Reporte mensual del intake | Baja / Alto | Dueño |
 | R7 | Govern | Responsable de Tecnología | El suplente corre el runbook sin el titular en el ejercicio de mesa (Q2 y Q4) | Runbooks versionados; acta del ejercicio | Media / Alto: baja poco en el año | Council |
@@ -152,9 +157,9 @@ queda pendiente), cómo se prueba el control y qué evidencia deja. El residual 
 |---|---|
 | Riesgo | Una credencial (clave de nube, token de repositorio, cadena de conexión) sale en un prompt hacia un modelo externo. Inherente: Media / Medio-alto |
 | Control | Escaneo de secretos en la pasarela antes del envío (previene), alerta al responsable de seguridad (detecta) y runbook de revocación y rotación (corrige). Dueño del control: ingeniería de seguridad |
-| Prueba (Q2) | Un juego de secretos **sintéticos** de formatos distintos, enviado por cada superficie de la matriz D8; nunca una credencial real. Criterio propuesto: en el agente de terminal, todos bloqueados y alertados; en las superficies sin pasarela se registra que no hay bloqueo, como resultado esperado y no como falla oculta. En el ejercicio de mesa se mide el tiempo de alerta a revocación; el umbral lo propone seguridad y no está medido |
+| Prueba (Q2) | Un juego de secretos **sintéticos** de formatos distintos, enviado por cada superficie de la matriz D8; nunca una credencial real. Criterio propuesto: donde hay bloqueo técnico (casos propios por la pasarela; el agente de código con *hooks* y escaneo en el equipo, y por la pasarela si su régimen la permite), todos bloqueados y alertados; en las superficies sin bloqueo técnico se registra que no hay bloqueo, como resultado esperado y no como falla oculta. En el ejercicio de mesa se mide el tiempo de alerta a revocación; el umbral lo propone seguridad y no está medido |
 | Evidencia | Informe de la prueba por superficie y formato, logs de la pasarela con los bloqueos, ticket del ejercicio con sus tiempos y acta del Council. Es la misma evidencia que pediría la auditoría de la ISO 27001 con alcance extendido |
-| Residual | Formatos que el escaneo no reconoce (Baja / Medio-alto): lo acepta el responsable de seguridad. Superficies sin ruta por la pasarela (Media / Medio-alto): lo acepta el Council con control compensatorio (cuentas corporativas, consola de administración, rotación periódica) y revisión en el siguiente trimestral |
+| Residual | Formatos que el escaneo no reconoce (Baja / Medio-alto): lo acepta el responsable de seguridad. Superficies sin bloqueo técnico (chat y escritorio, IDE y suite ofimática; y, en el régimen b, lo que los *hooks* y el escaneo del equipo no reconocen del agente de código) (Media / Medio-alto): lo acepta el Council con control compensatorio (cuentas corporativas, consola de administración, rotación periódica) y revisión en el siguiente trimestral |
 | Cuándo vence la aceptación | El primer secreto expuesto por una superficie aceptada reabre la decisión (disparador de R4). El bloqueo de secretos no se relaja nunca (D9) |
 
 ### NIST y la ISO 42001: mapeo, evidencia y qué no se afirma
@@ -322,19 +327,33 @@ productos corporativos tienen superficies que quizá no pasen por ella
 ([ficha](../../context/hechos/uso-ia-interno.md)). Lo siguiente es el diseño a probar en el Q2,
 no una capacidad demostrada: ningún control de esta tabla se verificó contra el producto real.
 
-| Superficie | Control propuesto | Telemetría | Riesgo de *bypass* | Estado |
-|---|---|---|---|---|
-| Agente de código en terminal (~90% de los eventos de ese agente) | Enrutar por la pasarela y *hooks* de permisos | Logs de la pasarela | Uso con una cuenta o configuración personal | A probar en el Q2 |
-| Asistente de código en el IDE | Política de la organización del proveedor y lista de repos permitidos; no pasa por la pasarela | Consola de administración del proveedor | Alto: sin ruta por la pasarela hasta demostrar lo contrario | A probar en el Q2; si no hay control técnico, rige la política y se reporta aparte |
-| Chat y escritorio del asistente general | Cuentas corporativas de la organización, ajustes de retención y conectores; no pasa por la pasarela | Consola de administración | Alto: cuentas personales | A probar en el Q2 |
-| Asistente de la suite ofimática | Configuración del administrador y revisión mensual de funciones nuevas (R5) | Registros de auditoría de la suite | Medio: activación por defecto del proveedor | A probar en el Q2 |
-| Servidores MCP y conectores | Lista cerrada y revisión de cambios | Inventario y logs de la pasarela | Medio: instalación local por una persona | A probar en el Q2 |
+**Tres cosas que no se confunden.** *Prohibición*: lo que la política dice que no se hace;
+rige en todas las superficies, pero por sí sola no impide nada. *Bloqueo técnico*: un control
+que detiene el envío (pasarela con DLP, escaneo de secretos antes del envío); solo existe donde
+la superficie lo admite y se prueba en el Q2. *Control compensatorio*: lo que reemplaza al
+bloqueo donde no se puede bloquear (cuentas corporativas, consola de administración, rotación,
+auditoría); detecta o reduce, no previene. Donde hay prohibición sin bloqueo técnico queda un
+**residual** que acepta el Council (criterio de aceptación) y que se informa al board.
+
+| Superficie | Prohibición (política) | Bloqueo técnico | Control compensatorio | Telemetría | Riesgo de *bypass* | Estado |
+|---|---|---|---|---|---|---|
+| Casos propios (producto y agentes internos nuevos) | Datos prohibidos y secretos | Solo por la pasarela, 100%: DLP y escaneo de secretos | No hace falta: no tienen otra ruta | Logs de la pasarela | Bajo: sin ruta alternativa por diseño | Por diseño; a probar en el Q2 |
+| Agente de código en terminal (~90% de los eventos de ese agente) | Secretos y datos de cliente | *Hooks* de permisos y escaneo de secretos en el equipo y el repositorio, siempre. DLP sobre prompts en la pasarela **solo si el régimen comercial permite enrutarlo** (regímenes a y c del [Anexo B](02-arquitectura.md), "Política de ruteo") | Régimen b (la suscripción plana se rompería): lista cerrada de MCP, telemetría existente y ruteo ensayado, listo para activarse | Consola del proveedor; logs de la pasarela si se enruta | Uso con una cuenta o configuración personal | A probar en el Q2 |
+| Asistente de código en el IDE | Secretos y datos de cliente | Ninguno demostrado: no pasa por la pasarela hasta probar lo contrario | Política de la organización del proveedor y lista de repos permitidos | Consola de administración del proveedor | Alto: sin ruta por la pasarela | A probar en el Q2; si no hay control técnico, rige la política y se reporta aparte |
+| Chat y escritorio del asistente general | Datos Restringidos y de cliente | Bloqueo en navegador o equipo, solo si el parque lo permite (a probar) | Cuentas corporativas, ajustes de retención y conectores | Consola de administración | Alto: cuentas personales | A probar en el Q2 |
+| Asistente de la suite ofimática | Datos Restringidos y de cliente | Ninguno de la organización: lo da la configuración del administrador | Revisión mensual de funciones nuevas (R5) | Registros de auditoría de la suite | Medio: activación por defecto del proveedor | A probar en el Q2 |
+| Servidores MCP y conectores | Servidores fuera de la lista | Lista cerrada (allowlist) donde se pueda imponer | Revisión de cambios e inventario | Inventario y logs de la pasarela | Medio: instalación local por una persona | A probar en el Q2 |
 
 **Denominador del 90%.** Eventos del agente de código en terminal que la telemetría de la
-pasarela cuenta sobre el total de eventos del agente (según la consola del proveedor). Las
-demás superficies no entran en el 90%: se reportan con su propia cobertura (seats activos
-bajo control sobre seats activos) y las que quedan afuera se listan como riesgo aceptado,
-no se cuentan como cubiertas. La prueba de integración y de *bypass* por herramienta, y la
+pasarela cuenta sobre el total de eventos del agente (según la consola del proveedor). El 90%
+rige solo si el agente se enruta (regímenes a y c del Anexo B). Si enrutar obliga a facturar
+por API (régimen b), el agente no se enruta mientras la suscripción sea plana y se le exige
+control verificado sin pasarela; no cuenta en el 90% ni se presenta como "enrutado". Los casos
+propios van al 100% por la pasarela, aparte. Las demás superficies no entran en el 90%: se
+reportan con su propia cobertura (seats activos bajo control sobre seats activos) y las que
+quedan afuera se listan como riesgo aceptado, no se cuentan como cubiertas. Un gate de
+cobertura nunca obliga a enrutar si eso encarece el servicio: la tensión con F queda abierta
+(D10). La prueba de integración y de *bypass* por herramienta, y la
 migración de la configuración, tienen costo propio en "Insumos para Finanzas".
 
 El aislamiento de clientes tiene un límite: el staffing trabaja con las herramientas que
@@ -348,7 +367,7 @@ Los objetivos son propuestas del equipo, a calibrar con la línea base del Q1.
 | Trim. | Controles | Criterio de éxito | Costo en velocidad | Condición de abandono o cambio |
 |---|---|---|---|---|
 | Q1 | Ratificar la política; inventario v1; matriz de restricciones de los clientes principales y registro de la evidencia contractual (D9b); intake en 3 niveles; plan de incidentes | Política firmada; inventario con las 3 herramientas aprobadas, los servidores MCP y la IA embebida; matriz al 100% de los clientes principales | Bajo: solo trámite. La matriz frena los casos de cliente hasta completarse | Si más del 30% de los contratos queda ambiguo a los 4 meses, se aplica *default-deny* sobre el código de ese cliente y se pide revisión legal |
-| Q2 | Matriz superficie→control→telemetría (D8) con prueba de integración y de *bypass* por herramienta; pasarela con allowlist y DLP sobre prompts; escaneo de secretos; logs de acciones; red team interno; ejercicio de mesa de incidentes, que incluye la ruta de primera exposición de un secreto | Al menos el 90% de los eventos del agente de código pasa por la pasarela (denominador en D8); cada superficie restante tiene su control compensatorio y su cobertura reportada aparte; red team con hallazgos críticos cerrados | Medio: fricción en el agente de código | Si la actividad semanal de seats cae más de 15% frente a la línea base del Q1 dos meses seguidos, **solo los usos permitidos** pasan a monitoreo; el bloqueo de secretos, PII y datos prohibidos no se relaja nunca |
+| Q2 | Matriz superficie→control→telemetría (D8) con prueba de integración y de *bypass* por herramienta; pasarela con allowlist y DLP sobre prompts; escaneo de secretos; logs de acciones; red team interno; ejercicio de mesa de incidentes, que incluye la ruta de primera exposición de un secreto | Si su régimen comercial lo permite, al menos el 90% de los eventos del agente de código pasa por la pasarela (denominador en D8); si no, control verificado sin pasarela y ruteo ensayado; casos propios, 100%. Cada superficie restante tiene su control compensatorio y su cobertura reportada aparte, y el residual sin bloqueo técnico va al Council; red team con hallazgos críticos cerrados | Medio: fricción en el agente de código | Si la actividad semanal de seats cae más de 15% frente a la línea base del Q1 dos meses seguidos, **solo los usos permitidos** pasan a monitoreo; el bloqueo de secretos, PII y datos prohibidos no se relaja nunca |
 | Q3 | Revisión del modelo de amenazas de la primera función de IA en el producto; criterios de *eval* para salir a producción; documentación de proveedor; cláusula tipo para contratos | Una función de IA con ficha técnica, registro de eventos, supervisión humana y cláusula tipo lista para negociar con el cliente (la firma, no antes de G4) | Medio: agrega un gate antes de salir | Si tras dos ciclos de red team persisten hallazgos críticos, la función queda en L0-L1 o se cancela |
 | Q4 | Red team externo; extensión del alcance de ISO 27001 a IA; revisión de niveles de autonomía; informe anual al Directorio; gate de certificación 42001 | Cero hallazgos críticos abiertos; brecha frente a 42001 documentada; decisión del gate registrada | Bajo | Sin señal contractual ni producto liberado en G3, el red team externo y la extensión ISO (capa D, D9b) se difieren. Si ningún cliente exige 42001, no se certifica; si el costo de la auditoría supera el rango de Finanzas, se difiere |
 
@@ -429,6 +448,10 @@ horario del supuesto), que no está sumado al total.
   diseño de la plataforma. Alternativa: gobierno define el requisito (allowlist, registro,
   sin entrenamiento) y `architect` elige la herramienta; el costo del Q2 es un rango hasta
   que lo confirme.
+- **Con `architect` (ruteo del agente de código):** acordada la política del Anexo B: se
+  enruta solo si el régimen comercial lo permite, y el 90% rige en los regímenes a y c. Sigue
+  abierta con `caio`: F (`06-roadmap-riesgo.md`) todavía exige 90% sin condición, y hay que
+  alinearla.
 - **Con `finance`:** alrededor de la mitad (51%-52%) del costo de este anexo es tiempo reasignado, no caja, pero el
   tiempo compite con horas facturables (utilización ~83%). Finanzas decide si lo trata
   como costo de oportunidad o lo ignora.
@@ -481,7 +504,17 @@ redondeado). Tres lecturas de gobierno sobre esas cifras:
 
 - **Mensaje de la slide:** "Gobierno que habilita": un Council de 5 asientos dentro del
   comité de tecnología, intake en 3 niveles con respuesta en 5 días hábiles para el riesgo
-  medio, y control técnico de la salida de datos, no solo política en papel.
+  medio, y control técnico de la salida de datos donde la superficie lo admite; en el resto,
+  política y control compensatorio con residual aceptado por el Council, no una garantía
+  de bloqueo.
+- **Texto exacto propuesto para `caio`, slide 5 (`plan/slides.md:79`).**
+  - Actual: «Secretos y datos prohibidos, siempre bloqueados; el primer secreto expuesto ya
+    dispara la contención.»
+  - Nuevo: «Secretos y datos prohibidos: bloqueo técnico en la pasarela y en el equipo; en
+    chat, IDE y suite, solo control compensatorio, con residual que acepta el Council. El
+    primer secreto expuesto dispara la contención.»
+  - Decisión 3 de la slide: agregar «y aceptar el residual de las superficies sin bloqueo
+    técnico» o, si no hay lugar, dejarlo en el anexo (R4, aceptación del residual).
 - **Pedido al board 1:** ratificar la política de IA que está en borrador desde abril de 2026.
 - **Pedido al board 2:** aprobar el alcance explícito (sin decisiones de crédito ni
   scoring en 12 meses) y los topes de autonomía L0-L4 del plan.
