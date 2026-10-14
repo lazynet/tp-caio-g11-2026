@@ -325,9 +325,8 @@ def check(root, deck, mode):
             visible(documents.get(origin, "")).splitlines(), 1
         ):
             if re.search(
-                r"\b(pendiente\w*|TODO|TBD|FIXME|por definir|falta evidencia|sin evidencia|esqueleto)\b",
+                r"\b(TODO|TBD|FIXME|(?i:pendiente\w*|por definir|falta evidencia|sin evidencia|esqueleto))\b",
                 line,
-                re.IGNORECASE,
             ):
                 pending.append(
                     f"{origin.relative_to(root)}:{line_number}: {line.strip()}"
