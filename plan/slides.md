@@ -14,7 +14,8 @@ style: |
 <!-- Fuente única del deck. Nunca edites un deck generado: corré scripts/build-deck.sh.
      Una slide por `---`, con un título `#` cada una. Máximo 10 slides. Cada slide dice
      qué decisión le pide al board y apunta a su anexo. Borrador del CAIO: toda cifra
-     viene de un anexo y de fichas en draft. -->
+     viene de un anexo y de fichas en draft. El pedido G0 completo vive solo en la
+     slide 8; las demás piden su parte. -->
 
 <!-- _class: lead -->
 
@@ -24,7 +25,7 @@ style: |
 
 Grupo 11 · Diplomatura CAIO · UTN BA · caso propuesto, borrador sin verificación humana
 
-**Lo que pedimos hoy (G0):** T1 con techo de 32 mil USD de caja y 1,6 FTE clave, el marco de gates y la elección de cómo se cubre T2-T4. No el año.
+**Lo que pedimos hoy (G0):** tres meses con techo, el piso de capacidad del año y la regla de gates. No el año. El detalle, en la slide 8.
 
 ---
 
@@ -46,13 +47,13 @@ El cliente principal pesa 40%-50% de la facturación y la utilización es 83%-90
 
 # Tesis: dos frentes sobre una base, financiados por etapas
 
-- **IA en el producto** que se vende a bancos y fintechs: un piloto acotado, solo con señal de un cliente.
-- **IA en la operación interna:** de uso alto en Tecnología a uso medido en toda la empresa.
 - **Una base común:** gateway neutral al modelo, gobierno ratificado y línea de base congelada.
+- **IA en la operación interna:** de uso alto en Tecnología a uso medido en toda la empresa.
+- **IA en el producto, diferida hasta la señal de un cliente:** un asistente de integración en la plataforma propia, L1 y sin datos de clientes. Le ganó en RICE a dos alternativas (puntajes propuestos, sin medir).
 
-No se paga con productividad sola: compra cobertura de precio, licencia para venderles a bancos y la opción de un ingreso.
+No se paga con productividad sola: compra la opción de cobertura de precio (se confirma o se descarta en G2), la opción de un ingreso y, si la evidencia contractual de T1 la confirma, licencia para venderles a bancos.
 
-**Decisión:** el pedido G0 único (T1, techos, gates y capacidad de T2-T4). Ver [Anexo F — Roadmap ajustado por riesgo](annexes/06-roadmap-riesgo.md) y [Anexo E — Business case](annexes/05-business-case.md).
+**Decisión:** adoptar la tesis con el producto diferido. Ver [Anexo F — Roadmap ajustado por riesgo](annexes/06-roadmap-riesgo.md).
 
 ---
 
@@ -65,7 +66,7 @@ No se paga con productividad sola: compra cobertura de precio, licencia para ven
 
 | Aprobar en G0 | Se libera en G1-G2 | No aprobar todavía |
 |---|---|---|
-| T1: inventario, línea de base, matriz de superficies, telemetría | Gateway y harness (T2); piloto de T3 con matriz, política y señal | Modelo propio y contratos de más de 12 meses |
+| T1: inventario, línea de base, matriz de superficies, telemetría | Gateway, harness y prueba de portabilidad y costo (T2); piloto de T3 solo con señal | Modelo propio y contratos de más de 12 meses |
 
 **Decisión:** solo la columna de la izquierda. Ver [Anexo B — Arquitectura](annexes/02-arquitectura.md).
 
@@ -81,7 +82,7 @@ No se paga con productividad sola: compra cobertura de precio, licencia para ven
 **Decisiones:**
 1. Ratificar la política de IA en T1: compromiso interno, enmendable.
 2. Sin crédito ni scoring en 12 meses; el resto, clasificado caso por caso.
-3. Financiar los controles por gate.
+3. Financiar los controles por gate; la demostración externa (red team externo e ISO ampliada), solo con señal contractual en G3 o si G2 libera el producto.
 
 Ver [Anexo C — Gobierno, seguridad y compliance](annexes/03-gobierno-seguridad.md).
 
@@ -89,12 +90,12 @@ Ver [Anexo C — Gobierno, seguridad y compliance](annexes/03-gobierno-seguridad
 
 # Personas: capacitar y reasignar, no contratar
 
-- El piloto mostró que la gente valora la IA (NPS +42) y que falló la capacitación: 17% completó los cursos.
+- En el piloto de abril (n=12, autoseleccionado) el uso fue alto (NPS +42) y la capacitación falló: solo 17% completó los cursos. Es una señal, no una medición de toda la organización: la base de T1 la mide.
 - Formación por rol, en horario laboral, con champions con tiempo asignado.
 - Se mide **uso real semanal por área**, no seats comprados.
 - Ni las metas del plan llegan al 80% combinado del OKR: publicamos Tecnología y Operaciones habilitadas por separado.
 
-**Decisiones:** capacitar en vez de contratar; IA aplicada de T1 con **un** contractor a prueba, que choca con "no contratar", o un rol interno demostrado. Y si hay compromiso sobre el empleo.
+**Decisiones:** capacitar en vez de contratar; IA aplicada de T1 con **un** contractor a prueba, que choca con "no contratar", o un rol interno demostrado. Y la postura sobre el empleo: proponemos un compromiso con excepciones.
 
 Ver [Anexo D — Personas y cultura](annexes/04-personas-cultura.md).
 
@@ -102,47 +103,55 @@ Ver [Anexo D — Personas y cultura](annexes/04-personas-cultura.md).
 
 # Roadmap: cada trimestre se gana el siguiente
 
-| Gate | Pasa si… | Espera | Corta |
-|---|---|---|---|
-| G1 | Base congelada, política, matriz, básico ≥90% | 6 semanas para completar | Sin política o matriz: no hay producto en el año |
-| G2 | Throughput ≥ +3%; Tecnología ≥80%; señal de cliente | 0 a +3% o 60%-80%: T3 sin escalado | Sin mejora: base mínima. Sin señal: producto diferido |
-| G3 | Throughput ≥ +8%; SLO del piloto, si sigue | +5% a +8%: solo base mínima | Menos de +5%: corte del frente interno |
-| G4 | Camino a ~23% de throughput o interés contractual | — | Queda solo el frente interno |
+| | T1 → G1 | T2 → G2 | T3 → G3 | T4 → G4 |
+|---|---|---|---|---|
+| Técnico | Inventario, línea de base, telemetría | Gateway, evals, prueba de costo | Caso interno en L2; piloto si hay señal | Go/no-go de modelo propio |
+| Gobierno | Política, matriz de clientes | Pasarela, bypass, red team | Cláusula tipo, sin firma | Red team externo, si hay señal |
+| Cultural | Básico ≥90%, champions | Operaciones y staff | Casos por rol | Tecnología ≥85% |
+| Techo (miles USD, caja / tiempo) | 33 / 62 | 71 / 106 | 59 / 78 | 95 / 69 |
+| Pasa si | Base, política, básico ≥90% | Throughput ≥ +3%, Tecnología ≥80% | Throughput ≥ +8% | Camino a ~17% o interés contractual |
 
-**Decisión:** adoptar los gates por condición como regla de liberación de fondos. Ver [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md).
+- **Espera:** se sigue sin escalar y se vuelve a medir; la de throughput en G2 vence a las 6 semanas y, si no mejora, corta.
+- **Corta por frente:** sin política, no hay producto en el año; matriz ambigua al mes 4, sin piloto con ese cliente; debajo de la banda, queda la base mínima; en G4, no se financia el régimen (~53 por año de base mínima).
+
+**Decisión:** adoptar los gates como regla de liberación de fondos. Ver [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md).
 
 ---
 
 # Business case: un año de inversión con salida acotada
 
-| | Año 1 (miles de USD) |
+| Miles de USD | Año 1, producto diferido |
 |---|---|
-| Caja incremental, con contingencia | 114-314 |
-| Tiempo reasignado, a costo cargado | 150-408 (~4,5 FTE) |
-| Pedido G0 (T1) | hasta 32 de caja y 61 de tiempo |
-| Cortar en G1 | 73 en el medio, hasta 106 (caja: 27, hasta 38) |
+| Caja, con contingencia | 98-255 (114-314 si G2 libera el producto) |
+| Tiempo reasignado, a costo cargado | 115-320 (~3,5 FTE) |
+| Cortar en G1 | 73 en el medio; hasta 106 hasta cerrar y 146 en el año |
 
 - ROI a 12 meses negativo en los tres escenarios; beneficio de caja: cero.
-- Equilibrio a régimen: **~23% de throughput, por encima** del +20% del OKR. Cumplir la meta no alcanza.
-- A 12× de consumo, 211-267 por año: exposición de la empresa, con o sin plan.
+- Equilibrio a régimen: **~17% de throughput**, 3 puntos debajo del +20% del OKR: la meta lo cubre en el medio, sin certeza (~23% si se le carga el producto).
 
-**Decisión:** el pedido G0 y el resto por gates. Ver [Anexo E — Business case](annexes/05-business-case.md).
+**Decisión, el pedido G0 completo:**
+1. T1: hasta 33 de caja más 6 de reserva de cierre; hasta 62 de tiempo (1,6 FTE clave y 590 h distribuidas).
+2. Piso de capacidad: 1,6 FTE clave en T1; 2,2 / 2,2 / 2,1 en T2-T4 con el replan de T2 (respaldo: 2,5 en T2).
+3. Si se corta, base mínima hasta 41 de tiempo; T0, propuesto, hasta 7.
+
+Ver [Anexo E — Business case](annexes/05-business-case.md).
 
 ---
 
 # Riesgos: lo irreversible espera a G4
 
-| Escenario | Qué pasa |
-|---|---|
-| Pesimista con gates | Corte en G2: ≈ −245 (sin frenar: −481) |
-| Base | G4 con frente interno y piloto evaluado |
-| Optimista | En G4 se decide el primer contrato, que rige después |
+| Escenario | Qué pasa | Resultado del año (miles USD) |
+|---|---|---|
+| Pesimista con gates | Espera en G2; vence a las 6 semanas y corta | ≈ −262 (≈ −300 si la espera no venciera) |
+| Pesimista sin frenar | Todo el año ejecutado | −382; −502 con precio a 12× desde T3 |
+| Base | Producto diferido; G4 con el frente interno | ROI económico −84% |
+| Optimista | Señal en G2; en G4 se decide el primer contrato | ROI económico −76% |
+
+- A 12× de consumo, 211-267 por año: exposición de la empresa, con o sin plan.
 
 **Irreversibles, decididos en G4 y vigentes después:** datos de cliente a un modelo, contrato de IA con un cliente, L3 en producto, compromisos de más de 12 meses.
 
-**Abierto:** T2-T4 no entra en el sobre de tiempo. Ampliarlo a ~3,7 FTE clave o diferir el producto hasta la señal de cliente.
-
-**Decisión:** elegirlo en G0; proponemos diferir, con ampliación condicionada en G2. Ver [Anexo F](annexes/06-roadmap-riesgo.md) y [Anexo E](annexes/05-business-case.md).
+**Decisión:** el replan de T2, con la excepción de 0,3 FTE como respaldo. Ver [Anexo F](annexes/06-roadmap-riesgo.md) y [Anexo E](annexes/05-business-case.md).
 
 ---
 
@@ -152,8 +161,6 @@ Gabriela Temporale · Martin Vago · Pablo Ces · Eduardo Chaparro · Rafael Cio
 
 Responsables por sección: **pendiente** de acordar en el equipo.
 
-**Usamos el modelo operativo que proponemos:** roles (CAIO, arquitectura, gobierno, personas, finanzas) asumidos por agentes, una revisión adversarial del board y chequeos automáticos de fuentes y de fuga de datos.
+**Usamos el modelo operativo que proponemos:** roles asumidos por agentes, una revisión adversarial del board y chequeos automáticos de fuentes y de fuga de datos. Cada cifra remonta a un anexo; las fichas siguen en borrador, sin verificación humana. El ensayo de la defensa está pendiente.
 
-**Trazabilidad:** cada cifra remonta a un anexo; las fichas siguen en borrador, sin verificación humana. Defensa: storyline y banco de objeciones; el ensayo está pendiente.
-
-**Decisión:** ninguna; es el equipo que responde. Anexos A a F.
+**Resolución que proponemos:** el Directorio aprueba el G0 de la slide 8 y adopta los gates; el resto del año se gana trimestre a trimestre.
