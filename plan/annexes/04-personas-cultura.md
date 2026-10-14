@@ -71,9 +71,14 @@ combinado (ver "Meta de adopción y OKR combinado"). Ver desacuerdo D1.
 | Usan *few-shot* (ejemplos del resultado esperado) | 5% o menos | idem |
 | Uso frecuente (3+ días por semana) | 92% | idem |
 
-El piloto probó que **la gente usa y valora la herramienta** (NPS +42) y que
-**falló en capacitación**. El problema es de tiempo y de formato, no de interés.
-n=12 no representa a la organización, y el análisis de prompts cubre solo el chat.
+En el piloto, **los 12 participantes usaron y valoraron la herramienta** (NPS +42)
+y **la capacitación falló**. Es una señal de ese grupo, no una prueba sobre toda
+la organización: n=12, autoseleccionado, sin grupo de comparación, así que el
+piloto tampoco demuestra que el formato de casos por rol cause una mejor
+capacitación. Esa hipótesis la prueba el plan midiendo, no la da por cierta. El
+análisis de prompts cubre solo el chat. Este anexo **no extiende** la valoración
+del piloto a "la gente": cuando habla de la organización, usa la telemetría y la
+encuesta de la línea base de T1.
 
 ### Qué respalda el diseño (cursada)
 
@@ -123,6 +128,34 @@ RACI de personas (roles, no personas; una sola A por decisión,
 
 Responsable humano de cada fila: **pendiente**.
 
+### Antes y después de un proceso: del requerimiento al cambio en producción
+
+Aplicación del [grafo humano-agente](../../material/conceptos/m2u3-grafo-humano-agente.md)
+a un proceso de delivery de **equipos propios** (no de staffing, donde el cliente
+fija las herramientas). Es un **diseño propuesto**: `context/` no documenta el
+proceso real paso a paso, así que el "antes" es un proceso típico supuesto, a
+validar con un delivery manager antes de usarlo como línea de base. El modo de
+cada nodo sigue los [tres modos](../../material/conceptos/m2u3-tres-modos-ia.md).
+
+| Paso | Antes (nodo y modo) | Después (nodo y modo) | Decisión humana y quién revisa |
+|---|---|---|---|
+| 1. Especificar | Analista funcional escribe el requerimiento y los criterios de aceptación | Analista escribe el requerimiento y un agente propone casos borde y criterios faltantes (aumentación) | El analista decide qué entra; el tech lead revisa el criterio de "correcto" |
+| 2. Diseñar y estimar | Desarrollador y tech lead, en reunión | Desarrollador con asistente de código para alternativas (aumentación); el tech lead decide | Tech lead: diseño y alcance |
+| 3. Construir | Desarrollador escribe el código | Agente de código genera el borrador y las pruebas (automatización acotada); el desarrollador **supervisa y corrige** | Desarrollador: es responsable final de lo que se integra ([política](../../context/hechos/gobierno-y-politica-ia.md)) |
+| 4. Verificar | QA arma y corre pruebas a mano o con guiones propios | Agente genera pruebas y corre la compuerta de evals; QA diseña las compuertas y revisa los casos que falla (supervisión) | QA: define y aprueba el umbral; nada pasa si la compuerta no corre |
+| 5. Revisar el código | Un par humano revisa todo | Revisión asistida por agente que marca riesgos; un humano distinto del autor aprueba | Revisor humano: aprueba o rechaza; un agente nunca aprueba solo |
+| 6. Liberar y operar | DevOps y el equipo | Igual, con registro de qué parte tuvo asistencia de agente | Tech lead autoriza la liberación; incidentes los trata el equipo, con `governance` |
+
+**Handoffs que cambian:** el analista entrega criterios verificables por una
+compuerta (antes, texto para leer); el desarrollador entrega código con las
+pruebas que lo respaldan; QA entrega la compuerta y no solo el resultado. Donde
+el contrato del cliente prohíbe las herramientas, el flujo vuelve al "antes" en
+esos nodos y el plan no lo fuerza (ver "Staffing").
+
+**Qué se mide antes y después:** tiempo de ciclo del requerimiento a producción,
+retrabajo (cambios reabiertos) e incidentes, **contra la base prospectiva
+congelada** de T1, por área y agregado. No se atribuye mejora antes de T2.
+
 ### Cobertura de IA aplicada, por trimestre
 
 El [Anexo B](02-arquitectura.md) necesita 0,5 FTE de IA aplicada en T1 y 0,8 de
@@ -162,10 +195,15 @@ población son supuestos del equipo; el nivel básico es el piso para todos.
 |---|---|---|---|---|---|
 | Básico | Toda la organización, ~65 | Uso seguro, clasificación de datos, qué se puede enviar, verificar el output, reportar incidentes | Sesiones breves y guía de una página; **casos de su rol** | 6 | ~390 |
 | Intermedio | Operaciones y Tecnología usuarias frecuentes, ~50 | Pedir bien (ejemplos, contraargumentos), identificar casos de uso, supervisar | Talleres con casos reales del rol y práctica entre pares | 12 | ~600 |
-| Avanzado | Especialistas que diseñan e implementan, ~10 | Agentes, evals, harness, gobernanza técnica | Proyecto aplicado con tiempo asignado | 10-15% del tiempo semanal durante un trimestre | 520-780 |
+| Avanzado | Especialistas que diseñan e implementan, ~10 | Agentes, evals, harness, gobernanza técnica | Proyecto aplicado con tiempo asignado | 10-15% del tiempo semanal durante un trimestre | 480-720 |
 | Directivo | Primera línea y Directorio | Decidir inversión, riesgo, regulación y ROI | Briefings con casos | 3 | Dentro de la oficina del CAIO, sin costo aparte (supuesto) |
 
-Cálculo del avanzado: 10 personas x 13 semanas x 40 h x 10-15%. Los niveles y los
+Cálculo del avanzado, con la convención de costeo del plan (480 h por
+persona-trimestre, [convenciones](../../context/supuestos/convenciones-de-calculo.md)):
+10 personas x 480 h x 10-15% = 480-720 h. Las 520 h de 13 semanas x 40 h son
+calendario bruto y no se usan para costo. Poblaciones y horas coinciden con la
+ficha [poblaciones de capacitación](../../context/supuestos/poblaciones-de-capacitacion.md)
+y con el [Anexo E](05-business-case.md). Los niveles y los
 roles salen de [AI literacy](../../material/conceptos/m3u2-ai-literacy-niveles.md);
 los contenidos del básico y el intermedio responden a lo que el piloto mostró
 faltante (uso seguro, ejemplos, verificación).
@@ -320,9 +358,41 @@ documentado.
 |---|---|---|---|---|
 | D1 | Cómo medir la meta de adopción en Operaciones | A: 80% sobre Operaciones y Tecnología, como el borrador de OKR. B: 80% en Tecnología y una meta propia sobre personas **habilitadas** en Operaciones. | **B**, informando también A | Reversible: se cambia al completar la matriz |
 | D2 | Capacidad especializada en IA aplicada | A: sin incorporación, solo reasignar. B1: un contractor a prueba desde T1 (50% en T1, 100% de T2 a T4), que reemplaza la fracción de IA aplicada de B. B2: lo mismo desde T2. C: dos contrataciones en nómina. | **B1**: única forma de cubrir la concentración de capacidades sin romper la restricción de no contratar de forma masiva. **Choca con la restricción literal de "no contratar gente nueva"**: lo decide el Directorio. A es viable si ese techo se mantiene, con más riesgo de continuidad | B reversible (contrato corto); C poco reversible |
-| D3 | Qué se dice sobre el empleo | A: sin compromiso. B: compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. C: compromiso con excepciones. | **Se lleva al board sin elegir**: B baja el miedo al reemplazo pero ata margen; A deja el freno sin respuesta | B poco reversible |
-| D4 | Formato de la formación | A: curso obligatorio genérico. B: casos prácticos por rol con champions, en horario laboral. | **B**, por la evidencia del piloto | Reversible |
+| D3 | Qué se dice sobre el empleo | A: sin compromiso. B: compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. C: compromiso con excepciones. | **Postura propuesta: C**, con el texto de "Postura sobre el empleo (propuesta)". La decide el Directorio, con asesoría laboral; no es una política aprobada. B baja más el miedo pero ata margen; A deja el freno sin respuesta | B y C poco reversibles una vez comunicados |
+| D4 | Formato de la formación | A: curso obligatorio genérico. B: casos prácticos por rol con champions, en horario laboral. | **B**, por el pedido del piloto (más de la mitad de 12 autoseleccionados) y porque la falta de tiempo fue el primer freno; el efecto del formato se mide en T2-T3 | Reversible |
 | D5 | Art. 4 del AI Act | A: esperar a decidir si alcanza a Acme Labs. B: adoptarlo como piso, con registro. | **B**, sin citar fechas ni sanciones | Reversible |
+
+### Postura sobre el empleo (propuesta) y métricas de comportamiento
+
+**Propuesta, no política aprobada.** Texto sugerido para el Directorio, a revisar
+con asesoría laboral antes de comunicarlo: «Durante los 12 meses del plan, la
+ganancia de productividad por IA no se usa para desvincular a una persona.
+Primero se reasigna y se capacita. Quedan afuera, y se dicen de antemano, las
+causales que ya existían sin relación con la IA (desempeño sostenido, causa
+justa, pérdida de un cliente).» Es la opción C de D3. Alternativas: B, sin
+excepciones (más tranquilizadora, ata más el margen); A, sin compromiso (no
+responde el miedo al reemplazo, que la cursada marca como freno). **Costo y
+riesgo:** el costo es de margen y lo cuantifica `finance`; no está en este anexo.
+Riesgo: una promesa que no se cumple destruye la confianza que se busca; por eso
+se comunica solo después de la decisión del Directorio.
+
+**Métricas de comportamiento** (qué hace la gente, no qué declara). Todas por
+área, agregadas, con numerador y denominador y sin dato individual. Línea de base
+en T1; las que no tienen fuente hoy son supuestos del equipo:
+
+| Comportamiento observable | Cómo se observa | Qué señala | Fuente |
+|---|---|---|---|
+| Pedidos con ejemplos del resultado esperado | Muestra agregada de prompts del chat | Calidad de uso (hoy ≤5%, meta ≥30% en T3) | [Encuesta y pilotos](../../context/hechos/encuesta-y-pilotos-ia.md) |
+| Cambios con asistencia de agente que pasan la compuerta de pruebas y revisión de un humano distinto del autor | Registro del repositorio y de la compuerta | Supervisión real, no aprobación de trámite | Supuesto; depende de `architect` |
+| Consultas de uso y reportes de incidentes de staffing | Conteo del canal de consultas | Confianza para preguntar: sube al principio, y eso es bueno | Supuesto del equipo |
+| Asistencia a módulos y a talleres de champions | Registro de asistencia | Tiempo realmente liberado | Supuesto del equipo |
+| Pulso trimestral anónimo: miedo a ser reemplazado | Encuesta de tres preguntas, con mínimo de respuestas por grupo | Si el miedo baja con la comunicación | Supuesto; no hay medición propia hoy |
+| Rotación voluntaria de perfiles junior | Dato de Talento, por área | Efecto colateral del miedo | Supuesto; la serie histórica es un faltante |
+
+**No se miden** el uso por persona ni el volumen de prompts como desempeño
+individual: esa medición mataría la franqueza que se necesita. Un cambio de
+comportamiento sin mejora en tiempo de ciclo o calidad (los indicadores
+rezagados) se lee como uso de trámite y dispara la revisión del formato.
 
 ### Tensiones con otras miradas
 
@@ -348,21 +418,28 @@ costo de oportunidad real es la tarifa facturable de esas horas, que no está en
 |---|---|---|---|---|
 | Nivel básico, ~65 personas x 6 h | T1 | ~390 | 3.900 - 13.650 | Supuesto del equipo |
 | Nivel intermedio, ~50 personas x 12 h | T1-T3 | ~600 | 6.000 - 21.000 | Supuesto del equipo |
-| Nivel avanzado, ~10 personas, 10-15% del tiempo durante un trimestre | T2 | 520 - 780 | 5.200 - 27.300 | 10-15% de [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md); resto, supuesto |
+| Nivel avanzado, ~10 personas x 480 h x 10-15% (convención de costeo) | T2 | 480 - 720 | 4.800 - 25.200 | 10-15% de [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md); resto, supuesto |
 | Champions, 8 personas x 10% x 9 meses | T2-T4 | ~1.150 | 11.500 - 40.250 | 10% de [programa](../../material/conceptos/m3u2-programa-champions.md); resto, supuesto |
-| **Subtotal horas de capacitación** | T1-T4 | **~2.660 - 2.920** | **~26.600 - 102.200** | Suma |
+| **Subtotal horas de capacitación** | T1-T4 | **~2.620 - 2.860** | **~26.200 - 100.100** | Suma |
 | Líder del programa, 20% de una persona, 12 meses | T1-T4 | 0 (reasignación) | 10.800 - 24.000 | 20% x 12 x USD 4.500-10.000 ([tech lead](../../context/supuestos/costo-cargado-por-rol.md)) |
 | Contractor de IA aplicada, 9 meses, 100% | T2-T4 | n/a | 40.500 - 99.000 | 9 x USD 4.500-11.000 ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)). Reemplaza la fracción de 0,8 FTE de IA aplicada del Anexo B: no se suma con ella |
 | Contractor de IA aplicada en T1, 50% (alternativa B1) | T1 | n/a | 6.750 - 16.500 | 0,5 x 3 meses x USD 4.500-11.000. Reemplaza el 0,5 FTE de IA aplicada de T1 del Anexo B. **Pasa a caja un costo que B tenía como tiempo** |
 | T0: reconstrucción retrospectiva y diseño de encuesta | T0 | 60 - 100 | 1.700 - 6.300 | Supuesto del equipo: 1,5 a 2,5 semanas del perfil técnico que lidera el programa, a USD 28-63 por hora (4.500-10.000 mensuales de tech lead sobre 160 h) |
 | Certificación o curso externo del nivel avanzado | T2 | n/a | **Sin estimar** | Falta cotización; no se inventa |
-| Instrumentación de medición de uso en chat y Gemini | T1 | n/a | **Sin estimar** | Dependencia de `architect` |
+| Instrumentación de medición de uso en chat y Gemini | T1 | n/a | Incluida en DevOps/QA del [Anexo B](02-arquitectura.md) (1.400-7.100 de tiempo); no suma | Costeada por `architect`, sin cotización de proveedores |
 | Reconocimiento de champions | T2-T4 | n/a | 0 (no monetario) | Supuesto del equipo; si es monetario, Finanzas lo ajusta |
-| **Total identificado** | T0-T4 | | **~86.300 - 248.000** | Suma de los renglones con costo, incluida la alternativa B1. Sin B1: ~79.600 - 231.500. No descuenta el solape con el Anexo B |
+| **Total identificado** | T0-T4 | | **~86.000 - 245.900** | Suma de los renglones con costo, incluida la alternativa B1. Sin B1: ~79.200 - 229.400. No descuenta el solape con el Anexo B |
 
-Escala: las ~2.660-2.920 horas son unas 40-45 horas por persona de la dotación
+Escala: las ~2.620-2.860 horas son unas 40-44 horas por persona de la dotación
 ([tamaño y estructura](../../context/hechos/tamano-y-estructura.md)), cerca del
-2% a 2,5% de una jornada anual. No se publica una base de horas totales de la
+2% a 2,5% de una jornada anual.
+
+**Cómo entra en el Anexo E.** Las horas de este anexo son **tiempo distribuido**
+en la dotación (el segundo sobre de E: 590 h en T1), no el sobre de personas
+clave. El tiempo clave que D aporta en T1 es el 20% del líder del programa, y el
+sobre que el board confirma en G0 es de **≥1,6 FTE clave** en T1 ([Anexo E](05-business-case.md)).
+El desglose de las 590 h de T1 entre básico e intermedio lo consolida E; D da las
+poblaciones y las horas por nivel. No se publica una base de horas totales de la
 empresa. Si el costo total entra dentro
 del 1% a 3% de la facturación que se asume como capacidad de inversión
 ([supuesto](../../context/supuestos/capacidad-de-inversion.md)) lo calcula
@@ -373,12 +450,19 @@ Finanzas: la facturación en USD no se publica.
 - **Decisión que se le pide al board:** aprobar capacitar y reasignar en vez de
   contratar, más **un** perfil especializado a prueba (D2), aclarando que choca con
   la restricción actual de no contratar.
-- **Frase central:** el piloto probó que la gente usa y valora la IA (NPS +42) y
-  que lo que falló es el tiempo y el formato de capacitación. El plan lo corrige
-  con casos por rol, horas dentro de la jornada y champions con tiempo asignado.
-- **Cifra para el CFO:** ~2.660-2.920 horas de capacitación, ~40-45 horas por
-  persona, a USD 26.600-102.200 al costo cargado; Finanzas suma el costo de
-  oportunidad a tarifa facturable. Total de personas identificado ~USD 86.300-248.000 (con contractor desde T1).
+- **Frase central:** en el piloto de abril (12 personas que se anotaron solas) el
+  uso fue alto (NPS +42) y la capacitación falló: el primer freno fue el tiempo.
+  El plan responde con casos por rol, horas dentro de la jornada y champions con
+  tiempo asignado, y mide en T1 si pasa lo mismo en toda la organización.
+- **Redacción sugerida para la slide 6 (propuesta para `caio`):** reemplazar
+  «El piloto mostró que la gente valora la IA (NPS +42) y que falló la
+  capacitación: 17% completó los cursos.» por «En el piloto de abril (n=12,
+  autoseleccionado) el uso fue alto (NPS +42) y la capacitación falló: solo 17%
+  completó los cursos. Es una señal, no una medición de toda la organización:
+  la base de T1 la mide.»
+- **Cifra para el CFO:** ~2.620-2.860 horas de capacitación, ~40-44 horas por
+  persona, a USD 26.200-100.100 al costo cargado; Finanzas suma el costo de
+  oportunidad a tarifa facturable. Total de personas identificado ~USD 86.000-245.900 (con contractor desde T1).
 - **Señal de alerta que debe ir en la slide:** la meta combinada de 80% del
   borrador de OKR 2027 es inalcanzable con Operaciones prohibida por contrato (D1).
 - **Qué se mide:** uso real semanal por área, no seats; condiciones de abandono
@@ -391,7 +475,12 @@ Finanzas: la facturación en USD no se publica.
   convertirlos en fichas `Supuesto` o validarlos con la línea de base.
 - Las cifras de adopción vienen de fichas en `draft`; varias son rangos o
   proporciones aproximadas, y la telemetría solo mide el agente de código.
-- n=12 en el piloto, autoseleccionado: no representa a la organización.
+- n=12 en el piloto, autoseleccionado: no representa a la organización ni prueba
+  que el formato cause mejor capacitación.
+- El antes y después del proceso de delivery es un diseño propuesto sobre un
+  proceso típico supuesto; falta validarlo con un delivery manager.
+- La postura sobre el empleo es una propuesta; falta la decisión del Directorio y
+  la revisión laboral.
 - Responsable humano de cada acción: **pendiente**.
 - No se usaron cifras del curso sin fuente primaria (60% menos de resistencia).
 
