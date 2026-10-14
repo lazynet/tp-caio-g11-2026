@@ -660,6 +660,12 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
   Anexos B, C y D), las bandas de espera de G2 y G3 (Anexo F), qué renglones de
   B son del frente producto y el costo de "T3 sin escalado" (los dos, lectura de
   Finanzas en este anexo).
+- El corte de G3 en el pesimista deja solo la base mínima en T4: es la lectura
+  de la columna de fondos de G3 en el [Anexo F](06-roadmap-riesgo.md) ("T4"
+  entero). Si el corte alcanzara solo al frente interno y la base común siguiera
+  en T4, el ahorro sería ~13 de tiempo: el año quedaría en ~396 y el neto en
+  ≈ −391, casi igual al estrés. El gate de throughput protege solo si también
+  frena la base común; lo define `caio`.
 - El avanzado de D se costea con 520 h por trimestre (calendario); con la
   convención de 480 bajaría T2 en 0,4-2,1 mil de tiempo. Se usa el valor del
   dueño hasta que lo cambie.
