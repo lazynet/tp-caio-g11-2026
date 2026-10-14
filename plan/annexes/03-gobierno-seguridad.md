@@ -408,7 +408,7 @@ plataforma de T2); D, de la señal contractual o del producto en G3.
 **Recomendación.** M se financia siempre. T y D se liberan por señal, como decidió el
 board en E: G1 libera la plataforma (y con ella T) si hay al menos una señal; D se decide
 en G3. Sin señal, el año corre como la opción (b) de E y cuesta lo que M: 32.650-82.150, más
-hasta 1.875-9.375 de tiempo de los controles compensatorios de D9c (E no los cuenta). Ahorra
+hasta 1.875-9.375 de tiempo de los controles compensatorios de D9c (E los suma: ≈ 199 en el año). Ahorra
 la caja de T (4.500-18.000) y la de D (11.600-31.000). **Desacuerdo a la vista:** antes este
 anexo financiaba T por riesgo propio, porque R1 y R4 exponen a Acme Labs aunque no venda
 IA, y eso sigue siendo cierto. Con la decisión del board ese riesgo no se mitiga con
@@ -520,7 +520,7 @@ de la aceptación queda pendiente.
 board. (ii) No extender la prueba a la cohorte: reduce el riesgo, pero deja a (b) sin su
 medición. (iii) Aceptar solo con la política: descartada, es lo que hoy deja sin prueba.
 **Costo:** los compensatorios suman hasta 1.875-9.375 de tiempo (la parte de tiempo de T),
-que el (b) de E no incluye; sin el escaneo local de secretos probado, R4 no tiene bloqueo en
+que E suma a la rama sin señal (no al (b) de "Alternativas equivalentes"); sin el escaneo local de secretos probado, R4 no tiene bloqueo en
 ninguna superficie. **Éxito:** secreto sintético bloqueado y alertado en el agente; críticos
 del red team cerrados. **Abandono:** incidente confirmado o condición incumplida.
 
