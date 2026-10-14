@@ -57,7 +57,8 @@ está medido. Los usa el anexo de arquitectura.
 | Precisión mínima | Semiancho ≤ 3 puntos porcentuales |
 | Muestra mínima | 15 personas activas (piso del supuesto de 15-20), con base congelada propia y PR en al menos 6 de 8 semanas de la ventana |
 | Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: "espera" (6 semanas más, que suman semanas y no personas); vencida, rige la regla del gate. Con N < 15 no se espera: el gate se reformula antes de G0 |
-| Calidad | Mismo método sobre incidentes y retrabajo por cada 100 PR |
+| Calidad | Mismo método sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, con margen de no inferioridad δ = +10% (supuesto sin dato; se fija en G0). **Daño** (límite inferior > 0): la ganancia no cuenta y el gate corta. **Incierto** (el intervalo incluye 0 y el límite superior > δ): el throughput no puede pasar; cuenta como espera, una vez, y vencida como no pasa. **No deterioro demostrado** (límite superior ≤ δ): decide el throughput |
+| Respaldo | La serie retrospectiva de T0 estima tendencia y ruido; no es base de atribución. Usada como base, es solo una lectura contra tendencia, sin atribuir ganancia: no libera capital y puede producir espera o corte, no paso. El protocolo completo está en el anexo B |
 
 ## Replan de capacidad de T2 con el producto diferido
 

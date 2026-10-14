@@ -23,16 +23,17 @@ cada cliente y no se cuenta.
 
 # Qué lo invalidaría
 
-- Que la línea de base congelada en T1 no se mida o resulte inestable, y la
-  serie retrospectiva del cuarto trimestre de 2026 tampoco sirva de respaldo
-  (ver [convenciones](/supuestos/convenciones-de-calculo.md)).
+- Que la línea de base congelada en T1 no se mida o resulte inestable. La serie
+  retrospectiva del cuarto trimestre de 2026 no la reemplaza: no atribuye
+  ganancia y solo da una lectura contra tendencia (ver
+  [convenciones](/supuestos/convenciones-de-calculo.md)).
 - Que la mejora de velocidad se pague con más incidentes o retrabajo.
 - Que el ahorro de horas no se traduzca en margen (por ejemplo, en contratos
   facturados por hora, donde menos horas es menos facturación).
 
 # Cómo verificarlo
 
-Congelar la línea de base en las semanas 1-4 de T1, con la serie retrospectiva
-del cuarto trimestre de 2026 para estimar ruido, y comparar trimestre a
-trimestre, junto con incidentes y retrabajo. El resultado contra el OKR, que usa
+Congelar la línea de base en las semanas 1-4 de T1, usar la serie retrospectiva
+del cuarto trimestre de 2026 solo para estimar tendencia y ruido, y comparar
+trimestre a trimestre contra la base, junto con incidentes y retrabajo. El resultado contra el OKR, que usa
 el cuarto trimestre de 2026, se informa al lado.

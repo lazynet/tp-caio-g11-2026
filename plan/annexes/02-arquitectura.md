@@ -236,7 +236,6 @@ ruido. La responsabilidad humana de ratificarlo en G0 está **pendiente**.
 | Elemento | Propuesta |
 |---|---|
 | Base | La prospectiva congelada en las semanas 1-4 de T1, de la misma cohorte, fechada y sin edición. La serie retrospectiva de T0 estima ruido y tendencia; no es base de atribución (ver "Respaldo") |
-
 | Estimador | Cambio relativo apareado: PR aceptados por semana de cada persona activa en la ventana del gate contra su propia base congelada, agregado con los pesos de estrato (tipo y tamaño) fijados en la base. Donde exista un grupo que todavía no adopta, se resta su cambio (diferencia en diferencias); si no, se resta la tendencia estimada con la serie de T0 |
 | Intervalo | *Bootstrap* percentil remuestreando personas (no PR), 2.000 réplicas, confianza 90% bilateral. Pasa si el límite inferior ≥ el umbral de la banda; un intervalo que cruza el umbral es "espera", como dice F |
 | Precisión mínima | Semiancho ≤ 3 puntos porcentuales: con más, el intervalo no separa las bandas de +3%, +5% y +8% |
@@ -520,31 +519,26 @@ se liberan gate por gate.
 
 | Elemento | Qué se pide |
 |---|---|
-| Qué se autoriza | Los hitos de Q1, en su versión acotada (T1-b, abajo) |
-| Capacidad máxima de este anexo | 0,6 FTE clave con el contractor B1 (0,9 con el rol interno). El sobre del plan completo y su piso (1,6 FTE clave) los cierra el [Anexo E](05-business-case.md) |
+| Qué se autoriza | Los hitos de Q1, en su versión acotada (T1-b, abajo), más la prueba chica de T1 ([Anexo E](05-business-case.md)). Q2 no se autoriza: G1 lo libera, con o sin señal ("Bifurcación en G1") |
+| Capacidad máxima de este anexo | 0,6 FTE clave con el contractor B1 (0,9 con el rol interno), más 16-24 h de lectura de DevOps/QA de la prueba chica. El sobre del plan completo y su piso (1,6 FTE clave; techo de tiempo 62, o 72 con la prueba) los cierra el [Anexo E](05-business-case.md) |
 | Caja de este anexo | Infraestructura de telemetría y registro, USD 500-1.500 en el trimestre; el tope total de T1 lo fija el Anexo E |
 | Entregables | Inventario de datos, línea base congelada, matriz superficie→control→telemetría, telemetría unificada, matriz de restricciones por cliente |
 | Decisiones delegadas | Elegir herramientas y proveedores detrás del gateway (reversible), a la dirección técnica |
 | Condiciones de G0 | Vía de IA aplicada aprobada (B1, o rol interno demostrado); disponibilidad de historial de PR, integración continua y tickets para la línea base; salida para el exceso de T2 (replan de B o excepción) |
-| Fuera del pedido | Q2 a Q4, el modelo propio, cualquier compromiso mayor a 12 meses y todo compromiso contractual con clientes |
+| Fuera del pedido | Q2 a Q4 (incluida la plataforma de T2, que G1 libera solo con señal), el modelo propio, cualquier compromiso mayor a 12 meses y todo compromiso contractual con clientes |
 
-**T1-a y T1-b.** T1-a pone el gateway en laboratorio con dos proveedores ya en
-el primer trimestre. T1-b, recomendado, difiere el gateway al inicio de Q2 y
-conserva inventario, línea base, matriz de superficies y telemetría. El
-[Anexo F](06-roadmap-riesgo.md) ya ubica el gateway en T2. Comparadas con la
-**misma** provisión de IA aplicada (insumo para la justificación de los 100 días
-de F; los otros anexos suman 1,0 FTE clave en T1, [Anexo E](05-business-case.md)):
-
-| Provisión de IA aplicada | T1-b: este anexo / total clave | T1-a: este anexo / total clave | Diferencia de T1-a |
-|---|---|---|---|
-| Contractor B1 | 0,6 / 1,6 | 0,8 / 1,8 | +0,2 FTE clave; infraestructura +1-3 mil de caja (por mes en lugar de por trimestre) |
-| Rol interno | 0,9 / 1,9 | 1,3 / 2,3 | +0,4 FTE clave; ídem caja |
-
-Con el contractor y en la lectura separada de E (solo FTE clave), T1-a entra en el
-máximo de 2,25: la capacidad no lo descarta por sí sola. En la lectura estricta
-(clave más horas distribuidas) no entra ninguna de las dos: 3,0 contra 2,8 de T1-E. Lo descartan la atribución (base congelada en las semanas 1-4 y rampa 0% en
-T1) y que el gateway en laboratorio no produce valor medido sin harness ni evals,
-que son de T2. Que la caja de T1-a entre en el techo de T1 lo verifica E.
+**T1-a y T1-b.** T1-a pone el gateway en laboratorio con dos proveedores en el
+primer trimestre; T1-b, recomendado, lo difiere al inicio de Q2 y conserva
+inventario, línea base, matriz de superficies y telemetría. El
+[Anexo F](06-roadmap-riesgo.md) ya ubica el gateway en T2. Con la misma provisión
+de IA aplicada (los otros anexos suman 1,0 FTE clave en T1, [Anexo E](05-business-case.md)),
+T1-a pide +0,2 FTE clave con el contractor B1 (0,8 contra 0,6) y +0,4 con el rol
+interno (1,3 contra 0,9), más 1-3 mil de caja de infraestructura. Con el
+contractor y en la lectura separada de E, T1-a entra en el máximo de 2,25; en la
+lectura estricta no entra ninguna (3,0 contra 2,8 de T1-E). Lo descartan la
+atribución (base congelada en las semanas 1-4 y rampa 0% en T1) y que el gateway
+en laboratorio no produce valor medido sin harness ni evals, que son de T2. Que
+su caja entre en el techo de T1 lo verifica E.
 
 ### Calendario de prerrequisitos (T0 y T1)
 
@@ -564,6 +558,8 @@ alcanza, la ganancia tampoco se atribuye (ver el hito de línea base).
 
 La columna "Fr." usa las letras del [Anexo E](05-business-case.md): **B** base
 común, **I** frente interno, **P** frente producto (solo si G2 lo libera).
+Los hitos de Q1 corren en las dos ramas. Los de Q2 a Q4 son la **rama con
+señal**; la rama sin señal está en "Bifurcación en G1", después de la tabla.
 
 | Trim. | Fr. | Hito | Criterio de éxito | Condición de abandono |
 |---|---|---|---|---|
@@ -587,6 +583,72 @@ común, **I** frente interno, **P** frente producto (solo si G2 lo libera).
 | Q4 | B | Decisión sobre modelo en infraestructura propia | Go/no-go con la matriz de clientes y el escenario de consumo | Sin demanda contractual demostrada: no se compra |
 | Q4 | I | Medición de productividad contra la línea base | Tendencia con intervalo por encima de la línea base, sin más incidentes ni retrabajo | Sin mejora, o con más incidentes: se frena la expansión |
 | Q4 | B | Revisión de arquitectura y de contratos de proveedor | ADR actualizados; compromisos de volumen alineados al gate | — |
+
+### Bifurcación en G1: con señal y sin señal
+
+**Problema.** El año completo de plataforma (394 de costo económico,
+[Anexo E](05-business-case.md)) se compromete antes de saber si algo la paga.
+**Decisión humana (2026-10-14):** G1 libera la plataforma de T2 (contractor al
+100%, gateway, pasarela) solo con al menos una señal: contractual (el umbral de
+C), un anuncio del proveedor de pasar a precio por consumo, o una señal de cliente
+para el producto. Sin señal, T2-T4 corre como la opción (b), con la prueba
+extendida a la cohorte, y G2 y G3 vuelven a leer las señales. No es un corte:
+difiere la plataforma. Las cifras son de E ("Alternativas equivalentes"); no se
+recalculan acá.
+
+| Hito de Q2 a Q4 | Con señal | Sin señal |
+|---|---|---|
+| Costo del año (E) | 394 (213-575) | ≈ 193: T0-T1 del paquete 69, prueba chica 6, T2-T4 de (b) ~114, cierre del contractor 4 |
+| Contractor | Al 100% en T2-T4; sin contractor rige el modo control ("Exceso de T2") | No se contrata; el B1 de T1 cierra |
+| Gateway en laboratorio, bypass por superficie y FinOps con escenario de consumo (Q2) | Q2 | **Se difiere.** FinOps queda en costo por persona activa desde la telemetría del proveedor, sin costo por consulta ni por resultado (supuesto del arquitecto) |
+| Harness v1, suite de evals en CI y dataset v1 (Q2) | Q2 | **Se difiere** |
+| Prueba de portabilidad y costo (Q2) | Resultado en el paquete de G2 | **Se difiere** |
+| Caso de referencia en L2 y aislamiento por tenant (Q3) | Q3 | **Se difiere** |
+| Piloto de producto y red team (Q3-Q4) | Solo si G2 lo libera | No corre; con señal de cliente en G2 no arranca en T3 por falta de base (ver abajo) |
+| Prueba extendida: contrato de agente, skills y guía de revisión en toda la cohorte, sobre repositorios que la matriz habilite | Dentro de la formación | **Se mantiene**; es el mecanismo de g ([ficha](../../context/supuestos/alternativas-de-menor-alcance.md)) |
+| Medición contra la base, telemetría, matrices de superficie y de clientes | Se mantienen | **Se mantienen**, con la cohorte completa |
+| Controles | Capa T de C: bloqueo y registro | Solo capa M de C (política, matriz, inventario, legal): R2 y R4 quedan en política |
+| Infraestructura propia y revisión de contratos (Q4) | Q4 | Q4, sin demanda: no se compra |
+
+**Qué se pierde o se atrasa sin señal.**
+
+- **Cobertura de precio:** *fc* × *s* no se mide y la palanca no se afirma. Si el
+  proveedor anuncia consumo, es una señal: G2 o G3 la leen y la plataforma
+  arranca recién ahí. Hasta entonces la exposición se acota con la regla de F
+  (más de 6× sin mitigar congela la expansión y topea el consumo), no con ruteo.
+- **Caso de referencia en L2:** sin harness ni evals no hay caso. Cada gate de
+  espera lo corre un trimestre: liberar en G2 lo lleva a T4, sin margen; en G3
+  no llega a L2 en el año.
+- **Modo control:** el gateway en laboratorio y el bypass por superficie no
+  corren en T2. Las superficies quedan cubiertas solo por política y matriz,
+  sin control verificado.
+- **Producto:** una señal de cliente en G2 no alcanza para un piloto en T3,
+  porque gateway, harness y aislamiento no existen. Arranca como pronto en T4
+  con una base recién armada, o pasa al año 2 (lo decide `caio` en G2).
+- **Se evita:** la concentración en el contractor y la dependencia de su 0,2
+  libre. No cambia ninguna puerta de un solo sentido: ambas ramas son
+  reversibles y ninguna firma, compra hardware ni envía datos de clientes.
+
+**Condiciones técnicas que deja cada rama para leer las señales.**
+
+| | Con señal | Sin señal |
+|---|---|---|
+| G2 | Prueba de portabilidad y costo con *fc*, *s* y días-persona; caso de referencia en sombra; FinOps con el múltiplo medido; throughput | Throughput con la cohorte completa; telemetría del proveedor por persona y superficie, con la que se dimensiona un cambio de precio; matriz de clientes para juzgar la señal contractual y la de producto |
+| G3 | Caso en L2, aislamiento por tenant, lote reproducible | Lo mismo, más el insumo de una plataforma liberada en G2: la prueba de portabilidad llega a G3, no a G2 |
+| Qué no queda | — | Contractor, lote reproducible, suite y dataset: liberar más tarde obliga a contratar entonces (el plazo no consta: faltante) |
+
+**Contrato de la propuesta.** *Alternativas:* aprobar el año con plataforma
+(descartado en E) o correr siempre como (b) (descartado: deja sin respuesta un
+cambio de precio o una demanda contractual). *Recomendación:* la bifurcación.
+*Dependencias:* `finance` (E) y `governance` (C) fijan el umbral y el modo de
+leer cada señal; este anexo aporta la telemetría. *Costo:* el de E; la
+diferencia entre ramas, 394 − 193 ≈ 201, es lo que no se gasta sin señal.
+*Riesgo (para `governance`):* en la rama sin señal no hay bloqueo ni registro
+en el gateway, y R2 y R4 dependen de la política. *Responsable humano:*
+pendiente. *Criterio de éxito:* en G2 la rama que corrió deja las condiciones de
+la tabla. *Abandono:* la prueba extendida no arranca si la matriz no habilita
+repositorios para 15 personas activas; ahí la rama sin señal queda en medición y
+formación.
 
 ## Insumos para Finanzas
 
@@ -682,7 +744,8 @@ montos de facturación.
   casos propios, siempre por gateway.
 - **Qué pedimos al board (un solo pedido, G0):** autorizar T1 en su versión
   acotada (T1-b) con tope de caja y de capacidad, y adoptar el marco de gates. Q2
-  es dirección de diseño y se libera en G1; el piloto de producto, además, depende
+  es dirección de diseño y se libera en G1 solo con señal (sin ella, T2-T4 corre
+  como la opción (b), y G2 y G3 vuelven a leer); el piloto de producto, además, depende
   de la matriz de restricciones, de la política ratificada y de la señal de
   cliente en G2. G0 también decide la salida para el exceso de ~0,3 FTE de T2.
   **No** se aprueba el modelo propio ni compromisos mayores a 12 meses.
@@ -690,7 +753,7 @@ montos de facturación.
   el consumo real es un múltiplo de la suscripción. Se presupuesta el escenario de
   consumo y se prueba la salida de proveedor, no se declara. La cobertura de
   precio del gateway es una hipótesis que la prueba de T2 confirma o descarta en
-  G2. La ganancia de throughput se valúa como horas evitadas a output fijo, no
+  G2, y solo existe si G1 libera la plataforma; sin señal, la palanca no se afirma. La ganancia de throughput se valúa como horas evitadas a output fijo, no
   como caja.
 - **Riesgo que hay que nombrar:** el piloto de producto tiene hipótesis elegida
   (asistente de integración, Anexo F) pero ningún cliente que lo habilite
