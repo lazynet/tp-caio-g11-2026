@@ -8,10 +8,13 @@ title: "Anexo D — Personas, cambio y roadmap cultural"
 
 Slide que sustenta: [Slide 6 — Personas y cultura](../slides.md).
 
-Convención de tiempo: **T1 a T4** son los cuatro trimestres del plan. Se asume
-que T1 arranca con la aprobación del presupuesto 2027 (supuesto del equipo) y
-que el cuarto trimestre de 2026 es la línea de base (T0), coherente con el
-borrador de OKR de Tecnología 2027.[^okr]
+Convención de tiempo: el plan tiene una **preparación previa** (octubre-diciembre
+de 2026) y **cuatro tramos de tres meses** (meses 1-3, 4-6, 7-9 y 10-12, de
+enero a diciembre de 2027), con una revisión mensual del AI Council entre
+decisiones ([convenciones](../../context/supuestos/convenciones-de-calculo.md)). Se
+asume que el mes 1 arranca con la aprobación del presupuesto 2027 (supuesto del
+equipo) y que la preparación previa es la línea de base retrospectiva, coherente
+con el borrador de OKR de Tecnología 2027.[^okr]
 
 ## Objetivo
 
@@ -58,7 +61,8 @@ peso parecido, la base de hoy es ~4 de cada 10 (promedio de ~7 y ~1 de cada 10,
 cálculo de este anexo). Y si Tecnología llegara a 85%, Operaciones tendría que
 llegar a ~75% para cumplir la meta combinada. Eso no es alcanzable si los clientes
 prohíben las herramientas, y las metas propias de este anexo tampoco llegan a 80%
-combinado (ver "Meta de adopción y OKR combinado"). Ver desacuerdo D1.
+combinado (ver "Meta de adopción y OKR combinado"). Ver el desacuerdo sobre la
+meta de adopción en la tabla de decisiones.
 
 ### Calidad de uso y capacitación
 
@@ -78,7 +82,7 @@ piloto tampoco demuestra que el formato de casos por rol cause una mejor
 capacitación. Esa hipótesis la prueba el plan midiendo, no la da por cierta. El
 análisis de prompts cubre solo el chat. Este anexo **no extiende** la valoración
 del piloto a "la gente": cuando habla de la organización, usa la telemetría y la
-encuesta de la línea base de T1.
+encuesta de la línea base de los meses 1-3.
 
 ### Qué respalda el diseño (cursada)
 
@@ -107,8 +111,8 @@ continuidad.[^estructura]
 | Rol de IA | Quién lo cubre | Vía | Tiempo (supuesto del equipo) | Qué cambia |
 |---|---|---|---|---|
 | Lidera el programa de adopción (oficina del CAIO) | Un perfil técnico interno | Reasignar | 20% de una persona, 12 meses | Opera literacy, champions y métricas; no decide políticas |
-| Especialista en IA aplicada (evals, harness, gobierno técnico) | Un perfil externo a prueba | **Tercerizar (contractor)**; alternativas en D2 y "Cobertura de IA aplicada" | 0,5 persona en T1; 1 persona de T2 a T4 solo si G1 encuentra una señal | Absorbe la concentración de capacidades críticas; documenta y transfiere |
-| Champions | Personas de Tecnología, Operaciones y staff | Reasignar | 10% de la jornada, T2 a T4 | Casos prácticos por rol, soporte entre pares, feedback |
+| Especialista en IA aplicada (evals, harness, gobierno técnico) | Un perfil externo a prueba | **Tercerizar (contractor)**; alternativas en la decisión sobre IA aplicada y en "Cobertura de IA aplicada" | 0,5 persona en los meses 1-3; 1 persona en los meses 4-12 solo si la decisión del mes 3 encuentra una señal | Absorbe la concentración de capacidades críticas; documenta y transfiere |
+| Champions | Personas de Tecnología, Operaciones y staff | Reasignar | 10% de la jornada, meses 4-12 | Casos prácticos por rol, soporte entre pares, feedback |
 | Desarrolladores | Equipo actual | Capacitar | Nivel intermedio y avanzado | Pasan de escribir a **supervisar y revisar** agentes; el humano sigue siendo responsable final ([política](../../context/hechos/gobierno-y-politica-ia.md)) |
 | QA y automatización | Equipo actual | Capacitar | Nivel avanzado | Pasan a diseñar evals y compuertas de calidad |
 | Analistas funcionales | Equipo actual | Capacitar | Nivel intermedio | Especifican casos de uso y definen "correcto" |
@@ -154,58 +158,63 @@ esos nodos y el plan no lo fuerza (ver "Staffing").
 
 **Qué se mide antes y después:** tiempo de ciclo del requerimiento a producción,
 retrabajo (cambios reabiertos) e incidentes, **contra la base prospectiva
-congelada** de T1, por área y agregado. No se atribuye mejora antes de T2.
+congelada** de las semanas 1-4 del plan, por área y agregado. No se atribuye
+mejora antes de los meses 4-6.
 
-### Cobertura de IA aplicada, por trimestre
+### Cobertura de IA aplicada, por tramo
 
-El [Anexo B](02-arquitectura.md) necesita 0,3 FTE de IA aplicada en T1 (T1-b,
-el recomendado; el 0,5 era de T1-a, que solo queda en su escenario conservador)
-y 0,8 de T2 a T4, dentro de su esfuerzo técnico. El contractor de D y esa
-fracción de B son **un solo recurso**, no dos.
+El [Anexo B](02-arquitectura.md) necesita 0,3 FTE de IA aplicada en los meses 1-3
+(el escenario recomendado, con contractor que reemplaza; el 0,5 era del contractor
+que complementa, que solo queda en su escenario conservador) y 0,8 en los meses
+4-12, dentro de su esfuerzo técnico. El contractor de este anexo y esa
+fracción del Anexo B son **un solo recurso**, no dos.
 `context/` no registra ningún perfil interno de IA aplicada con tiempo libre
 (la capacidad es de pocas personas y el bench es menor a 1 FTE), así que **no se
 asume que exista**.
 
-| Trimestre | Necesidad (Anexo B) | Vía propuesta | Alternativa | Qué lo demuestra |
+| Tramo | Necesidad (Anexo B) | Vía propuesta | Alternativa | Qué lo demuestra |
 |---|---|---|---|---|
-| T1 | 0,3 FTE (T1-b) | Contractor al 50%, tramo de T1 autorizado en G0: cubre el 0,3 de B y deja 0,2 para incorporación, documentación y coordinación | Perfil interno reasignado, solo si antes de G0 se demuestra por rol: porcentaje liberado, trabajo desplazado y quién lo cubre | Contrato corto firmado, o declaración de capacidad por rol validada por Operaciones |
-| T2 a T4 | 0,8 FTE | El mismo contractor, 1 persona, **solo si G1 encuentra al menos una señal** (contractual, anuncio de precio por consumo o cliente del producto; [Anexo E](05-business-case.md), "Recomendación de Finanzas"). Sin señal, no hay cobertura: T2-T4 corre como la opción (b) de E, sin hitos de IA aplicada | Idem | Señal registrada en G1; entregable verificable por trimestre; documentación y traspaso |
+| Meses 1-3 | 0,3 FTE (contractor que reemplaza) | Contractor al 50%, tramo de los meses 1-3 autorizado en la aprobación de hoy: cubre el 0,3 del Anexo B y deja 0,2 para incorporación, documentación y coordinación | Perfil interno reasignado, solo si antes de la aprobación de hoy se demuestra por rol: porcentaje liberado, trabajo desplazado y quién lo cubre | Contrato corto firmado, o declaración de capacidad por rol validada por Operaciones |
+| Meses 4-12 | 0,8 FTE | El mismo contractor, 1 persona, **solo si la decisión del mes 3 encuentra al menos una señal** (contractual, anuncio de precio por consumo o cliente del producto; [Anexo E](05-business-case.md), "Recomendación de Finanzas"). Sin señal, no hay cobertura: los meses 4-12 corren como la alternativa de gobierno mínimo y formación del Anexo E, sin hitos de IA aplicada | Idem | Señal registrada en el mes 3; entregable verificable por tramo; documentación y traspaso |
 
-**Reemplaza, no complementa.** El contractor es la fuente del 0,3 de T1 y del 0,8
-de T2 a T4 de B; en ambos, el 0,2 restante es documentación, traspaso y
-coordinación con el programa (en T2 se puede prestar al replan de B, ver
-"Holgura de 0,2 FTE del contractor en T2"). Contar la fracción de B y el contractor a la vez duplica el costo
+**Reemplaza, no complementa.** El contractor es la fuente del 0,3 de los meses 1-3
+y del 0,8 de los meses 4-12 del Anexo B; en ambos, el 0,2 restante es documentación,
+traspaso y coordinación con el programa (en los meses 4-6 se puede prestar al replan
+del Anexo B, ver "Holgura de 0,2 FTE del contractor en los meses 4-6 (replan del
+Anexo B)"). Contar la fracción del Anexo B y el contractor a la vez duplica el costo
 (solape que Finanzas marca como "IA aplicada"). Recosteo de cada alternativa:
 
 | Alternativa | Caja (USD) | Tiempo interno | Riesgo |
 |---|---|---|---|
-| A. Solo perfil interno | 0 | 0,3 FTE en T1 y 0,8 de T2 a T4 sacados de horas facturables | Sin perfil demostrado, T1 no arranca; concentración de capacidades críticas sin mitigar |
-| B1. Contractor desde T1 (recomendada) | T1: 6.750-16.500 (0,5 x 3 meses x 4.500-11.000); T2-T4: 40.500-99.000 | Se libera el tiempo de B que cubre | Sube la caja de T1 contra el techo de G0 y choca con "no contratar" (decide el Directorio) |
-| B2. Contractor desde T2 (versión anterior) | T2-T4: 40.500-99.000 | T1 queda sin cubrir: el hito de B se corre o se resiente | Atrasa el gateway de laboratorio y las evals de T1 |
+| Solo perfil interno | 0 | 0,3 FTE en los meses 1-3 y 0,8 en los meses 4-12 sacados de horas facturables | Sin perfil demostrado, el plan no arranca; concentración de capacidades críticas sin mitigar |
+| Contractor desde el mes 1 (recomendada) | Meses 1-3: 6.750-16.500 (0,5 x 3 meses x 4.500-11.000); meses 4-12: 40.500-99.000 | Se libera el tiempo del Anexo B que cubre | Sube la caja de los meses 1-3 contra el techo de la aprobación de hoy y choca con "no contratar" (decide el Directorio) |
+| Contractor desde el mes 4 (versión anterior) | Meses 4-12: 40.500-99.000 | Los meses 1-3 quedan sin cubrir: el hito del Anexo B se corre o se resiente | Atrasa el gateway de laboratorio y las evals de los meses 1-3 |
 
-G0 elige la vía B1 (contractor desde T1) y autoriza solo su tramo de T1 (hasta
-16,5 de caja, dentro del techo de 33). El tramo de T2-T4 al 100% (40,5-99,0) se
-libera en G1 solo con al menos una señal; sin ninguna, **el contractor se cierra**
-(un mes de preaviso, ~4 de caja en el medio según E), el mes se usa para
-documentar y traspasar lo hecho en T1 a la oficina del CAIO, y T2-T4 corre como
-(b): gobierno mínimo y formación, con la prueba extendida a la cohorte (≈199 en
-el año contra ≈ 400, E). G2 y G3 vuelven a leer las señales. No es un corte del
-plan: difiere la plataforma. Si el Directorio rechaza B1, la alternativa es A con
-la prueba de capacidad previa a G0, o diferir los hitos de IA aplicada de T1 (lo
-que decide `architect`).
+La aprobación de hoy elige el contractor desde el mes 1 y autoriza solo su tramo de
+los meses 1-3 (hasta 16,5 de caja, dentro del techo de 33). El tramo de los meses
+4-12 al 100% (40,5-99,0) se libera en la decisión del mes 3 solo con al menos una
+señal; sin ninguna, **el contractor se cierra** (un mes de preaviso, ~4 de caja en
+el medio según el Anexo E), el mes se usa para documentar y traspasar lo hecho en
+los meses 1-3 a la oficina del CAIO, y los meses 4-12 corren como la alternativa del Anexo E: gobierno
+mínimo y formación, con la prueba extendida a la cohorte (≈199 en el año contra
+≈ 400, Anexo E). Las lecturas de los meses 6 y 9 vuelven a leer las señales. No es
+un corte del plan: difiere la plataforma. Si el Directorio rechaza el contractor
+desde el mes 1, la alternativa es el perfil interno solo, con la prueba de capacidad
+previa a la aprobación de hoy, o diferir los hitos de IA aplicada de los meses 1-3
+(lo que decide `architect`).
 
-### Holgura de 0,2 FTE del contractor en T2 (replan de B)
+### Holgura de 0,2 FTE del contractor en los meses 4-6 (replan del Anexo B)
 
-El [Anexo B](02-arquitectura.md) ("Exceso de T2") baja T2 a 2,2 FTE clave bajo el
-supuesto de que el contractor tiene 0,2 FTE pagados y sin asignar, y que con ellos
-absorbe el pipeline de evals en CI y la reejecución de la prueba de portabilidad.
-El deck adopta ese replan. Este anexo lo contrasta contra la asignación del propio
-contractor:
+El [Anexo B](02-arquitectura.md) ("Exceso de los meses 4-6 con el producto
+diferido") baja los meses 4-6 a 2,2 FTE clave bajo el supuesto de que el contractor
+tiene 0,2 FTE pagados y sin asignar, y que con ellos absorbe el pipeline de evals en
+CI y la reejecución de la prueba de portabilidad. El deck adopta ese replan. Este
+anexo lo contrasta contra la asignación del propio contractor:
 
-| Fracción del contractor (100% en T2) | Asignación de este anexo | Con el replan de B |
+| Fracción del contractor (100% en los meses 4-6) | Asignación de este anexo | Con el replan del Anexo B |
 |---|---|---|
-| 0,8 | La fracción de IA aplicada de B (evals, harness, gobierno técnico) | Igual |
-| 0,2 | Documentación de traspaso y coordinación con el programa | Evals en CI y reejecución de la prueba de portabilidad, solo en T2. La documentación mínima reproducible de cada entregable no sale de acá: va dentro del 0,8 ([Anexo B](02-arquitectura.md), "Documentación mínima reproducible") |
+| 0,8 | La fracción de IA aplicada del Anexo B (evals, harness, gobierno técnico) | Igual |
+| 0,2 | Documentación de traspaso y coordinación con el programa | Evals en CI y reejecución de la prueba de portabilidad, solo en los meses 4-6. La documentación mínima reproducible de cada entregable no sale de acá: va dentro del 0,8 ([Anexo B](02-arquitectura.md), "Documentación mínima reproducible") |
 
 **Decisión de people: la holgura no está confirmada, así que el replan es
 condicional.** Las horas existen (el 100% se paga), pero no están libres: este
@@ -214,41 +223,45 @@ de continuidad frente a la concentración en una sola persona externa. No hay da
 del contractor: ni su perfil, ni su experiencia en evals y CI, ni el alcance de
 su contrato. Todo lo de abajo es un **supuesto de people**, no un hecho.
 
-- **Cuándo se puede sostener.** Solo en T2 y solo si el alcance contractual de G0
-  incluye de forma explícita esos dos entregables (evals en CI y reejecución de la
-  prueba). Lo que se desplaza a T3-T4 son los manuales de operación y el traspaso
-  (este último es de T4). Todo esto vale solo si G1 libera el contractor al 100%. La documentación mínima reproducible que exige G2 (tupla
-  de versión, instrucciones de ejecución, ADR corto y corrida fechada por
+- **Cuándo se puede sostener.** Solo en los meses 4-6 y solo si el alcance
+  contractual de la aprobación de hoy incluye de forma explícita esos dos
+  entregables (evals en CI y reejecución de la prueba). Lo que se desplaza a los
+  meses 7-12 son los manuales de operación y el traspaso (este último es de los
+  meses 10-12). Todo esto vale solo si la decisión del mes 3 libera el contractor
+  al 100%. La documentación mínima reproducible que exige la lectura del mes 6
+  (tupla de versión, instrucciones de ejecución, ADR corto y corrida fechada por
   entregable) es parte del entregable y queda en el 0,8: 1-2 días-persona por
   entregable, más la reproducción de DevOps/QA (Anexo B). Es un desplazamiento,
   no una holgura: lo que se difiere se hace después, no desaparece.
 - **Qué lo sostiene como evidencia.** Un alcance de contrato con esos entregables
   y fechas, y la declaración del contractor de que tiene el perfil. Hoy no existe
-  ninguna de las dos; se piden como condición antes de G0.
+  ninguna de las dos; se piden como condición antes de la aprobación de hoy.
 - **Cuándo el replan no alcanza, y qué cubre cada respaldo.** Son dos
   contingencias distintas ([Anexo E](05-business-case.md), "Dos contingencias del
-  contractor"; [Anexo B](02-arquitectura.md), "Exceso de T2"):
+  contractor"; [Anexo B](02-arquitectura.md), "Exceso de los meses 4-6 con el
+  producto diferido"):
   - **Sin el 0,2** (el contractor existe, pero el alcance no se acordó así, o en
-    el control de la semana 7 de T2 los entregables cerrados no tienen su
-    documentación mínima reproducible; la excepción se activa ahí, no al cierre
-    de T2): T2 queda en
-    2,5 FTE clave y corresponde la **excepción acotada de 0,3 FTE**, que el board
-    aprueba en G0 como respaldo (salida 2 de B; ver DP3 y T2 en
+    el control de la semana 20 del plan (la séptima de los meses 4-6) los entregables cerrados no tienen
+    su documentación mínima reproducible; la excepción se activa ahí, no al cierre
+    del tramo): los meses 4-6 quedan en 2,5 FTE clave y corresponde la **excepción
+    acotada de 0,3 FTE**, que el board aprueba hoy como respaldo (la segunda salida
+    del Anexo B; ver la decisión "Vía de IA aplicada" del
     [Anexo F](06-roadmap-riesgo.md)). Son ~5 mil de tiempo (3-8) y nada de caja
-    nueva: ya está en el cuadro de E.
+    nueva: ya está en el cuadro del Anexo E.
   - **Sin contractor** (el Directorio no lo aprueba o no se contrata a tiempo): la
     excepción **no alcanza**. Falta toda la fracción de 0,8 FTE de IA aplicada, no
     solo el 0,2; con fracción interna el plan pediría ~3,3 / 3,0 / 2,9 FTE clave
-    en T2-T4, contra un máximo de 2,25. Este anexo no propone cubrirlo con tiempo
-    de personas: la respuesta es el **modo control de B** (2,2 / 2,2 / 2,1 FTE
-    clave, sin harness, evals en CI, caso de referencia ni prueba de portabilidad),
-    y cubrirlo con fracción interna queda como opción del board solo si aprueba
-    explícitamente ese piso mayor. Además, sin contractor la documentación y el
-    traspaso (el 0,2 de este anexo) no tienen quién los haga: la mitigación de
-    concentración de capacidades se pierde y queda como riesgo aceptado.
+    en los meses 4-6, 7-9 y 10-12, contra un máximo de 2,25. Este anexo no propone
+    cubrirlo con tiempo de personas: la respuesta es el **modo control del Anexo B**
+    (2,2 / 2,2 / 2,1 FTE clave, sin harness, evals en CI, caso de referencia ni
+    prueba de portabilidad), y cubrirlo con fracción interna queda como opción del
+    board solo si aprueba explícitamente ese piso mayor. Además, sin contractor la
+    documentación y el traspaso (el 0,2 de este anexo) no tienen quién los haga: la
+    mitigación de concentración de capacidades se pierde y queda como riesgo
+    aceptado.
 - **Costo de la hipótesis para este anexo.** Cero de caja: el 100% del contractor
   ya está en "Insumos para Finanzas". El costo es de riesgo: la documentación
-  se corre y la concentración de T2 sube.
+  se corre y la concentración de los meses 4-6 sube.
 
 ## AI literacy por nivel y por rol
 
@@ -259,11 +272,11 @@ población son supuestos del equipo; el nivel básico es el piso para todos.
 |---|---|---|---|---|---|
 | Básico | Toda la organización, ~65 | Uso seguro, clasificación de datos, qué se puede enviar, verificar el output, reportar incidentes | Sesiones breves y guía de una página; **casos de su rol** | 6 | ~390 |
 | Intermedio | Operaciones y Tecnología usuarias frecuentes, ~50 | Pedir bien (ejemplos, contraargumentos), identificar casos de uso, supervisar | Talleres con casos reales del rol y práctica entre pares | 12 | ~600 |
-| Avanzado | Especialistas que diseñan e implementan, ~10 | Agentes, evals, harness, gobernanza técnica | Proyecto aplicado con tiempo asignado | 10-15% del tiempo semanal durante un trimestre | 480-720 |
+| Avanzado | Especialistas que diseñan e implementan, ~10 | Agentes, evals, harness, gobernanza técnica | Proyecto aplicado con tiempo asignado | 10-15% del tiempo semanal durante un tramo de tres meses | 480-720 |
 | Directivo | Primera línea y Directorio | Decidir inversión, riesgo, regulación y ROI | Briefings con casos | 3 | Dentro de la oficina del CAIO, sin costo aparte (supuesto) |
 
 Cálculo del avanzado, con la convención de costeo del plan (480 h por
-persona-trimestre, [convenciones](../../context/supuestos/convenciones-de-calculo.md)):
+persona-tramo, [convenciones](../../context/supuestos/convenciones-de-calculo.md)):
 10 personas x 480 h x 10-15% = 480-720 h. Las 520 h de 13 semanas x 40 h son
 calendario bruto y no se usan para costo. Poblaciones y horas coinciden con la
 ficha [poblaciones de capacitación](../../context/supuestos/poblaciones-de-capacitacion.md)
@@ -294,9 +307,9 @@ verificación.
   equipo); al menos 2 de Operaciones y 2 de staff, porque la brecha está ahí.
 - **Perfil:** curiosidad, comunicación y vocación de servicio; no necesariamente
   el más técnico ([programa](../../material/conceptos/m3u2-programa-champions.md)).
-- **Contrato:** mandato explícito, sponsor y un entregable por trimestre (una
-  guía de casos de su rol, un taller). El tiempo (10%) lo libera el manager y se
-  agenda; si no se libera, el champion no se computa como activo.
+- **Contrato:** mandato explícito, sponsor y un entregable por tramo de tres meses
+  (una guía de casos de su rol, un taller). El tiempo (10%) lo libera el manager y
+  se agenda; si no se libera, el champion no se computa como activo.
 - **Costo de no hacerlo bien:** los champions sin tiempo ni entregable se
   vuelven reuniones de estado ([champions y literacy](../../material/conceptos/m1u4-champions-y-literacy.md)).
 
@@ -306,10 +319,10 @@ verificación.
 |---|---|---|---|
 | Falta de tiempo | Dos de cada tres en el piloto; utilización 83-90% | Operaciones: cada hora de curso es una hora no facturada | Horas dentro de la jornada, módulos cortos, calendario por equipo; el costo está en Insumos para Finanzas |
 | Prohibición del cliente | Supuesto de apetito de riesgo; matriz inexistente | Staffing: queda afuera de la ganancia | Ver "Staffing" abajo |
-| Miedo al reemplazo | Freno de la cursada; no hay medición propia | Todos, y más en perfiles junior | Comunicación transparente y decisión D3 |
+| Miedo al reemplazo | Freno de la cursada; no hay medición propia | Todos, y más en perfiles junior | Comunicación transparente y la decisión sobre el compromiso con el empleo |
 | Dependencia de un proveedor | El piloto lo advierte y propone consumo multimodelo | Equipos que ya construyeron hábitos | Fuera del alcance de este anexo; lo resuelve `architect` |
 | Desconfianza en el output | Pocos piden contraargumentos o advierten alucinaciones | Quien revisa | Nivel intermedio centrado en verificar y supervisar |
-| Incentivo contrario en staffing facturado por hora | Mencionado en las condiciones de invalidez de la ganancia de productividad | Personas y empresa: menos horas es menos facturación | Tensión con Finanzas, ver T1 |
+| Incentivo contrario en staffing facturado por hora | Mencionado en las condiciones de invalidez de la ganancia de productividad | Personas y empresa: menos horas es menos facturación | Tensión con Finanzas, ver "Tensiones con otras miradas" |
 
 **Staffing en equipos de clientes que prohíben herramientas externas.** El plan
 no les pide usar lo que el contrato no permite. Tres frentes:
@@ -325,67 +338,80 @@ no les pide usar lo que el contrato no permite. Tres frentes:
    sanción, igual que los incidentes.
 
 **Dependencia de personas clave.** La capacidad en arquitectura, seguridad y
-gobierno está en pocas personas: el contractor de D2 y la documentación
+gobierno está en pocas personas: el contractor de IA aplicada y la documentación
 obligatoria de lo que arma el champion o el líder son la mitigación de
 continuidad.
 
-## Roadmap cultural trimestral y métricas
+## Roadmap cultural por tramo y métricas
 
-Línea de base (T0) = cuarto trimestre de 2026, anterior a la aprobación del
-presupuesto 2027 (G0). Los umbrales son supuestos del equipo, a validar con la
-línea de base. Toda métrica se reporta con numerador y
-denominador y **por área, agregada**: ningún dato individual
-([OKR](../../context/hechos/okrs-y-objetivos.md)). El alcance y la retención de
-la telemetría los define `governance` con Talento (pendiente declarado).
+La preparación previa (octubre-diciembre de 2026) es la línea de base
+retrospectiva, anterior a la aprobación del presupuesto 2027 (la aprobación de
+hoy). Los umbrales son supuestos del equipo, a validar con la línea de base. Toda
+métrica se reporta con numerador y denominador y **por área, agregada**: ningún
+dato individual ([OKR](../../context/hechos/okrs-y-objetivos.md)). El alcance y la
+retención de la telemetría los define `governance` con Talento (pendiente
+declarado).
 
-| Trimestre | Hitos | Indicador adelantado (uso real) | Indicador rezagado |
+| Tramo | Hitos | Indicador adelantado (uso real) | Indicador rezagado |
 |---|---|---|---|
-| T0 (antes de G0) | Solo reconstrucción **retrospectiva** con datos que ya existen (telemetría y reportes de adopción de los últimos meses, series de incidentes y retrabajo si el repositorio las conserva) y diseño de la encuesta de chat y Gemini. Política: queda lista para ratificar, no ratificada | Serie retrospectiva de uso del agente de código por área | Serie retrospectiva de throughput, incidentes y retrabajo, con su hueco declarado si no existe |
-| T1, semanas 1 a 4 | **Congelar la base prospectiva** antes de cualquier capacitación o herramienta nueva para usuarios: encuesta de chat y Gemini, uso semanal por área, throughput, incidentes y retrabajo de los equipos propios | Línea de base por área publicada y congelada al cierre de la semana 4 | Línea de base prospectiva de throughput, incidentes y retrabajo |
-| T1, semanas 5 a 13 | Ratificación de la política y matriz de los cinco clientes principales (con `governance`); básico para todos; selección de champions; intermedio para Tecnología. **Prueba chica** desde la semana 5 (Anexo E): 2 champions de Tecnología al 10% durante 2 meses, con la cohorte del intermedio como vehículo | Básico completado: ≥90% de la dotación al cierre del trimestre. Prueba: uso semanal de la cohorte, retrabajo y PR aceptados, y la dispersión entre personas; se leen en G1, sin atribuir ganancia | Sin objetivo: se mide la línea de base |
-| T2 | Intermedio para Operaciones y staff; arranca el avanzado; champions con tiempo asignado (el contractor está desde T1 si se aprueba B1; al 100% solo si G1 encuentra una señal, si no se cierra y la prueba se extiende a la cohorte) | Uso activo semanal de Tecnología ≥80% (la meta del OKR); Operaciones habilitadas ≥40% | Throughput de equipos propios: sin deterioro de calidad |
-| T3 | Casos prácticos por rol publicados por champions; revisión de calidad de prompts | Tecnología ≥80% sostenido; prompts con ejemplos del resultado esperado: de ≤5% a ≥30% (muestra agregada) | Incidentes y retrabajo sin aumento sobre la base |
-| T4 | Traspaso del contractor a la oficina del CAIO (si G1 lo liberó; si no, el traspaso se hizo en el mes de preaviso); evaluación de lo que escala | Tecnología ≥85%; Operaciones habilitadas ≥60%; staff ≥50% | Throughput entre +10% y +25% en equipos propios ([supuesto](../../context/supuestos/ganancia-de-productividad.md)) |
+| Preparación previa (antes de la aprobación de hoy) | Solo reconstrucción **retrospectiva** con datos que ya existen (telemetría y reportes de adopción de los últimos meses, series de incidentes y retrabajo si el repositorio las conserva) y diseño de la encuesta de chat y Gemini. Política: queda lista para ratificar, no ratificada | Serie retrospectiva de uso del agente de código por área | Serie retrospectiva de throughput, incidentes y retrabajo, con su hueco declarado si no existe |
+| Meses 1-3, semanas 1 a 4 del plan | **Congelar la base prospectiva** antes de cualquier capacitación o herramienta nueva para usuarios: encuesta de chat y Gemini, uso semanal por área, throughput, incidentes y retrabajo de los equipos propios | Línea de base por área publicada y congelada al cierre de la semana 4 | Línea de base prospectiva de throughput, incidentes y retrabajo |
+| Meses 1-3, semanas 5 a 13 del plan | Ratificación de la política y matriz de los cinco clientes principales (con `governance`); básico para todos; selección de champions; intermedio para Tecnología. **Prueba chica** desde la semana 5 (Anexo E): 2 champions de Tecnología al 10% durante 2 meses, con la cohorte del intermedio como vehículo | Básico completado: ≥90% de la dotación al cierre de los meses 1-3. Prueba: uso semanal de la cohorte, retrabajo y PR aceptados, y la dispersión entre personas; se leen en la decisión del mes 3, sin atribuir ganancia | Sin objetivo: se mide la línea de base |
+| Meses 4-6 | Intermedio para Operaciones y staff; arranca el avanzado; champions con tiempo asignado (el contractor está desde el mes 1 si se aprueba; al 100% solo si la decisión del mes 3 encuentra una señal, si no se cierra y la prueba se extiende a la cohorte) | Uso activo semanal de Tecnología ≥80% (la meta del OKR); Operaciones habilitadas ≥40% | Throughput de equipos propios: sin deterioro de calidad |
+| Meses 7-9 | Casos prácticos por rol publicados por champions; revisión de calidad de prompts | Tecnología ≥80% sostenido; prompts con ejemplos del resultado esperado: de ≤5% a ≥30% (muestra agregada) | Incidentes y retrabajo sin aumento sobre la base |
+| Meses 10-12 | Traspaso del contractor a la oficina del CAIO (si la decisión del mes 3 lo liberó; si no, el traspaso se hizo en el mes de preaviso); evaluación de lo que escala | Tecnología ≥85%; Operaciones habilitadas ≥60%; staff ≥50% | Throughput entre +10% y +25% en equipos propios ([supuesto](../../context/supuestos/ganancia-de-productividad.md)) |
 
 "Habilitadas" = personas cuyos clientes y herramientas lo permiten según la
 matriz, como denominador. Se informa también el valor sobre el total, para no
 esconder la brecha.
 
-**Calendario único de T0 y T1 (H12).** Una sola secuencia reemplaza las tres
-versiones anteriores (D en T0, B/C/F en T1):
+**Revisión mensual del Council.** Las metas de arriba se cierran por tramo, pero el
+uso se mide cada semana, por área: ese uso semanal alimenta el tablero mensual del
+AI Council (revisión de 2 horas). El tablero lo muestra como tendencia, sin decidir
+por él, y suma señales de incidentes y avance de hitos. La revisión mensual puede
+frenar o cortar un frente, activar una contingencia o escalar una señal al
+Directorio cuando llega; **no libera fondos**, que quedan en las decisiones de los
+meses 3, 6, 9 y 12. Las metas y el momento en que se decide no cambian. La
+revisión no suma costo: usa el uso semanal por área que este anexo ya mide y el
+Council que el Anexo E ya presupuesta.
+
+**Calendario único de la preparación previa y los meses 1-3.** Una sola secuencia
+reemplaza las tres versiones anteriores (una en este anexo y otras en los Anexos B,
+C y F):
 
 | Cuándo | Qué existe | Quién lo verifica | Costo |
 |---|---|---|---|
-| Antes de G0 (T0) | Serie retrospectiva de uso, incidentes y retrabajo; diseño de la encuesta; política lista para ratificar | Responsable humano pendiente; el Directorio ve el resultado en G0 | 60-100 h del perfil técnico que lidera el programa (Insumos para Finanzas) |
-| T1, semanas 1 a 4 | Base prospectiva congelada | Oficina del CAIO, con `finance` para throughput | Dentro del 20% del líder del programa |
-| T1, semanas 5 a 13 | Política ratificada, matriz de cinco clientes, básico e intermedio de Tecnología; prueba chica con la cohorte del intermedio | `governance` y área comercial | Horas de capacitación y +64 h de la prueba (Insumos para Finanzas) |
+| Antes de la aprobación de hoy (preparación previa) | Serie retrospectiva de uso, incidentes y retrabajo; diseño de la encuesta; política lista para ratificar | Responsable humano pendiente; el Directorio ve el resultado en la aprobación de hoy | 60-100 h del perfil técnico que lidera el programa (Insumos para Finanzas) |
+| Meses 1-3, semanas 1 a 4 del plan | Base prospectiva congelada | Oficina del CAIO, con `finance` para throughput | Dentro del 20% del líder del programa |
+| Meses 1-3, semanas 5 a 13 del plan | Política ratificada, matriz de cinco clientes, básico e intermedio de Tecnología; prueba chica con la cohorte del intermedio | `governance` y área comercial | Horas de capacitación y +64 h de la prueba (Insumos para Finanzas) |
 
 Retrospectiva y prospectiva no se mezclan: la serie retrospectiva sirve para
 entender la tendencia previa y el ruido; **la ganancia se atribuye solo contra la
 base prospectiva congelada; si en la semana 4 esa base no resuelve (criterio
 mecánico del Anexo B, "Respaldo"), la retrospectiva se usa como lectura contra
-tendencia, sin atribuir, y el Directorio ve la constancia en G1**. La ganancia no
-se computa antes de T2 (la rampa de E ya asume 0% en T1). Capacitación e
-intermedio para Tecnología empiezan en la semana 5 para que formación y
-herramientas nuevas no contaminen la base. Esto comprime el básico a nueve
-semanas: sigue siendo viable para el 90% al cierre de T1, pero lo valida la
-oficina del CAIO en la semana 5.
+tendencia, sin atribuir, y el Directorio ve la constancia en la decisión del mes
+3**. La ganancia no se computa antes de los meses 4-6 (la rampa del Anexo E ya
+asume 0% en los meses 1-3). Capacitación e intermedio para Tecnología empiezan en
+la semana 5 para que formación y herramientas nuevas no contaminen la base. Esto
+comprime el básico a nueve semanas: sigue siendo viable para el 90% al cierre de
+los meses 1-3, pero lo valida la oficina del CAIO en la semana 5.
 
 **Desacuerdo abierto (people y `caio`): qué hacer si la base no resuelve.**
 Propuesta de `architect` en el Anexo B, con costo:
 
 | Alternativa | Qué compra | Qué cuesta |
 |---|---|---|
-| A. Retrospectiva como lectura contra tendencia (texto de arriba) | Sin demora; el plan sigue | No libera capital: G2 y G3 no pasan por throughput y el base cae en espera y corte (≈ −245 según el Anexo B, a validar por `finance`) |
-| B. Prolongar siempre la base a la semana 8 y correr 4 semanas la formación intermedia | Una base más larga para atribuir | La prueba chica y el intermedio de Tecnología arrancan en la 9, y G1 lee la dispersión con 5 semanas en vez de 9; el básico también capacita desde la 5, así que habría que correrlo o aceptar que no contamina (supuesto sin dato) |
-| C. Prolongar solo si el criterio de la semana 4 dice que la base no resuelve | B solo cuando hace falta | Decide en la semana 4, con la constancia ya prevista; mantiene el calendario si la base resuelve |
+| Retrospectiva como lectura contra tendencia (texto de arriba) | Sin demora; el plan sigue | No libera capital: las lecturas de los meses 6 y 9 no pasan por throughput y la base cae en espera y corte (≈ −245 según el Anexo B, a validar por `finance`) |
+| Prolongar siempre la base a la semana 8 y correr 4 semanas la formación intermedia | Una base más larga para atribuir | La prueba chica y el intermedio de Tecnología arrancan en la semana 9, y la decisión del mes 3 lee la dispersión con 5 semanas en vez de 9; el básico también capacita desde la semana 5, así que habría que correrlo o aceptar que no contamina (supuesto sin dato) |
+| Prolongar solo si el criterio de la semana 4 dice que la base no resuelve | Prolongar solo cuando hace falta | Decide en la semana 4, con la constancia ya prevista; mantiene el calendario si la base resuelve |
 
-**Recomendación de people: C.** Paga la demora únicamente cuando la base sola no
-alcanza, y no sacrifica la lectura de la prueba chica en G1 si no hace falta.
-Pendiente de `caio` (que integra el calendario en F) y de `architect` (el
-criterio es suyo); no se da por resuelto.
+**Recomendación de people: prolongar solo si el criterio de la semana 4 lo pide.**
+Paga la demora únicamente cuando la base sola no alcanza, y no sacrifica la lectura
+de la prueba chica en la decisión del mes 3 si no hace falta. Pendiente de `caio`
+(que integra el calendario en el Anexo F) y de `architect` (el criterio es suyo);
+no se da por resuelto.
 
-**Meta de adopción y OKR combinado (H14).** El borrador de OKR pide 80% en
+**Meta de adopción y OKR combinado.** El borrador de OKR pide 80% en
 Operaciones y Tecnología juntas. Con áreas de igual peso, las metas de este anexo
 no lo alcanzan, ni siquiera en el mejor caso:
 
@@ -400,53 +426,56 @@ su total. Por eso: **no se presenta ninguna meta propia como cumplimiento del 80
 Se publican siempre las dos métricas, cada una con numerador y denominador:
 (a) uso semanal activo de Tecnología y (b) uso semanal de Operaciones habilitadas, con
 el valor sobre el total de Operaciones al lado. Si el Directorio mantiene el OKR
-combinado, se informa su resultado real, que será menor al 80%. Metas por trimestre
-unificadas para todo el plan (incluido el Anexo F): Tecnología ≥80% desde T2 (cifra del
-OKR) y ≥85% al cierre de T4 (meta interna de este anexo); la diferencia 80/85 no es una
-contradicción, sino meta del OKR y meta de cierre.
+combinado, se informa su resultado real, que será menor al 80%. Metas por tramo
+unificadas para todo el plan (incluido el Anexo F): Tecnología ≥80% desde los meses
+4-6 (cifra del OKR) y ≥85% al cierre de los meses 10-12 (meta interna de este
+anexo); la diferencia 80/85 no es una contradicción, sino meta del OKR y meta de
+cierre.
 
-**Criterios de éxito (al cierre de T4):** Tecnología ≥85% de uso semanal activo;
-Operaciones habilitadas ≥60%; nivel básico ≥90%; ningún aumento de incidentes
-ni retrabajo en equipos propios; capacidades críticas con un reemplazo
+**Criterios de éxito (al cierre de los meses 10-12):** Tecnología ≥85% de uso
+semanal activo; Operaciones habilitadas ≥60%; nivel básico ≥90%; ningún aumento de
+incidentes ni retrabajo en equipos propios; capacidades críticas con un reemplazo
 documentado.
 
-**Condiciones de abandono o cambio de rumbo:**
+**Condiciones de abandono o cambio de rumbo.** Se evalúan en el momento que dice
+cada fila; el tablero mensual del Council muestra la tendencia antes, pero no las
+dispara por sí solo.
 
 | Disparador | Acción |
 |---|---|
-| Al cierre de T2, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en T3 las horas de champions y de intermedio que no sean rediseño (~13 de tiempo en el medio, como en F); rediseñar la formación con casos por rol; revisar causas con los managers. El plan no suma seats: no hay expansión que frenar |
-| Al cierre de T2, uso activo en Tecnología ≥60% y <80% | T3 sigue; formación rediseñada con casos por rol; se vuelve a medir al cierre de T3 (como en F) |
-| Básico completado <50% al cierre de T2 | Cambiar el formato (de sesión a práctica en equipo) y reasignar tiempo; no repetir el mismo curso |
+| Al cierre de los meses 4-6, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en los meses 7-9 las horas de champions y de intermedio que no sean rediseño (~13 de tiempo en el medio, como en el Anexo F); rediseñar la formación con casos por rol; revisar causas con los managers. El plan no suma seats: no hay expansión que frenar |
+| Al cierre de los meses 4-6, uso activo en Tecnología ≥60% y <80% | Los meses 7-9 siguen; formación rediseñada con casos por rol; se vuelve a medir al cierre de los meses 7-9 (como en el Anexo F) |
+| Básico completado <50% al cierre de los meses 4-6 | Cambiar el formato (de sesión a práctica en equipo) y reasignar tiempo; no repetir el mismo curso |
 | Asistencia de champions <60% dos meses seguidos | Disolver la red o rediseñar su mandato con sponsor nuevo |
 | Subida de incidentes o retrabajo asociada a uso de IA | Pausar el nivel avanzado hasta revisar compuertas de calidad con `architect` |
-| G1 sin ninguna señal (contractual, precio por consumo o cliente del producto) | Cerrar el contractor (preaviso de un mes, traspaso a la oficina del CAIO) y correr T2-T4 como (b) con la prueba extendida a la cohorte; G2 y G3 releen las señales |
-| Prueba chica: sube el retrabajo o los incidentes contra la base, o la matriz no habilita repositorios para la cohorte | Suspender la prueba (E); el intermedio de Tecnología sigue |
-| Contractor de IA sin entregable verificable al cierre de T3 | No renovar; traspasar a la oficina del CAIO |
+| La decisión del mes 3 sin ninguna señal (contractual, precio por consumo o cliente del producto) | Cerrar el contractor (preaviso de un mes, traspaso a la oficina del CAIO) y correr los meses 4-12 como la alternativa de gobierno mínimo y formación del Anexo E, con la prueba extendida a la cohorte; las lecturas de los meses 6 y 9 releen las señales |
+| Prueba chica: sube el retrabajo o los incidentes contra la base, o la matriz no habilita repositorios para la cohorte | Suspender la prueba (Anexo E); el intermedio de Tecnología sigue |
+| Contractor de IA sin entregable verificable al cierre de los meses 7-9 | No renovar; traspasar a la oficina del CAIO |
 
 ## Riesgos y mitigación
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
-| La capacitación desplaza horas facturables y baja utilización | Alta (utilización 83-90%, sin bench) | Medio | Horas topeadas por trimestre (ver Insumos para Finanzas); módulos cortos; calendario por equipo | Utilización <80% (meta interna) atribuible al programa |
-| Operaciones no puede adoptar por contrato del cliente | Alta | Medio | Matriz de clientes; meta sobre habilitadas; usos permitidos | Matriz sin completar al cierre de T1 |
-| Champions sin tiempo ni entregable | Media | Medio | Mandato, sponsor y entregable trimestral | Ver tabla de abandono |
-| Pérdida de una persona clave en arquitectura, seguridad o gobierno | Media | Alto | Contractor a prueba, documentación, transferencia | No hay reemplazo documentado al cierre de T3 |
-| El 0,2 del contractor no está libre en T2 y el replan de B no se sostiene | Media (supuesto sin confirmar) | Medio: T2 vuelve a 2,5 FTE clave | Alcance contractual con evals en CI y prueba de portabilidad antes de G0; excepción de 0,3 FTE aprobada como respaldo | Control de la semana 7 de T2 sin documentación mínima reproducible, o alcance contractual sin los dos entregables al cierre de T1: rige la excepción |
-| No hay contractor (no se aprueba o no se contrata a tiempo): la excepción de 0,3 no alcanza | Media (depende del Directorio, D2) | Alto: falta toda la fracción de 0,8 FTE de IA aplicada; con fracción interna T2 pediría ~3,3 FTE clave | Modo control de B (2,2 FTE clave, sin hitos de IA aplicada) en vez de cubrirlo con tiempo; decisión del board en G0 | Sin contractor contratado al cierre de T1: G1 libera el modo control ([Anexo E](05-business-case.md)) |
-| Adopción declarada ≠ uso real (seats comprados, uso detectado) | Media | Medio | Medir uso real semanal por área, no seats | Métrica de seats sin correlato en uso |
-| Telemetría solo cubre el agente de código | Alta | Medio | Medir chat y Gemini por encuesta o telemetría ampliada, con `architect` y `governance` | Sin medición de staff al cierre de T1 |
-| Miedo al reemplazo reduce la adopción y la franqueza | Media | Medio | Comunicación transparente, D3 | Caída de uso tras un anuncio o un cambio de estructura |
+| La capacitación desplaza horas facturables y baja utilización | Alta (utilización 83-90%, sin bench) | Medio | Horas topeadas por tramo de tres meses (ver Insumos para Finanzas); módulos cortos; calendario por equipo | Utilización <80% (meta interna) atribuible al programa |
+| Operaciones no puede adoptar por contrato del cliente | Alta | Medio | Matriz de clientes; meta sobre habilitadas; usos permitidos | Matriz sin completar al cierre de los meses 1-3 |
+| Champions sin tiempo ni entregable | Media | Medio | Mandato, sponsor y entregable por tramo | Ver tabla de abandono |
+| Pérdida de una persona clave en arquitectura, seguridad o gobierno | Media | Alto | Contractor a prueba, documentación, transferencia | No hay reemplazo documentado al cierre de los meses 7-9 |
+| El 0,2 del contractor no está libre en los meses 4-6 y el replan del Anexo B no se sostiene | Media (supuesto sin confirmar) | Medio: los meses 4-6 vuelven a 2,5 FTE clave | Alcance contractual con evals en CI y prueba de portabilidad antes de la aprobación de hoy; excepción de 0,3 FTE aprobada como respaldo | Control de la semana 20 del plan (la séptima de los meses 4-6) sin documentación mínima reproducible, o alcance contractual sin los dos entregables al cierre de los meses 1-3: rige la excepción |
+| No hay contractor (no se aprueba o no se contrata a tiempo): la excepción de 0,3 no alcanza | Media (depende del Directorio, decisión sobre IA aplicada) | Alto: falta toda la fracción de 0,8 FTE de IA aplicada; con fracción interna los meses 4-6 pedirían ~3,3 FTE clave | Modo control del Anexo B (2,2 FTE clave, sin hitos de IA aplicada) en vez de cubrirlo con tiempo; decisión del board en la aprobación de hoy | Sin contractor contratado al cierre de los meses 1-3: la decisión del mes 3 libera el modo control ([Anexo E](05-business-case.md)) |
+| Adopción declarada ≠ uso real (seats comprados, uso detectado) | Media | Medio | Medir uso real semanal por área, no seats; el tablero mensual del Council lo muestra cada mes | Métrica de seats sin correlato en uso |
+| Telemetría solo cubre el agente de código | Alta | Medio | Medir chat y Gemini por encuesta o telemetría ampliada, con `architect` y `governance` | Sin medición de staff al cierre de los meses 1-3 |
+| Miedo al reemplazo reduce la adopción y la franqueza | Media | Medio | Comunicación transparente y compromiso sobre el empleo (ver Decisiones) | Caída de uso tras un anuncio o un cambio de estructura |
 | El consumo real a precio de API (~12x lo pagado) sube el costo si cambia el esquema de precios | Media | Alto (no es de personas) | Lo trata `finance`; este anexo solo informa que más uso empuja ese costo | Ver anexo de Finanzas |
 
 ## Decisiones
 
-| # | Decisión | Alternativas | Elección | Reversibilidad |
+| Tema | Decisión | Alternativas | Elección | Reversibilidad |
 |---|---|---|---|---|
-| D1 | Cómo medir la meta de adopción en Operaciones | A: 80% sobre Operaciones y Tecnología, como el borrador de OKR. B: 80% en Tecnología y una meta propia sobre personas **habilitadas** en Operaciones. | **B**, informando también A | Reversible: se cambia al completar la matriz |
-| D2 | Capacidad especializada en IA aplicada | A: sin incorporación, solo reasignar. B1: un contractor a prueba desde T1 (50% en T1, 100% de T2 a T4), que reemplaza la fracción de IA aplicada de B. B2: lo mismo desde T2. C: dos contrataciones en nómina. | **B1**: única forma de cubrir la concentración de capacidades sin romper la restricción de no contratar de forma masiva. G0 la elige y autoriza solo el tramo de T1 (hasta 16,5 de caja); el tramo de T2-T4 al 100% se libera en G1 solo con una señal, y sin ella el contractor se cierra y T2-T4 corre como (b) (E). **Choca con la restricción literal de "no contratar gente nueva"**: lo decide el Directorio. A es viable si ese techo se mantiene, con más riesgo de continuidad | B reversible (contrato corto); C poco reversible. Condición de B1: el 0,2 de T2 que usa el replan de B no está confirmado; si no se sostiene ("sin el 0,2"), rige la excepción de 0,3 FTE. Si el Directorio rechaza D2 ("sin contractor"), la excepción no alcanza y rige el modo control de B |
-| D3 | Qué se dice sobre el empleo | A: sin compromiso. B: compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. C: compromiso con excepciones. | **Postura propuesta: C**, con el texto de "Postura sobre el empleo (propuesta)". La decide el Directorio, con asesoría laboral; no es una política aprobada. B baja más el miedo pero ata margen; A deja el freno sin respuesta | B y C poco reversibles una vez comunicados |
-| D4 | Formato de la formación | A: curso obligatorio genérico. B: casos prácticos por rol con champions, en horario laboral. | **B**, por el pedido del piloto (más de la mitad de 12 autoseleccionados) y porque la falta de tiempo fue el primer freno; el efecto del formato se mide en T2-T3 | Reversible |
-| D5 | Art. 4 del AI Act | A: esperar a decidir si alcanza a Acme Labs. B: adoptarlo como piso, con registro. | **B**, sin citar fechas ni sanciones | Reversible |
+| Meta de adopción | Cómo medir la meta de adopción en Operaciones | (1) 80% sobre Operaciones y Tecnología, como el borrador de OKR. (2) 80% en Tecnología y una meta propia sobre personas **habilitadas** en Operaciones. | **La segunda**, informando también la primera | Reversible: se cambia al completar la matriz |
+| IA aplicada | Capacidad especializada en IA aplicada | (1) Sin incorporación, solo reasignar. (2) Un contractor a prueba desde el mes 1 (50% en los meses 1-3, 100% en los meses 4-12), que reemplaza la fracción de IA aplicada del Anexo B. (3) Lo mismo desde el mes 4. (4) Dos contrataciones en nómina. | **El contractor desde el mes 1**: única forma de cubrir la concentración de capacidades sin romper la restricción de no contratar de forma masiva. La aprobación de hoy lo elige y autoriza solo el tramo de los meses 1-3 (hasta 16,5 de caja); el tramo de los meses 4-12 al 100% se libera en la decisión del mes 3 solo con una señal, y sin ella el contractor se cierra y los meses 4-12 corren como (b) (Anexo E). **Choca con la restricción literal de "no contratar gente nueva"**: lo decide el Directorio. Sin incorporación es viable si ese techo se mantiene, con más riesgo de continuidad | El contractor es reversible (contrato corto); las dos contrataciones son poco reversibles. Condición del contractor desde el mes 1: el 0,2 de los meses 4-6 que usa el replan del Anexo B no está confirmado; si no se sostiene ("sin el 0,2"), rige la excepción de 0,3 FTE. Si el Directorio rechaza el contractor ("sin contractor"), la excepción no alcanza y rige el modo control del Anexo B |
+| Compromiso sobre el empleo | Qué se dice sobre el empleo | (1) Sin compromiso. (2) Compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. (3) Compromiso con excepciones. | **Postura propuesta: el compromiso con excepciones**, con el texto de "Postura sobre el empleo (propuesta)". La decide el Directorio, con asesoría laboral; no es una política aprobada. El compromiso sin excepciones baja más el miedo pero ata margen; sin compromiso deja el freno sin respuesta | Los dos compromisos son poco reversibles una vez comunicados |
+| Formato de la formación | Formato de la formación | (1) Curso obligatorio genérico. (2) Casos prácticos por rol con champions, en horario laboral. | **Los casos prácticos por rol**, por el pedido del piloto (más de la mitad de 12 autoseleccionados) y porque la falta de tiempo fue el primer freno; el efecto del formato se mide en los meses 4-9 | Reversible |
+| Piso de alfabetización | Art. 4 del AI Act | (1) Esperar a decidir si alcanza a Acme Labs. (2) Adoptarlo como piso, con registro. | **Adoptarlo como piso**, sin citar fechas ni sanciones | Reversible |
 
 ### Postura sobre el empleo (propuesta) y métricas de comportamiento
 
@@ -455,24 +484,27 @@ con asesoría laboral antes de comunicarlo: «Durante los 12 meses del plan, la
 ganancia de productividad por IA no se usa para desvincular a una persona.
 Primero se reasigna y se capacita. Quedan afuera, y se dicen de antemano, las
 causales que ya existían sin relación con la IA (desempeño sostenido, causa
-justa, pérdida de un cliente).» Es la opción C de D3. Alternativas: B, sin
-excepciones (más tranquilizadora, ata más el margen); A, sin compromiso (no
-responde el miedo al reemplazo, que la cursada marca como freno). **Costo y
-riesgo:** el costo es de margen y lo cuantifica `finance`; no está en este anexo.
-Riesgo: una promesa que no se cumple destruye la confianza que se busca; por eso
-se comunica solo después de la decisión del Directorio.
+justa, pérdida de un cliente).» Es la postura con excepciones de la decisión sobre
+el empleo. Alternativas: el compromiso sin excepciones (más tranquilizadora, ata
+más el margen); y sin compromiso (no responde el miedo al reemplazo, que la
+cursada marca como freno). **Costo y riesgo:** el costo es de margen y lo
+cuantifica `finance`; no está en este anexo. Riesgo: una promesa que no se cumple
+destruye la confianza que se busca; por eso se comunica solo después de la decisión
+del Directorio.
 
 **Métricas de comportamiento** (qué hace la gente, no qué declara). Todas por
 área, agregadas, con numerador y denominador y sin dato individual. Línea de base
-en T1; las que no tienen fuente hoy son supuestos del equipo:
+en los meses 1-3; las que no tienen fuente hoy son supuestos del equipo. El uso
+semanal por área alimenta el tablero mensual del Council; las metas de las filas
+con meta se leen al cierre de cada tramo:
 
 | Comportamiento observable | Cómo se observa | Qué señala | Fuente |
 |---|---|---|---|
-| Pedidos con ejemplos del resultado esperado | Muestra agregada de prompts del chat | Calidad de uso (hoy ≤5%, meta ≥30% en T3) | [Encuesta y pilotos](../../context/hechos/encuesta-y-pilotos-ia.md) |
+| Pedidos con ejemplos del resultado esperado | Muestra agregada de prompts del chat | Calidad de uso (hoy ≤5%, meta ≥30% en los meses 7-9) | [Encuesta y pilotos](../../context/hechos/encuesta-y-pilotos-ia.md) |
 | Cambios con asistencia de agente que pasan la compuerta de pruebas y revisión de un humano distinto del autor | Registro del repositorio y de la compuerta | Supervisión real, no aprobación de trámite | Supuesto; depende de `architect` |
 | Consultas de uso y reportes de incidentes de staffing | Conteo del canal de consultas | Confianza para preguntar: sube al principio, y eso es bueno | Supuesto del equipo |
 | Asistencia a módulos y a talleres de champions | Registro de asistencia | Tiempo realmente liberado | Supuesto del equipo |
-| Pulso trimestral anónimo: miedo a ser reemplazado | Encuesta de tres preguntas, con mínimo de respuestas por grupo | Si el miedo baja con la comunicación | Supuesto; no hay medición propia hoy |
+| Pulso anónimo cada tres meses: miedo a ser reemplazado | Encuesta de tres preguntas, con mínimo de respuestas por grupo | Si el miedo baja con la comunicación | Supuesto; no hay medición propia hoy |
 | Rotación voluntaria de perfiles junior | Dato de Talento, por área | Efecto colateral del miedo | Supuesto; la serie histórica es un faltante |
 
 **No se miden** el uso por persona ni el volumen de prompts como desempeño
@@ -482,16 +514,17 @@ rezagados) se lee como uso de trámite y dispara la revisión del formato.
 
 ### Tensiones con otras miradas
 
-- **T1, con `finance`.** El caso de negocio supone 10% a 25% de throughput solo
+- **Con `finance`.** El caso de negocio supone 10% a 25% de throughput solo
   en equipos propios y descuenta staffing. En contratos facturados por hora,
   menos horas es menos facturación, así que el staffing tiene un incentivo en
-  contra de usar IA. Alternativas: A, no medir productividad en staffing y
-  medir solo habilitación; B, evaluar un cambio de modelo comercial (precio por
+  contra de usar IA. Alternativas: no medir productividad en staffing y
+  medir solo habilitación; o evaluar un cambio de modelo comercial (precio por
   resultado), que excede este anexo. Se deja visible.
-- **T2, con `governance`.** La matriz de clientes y la ratificación de la
+- **Con `governance`.** La matriz de clientes y la ratificación de la
   política son prerrequisito de la meta de Operaciones y están fuera de este
-  anexo. Si no se cierran al fin de T1, D1 pasa de B a "sin meta en Operaciones".
-- **T3, con `architect`.** Medir uso en chat y Gemini requiere instrumentación
+  anexo. Si no se cierran al fin de los meses 1-3, la decisión sobre la meta de
+  adopción pasa de la meta propia sobre habilitadas a "sin meta en Operaciones".
+- **Con `architect`.** Medir uso en chat y Gemini requiere instrumentación
   que hoy no existe; sin eso, la métrica de staff es una encuesta.
 
 ## Insumos para Finanzas
@@ -500,82 +533,88 @@ Costo de horas = horas x USD 10-35 (supuesto del equipo). **Es un piso**: el
 costo de oportunidad real es la tarifa facturable de esas horas, que no está en
 `context/` ([huecos](../../material/huecos.md)); Finanzas la aplica sobre las horas.
 
-| Concepto | Trimestre | Horas | Rango de costo (USD) | Fuente o supuesto |
+| Concepto | Tramo | Horas | Rango de costo (USD) | Fuente o supuesto |
 |---|---|---|---|---|
-| Nivel básico, ~65 personas x 6 h | T1 | ~390 | 3.900 - 13.650 | Supuesto del equipo |
-| Nivel intermedio, ~50 personas x 12 h | T1-T3 | ~600 | 6.000 - 21.000 | Supuesto del equipo |
-| Nivel avanzado, ~10 personas x 480 h x 10-15% (convención de costeo) | T2 | 480 - 720 | 4.800 - 25.200 | 10-15% de [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md); resto, supuesto |
-| Champions, 8 personas x 10% x 9 meses | T2-T4 | ~1.150 | 11.500 - 40.250 | 10% de [programa](../../material/conceptos/m3u2-programa-champions.md); resto, supuesto |
-| Prueba chica de T1: 2 champions de Tecnología al 10% durante 2 meses | T1 | 64 | 1.200 - 3.000 | 2 x 10% x 2 x 160 h; el costo es el que fija el Anexo E ("Prueba chica de T1"). El diseño (40-80 h de tech lead) y la lectura (16-24 h de DevOps/QA) los costea E como tiempo clave, no entran acá |
-| **Subtotal horas de capacitación** | T1-T4 | **~2.684 - 2.924** | **~27.400 - 103.100** | Suma |
-| Líder del programa, 20% de una persona, 12 meses | T1-T4 | 0 (reasignación) | 10.800 - 24.000 | 20% x 12 x USD 4.500-10.000 ([tech lead](../../context/supuestos/costo-cargado-por-rol.md)) |
-| Contractor de IA aplicada, 9 meses, 100%, **solo si G1 encuentra una señal** | T2-T4 | n/a | 40.500 - 99.000 | 9 x USD 4.500-11.000 ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)). Sin señal el renglón sale y queda el cierre que costea E (~4 mil en el medio). Reemplaza la fracción de 0,8 FTE de IA aplicada del Anexo B: no se suma con ella |
-| Contractor de IA aplicada en T1, 50% (alternativa B1) | T1 | n/a | 6.750 - 16.500 | 0,5 x 3 meses x USD 4.500-11.000. Reemplaza el 0,3 FTE de IA aplicada de T1-b del Anexo B; el 0,2 restante es incorporación y documentación. **Pasa a caja un costo que B tenía como tiempo.** Alternativa a decidir con `finance`: contratar al 30% en T1 (−2.700 a −6.600 de caja: 0,2 x 3 x 4.500-11.000), si el contrato lo admite |
-| T0: reconstrucción retrospectiva y diseño de encuesta | T0 | 60 - 100 | 1.700 - 6.300 | Supuesto del equipo: 1,5 a 2,5 semanas del perfil técnico que lidera el programa, a USD 28-63 por hora (4.500-10.000 mensuales de tech lead sobre 160 h) |
-| Certificación o curso externo del nivel avanzado | T2 | n/a | **Sin estimar** | Falta cotización; no se inventa |
-| Instrumentación de medición de uso en chat y Gemini | T1 | n/a | Incluida en DevOps/QA del [Anexo B](02-arquitectura.md) (1.400-7.100 de tiempo); no suma | Costeada por `architect`, sin cotización de proveedores |
-| Reconocimiento de champions | T2-T4 | n/a | 0 (no monetario) | Supuesto del equipo; si es monetario, Finanzas lo ajusta |
-| **Total identificado** | T0-T4 | | **~87.200 - 248.900** | Suma de los renglones con costo, incluida la alternativa B1 y el contractor de T2-T4. Sin señal en G1 (sin el renglón de T2-T4): ~46.700 - 149.900, más el cierre de E. Sin B1: ~80.400 - 232.400. No descuenta el solape con el Anexo B |
+| Nivel básico, ~65 personas x 6 h | Meses 1-3 | ~390 | 3.900 - 13.650 | Supuesto del equipo |
+| Nivel intermedio, ~50 personas x 12 h | Meses 1-9 | ~600 | 6.000 - 21.000 | Supuesto del equipo |
+| Nivel avanzado, ~10 personas x 480 h x 10-15% (convención de costeo) | Meses 4-6 | 480 - 720 | 4.800 - 25.200 | 10-15% de [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md); resto, supuesto |
+| Champions, 8 personas x 10% x 9 meses | Meses 4-12 | ~1.150 | 11.500 - 40.250 | 10% de [programa](../../material/conceptos/m3u2-programa-champions.md); resto, supuesto |
+| Prueba chica de los meses 1-3: 2 champions de Tecnología al 10% durante 2 meses | Meses 1-3 | 64 | 1.200 - 3.000 | 2 x 10% x 2 x 160 h; el costo es el que fija el Anexo E ("Prueba chica de los meses 1-3 (primeros 100 días)"). El diseño (40-80 h de tech lead) y la lectura (16-24 h de DevOps/QA) los costea el Anexo E como tiempo clave, no entran acá |
+| **Subtotal horas de capacitación** | Meses 1-12 | **~2.684 - 2.924** | **~27.400 - 103.100** | Suma |
+| Líder del programa, 20% de una persona, 12 meses | Meses 1-12 | 0 (reasignación) | 10.800 - 24.000 | 20% x 12 x USD 4.500-10.000 ([tech lead](../../context/supuestos/costo-cargado-por-rol.md)) |
+| Contractor de IA aplicada, 9 meses, 100%, **solo si la decisión del mes 3 encuentra una señal** | Meses 4-12 | n/a | 40.500 - 99.000 | 9 x USD 4.500-11.000 ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)). Sin señal el renglón sale y queda el cierre que costea el Anexo E (~4 mil en el medio). Reemplaza la fracción de 0,8 FTE de IA aplicada del Anexo B: no se suma con ella |
+| Contractor de IA aplicada en los meses 1-3, 50% (contractor desde el mes 1) | Meses 1-3 | n/a | 6.750 - 16.500 | 0,5 x 3 meses x USD 4.500-11.000. Reemplaza el 0,3 FTE de IA aplicada de los meses 1-3 del Anexo B (contractor que reemplaza); el 0,2 restante es incorporación y documentación. **Pasa a caja un costo que el Anexo B tenía como tiempo.** Alternativa a decidir con `finance`: contratar al 30% en los meses 1-3 (−2.700 a −6.600 de caja: 0,2 x 3 x 4.500-11.000), si el contrato lo admite |
+| Preparación previa: reconstrucción retrospectiva y diseño de encuesta | Preparación previa | 60 - 100 | 1.700 - 6.300 | Supuesto del equipo: 1,5 a 2,5 semanas del perfil técnico que lidera el programa, a USD 28-63 por hora (4.500-10.000 mensuales de tech lead sobre 160 h) |
+| Certificación o curso externo del nivel avanzado | Meses 4-6 | n/a | **Sin estimar** | Falta cotización; no se inventa |
+| Instrumentación de medición de uso en chat y Gemini | Meses 1-3 | n/a | Incluida en DevOps/QA del [Anexo B](02-arquitectura.md) (1.400-7.100 de tiempo); no suma | Costeada por `architect`, sin cotización de proveedores |
+| Reconocimiento de champions | Meses 4-12 | n/a | 0 (no monetario) | Supuesto del equipo; si es monetario, Finanzas lo ajusta |
+| **Total identificado** | Preparación previa y meses 1-12 | | **~87.200 - 248.900** | Suma de los renglones con costo, incluido el contractor desde el mes 1 y el contractor de los meses 4-12. Sin señal en la decisión del mes 3 (sin el renglón de los meses 4-12): ~46.700 - 149.900, más el cierre del Anexo E. Sin el contractor de los meses 1-3: ~80.400 - 232.400. No descuenta el solape con el Anexo B |
 
 Escala: las ~2.684-2.924 horas son unas 41-45 horas por persona de la dotación
 ([tamaño y estructura](../../context/hechos/tamano-y-estructura.md)), cerca del
-2% a 2,5% de una jornada anual.
+2% a 2,5% de una jornada anual. La revisión mensual del Council no suma costo
+a este anexo: el uso semanal por área ya está en la medición de las filas
+anteriores.
 
 **Cómo entra en el Anexo E.** Las horas de este anexo son **tiempo distribuido**
-en la dotación (el segundo sobre de E: 590 h en T1, 654 con la prueba chica), no
-el sobre de personas clave. El tiempo clave que D aporta en T1 es el 20% del líder
-del programa, y el sobre que el board confirma en G0 es de **≥1,6 FTE clave** en
-T1, ~1,8 con la prueba ([Anexo E](05-business-case.md)). El desglose de las 590 h
-de T1 entre básico e intermedio lo consolida E; las 64 h de la prueba son los 2
-champions de arriba. D da las poblaciones y las horas por nivel.
+en la dotación (el segundo sobre del Anexo E: 590 h en los meses 1-3, 654 con la
+prueba chica), no el sobre de personas clave. El tiempo clave que este anexo aporta
+en los meses 1-3 es el 20% del líder del programa, y el sobre que el board confirma
+hoy es de **≥1,6 FTE clave** en los meses 1-3, ~1,8 con la prueba ([Anexo
+E](05-business-case.md)). El desglose de las 590 h de los meses 1-3 entre básico e
+intermedio lo consolida el Anexo E; las 64 h de la prueba son los 2 champions de
+arriba. Este anexo da las poblaciones y las horas por nivel.
 
-**Horas del avanzado: 480-720 en D, y E las cuenta de dos maneras.** E concilia T2
-con 600 h (el punto medio de 480-720) y dice que el costo usa 480. Manda D: el
-avanzado es un **rango de 480-720 h**, y D lo costea completo (4.800-25.200). Para
-el sobre de horas de T2 vale el punto medio, 600; 480 es el piso del rango, no su
-valor central, y no es la convención de costeo (esa es 480 h por persona-trimestre,
-la base del cálculo). Si E costea el medio con 480, subestima ese renglón. Propuesta
-para `finance`: en E, línea 120, `y el avanzado de D se costea con 480 h.` →
-`y el avanzado de D se costea con el rango de 480-720 h (medio 600, el mismo de la conciliación de T2).`
-y en E, línea 230-231, `y el costo usa 480 (convención de D)` → `y el costo usa el
-mismo rango (D)`, recalculando el medio de la fila de D (hoy 32,5 en T2) si
-cambia. No se publica una base de horas totales de la
-empresa. Si el costo total entra dentro
-del 1% a 3% de la facturación que se asume como capacidad de inversión
+**Horas del avanzado: 480-720 en este anexo, y el Anexo E las cuenta de dos
+maneras.** El Anexo E concilia los meses 4-6 con 600 h (el punto medio de 480-720)
+y dice que el costo usa 480. Manda este anexo: el avanzado es un **rango de 480-720
+h**, y acá se costea completo (4.800-25.200). Para el sobre de horas de los meses
+4-6 vale el punto medio, 600; 480 es el piso del rango, no su valor central, y no
+es la convención de costeo (esa es 480 h por persona-tramo, la base del cálculo). Si
+el Anexo E costea el medio con 480, subestima ese renglón. Propuesta para `finance`:
+en el Anexo E, línea 120, `y el avanzado del Anexo D se costea con 480 h.` → `y el
+avanzado del Anexo D se costea con el rango de 480-720 h (medio 600, el mismo de la
+conciliación de los meses 4-6).` y en el Anexo E, línea 230-231, `y el costo usa 480
+(convención del Anexo D)` → `y el costo usa el mismo rango (Anexo D)`, recalculando el
+medio de la fila del Anexo D (hoy 32,5 en los meses 4-6) si cambia. No se publica
+una base de horas totales de la empresa. Si el costo total entra dentro del 1% a 3%
+de la facturación que se asume como capacidad de inversión
 ([supuesto](../../context/supuestos/capacidad-de-inversion.md)) lo calcula
 Finanzas: la facturación en USD no se publica.
 
 ## Insumos para el deck
 
 - **Decisión que se le pide al board:** aprobar capacitar y reasignar en vez de
-  contratar, más **un** perfil especializado a prueba (D2), aclarando que choca con
-  la restricción actual de no contratar. G0 autoriza su tramo de T1 y la prueba
-  chica; el tramo de T2-T4 se libera en G1 solo con una señal, y sin ella el
-  contractor se cierra y T2-T4 corre como (b).
+  contratar, más **un** perfil especializado a prueba (la decisión sobre IA
+  aplicada), aclarando que choca con la restricción actual de no contratar. La
+  aprobación de hoy autoriza su tramo de los meses 1-3 y la prueba chica; el tramo
+  de los meses 4-12 se libera en la decisión del mes 3 solo con una señal, y sin
+  ella el contractor se cierra y los meses 4-12 corren como la alternativa de gobierno mínimo y formación del Anexo E.
 - **Frase central:** en el piloto de abril (12 personas que se anotaron solas) el
   uso fue alto (NPS +42) y la capacitación falló: el primer freno fue el tiempo.
   El plan responde con casos por rol, horas dentro de la jornada y champions con
-  tiempo asignado, y mide en T1 si pasa lo mismo en toda la organización.
+  tiempo asignado, y mide en los meses 1-3 si pasa lo mismo en toda la organización.
 - **Redacción sugerida para la slide 6 (propuesta para `caio`):** reemplazar
   «El piloto mostró que la gente valora la IA (NPS +42) y que falló la
   capacitación: 17% completó los cursos.» por «En el piloto de abril (n=12,
   autoseleccionado) el uso fue alto (NPS +42) y la capacitación falló: solo 17%
   completó los cursos. Es una señal, no una medición de toda la organización:
-  la base de T1 la mide.»
+  la base de los meses 1-3 la mide.»
 - **Cifra para el CFO:** ~2.684-2.924 horas de capacitación, ~41-45 horas por
   persona, a USD 27.400-103.100 al costo cargado; Finanzas suma el costo de
-  oportunidad a tarifa facturable. Total de personas identificado ~USD 87.200-248.900 (con contractor desde T1 y al 100% en T2-T4; ~46.700-149.900 si G1 no encuentra señal).
+  oportunidad a tarifa facturable. Total de personas identificado ~USD 87.200-248.900 (con contractor desde el mes 1 y al 100% en los meses 4-12; ~46.700-149.900 si la decisión del mes 3 no encuentra señal).
 - **Señal de alerta que debe ir en la slide:** la meta combinada de 80% del
-  borrador de OKR 2027 es inalcanzable con Operaciones prohibida por contrato (D1).
-- **Qué se mide:** uso real semanal por área, no seats; condiciones de abandono
-  a T2 y T3 explícitas.
+  borrador de OKR 2027 es inalcanzable con Operaciones prohibida por contrato (ver
+  la decisión sobre la meta de adopción).
+- **Qué se mide:** uso real semanal por área, no seats, que alimenta el tablero
+  mensual del Council; condiciones de abandono a los meses 6 y 9 explícitas.
 
 ## Cautelas
 
 - Las poblaciones, las horas por nivel y la red de champions son **supuestos del
   equipo** con ficha en `draft`
   ([poblaciones de capacitación](../../context/supuestos/poblaciones-de-capacitacion.md));
-  falta verificarla. Los umbrales de adopción de cada trimestre no tienen ficha:
+  falta verificarla. Los umbrales de adopción de cada tramo no tienen ficha:
   el equipo debe convertirlos en fichas `Supuesto` o validarlos con la línea de base.
 - Las cifras de adopción vienen de fichas en `draft`; varias son rangos o
   proporciones aproximadas, y la telemetría solo mide el agente de código.
@@ -585,9 +624,10 @@ Finanzas: la facturación en USD no se publica.
   proceso típico supuesto; falta validarlo con un delivery manager.
 - La postura sobre el empleo es una propuesta; falta la decisión del Directorio y
   la revisión laboral.
-- La holgura de 0,2 FTE del contractor en T2 es un supuesto de people sin dato
-  del contractor; el replan de T2 depende de ella y no se da por confirmado
-  (ver "Holgura de 0,2 FTE del contractor en T2").
+- La holgura de 0,2 FTE del contractor en los meses 4-6 es un supuesto de people
+  sin dato del contractor; el replan de los meses 4-6 depende de ella y no se da
+  por confirmado (ver "Holgura de 0,2 FTE del contractor en los meses 4-6 (replan
+  del Anexo B)").
 - Responsable humano de cada acción: **pendiente**.
 - No se usaron cifras del curso sin fuente primaria (60% menos de resistencia).
 

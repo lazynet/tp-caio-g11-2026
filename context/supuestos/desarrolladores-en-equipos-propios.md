@@ -4,7 +4,7 @@ title: "Desarrolladores en equipos propios y su costo"
 description: "El caso de negocio supone entre 15 y 20 desarrolladores en equipos propios (valor de cálculo 17,5) con un costo cargado de USD 2.500-7.000 por mes (valor de cálculo 4.750)."
 status: draft
 tags: [supuesto, finanzas, productividad]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T18:00:00Z }
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-14T20:00:00Z }
 ---
 # Supuesto
 
@@ -34,8 +34,8 @@ Es el piso de la cohorte, necesario pero no suficiente: decide el semiancho.
 
 - Un inventario por equipo que dé menos de 15 desarrolladores en equipos propios.
 - Una mezcla de seniority muy distinta de la supuesta.
-- Que la serie de T0 muestre que con 15 personas el semiancho supera 3 puntos:
-  entonces el mínimo no alcanza y el gate se reformula antes de G0.
+- Que la serie de la preparación previa muestre que con 15 personas el semiancho supera 3 puntos:
+  entonces el mínimo no alcanza y el gate se reformula antes de la aprobación de hoy.
 
 # Cautelas
 

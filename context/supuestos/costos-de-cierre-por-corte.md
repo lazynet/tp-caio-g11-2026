@@ -4,7 +4,7 @@ title: "Costos de cierre al cortar el plan en un gate"
 description: "Si el plan se corta en un gate, el cierre suma un mes de dedicación del contractor por preaviso y un mes de infraestructura de laboratorio, legal y red team no comprometen gasto más allá del gate vigente, y la reserva que lo cubre se amplía en cada gate que sube ese compromiso."
 status: draft
 tags: [supuesto, finanzas, riesgo]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T12:00:00Z }
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-14T22:00:00Z }
 ---
 # Supuesto
 
@@ -15,7 +15,7 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T12:00:00Z }
 | Asesoría legal y red team | Cero más allá del gate: se contratan por etapa |
 | Suscripciones existentes | Fuera del cierre: existen con o sin plan |
 
-La pérdida al cortar en un gate es lo ejecutado hasta ese gate, más T0, más este
+La pérdida al cortar en un gate es lo ejecutado hasta ese gate, más la preparación previa, más este
 cierre (ver [convenciones](/supuestos/convenciones-de-calculo.md)).
 
 ## Composición por gate
@@ -24,16 +24,16 @@ El cierre depende de la dedicación que el gate anterior liberó:
 
 | Corte en | Contractor | Laboratorio | Otros |
 |---|---|---|---|
-| G1 | Un mes al 50% (dedicación de T1) | Un mes del nivel de T1 (solo telemetría) | — |
-| G1 sin señal (el contractor cierra; (b) sigue) | Un mes al 50%, ya dentro de la reserva de G0 | Telemetría, menos de 1 | Sin compromiso nuevo: la reserva no se amplía (supuesto: (b) no firma contratos con preaviso) |
-| G2 o G3, sin producto | Un mes al 100% | Un mes del nivel de T2 | — |
-| G2 o G3, con el producto liberado | Un mes al 100% | Un mes del nivel de T2 | Un mes del tenant del piloto |
+| Mes 3 | Un mes al 50% (dedicación de los meses 1-3) | Un mes del nivel de los meses 1-3 (solo telemetría) | — |
+| Mes 3 sin señal (el contractor cierra; el gobierno mínimo y formación sigue) | Un mes al 50%, ya dentro de la reserva de la aprobación de hoy | Telemetría, menos de 1 | Sin compromiso nuevo: la reserva no se amplía (supuesto: el gobierno mínimo y formación no firma contratos con preaviso) |
+| Mes 6 o 9, sin producto | Un mes al 100% | Un mes del nivel de los meses 4-6 | — |
+| Mes 6 o 9, con el producto liberado | Un mes al 100% | Un mes del nivel de los meses 4-6 | Un mes del tenant del piloto |
 | Corte parcial que conserva el producto | Un mes de la dedicación que se deja | — (se conserva) | — |
 
 ## Reserva de cierre (propuesta de Finanzas)
 
 - El cierre se cubre con una **reserva** de caja, renglón propio, distinto del
-  techo operativo del trimestre y de la base mínima. Solo se usa en un corte.
+  techo operativo del tramo y de la base mínima. Solo se usa en un corte.
 - La reserva se **actualiza en cada gate** que sube el compromiso (más
   dedicación del contractor, tenant del piloto), en el mismo acto y con la misma
   autoridad que aprueba el gate, y antes de liberar el compromiso nuevo.
@@ -52,12 +52,12 @@ El cierre depende de la dedicación que el gate anterior liberó:
 # Qué lo invalidaría
 
 - Un contrato con preaviso más largo, compromiso de volumen o penalidad.
-- Reservas de capacidad o hardware que comprometan más de 12 meses antes de G4.
+- Reservas de capacidad o hardware que comprometan más de 12 meses antes del cierre del mes 12.
 
 # Cautelas
 
 - Vale solo si los contratos se firman con esas condiciones: es una regla de
   contratación del plan, además de un supuesto de costo.
-- Los montos por gate están en el anexo E; esta ficha fija la composición.
+- Los montos por gate están en el Anexo E; esta ficha fija la composición.
 - La reserva es una regla de autorización propuesta, no una decisión del
   Directorio: está pendiente de aprobación.

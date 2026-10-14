@@ -18,14 +18,14 @@ anexo, el plan a 12 meses **no se paga con productividad interna** y no genera
 caja propia. Es un año de inversión con salida por etapas. Se justifica solo si
 prende una de sus opciones: ingresos por IA en el producto, protección del
 ingreso de los clientes financieros o cobertura del precio de los tokens. Por eso se le pide al board un único
-pedido G0 por T1, con techo máximo de caja y de capacidad, y no el año entero.
+pedido de hoy por los meses 1-3, con techo máximo de caja y de capacidad, y no el año entero.
 
-**Escenario recomendado (decidido, lazynet, 2026-10-14): G0 con la prueba chica y
-bifurcación en G1.** Sin una señal que pague la plataforma, T2-T4 corre como
+**Escenario recomendado (decidido, lazynet, 2026-10-14): la aprobación de hoy con la prueba chica y
+bifurcación en el mes 3.** Sin una señal que pague la plataforma, los meses 4-12 corren como
 gobierno mínimo y formación: el año es **≈ 199**. Con señal, **≈ 400** (el paquete
 de 394 más la prueba); es la cabecera, porque es lo máximo que el board puede
-llegar a liberar. En las dos ramas el producto se difiere a G2, y la rama con
-señal usa en T2 el replan de B; la excepción acotada queda costeada.
+llegar a liberar. En las dos ramas el producto se difiere hasta la lectura del mes 6, y la rama con
+señal usa en los meses 4-6 el replan del Anexo B; la excepción acotada queda costeada.
 
 Responsable humano de cada cifra y de cada gate: **pendiente**. Ninguna cifra es
 apta para entrega: todo es borrador sin verificación humana, las fichas de
@@ -33,9 +33,9 @@ apta para entrega: todo es borrador sin verificación humana, las fichas de
 
 ## Supuestos de partida
 
-**Convención de tiempo y de cálculo.** T0 es el cuarto trimestre de 2026 y T1-T4
-son los trimestres de 2027; el Q1-Q4 de los Anexos B y C se lee como T1-T4. Una
-persona-trimestre son **480 horas de costeo** (160 por mes): con ellas se pasa de
+**Convención de tiempo y de cálculo.** La preparación previa es octubre-diciembre de 2026 y los cuatro tramos de tres meses de 2027 son los meses 1-3, 4-6,
+ 7-9 y 10-12; los Anexos B y C usan los mismos tramos. Una
+persona-tramo son **480 horas de costeo** (160 por mes): con ellas se pasa de
 horas a FTE. Las 520 horas de 13 semanas × 40 h son calendario bruto, sin
 descontar feriados ni licencias, y no se usan para FTE ni para costo
 ([convenciones](../../context/supuestos/convenciones-de-calculo.md)).
@@ -57,28 +57,28 @@ para que el plan entre en el techo, y lo verifica quien tiene acceso a `private/
 | Capacidad disponible | Utilización facturable 83%-90%, bench menor a 1 FTE, restricción de no contratar | [Hecho](../../context/hechos/capacidad-y-utilizacion.md) |
 | Ganancia de throughput (g) | +10% a +25% por desarrollador a 12 meses, solo en equipos propios | [Supuesto](../../context/supuestos/ganancia-de-productividad.md) |
 | Desarrolladores en equipos propios (N) y su costo | 15-20 personas (17,5); USD 2.500-7.000 por mes (4.750). N × costo **no** es la nómina | [Supuesto](../../context/supuestos/desarrolladores-en-equipos-propios.md) |
-| Rampa de la ganancia (T1/T2/T3/T4) | Fracción del objetivo de throughput que se alcanza: base 0/25/60/100%; pesimista 0/10/30/60%; optimista 0/40/80/100% | [Supuesto](../../context/supuestos/rampa-de-la-ganancia.md) |
-| Línea de base de atribución | Base prospectiva congelada en las semanas 1-4 de T1; la serie retrospectiva de T0 estima ruido. El OKR se informa al lado contra T0; no cambia de base: la retrospectiva solo da lectura contra tendencia, sin atribución (Anexo B, "Respaldo") | [Convenciones](../../context/supuestos/convenciones-de-calculo.md), [Anexo F](06-roadmap-riesgo.md) |
+| Rampa de la ganancia (meses 1-3 / 4-6 / 7-9 / 10-12) | Fracción del objetivo de throughput que se alcanza: base 0/25/60/100%; pesimista 0/10/30/60%; optimista 0/40/80/100% | [Supuesto](../../context/supuestos/rampa-de-la-ganancia.md) |
+| Línea de base de atribución | Base prospectiva congelada en las semanas 1-4 del plan; la serie retrospectiva de la preparación previa estima ruido. El OKR se informa al lado contra el cuarto trimestre de 2026; no cambia de base: la retrospectiva solo da lectura contra tendencia, sin atribución (Anexo B, "Respaldo") | [Convenciones](../../context/supuestos/convenciones-de-calculo.md), [Anexo F](06-roadmap-riesgo.md) |
 | Poblaciones de capacitación | Básico ~65 × 6 h; intermedio ~50 × 12 h; avanzado ~10; 8 champions al 10% | [Supuesto](../../context/supuestos/poblaciones-de-capacitacion.md) |
 | Precios externos y contingencia | Rangos sin cotización; 15% de contingencia sobre la caja | [Supuesto](../../context/supuestos/precios-externos-sin-cotizar.md) |
 | Capacidades que hoy no existen | Gateway, inventario de arquitectura, legal dedicado a IA | [Supuesto](../../context/supuestos/capacidades-ausentes.md) |
-| Suscripción del agente de código | 40-45 seats × USD 40-45 por mes = 4,8-6,1 mil por trimestre | Cálculo sobre [uso de IA](../../context/hechos/uso-ia-interno.md) y [costos](../../context/hechos/costos-tecnologia-e-ia.md) |
+| Suscripción del agente de código | 40-45 seats × USD 40-45 por mes = 4,8-6,1 mil por tramo de tres meses | Cálculo sobre [uso de IA](../../context/hechos/uso-ia-interno.md) y [costos](../../context/hechos/costos-tecnologia-e-ia.md) |
 | Consumo real / lo pagado | ~12× en el agente de código | [Hecho](../../context/hechos/costos-tecnologia-e-ia.md) (telemetría, no factura) |
 | Régimen del año 2 | Caja de ~48 mil de base común (~93 si el producto sigue) más 1,5 FTE senior (~95 mil) | [Supuesto](../../context/supuestos/costo-de-regimen-del-ano-2.md) |
-| Cierre y base mínima tras un corte | Un mes de preaviso del contractor y de laboratorio, cubierto por una reserva que se actualiza en cada gate; queda el núcleo de gobierno y la pasarela instalada; si P sigue, también la base común que P usa | [Cierre](../../context/supuestos/costos-de-cierre-por-corte.md), [base mínima](../../context/supuestos/base-minima-tras-un-corte.md) |
+| Cierre y base mínima tras un corte | Un mes de preaviso del contractor y de laboratorio, cubierto por una reserva que se actualiza en cada gate; queda el núcleo de gobierno y la pasarela instalada; si el producto sigue, también la base común que el producto usa | [Cierre](../../context/supuestos/costos-de-cierre-por-corte.md), [base mínima](../../context/supuestos/base-minima-tras-un-corte.md) |
 | Sobre de capacidad separado | Tiempo clave contra 1-2,25 FTE; horas distribuidas como segundo sobre | [Propuesta de Finanzas](../../context/supuestos/sobre-de-capacidad-separado.md) |
 | Seats nuevos | Ninguno: la meta de adopción es de activación | [Anexo B](02-arquitectura.md) |
-| Alternativas más baratas y prueba chica de T1 | Composición de (b) y (c), misma medición en las tres | [Supuesto](../../context/supuestos/alternativas-de-menor-alcance.md) |
+| Alternativas más baratas y prueba chica de los meses 1-3 | Composición del gobierno mínimo y formación y del piloto acotado, misma medición en las tres | [Supuesto](../../context/supuestos/alternativas-de-menor-alcance.md) |
 
-**Escenario de costos que consume este anexo.** T1 acotado (T1-b del
-[Anexo B](02-arquitectura.md)), el contractor de IA aplicada que **reemplaza** la
-fracción interna de B desde T1 (alternativa B1 del [Anexo D](04-personas-cultura.md)),
-el replan de T2 de B y el frente producto diferido. La excepción acotada de T2 y
-la alternativa con producto desde T2 quedan costeadas como comparación.
+**Escenario de costos que consume este anexo.** El primer tramo acotado del
+[Anexo B](02-arquitectura.md), el contractor de IA aplicada que **reemplaza** la
+fracción interna del Anexo B desde el mes 1 (el contractor desde el mes 1, según el [Anexo D](04-personas-cultura.md)),
+el replan de los meses 4-6 del Anexo B y el frente producto diferido. La excepción acotada de los meses 4-6 y
+la alternativa con producto desde el mes 4 quedan costeadas como comparación.
 
 **Qué es producto en el costo.** Se cargan al frente producto el consumo de
 modelos, el red team del piloto, el incremento de infraestructura del piloto y
-los desarrolladores senior (1,5 / 1,0 FTE en T3-T4). El
+los desarrolladores senior (1,5 / 1,0 FTE en los meses 7-12). El
 [Anexo B](02-arquitectura.md) lo confirma y etiqueta sus renglones por frente.
 
 **Dónde va la capacitación.** El supuesto de capacidad de inversión pone la
@@ -88,82 +88,81 @@ horas propias sin gasto externo. Si el Directorio la quiere en la caja, suma
 
 ## Evidencia
 
-### Inversión por trimestre (miles de USD, rama con señal: plataforma desde T2, producto diferido y replan de T2)
+### Inversión por tramo de tres meses (miles de USD, rama con señal: plataforma desde el mes 4, producto diferido y replan de los meses 4-6)
 
 Consolidado de los Insumos para Finanzas de los Anexos [B](02-arquitectura.md),
 [C](03-gobierno-seguridad.md) y [D](04-personas-cultura.md), con valores medios.
 Se separa la **caja**, que sale de la empresa, del **tiempo** reasignado, que es
-costo de oportunidad. La columna "Fr." dice a qué frente pertenece cada renglón:
-**B** base común, **I** frente interno.
+costo de oportunidad. La columna "Frente" dice a qué frente pertenece cada renglón:
+la base común o el frente interno.
 
-| Concepto | Fr. | T0 | T1 | T2 | T3 | T4 | Año (rango) | Dueño |
+| Concepto | Frente | Previa | Meses 1-3 | Meses 4-6 | Meses 7-9 | Meses 10-12 | Año (rango) | Dueño |
 |---|---|---|---|---|---|---|---|---|
-| Infraestructura (T1-b: solo telemetría en T1; T3-T4 sin piloto, al nivel de T2) | B | — | 1,0 | 8,3 | 8,3 | 8,3 | 14-38 | B |
-| Asesoría legal externa | B | — | 7,0 | 7,0 | — | — | 8-20 | C |
-| Pasarela de salida, DLP y logs | B | — | — | 3,8 | 3,8 | 3,8 | 4,5-18 | C |
-| Red team externo y auditoría ISO 27001 ampliada (capa D del Anexo C: cota superior, ver nota) | B | — | — | — | — | 21,3 | 11,6-31 | C |
-| Contractor de IA aplicada (50% en T1, 100% en T2-T4) | B | — | 11,6 | 23,2 | 23,2 | 23,2 | 47-116 | D |
-| Contingencia 15% | | — | 2,9 | 6,3 | 5,3 | 8,5 | 13-33 | E |
+| Infraestructura (primer tramo acotado: solo telemetría en los meses 1-3; los meses 7-12 sin piloto, al nivel de los meses 4-6) | Base común | — | 1,0 | 8,3 | 8,3 | 8,3 | 14-38 | Arquitectura |
+| Asesoría legal externa | Base común | — | 7,0 | 7,0 | — | — | 8-20 | Gobierno |
+| Pasarela de salida, DLP y logs | Base común | — | — | 3,8 | 3,8 | 3,8 | 4,5-18 | Gobierno |
+| Red team externo y auditoría ISO 27001 ampliada (demostración externa del Anexo C: cota superior, ver nota) | Base común | — | — | — | — | 21,3 | 11,6-31 | Gobierno |
+| Contractor de IA aplicada (50% en los meses 1-3, 100% en los meses 4-12) | Base común | — | 11,6 | 23,2 | 23,2 | 23,2 | 47-116 | Personas |
+| Contingencia 15% | | — | 2,9 | 6,3 | 5,3 | 8,5 | 13-33 | Finanzas |
 | **Caja incremental** | | — | **22,6** | **48,6** | **40,5** | **65,0** | **98-255** | |
-| Esfuerzo técnico de la base (0,6 / 1,2 / 1,5 / 1,4 FTE) | B | 0,3 | 11,2 | 21,3 | 26,6 | 24,5 | 50-118 | B |
-| Gobierno, seguridad, Council, pruebas de bypass y ejercicios | B | — | 13,0 | 16,1 | 9,6 | 10,4 | 27-72 | C |
-| Retrospectiva de T0, capacitación, champions y líder del programa | I | 4,0 | 17,6 | 32,5 | 17,5 | 13,0 | 39-130 | D |
+| Esfuerzo técnico de la base (0,6 / 1,2 / 1,5 / 1,4 FTE) | Base común | 0,3 | 11,2 | 21,3 | 26,6 | 24,5 | 50-118 | Arquitectura |
+| Gobierno, seguridad, Council, pruebas de bypass y ejercicios | Base común | — | 13,0 | 16,1 | 9,6 | 10,4 | 27-72 | Gobierno |
+| Retrospectiva de la preparación previa, capacitación, champions y líder del programa | Interno | 4,0 | 17,6 | 32,5 | 17,5 | 13,0 | 39-130 | Personas |
 | **Tiempo reasignado a costo cargado** | | **4,2** | **41,8** | **69,8** | **53,7** | **47,9** | **115-320** | |
 | FTE de personas clave | | — | 1,6 | 2,2 | 2,2 | 2,1 | 2,0 promedio | |
 | Horas distribuidas de la dotación (FTE) | | — | 590 h (1,2) | ~1.210 h (2,5) | ~580 h (1,2) | ~410 h (0,8) | 1,5 promedio | |
 | **FTE equivalentes** | | — | **2,8** | **4,7** | **3,4** | **3,0** | **3,5 promedio** | |
 
 Año: caja 177 (98-255) y tiempo 217 (115-320); económico **394** (213-575). La
-prueba chica (G0, en las dos ramas) suma 6 (3-9) de tiempo y nada de caja: la
-rama llega a ≈ 400 (216-584); ROI, cortes de G2-G3 y pesimista van sin la prueba.
+prueba chica (la aprobación de hoy, en las dos ramas) suma 6 (3-9) de tiempo y nada de caja: la
+rama llega a ≈ 400 (216-584); ROI, cortes de los meses 6 y 9 y pesimista van sin la prueba.
 Los FTE suman antes de redondear. Decisiones de los dueños: infraestructura de
-T3-T4 al nivel de T2 (B), replan de T2 (−0,3 FTE clave, −5) y avanzado de D en el medio
+los meses 7-12 al nivel de los meses 4-6 (Anexo B), replan de los meses 4-6 (−0,3 FTE clave, −5) y avanzado del Anexo D en el medio
 de su rango de costo (4,8-25,2 → 15,0; 480-720 h, medio 600).
 
-**Excepción acotada en lugar del replan.** Si el board elige la excepción, T2
-queda en 2,5 FTE clave y 75,2 de tiempo, y el año en tiempo 223 (118-328) y
+**Excepción acotada en lugar del replan.** Si el board elige la excepción, los meses 4-6
+quedan en 2,5 FTE clave y 75,2 de tiempo, y el año en tiempo 223 (118-328) y
 económico 399 (216-583). La caja no cambia.
 
-**Capa D del Anexo C.** El red team externo y la auditoría ampliada son la capa
-de demostración externa, que el [Anexo C](03-gobierno-seguridad.md) (D9b)
-propone condicionar a la evidencia contractual que se junta en T1 y se decide
-en G3. Como esa evidencia no depende de la señal de producto de G2, el base la
-cuenta como cota superior. Si se saca a un tramo condicional, como P, la caja
-base baja a 152 (85-220) y el techo de caja de T4 a 59; el tramo suma 25
+**La demostración externa.** El red team externo y la auditoría ampliada son la demostración externa. El [Anexo C](03-gobierno-seguridad.md) (sección "Licencia para vender")
+propone condicionarla a la evidencia contractual que se junta en los meses 1-3 y se decide
+en el mes 9. Como esa evidencia no depende de la señal de producto del mes 6, el base la
+cuenta como cota superior. Si se saca a un tramo condicional, como el producto, la caja
+base baja a 152 (85-220) y el techo de caja de los meses 10-12 a 59; el tramo suma 25
 (13-36). `caio` la deja en la base como cota superior, con la liberación
-condicionada en G3 a la señal contractual ([Anexo F](06-roadmap-riesgo.md)).
+condicionada en el mes 9 a la señal contractual ([Anexo F](06-roadmap-riesgo.md)).
 
-**Tramo condicional del frente producto (P).** Solo si G2 trae la señal de
+**Tramo condicional del frente producto.** Solo si la lectura del mes 6 trae la señal de
 cliente. Si no la trae, no se gasta.
 
-| Concepto de P | T3 | T4 | Tramo (rango) | Dueño |
+| Concepto del producto | Meses 7-9 | Meses 10-12 | Tramo (rango) | Dueño |
 |---|---|---|---|---|
-| Consumo de modelos del piloto | 7,5 | 7,5 | 6-24 | B |
-| Red team del piloto | 10,0 | — | 5-15 | B |
-| Incremento de infraestructura del piloto | 3,8 | 3,8 | 3-12 | B |
-| Contingencia 15% | 3,2 | 1,7 | 2-8 | E |
-| **Caja de P** | **24,4** | **12,9** | **37 (16-59)** | |
-| Desarrolladores senior del piloto (1,5 / 1,0 FTE) | 23,6 | 15,8 | 39 (23-56) | B |
-| FTE clave con P | 3,7 | 3,1 | | |
+| Consumo de modelos del piloto | 7,5 | 7,5 | 6-24 | Arquitectura |
+| Red team del piloto | 10,0 | — | 5-15 | Arquitectura |
+| Incremento de infraestructura del piloto | 3,8 | 3,8 | 3-12 | Arquitectura |
+| Contingencia 15% | 3,2 | 1,7 | 2-8 | Finanzas |
+| **Caja del producto** | **24,4** | **12,9** | **37 (16-59)** | |
+| Desarrolladores senior del piloto (1,5 / 1,0 FTE) | 23,6 | 15,8 | 39 (23-56) | Arquitectura |
+| FTE clave con el producto | 3,7 | 3,1 | | |
 
-Con P, el año suma caja 214 (114-314) y tiempo 257 (137-376). Con el producto
-desde T2 (sin replan) da la misma caja y tiempo 278 (150-406): diferir ahorra el
-desarrollador de T2 (~16), habilita el replan (~5) y deja P para G2. B absorbe el
-diseño del piloto en las semanas 1-4 de T3.
+Con el producto, el año suma caja 214 (114-314) y tiempo 257 (137-376). Con el producto
+desde el mes 4 (sin replan) da la misma caja y tiempo 278 (150-406): diferir ahorra el
+desarrollador de los meses 4-6 (~16), habilita el replan (~5) y deja el producto para la lectura del mes 6. El Anexo B absorbe el
+diseño del piloto en las semanas 1-4 de los meses 7-9.
 
-T0 (1,8-6,7 mil de tiempo) es un **costo previo propuesto**: la reconstrucción
-retrospectiva de D y el día de verificación del historial de B, antes de G0. No
+La preparación previa (1,8-6,7 mil de tiempo) es un **costo previo propuesto**: la reconstrucción
+retrospectiva del Anexo D y el día de verificación del historial del Anexo B, antes de la aprobación de hoy. No
 hay registro de que se haya ejecutado. Quién autoriza gastarlo antes del
 presupuesto 2027 está **pendiente**. La suscripción vigente no es incremental:
 ya está en el gasto de hoy y el plan no suma seats.
 
 **Contra el techo de caja.** La caja con contingencia, 98-255 mil (114-314 con
-P), entra en el 3% de la facturación si esta es de al menos USD 3,3-8,5 millones
-anuales (3,8-10,5 con P), y en el 1% si es de al menos 9,8-25,5 millones
-(11,4-31,4 con P). Lo verifica en `private/` quien tiene acceso, sin publicar el
+el producto), entra en el 3% de la facturación si esta es de al menos USD 3,3-8,5 millones
+anuales (3,8-10,5 con el producto), y en el 1% si es de al menos 9,8-25,5 millones
+(11,4-31,4 con el producto). Lo verifica en `private/` quien tiene acceso, sin publicar el
 dato ni el resultado.
 
-### Contra el sobre de tiempo: T1 entra; T2 entra con el replan
+### Contra el sobre de tiempo: los meses 1-3 entran; los meses 4-6, con el replan
 
 El sobre del [supuesto de capacidad](../../context/supuestos/capacidad-de-inversion.md)
 es 10%-15% del tiempo de un grupo acotado de personas clave. Cuántas son es un
@@ -175,124 +174,126 @@ ejercicios de mesa). Hay dos lecturas, y el board elige:
 - **Estricta:** todo cuenta contra 1-2,25 FTE.
 - **Separada (propuesta de Finanzas, [ficha](../../context/supuestos/sobre-de-capacidad-separado.md)):**
   las personas clave contra el sobre, y las horas distribuidas como un
-  **segundo sobre que el board aprueba explícitamente en G0**.
+  **segundo sobre que el board aprueba explícitamente en la aprobación de hoy**.
 
-| Alternativa de T1 | Clave | Distribuidas | Total | Contra 2,25 FTE | Caja T1 | Tiempo T1 |
+| Alternativa de los meses 1-3 | Clave | Distribuidas | Total | Contra 2,25 FTE | Caja meses 1-3 | Tiempo meses 1-3 |
 |---|---|---|---|---|---|---|
-| T1-a, IA interna de 0,5 | 2,3 | 1,2 | 3,5 | 1,56× | 12 | 57 |
-| T1-a con contractor B1 (comparación con igual provisión, Anexo B) | 1,8 | 1,2 | 3,0 | 1,33×; clave 0,80× | 25 (14-36) | 46 (24-67) |
-| T1-b con IA interna de 0,3 (Anexo B) | 1,9 | 1,2 | 3,1 | 1,38× | 9 (5-13) | 49 (26-71) |
-| **T1-E: T1-b con contractor B1 (recomendada)** | **1,6** | **1,2** | **2,8** | **1,25×; clave 0,70×** | **23 (13-32)** | **42 (22-61)** |
-| T1-E estricta: el intermedio de Tecnología pasa a T2 | 1,6 | 0,8 | 2,4 | 1,06× | 23 (13-32) | 37 (20-54) |
-| T1 mínimo: básico e intermedio pasan a T2 | 1,6 | 0 | 1,6 | 0,70× | 23 (13-32) | 29 (16-41) |
+| Primer tramo completo, IA interna de 0,5 | 2,3 | 1,2 | 3,5 | 1,56× | 12 | 57 |
+| Primer tramo completo con contractor desde el mes 1 (comparación con igual provisión, Anexo B) | 1,8 | 1,2 | 3,0 | 1,33×; clave 0,80× | 25 (14-36) | 46 (24-67) |
+| Primer tramo acotado con IA interna de 0,3 (Anexo B) | 1,9 | 1,2 | 3,1 | 1,38× | 9 (5-13) | 49 (26-71) |
+| **Primer tramo acotado con contractor desde el mes 1 (recomendada)** | **1,6** | **1,2** | **2,8** | **1,25×; clave 0,70×** | **23 (13-32)** | **42 (22-61)** |
+| Primer tramo acotado, versión estricta: el intermedio de Tecnología pasa a los meses 4-6 | 1,6 | 0,8 | 2,4 | 1,06× | 23 (13-32) | 37 (20-54) |
+| Primer tramo mínimo: básico e intermedio pasan a los meses 4-6 | 1,6 | 0 | 1,6 | 0,70× | 23 (13-32) | 29 (16-41) |
 
 Lectura:
 
-- **Con la lectura separada, T1-E entra si el sobre real llega a 1,6 FTE clave, y
-  1,8 con la prueba chica de G0.** Eso pide 12 personas al 15% o 15 al 12% (sin la
+- **Con la lectura separada, el primer tramo acotado entra si el sobre real llega a 1,6 FTE clave, y
+  1,8 con la prueba chica de la aprobación de hoy.** Eso pide 12 personas al 15% o 15 al 12% (sin la
   prueba, 11 al 15%). **Si el sobre disponible es el extremo inferior (1,0 FTE),
-  ninguna versión de T1 entra.** El board confirma en G0 que dispone de ese piso. Las 590 horas distribuidas son ~9 h por persona de
+  ninguna versión de los meses 1-3 entra.** El board confirma en la aprobación de hoy que dispone de ese piso. Las 590 horas distribuidas son ~9 h por persona de
   la dotación, y el board las aprueba como sobre propio.
-- **Con la lectura estricta, ninguna versión que cumpla el básico ≥ 90% en T1
-  entra.** T1-E estricta excede el sobre en 0,15 FTE. T1 mínimo entra, pero
+- **Con la lectura estricta, ninguna versión que cumpla el básico ≥ 90% en los meses 1-3
+  entra.** La versión estricta del primer tramo acotado excede el sobre en 0,15 FTE. El primer tramo mínimo entra, pero
   rompe la meta de básico del [Anexo D](04-personas-cultura.md).
-- La vía de IA aplicada de T1 cambia caja por tiempo: el contractor B1 suma
+- La vía de IA aplicada de los meses 1-3 cambia caja por tiempo: el contractor desde el mes 1 suma
   ~13 mil de caja y libera 0,3 FTE clave. Como el recurso que no entra es el
-  tiempo, y la caja sí, Finanzas recomienda B1 (ver "Tensiones").
-- **T1-a con contractor, contra T1-E:** +0,2 FTE clave de B (+4 de tiempo, 2-6)
+  tiempo, y la caja sí, Finanzas recomienda el contractor desde el mes 1 (ver "Tensiones").
+- **El primer tramo completo con contractor, contra el primer tramo acotado:** +0,2 FTE clave del Anexo B (+4 de tiempo, 2-6)
   y +2 de caja (1-3) por el gateway en laboratorio ([Anexo B](02-arquitectura.md)).
   Entra en el techo en el medio (25 contra 33), no en el máximo (35,7). Lo que la
   descarta es que el gateway en laboratorio no mide valor sin harness ni evals,
-  que son de T2.
+  que son de los meses 4-6.
 
-**Conciliación de T2 (actividad → horas → rol → sobre).** Con el replan, 480 horas
+**Conciliación de los meses 4-6 (actividad → horas → rol → sobre).** Con el replan, 480 horas
 por FTE ([convenciones](../../context/supuestos/convenciones-de-calculo.md)):
 
 | Actividad | Horas | FTE | Rol | Sobre |
 |---|---|---|---|---|
-| Arquitectura (0,4, replan) y DevOps/QA (0,8) de B | 576 | 1,2 | Arquitectura, plataforma | Clave |
+| Arquitectura (0,4, replan) y DevOps/QA (0,8) del Anexo B | 576 | 1,2 | Arquitectura, plataforma | Clave |
 | Gobierno y seguridad (25% de un tech lead, 20% de un senior) | 216 | 0,45 | Liderazgo técnico, seguridad | Clave |
 | Líder del programa (20%) | 96 | 0,2 | Liderazgo técnico | Clave |
 | Council (5 × 6 h), pruebas de *bypass* (90 h), red team interno (60 h) | 180 | 0,375 | Liderazgo, seguridad, staff | Clave |
-| **Clave de T2** | **1.068** | **2,225** | | **0,025 bajo 2,25** |
+| **Clave de los meses 4-6** | **1.068** | **2,225** | | **0,025 bajo 2,25** |
 | Intermedio (200 h), avanzado (600 h) y champions (384 h) | 1.184 | 2,47 | Dotación | Distribuido |
 | Ejercicio de mesa de incidentes (8 personas × 3 h) | 24 | 0,05 | Dotación | Distribuido |
-| **Distribuido de T2** | **1.208** | **2,5** | | Segundo sobre |
+| **Distribuido de los meses 4-6** | **1.208** | **2,5** | | Segundo sobre |
 
-Las 2.790 h distribuidas del año son 590 (T1: 390 de básico y 200 de intermedio) +
-1.208 + 584 + 408, con los ejercicios de [C](03-gobierno-seguridad.md) (48 h) dentro. **Regla:** los
+**La revisión mensual del Council no suma costo.** Los 5 asientos × 6 h de cada tramo de tres meses ya están presupuestados (30 h, como en la fila del Council de la tabla de arriba para los meses 4-6; el resto de los tramos va dentro de la fila de gobierno, con el mismo supuesto del [Anexo C](03-gobierno-seguridad.md)). Tres reuniones mensuales de 2 h con 5 asientos son 30 h: las mismas. El tablero se arma con salidas que ya existen, así que no hay otra línea de costo.
+
+Las 2.790 h distribuidas del año son 590 (meses 1-3: 390 de básico y 200 de intermedio) +
+1.208 + 584 + 408, con los ejercicios del [Anexo C](03-gobierno-seguridad.md) (48 h) dentro. **Regla:** los
 ejercicios de mesa cuentan como distribuidos, porque participan 8 personas de la
 dotación por ejercicio; así queda en la
 [ficha del sobre separado](../../context/supuestos/sobre-de-capacidad-separado.md).
-Si se contaran como clave, T2 pasaría a **2,275 y excedería el máximo en 0,025
-FTE**: el replan no entraría solo y regiría la excepción de T2 (más abajo), sin
+Si se contaran como clave, los meses 4-6 pasarían a **2,275 y excederían el máximo en 0,025
+FTE**: el replan no entraría solo y regiría la excepción de los meses 4-6 (más abajo), sin
 forzar la cuenta. Las horas del avanzado usan el punto medio de 480-720 (600). El
-costo de la fila de D en T2 (32,5) es el medio del rango de costo de D, como en el
+costo de la fila del Anexo D en los meses 4-6 (32,5) es el medio del rango de costo del Anexo D, como en el
 resto del anexo: intermedio 200 h × 22,5 USD/h (4,5) + champions 384 h (8,6) +
 líder del programa (4,35) + avanzado 15,0 (medio de 4,8-25,2, equivale a ~667 h).
 A 600 h × 22,5 daría 13,5 (−1,5, sin mover cifras del deck); con 480 h, 28,3,
 que subestima el medio. Separar los sobres no crea horas: el board confirma
-capacidad real y trabajo desplazado en G0.
+capacidad real y trabajo desplazado en la aprobación de hoy.
 
-**Piso de capacidad del plan, por trimestre (FTE clave).** Es lo que el board
+**Piso de capacidad del plan, por tramo de tres meses (FTE clave).** Es lo que el board
 tiene que confirmar disponible, no lo que el supuesto promete:
 
-| | T1 | T2 | T3 | T4 |
+| | Meses 1-3 | Meses 4-6 | Meses 7-9 | Meses 10-12 |
 |---|---|---|---|---|
-| Producto diferido y replan de T2 (recomendado) | 1,6 | 2,2 | 2,2 | 2,1 |
-| Producto diferido con la excepción de T2 | 1,6 | 2,5 | 2,2 | 2,1 |
-| Con P liberado en G2 | 1,6 | 2,2 | 3,7 | 3,1 |
-| Producto desde T2 (comparación, sin replan) | 1,6 | 3,5 | 3,7 | 3,1 |
-| Sin contractor, modo control de B (sin hitos de IA aplicada) | 1,6 | 2,2 | 2,2 | 2,1 |
-| Sin contractor, fracción interna de 0,8 (alternativa C de B; comparación) | 1,6 | 3,3 | 3,0 | 2,9 |
+| Producto diferido y replan de los meses 4-6 (recomendado) | 1,6 | 2,2 | 2,2 | 2,1 |
+| Producto diferido con la excepción de los meses 4-6 | 1,6 | 2,5 | 2,2 | 2,1 |
+| Con el producto liberado en el mes 6 | 1,6 | 2,2 | 3,7 | 3,1 |
+| Producto desde el mes 4 (comparación, sin replan) | 1,6 | 3,5 | 3,7 | 3,1 |
+| Sin contractor, modo control del Anexo B (sin hitos de IA aplicada) | 1,6 | 2,2 | 2,2 | 2,1 |
+| Sin contractor, fracción interna de 0,8 (alternativa sin contractor, con fracción interna, del Anexo B; comparación) | 1,6 | 3,3 | 3,0 | 2,9 |
 | Horas distribuidas (segundo sobre) | 590 h | ~1.210 h | ~580 h | ~410 h |
 
-Sin replan, **T2 excedía el máximo del sobre en ~0,3 FTE**, y no había holgura en
-T3 ni en T4 para correrlo. El [Anexo B](02-arquitectura.md) ("Exceso de T2")
+Sin replan, **los meses 4-6 excedían el máximo del sobre en ~0,3 FTE**, y no había holgura en
+los meses 7-9 ni en los meses 10-12 para correrlo. El [Anexo B](02-arquitectura.md) ("Exceso de los meses 4-6 con el producto diferido")
 propone dos salidas, y Finanzas toma la primera como base:
 
-- **Replan de B (recomendado):** arquitecto 0,5 → 0,4 (el diseño del piloto pasa
-  a T3) y DevOps/QA 1,0 → 0,8 (las evals en CI y la reejecución de la prueba de
-  portabilidad pasan a los 0,2 FTE pagados y sin asignar del contractor). T2
-  queda en 2,225 FTE clave: entra, con 0,025 de holgura. Baja el tiempo de T2 en
+- **Replan del Anexo B (recomendado):** arquitecto 0,5 → 0,4 (el diseño del piloto pasa
+  a los meses 7-9) y DevOps/QA 1,0 → 0,8 (las evals en CI y la reejecución de la prueba de
+  portabilidad pasan a los 0,2 FTE pagados y sin asignar del contractor). Los meses 4-6
+  quedan en 2,225 FTE clave: entran, con 0,025 de holgura. Baja el tiempo de los meses 4-6 en
   ~5 mil (3-8) y no suma caja. Depende de que se apruebe el contractor y de que
   su 0,2 esté libre. Si falta solo el 0,2, rige la excepción; si falta el
-  contractor, B corre T2 en modo control (1,2 FTE de B, sin harness, evals ni
-  prueba de portabilidad) y Finanzas recalcula T2-T4 (fila 5 de "IA aplicada:
+  contractor, el Anexo B corre los meses 4-6 en modo control (1,2 FTE del Anexo B, sin harness, evals ni
+  prueba de portabilidad) y Finanzas recalcula los meses 4-12 (fila 5 de "IA aplicada:
   alternativas costeadas").
-- **Excepción acotada en G0 (alternativa):** el board aprueba 0,3 FTE por encima
-  del sobre en T2. No suma caja; deja el tiempo de T2 en 75,2 y saca ~3-8 mil de
+- **Excepción acotada en la aprobación de hoy (alternativa):** el board aprueba 0,3 FTE por encima
+  del sobre en los meses 4-6. No suma caja; deja el tiempo de los meses 4-6 en 75,2 y saca ~3-8 mil de
   horas facturables.
 
-Lo decide el board en G0. La holgura que queda es mínima en los tres trimestres
-(0,025 en T2, ~0,04 en T3, ~0,14 en T4). Si G2 libera P, el sobre de T3-T4 se
-amplía a 3,7 / 3,1: esa ampliación se decide en G2, no en G0.
+Lo decide el board en la aprobación de hoy. La holgura que queda es mínima en los tres tramos
+(0,025 en los meses 4-6, ~0,04 en los meses 7-9, ~0,14 en los meses 10-12). Si la lectura del mes 6 libera el producto, el sobre de los meses 7-12 se
+amplía a 3,7 / 3,1: esa ampliación se decide en el mes 6, no en la aprobación de hoy.
 
 ### IA aplicada: alternativas costeadas
 
-B y D coinciden en que el contractor **reemplaza** la fracción interna de T2-T4,
-no la complementa, y los dos adoptan como base el contractor al 50% desde T1
-(B1). El rol interno de 0,3 FTE en T1 queda como alternativa de B, válida solo
-si la dirección técnica demuestra antes de G0 experiencia en evals y harness. Año
-completo sin T0, con el producto diferido, medios (rango):
+Los Anexos B y D coinciden en que el contractor **reemplaza** la fracción interna de los meses 4-12,
+no la complementa, y los dos adoptan como base el contractor al 50% desde el mes 1
+(recomendado). El rol interno de 0,3 FTE en los meses 1-3 queda como alternativa del Anexo B, válida solo
+si la dirección técnica demuestra antes de la aprobación de hoy experiencia en evals y harness. Año
+completo sin la preparación previa, con el producto diferido, medios (rango):
 
-| Alternativa | Caja | Tiempo | Económico | FTE clave T1 / T2 / T3 / T4 |
+| Alternativa | Caja | Tiempo | Económico | FTE clave, meses 1-3 / 4-6 / 7-9 / 10-12 |
 |---|---|---|---|---|
-| 1. Reemplaza desde T1 (contractor B1) — **base** | 177 (98-255) | 213 (113-313) | 390 | 1,6 / 2,2 / 2,2 / 2,1 |
-| 2. Rol interno de 0,3 en T1, reemplaza desde T2 | 164 (91-236) | 220 (117-324) | 384 | 1,9 / 2,2 / 2,2 / 2,1 |
-| 3. Complementa (T1-a, contractor y fracción interna) | 166 (92-239) | 290 (157-421) | 455 | 2,3 / — |
-| 4. Sin contractor, con T1-b (los hitos de IA aplicada de T1 pasan a T2) | 83 (44-122) | 274 (149-400) | 357 | **1,6 / 3,3 / 3,0 / 2,9** |
-| 4-a. Sin contractor, con T1-a (todo interno; comparación) | 86 (45-126) | 290 (157-421) | 375 | 2,3 / 3,3 / 3,0 / 2,9 |
-| 5. Sin contractor, modo control de B (sin harness, evals, caso de referencia ni prueba de portabilidad) | 83 (44-122); ~75 (39-110) en el régimen (b) | 213 (113-313) | 296 (~288 en el b) | 1,6 / 2,2 / 2,2 / 2,1 |
+| 1. Reemplaza desde el mes 1 (contractor desde el mes 1) — **base** | 177 (98-255) | 213 (113-313) | 390 | 1,6 / 2,2 / 2,2 / 2,1 |
+| 2. Rol interno de 0,3 en los meses 1-3, reemplaza desde el mes 4 | 164 (91-236) | 220 (117-324) | 384 | 1,9 / 2,2 / 2,2 / 2,1 |
+| 3. Complementa (primer tramo completo, contractor y fracción interna) | 166 (92-239) | 290 (157-421) | 455 | 2,3 / — |
+| 4. Sin contractor, con el primer tramo acotado (los hitos de IA aplicada de los meses 1-3 pasan a los meses 4-6) | 83 (44-122) | 274 (149-400) | 357 | **1,6 / 3,3 / 3,0 / 2,9** |
+| 4-a. Sin contractor, con el primer tramo completo (todo interno; comparación) | 86 (45-126) | 290 (157-421) | 375 | 2,3 / 3,3 / 3,0 / 2,9 |
+| 5. Sin contractor, modo control del Anexo B (sin harness, evals, caso de referencia ni prueba de portabilidad) | 83 (44-122); ~75 (39-110) con la suscripción que no permite gateway | 213 (113-313) | 296 (~288 con ese régimen) | 1,6 / 2,2 / 2,2 / 2,1 |
 
 Las filas 2, 3 y 4-a restan el frente producto a lo costeado con producto (la 1
 sale del cuadro de arriba). La 4 y la 5 parten de la 1 y sacan el contractor con
-su contingencia (−94; 54-133); la 4 suma 0,8 FTE de IA aplicada interna en T2-T4
+su contingencia (−94; 54-133); la 4 suma 0,8 FTE de IA aplicada interna en los meses 4-12
 (+56; 32-79) y el replan que deja de existir (+5; 3-8), porque sin contractor no
-hay quien absorba el 0,2 ([Anexo B](02-arquitectura.md), alternativa C). La 5
-mantiene el T2 del replan y 1,5 / 1,4 FTE de B en T3-T4 (modo control de B,
-"Exceso de T2"); en el régimen (b) del gateway, la infraestructura de T2 baja a
-0,5-1,5 (−8 de caja; T3-T4 pendiente de `architect`).
+hay quien absorba el 0,2 ([Anexo B](02-arquitectura.md), alternativa sin contractor, con fracción interna). La 5
+mantiene el replan de los meses 4-6 y 1,5 / 1,4 FTE del Anexo B en los meses 7-12 (modo control del Anexo B,
+"Exceso de los meses 4-6 con el producto diferido"); con la suscripción que no permite gateway, la infraestructura de los meses 4-6 baja a
+0,5-1,5 (−8 de caja; los meses 7-12 quedan pendientes de `architect`).
 
 **La fila 5 es la más barata sin contractor que entra en el sobre, pero compra
 menos:** no hay cobertura de precio ni caso de referencia. La fila 4 ahorra caja,
@@ -300,24 +301,23 @@ el recurso que sí entra, y gasta tiempo clave, el que no.
 
 #### Dos contingencias del contractor, que no se resuelven igual
 
-Sin contractor, B vuelve a su alternativa C (2,3 FTE en T2) y C y D suman ~1,0
-(en T3-T4, ~0,7).
+Sin contractor, el Anexo B vuelve a la alternativa sin contractor, con fracción interna (2,3 FTE en los meses 4-6) y los Anexos C y D suman ~1,0
+(en los meses 7-12, ~0,7).
 
-| Contingencia | Qué falta | FTE clave T2 / T3 / T4 | Contra el máximo del sobre (2,25) | Respuesta |
+| Contingencia | Qué falta | FTE clave, meses 4-6 / 7-9 / 10-12 | Contra el máximo del sobre (2,25) | Respuesta |
 |---|---|---|---|---|
-| **A. Hay contractor, pero sin el 0,2 adicional** (el traspaso se lo come o el contrato no lo incluye) | Las evals en CI y la reejecución de la prueba de portabilidad vuelven a DevOps/QA | 2,5 / 2,2 / 2,1 | +0,25 en T2 | La **excepción acotada** de 0,3 en T2, aprobada en G0 como respaldo. +5 de tiempo (3-8), sin caja |
-| **B. No hay contractor** (el Directorio no lo aprueba o no se contrata a tiempo) | Toda la fracción de IA aplicada de T2-T4 (0,8 FTE) y el replan | Modo control de B: 2,2 / 2,2 / 2,1. Con fracción interna (alternativa C): **3,3 / 3,0 / 2,9** | Modo control: entra. Fracción interna: **+1,1 / +0,8 / +0,7** | La excepción **no alcanza**. B corre T2 en **modo control**, sin hitos de IA aplicada (fila 5). Ver abajo |
+| **Hay contractor, pero sin el 0,2 adicional** (el traspaso se lo come o el contrato no lo incluye) | Las evals en CI y la reejecución de la prueba de portabilidad vuelven a DevOps/QA | 2,5 / 2,2 / 2,1 | +0,25 en los meses 4-6 | La **excepción acotada** de 0,3 en los meses 4-6, aprobada en la aprobación de hoy como respaldo. +5 de tiempo (3-8), sin caja |
+| **No hay contractor** (el Directorio no lo aprueba o no se contrata a tiempo) | Toda la fracción de IA aplicada de los meses 4-12 (0,8 FTE) y el replan | Modo control del Anexo B: 2,2 / 2,2 / 2,1. Con fracción interna (alternativa C): **3,3 / 3,0 / 2,9** | Modo control: entra. Fracción interna: **+1,1 / +0,8 / +0,7** | La excepción **no alcanza**. el Anexo B corre los meses 4-6 en **modo control**, sin hitos de IA aplicada (fila 5). Ver abajo |
 
-La contingencia B no se cubre con tiempo: con la fracción interna pediría ~50%
-más que el máximo del sobre en T2, para ahorrar caja (~94), el recurso que no
+La contingencia de que no haya contractor no se cubre con tiempo: con la fracción interna pediría ~50%
+más que el máximo del sobre en los meses 4-6, para ahorrar caja (~94), el recurso que no
 falta (fila 4: si el board la prefiere, confirma un piso de 3,3 / 3,0 / 2,9).
 **Propuesta de Finanzas: el contractor (o la fila 2) es condición de inicio de
-los hitos de IA aplicada de T2-T4** (ruteo y caché, evals en CI, caso de
-referencia, prueba de portabilidad y costo). Con señal en G1 y sin contractor al
-cierre de T1, G1 libera el **modo control** de B ([Anexo B](02-arquitectura.md), "Exceso de
-T2"; fila 5: 83 de caja y 213 de tiempo), con consecuencias aceptadas de
-antemano: la palanca de precio sale del deck, el caso de referencia no llega a
-L2 en el año y el throughput es el de la adopción sola, con beneficio φ × 62
+los hitos de IA aplicada de los meses 4-12** (ruteo y caché, evals en CI, caso de
+referencia, prueba de portabilidad y costo). Con señal en el mes 3 y sin contractor al
+cierre de los meses 1-3, la decisión del mes 3 libera el **modo control** del Anexo B ([Anexo B](02-arquitectura.md), "Exceso de
+los meses 4-6 con el producto diferido"; fila 5: 83 de caja y 213 de tiempo), con consecuencias aceptadas de
+antemano: la palanca de precio sale del deck, el caso de referencia no llega al nivel 2 de autonomía («prepara, no ejecuta») en el año y el throughput es el de la adopción sola, con beneficio φ × 62
 (ver "Alternativas equivalentes").
 
 ### Beneficios por palanca
@@ -327,67 +327,67 @@ caja dentro de los 12 meses.**
 
 | Palanca | Tipo | 12 meses (base) | A régimen (anual) | Supuesto y fuente |
 |---|---|---|---|---|
-| Productividad interna en equipos propios | Capacidad liberada (horas evitadas), no caja | 62 mil (28-105) a costo cargado | 130 mil (59-219) con g = 15%; 48 con 5%; 200 con 25% | Lectura A del [Anexo B](02-arquitectura.md): a output fijo, un throughput de x libera x/(1+x) de las horas ([ganancia](../../context/supuestos/ganancia-de-productividad.md), [N y costo](../../context/supuestos/desarrolladores-en-equipos-propios.md), [rampa](../../context/supuestos/rampa-de-la-ganancia.md)) |
+| Productividad interna en equipos propios | Capacidad liberada (horas evitadas), no caja | 62 mil (28-105) a costo cargado | 130 mil (59-219) con g = 15%; 48 con 5%; 200 con 25% | La lectura de horas evitadas a output fijo del [Anexo B](02-arquitectura.md): a output fijo, un throughput de x libera x/(1+x) de las horas ([ganancia](../../context/supuestos/ganancia-de-productividad.md), [N y costo](../../context/supuestos/desarrolladores-en-equipos-propios.md), [rampa](../../context/supuestos/rampa-de-la-ganancia.md)) |
 | Margen en staffing | Margen | 0 | 0 en base | En contratos por hora, menos horas es menos facturación ([supuesto](../../context/supuestos/ganancia-de-productividad.md)). Solo hay margen con precio por resultado ([apunte](../../material/apuntes/2026-09-29-tokenomics-aiops.md)) |
-| Ingresos nuevos por IA en el producto | Ingreso | 0 | Sin cifra | Hoy no hay IA en lo que se vende ni precio validado ([hecho](../../context/hechos/ia-en-producto-y-oferta.md)). Sin compromiso contractual antes de G4 ([Anexo B](02-arquitectura.md)) |
+| Ingresos nuevos por IA en el producto | Ingreso | 0 | Sin cifra | Hoy no hay IA en lo que se vende ni precio validado ([hecho](../../context/hechos/ia-en-producto-y-oferta.md)). Sin compromiso contractual antes del mes 12 ([Anexo B](02-arquitectura.md)) |
 | Riesgo de concentración y licencia para operar | Riesgo evitado | Sin cifra | Sin cifra | El cliente principal pesa 40%-50% ([hecho](../../context/hechos/cartera-y-concentracion.md)) y los bancos deben gobernar la IA de sus terceros ([hecho](../../context/hechos/regulacion-clientes-financieros.md)) |
-| Cobertura del cambio de precio de los tokens | Exposición evitada | Sin cifra | ~19-24 mil por cada 1× de múltiplo evitado | 4,8-6,1 mil por trimestre × 4. Sin prueba de que el gateway la capture (ver "Gateway: suscripción contra consumo") |
+| Cobertura del cambio de precio de los tokens | Exposición evitada | Sin cifra | ~19-24 mil por cada 1× de múltiplo evitado | 4,8-6,1 mil por tramo de tres meses × 4. Sin prueba de que el gateway la capture (ver "Gateway: suscripción contra consumo") |
 
 **Throughput.** Se usa la unidad del [Anexo B](02-arquitectura.md): pull request
 aceptado (mergeado, con las compuertas de calidad aprobadas y sin reversión a 14
-días) por persona activa y por trimestre, estratificado por tipo y tamaño de
+días) por persona activa y por tramo de tres meses, estratificado por tipo y tamaño de
 cambio. La cohorte son los equipos propios. La ganancia se atribuye contra la
-base prospectiva congelada en las semanas 1-4 de T1, con incidentes y retrabajo
-al lado; contra la serie de T0 se informa el OKR, sin atribuir; la serie de T0
+base prospectiva congelada en las semanas 1-4 del plan, con incidentes y retrabajo
+al lado; contra la serie de la preparación previa se informa el OKR, sin atribuir; la serie de la preparación previa
 tampoco sustituye a la base si esta resulta ruidosa (Anexo B, "Respaldo").
 
 **Una sola definición de rampa.** La rampa es la fracción del **objetivo de
-throughput** que se alcanza en el trimestre, como dice la
+throughput** que se alcanza en el tramo, como dice la
 [ficha](../../context/supuestos/rampa-de-la-ganancia.md). El throughput del
-trimestre t es g × rampa_t, y es lo que miden los gates. Las horas evitadas son
+tramo t es g × rampa_t, y es lo que miden los gates. Las horas evitadas son
 g × rampa_t / (1 + g × rampa_t). El throughput que resulta en cada escenario:
 
-| Escenario | g | T2 | T3 | T4 | Capacidad liberada en 12 meses |
+| Escenario | g | Meses 4-6 | Meses 7-9 | Meses 10-12 | Capacidad liberada en 12 meses |
 |---|---|---|---|---|---|
 | Pesimista | 5% | +0,5% | +1,5% | +3,0% | 12 (5-21) |
 | Base | 15% | +3,75% | +9,0% | +15,0% | 62 (28-105) |
 | Optimista | 25% | +10,0% | +20,0% | +25,0% | 114 (51-192) |
 
-**El base es condicional a la regla de F, no un paso asegurado.** F pasa un gate
+**El base es condicional a la regla del Anexo F, no un paso asegurado.** El Anexo F pasa un gate
 si el **límite inferior** del intervalo llega al umbral, no el estimado. Con
-+3,75% y +9%, G2 y G3 pasan solo si el semiancho es ≤ 0,75 y ≤ 1 punto; con
-semiancho de 3 (el máximo que admite B), los límites son 0,75 y 6, y ninguno pasa.
++3,75% y +9%, las lecturas de los meses 6 y 9 pasan solo si el semiancho es ≤ 0,75 y ≤ 1 punto; con
+semiancho de 3 (el máximo que admite el Anexo B), los límites son 0,75 y 6, y ninguno pasa.
 La calidad pesa igual: si el aumento de incidentes o retrabajo queda incierto (el
-intervalo cruza 0 y su límite superior supera el margen de no inferioridad de B),
-el throughput no puede pasar; sin dato de T0, el pase del base es una condición,
+intervalo cruza 0 y su límite superior supera el margen de no inferioridad del Anexo B),
+el throughput no puede pasar; sin dato de la preparación previa, el pase del base es una condición,
 no un estimado.
 Que pase depende de σ, la dispersión entre personas del cambio relativo, y de n,
 las personas activas (semiancho ≈ 1,645 σ / √n, aproximación normal del
-*bootstrap*). **σ no tiene dato:** B lo estima con la serie de T0 antes de G0.
+*bootstrap*). **σ no tiene dato:** el Anexo B lo estima con la serie de la preparación previa antes de la aprobación de hoy.
 La tabla dice qué σ haría falta, no cuál hay:
 
-| n activas | σ máx. para pasar G2 | σ máx. para pasar G3 | σ máx. para semiancho ≤ 3 |
+| n activas | σ máx. para pasar la lectura del mes 6 | σ máx. para pasar la lectura del mes 9 | σ máx. para semiancho ≤ 3 |
 |---|---|---|---|
 | 15 | 1,8 | 2,4 | 7,1 |
 | 20 | 2,0 | 2,7 | 8,2 |
 
 Una dispersión entre personas de 2 puntos es muy baja para PR por semana: lo
-esperable es que el base **espere** en G2 y, si a las 6 semanas el límite sigue
+esperable es que el base **espere** en el mes 6 y, si a las 6 semanas el límite sigue
 debajo de +3%, corte. Extender la ventana baja el ruido de conteo de cada
 persona, pero no suma personas independientes. Por eso el año del base se lee en
-tres ramas, sin probabilidad asignada: **pasa G2 y G3** (−332); **pasa G2 y no G3**,
-T4 con base mínima (≈ −275: 305 de costo, ~30 de capacidad); **la espera de G2
+tres ramas, sin probabilidad asignada: **pasa las lecturas de los meses 6 y 9** (−332); **pasa la lectura del mes 6 y no la del mes 9**,
+con los meses 10-12 en base mínima (≈ −275: 305 de costo, ~30 de capacidad); **la espera del mes 6
 vence y corta** (≈ −245: 265 de costo, ~19 de capacidad, con la misma
-aproximación de medio T3 del pesimista; las partes publicadas dan −246). Es también
-el camino de una base que no resuelve (DP9 de F): si no se puede atribuir, la
-capacidad no cuenta y el neto es ≈ −265. Ninguna alternativa de DP9 está costeada. Si la serie de T0 da semiancho > 3 con
-la cohorte completa, F reformula G2 antes de G0 (por ejemplo, decidir solo en G3
-si σ ≤ 2,4 con n=15), como prevé B, o presenta el base como espera-y-corte. El mínimo es de
+aproximación de medio tramo (meses 7-9) del pesimista; las partes publicadas dan −246). Es también
+el camino de una base que no resuelve (la decisión sobre la base que no resuelve, del [Anexo F](06-roadmap-riesgo.md)): si no se puede atribuir, la
+capacidad no cuenta y el neto es ≈ −265. Ninguna alternativa de esa decisión está costeada. Si la serie de la preparación previa da semiancho > 3 con
+la cohorte completa, el Anexo F reformula la lectura del mes 6 antes de la aprobación de hoy (por ejemplo, decidir solo en el mes 9
+si σ ≤ 2,4 con n=15), como prevé el Anexo B, o presenta el base como espera-y-corte. El mínimo es de
 **15 activas** ([N y cohorte](../../context/supuestos/desarrolladores-en-equipos-propios.md)).
-El pesimista espera en G2 y corta al vencer las 6 semanas.
+El pesimista espera en el mes 6 y corta al vencer las 6 semanas.
 
-La lectura A (horas evitadas) valúa capacidad y es la del base; la lectura B
-(output adicional, g × rampa_t) da 69 mil y solo vale con demanda con precio.
+La lectura de horas evitadas a output fijo valúa capacidad y es la del base; la lectura de output adicional con las mismas horas
+(g × rampa_t) da 69 mil y solo vale con demanda con precio.
 
 **Puente a caja.** La capacidad liberada se vuelve caja solo por dos vías.
 Ninguna existe hoy, así que el beneficio de caja a 12 meses es **0** en los tres
@@ -398,7 +398,7 @@ escenarios:
 - **Contratación evitada:** solo cuenta contra un plan de contratación aprobado,
   y `context/` no registra ninguno (la restricción es no contratar).
 
-G2 pide decidir el destino de la capacidad, y desde ahí el puente se mide.
+La lectura del mes 6 pide decidir el destino de la capacidad, y desde ahí el puente se mide.
 
 **Cómo se lee la palanca de riesgo sin inventar probabilidades.** El gasto en
 controles se paga si baja la probabilidad de perder el ingreso que protege en al
@@ -414,16 +414,16 @@ esa probabilidad: la juzga el board.
 El agente de código consume unas 12 veces lo que se paga
 ([hecho](../../context/hechos/costos-tecnologia-e-ia.md)), y el plan supone que la
 suscripción plana no es estable ([supuesto](../../context/supuestos/precio-y-dependencia-de-modelos.md)).
-Costo incremental en miles de USD por trimestre si el proveedor cobra por consumo:
+Costo incremental en miles de USD por tramo de tres meses si el proveedor cobra por consumo:
 
 | Múltiplo pagado | 2× | 4× | 6× | 12× |
 |---|---|---|---|---|
-| Incremental por trimestre | 4,8-6,1 | 14,4-18,2 | 24,0-30,4 | 52,8-66,8 |
+| Incremental por tramo de tres meses | 4,8-6,1 | 14,4-18,2 | 24,0-30,4 | 52,8-66,8 |
 
 A 12×, el incremental anual (211-267 mil) es del orden de **toda la caja del
 plan**. Es una **exposición de la empresa con o sin plan**: el plan no suma
 seats. Por eso no se carga como costo del plan, salvo en el estrés. El Anexo B
-pone 58-73 mil por trimestre (12×); acá se usa el incremental (11×), porque una
+pone 58-73 mil por tramo de tres meses (12×); acá se usa el incremental (11×), porque una
 vez la suscripción ya se paga.
 
 Las palancas de M2U4 (prompts concisos, modelo adecuado, caché) bajan el múltiplo
@@ -435,13 +435,13 @@ un porcentaje con fuente.
 El gateway no se justifica por un ahorro prometido. Lo que compra depende del
 esquema de precio del agente de código, y en dos de los tres casos no ahorra
 nada (miles de USD por año; la suscripción es 19-24). Los casos son los
-regímenes (a), (b) y (c) de la política de ruteo del [Anexo B](02-arquitectura.md):
+regímenes (suscripción que permite gateway, suscripción que no lo permite y pago por consumo) de la política de ruteo del [Anexo B](02-arquitectura.md):
 
 | Esquema de precio | Sin gateway | Con gateway | Qué compra el gateway |
 |---|---|---|---|
-| (a) Suscripción plana vigente, con o sin ruteo del agente | 19-24 | 19-24 más el gateway | Nada en precio: control y telemetría de las superficies enrutables |
-| (b) Suscripción plana, pero enrutar el agente obliga a facturar por API | 19-24 | Hasta 211-267 de incremental a 12× | **Adelanta la exposición en vez de cubrirla.** No se enruta el agente mientras la suscripción sea plana |
-| (c) El proveedor pasa a cobrar por consumo, k× | k × (19-24) | k × (19-24) × (1 − *fc* × s), más el gateway | Ahorro si el ruteo, la caché y los topes bajan el consumo de lo enrutable en una fracción s |
+| Suscripción que permite gateway: plana vigente, con o sin ruteo del agente | 19-24 | 19-24 más el gateway | Nada en precio: control y telemetría de las superficies enrutables |
+| Suscripción que no lo permite: plana, pero enrutar el agente obliga a facturar por API | 19-24 | Hasta 211-267 de incremental a 12× | **Adelanta la exposición en vez de cubrirla.** No se enruta el agente mientras la suscripción sea plana |
+| Pago por consumo: el proveedor pasa a cobrar por consumo, k× | k × (19-24) | k × (19-24) × (1 − *fc* × s), más el gateway | Ahorro si el ruteo, la caché y los topes bajan el consumo de lo enrutable en una fracción s |
 
 **Base del cálculo: el gasto elegible.** El ahorro se calcula sobre el gasto que
 el modelo financiero pone a precio de consumo **y** que puede pasar por el
@@ -460,10 +460,10 @@ por costo a precio de lista, no por cantidad de eventos) y s es la reducción de
 consumo medida sobre **esa misma población** de tareas. El gateway se paga en el
 tercer caso si *fc* × s ≥ costo del gateway / (k × gasto elegible
 anual), con *fc* y s sobre el consumo del agente de código a precio de lista;
-con *fc* ≤ 0,9, a 6× pide s ≥ ~28% (13%-47%). B adoptó la misma definición
+con *fc* ≤ 0,9, a 6× pide s ≥ ~28% (13%-47%). El Anexo B adoptó la misma definición
 ("Población y gasto elegible"); su respaldo por fracción de eventos vale solo
-marcado "estimado". El 90% de ruta de B es otra métrica (eventos del agente, en
-los regímenes a y c) y no se multiplica por s. Con el renglón entero de
+marcado "estimado". El 90% de ruta del Anexo B es otra métrica (eventos del agente, en
+los regímenes de suscripción que permite gateway y de pago por consumo) y no se multiplica por s. Con el renglón entero de
 infraestructura a régimen sin piloto, 18-48 por año (cota superior), el umbral
 es:
 
@@ -478,28 +478,28 @@ enrutar el agente de código preserva la suscripción plana
 ([Anexo B](02-arquitectura.md) condiciona el ruteo del agente al régimen comercial:
 si enrutar rompe la suscripción plana, no se enruta), ni
 si la calidad se sostiene con modelos más baratos, que solo se evalúa con la
-suite de evals de T2. La prueba de portabilidad y costo de T2 lo mide contra el
+suite de evals de los meses 4-6. La prueba de portabilidad y costo de los meses 4-6 lo mide contra el
 umbral a 6× (25%). Hasta entonces la cobertura de precio es una opción, no un
 ahorro.
 
 ### ROI, payback y equilibrio
 
-Modelo del equipo con valores medios. T0 entra en el año. La capacidad se valúa
-con la lectura A a costo cargado: es el piso.
+Modelo del equipo con valores medios. La preparación previa entra en el año. La capacidad se valúa
+con la lectura de horas evitadas a costo cargado: es el piso.
 
 | Escenario | Caja | Tiempo | Capacidad liberada | ROI económico 12 m | Beneficio de caja 12 m |
 |---|---|---|---|---|---|
 | Pesimista, estrés sin frenar (base común e interno enteros) | 177 | 217 | 12 (5-21) | −97% | 0 |
-| Rama sin señal en G1: T2-T4 como (b), con la prueba (incluida) | ≈ 39 | ≈ 160 | ≥ φ × 62 | −100% a −69% | 0 |
-| **Base, rama con señal (producto diferido), si G2 y G3 pasan por límite inferior** | **177** | **217** | **62 (28-105)** | **−84%** | **0** |
-| Base con señal en G2 (P en T3-T4) | 214 | 257 | 62 (28-105) | −87% | 0 |
-| Optimista (P en T3-T4) | 214 | 257 | 114 (51-192) | −76% | 0 |
+| Rama sin señal en el mes 3: los meses 4-12 como gobierno mínimo y formación, con la prueba (incluida) | ≈ 39 | ≈ 160 | ≥ φ × 62 | −100% a −69% | 0 |
+| **Base, rama con señal (producto diferido), si las lecturas de los meses 6 y 9 pasan por límite inferior** | **177** | **217** | **62 (28-105)** | **−84%** | **0** |
+| Base con señal en el mes 6 (producto en los meses 7-12) | 214 | 257 | 62 (28-105) | −87% | 0 |
+| Optimista (producto en los meses 7-12) | 214 | 257 | 114 (51-192) | −76% | 0 |
 
-El optimista con P rinde menos en 12 meses que sin P (−71%): el producto compra
-la opción de un contrato en G4, no retorno en el año.
+El optimista con el producto rinde menos en 12 meses que sin el producto (−71%): el producto compra
+la opción de un contrato en el mes 12, no retorno en el año.
 
-En la base, el neto económico acumulado es −69 en T1, −178 en T2, −252 en T3 y
-−332 en T4.
+En la base, el neto económico acumulado es −69 en los meses 1-3, −178 en los meses 4-6, −252 en los meses 7-9 y
+−332 en los meses 10-12.
 
 **Año 2, fuera del alcance e ilustrativo** ([supuesto](../../context/supuestos/costo-de-regimen-del-ano-2.md)):
 régimen de 48 mil de caja de la base común (33 de infraestructura sin piloto y
@@ -509,20 +509,20 @@ a ~188.
 
 - **Equilibrio operativo anual del régimen del año 2, frente interno.** No
   recupera la inversión inicial del año 1 (ver "Inversión del año 1" y
-  "Payback") y no es ROI. Con la lectura A, el régimen sin producto pide liberar el 14,3% de las horas de la cohorte. Eso
+  "Payback") y no es ROI. Con la lectura de horas evitadas, el régimen sin producto pide liberar el 14,3% de las horas de la cohorte. Eso
   exige una ganancia **atribuible** de throughput de **~17%** (g = x/(1−x)),
-  entre 9% y 46% según N y el costo, medida contra la **base prospectiva de T1**,
+  entre 9% y 46% según N y el costo, medida contra la **base prospectiva de los meses 1-3**,
   la misma de los gates. Si la ganancia atribuible llega a +20%, libera ~166 mil
   por año contra ~143 de régimen, un margen de ~24 mil. Ese margen desaparece si
   N × costo resulta ~14% menor que el medio, y en el extremo bajo (15 personas a
   USD 2.500) el equilibrio sube a 46%.
 - **Observado, rebasing y contrafactual son tres cosas.** El +20% del OKR es
-  crecimiento **observado contra T0**
+  crecimiento **observado contra el cuarto trimestre de 2026**
   ([convenciones](../../context/supuestos/convenciones-de-calculo.md)).
-  Rebasing: (1 + OKR) = (1 + d) × (1 + observado contra T1), con d la mejora de
-  T0 a la base de T1, medida en G1. Contrafactual: el estimador de B resta c, el
-  cambio del grupo que no adopta (o la tendencia de T0) en la misma ventana,
-  como cambio relativo en la misma unidad, medido desde G2. El atribuible es
+  Rebasing: (1 + OKR) = (1 + d) × (1 + observado contra los meses 1-3), con d la mejora del
+  cuarto trimestre de 2026 a la base de los meses 1-3, medida en el mes 3. Contrafactual: el estimador del Anexo B resta c, el
+  cambio del grupo que no adopta (o la tendencia de la preparación previa) en la misma ventana,
+  como cambio relativo en la misma unidad, medido desde el mes 6. El atribuible es
   1,20/(1+d) − 1 − c, y el OKR cubre el equilibrio solo si
   **1,20/(1+d) − 1 − c ≥ 0,1667**. Con c = 0, pide d < ~2,8%; con d = 0, c ≤
   ~3,3 puntos; d y c comparten esos ~3 puntos. Ejemplo: d = 0 y c = +5 dejan
@@ -536,7 +536,7 @@ a ~188.
 - Si la capacidad se vende, el equilibrio baja en proporción a cuánto supera la
   tarifa al costo, y eso se calcula en `private/`.
 - **Inversión del año 1:** ningún escenario la recupera en 24 meses con
-  productividad sola. El acumulado a 24 meses es −345 en el optimista (con P y
+  productividad sola. El acumulado a 24 meses es −345 en el optimista (con el producto y
   régimen de 188), −344 en la base y −477 en el pesimista sin frenar.
 - **Payback:** no hay dentro del horizonte con productividad sola. Llega antes
   solo con ingreso de producto, con capacidad vendida o si el board le asigna
@@ -544,7 +544,7 @@ a ~188.
 
 ### Cuánto pierdo si corto
 
-Cada fila suma, en medios y en máximos, lo ejecutado hasta el gate más T0, más el
+Cada fila suma, en medios y en máximos, lo ejecutado hasta el gate más la preparación previa, más el
 costo de cierre: un mes de preaviso del contractor a su dedicación vigente y un
 mes de infraestructura de laboratorio
 ([cierre](../../context/supuestos/costos-de-cierre-por-corte.md)). Legal y red team
@@ -552,107 +552,107 @@ se contratan por etapa y no comprometen más allá del gate. Aparte se muestra l
 **base mínima** que queda el resto del año si se conservan los controles: el
 núcleo de gobierno (25% del líder, 20% de seguridad y el Council) más la
 pasarela, si ya está instalada ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md)).
-Rama con señal, sin P. La fila G1 incluye la prueba chica de G0 (+6 en el medio,
+Rama con señal, sin el producto. La fila del mes 3 incluye la prueba chica de la aprobación de hoy (+6 en el medio,
 +9 en el máximo); las demás, no:
 
-| Corte en | Caja ejecutada + cierre | Tiempo ejecutado + T0 | Perdido hasta cerrar: medio / máximo | Base mínima del resto del año (caja / tiempo) | Año con el corte: medio / máximo |
+| Corte en | Caja ejecutada + cierre | Tiempo ejecutado + preparación previa | Perdido hasta cerrar: medio / máximo | Base mínima del resto del año (caja / tiempo) | Año con el corte: medio / máximo |
 |---|---|---|---|---|---|
-| G1 | 27 (15-38) | 52 (27-77), con la prueba | **79 / 115** | 0 / 29 (17-40) | **108 / 155** |
-| G2 | 82 (46-117) | 116 (58-174) | 198 / 291 | 8 (3-12) / 19 (11-27) | 224 / 330 |
-| G3 | 122 (68-176) | 170 (88-251) | 292 / 427 | 4 (2-6) / 10 (6-13) | 305 / 447 |
+| Mes 3 | 27 (15-38) | 52 (27-77), con la prueba | **79 / 115** | 0 / 29 (17-40) | **108 / 155** |
+| Mes 6 | 82 (46-117) | 116 (58-174) | 198 / 291 | 8 (3-12) / 19 (11-27) | 224 / 330 |
+| Mes 9 | 122 (68-176) | 170 (88-251) | 292 / 427 | 4 (2-6) / 10 (6-13) | 305 / 447 |
 | Sin corte | 177 (98-255) | 217 (115-320) | 394 / 575 | — | 394 / 575 |
 
-Con la excepción de T2 en lugar del replan, el corte en G2 pierde 203 / 299 y el
-de G3, 297 / 435 (año 230 / 338 y 310 / 454).
+Con la excepción de los meses 4-6 en lugar del replan, el corte en el mes 6 pierde 203 / 299 y el
+del mes 9, 297 / 435 (año 230 / 338 y 310 / 454).
 
-**Dos máximos, no uno.** Cortar en G1 cuesta hasta **115 hasta cerrar** y
-**155** en el año con la base mínima, que en G1 es solo tiempo (hasta 41). La
-caja del corte (hasta 38) supera el techo de T1 (33) por la reserva de cierre.
+**Dos máximos, no uno.** Cortar en el mes 3 cuesta hasta **115 hasta cerrar** y
+**155** en el año con la base mínima, que en el mes 3 es solo tiempo (hasta 41). La
+caja del corte (hasta 38) supera el techo de los meses 1-3 (33) por la reserva de cierre.
 
 **Reserva de cierre vigente, actualizada en cada gate.** El cierre ya está
 sumado en la columna "caja ejecutada + cierre" de la tabla: lo que faltaba era
 la **autorización**, no la cuenta. El costo de cierre crece cuando el contractor
-pasa al 100% y el laboratorio a su nivel de T2, así que la reserva de G0 cubre
-solo un corte en G1 ([cierre](../../context/supuestos/costos-de-cierre-por-corte.md)).
-**Sin señal en G1 no se amplía a 15**: el contractor cierra (≈ 4, dentro de los 6)
-y (b) no firma compromisos con preaviso. La ampliación vale con señal en G1, o en
-el G2 o G3 que libere la plataforma, antes de contratar:
+pasa al 100% y el laboratorio a su nivel de los meses 4-6, así que la reserva de la aprobación de hoy cubre
+solo un corte en el mes 3 ([cierre](../../context/supuestos/costos-de-cierre-por-corte.md)).
+**Sin señal en el mes 3 no se amplía a 15**: el contractor cierra (≈ 4, dentro de los 6)
+y el gobierno mínimo y formación no firma compromisos con preaviso. La ampliación vale con señal en el mes 3, o en
+la lectura del mes 6 o del mes 9 que libere la plataforma, antes de contratar:
 
 | Reserva vigente desde | Qué cubre (un mes) | Cierre calculado: medio (rango) | Reserva autorizada | Ampliación en ese gate |
 |---|---|---|---|---|
-| G0 | Contractor al 50% y laboratorio de T1 | 4 (2,4-6,0) | **6** | — |
-| G1 sin señal | Sin contractor; solo telemetría | < 1 | 6 (sin ampliar) | 0 |
-| G1 con señal | Contractor al 100% y laboratorio de T2 | 11 (6-15) | **15** | +9 |
-| G2 sin P | Igual que G1 | 11 (6-15) | 15 | 0 |
-| G2 con P liberado | Más el tenant del piloto | 12 (6,5-17) | **17** | +2 |
-| G3 | Igual que G2, con P o sin P | 11-12 (6-17) | 15 o 17 | 0 |
+| Hoy | Contractor al 50% y laboratorio de los meses 1-3 | 4 (2,4-6,0) | **6** | — |
+| Mes 3 sin señal | Sin contractor; solo telemetría | < 1 | 6 (sin ampliar) | 0 |
+| Mes 3 con señal | Contractor al 100% y laboratorio de los meses 4-6 | 11 (6-15) | **15** | +9 |
+| Mes 6 sin el producto | Igual que el mes 3 con señal | 11 (6-15) | 15 | 0 |
+| Mes 6 con el producto liberado | Más el tenant del piloto | 12 (6,5-17) | **17** | +2 |
+| Mes 9 | Igual que el mes 6, con el producto o sin el producto | 11-12 (6-17) | 15 o 17 | 0 |
 
 Reglas que propone Finanzas:
 
 - **Renglón propio.** "Reserva de cierre" es un renglón de caja separado del
-  techo operativo del trimestre y de la base mínima: no se gasta salvo en un
+  techo operativo del tramo y de la base mínima: no se gasta salvo en un
   corte, no financia otro renglón y no se suma a la caja del año en el escenario
   sin corte.
 - **Autoridad.** La aprueba quien aprueba el gate, en el mismo acto: el board en
-  G0 y en cada liberación. **Ningún gate libera el compromiso nuevo (contractor al
+  la aprobación de hoy y en cada liberación. **Ningún gate libera el compromiso nuevo (contractor al
   100%, tenant del piloto) sin antes ampliar la reserva** al cierre que ese
   compromiso genera.
-- **Al final del año.** Si G4 no renueva y el contractor termina en plazo con el
-  preaviso dado dentro de T4, la reserva no se usa y se libera.
+- **Al final del año.** Si el cierre del mes 12 no renueva y el contractor termina en plazo con el
+  preaviso dado dentro de los meses 10-12, la reserva no se usa y se libera.
 
-**Corte mixto en G3: se corta el frente interno y P sigue.** La regla de F corta
-I y la base común si el throughput queda debajo de +5% en G3, pero P puede
-seguir si cumple su SLO, y P usa servicios de la base común. Finanzas propone
+**Corte mixto en el mes 9: se corta el frente interno y el producto sigue.** La regla del Anexo F corta
+el frente interno y la base común si el throughput queda debajo de +5% en el mes 9, pero el producto puede
+seguir si cumple su SLO, y el producto usa servicios de la base común. Finanzas propone
 una **regla de precedencia** para `caio`:
 
 1. **Seguridad primero:** mientras un frente opere, el núcleo de gobierno, la
    pasarela y los bloqueos no se cortan.
 2. **Dependencias después:** el frente que sigue conserva la parte de la base
-   común que usa (la "base común mínima para P").
+   común que usa (la "base común mínima para el producto").
 3. **Caja al final:** todo lo demás de la base común y del frente cortado se
    corta, con su cierre.
 
-La **base común mínima para P** en T4 es un supuesto de Finanzas que
+La **base común mínima para el producto** en los meses 10-12 es un supuesto de Finanzas que
 `architect` confirmó con una corrección ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md),
 [Anexo B](02-arquitectura.md), "Caja y otros costos"): infraestructura de base al
-nivel de T2 (gateway, trazas y evals en CI), pasarela, el contractor al 50% para
+nivel de los meses 4-6 (gateway, trazas y evals en CI), pasarela, el contractor al 50% para
 las evals del piloto (sin dato que lo respalde), 0,5 FTE de DevOps/QA, **0,1 FTE
-de arquitecto** para el gate scale/kill y el paquete de cumplimiento de Q4 (+2
-de tiempo, 1,4-3: 0,1 × 3 meses × 4.500-10.000) y el núcleo de gobierno. La capa D (red team externo e ISO ampliada) se financia porque G3
-la habilita con P liberado. Año con P liberado en G2, medios (rango), sumados
+de arquitecto** para el gate scale/kill y el paquete de cumplimiento del cuarto tramo (+2
+de tiempo, 1,4-3: 0,1 × 3 meses × 4.500-10.000) y el núcleo de gobierno. La demostración externa (red team externo e ISO ampliada) se financia porque la lectura del mes 9
+la habilita con el producto liberado. Año con el producto liberado en el mes 6, medios (rango), sumados
 desde componentes y redondeados una sola vez:
 
 | Escenario | Caja | Tiempo | Económico |
 |---|---|---|---|
-| Con P, sin corte | 214 (114-314) | 257 (137-376) | 471 |
-| **Corte mixto en G3: I y base común cortados, P sigue con su base mínima** | **205 (109-300)** | **229 (122-335)** | **433** |
-| Ídem, si G3 no financia la capa D | 180 (95-265) | 229 (122-335) | 409 |
+| Con el producto, sin corte | 214 (114-314) | 257 (137-376) | 471 |
+| **Corte mixto en el mes 9: frente interno y base común cortados, el producto sigue con su base mínima** | **205 (109-300)** | **229 (122-335)** | **433** |
+| Ídem, si la lectura del mes 9 no financia la demostración externa | 180 (95-265) | 229 (122-335) | 409 |
 
-T4 en el corte mixto: caja 52 (28-75) de la base común mínima para P, 13
-(5-21) del tramo P y 4 (2-6) de cierre del 50% del contractor que se deja; tiempo
-20 (11-28) de base mínima para P y 16 (9-23) de P. **Lectura para el CFO: con P
-vivo, el gate de throughput de G3 protege tiempo (~28), no caja (~9).** La caja
-de T4 es casi toda infraestructura, contractor y capa D, que P también necesita.
+los meses 10-12 en el corte mixto: caja 52 (28-75) de la base común mínima para el producto, 13
+(5-21) del tramo del producto y 4 (2-6) de cierre del 50% del contractor que se deja; tiempo
+20 (11-28) de base mínima para el producto y 16 (9-23) del producto. **Lectura para el CFO: con el producto
+vivo, el gate de throughput del mes 9 protege tiempo (~28), no caja (~9).** La caja
+de los meses 10-12 es casi toda infraestructura, contractor y la demostración externa, que el producto también necesita.
 
-**Pesimista con la regla de F.** El pesimista (g = 5%) da +0,5% de throughput
-en G2. La regla de G2 del [Anexo F](06-roadmap-riesgo.md) manda a **esperar**, no
-a cortar, entre 0% y +3%: T3 se libera sin escalado y se vuelve a medir a las 6
+**Pesimista con la regla del Anexo F.** El pesimista (g = 5%) da +0,5% de throughput
+en el mes 6. La regla del mes 6 del [Anexo F](06-roadmap-riesgo.md) manda a **esperar**, no
+a cortar, entre 0% y +3%: el tramo de los meses 7-9 se libera sin escalado y se vuelve a medir a las 6
 semanas. La espera vence ahí: si sigue entre 0% y +3%, se corta el frente
 interno y queda la base mínima. El producto nunca se liberó, porque sin señal de
-cliente G2 lo difiere.
+cliente, la lectura del mes 6 lo difiere.
 
-Supuesto de Finanzas para costearlo: "T3 sin escalado" cuesta lo mismo que T3 sin
+Supuesto de Finanzas para costearlo: "los meses 7-9 sin escalado" cuesta lo mismo que los meses 7-9 sin
 producto (cota superior): ningún renglón es escalado, porque el plan no suma
-seats y P ya salió.
+seats y el producto ya salió.
 
 | Pesimista | Año: medio (rango) | Capacidad liberada | Neto |
 |---|---|---|---|
-| **Con la regla de F: la espera vence a las 6 semanas y corta** | **265 (141-388)** | ~3 | **≈ −262** |
-| Si la espera no venciera: espera en G2, corte en G3 | 305 (164-447) | ~5 | ≈ −300 |
-| Estrés sin frenar: base común e interno enteros | 394 (213-575) | 12 | −382; −502 si el precio pasa a 12× desde T3 |
-| Comparación: el estrés con el producto desde T2 | 492 (264-720) | 12 | −480; −600 con 12× desde T3 |
+| **Con la regla del Anexo F: la espera vence a las 6 semanas y corta** | **265 (141-388)** | ~3 | **≈ −262** |
+| Si la espera no venciera: espera en el mes 6, corte en el mes 9 | 305 (164-447) | ~5 | ≈ −300 |
+| Estrés sin frenar: base común e interno enteros | 394 (213-575) | 12 | −382; −502 si el precio pasa a 12× desde el mes 7 |
+| Comparación: el estrés con el producto desde el mes 4 | 492 (264-720) | 12 | −480; −600 con 12× desde el mes 7 |
 
-Contra el producto desde T2 (−480), el pesimista ahorra ~218: **~120 de los
+Contra el producto desde el mes 4 (−480), el pesimista ahorra ~218: **~120 de los
 gates** (−382 → −262; ~82 si la espera no venciera) y **~98 de diferir el
 producto** (−480 → −382).
 
@@ -664,22 +664,22 @@ interno se propone el **costo por PR aceptado**, con la unidad del Anexo B: las
 licencias, el consumo, la parte de plataforma y las horas de revisión humana,
 divididas por los PR aceptados de la cohorte.
 
-**No tiene valor medido:** se mide contra la base congelada en T1, y G3 le pide
+**No tiene valor medido:** se mide contra la base congelada en los meses 1-3, y la lectura del mes 9 le pide
 que no suba mientras sube el throughput. Sensibilidad **ilustrativa**, en USD
-por PR y por trimestre: licencias de la cohorte de 17,5 a la parte por seat de la
-suscripción (21,5 mil / 42,5 seats, ~2,2 mil por trimestre), 12 semanas por
-trimestre y dos valores **supuestos sin ficha** de PR aceptados por persona y
+por PR y por tramo de tres meses: licencias de la cohorte de 17,5 a la parte por seat de la
+suscripción (21,5 mil / 42,5 seats, ~2,2 mil por tramo de tres meses), 12 semanas por
+tramo de tres meses y dos valores **supuestos sin ficha** de PR aceptados por persona y
 semana (2 y 4). La revisión humana se muestra por cada 15 minutos por PR a
 4.750 / 160 = ~30 USD por hora. No incluye la plataforma imputada.
 
 | PR aceptados por persona y semana | Licencia, precio plano | Licencia a 6× | Revisión, cada 15 min por PR |
 |---|---|---|---|
-| 2 (420 por trimestre) | ~5 | ~32 | ~7 |
-| 4 (840 por trimestre) | ~3 | ~16 | ~7 |
+| 2 (420 por tramo de tres meses) | ~5 | ~32 | ~7 |
+| 4 (840 por tramo de tres meses) | ~3 | ~16 | ~7 |
 
 Lectura: con precio plano, el costo por PR lo mueven la revisión humana y el
-retrabajo; a 6×, el consumo. El tope lo propone FinOps con la base de T1 y lo
-aprueba el CFO en G1, antes de cualquier piloto (responsable humano:
+retrabajo; a 6×, el consumo. El tope lo propone FinOps con la base de los meses 1-3 y lo
+aprueba el CFO en el mes 3, antes de cualquier piloto (responsable humano:
 **pendiente**). En el producto, el outcome lo fija la ficha de experimento.
 
 ### Sensibilidad
@@ -692,25 +692,25 @@ Neto económico a 12 meses, en la base (−332 mil), moviendo un supuesto por ve
 | Desarrolladores en equipos propios | 15 / 20 | −341 / −323 |
 | Costo por desarrollador | 2.500 / 7.000 | −362 / −303 |
 | Tiempo reasignado | −30% | −267 |
-| Conversión del throughput | Lectura B en vez de A | −325 |
-| Exposición por consumo desde T3 (de la empresa, no del plan) | 4× / 12× | −365 / −452 |
-| Frente producto liberado en G2 | Tramo P | −409 |
-| Excepción de T2 en lugar del replan | +0,3 FTE clave en T2 | −337 |
+| Conversión del throughput | Output adicional en vez de horas evitadas | −325 |
+| Exposición por consumo desde el mes 7 (de la empresa, no del plan) | 4× / 12× | −365 / −452 |
+| Frente producto liberado en el mes 6 | Tramo del producto | −409 |
+| Excepción de los meses 4-6 en lugar del replan | +0,3 FTE clave en los meses 4-6 | −337 |
 
 **Los tres supuestos que más mueven el resultado** son el tiempo reasignado, el
 esquema de precio de los tokens y, a régimen, el throughput, que a 12 meses pesa
 poco por la rampa. Los escenarios los combinan:
 
-| Escenario | Throughput a T4 y rampa | Precio de tokens | Producto |
+| Escenario | Throughput al mes 12 y rampa | Precio de tokens | Producto |
 |---|---|---|---|
-| Pesimista | 5%, rampa 0/10/30/60: por debajo del piso del supuesto; con la regla de F la espera vence a las 6 semanas y corta | Consumo a 12× desde T3, sin mitigar (solo en el estrés) | Sin señal de cliente: P no se libera |
-| Base | 15%, rampa 0/25/60/100 | Plano | Sin señal en G2: P no se libera. Con señal, suma su tramo |
-| Optimista | 25%, rampa 0/40/80/100 | Plano | Señal en G2, piloto en T3-T4 y un cliente con interés contractual en G4 (sin ingreso en los 12 meses) |
+| Pesimista | 5%, rampa 0/10/30/60: por debajo del piso del supuesto; con la regla del Anexo F la espera vence a las 6 semanas y corta | Consumo a 12× desde el mes 7, sin mitigar (solo en el estrés) | Sin señal de cliente: el producto no se libera |
+| Base | 15%, rampa 0/25/60/100 | Plano | Sin señal en el mes 6: el producto no se libera. Con señal, suma su tramo |
+| Optimista | 25%, rampa 0/40/80/100 | Plano | Señal en el mes 6, piloto en los meses 7-12 y un cliente con interés contractual en el mes 12 (sin ingreso en los 12 meses) |
 
 Hay un estrés aparte, no modelado: la pérdida parcial del cliente principal
 ([supuesto](../../context/supuestos/continuidad-de-clientes-principales.md)). Con
 20% menos de facturación, el peso de la caja del plan sobre la facturación sube
-25%, y los gates de T2-T4 se congelan hasta revisar el techo.
+25%, y los gates de los meses 4-12 se congelan hasta revisar el techo.
 
 **Tipo de cambio.** Licencias, tokens y servicios externos se pagan en USD. El
 tiempo está costeado en USD de mercado sobre personal en Argentina. Una
@@ -727,25 +727,25 @@ reales (facturación, tarifa, nómina) se cargan solo en `private/`.
 | Magnitud | Fórmula |
 |---|---|
 | Costo de tiempo de una actividad | horas × costo mensual del rol / 160, o fracción del rol × costo mensual × meses |
-| FTE de un trimestre | horas / 480, o la fracción de rol declarada en el anexo dueño |
+| FTE de un tramo | horas / 480, o la fracción de rol declarada en el anexo dueño |
 | Valor medio de un renglón | (mínimo + máximo) / 2; los totales suman mínimos con mínimos y máximos con máximos |
 | Caja con contingencia | Σ renglones de caja × 1,15 |
-| Throughput del trimestre t | g × rampa_t |
-| Capacidad liberada en el trimestre t (lectura A) | N × costo × 3 × (g × rampa_t) / (1 + g × rampa_t) |
-| Lectura B (sensibilidad) | N × costo × 3 × g × rampa_t |
+| Throughput del tramo t | g × rampa_t |
+| Capacidad liberada en el tramo t (horas evitadas) | N × costo × 3 × (g × rampa_t) / (1 + g × rampa_t) |
+| Output adicional (sensibilidad) | N × costo × 3 × g × rampa_t |
 | ROI económico a 12 meses | (capacidad − caja − tiempo) / (caja + tiempo) |
 | Beneficio de caja | horas vendidas × tarifa (`private/`) + contrataciones evitadas de un plan aprobado; hoy 0 |
 | Régimen anual de la capacidad | N × costo × 12 × g / (1 + g) |
 | Throughput de equilibrio | x = costo del año 2 / (N × costo × 12); g* = x / (1 − x) |
-| Incremental por consumo | (k − 1) × suscripción del agente de código por trimestre |
+| Incremental por consumo | (k − 1) × suscripción del agente de código por tramo de tres meses |
 | Umbral de reducción para el gateway | (*fc* × s)* = costo del gateway / (k × gasto elegible anual); hoy el gasto elegible es la suscripción del agente de código |
-| Puente del equilibrio con el OKR | atribuible = (1 + meta contra T0) / (1 + d) − 1 − c; el OKR cubre g* si atribuible ≥ g* (d: mejora de T0 a la base de T1; c: cambio del control en la ventana, en la misma unidad) |
+| Puente del equilibrio con el OKR | atribuible = (1 + meta contra el cuarto trimestre de 2026) / (1 + d) − 1 − c; el OKR cubre g* si atribuible ≥ g* (d: mejora del cuarto trimestre de 2026 a la base de los meses 1-3; c: cambio del control en la ventana, en la misma unidad) |
 | Semiancho del intervalo (aproximación) | ≈ 1,645 × σ / √n; un gate pasa si estimado − semiancho ≥ umbral |
 | Costo por PR aceptado | (licencias y consumo de la cohorte + plataforma imputada + horas de revisión × costo/hora) / PR aceptados |
 | Umbral de facturación para un techo p | caja con contingencia / p |
-| Pérdida al cortar en Gk | caja y tiempo de T1..Tk + T0 + cierre (un mes de contractor y de laboratorio, sin contingencia) |
-| Base mínima del resto del año | (núcleo de gobierno + pasarela, si está instalada) × trimestres restantes; si P sigue, más la base común mínima para P |
-| Reserva de cierre vigente | Un mes del contractor a la dedicación que libera el gate, más un mes de laboratorio (y del tenant del piloto si P está liberado), redondeado al entero superior del máximo |
+| Pérdida al cortar en una decisión | caja y tiempo de los tramos ejecutados hasta ella + preparación previa + cierre (un mes de contractor y de laboratorio, sin contingencia) |
+| Base mínima del resto del año | (núcleo de gobierno + pasarela, si está instalada) × tramos restantes; si el producto sigue, más la base común mínima para el producto |
+| Reserva de cierre vigente | Un mes del contractor a la dedicación que libera el gate, más un mes de laboratorio (y del tenant del piloto si el producto está liberado), redondeado al entero superior del máximo |
 | Techo de un gate | máximo con contingencia, redondeado al entero superior |
 
 **Contingencia: una sola regla.** El 15% cubre el **error de precio de los
@@ -766,16 +766,16 @@ techo, sin excepciones.
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
-| El tiempo reasignado no existe: sale de horas facturables o de entregas a clientes | Alta | Alto | Piso de capacidad por trimestre confirmado en G0; sobre por rol aprobado; suplentes ([Anexo D](04-personas-cultura.md)) | Utilización bajo la meta de 80% dos meses seguidos por causa del plan: se recorta el frente que más tiempo consume |
-| El sobre clave disponible está en el extremo inferior (1,0 FTE) | Media | Alto | El board confirma el piso de ~1,8 en G0 (1,6 sin la prueba chica) | Piso no confirmado: T1 no arranca en su versión T1-E |
-| Contingencia A: hay contractor, pero su 0,2 libre se consume en el traspaso o el contrato no lo incluye | Media | Medio | Excepción acotada de 0,3 FTE aprobada en G0 como respaldo; `people` confirma el 0,2 en el alcance del contrato | 0,2 no confirmado al cierre de T1: T2 va con la excepción (2,5 FTE clave) |
-| Contingencia B: con señal en G1, no hay contractor (ni rol interno demostrado); sin señal no se busca | Media | Alto | Contractor como condición de no inicio de los hitos de IA aplicada de T2-T4; la excepción no alcanza (con fracción interna, T2 pediría 3,3 FTE clave) | Con señal y sin contractor contratado al cierre de T1: G1 libera el modo control de B (2,2 FTE clave), sin harness, evals en CI, caso de referencia ni prueba de portabilidad |
-| Cambio a pago por consumo | Alta ([Anexo B](02-arquitectura.md)) | Alto | Gateway con ruteo, caché y topes; FinOps mensual desde T2; no enrutar el agente si eso pierde la suscripción plana | Múltiplo efectivo de más de 6× sin mitigar en un trimestre: se congela la expansión y se topea el consumo |
-| La ganancia no aparece o se paga con retrabajo | Media | Alto | Base congelada; costo por PR aceptado; incidentes y retrabajo junto al throughput | Bandas de G2 y G3 (abajo) |
-| La espera de G2 se estira sin decisión | Media | Medio | Regla de F: la espera vence a las 6 semanas | — |
-| La capacidad liberada no se vuelve caja | Alta | Medio | Destino decidido en G2 (productos propios, producto de un cliente o venta) | Sin destino en G2: la capacidad no se cuenta como beneficio |
-| El piloto de producto no tiene comprador | Media | Medio | P diferido: el presupuesto base no lo incluye y su tramo se libera solo con señal de cliente, matriz habilitante y plataforma liberada en G1: sin ella no hay base técnica en T3 y la señal que llega en G2 no lo arranca antes de T4 ([Anexo B](02-arquitectura.md)) | Sin señal en G2, o sin plataforma: P no arranca en T3 (16-59 de caja y 23-56 de tiempo que no se gastan; el costo desde T4 no está calculado) |
-| El cierre cuesta más que lo previsto, o la reserva vigente no cubre el corte | Baja | Medio | Contratos por etapa, preaviso de un mes, nada a más de 12 meses antes de G4; reserva de cierre autorizada en G0 (6) y ampliada en G1 con señal (15; sin señal no hace falta) y en G2 si se libera P (17), antes de cada compromiso nuevo | Reserva no ampliada: el gate no libera el compromiso nuevo |
+| El tiempo reasignado no existe: sale de horas facturables o de entregas a clientes | Alta | Alto | Piso de capacidad por tramo de tres meses confirmado en la aprobación de hoy; sobre por rol aprobado; suplentes ([Anexo D](04-personas-cultura.md)) | Utilización bajo la meta de 80% dos meses seguidos por causa del plan: se recorta el frente que más tiempo consume |
+| El sobre clave disponible está en el extremo inferior (1,0 FTE) | Media | Alto | El board confirma el piso de ~1,8 en la aprobación de hoy (1,6 sin la prueba chica) | Piso no confirmado: los meses 1-3 no arrancan en su versión del primer tramo acotado |
+| Contingencia: hay contractor, pero su 0,2 libre se consume en el traspaso o el contrato no lo incluye | Media | Medio | Excepción acotada de 0,3 FTE aprobada en la aprobación de hoy como respaldo; `people` confirma el 0,2 en el alcance del contrato | 0,2 no confirmado al cierre de los meses 1-3: los meses 4-6 van con la excepción (2,5 FTE clave) |
+| Contingencia: con señal en el mes 3, no hay contractor (ni rol interno demostrado); sin señal no se busca | Media | Alto | Contractor como condición de no inicio de los hitos de IA aplicada de los meses 4-12; la excepción no alcanza (con fracción interna, los meses 4-6 pedirían 3,3 FTE clave) | Con señal y sin contractor contratado al cierre de los meses 1-3: la decisión del mes 3 libera el modo control del Anexo B (2,2 FTE clave), sin harness, evals en CI, caso de referencia ni prueba de portabilidad |
+| Cambio a pago por consumo | Alta ([Anexo B](02-arquitectura.md)) | Alto | Gateway con ruteo, caché y topes; FinOps mensual desde el mes 4; no enrutar el agente si eso pierde la suscripción plana | Múltiplo efectivo de más de 6× sin mitigar en un tramo de tres meses: se congela la expansión y se topea el consumo |
+| La ganancia no aparece o se paga con retrabajo | Media | Alto | Base congelada; costo por PR aceptado; incidentes y retrabajo junto al throughput | Bandas de los meses 6 y 9 (abajo) |
+| La espera del mes 6 se estira sin decisión | Media | Medio | Regla del Anexo F: la espera vence a las 6 semanas | — |
+| La capacidad liberada no se vuelve caja | Alta | Medio | Destino decidido en el mes 6 (productos propios, producto de un cliente o venta) | Sin destino en el mes 6: la capacidad no se cuenta como beneficio |
+| El piloto de producto no tiene comprador | Media | Medio | Producto diferido: el presupuesto base no lo incluye y su tramo se libera solo con señal de cliente, matriz habilitante y plataforma liberada en el mes 3: sin ella no hay base técnica en los meses 7-9 y la señal que llega en el mes 6 no lo arranca antes de los meses 10-12 ([Anexo B](02-arquitectura.md)) | Sin señal en el mes 6, o sin plataforma: el producto no arranca en los meses 7-9 (16-59 de caja y 23-56 de tiempo que no se gastan; el costo desde el mes 10 no está calculado) |
+| El cierre cuesta más que lo previsto, o la reserva vigente no cubre el corte | Baja | Medio | Contratos por etapa, preaviso de un mes, nada a más de 12 meses antes del mes 12; reserva de cierre autorizada en la aprobación de hoy (6) y ampliada en el mes 3 con señal (15; sin señal no hace falta) y en el mes 6 si se libera el producto (17), antes de cada compromiso nuevo | Reserva no ampliada: el gate no libera el compromiso nuevo |
 | Doble conteo de costos entre anexos | Media | Bajo | Tabla de solapes | — |
 | El gasto de tecnología sube contra el OKR de menos de 3,5% | Alta | Medio | Reformular el resultado clave (ver tensiones) | — |
 
@@ -784,24 +784,24 @@ techo, sin excepciones.
 ### Alternativas equivalentes: qué compra cada opción
 
 La pregunta del CFO: por qué pagar 394 si opciones más baratas compran parte del
-mismo aprendizaje. Las tres llevan la misma medición (T0, base congelada,
-telemetría y 0,2 FTE para contar), el mismo gate de throughput de F y el
+mismo aprendizaje. Las tres llevan la misma medición (la preparación previa, base congelada,
+telemetría y 0,2 FTE para contar), el mismo gate de throughput del Anexo F y el
 producto diferido ([supuesto](../../context/supuestos/alternativas-de-menor-alcance.md)).
 Año 1, miles de USD, medio (rango):
 
-| | (a) Paquete recomendado | (b) Gobierno mínimo y formación, sin plataforma ni contractor | (c) Piloto acotado sobre el agente de código actual |
+| | Paquete recomendado | Gobierno mínimo y formación, sin plataforma ni contractor | Piloto sobre el agente de código |
 |---|---|---|---|
 | Caja | 177 (98-255) | 21 (12-30): legal y telemetría, con contingencia | 5 (2-7): telemetría |
-| Tiempo | 217 (115-320); 1,6-2,2 FTE clave | 141 (71-211); ~1,2 FTE clave en T1, ~0,9 después | 42 (22-62); ~0,8 FTE clave en T1, ~0,4 después |
+| Tiempo | 217 (115-320); 1,6-2,2 FTE clave | 141 (71-211); ~1,2 FTE clave en los meses 1-3, ~0,9 después | 42 (22-62); ~0,8 FTE clave en los meses 1-3, ~0,4 después |
 | Costo económico | 394 (213-575) | 161 (82-240) | 47 (24-69) |
-| Qué compra | Todo lo de (b), más controles con bloqueo y registro (capa T de C), harness y evals, caso de referencia, prueba de portabilidad y costo, base común del producto y capa D | Capa M de C (política, matriz, inventario, legal), la formación de D para toda la dotación y la medición. R2 y R4 quedan solo en política; sin opción de producto | Prácticas sobre el agente en la cohorte que genera el beneficio, matriz y medición. Sin protección nueva ni opción de producto; Operaciones y staff sin formación |
-| Capacidad liberada en 12 meses | 62 (28-105) | ≥ φ_b × 62 | ≥ φ_c × 62 |
+| Qué compra | Todo lo del gobierno mínimo y formación, más controles con bloqueo y registro (los controles técnicos propios del Anexo C), harness y evals, caso de referencia, prueba de portabilidad y costo, base común del producto y demostración externa | Los controles de política del Anexo C (política, matriz, inventario, legal), la formación del Anexo D para toda la dotación y la medición. El riesgo de inyección indirecta de prompts y el de fuga de secretos quedan solo en política; sin opción de producto | Prácticas sobre el agente en la cohorte que genera el beneficio, matriz y medición. Sin protección nueva ni opción de producto; Operaciones y staff sin formación |
+| Capacidad liberada en 12 meses | 62 (28-105) | ≥ φ_gobierno × 62 | ≥ φ_piloto × 62 |
 | Neto 12 m (ROI) | −332 (−84%) | −161 a −99 (−100% a −62%) | −47 a +15 (−100% a +32%) |
-| Señal de valor y gate | Throughput por límite inferior en G2 (+3%) y G3 (+8%); caso de referencia y prueba de portabilidad en G2 | El mismo throughput en G2 y G3; adopción | El mismo throughput en G2 y G3, en la cohorte |
-| Abandono | Las reglas de F: estimado ≤ 0% o espera vencida en G2; < +5% en G3 | Las mismas | Las mismas; además, si la matriz no habilita repositorios para 15 activas |
+| Señal de valor y gate | Throughput por límite inferior en el mes 6 (+3%) y en el mes 9 (+8%); caso de referencia y prueba de portabilidad en el mes 6 | El mismo throughput en los meses 6 y 9; adopción | El mismo throughput en los meses 6 y 9, en la cohorte |
+| Abandono | Las reglas del Anexo F: estimado ≤ 0% o espera vencida en el mes 6; < +5% en el mes 9 | Las mismas | Las mismas; además, si la matriz no habilita repositorios para 15 activas |
 
 **φ es la fracción de la ganancia g que se logra sin plataforma ni contractor, y
-no tiene dato:** se muestran sus extremos, 0 y 1. Con la lectura A, la capacidad
+no tiene dato:** se muestran sus extremos, 0 y 1. Con la lectura de horas evitadas, la capacidad
 es al menos φ × 62. Aporte marginal de cada pieza, cualitativo porque no hay base
 para cuantificarlo:
 
@@ -810,144 +810,144 @@ para cuantificarlo:
 - **Prácticas sobre el agente existente:** son el mecanismo de g según la
   [ficha de ganancia](../../context/supuestos/ganancia-de-productividad.md)
   ("contrato de agente, skills y compuertas de calidad"), no el gateway. Las
-  compra (c) y las mide la prueba chica de T1 (abajo).
+  compra el piloto acotado y las mide la prueba chica de los meses 1-3 (abajo).
 - **Plataforma y contractor:** no tienen un mecanismo directo de throughput en el
-  año. Compran control y telemetría, la cobertura de precio si T2 la demuestra,
+  año. Compran control y telemetría, la cobertura de precio si la prueba de los meses 4-6 la demuestra,
   el caso de referencia, evidencia técnica para un banco y la base del producto.
   Que las evals en CI bajen el retrabajo es una hipótesis sin dato.
 
-**Resultado: en el año 1, (b) y (c) le ganan al paquete con cualquier φ.** Aun
+**Resultado: en el año 1, el gobierno mínimo y formación y el piloto acotado le ganan al paquete con cualquier φ.** Aun
 con φ = 0, pierden 161 y 47 contra 332; ni el optimista del paquete (−280) lo
-cambia. (c) se paga en el año si φ_c ≥ ~76% (47 / 62). El diferencial del
-paquete sobre (b), ~233, lo pagan solo opciones sin valor medido:
+cambia. El piloto acotado se paga en el año si φ_piloto ≥ ~76% (47 / 62). El diferencial del
+paquete sobre el gobierno mínimo y formación, ~233, lo pagan solo opciones sin valor medido:
 
 - **Precio:** a 12×, la cobertura pide bajar ~90% el consumo enrutable en el año
   (233 / (12 × 21,5)); a 6×, más del 100%. Sola no lo paga.
 - **Protección del ingreso:** se paga si baja en Δp la probabilidad de perder el
   ingreso protegido ("Cómo se lee la palanca de riesgo"). Lo juzga el board.
-- **Producto:** la opción de un contrato en G4, sin ingreso en el año.
+- **Producto:** la opción de un contrato en el mes 12, sin ingreso en el año.
 
-Lo caro del paquete empieza en T2: por eso la señal se lee en G1, antes de gastar la plataforma.
+Lo caro del paquete empieza en los meses 4-6: por eso la señal se lee en el mes 3, antes de gastar la plataforma.
 
-### Prueba chica de T1 (primeros 100 días)
+### Prueba chica de los meses 1-3 (primeros 100 días)
 
 El [Anexo F](06-roadmap-riesgo.md) ("Primeros 100 días") deja sin costear una
 prueba desde la semana 5 con el agente de código actual
 ([supuesto](../../context/supuestos/alternativas-de-menor-alcance.md)):
 
-| | Prueba chica, semanas 5-13 de T1 |
+| | Prueba chica, semanas 5-13 del plan |
 |---|---|
-| Qué es | Contrato de agente, skills y guía de revisión en la cohorte de equipos propios, sobre repositorios que la matriz habilite; el intermedio de Tecnología de T1 es el vehículo |
+| Qué es | Contrato de agente, skills y guía de revisión en la cohorte de equipos propios, sobre repositorios que la matriz habilite; el intermedio de Tecnología de los meses 1-3 es el vehículo |
 | Caja | 0: no suma seats ni herramientas |
 | Tiempo | ~6 (3-9): diseño de 40-80 h de tech lead (1,1-5,0), 2 champions al 10% durante 2 meses (1,2-3,0: 0,4 persona-mes × 3,0-7,5) y lectura de 16-24 h de DevOps/QA (0,3-1,1) |
-| Capacidad | +0,17 FTE clave (T1 pasa de 1,6 a ~1,8: 0,80× del máximo) y +64 h distribuidas; techo de tiempo de T1 de 62 a 72 (62 + 9,1, al entero superior) |
-| Qué aprende | Si las prácticas mueven uso, retrabajo y PR aceptados, y la dispersión σ del cambio entre personas, el dato que decide si G2 puede discriminar +3% |
-| Gate | Se lee en G1, sin atribuir ganancia (la rampa de T1 es 0%) y sin poder de corte |
+| Capacidad | +0,17 FTE clave (los meses 1-3 pasan de 1,6 a ~1,8: 0,80× del máximo) y +64 h distribuidas; techo de tiempo de los meses 1-3 de 62 a 72 (62 + 9,1, al entero superior) |
+| Qué aprende | Si las prácticas mueven uso, retrabajo y PR aceptados, y la dispersión σ del cambio entre personas, el dato que decide si la lectura del mes 6 puede discriminar +3% |
+| Gate | Se lee en el mes 3, sin atribuir ganancia (la rampa de los meses 1-3 es 0%) y sin poder de corte |
 | Abandono | Se suspende si sube el retrabajo o los incidentes contra la base congelada, o si la matriz no habilita repositorios para la cohorte |
 
 **No contamina la base.** La base se congela en las semanas 1-4 y la prueba
 arranca en la 5, con el intermedio de Tecnología que el plan ya pone ahí: la
 cohorte cambia desde la semana 5 con prueba o sin ella. Lo que no despeja es la
 atribución: con 15-20 personas y σ sin dato, su efecto no se separa del de la
-formación. Eso la vuelve aprendizaje, no valor, pero no la impide. Va en G0.
+formación. Eso la vuelve aprendizaje, no valor, pero no la impide. Va en la aprobación de hoy.
 
 **Tarifa de las 64 h: una sola, la de rol** (≈ 19-47 USD/h). Son horas de dos
 desarrolladores senior ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)),
-no capacitación masiva: los 10-35 USD/h de D son un piso para la dotación entera
-(darían 0,6-2,2 y un techo de 71). D costea así sus champions: es sesgo de D.
+no capacitación masiva: los 10-35 USD/h del Anexo D son un piso para la dotación entera
+(darían 0,6-2,2 y un techo de 71). El Anexo D costea así sus champions: es sesgo del Anexo D.
 
 ### Recomendación de Finanzas (decidida, lazynet, 2026-10-14)
 
-**G0 por T1-E con la prueba chica, y G1 como bifurcación.** El board aprueba T1-E,
+**La aprobación de hoy por el primer tramo acotado con la prueba chica, y la decisión del mes 3 como bifurcación.** El board aprueba el primer tramo acotado,
 la prueba, el marco de gates y el producto diferido.
 
-- **G1 libera la plataforma de T2** (contractor al 100%, gateway, pasarela) solo
-  con al menos una señal que pague lo que (b) no compra: restricción o licencia
+- **La decisión del mes 3 libera la plataforma de los meses 4-6** (contractor al 100%, gateway, pasarela) solo
+  con al menos una señal que pague lo que el gobierno mínimo y formación no compra: restricción o licencia
   para vender según el [umbral contractual](../../context/supuestos/umbral-de-evidencia-contractual.md)
-  (C la recorta: la restricción cuenta en G1 solo si condiciona el uso de IA;
-  desacuerdo a la vista que F registra como DP10 y decide el board en G0, no se resuelve acá),
+  (el Anexo C la recorta: la restricción cuenta en el mes 3 solo si condiciona el uso de IA;
+  desacuerdo a la vista que el Anexo F registra como la decisión sobre qué restricción cuenta como señal y decide el board en la aprobación de hoy, no se resuelve acá),
   anuncio del proveedor de pasar a consumo, o señal de cliente para el producto.
   Año de esta rama: ≈ **400** (216-584), el paquete más la prueba.
-- **Sin ninguna, T2-T4 corre como (b), con la prueba extendida a (c):** ≈ **199**
-  en el año (T0-T1 del paquete 69, prueba 6, T2-T4 de (b) ~114, cierre del
-  contractor 4, compensatorios de C ~6; medio sin rango propio): caja ≈ 39 (T1
-  22,6, cierre 4 y legal de T2 más telemetría de (b), ~12 con contingencia) y
-  tiempo ≈ 160. La extensión usa champions e intermedio que (b) ya paga
+- **Sin ninguna, los meses 4-12 corren como gobierno mínimo y formación, con la prueba extendida al piloto acotado:** ≈ **199**
+  en el año (la preparación previa y los meses 1-3 del paquete 69, prueba 6, los meses 4-12 del gobierno mínimo y formación ~114, cierre del
+  contractor 4, compensatorios del Anexo C ~6; medio sin rango propio): caja ≈ 39 (meses 1-3:
+  22,6, cierre 4 y legal de los meses 4-6 más telemetría del gobierno mínimo y formación, ~12 con contingencia) y
+  tiempo ≈ 160. La extensión usa champions e intermedio que el gobierno mínimo y formación ya paga
   ([supuesto](../../context/supuestos/alternativas-de-menor-alcance.md)), pero no
-  los controles compensatorios que C exige para aceptar el residual de R1, R2 y R4
-  ([Anexo C](03-gobierno-seguridad.md), D9c): tiempo sin caja, hasta 1,9-9,4 según C
+  los controles compensatorios que el Anexo C exige para aceptar el residual del riesgo de datos de cliente en un modelo externo, el de inyección indirecta de prompts y el de fuga de secretos
+  ([Anexo C](03-gobierno-seguridad.md), "Controles según la decisión del mes 3"): tiempo sin caja, hasta 1,9-9,4 según el Anexo C
   (cota superior; usamos el medio, 5,6). Sin ellos la prueba no se extiende.
-  No es un corte: difiere la plataforma, y G2 y G3 releen las señales, a costa de
+  No es un corte: difiere la plataforma, y las lecturas de los meses 6 y 9 releen las señales, a costa de
   demorar el caso de referencia y la prueba de portabilidad.
 
-Cortar en G1 cuesta 79 en el medio, hasta 115 hasta cerrar y 155 en el año, contra
+Cortar en el mes 3 cuesta 79 en el medio, hasta 115 hasta cerrar y 155 en el año, contra
 un año completo de hasta 255 de caja y 320 de tiempo: esa es la reversibilidad.
 Quedan descartados aprobar el año completo (compromete la caja con un caso que no
-cierra) y el producto desde T2 (gasta 37 de caja y 55 de tiempo antes de la señal).
+cierra) y el producto desde el mes 4 (gasta 37 de caja y 55 de tiempo antes de la señal).
 
-### Pedido G0 y gates económicos
+### Pedido de hoy y gates económicos
 
-**Pedido G0, único.** G0 elige la vía B1 (contractor desde T1) y autoriza solo
-su tramo de T1 (hasta 16,5 de caja, dentro del techo de 33); los tramos de T2-T4
-se liberan con G1-G3. No es una aprobación anual. Incluye siete cosas:
+**Pedido de hoy, único.** Elige la vía del contractor desde el mes 1 y autoriza solo
+su tramo de los meses 1-3 (hasta 16,5 de caja, dentro del techo de 33); los tramos de los meses 4-12
+se liberan con las decisiones de los meses 3, 6 y 9. No es una aprobación anual. Incluye siete cosas:
 
-1. **Caja de T1:** techo de 33 mil (máximo calculado 32,2: contractor B1 hasta
+1. **Caja de los meses 1-3:** techo de 33 mil (máximo calculado 32,2: contractor desde el mes 1 hasta
    16,5; legal hasta 10; telemetría hasta 1,5; contingencia hasta 4,2).
 2. **Reserva de cierre:** hasta 6 mil de caja (un mes de contractor y de
    laboratorio), que solo se usa si un gate corta. Con ella, el compromiso
-   máximo de caja que autoriza G0 es **39 mil**. Cubre solo un corte en G1: el
-   board se compromete a ampliarla a 15 en G1 con señal y a 17 en G2 si libera P, antes
+   máximo de caja que autoriza la aprobación de hoy es **39 mil**. Cubre solo un corte en el mes 3: el
+   board se compromete a ampliarla a 15 en el mes 3 con señal y a 17 en el mes 6 si libera el producto, antes
    de liberar el compromiso nuevo (ver "Reserva de cierre vigente").
-3. **Tiempo de T1:** techo de **72 mil** con la prueba chica, que son ~1,8 FTE
+3. **Tiempo de los meses 1-3:** techo de **72 mil** con la prueba chica, que son ~1,8 FTE
    de personas clave y **~654 h distribuidas** en la dotación, como segundo
    sobre (62, 1,6 FTE y 590 h sin la prueba).
 4. **Piso de capacidad:** el board confirma que el sobre clave disponible es de
-   al menos **~1,8 FTE en T1**, el techo con la prueba (12 personas al 15% o 15 al
-   12%). Entre 1,6 y 1,8 entra T1-E sin la prueba (propuesta de Finanzas); bajo 1,6
-   no entra ninguna versión. Fija además el de T2-T4:
-   2,2 / 2,2 / 2,1 con el producto diferido y el replan de T2 de
-   [B](02-arquitectura.md), o 2,5 en T2 si elige la excepción acotada. Más la
+   al menos **~1,8 FTE en los meses 1-3**, el techo con la prueba (12 personas al 15% o 15 al
+   12%). Entre 1,6 y 1,8 entra el primer tramo acotado sin la prueba (propuesta de Finanzas); bajo 1,6
+   no entra ninguna versión. Fija además el de los meses 4-12:
+   2,2 / 2,2 / 2,1 con el producto diferido y el replan de los meses 4-6 del
+   [Anexo B](02-arquitectura.md), o 2,5 en los meses 4-6 si elige la excepción acotada. Más la
    lectura del sobre, estricta o separada.
-5. **Base mínima tras un corte:** si G1 rechaza seguir, se conserva el núcleo de
+5. **Base mínima tras un corte:** si la decisión del mes 3 rechaza seguir, se conserva el núcleo de
    gobierno el resto del año, hasta 41 mil de tiempo (máximo calculado 40,2) y
    sin caja. Es lo que lleva
-   el máximo del año con corte en G1 a 155.
-6. **T0:** autorizar, o ratificar si hay registro de que ya se hizo, hasta 7 mil
-   de tiempo previo a G0. Hoy es una propuesta: no consta que se haya ejecutado.
-7. **IA aplicada y producto:** vía B1 (o el rol interno en T1 si demuestra
-   capacidad, con el contractor desde T2), solo en su tramo de T1; G1-G3
-   liberan los de T2-T4. Con señal y sin contractor, los hitos de IA aplicada de T2-T4 no se
-   inician (contingencia B: la excepción de 0,3 no la cubre). El producto,
-   diferido hasta G2, con su tramo condicional.
+   el máximo del año con corte en el mes 3 a 155.
+6. **Preparación previa:** autorizar, o ratificar si hay registro de que ya se hizo, hasta 7 mil
+   de tiempo previo a la aprobación de hoy. Hoy es una propuesta: no consta que se haya ejecutado.
+7. **IA aplicada y producto:** la vía del contractor desde el mes 1 (o el rol interno en los meses 1-3 si demuestra
+   capacidad, con el contractor desde el mes 4), solo en su tramo de los meses 1-3; las decisiones de los meses 3, 6 y 9
+   liberan los de los meses 4-12. Con señal y sin contractor, los hitos de IA aplicada de los meses 4-12 no se
+   inician (la contingencia de que no haya contractor: la excepción de 0,3 no la cubre). El producto,
+   diferido hasta el mes 6, con su tramo condicional.
 
 El techo de caja se confirma contra el presupuesto 2027 en `private/`.
 
-Esta tabla **proyecta la de F** ([Anexo F](06-roadmap-riesgo.md), "Gates por
-condición"), no da órdenes propias; si difieren, manda F. La pérdida vale solo
+Esta tabla **proyecta la tabla del Anexo F** ([Anexo F](06-roadmap-riesgo.md), "Gates por
+condición"), no da órdenes propias; si difieren, manda el Anexo F. La pérdida vale solo
 si el resultado es un corte. Cuatro palabras no son sinónimos:
 
 - **Corte:** el frente deja de financiarse y queda la base mínima. Solo por una
-  regla de F: G2 con estimado ≤ 0% o más retrabajo, o espera vencida; G3 con
+  regla del Anexo F: la lectura del mes 6 con estimado ≤ 0% o más retrabajo, o espera vencida; la lectura del mes 9 con
   estimado < +5%.
 - **Suspensión:** se frena un gasto puntual y se vuelve a medir, sin cortar el
-  frente: G2 en espera (T3 sin escalado, nueva medición a las 6 semanas) y uso de
-  Tecnología <60% (horas de champions e intermedio de T3).
-- **Mantenimiento:** el frente sigue sin escalar. G3 en espera: T4 con la base
-  mínima y mantenimiento. Adopción en 60%-80%: T3 sigue y se mide al cierre de T3.
-- **Excepción:** el board aprueba algo fuera del sobre, sin caja (0,3 FTE en T2,
-  en G0).
+  frente: la lectura del mes 6 en espera (los meses 7-9 sin escalado, nueva medición a las 6 semanas) y uso de
+  Tecnología <60% (horas de champions e intermedio de los meses 7-9).
+- **Mantenimiento:** el frente sigue sin escalar. La lectura del mes 9 en espera: los meses 10-12 con la base
+  mínima y mantenimiento. Adopción en 60%-80%: el tramo de los meses 7-9 sigue y se mide al cierre de ese tramo.
+- **Excepción:** el board aprueba algo fuera del sobre, sin caja (0,3 FTE en los meses 4-6,
+  en la aprobación de hoy).
 
-| Gate | Cuándo | Libera (caja / tiempo, techo) y reserva vigente | Condiciones con efecto económico | Si no se cumple, según F | Pérdida si se corta | Reversible |
+| Decisión | Cuándo | Libera (caja / tiempo, techo) y reserva vigente | Condiciones con efecto económico | Si no se cumple, según el Anexo F | Pérdida si se corta | Reversible |
 |---|---|---|---|---|---|---|
-| G0 | Aprobación | T1: 33 / 72 (con la prueba chica); reserva 6 | Pedido G0 completo; techo y piso de capacidad confirmados; vía de IA aplicada | No arranca T1; T0 queda hundido (≤ 7). Sin vía de IA aplicada, sus hitos pasan a T2 | — | Sí |
-| G1 | Fin de T1 | Con señal, T2 de la plataforma: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15**. Sin señal, T2 como (b) | **Bifurcación:** al menos una señal (umbral contractual, anuncio de precio por consumo o cliente para el producto) libera la plataforma (contractor al 100%, gateway, pasarela). Además: base congelada con la unidad de B; matriz de los clientes que concentran la facturación; uso de T1 dentro del sobre; contractor contratado | **Ninguna condición de G1 corta el plan.** Sin señal: T2-T4 como (b) con la prueba extendida (≈ 199 en el año); G2 y G3 releen las señales. Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: T2 solo con replan de capacidad. Política sin ratificar: 6 semanas; si no se ratifica, no hay P en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en T2; sin ella en G3, la capa D (11,6-31 de caja) no se financia. Básico <50% al cierre de T2: cambio de formato de la capacitación. Con señal y sin contractor: T2 en el modo control de B, sin los hitos de IA aplicada; la caja de T2 baja ~27 (contractor con contingencia) | Solo si el board decide **no liberar T2** (no es una regla de corte): 79, hasta 115 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 155 en el año | Sí |
-| G2 | Fin de T2 | T3: 59 / 78; P, solo con señal de cliente y plataforma liberada en G1: 38 / 34 más; reserva 15 (**17** con P) | Throughput: **pasa** con límite inferior ≥ +3%, sin más retrabajo; **espera** con estimado > 0% y límite inferior < +3%, o muestra insuficiente: T3 sin escalado y nueva medición a las 6 semanas; **corta** con estimado ≤ 0% o más retrabajo. FinOps con el múltiplo medido; destino de la capacidad decidido | Throughput: **suspensión** (espera) o **corte** del frente interno, que deja la base mínima; la espera vencida corta igual. Cobertura de precio no demostrada: la palanca sale del deck. Más de 6× sin mitigar: se congela la expansión y se topea el consumo. Sin señal de cliente, o sin plataforma de G1: P se difiere y sus condiciones de G3 no aplican | Corte del frente interno: 198 (máximo 291) hasta cerrar; año 224 / 330 | Sí |
-| G3 | Fin de T3 | T4: 95 / 69; P, si sigue: 21 / 23 más; reserva 15 (17 con P) | Throughput: **pasa** con límite inferior ≥ +8%; **espera** con estimado ≥ +5% y límite inferior < +8%, o muestra insuficiente: **mantenimiento** (solo base mínima), nueva medición a las 6 semanas; **corta** con estimado < +5%. Costo por PR sin subir. Señal contractual o P liberado para la capa D. SLO del piloto, solo si P se liberó | Throughput < +5%: corte del frente interno y de la base común; queda la base mínima. **Si P sigue, rige la precedencia** (seguridad, dependencias, caja) y P conserva su base común mínima. Sin señal contractual ni P: la capa D no se financia | Sin P: 292 (máximo 427) hasta cerrar; año 305 / 447. Con P vivo, corte mixto: año 433 (con P sin corte, 471) | Sí |
-| G4 | Fin de T4 | Año 2: régimen de ~143 (~188 con P), en el presupuesto 2028 | Trayectoria hacia el equilibrio operativo anual de ~17% de throughput **atribuible contra la base de T1** (~23% si P sigue; menos si la capacidad se vende) **o** interés contractual en el producto; decisiones sobre contractor, on-premise e ISO 42001 | No se financia el régimen. Queda el frente interno con las licencias vigentes y la base mínima, ~53 por año (29-78); el gateway se da de baja salvo que FinOps muestre que acota más de lo que cuesta | — | Contrato a más de 12 meses o hardware: irreversible |
+| Hoy | Aprobación | Meses 1-3: 33 / 72 (con la prueba chica); reserva 6 | Pedido de hoy completo; techo y piso de capacidad confirmados; vía de IA aplicada | No arrancan los meses 1-3; la preparación previa queda hundida (≤ 7). Sin vía de IA aplicada, sus hitos pasan a los meses 4-6 | — | Sí |
+| Mes 3 | Fin de los meses 1-3 | Con señal, meses 4-6 de la plataforma: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15**. Sin señal, meses 4-6 como gobierno mínimo y formación | **Bifurcación:** al menos una señal (umbral contractual, anuncio de precio por consumo o cliente para el producto) libera la plataforma (contractor al 100%, gateway, pasarela). Además: base congelada con la unidad del Anexo B; matriz de los clientes que concentran la facturación; uso de los meses 1-3 dentro del sobre; contractor contratado | **Ninguna condición del mes 3 corta el plan.** Sin señal: los meses 4-12 como gobierno mínimo y formación con la prueba extendida (≈ 199 en el año); las lecturas de los meses 6 y 9 releen las señales. Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: los meses 4-6 solo con replan de capacidad. Política sin ratificar: 6 semanas; si no se ratifica, no hay el producto en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en los meses 4-6; sin ella en el mes 9, la demostración externa (11,6-31 de caja) no se financia. Básico <50% al cierre de los meses 4-6: cambio de formato de la capacitación. Con señal y sin contractor: los meses 4-6 en el modo control del Anexo B, sin los hitos de IA aplicada; la caja de los meses 4-6 baja ~27 (contractor con contingencia) | Solo si el board decide **no liberar los meses 4-6** (no es una regla de corte): 79, hasta 115 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 155 en el año | Sí |
+| Mes 6 | Fin de los meses 4-6 | Meses 7-9: 59 / 78; el producto, solo con señal de cliente y plataforma liberada en el mes 3: 38 / 34 más; reserva 15 (**17** con el producto) | Throughput: **pasa** con límite inferior ≥ +3%, sin más retrabajo; **espera** con estimado > 0% y límite inferior < +3%, o muestra insuficiente: los meses 7-9 sin escalado y nueva medición a las 6 semanas; **corta** con estimado ≤ 0% o más retrabajo. FinOps con el múltiplo medido; destino de la capacidad decidido | Throughput: **suspensión** (espera) o **corte** del frente interno, que deja la base mínima; la espera vencida corta igual. Cobertura de precio no demostrada: la palanca sale del deck. Más de 6× sin mitigar: se congela la expansión y se topea el consumo. Sin señal de cliente, o sin plataforma del mes 3: el producto se difiere y sus condiciones del mes 9 no aplican | Corte del frente interno: 198 (máximo 291) hasta cerrar; año 224 / 330 | Sí |
+| Mes 9 | Fin de los meses 7-9 | Meses 10-12: 95 / 69; el producto, si sigue: 21 / 23 más; reserva 15 (17 con el producto) | Throughput: **pasa** con límite inferior ≥ +8%; **espera** con estimado ≥ +5% y límite inferior < +8%, o muestra insuficiente: **mantenimiento** (solo base mínima), nueva medición a las 6 semanas; **corta** con estimado < +5%. Costo por PR sin subir. Señal contractual o producto liberado para la demostración externa. SLO del piloto, solo si el producto se liberó | Throughput < +5%: corte del frente interno y de la base común; queda la base mínima. **Si el producto sigue, rige la precedencia** (seguridad, dependencias, caja) y el producto conserva su base común mínima. Sin señal contractual ni el producto: la demostración externa no se financia | Sin el producto: 292 (máximo 427) hasta cerrar; año 305 / 447. Con el producto vivo, corte mixto: año 433 (con el producto sin corte, 471) | Sí |
+| Mes 12 | Fin de los meses 10-12 | Año 2: régimen de ~143 (~188 con el producto), en el presupuesto 2028 | Trayectoria hacia el equilibrio operativo anual de ~17% de throughput **atribuible contra la base de los meses 1-3** (~23% si el producto sigue; menos si la capacidad se vende) **o** interés contractual en el producto; decisiones sobre contractor, on-premise e ISO 42001 | No se financia el régimen. Queda el frente interno con las licencias vigentes y la base mínima, ~53 por año (29-78); el gateway se da de baja salvo que FinOps muestre que acota más de lo que cuesta | — | Contrato a más de 12 meses o hardware: irreversible |
 
 Irreversibles marcados (de los Anexos [B](02-arquitectura.md) y
 [C](03-gobierno-seguridad.md)): compromisos de volumen a más de 12 meses, capex
-en infraestructura propia y firma con un cliente. Ninguno se toma antes de G4.
+en infraestructura propia y firma con un cliente. Ninguno se toma antes del mes 12.
 
 ### Solapes entre anexos
 
@@ -956,48 +956,48 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 
 | Solape | Renglones | Ahorro posible | Estado |
 |---|---|---|---|
-| IA aplicada | 0,5 / 0,8 FTE de B y contractor de D | 32-79 de tiempo en T2-T4 y 4-10 en T1 | **Consolidado**: B y D acuerdan que el contractor reemplaza; el base ya lo descuenta |
-| Pruebas de bypass y migración | DevOps/QA de B (2,1-10,7, dentro de su fracción) y prueba de integración de C (1,1-5,6) | Hasta 1,1-5,6 | Lo resuelven `architect` y `governance` |
-| Red team | Piloto en T3 (B, 5-15, solo en el tramo P) y externo en T4 (C, 10-25) | 5-15 si P se libera y un contrato cubre el piloto y la reprueba | Desacuerdo a la vista en la [ficha](../../context/supuestos/precios-externos-sin-cotizar.md); `architect` y `governance` |
-| Gateway y pasarela de salida | Infraestructura (B, 14-38) y pasarela, DLP y logs (C, 4,5-18) | Hasta 4,5-18 si son la misma pieza | `architect` |
-| Infraestructura de T3-T4 sin piloto | B la dimensionaba "con el piloto y su tráfico" (2-6 por mes) | 1,5-6 por trimestre (3-12 en T3 y T4 juntos), más 6-24 por año a régimen | **Consolidado**: `architect` confirma que sin P baja al nivel de T2; el incremento pasa al tramo P |
-| Seguridad | 20% de un senior de DevOps o seguridad (C) y DevOps/QA (B) | Sin cuantificar | `architect` y `governance` |
+| IA aplicada | 0,5 / 0,8 FTE del Anexo B y contractor del Anexo D | 32-79 de tiempo en los meses 4-12 y 4-10 en los meses 1-3 | **Consolidado**: los Anexos B y D acuerdan que el contractor reemplaza; el base ya lo descuenta |
+| Pruebas de bypass y migración | DevOps/QA del Anexo B (2,1-10,7, dentro de su fracción) y prueba de integración del Anexo C (1,1-5,6) | Hasta 1,1-5,6 | Lo resuelven `architect` y `governance` |
+| Red team | Piloto en los meses 7-9 (Arquitectura, 5-15, solo en el tramo del producto) y externo en los meses 10-12 (Gobierno, 10-25) | 5-15 si el producto se libera y un contrato cubre el piloto y la reprueba | Desacuerdo a la vista en la [ficha](../../context/supuestos/precios-externos-sin-cotizar.md); `architect` y `governance` |
+| Gateway y pasarela de salida | Infraestructura (Arquitectura, 14-38) y pasarela, DLP y logs (Gobierno, 4,5-18) | Hasta 4,5-18 si son la misma pieza | `architect` |
+| Infraestructura de los meses 7-12 sin piloto | El Anexo B la dimensionaba "con el piloto y su tráfico" (2-6 por mes) | 1,5-6 por tramo de tres meses (3-12 en los meses 7-9 y los meses 10-12 juntos), más 6-24 por año a régimen | **Consolidado**: `architect` confirma que sin el producto baja al nivel de los meses 4-6; el incremento pasa al tramo del producto |
+| Seguridad | 20% de un senior de DevOps o seguridad (Gobierno) y DevOps/QA (Arquitectura) | Sin cuantificar | `architect` y `governance` |
 
 ## Tensiones con otras miradas
 
 | Tensión | Planteada por | Posición de Finanzas | Estado |
 |---|---|---|---|
-| Exceso de ~0,3 FTE clave en T2 con el producto diferido | `finance` | `architect` propone el replan de B (T2 en 2,2 FTE clave, −5 mil de tiempo) y la excepción acotada como respaldo. Finanzas toma el replan como base y deja la excepción costeada | **Pendiente del board en G0**: replan o excepción |
-| El base presentado como paso asegurado de G2 y G3, cuando F decide por límite inferior; "~20 personas" sin definir con una cohorte de 15-20 | `finance` (re-revisión docente) | El año del base es condicional y se lee en tres ramas (−332 / ≈ −275 / ≈ −245); el mínimo pasa a 15 activas, como supuesto | **Propuesta** a `architect` (B, "Muestra insuficiente") y a `caio` (F y slide 9) |
+| Exceso de ~0,3 FTE clave en los meses 4-6 con el producto diferido | `finance` | `architect` propone el replan del Anexo B (los meses 4-6 en 2,2 FTE clave, −5 mil de tiempo) y la excepción acotada como respaldo. Finanzas toma el replan como base y deja la excepción costeada | **Pendiente del board en la aprobación de hoy**: replan o excepción |
+| El base presentado como paso asegurado del mes 6 y del mes 9, cuando el Anexo F decide por límite inferior; "~20 personas" sin definir con una cohorte de 15-20 | `finance` (re-revisión docente) | El año del base es condicional y se lee en tres ramas (−332 / ≈ −275 / ≈ −245); el mínimo pasa a 15 activas, como supuesto | **Propuesta** a `architect` (Anexo B, "Muestra insuficiente") y a `caio` (Anexo F y slide 9) |
 | +20% de throughput con agentes a 12× lo pagado, contra el OKR de gasto de tecnología de menos de 3,5% | `architect` | A régimen, la base libera ~130 mil por año, que cubren consumo incremental hasta ~7× la suscripción. La caja del plan suma gasto de tecnología: el OKR es incompatible salvo que baje la nube. Propuesta: medirlo sin la inversión del plan, o por persona activa | **Escalada a `caio`** para reformular el resultado clave |
-| Sobre de capacidad: lectura estricta o separada | `finance` | La separada es propuesta de Finanzas; con la estricta, T1 no entra sin recortar el básico | **Decide el board en G0** |
+| Sobre de capacidad: lectura estricta o separada | `finance` | La separada es propuesta de Finanzas; con la estricta, los meses 1-3 no entran sin recortar el básico | **Decide el board en la aprobación de hoy** |
 | Staffing facturado por hora desincentiva el uso de IA | `people` | Productividad en staffing = 0 en el base. Las horas de capacitación de Operaciones (~400 h) cuestan 4-14 mil a costo; a tarifa de venta valen más, y eso se calcula en `private/` | **Resuelta** para el costo; el modelo comercial queda **escalado a `caio`** |
-| Contractor contra la restricción de no contratar; vía de IA en T1 (B1 o rol interno de 0,3 FTE) | `people`, `architect` | B y D adoptan B1: el recurso que no entra es el tiempo clave (1,6 contra 1,9 FTE), con ~13 mil más de caja. 47-116 mil de caja en el año, reversible por ser un contrato corto. G0 autoriza solo el tramo de T1 (hasta 16,5); G1-G3 liberan el resto | **Decide el Directorio en G0** |
-| El paquete contra alternativas más baratas que compran el mismo aprendizaje | `finance` (corrección docente) | En el año 1, (b) y (c) le ganan al paquete con cualquier φ; la plataforma solo se paga con señal de precio, contractual o de producto: G1 como bifurcación y prueba chica en G0 | **Decidida** (lazynet, 2026-10-14); `caio` la integra en F y en las slides 7-9 |
+| Contractor contra la restricción de no contratar; vía de IA en los meses 1-3 (contractor desde el mes 1 o rol interno de 0,3 FTE) | `people`, `architect` | El Anexo B y el Anexo D adoptan el contractor desde el mes 1: el recurso que no entra es el tiempo clave (1,6 contra 1,9 FTE), con ~13 mil más de caja. 47-116 mil de caja en el año, reversible por ser un contrato corto. La aprobación de hoy autoriza solo el tramo de los meses 1-3 (hasta 16,5); las decisiones de los meses 3, 6 y 9 liberan el resto | **Decide el Directorio en la aprobación de hoy** |
+| El paquete contra alternativas más baratas que compran el mismo aprendizaje | `finance` (corrección docente) | En el año 1, el gobierno mínimo y formación y el piloto acotado le ganan al paquete con cualquier φ; la plataforma solo se paga con señal de precio, contractual o de producto: la decisión del mes 3 como bifurcación y prueba chica en la aprobación de hoy | **Decidida** (lazynet, 2026-10-14); `caio` la integra en el Anexo F y en las slides 7-9 |
 
 ## Insumos para el deck
 
 - **Frase para el CFO:** el año cuesta hasta ~400 mil USD económicos (98-255 de
-  caja y ~3,5 FTE) si G1 trae una señal que pague la plataforma, y ≈ 199 (caja
+  caja y ~3,5 FTE) si la decisión del mes 3 trae una señal que pague la plataforma, y ≈ 199 (caja
   ≈ 39) si no la trae; en ninguna rama genera caja propia en 12 meses.
   Compra opciones, no certezas: acotar el riesgo de precio de los tokens si la
-  prueba de T2 lo demuestra, tener los controles que los bancos podrían exigirle
-  a un proveedor (hipótesis que T1 verifica en sus contratos) y un ingreso de
-  producto que se paga solo si G2 trae señal (16-59 de caja más). Cortarlo en G1
+  prueba de los meses 4-6 lo demuestra, tener los controles que los bancos podrían exigirle
+  a un proveedor (hipótesis que se verifica en los meses 1-3 con sus contratos) y un ingreso de
+  producto que se paga solo si la lectura del mes 6 trae señal (16-59 de caja más). Cortarlo en el mes 3
   cuesta 79, hasta 115 hasta cerrar y hasta 155 en el año con la base mínima.
-- **Decisión que se le pide al board:** el pedido G0 de arriba.
+- **Decisión que se le pide al board:** el pedido de hoy de arriba.
 - **Cifra de alerta:** a 12×, el consumo incremental (211-267 mil al año) iguala
   a toda la caja del plan. Es exposición de la empresa, con o sin plan. El
   gateway la acota solo si baja el consumo (~13% a 12×, ~25% a 6×), y eso lo
-  mide la prueba de T2.
+  mide la prueba de los meses 4-6.
 - **Equilibrio operativo anual del año 2** (no recupera la inversión del año 1,
   no es ROI ni payback): ~17% de throughput atribuible (~23% con producto), contra la
-  base de T1. El +20% del OKR lo cubre solo si 1,20/(1+d) − 1 − c ≥ 16,7%: d es
-  la mejora de T0 a la base de T1 (se mide en G1) y c, el cambio del grupo que no
-  adopta (desde G2).
+  base de los meses 1-3. El +20% del OKR lo cubre solo si 1,20/(1+d) − 1 − c ≥ 16,7%: d es
+  la mejora del cuarto trimestre de 2026 a la base de los meses 1-3 (se mide en el mes 3) y c, el cambio del grupo que no
+  adopta (desde el mes 6).
 - **Para la Slide 9:** columnas homogéneas (costo económico, capacidad, neto y
-  ROI). Sin señal en G1, ≈ 199 (neto −199 a −137). El base es condicional a que G2 y G3 pasen por límite inferior (−332); si
-  la espera de G2 vence, ≈ −245. El pesimista espera, vence y corta (≈ −262),
+  ROI). Sin señal en el mes 3, ≈ 199 (neto −199 a −137). El base es condicional a que las lecturas de los meses 6 y 9 pasen por límite inferior (−332); si
+  la espera del mes 6 vence, ≈ −245. El pesimista espera, vence y corta (≈ −262),
   contra −382 sin frenar.
 - **Alternativas:** gobierno mínimo y formación cuesta 161 (neto −161 a −99) y un
   piloto sobre el agente actual, 47 (−47 a +15), contra 394 (−332) del paquete.
@@ -1005,16 +1005,16 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 ## Cautelas
 
 - N × costo por desarrollador es una cuenta de mercado, no la nómina de la empresa.
-- La valuación de la capacidad a costo cargado y con la lectura A es un piso
+- La valuación de la capacidad a costo cargado y con la lectura de horas evitadas es un piso
   deliberado. La tarifa no se publica ni se deriva de márgenes internos.
-- Supuestos sin ficha propia: las fracciones por rol de T1-E (están en los
-  Anexos B, C y D), las bandas de espera de G2 y G3 (Anexo F), el costo de "T3
+- Supuestos sin ficha propia: las fracciones por rol del primer tramo acotado (están en los
+  Anexos B, C y D), las bandas de espera del mes 6 y del mes 9 (Anexo F), el costo de "los meses 7-9
   sin escalado", y los valores ilustrativos de PR por persona y semana (2 y 4) y
   de 15 minutos de revisión por PR (lecturas de Finanzas en este anexo).
-- El corte de G3 alcanza al frente interno y a la base común ([Anexo F](06-roadmap-riesgo.md)).
+- El corte del mes 9 alcanza al frente interno y a la base común ([Anexo F](06-roadmap-riesgo.md)).
   Si solo cortara el interno, el año quedaría en ~381 (neto ≈ −369). El 50% del
-  contractor en la base común mínima para P no tiene dato.
-- El puente del equilibrio supone que d (serie de T0) y c (grupo que no adopta
+  contractor en la base común mínima para el producto no tiene dato.
+- El puente del equilibrio supone que d (serie de la preparación previa) y c (grupo que no adopta
   o tendencia) se pueden medir; con cohortes chicas, su ruido puede ser del
   orden de los ~3 puntos que comparten. Las ramas del base no llevan
   probabilidad: dependen de σ, que no tiene dato.

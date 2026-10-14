@@ -4,7 +4,7 @@ title: "Precios de servicios externos sin cotización y contingencia"
 description: "Los costos externos del plan (asesoría legal, red team, auditoría, pasarela, infraestructura y consumo del piloto) son rangos del equipo sin cotización, y una contingencia de 15% sobre la caja cubre el error de precio de lo estimado, dentro del techo aprobado."
 status: draft
 tags: [supuesto, finanzas, seguridad, arquitectura]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T03:18:00Z }
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-14T20:00:00Z }
 ---
 # Supuesto
 
@@ -14,8 +14,8 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T03:18:00Z }
 | Red team externo | Ver desacuerdo abajo | Anexos B y C |
 | Auditoría para extender ISO 27001 a IA | 800-1.500 por jornada, 2-4 jornadas | Anexo C |
 | Pasarela de salida, DLP y logs de acciones | 500-2.000 por mes | Anexo C |
-| Infraestructura nueva (gateway, retrieval, trazas, evals) | T1 acotado (T1-b, solo telemetría y registro): 500-1.500 en el trimestre. T1 con gateway en laboratorio (T1-a): 500-1.500 por mes. Después, por mes: 1.500-4.000 en T2; en T3 y T4, 1.500-4.000 sin piloto y 2.000-6.000 con piloto (el incremento, 500-2.000 por mes, es del frente producto) | Anexo B |
-| Consumo de modelos del piloto de producto | 1.000-4.000 por mes en T3 y T4 | Anexo B |
+| Infraestructura nueva (gateway, retrieval, trazas, evals) | Meses 1-3 acotados (escenario recomendado, solo telemetría y registro): 500-1.500 en el tramo de tres meses. Meses 1-3 con gateway en laboratorio (escenario conservador): 500-1.500 por mes. Después, por mes: 1.500-4.000 en los meses 4-6; en los meses 7-12, 1.500-4.000 sin piloto y 2.000-6.000 con piloto (el incremento, 500-2.000 por mes, es del frente producto) | Anexo B |
+| Consumo de modelos del piloto de producto | 1.000-4.000 por mes en los meses 7-12 | Anexo B |
 | Contingencia sobre la caja | 15% | Anexo E |
 
 La contingencia cubre el error de precio de los renglones estimados. Los
@@ -53,4 +53,4 @@ de los rangos refleja que no hay cotización.
 - Ningún valor tiene cotización: no sirven para una slide de entrega hasta
   reemplazarlos por cotizaciones o marcarlos como supuesto revisado.
 - Valores vigentes en los anexos B, C y E al 2026-10-14. El plan recomendado usa
-  T1-b; el valor por mes de T1 corresponde a T1-a.
+  el escenario recomendado de los meses 1-3; el valor por mes de esos meses corresponde al escenario conservador.

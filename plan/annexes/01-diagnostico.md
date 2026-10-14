@@ -70,7 +70,7 @@ Siguiendo el paso 6 de M1U1 (dos o tres brechas críticas), el CAIO propone:
    incidentes y costo. Sin línea de base no hay gates ([Anexo B](02-arquitectura.md)).
 3. **Adopción y valor en el producto:** una hipótesis de producto elegida con
    RICE (un asistente de integración en la plataforma propia), diferida hasta
-   que un cliente dé señal en G2, con gate de scale o kill
+   que un cliente dé señal en la lectura de impacto del mes 6, con gate de scale o kill
    ([Anexo F](06-roadmap-riesgo.md)).
 
 Talento y cultura no queda afuera: es el habilitador de las tres
@@ -83,7 +83,7 @@ tiene base sólida sin estrategia y datos confiables.
 |---|---|---|---|---|
 | El puntaje refleja documentos y no la práctica | Alta | Medio | Validar con 2-3 sesiones con referentes de cada área, como propone la versión extendida de M1U1 | Si la validación mueve dos o más dimensiones, se rehace el orden de prioridades |
 | Las fichas de `context/` están en `draft` | Alta | Alto para la entrega | Verificación humana de las fichas que sostienen cada puntaje | Sin fichas `verified`, el diagnóstico no va a la versión de peer review como hecho |
-| La telemetría solo mide el agente de código y subestima el uso en staff | Alta | Medio | Medir chat y Workspace en T1 ([Anexo D](04-personas-cultura.md)) | — |
+| La telemetría solo mide el agente de código y subestima el uso en staff | Alta | Medio | Medir chat y Workspace en los meses 1-3 ([Anexo D](04-personas-cultura.md)) | — |
 | Leer la baja adopción de Operaciones como problema cultural | Media | Medio | Separar lo contractual (el cliente fija herramientas) de lo cultural | — |
 
 ## Decisiones
