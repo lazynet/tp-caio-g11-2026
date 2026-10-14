@@ -168,7 +168,7 @@ asume que exista**.
 
 | Trimestre | Necesidad (Anexo B) | Vía propuesta | Alternativa | Qué lo demuestra |
 |---|---|---|---|---|
-| T1 | 0,3 FTE (T1-b) | Contractor al 50%, aprobado en G0: cubre el 0,3 de B y deja 0,2 para incorporación, documentación y coordinación | Perfil interno reasignado, solo si antes de G0 se demuestra por rol: porcentaje liberado, trabajo desplazado y quién lo cubre | Contrato corto firmado, o declaración de capacidad por rol validada por Operaciones |
+| T1 | 0,3 FTE (T1-b) | Contractor al 50%, tramo de T1 autorizado en G0: cubre el 0,3 de B y deja 0,2 para incorporación, documentación y coordinación | Perfil interno reasignado, solo si antes de G0 se demuestra por rol: porcentaje liberado, trabajo desplazado y quién lo cubre | Contrato corto firmado, o declaración de capacidad por rol validada por Operaciones |
 | T2 a T4 | 0,8 FTE | El mismo contractor, 1 persona | Idem | Entregable verificable por trimestre; documentación y traspaso |
 
 **Reemplaza, no complementa.** El contractor es la fuente del 0,3 de T1 y del 0,8
@@ -183,8 +183,9 @@ coordinación con el programa (en T2 se puede prestar al replan de B, ver
 | B1. Contractor desde T1 (recomendada) | T1: 6.750-16.500 (0,5 x 3 meses x 4.500-11.000); T2-T4: 40.500-99.000 | Se libera el tiempo de B que cubre | Sube la caja de T1 contra el techo de G0 y choca con "no contratar" (decide el Directorio) |
 | B2. Contractor desde T2 (versión anterior) | T2-T4: 40.500-99.000 | T1 queda sin cubrir: el hito de B se corre o se resiente | Atrasa el gateway de laboratorio y las evals de T1 |
 
-El total de B1 es una decisión de G0, no de G1. Si el Directorio la rechaza, la
-alternativa es A con la prueba de capacidad previa a G0, o diferir los hitos de
+G0 elige la vía B1 (contractor desde T1) y autoriza solo su tramo de T1 (hasta
+16,5 de caja, dentro del techo de 33); los tramos de T2-T4 se liberan con G1-G3.
+Si el Directorio rechaza B1, la alternativa es A con la prueba de capacidad previa a G0, o diferir los hitos de
 IA aplicada de T1 (lo que decide `architect`).
 
 ### Holgura de 0,2 FTE del contractor en T2 (replan de B)
@@ -391,6 +392,7 @@ documentado.
 | Disparador | Acción |
 |---|---|
 | Al cierre de T2, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en T3 las horas de champions y de intermedio que no sean rediseño (~13 de tiempo en el medio, como en F); rediseñar la formación con casos por rol; revisar causas con los managers. El plan no suma seats: no hay expansión que frenar |
+| Al cierre de T2, uso activo en Tecnología ≥60% y <80% | T3 sigue; formación rediseñada con casos por rol; se vuelve a medir al cierre de T3 (como en F) |
 | Básico completado <50% al cierre de T2 | Cambiar el formato (de sesión a práctica en equipo) y reasignar tiempo; no repetir el mismo curso |
 | Asistencia de champions <60% dos meses seguidos | Disolver la red o rediseñar su mandato con sponsor nuevo |
 | Subida de incidentes o retrabajo asociada a uso de IA | Pausar el nivel avanzado hasta revisar compuertas de calidad con `architect` |
@@ -416,7 +418,7 @@ documentado.
 | # | Decisión | Alternativas | Elección | Reversibilidad |
 |---|---|---|---|---|
 | D1 | Cómo medir la meta de adopción en Operaciones | A: 80% sobre Operaciones y Tecnología, como el borrador de OKR. B: 80% en Tecnología y una meta propia sobre personas **habilitadas** en Operaciones. | **B**, informando también A | Reversible: se cambia al completar la matriz |
-| D2 | Capacidad especializada en IA aplicada | A: sin incorporación, solo reasignar. B1: un contractor a prueba desde T1 (50% en T1, 100% de T2 a T4), que reemplaza la fracción de IA aplicada de B. B2: lo mismo desde T2. C: dos contrataciones en nómina. | **B1**: única forma de cubrir la concentración de capacidades sin romper la restricción de no contratar de forma masiva. **Choca con la restricción literal de "no contratar gente nueva"**: lo decide el Directorio. A es viable si ese techo se mantiene, con más riesgo de continuidad | B reversible (contrato corto); C poco reversible. Condición de B1: el 0,2 de T2 que usa el replan de B no está confirmado; si no se sostiene ("sin el 0,2"), rige la excepción de 0,3 FTE. Si el Directorio rechaza D2 ("sin contractor"), la excepción no alcanza y rige el modo control de B |
+| D2 | Capacidad especializada en IA aplicada | A: sin incorporación, solo reasignar. B1: un contractor a prueba desde T1 (50% en T1, 100% de T2 a T4), que reemplaza la fracción de IA aplicada de B. B2: lo mismo desde T2. C: dos contrataciones en nómina. | **B1**: única forma de cubrir la concentración de capacidades sin romper la restricción de no contratar de forma masiva. G0 la elige y autoriza solo el tramo de T1 (hasta 16,5 de caja); T2-T4 se liberan con G1-G3. **Choca con la restricción literal de "no contratar gente nueva"**: lo decide el Directorio. A es viable si ese techo se mantiene, con más riesgo de continuidad | B reversible (contrato corto); C poco reversible. Condición de B1: el 0,2 de T2 que usa el replan de B no está confirmado; si no se sostiene ("sin el 0,2"), rige la excepción de 0,3 FTE. Si el Directorio rechaza D2 ("sin contractor"), la excepción no alcanza y rige el modo control de B |
 | D3 | Qué se dice sobre el empleo | A: sin compromiso. B: compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. C: compromiso con excepciones. | **Postura propuesta: C**, con el texto de "Postura sobre el empleo (propuesta)". La decide el Directorio, con asesoría laboral; no es una política aprobada. B baja más el miedo pero ata margen; A deja el freno sin respuesta | B y C poco reversibles una vez comunicados |
 | D4 | Formato de la formación | A: curso obligatorio genérico. B: casos prácticos por rol con champions, en horario laboral. | **B**, por el pedido del piloto (más de la mitad de 12 autoseleccionados) y porque la falta de tiempo fue el primer freno; el efecto del formato se mide en T2-T3 | Reversible |
 | D5 | Art. 4 del AI Act | A: esperar a decidir si alcanza a Acme Labs. B: adoptarlo como piso, con registro. | **B**, sin citar fechas ni sanciones | Reversible |
