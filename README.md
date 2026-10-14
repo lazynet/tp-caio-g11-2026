@@ -324,7 +324,7 @@ duplicadas.
 
 | Salida | Sirve para |
 |---|---|
-| `entrega.pdf` | **lo que se entrega**: el deck seguido de los anexos, en un solo PDF |
+| `entrega.pdf` | **lo que se entrega**: el deck, el índice de anexos y los anexos, en un solo PDF |
 | `deck-marp.html` / `.pdf` | revisar y presentar; el mejor diseño |
 | `deck-marp.pptx` | entregar si piden pptx (las slides van como imagen) |
 | `deck-pandoc.pptx` | pptx con texto editable, diseño básico |
@@ -337,7 +337,12 @@ al script, no se arma a mano.
 La consigna pide **un único PDF de menos de 10 MB** con la presentación y los
 anexos. `build-deck.sh entrega` lo arma en `out/entrega.pdf`: el deck de Marp y
 después cada anexo de `plan/annexes/` en orden de nombre (`01-finanzas.md`,
-`02-arquitectura.md`...), en A4. Si pasa los 10 MB, el script falla y dice el peso.
+`02-arquitectura.md`...), en A4. Entre el deck y los anexos agrega una página
+de índice con títulos y links internos. Las páginas de anexos se numeran desde
+1 al pie; el índice usa esa numeración. Las filas de tablas se mantienen juntas
+si caben en una página, sin achicar la tipografía. El pie requiere un Chrome
+con soporte de cajas de margen CSS; verificá que aparezca en el PDF generado.
+Si pasa los 10 MB, el script falla y dice el peso.
 
 Un anexo no es un depósito de datos crudos: es la **evidencia procesada** que
 deja ver al CFO o al board de dónde salió cada número de una slide. Para
