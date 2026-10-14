@@ -125,11 +125,11 @@ Miles de USD. Throughput: límite inferior del intervalo. En espera se vuelve a 
 | Cortar en G1 | 73 en el medio; hasta 106 hasta cerrar y 146 en el año |
 
 - ROI a 12 meses negativo en los tres escenarios; beneficio de caja: cero.
-- Equilibrio: **~17% de throughput atribuible** (~23% con producto); el OKR, contra T0, lo cubre solo si de T0 a T1 sube <2,8% (se mide en G1).
+- Equilibrio: **~17% de throughput atribuible** (~23% con producto); el +20% del OKR lo cubre solo si 1,20/(1+d) − 1 − c ≥ 16,7% (d: T0→T1, en G1; c: quien no adopta, desde G2).
 
 **Decisión, el pedido G0 completo:**
 1. T1: hasta 33 de caja más 6 de reserva de cierre (15 desde G1); hasta 62 de tiempo (1,6 FTE clave y 590 h distribuidas).
-2. Piso: 1,6 FTE clave en T1; 2,2 / 2,2 / 2,1 en T2-T4 con el replan (respaldo: 2,5 en T2). Sin contractor, T2 solo con gateway y controles, sin harness ni evals.
+2. Piso: 1,6 FTE clave en T1; 2,2 / 2,2 / 2,1 en T2-T4 con el replan (respaldo: 2,5 en T2). Sin contractor, T2 en modo control, sin harness ni evals.
 3. Si se corta, base mínima hasta 41 de tiempo; T0, propuesto, hasta 7.
 
 Ver [Anexo E — Business case](annexes/05-business-case.md).
@@ -140,9 +140,9 @@ Ver [Anexo E — Business case](annexes/05-business-case.md).
 
 | Escenario | Qué pasa | Resultado del año (miles USD) |
 |---|---|---|
-| Pesimista con gates | Espera en G2; vence a las 6 semanas y corta | ≈ −262 (≈ −300 si la espera no venciera) |
+| Pesimista con gates | Espera en G2; vence a las 6 semanas y corta | ≈ −262 (≈ −300 si la espera no vence) |
 | Pesimista sin frenar | Todo el año ejecutado | −382; −502 con precio a 12× desde T3 |
-| Base | Producto diferido; G4 con el frente interno | ROI económico −84% |
+| Base | Producto diferido; G2 y G3 pasan solo por límite inferior | ROI −84%; ≈ −245 si la espera vence y corta |
 | Optimista | Señal en G2; en G4 se decide el primer contrato | ROI económico −76% |
 
 - A 12× de consumo, 211-267 por año: exposición de la empresa, con o sin plan.

@@ -54,9 +54,9 @@ controles y métricas.
 - Lo decimos primero: con productividad sola, el plan no se paga en 12 meses y
   no genera caja ([Anexo E](../plan/annexes/05-business-case.md)). El
   equilibrio pide ~17% de throughput atribuible contra la base de T1 (~23% si
-  el régimen carga el producto). No lo comparamos restando puntos con el OKR,
-  que se mide contra T0: lo cubre solo si de T0 a T1 el throughput sube menos
-  de ~2,8%, y eso lo medimos en G1. Lo que compra es
+  el régimen carga el producto). El OKR, que se mide contra T0, lo cubre solo
+  si, descontadas la mejora previa (d, en G1) y la del grupo que no adopta (c,
+  desde G2), queda al menos 16,7%. Lo que compra es
   la opción de cobertura de precio, una opción de ingreso y, si la evidencia
   contractual de T1 la confirma, licencia para venderles a bancos.
 - Por eso no pedimos el año: pedimos un único G0. T1 con hasta 33 mil USD de
@@ -86,6 +86,8 @@ deciden si seguimos."
 - Que el gateway ya cubre el precio, o que los bancos ya exigen IA: son
   hipótesis que se prueban en T2 y T1.
 - Que el OKR de +20% cubre el equilibrio: se miden contra bases distintas.
+- Que el escenario base pasa G2 y G3: con la regla del límite inferior, es
+  condicional a la precisión del intervalo.
 - Que los secretos están bloqueados en toda superficie: en chat, IDE y suite
   hay prohibición y control compensatorio, no bloqueo.
 - Que la señal de G2 prueba disposición a pagar: prueba interés con presupuesto
