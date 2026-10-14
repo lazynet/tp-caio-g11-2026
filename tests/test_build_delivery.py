@@ -1,4 +1,5 @@
 import importlib.util
+from io import BytesIO
 import subprocess
 import sys
 import tempfile
@@ -15,7 +16,7 @@ spec.loader.exec_module(builder)
 
 class BuildDeliveryTests(unittest.TestCase):
     def test_index_uses_titles_order_and_actual_destination_pages(self):
-        from pypdf import PdfWriter
+        from pypdf import PdfReader, PdfWriter
 
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -34,7 +35,12 @@ class BuildDeliveryTests(unittest.TestCase):
                 writer.add_blank_page(width=595, height=842)
             writer.add_named_destination("annex-0", 0)
             writer.add_named_destination("annex-1", 3)
-            markup = builder.annex_index_html(root, builder.load_plan_check(), writer)
+            stream = BytesIO()
+            writer.write(stream)
+            stream.seek(0)
+            annexes = PdfReader(stream)
+            self.assertIsInstance(annexes, PdfReader)
+            markup = builder.annex_index_html(root, builder.load_plan_check(), annexes)
             self.assertIn("Índice de anexos", markup)
             self.assertIn(
                 'href="https://caio.invalid/annexes#annex-0">Anexo A — Uno &amp; dos</a>',
@@ -47,8 +53,6 @@ class BuildDeliveryTests(unittest.TestCase):
             self.assertLess(markup.index("Anexo A"), markup.index("Anexo B"))
             self.assertIn("<td>1</td>", markup)
             self.assertIn("<td>4</td>", markup)
-            from pypdf import PdfReader
-
             index_pdf = root / "index.pdf"
             builder.render_annexes(root, markup, index_pdf, numbered=False)
             index = PdfReader(index_pdf)
@@ -56,7 +60,7 @@ class BuildDeliveryTests(unittest.TestCase):
             self.assertEqual(len(index.pages[0].get("/Annots", [])), 2)
             combined = PdfWriter()
             combined.append(index)
-            combined.append(writer)
+            combined.append(annexes)
             builder.rewrite_pdf_links(
                 combined, root, builder.load_plan_check().annex_files(root), {}, "main"
             )
