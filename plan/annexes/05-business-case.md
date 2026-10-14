@@ -16,8 +16,8 @@ Decirle al board, con números trazables, **qué compra la plata, cuándo se ve 
 cómo se frena**. La conclusión adelantada: con la valuación conservadora de este
 anexo, el plan a 12 meses **no se paga con productividad interna** y no genera
 caja propia. Es un año de inversión con salida por etapas. Se justifica solo si
-además prende uno de dos motores: ingresos por IA en el producto o protección
-del ingreso de los clientes financieros. Por eso se le pide al board un único
+prende una de sus opciones: ingresos por IA en el producto, protección del
+ingreso de los clientes financieros o cobertura del precio de los tokens. Por eso se le pide al board un único
 pedido G0 por T1, con techo máximo de caja y de capacidad, y no el año entero.
 
 El presupuesto base es el de la opción que propone el CAIO para T2-T4: **el
@@ -852,8 +852,8 @@ la prueba, el marco de gates y el producto diferido. Lo nuevo, propuesta para
   contractor 4), contra 394. G2 y G3 vuelven a leer las señales; liberar la
   plataforma más tarde demora el caso de referencia y la prueba de portabilidad.
 
-Cortar en G1 cuesta hasta 106 hasta cerrar y 146 en el año, contra un año
-completo de hasta 255 de caja y 320 de tiempo: esa es la reversibilidad. Quedan
+Cortar en G1 cuesta hasta 106 hasta cerrar y 146 en el año (≈ 79 / 115 y
+108 / 155 con la prueba chica), contra un año completo de hasta 255 de caja y 320 de tiempo: esa es la reversibilidad. Quedan
 descartados aprobar el año completo (compromete la caja con un caso que no cierra)
 y el producto desde T2 (gasta 37 de caja y 55 de tiempo antes de la señal).
 
@@ -912,7 +912,7 @@ suya, no una regla de abandono.
 
 | Gate | Cuándo | Libera (caja / tiempo, techo) y reserva vigente | Condiciones con efecto económico | Si no se cumple, según F | Pérdida si se corta | Reversible |
 |---|---|---|---|---|---|---|
-| G0 | Aprobación | T1: 33 / 62; reserva 6 | Pedido G0 completo; techo y piso de capacidad confirmados; vía de IA aplicada | No arranca T1; T0 queda hundido (≤ 7). Sin vía de IA aplicada, sus hitos pasan a T2 | — | Sí |
+| G0 | Aprobación | T1: 33 / 62 (72 con la prueba chica); reserva 6 | Pedido G0 completo; techo y piso de capacidad confirmados; vía de IA aplicada | No arranca T1; T0 queda hundido (≤ 7). Sin vía de IA aplicada, sus hitos pasan a T2 | — | Sí |
 | G1 | Fin de T1 | T2: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15** | Base congelada con la unidad de B; matriz de los clientes que concentran la facturación; uso de T1 dentro del sobre; contractor contratado (propuesta de Finanzas) | **Ninguna condición de G1 corta el plan.** Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: T2 solo con replan de capacidad. Política sin ratificar: 6 semanas; si no se ratifica, no hay P en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en T2; sin ella en G3, la capa D (11,6-31 de caja) no se financia. Básico <50% al cierre de T2: cambio de formato de la capacitación. Sin contractor: T2 en el modo control de B, sin los hitos de IA aplicada; la caja de T2 baja ~27 (contractor con contingencia) | Solo si el board decide **no liberar T2** (no es una regla de corte): hasta 106 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 146 en el año | Sí |
 | G2 | Fin de T2 | T3: 59 / 78; P, solo con señal: 38 / 34 más; reserva 15 (**17** con P) | Throughput: **pasa** con límite inferior ≥ +3%, sin más retrabajo; **espera** con estimado > 0% y límite inferior < +3%, o muestra insuficiente: T3 sin escalado y nueva medición a las 6 semanas; **corta** con estimado ≤ 0% o más retrabajo. FinOps con el múltiplo medido; destino de la capacidad decidido | Throughput: **suspensión** (espera) o **corte** del frente interno, que deja la base mínima; la espera vencida corta igual. Cobertura de precio no demostrada: la palanca sale del deck. Más de 6× sin mitigar: se congela la expansión y se topea el consumo. Sin señal de cliente: P se difiere y sus condiciones de G3 no aplican | Corte del frente interno: 198 (máximo 291) hasta cerrar; año 224 / 330 | Sí |
 | G3 | Fin de T3 | T4: 95 / 69; P, si sigue: 21 / 23 más; reserva 15 (17 con P) | Throughput: **pasa** con límite inferior ≥ +8%; **espera** con estimado ≥ +5% y límite inferior < +8%, o muestra insuficiente: **mantenimiento** (solo base mínima), nueva medición a las 6 semanas; **corta** con estimado < +5%. Costo por PR sin subir. Señal contractual o P liberado para la capa D. SLO del piloto, solo si P se liberó | Throughput < +5%: corte del frente interno y de la base común; queda la base mínima. **Si P sigue, rige la precedencia** (seguridad, dependencias, caja) y P conserva su base común mínima. Sin señal contractual ni P: la capa D no se financia | Sin P: 292 (máximo 427) hasta cerrar; año 305 / 447. Con P vivo, corte mixto: año 433 (con P sin corte, 471) | Sí |
