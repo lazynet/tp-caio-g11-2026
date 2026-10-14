@@ -178,6 +178,7 @@ avanzado, champions). Hay dos lecturas, y el board elige:
 | Alternativa de T1 | Clave | Distribuidas | Total | Contra 2,25 FTE | Caja T1 | Tiempo T1 |
 |---|---|---|---|---|---|---|
 | T1-a, IA interna de 0,5 | 2,3 | 1,2 | 3,5 | 1,56× | 12 | 57 |
+| T1-a con contractor B1 (comparación con igual provisión, Anexo B) | 1,8 | 1,2 | 3,0 | 1,33×; clave 0,80× | 25 (14-36) | 46 (24-67) |
 | T1-b con IA interna de 0,3 (Anexo B) | 1,9 | 1,2 | 3,1 | 1,38× | 9 (5-13) | 49 (26-71) |
 | **T1-E: T1-b con contractor B1 (recomendada)** | **1,6** | **1,2** | **2,8** | **1,25×; clave 0,70×** | **23 (13-32)** | **42 (22-61)** |
 | T1-E estricta: el intermedio de Tecnología pasa a T2 | 1,6 | 0,8 | 2,4 | 1,06× | 23 (13-32) | 37 (20-54) |
@@ -196,6 +197,15 @@ Lectura:
 - La vía de IA aplicada de T1 cambia caja por tiempo: el contractor B1 suma
   ~13 mil de caja y libera 0,3 FTE clave. Como el recurso que no entra es el
   tiempo, y la caja sí, Finanzas recomienda B1 (ver "Tensiones").
+- **T1-a con contractor, contra T1-E:** suma 0,2 FTE clave de B (gateway en
+  laboratorio, +4 de tiempo, 2-6, a 0,2 × 3 meses del costo cargado de DevOps y
+  arquitecto) y lleva la infraestructura de 0,5-1,5 a 1,5-4,5 en el trimestre
+  ([Anexo B](02-arquitectura.md)), +2 de caja con contingencia (1-3). **En el
+  medio entra en el techo de caja de T1 (25 contra 33); en el máximo no:** 35,7
+  pediría un techo de 36. En la lectura separada entra en el sobre (0,80×); en
+  la estricta, como T1-E, no. La capacidad y la caja no la descartan solas: la
+  descarta que el gateway en laboratorio no produce valor medido sin harness ni
+  evals, que son de T2.
 
 **Piso de capacidad del plan, por trimestre (FTE clave).** Es lo que el board
 tiene que confirmar disponible, no lo que el supuesto promete:
@@ -206,6 +216,8 @@ tiene que confirmar disponible, no lo que el supuesto promete:
 | Producto diferido con la excepción de T2 | 1,6 | 2,5 | 2,2 | 2,1 |
 | Con P liberado en G2 | 1,6 | 2,2 | 3,7 | 3,1 |
 | Producto desde T2 (comparación, sin replan) | 1,6 | 3,5 | 3,7 | 3,1 |
+| Sin contractor, modo control de B (sin hitos de IA aplicada) | 1,6 | 2,2 | 2,2 | 2,1 |
+| Sin contractor, fracción interna de 0,8 (alternativa C de B; comparación) | 1,6 | 3,3 | 3,0 | 2,9 |
 | Horas distribuidas (segundo sobre) | 590 h | ~1.210 h | ~580 h | ~410 h |
 
 Sin replan, **T2 excedía el máximo del sobre en ~0,3 FTE**, y no había holgura en
@@ -216,8 +228,11 @@ propone dos salidas, y Finanzas toma la primera como base:
   a T3) y DevOps/QA 1,0 → 0,8 (las evals en CI y la reejecución de la prueba de
   portabilidad pasan a los 0,2 FTE pagados y sin asignar del contractor). T2
   queda en 2,23 FTE clave: entra, con ~0,03 de holgura. Baja el tiempo de T2 en
-  ~5 mil (3-8) y no suma caja. Depende de que se apruebe el contractor: sin él,
-  el 0,2 no existe.
+  ~5 mil (3-8) y no suma caja. Depende de que se apruebe el contractor y de que
+  su 0,2 esté libre. Si falta solo el 0,2, rige la excepción; si falta el
+  contractor, B corre T2 en modo control (1,2 FTE de B, sin harness, evals ni
+  prueba de portabilidad) y Finanzas recalcula T2-T4 (fila 5 de "IA aplicada:
+  alternativas costeadas").
 - **Excepción acotada en G0 (alternativa):** el board aprueba 0,3 FTE por encima
   del sobre en T2. No suma caja; deja el tiempo de T2 en 75,2 y saca ~3-8 mil de
   horas facturables.
@@ -241,6 +256,7 @@ completo sin T0, con el producto diferido, medios (rango):
 | 3. Complementa (T1-a, contractor y fracción interna) | 166 (92-239) | 290 (157-421) | 455 | 2,3 / — |
 | 4. Sin contractor, con T1-b (los hitos de IA aplicada de T1 pasan a T2) | 83 (44-122) | 274 (149-400) | 357 | **1,6 / 3,3 / 3,0 / 2,9** |
 | 4-a. Sin contractor, con T1-a (todo interno; comparación) | 86 (45-126) | 290 (157-421) | 375 | 2,3 / 3,3 / 3,0 / 2,9 |
+| 5. Sin contractor, modo control de B (sin harness, evals, caso de referencia ni prueba de portabilidad) | 83 (44-122); ~75 (39-110) en el régimen (b) | 213 (113-313) | 296 (~288 en el b) | 1,6 / 2,2 / 2,2 / 2,1 |
 
 Las filas 2, 3 y 4-a restan el frente producto a los valores con producto que se
 costearon antes y aplican los cambios que no dependen de la vía (infraestructura
@@ -254,8 +270,20 @@ replan. La 2 cuesta casi lo mismo que la 1. El 0,5 del contractor en T1 se
 dimensionó para T1-a: con T1-b, el 0,2 que excede los 0,3 que pide B es traspaso
 y documentación, según D.
 
-**Sobre el económico total, la fila 4 es la más barata, y no entra.** Ahorra caja,
-que es el recurso que sí entra, y gasta tiempo clave, que es el que no.
+La fila 5 parte de la 1 y solo saca el contractor con su contingencia (−94;
+54-133): el modo control de B pide en T2 lo mismo que el replan (arquitecto 0,4
+y DevOps/QA 0,8), porque el 0,2 de evals y de la prueba no corre, y en T3-T4
+mantiene 1,5 / 1,4 FTE de B ([Anexo B](02-arquitectura.md), "Exceso de T2").
+En el régimen (b) del gateway, la infraestructura de T2 baja de 8,3 a 0,5-1,5
+(supuesto de B), −8 de caja con contingencia (5-12). La de T3-T4 en ese
+régimen B no la dimensiona: queda al nivel de T2 del cuadro, pendiente de
+`architect`. El T1 de 1,6 es supuesto de Finanzas: el 0,6 de B en T1-b no
+depende del contractor.
+
+**Sobre el económico total, la fila 5 es la más barata y la única sin contractor
+que entra en el sobre, pero compra menos:** no hay cobertura de precio ni caso
+de referencia, y el throughput que se mide es el de la adopción sola. La fila 4
+ahorra caja, el recurso que sí entra, y gasta tiempo clave, el que no.
 
 #### Dos contingencias del contractor, que no se resuelven igual
 
@@ -267,24 +295,28 @@ que no cambian (~1,0: 0,45 de gobierno y seguridad, ~0,38 de actividades clave y
 | Contingencia | Qué falta | FTE clave T2 / T3 / T4 | Contra el máximo del sobre (2,25) | Respuesta |
 |---|---|---|---|---|
 | **A. Hay contractor, pero sin el 0,2 adicional** (el traspaso se lo come o el contrato no lo incluye) | Las evals en CI y la reejecución de la prueba de portabilidad vuelven a DevOps/QA | 2,5 / 2,2 / 2,1 | +0,25 en T2 | La **excepción acotada** de 0,3 en T2, aprobada en G0 como respaldo. +5 de tiempo (3-8), sin caja |
-| **B. No hay contractor** (el Directorio no lo aprueba o no se contrata a tiempo) | Toda la fracción de IA aplicada de T2-T4 (0,8 FTE) y el replan | **3,3 / 3,0 / 2,9** | **+1,1 / +0,8 / +0,7** | La excepción **no alcanza**. Ver abajo |
+| **B. No hay contractor** (el Directorio no lo aprueba o no se contrata a tiempo) | Toda la fracción de IA aplicada de T2-T4 (0,8 FTE) y el replan | Modo control de B: 2,2 / 2,2 / 2,1. Con fracción interna (alternativa C): **3,3 / 3,0 / 2,9** | Modo control: entra. Fracción interna: **+1,1 / +0,8 / +0,7** | La excepción **no alcanza**. B corre T2 en **modo control**, sin hitos de IA aplicada (fila 5). Ver abajo |
 
-La contingencia B no se cubre con tiempo: pediría ampliar el sobre clave casi un
+La contingencia B no se cubre con tiempo: con la fracción interna, pediría ampliar el sobre clave casi un
 50% por encima de su máximo en T2, con 0 holgura hoy, y lo que ahorra es caja
 (~94), el recurso que no falta. **Propuesta de Finanzas: el contractor (o el rol
 interno demostrado en T1 y el contractor desde T2, fila 2) es condición de no
 inicio de los hitos de IA aplicada de T2-T4**: gateway con ruteo, evals en CI,
 caso de referencia y prueba de portabilidad y costo. B ya aplica esa regla en T1.
 Sin contractor contratado al cierre de T1, G1 no libera el T2 diseñado; libera
-un T2 sin esos hitos, que redimensiona `architect` (propuesta en el reporte), y
-sus consecuencias se aceptan de antemano:
+el **modo control** que dimensiona `architect` ([Anexo B](02-arquitectura.md),
+"Exceso de T2"): gateway en laboratorio, bypass por superficie y FinOps, con 1,2
+FTE de B en T2. Cuesta 83 de caja y 213 de tiempo en el año (fila 5), y sus
+consecuencias se aceptan de antemano:
 
 - Las condiciones de G2 de portabilidad y cobertura de precio quedan sin medir:
   la palanca de precio sale del deck y no hay compromisos de volumen.
 - El caso de referencia no llega a L2 en el año.
-- El plan se reduce a inventario, línea base, controles y formación. La caja
-  baja (sin contractor), pero el throughput que se mide es el de la adopción
-  sola, sin plataforma.
+- El plan se reduce a inventario, línea base, controles, gateway en
+  laboratorio, FinOps y formación. La caja baja ~94 (sin contractor), pero el
+  throughput que se mide es el de la adopción sola, sin harness ni evals. El
+  beneficio de productividad no se recalcula: no hay base para separar cuánto
+  de g depende de la plataforma.
 
 La alternativa de financiar la contingencia B con tiempo (fila 4) queda costeada
 y a la vista: si el board la prefiere, tiene que confirmar en G0 un piso de
@@ -379,13 +411,14 @@ un porcentaje con fuente.
 
 El gateway no se justifica por un ahorro prometido. Lo que compra depende del
 esquema de precio del agente de código, y en dos de los tres casos no ahorra
-nada (miles de USD por año; la suscripción es 19-24):
+nada (miles de USD por año; la suscripción es 19-24). Los casos son los
+regímenes (a), (b) y (c) de la política de ruteo del [Anexo B](02-arquitectura.md):
 
 | Esquema de precio | Sin gateway | Con gateway | Qué compra el gateway |
 |---|---|---|---|
-| Suscripción plana vigente; el agente no pasa por el gateway | 19-24 | 19-24 más el gateway | Nada en precio: control y telemetría de las superficies enrutables |
-| Suscripción plana, pero enrutar el agente obliga a facturar por API | 19-24 | Hasta 211-267 de incremental a 12× | **Adelanta la exposición en vez de cubrirla.** No se enruta el agente mientras la suscripción sea plana |
-| El proveedor pasa a cobrar por consumo, k× | k × (19-24) | k × (19-24) × (1 − s), más el gateway | Ahorro si el ruteo, la caché y los topes bajan el consumo en una fracción s |
+| (a) Suscripción plana vigente, con o sin ruteo del agente | 19-24 | 19-24 más el gateway | Nada en precio: control y telemetría de las superficies enrutables |
+| (b) Suscripción plana, pero enrutar el agente obliga a facturar por API | 19-24 | Hasta 211-267 de incremental a 12× | **Adelanta la exposición en vez de cubrirla.** No se enruta el agente mientras la suscripción sea plana |
+| (c) El proveedor pasa a cobrar por consumo, k× | k × (19-24) | k × (19-24) × (1 − *fc* × s), más el gateway | Ahorro si el ruteo, la caché y los topes bajan el consumo de lo enrutable en una fracción s |
 
 **Base del cálculo: el gasto elegible.** El ahorro se calcula sobre el gasto que
 el modelo financiero pone a precio de consumo **y** que puede pasar por el
@@ -403,10 +436,17 @@ la **fracción del costo** del gasto elegible que pasa por el gateway (ponderada
 por costo a precio de lista, no por cantidad de eventos) y s es la reducción de
 consumo medida sobre **esa misma población** de tareas. El gateway se paga en el
 tercer caso si *fc* × s ≥ costo del gateway / (k × gasto elegible
-anual). Como hoy el gasto elegible es el del agente, el umbral no cambia de
-valor: lo que cambia es la definición, que fija qué se mide en la prueba de T2.
-La fracción de eventos sobre las cuatro superficies sigue siendo la métrica de
-cobertura de controles, pero no se multiplica por s. Con el renglón entero de
+anual). *fc* y s se miden sobre la misma base: el consumo del agente de código a
+precio de lista, cuya base es la suscripción de 19-24. La condición es *fc* × s
+≥ s*; con *fc* ≤ 0,9, a 6× pide s ≥ ~28% (13%-47%). Es la definición que adoptó
+el [Anexo B](02-arquitectura.md) ("Población y gasto elegible"), donde *fc* se
+llama *f*: misma población, misma ponderación por costo y mismo umbral. B suma un
+respaldo: si no hay costo por evento, usa la fracción de eventos del agente
+(denominador de D8) marcada "estimado"; Finanzas lo acepta solo así marcado, y
+el gate lo lee como estimación. Como hoy el gasto elegible es el del agente, el
+umbral no cambia de valor. El 90% de ruta de B es otra métrica: eventos **del
+agente** por el gateway, que rige solo en los regímenes (a) y (c); no se
+multiplica por s. Con el renglón entero de
 infraestructura a régimen sin piloto, 18-48 por año (cota superior: incluye
 retrieval, trazas y evals, no solo el gateway), el umbral de *fc* × s
 es:
@@ -419,13 +459,14 @@ Lectura: a 2× el gateway pide bajar el consumo tres cuartos, y en el extremo
 caro no se paga por precio; a 12× alcanza con bajarlo un octavo. **Hueco sin base:** no hay medición de qué fracción del
 tráfico es enrutable, ni de cuánto baja el consumo el ruteo; tampoco se sabe si
 enrutar el agente de código preserva la suscripción plana
-([Anexo B](02-arquitectura.md) condiciona el ruteo a un endpoint configurable), ni
+([Anexo B](02-arquitectura.md) condiciona el ruteo del agente al régimen comercial:
+si enrutar rompe la suscripción plana, no se enruta), ni
 si la calidad se sostiene con modelos más baratos, que solo se evalúa con la
 suite de evals de T2. La prueba de portabilidad y costo de T2 del
 [Anexo B](02-arquitectura.md) lo mide, con criterio de aceptación a 6×
 (*fc* × s contra este umbral, 25%). Hasta entonces la cobertura de
-precio es una opción, no un ahorro. Hoy B define su *f* como eventos sobre las
-cuatro superficies y conserva umbrales anteriores (55% / 37% / 18%): la propuesta de denominador y de cifras para `architect` queda como desacuerdo a la vista hasta que B la adopte.
+precio es una opción, no un ahorro. B ya usa estos umbrales (~38% / 25% / 13%
+a 4× / 6× / 12×).
 
 ### ROI, payback y equilibrio
 
@@ -702,7 +743,7 @@ techo, sin excepciones.
 | El tiempo reasignado no existe: sale de horas facturables o de entregas a clientes | Alta | Alto | Piso de capacidad por trimestre confirmado en G0; sobre por rol aprobado; suplentes ([Anexo D](04-personas-cultura.md)) | Utilización bajo la meta de 80% dos meses seguidos por causa del plan: se recorta el frente que más tiempo consume |
 | El sobre clave disponible está en el extremo inferior (1,0 FTE) | Media | Alto | El board confirma el piso de 1,6 en G0 | Piso no confirmado: T1 no arranca en su versión T1-E |
 | Contingencia A: hay contractor, pero su 0,2 libre se consume en el traspaso o el contrato no lo incluye | Media | Medio | Excepción acotada de 0,3 FTE aprobada en G0 como respaldo; `people` confirma el 0,2 en el alcance del contrato | 0,2 no confirmado al cierre de T1: T2 va con la excepción (2,5 FTE clave) |
-| Contingencia B: no hay contractor (ni rol interno demostrado) | Media | Alto | Contractor como condición de no inicio de los hitos de IA aplicada de T2-T4; la excepción no alcanza (T2 pediría 3,3 FTE clave) | Sin contractor contratado al cierre de T1: G1 libera un T2 sin gateway con ruteo, evals en CI, caso de referencia ni prueba de portabilidad |
+| Contingencia B: no hay contractor (ni rol interno demostrado) | Media | Alto | Contractor como condición de no inicio de los hitos de IA aplicada de T2-T4; la excepción no alcanza (con fracción interna, T2 pediría 3,3 FTE clave) | Sin contractor contratado al cierre de T1: G1 libera el modo control de B (2,2 FTE clave), sin harness, evals en CI, caso de referencia ni prueba de portabilidad |
 | Cambio a pago por consumo | Alta ([Anexo B](02-arquitectura.md)) | Alto | Gateway con ruteo, caché y topes; FinOps mensual desde T2; no enrutar el agente si eso pierde la suscripción plana | Múltiplo efectivo de más de 6× sin mitigar en un trimestre: se congela la expansión y se topea el consumo |
 | La ganancia no aparece o se paga con retrabajo | Media | Alto | Base congelada; costo por PR aceptado; incidentes y retrabajo junto al throughput | Bandas de G2 y G3 (abajo) |
 | La espera de G2 se estira sin decisión | Media | Medio | Regla de F: la espera vence a las 6 semanas | — |
@@ -778,7 +819,7 @@ tiene una consecuencia por condición, acá se lista la misma; la pérdida de la
 | Gate | Cuándo | Libera (caja / tiempo, techo) y reserva vigente | Condiciones con efecto económico | Si no se cumple, según F | Pérdida si se corta | Reversible |
 |---|---|---|---|---|---|---|
 | G0 | Aprobación | T1: 33 / 62; reserva 6 | Pedido G0 completo; techo y piso de capacidad confirmados; vía de IA aplicada | No arranca T1; T0 queda hundido (≤ 7). Sin vía de IA aplicada, sus hitos pasan a T2 | — | Sí |
-| G1 | Fin de T1 | T2: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15** | Base congelada con la unidad de B; matriz de los clientes que concentran la facturación; uso de T1 dentro del sobre; contractor contratado (propuesta de Finanzas) | **Ninguna condición de G1 corta el plan.** Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: T2 solo con replan de capacidad. Política sin ratificar: 6 semanas; si no se ratifica, no hay P en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en T2; sin ella en G3, la capa D (11,6-31 de caja) no se financia. Básico <50% al cierre de T2: cambio de formato de la capacitación. Sin contractor: T2 sin los hitos de IA aplicada (propuesta, pendiente en F) | Solo si el board decide no liberar T2: hasta 106 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 146 en el año | Sí |
+| G1 | Fin de T1 | T2: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15** | Base congelada con la unidad de B; matriz de los clientes que concentran la facturación; uso de T1 dentro del sobre; contractor contratado (propuesta de Finanzas) | **Ninguna condición de G1 corta el plan.** Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: T2 solo con replan de capacidad. Política sin ratificar: 6 semanas; si no se ratifica, no hay P en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en T2; sin ella en G3, la capa D (11,6-31 de caja) no se financia. Básico <50% al cierre de T2: cambio de formato de la capacitación. Sin contractor: T2 en el modo control de B, sin los hitos de IA aplicada; la caja de T2 baja ~27 (contractor con contingencia) (propuesta, pendiente en F) | Solo si el board decide no liberar T2: hasta 106 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 146 en el año | Sí |
 | G2 | Fin de T2 | T3: 59 / 78; P, solo con señal: 38 / 34 más; reserva 15 (**17** con P) | Throughput: **pasa** ≥ +3% con intervalo que no cruza +3%, sin más retrabajo; **espera** entre 0% y +3% o con intervalo que cruza +3%: T3 sin escalado y nueva medición a las 6 semanas; **corta** ≤ 0% o con más retrabajo. FinOps con el múltiplo medido; destino de la capacidad decidido | Throughput: espera o corte del frente interno, que deja la base mínima; la espera vencida corta igual. Cobertura de precio no demostrada: la palanca sale del deck. Más de 6× sin mitigar: se congela la expansión y se topea el consumo. Sin señal de cliente: P se difiere y sus condiciones de G3 no aplican | Corte del frente interno: 198 (máximo 291) hasta cerrar; año 224 / 330 | Sí |
 | G3 | Fin de T3 | T4: 95 / 69; P, si sigue: 21 / 23 más; reserva 15 (17 con P) | Throughput: **pasa** ≥ +8%; **espera** +5% a +8%, solo base mínima y mantenimiento, nueva medición a las 6 semanas; **corta** < +5%. Costo por PR sin subir. Señal contractual o P liberado para la capa D. SLO del piloto, solo si P se liberó | Throughput < +5%: corte del frente interno y de la base común; queda la base mínima. **Si P sigue, rige la precedencia** (seguridad, dependencias, caja) y P conserva su base común mínima. Sin señal contractual ni P: la capa D no se financia | Sin P: 292 (máximo 427) hasta cerrar; año 305 / 447. Con P vivo, corte mixto: año 431 (con P sin corte, 471) | Sí |
 | G4 | Fin de T4 | Año 2: régimen de ~143 (~188 con P), en el presupuesto 2028 | Trayectoria hacia ~17% de throughput **atribuible contra la base de T1** (~23% si P sigue; menos si la capacidad se vende) **o** interés contractual en el producto; decisiones sobre contractor, on-premise e ISO 42001 | No se financia el régimen. Queda el frente interno con las licencias vigentes y la base mínima, ~53 por año (29-78); el gateway se da de baja salvo que FinOps muestre que acota más de lo que cuesta | — | Contrato a más de 12 meses o hardware: irreversible |
@@ -809,11 +850,11 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 | Tensión | Planteada por | Posición de Finanzas | Estado |
 |---|---|---|---|
 | Vía de IA aplicada en T1: contractor al 50% (B1) o rol interno de 0,3 FTE | `architect`, `people` | B y D ya adoptan B1 como base; el rol interno queda como alternativa de B si se demuestra antes de G0. Finanzas recomienda B1 porque el recurso que no entra es el tiempo clave (1,6 contra 1,9 FTE), con ~13 mil más de caja; la alternativa 2 cuesta casi lo mismo | **Acordada entre dueños**; la aprueba el Directorio en G0 por la restricción de no contratar |
-| Sin contractor, la excepción de 0,3 no alcanza: T2 pediría 3,3 FTE clave | `finance` (re-revisión docente) | El contractor es condición de no inicio de los hitos de IA aplicada de T2-T4; la fila 4 queda costeada si el board prefiere pagar con tiempo | **Propuesta** a `caio`, `architect` y `people`: hoy B, D y F dicen que la excepción cubre la falta de contractor |
+| Sin contractor, la excepción de 0,3 no alcanza: con fracción interna, T2 pediría 3,3 FTE clave | `finance` (re-revisión docente) | El contractor es condición de no inicio de los hitos de IA aplicada de T2-T4; sin él, T2 corre en el modo control de B (fila 5, 2,2 FTE clave); la fila 4 queda costeada si el board prefiere pagar con tiempo | **Acordada con `architect`** (B, "Exceso de T2"); **propuesta** a `caio` y `people`: hoy D y F dicen que la excepción cubre la falta de contractor |
 | Exceso de ~0,3 FTE clave en T2 con el producto diferido | `finance` | `architect` propone el replan de B (T2 en 2,2 FTE clave, −5 mil de tiempo) y la excepción acotada como respaldo. Finanzas toma el replan como base y deja la excepción costeada | **Pendiente del board en G0**: replan o excepción |
 | El equilibrio queda en ~17% sin producto y ~23% si el régimen carga el producto; el OKR de +20% se mide contra otra base | `finance` | El producto lo paga el producto: la cifra que corresponde es ~17%, atribuible contra la base de T1. No se compara restando puntos con el +20% contra T0: el OKR lo cubre solo si de T0 a la base de T1 el throughput sube menos de ~2,8% | **Reabierta**: `caio` mantiene ~17% con ~23% al lado, pero tiene que sacar "3 puntos debajo del OKR" de la slide 8 y de la defensa |
 | La condición de F que frena la expansión de seats no frena ningún gasto: el plan no suma seats | `finance` (re-revisión docente) | Propuesta: que el "corta" del uso de Tecnología en G2 (<60%) frene las horas de champions y de intermedio de T3 que no sean rediseño (~13 de tiempo en el medio), o que se rotule como condición sin efecto presupuestario | **Propuesta** a `caio` |
-| Denominadores del gateway: *f* de eventos sobre cuatro superficies (B) contra el gasto elegible del modelo (E) | `finance` (re-revisión docente) | Para la prueba económica, *fc* es fracción del costo del gasto elegible (hoy, el agente de código), y *s* se mide sobre esa población; la fracción de eventos queda como métrica de control | **Desacuerdo a la vista** hasta que `architect` adopte la definición |
+| Denominadores del gateway: *f* de eventos sobre cuatro superficies (B) contra el gasto elegible del modelo (E) | `finance` (re-revisión docente) | Para la prueba económica, *fc* (el *f* de B) es fracción del costo del gasto elegible (hoy, el agente de código), y *s* se mide sobre esa población; el 90% de eventos del agente queda como métrica de control, solo en los regímenes (a) y (c) | **Resuelta**: `architect` la adoptó en B ("Población y gasto elegible"); falta que `caio` y `governance` la lleven a F:159-160 y C:327-351 |
 | Reserva de cierre: G0 autoriza 6 y los cortes de G2-G3 cuestan hasta 15 | `finance` (re-revisión docente) | Reserva vigente que se amplía en G1 (15) y en G2 con P (17), con renglón propio y la misma autoridad que el gate | **Propuesta** a `caio` para F y la slide 8 |
 | La espera de G2 no tiene regla de salida | `finance` | Si a las 6 semanas sigue entre 0% y +3%, corta el frente interno | **Resuelta**: adoptada por `caio` en F |
 | +20% de throughput con agentes a 12× lo pagado, contra el OKR de gasto de tecnología de menos de 3,5% | `architect` | A régimen, la base libera ~130 mil por año, que cubren consumo incremental hasta ~7× la suscripción. La caja del plan suma gasto de tecnología: el OKR es incompatible salvo que baje la nube. Propuesta: medirlo sin la inversión del plan, o por persona activa | **Escalada a `caio`** para reformular el resultado clave |
@@ -846,8 +887,9 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
   propia: el OKR de +20% contra T0 la cubre solo si de T0 a la base de T1 el
   throughput sube menos de ~2,8%, y eso se mide en G1.
 - **Contingencias del contractor:** sin su 0,2 adicional, la excepción de 0,3 en
-  T2 alcanza; sin contractor, T2 pediría ~3,3 FTE clave y la excepción no
-  alcanza: el contractor es condición de no inicio de los hitos de IA aplicada.
+  T2 alcanza; sin contractor, la excepción no alcanza y el contractor es
+  condición de no inicio de los hitos de IA aplicada: B corre T2 en modo control
+  (2,2 FTE clave, caja del año 83); cubrirlo con fracción interna pediría ~3,3.
 - **Reserva de cierre:** 6 en G0, ampliada a 15 en G1 y a 17 en G2 si se libera
   P, siempre antes del compromiso nuevo.
 - **Para la Slide 9:** el pesimista espera en G2, la espera vence a las 6 semanas
@@ -877,7 +919,8 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
   asignar en T2, que tiene que confirmar `people` ([Anexo D](04-personas-cultura.md)).
   Si el traspaso se los come (contingencia A), rige la excepción: +5 mil de
   tiempo y 2,5 FTE clave en T2. Si no hay contractor (contingencia B), la
-  excepción no alcanza: T2 pediría ~3,3 FTE clave.
+  excepción no alcanza: B corre T2 en modo control (2,2 FTE clave, sin hitos de
+  IA aplicada); cubrirlo con la fracción interna pediría ~3,3.
 - El puente del equilibrio con el OKR supone que la mejora de T0 a la base de T1
   (d) se puede medir con la serie retrospectiva; con cohortes chicas, su ruido
   puede ser del mismo orden que el ~2,8% que separa las dos bases.
