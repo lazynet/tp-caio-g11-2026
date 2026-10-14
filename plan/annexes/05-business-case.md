@@ -117,7 +117,8 @@ Año: caja 177 (98-255) y tiempo 217 (115-320); económico **394** (213-575). La
 prueba chica (G0, en las dos ramas) suma 6 (3-9) de tiempo y nada de caja: la
 rama llega a ≈ 400 (216-584); ROI, cortes de G2-G3 y pesimista van sin la prueba.
 Los FTE suman antes de redondear. Decisiones de los dueños: infraestructura de
-T3-T4 al nivel de T2 (B), replan de T2 (−0,3 FTE clave, −5) y avanzado de D con 480 h.
+T3-T4 al nivel de T2 (B), replan de T2 (−0,3 FTE clave, −5) y avanzado de D en el medio
+de su rango de costo (4,8-25,2 → 15,0; 480-720 h, medio 600).
 
 **Excepción acotada en lugar del replan.** Si el board elige la excepción, T2
 queda en 2,5 FTE clave y 75,2 de tiempo, y el año en tiempo 223 (118-328) y
@@ -225,9 +226,13 @@ dotación por ejercicio; así queda en la
 [ficha del sobre separado](../../context/supuestos/sobre-de-capacidad-separado.md).
 Si se contaran como clave, T2 pasaría a **2,275 y excedería el máximo en 0,025
 FTE**: el replan no entraría solo y regiría la excepción de T2 (más abajo), sin
-forzar la cuenta. Las horas del avanzado usan el punto medio de 480-720, y el
-costo usa 480 (convención de D). Separar los sobres no crea horas: el board
-confirma capacidad real y trabajo desplazado en G0.
+forzar la cuenta. Las horas del avanzado usan el punto medio de 480-720 (600). El
+costo de la fila de D en T2 (32,5) es el medio del rango de costo de D, como en el
+resto del anexo: intermedio 200 h × 22,5 USD/h (4,5) + champions 384 h (8,6) +
+líder del programa (4,35) + avanzado 15,0 (medio de 4,8-25,2, equivale a ~667 h).
+A 600 h × 22,5 daría 13,5 (−1,5, sin mover cifras del deck); con 480 h, 28,3,
+que subestima el medio. Separar los sobres no crea horas: el board confirma
+capacidad real y trabajo desplazado en G0.
 
 **Piso de capacidad del plan, por trimestre (FTE clave).** Es lo que el board
 tiene que confirmar disponible, no lo que el supuesto promete:
@@ -308,8 +313,8 @@ más que el máximo del sobre en T2, para ahorrar caja (~94), el recurso que no
 falta (fila 4: si el board la prefiere, confirma un piso de 3,3 / 3,0 / 2,9).
 **Propuesta de Finanzas: el contractor (o la fila 2) es condición de inicio de
 los hitos de IA aplicada de T2-T4** (ruteo y caché, evals en CI, caso de
-referencia, prueba de portabilidad y costo). Sin contractor al cierre de T1, G1
-libera el **modo control** de B ([Anexo B](02-arquitectura.md), "Exceso de
+referencia, prueba de portabilidad y costo). Con señal en G1 y sin contractor al
+cierre de T1, G1 libera el **modo control** de B ([Anexo B](02-arquitectura.md), "Exceso de
 T2"; fila 5: 83 de caja y 213 de tiempo), con consecuencias aceptadas de
 antemano: la palanca de precio sale del deck, el caso de referencia no llega a
 L2 en el año y el throughput es el de la adopción sola, con beneficio φ × 62
@@ -566,12 +571,16 @@ caja del corte (hasta 38) supera el techo de T1 (33) por la reserva de cierre.
 sumado en la columna "caja ejecutada + cierre" de la tabla: lo que faltaba era
 la **autorización**, no la cuenta. El costo de cierre crece cuando el contractor
 pasa al 100% y el laboratorio a su nivel de T2, así que la reserva de G0 cubre
-solo un corte en G1 ([cierre](../../context/supuestos/costos-de-cierre-por-corte.md)):
+solo un corte en G1 ([cierre](../../context/supuestos/costos-de-cierre-por-corte.md)).
+**Sin señal en G1 no se amplía a 15**: el contractor cierra (≈ 4, dentro de los 6)
+y (b) no firma compromisos con preaviso. La ampliación vale con señal en G1, o en
+el G2 o G3 que libere la plataforma, antes de contratar:
 
 | Reserva vigente desde | Qué cubre (un mes) | Cierre calculado: medio (rango) | Reserva autorizada | Ampliación en ese gate |
 |---|---|---|---|---|
 | G0 | Contractor al 50% y laboratorio de T1 | 4 (2,4-6,0) | **6** | — |
-| G1 | Contractor al 100% y laboratorio de T2 | 11 (6-15) | **15** | +9 |
+| G1 sin señal | Sin contractor; solo telemetría | < 1 | 6 (sin ampliar) | 0 |
+| G1 con señal | Contractor al 100% y laboratorio de T2 | 11 (6-15) | **15** | +9 |
 | G2 sin P | Igual que G1 | 11 (6-15) | 15 | 0 |
 | G2 con P liberado | Más el tenant del piloto | 12 (6,5-17) | **17** | +2 |
 | G3 | Igual que G2, con P o sin P | 11-12 (6-17) | 15 o 17 | 0 |
@@ -758,13 +767,13 @@ techo, sin excepciones.
 | El tiempo reasignado no existe: sale de horas facturables o de entregas a clientes | Alta | Alto | Piso de capacidad por trimestre confirmado en G0; sobre por rol aprobado; suplentes ([Anexo D](04-personas-cultura.md)) | Utilización bajo la meta de 80% dos meses seguidos por causa del plan: se recorta el frente que más tiempo consume |
 | El sobre clave disponible está en el extremo inferior (1,0 FTE) | Media | Alto | El board confirma el piso de 1,6 en G0 | Piso no confirmado: T1 no arranca en su versión T1-E |
 | Contingencia A: hay contractor, pero su 0,2 libre se consume en el traspaso o el contrato no lo incluye | Media | Medio | Excepción acotada de 0,3 FTE aprobada en G0 como respaldo; `people` confirma el 0,2 en el alcance del contrato | 0,2 no confirmado al cierre de T1: T2 va con la excepción (2,5 FTE clave) |
-| Contingencia B: no hay contractor (ni rol interno demostrado) | Media | Alto | Contractor como condición de no inicio de los hitos de IA aplicada de T2-T4; la excepción no alcanza (con fracción interna, T2 pediría 3,3 FTE clave) | Sin contractor contratado al cierre de T1: G1 libera el modo control de B (2,2 FTE clave), sin harness, evals en CI, caso de referencia ni prueba de portabilidad |
+| Contingencia B: con señal en G1, no hay contractor (ni rol interno demostrado); sin señal no se busca | Media | Alto | Contractor como condición de no inicio de los hitos de IA aplicada de T2-T4; la excepción no alcanza (con fracción interna, T2 pediría 3,3 FTE clave) | Con señal y sin contractor contratado al cierre de T1: G1 libera el modo control de B (2,2 FTE clave), sin harness, evals en CI, caso de referencia ni prueba de portabilidad |
 | Cambio a pago por consumo | Alta ([Anexo B](02-arquitectura.md)) | Alto | Gateway con ruteo, caché y topes; FinOps mensual desde T2; no enrutar el agente si eso pierde la suscripción plana | Múltiplo efectivo de más de 6× sin mitigar en un trimestre: se congela la expansión y se topea el consumo |
 | La ganancia no aparece o se paga con retrabajo | Media | Alto | Base congelada; costo por PR aceptado; incidentes y retrabajo junto al throughput | Bandas de G2 y G3 (abajo) |
 | La espera de G2 se estira sin decisión | Media | Medio | Regla de F: la espera vence a las 6 semanas | — |
 | La capacidad liberada no se vuelve caja | Alta | Medio | Destino decidido en G2 (productos propios, producto de un cliente o venta) | Sin destino en G2: la capacidad no se cuenta como beneficio |
-| El piloto de producto no tiene comprador | Media | Medio | P diferido: el presupuesto base no lo incluye y su tramo se libera solo con señal de cliente y matriz habilitante | Sin señal en G2: P no se libera (16-59 de caja y 23-56 de tiempo que no se gastan) |
-| El cierre cuesta más que lo previsto, o la reserva vigente no cubre el corte | Baja | Medio | Contratos por etapa, preaviso de un mes, nada a más de 12 meses antes de G4; reserva de cierre autorizada en G0 (6) y ampliada en G1 (15) y en G2 si se libera P (17), antes de cada compromiso nuevo | Reserva no ampliada: el gate no libera el compromiso nuevo |
+| El piloto de producto no tiene comprador | Media | Medio | P diferido: el presupuesto base no lo incluye y su tramo se libera solo con señal de cliente, matriz habilitante y plataforma liberada en G1: sin ella no hay base técnica en T3 y la señal que llega en G2 no lo arranca antes de T4 ([Anexo B](02-arquitectura.md)) | Sin señal en G2, o sin plataforma: P no arranca en T3 (16-59 de caja y 23-56 de tiempo que no se gastan; el costo desde T4 no está calculado) |
+| El cierre cuesta más que lo previsto, o la reserva vigente no cubre el corte | Baja | Medio | Contratos por etapa, preaviso de un mes, nada a más de 12 meses antes de G4; reserva de cierre autorizada en G0 (6) y ampliada en G1 con señal (15; sin señal no hace falta) y en G2 si se libera P (17), antes de cada compromiso nuevo | Reserva no ampliada: el gate no libera el compromiso nuevo |
 | Doble conteo de costos entre anexos | Media | Bajo | Tabla de solapes | — |
 | El gasto de tecnología sube contra el OKR de menos de 3,5% | Alta | Medio | Reformular el resultado clave (ver tensiones) | — |
 
@@ -828,7 +837,7 @@ prueba desde la semana 5 con el agente de código actual
 |---|---|
 | Qué es | Contrato de agente, skills y guía de revisión en la cohorte de equipos propios, sobre repositorios que la matriz habilite; el intermedio de Tecnología de T1 es el vehículo |
 | Caja | 0: no suma seats ni herramientas |
-| Tiempo | ~6 (3-9): diseño de 40-80 h de tech lead (1,1-5,0), 2 champions al 10% durante 2 meses (1,2-3,0) y lectura de 16-24 h de DevOps/QA (0,3-1,1) |
+| Tiempo | ~6 (3-9): diseño de 40-80 h de tech lead (1,1-5,0), 2 champions al 10% durante 2 meses (1,2-3,0: 0,4 persona-mes × 3,0-7,5) y lectura de 16-24 h de DevOps/QA (0,3-1,1) |
 | Capacidad | +0,17 FTE clave (T1 pasa de 1,6 a ~1,8: 0,80× del máximo) y +64 h distribuidas; techo de tiempo de T1 de 62 a 72 (62 + 9,1, al entero superior) |
 | Qué aprende | Si las prácticas mueven uso, retrabajo y PR aceptados, y la dispersión σ del cambio entre personas, el dato que decide si G2 puede discriminar +3% |
 | Gate | Se lee en G1, sin atribuir ganancia (la rampa de T1 es 0%) y sin poder de corte |
@@ -839,6 +848,11 @@ arranca en la 5, con el intermedio de Tecnología que el plan ya pone ahí: la
 cohorte cambia desde la semana 5 con prueba o sin ella. Lo que no despeja es la
 atribución: con 15-20 personas y σ sin dato, su efecto no se separa del de la
 formación. Eso la vuelve aprendizaje, no valor, pero no la impide. Va en G0.
+
+**Tarifa de las 64 h: una sola, la de rol** (≈ 19-47 USD/h). Son horas de dos
+desarrolladores senior ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)),
+no capacitación masiva: los 10-35 USD/h de D son un piso para la dotación entera
+(darían 0,6-2,2 y un techo de 71). D costea así sus champions: es sesgo de D.
 
 ### Recomendación de Finanzas (decidida, lazynet, 2026-10-14)
 
@@ -874,7 +888,7 @@ se liberan con G1-G3. No es una aprobación anual. Incluye siete cosas:
 2. **Reserva de cierre:** hasta 6 mil de caja (un mes de contractor y de
    laboratorio), que solo se usa si un gate corta. Con ella, el compromiso
    máximo de caja que autoriza G0 es **39 mil**. Cubre solo un corte en G1: el
-   board se compromete a ampliarla a 15 en G1 y a 17 en G2 si libera P, antes
+   board se compromete a ampliarla a 15 en G1 con señal y a 17 en G2 si libera P, antes
    de liberar el compromiso nuevo (ver "Reserva de cierre vigente").
 3. **Tiempo de T1:** techo de **72 mil** con la prueba chica, que son ~1,8 FTE
    de personas clave y **~654 h distribuidas** en la dotación, como segundo
@@ -892,7 +906,7 @@ se liberan con G1-G3. No es una aprobación anual. Incluye siete cosas:
    de tiempo previo a G0. Hoy es una propuesta: no consta que se haya ejecutado.
 7. **IA aplicada y producto:** vía B1 (o el rol interno en T1 si demuestra
    capacidad, con el contractor desde T2), solo en su tramo de T1; G1-G3
-   liberan los de T2-T4. Sin contractor, los hitos de IA aplicada de T2-T4 no se
+   liberan los de T2-T4. Con señal y sin contractor, los hitos de IA aplicada de T2-T4 no se
    inician (contingencia B: la excepción de 0,3 no la cubre). El producto,
    diferido hasta G2, con su tramo condicional.
 
@@ -916,8 +930,8 @@ si el resultado es un corte. Cuatro palabras no son sinónimos:
 | Gate | Cuándo | Libera (caja / tiempo, techo) y reserva vigente | Condiciones con efecto económico | Si no se cumple, según F | Pérdida si se corta | Reversible |
 |---|---|---|---|---|---|---|
 | G0 | Aprobación | T1: 33 / 72 (con la prueba chica); reserva 6 | Pedido G0 completo; techo y piso de capacidad confirmados; vía de IA aplicada | No arranca T1; T0 queda hundido (≤ 7). Sin vía de IA aplicada, sus hitos pasan a T2 | — | Sí |
-| G1 | Fin de T1 | Con señal, T2 de la plataforma: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15**. Sin señal, T2 como (b) | **Bifurcación:** al menos una señal (umbral contractual, anuncio de precio por consumo o cliente para el producto) libera la plataforma (contractor al 100%, gateway, pasarela). Además: base congelada con la unidad de B; matriz de los clientes que concentran la facturación; uso de T1 dentro del sobre; contractor contratado | **Ninguna condición de G1 corta el plan.** Sin señal: T2-T4 como (b) con la prueba extendida (≈ 193 en el año); G2 y G3 releen las señales. Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: T2 solo con replan de capacidad. Política sin ratificar: 6 semanas; si no se ratifica, no hay P en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en T2; sin ella en G3, la capa D (11,6-31 de caja) no se financia. Básico <50% al cierre de T2: cambio de formato de la capacitación. Sin contractor: T2 en el modo control de B, sin los hitos de IA aplicada; la caja de T2 baja ~27 (contractor con contingencia) | Solo si el board decide **no liberar T2** (no es una regla de corte): 79, hasta 115 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 155 en el año | Sí |
-| G2 | Fin de T2 | T3: 59 / 78; P, solo con señal: 38 / 34 más; reserva 15 (**17** con P) | Throughput: **pasa** con límite inferior ≥ +3%, sin más retrabajo; **espera** con estimado > 0% y límite inferior < +3%, o muestra insuficiente: T3 sin escalado y nueva medición a las 6 semanas; **corta** con estimado ≤ 0% o más retrabajo. FinOps con el múltiplo medido; destino de la capacidad decidido | Throughput: **suspensión** (espera) o **corte** del frente interno, que deja la base mínima; la espera vencida corta igual. Cobertura de precio no demostrada: la palanca sale del deck. Más de 6× sin mitigar: se congela la expansión y se topea el consumo. Sin señal de cliente: P se difiere y sus condiciones de G3 no aplican | Corte del frente interno: 198 (máximo 291) hasta cerrar; año 224 / 330 | Sí |
+| G1 | Fin de T1 | Con señal, T2 de la plataforma: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15**. Sin señal, T2 como (b) | **Bifurcación:** al menos una señal (umbral contractual, anuncio de precio por consumo o cliente para el producto) libera la plataforma (contractor al 100%, gateway, pasarela). Además: base congelada con la unidad de B; matriz de los clientes que concentran la facturación; uso de T1 dentro del sobre; contractor contratado | **Ninguna condición de G1 corta el plan.** Sin señal: T2-T4 como (b) con la prueba extendida (≈ 193 en el año); G2 y G3 releen las señales. Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: T2 solo con replan de capacidad. Política sin ratificar: 6 semanas; si no se ratifica, no hay P en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en T2; sin ella en G3, la capa D (11,6-31 de caja) no se financia. Básico <50% al cierre de T2: cambio de formato de la capacitación. Con señal y sin contractor: T2 en el modo control de B, sin los hitos de IA aplicada; la caja de T2 baja ~27 (contractor con contingencia) | Solo si el board decide **no liberar T2** (no es una regla de corte): 79, hasta 115 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 155 en el año | Sí |
+| G2 | Fin de T2 | T3: 59 / 78; P, solo con señal de cliente y plataforma liberada en G1: 38 / 34 más; reserva 15 (**17** con P) | Throughput: **pasa** con límite inferior ≥ +3%, sin más retrabajo; **espera** con estimado > 0% y límite inferior < +3%, o muestra insuficiente: T3 sin escalado y nueva medición a las 6 semanas; **corta** con estimado ≤ 0% o más retrabajo. FinOps con el múltiplo medido; destino de la capacidad decidido | Throughput: **suspensión** (espera) o **corte** del frente interno, que deja la base mínima; la espera vencida corta igual. Cobertura de precio no demostrada: la palanca sale del deck. Más de 6× sin mitigar: se congela la expansión y se topea el consumo. Sin señal de cliente, o sin plataforma de G1: P se difiere y sus condiciones de G3 no aplican | Corte del frente interno: 198 (máximo 291) hasta cerrar; año 224 / 330 | Sí |
 | G3 | Fin de T3 | T4: 95 / 69; P, si sigue: 21 / 23 más; reserva 15 (17 con P) | Throughput: **pasa** con límite inferior ≥ +8%; **espera** con estimado ≥ +5% y límite inferior < +8%, o muestra insuficiente: **mantenimiento** (solo base mínima), nueva medición a las 6 semanas; **corta** con estimado < +5%. Costo por PR sin subir. Señal contractual o P liberado para la capa D. SLO del piloto, solo si P se liberó | Throughput < +5%: corte del frente interno y de la base común; queda la base mínima. **Si P sigue, rige la precedencia** (seguridad, dependencias, caja) y P conserva su base común mínima. Sin señal contractual ni P: la capa D no se financia | Sin P: 292 (máximo 427) hasta cerrar; año 305 / 447. Con P vivo, corte mixto: año 433 (con P sin corte, 471) | Sí |
 | G4 | Fin de T4 | Año 2: régimen de ~143 (~188 con P), en el presupuesto 2028 | Trayectoria hacia el equilibrio operativo anual de ~17% de throughput **atribuible contra la base de T1** (~23% si P sigue; menos si la capacidad se vende) **o** interés contractual en el producto; decisiones sobre contractor, on-premise e ISO 42001 | No se financia el régimen. Queda el frente interno con las licencias vigentes y la base mínima, ~53 por año (29-78); el gateway se da de baja salvo que FinOps muestre que acota más de lo que cuesta | — | Contrato a más de 12 meses o hardware: irreversible |
 
