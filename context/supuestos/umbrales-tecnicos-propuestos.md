@@ -4,7 +4,7 @@ title: "Umbrales técnicos propuestos por la arquitectura"
 description: "Umbrales que propone el anexo de arquitectura sin medición previa: los de la ficha de evaluación del caso de referencia, el criterio de aceptación de la prueba de portabilidad y costo del gateway y el replan de capacidad de T2."
 status: draft
 tags: [supuesto, arquitectura, evals, finops]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:59:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T12:00:00Z }
 ---
 # Supuesto
 
@@ -31,6 +31,13 @@ está medido. Los usa el anexo de arquitectura.
   múltiplo de 6×, la calidad no cae más de 5 puntos, enrutar preserva la
   suscripción plana (o el proveedor ya cobra por consumo) y migrar de proveedor
   cuesta ≤ 20 días-persona.
+- **Denominadores (propuesta de Finanzas, pendiente del dueño de la
+  arquitectura):** para esta prueba, *f* es la fracción del **costo** del gasto
+  elegible (hoy, el del agente de código a precio de lista, la misma población
+  que el modelo financiero) que pasa por el gateway, y *s* se mide sobre esa
+  misma población. La fracción de eventos sobre las cuatro superficies es una
+  métrica de cobertura de controles y no se multiplica por *s*. Con los valores
+  vigentes del anexo E, el umbral es ~38% a 4×, ~25% a 6× y ~13% a 12×.
 
 ## Replan de capacidad de T2 con el producto diferido
 

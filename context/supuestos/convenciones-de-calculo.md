@@ -4,7 +4,7 @@ title: "Convenciones de calendario y de cálculo del plan"
 description: "El plan usa T0 = cuarto trimestre de 2026, T1-T4 = los trimestres de 2027, la base de atribución congelada en las semanas 1-4 de T1, 480 horas de costeo por persona-trimestre, costo horario = costo mensual del rol / 160 y techos redondeados hacia arriba."
 status: draft
 tags: [supuesto, convención, finanzas]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T02:40:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T12:00:00Z }
 ---
 # Supuesto
 
@@ -14,7 +14,7 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T02:40:00Z }
 | T1 a T4 | Enero-marzo, abril-junio, julio-septiembre y octubre-diciembre de 2027 |
 | Arranque de T1 | Con la aprobación del presupuesto 2027 |
 | Línea de base de atribución | Base prospectiva congelada en las semanas 1-4 de T1, antes de cualquier formación o herramienta nueva. Si en la semana 4 su dispersión supera la tendencia esperada, la oficina del CAIO puede adoptar la serie retrospectiva de T0, dejando constancia |
-| Comparación con el OKR | El OKR de throughput se mide contra el cuarto trimestre de 2026: se informa al lado, contra la serie de T0, sin atribuir ganancia |
+| Comparación con el OKR | El OKR de throughput se mide contra el cuarto trimestre de 2026: se informa al lado, contra la serie de T0, sin atribuir ganancia. Para compararlo con una exigencia medida contra la base de T1 se usa el puente (1 + meta contra T0) = (1 + d) × (1 + ganancia contra T1), donde d es la mejora de T0 a la base de T1; sin d medido, las dos cifras no se restan |
 | Jornada | 160 horas por mes, 1.920 horas por año por persona |
 | Persona-trimestre | 480 horas de costeo (160 × 3). Con ellas se pasa de horas a FTE. Las 520 horas de 13 semanas × 40 h son calendario bruto, sin descontar feriados ni licencias, y no se usan para FTE ni para costo |
 | Costo horario | Costo mensual del rol que hace la actividad ([costo por rol](/supuestos/costo-cargado-por-rol.md)) dividido 160 |
