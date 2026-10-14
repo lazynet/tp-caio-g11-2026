@@ -158,28 +158,28 @@ congelada** de T1, por área y agregado. No se atribuye mejora antes de T2.
 
 ### Cobertura de IA aplicada, por trimestre
 
-El [Anexo B](02-arquitectura.md) necesita 0,5 FTE de IA aplicada en T1 y 0,8 de
-T2 a T4 dentro de su esfuerzo técnico. Este anexo, en su versión anterior, solo
-disponía el perfil externo desde T2: T1 quedaba sin cobertura. Además, desde
-T2 el esfuerzo técnico de B y el contractor de D se leían como dos recursos.
+El [Anexo B](02-arquitectura.md) necesita 0,3 FTE de IA aplicada en T1 (T1-b,
+el recomendado; el 0,5 era de T1-a, que solo queda en su escenario conservador)
+y 0,8 de T2 a T4, dentro de su esfuerzo técnico. El contractor de D y esa
+fracción de B son **un solo recurso**, no dos.
 `context/` no registra ningún perfil interno de IA aplicada con tiempo libre
 (la capacidad es de pocas personas y el bench es menor a 1 FTE), así que **no se
 asume que exista**.
 
 | Trimestre | Necesidad (Anexo B) | Vía propuesta | Alternativa | Qué lo demuestra |
 |---|---|---|---|---|
-| T1 | 0,5 FTE | Contractor al 50%, aprobado en G0 | Perfil interno reasignado, solo si antes de G0 se demuestra por rol: porcentaje liberado, trabajo desplazado y quién lo cubre | Contrato corto firmado, o declaración de capacidad por rol validada por Operaciones |
+| T1 | 0,3 FTE (T1-b) | Contractor al 50%, aprobado en G0: cubre el 0,3 de B y deja 0,2 para incorporación, documentación y coordinación | Perfil interno reasignado, solo si antes de G0 se demuestra por rol: porcentaje liberado, trabajo desplazado y quién lo cubre | Contrato corto firmado, o declaración de capacidad por rol validada por Operaciones |
 | T2 a T4 | 0,8 FTE | El mismo contractor, 1 persona | Idem | Entregable verificable por trimestre; documentación y traspaso |
 
-**Reemplaza, no complementa.** El contractor es la fuente del 0,5 de T1 y del 0,8
-de T2 a T4 de B; el 0,2 restante es documentación, traspaso y coordinación con el
-programa (en T2 se puede prestar al replan de B, ver "Holgura de 0,2 FTE del
-contractor en T2"). Contar la fracción de B y el contractor a la vez duplica el costo
+**Reemplaza, no complementa.** El contractor es la fuente del 0,3 de T1 y del 0,8
+de T2 a T4 de B; en ambos, el 0,2 restante es documentación, traspaso y
+coordinación con el programa (en T2 se puede prestar al replan de B, ver
+"Holgura de 0,2 FTE del contractor en T2"). Contar la fracción de B y el contractor a la vez duplica el costo
 (solape que Finanzas marca como "IA aplicada"). Recosteo de cada alternativa:
 
 | Alternativa | Caja (USD) | Tiempo interno | Riesgo |
 |---|---|---|---|
-| A. Solo perfil interno | 0 | 0,5 FTE en T1 y 0,8 de T2 a T4 sacados de horas facturables | Sin perfil demostrado, T1 no arranca; concentración de capacidades críticas sin mitigar |
+| A. Solo perfil interno | 0 | 0,3 FTE en T1 y 0,8 de T2 a T4 sacados de horas facturables | Sin perfil demostrado, T1 no arranca; concentración de capacidades críticas sin mitigar |
 | B1. Contractor desde T1 (recomendada) | T1: 6.750-16.500 (0,5 x 3 meses x 4.500-11.000); T2-T4: 40.500-99.000 | Se libera el tiempo de B que cubre | Sube la caja de T1 contra el techo de G0 y choca con "no contratar" (decide el Directorio) |
 | B2. Contractor desde T2 (versión anterior) | T2-T4: 40.500-99.000 | T1 queda sin cubrir: el hito de B se corre o se resiente | Atrasa el gateway de laboratorio y las evals de T1 |
 
@@ -198,7 +198,7 @@ contractor:
 | Fracción del contractor (100% en T2) | Asignación de este anexo | Con el replan de B |
 |---|---|---|
 | 0,8 | La fracción de IA aplicada de B (evals, harness, gobierno técnico) | Igual |
-| 0,2 | Documentación, traspaso y coordinación con el programa | Evals en CI y reejecución de la prueba de portabilidad, solo en T2 |
+| 0,2 | Documentación de traspaso y coordinación con el programa | Evals en CI y reejecución de la prueba de portabilidad, solo en T2. La documentación mínima reproducible de cada entregable no sale de acá: va dentro del 0,8 ([Anexo B](02-arquitectura.md), "Documentación mínima reproducible") |
 
 **Decisión de people: la holgura no está confirmada, así que el replan es
 condicional.** Las horas existen (el 100% se paga), pero no están libres: este
@@ -209,17 +209,22 @@ su contrato. Todo lo de abajo es un **supuesto de people**, no un hecho.
 
 - **Cuándo se puede sostener.** Solo en T2 y solo si el alcance contractual de G0
   incluye de forma explícita esos dos entregables (evals en CI y reejecución de la
-  prueba). En T2 el traspaso todavía no corre (es de T4) y hay poco que documentar,
-  así que desplazar la documentación a T3-T4 es plausible. Es un desplazamiento,
-  no una holgura: la documentación de T2 se hace después, no desaparece.
+  prueba). Lo que se desplaza a T3-T4 son los manuales de operación y el traspaso
+  (este último es de T4). La documentación mínima reproducible que exige G2 (tupla
+  de versión, instrucciones de ejecución, ADR corto y corrida fechada por
+  entregable) es parte del entregable y queda en el 0,8: 1-2 días-persona por
+  entregable, más la reproducción de DevOps/QA (Anexo B). Es un desplazamiento,
+  no una holgura: lo que se difiere se hace después, no desaparece.
 - **Qué lo sostiene como evidencia.** Un alcance de contrato con esos entregables
   y fechas, y la declaración del contractor de que tiene el perfil. Hoy no existe
   ninguna de las dos; se piden como condición antes de G0.
 - **Cuándo el replan no alcanza, y qué cubre cada respaldo.** Son dos
   contingencias distintas ([Anexo E](05-business-case.md), "Dos contingencias del
   contractor"; [Anexo B](02-arquitectura.md), "Exceso de T2"):
-  - **Sin el 0,2** (el contractor existe, pero el alcance no se acordó así o al
-    cierre de T2 faltan los entregables o la documentación acumulada): T2 queda en
+  - **Sin el 0,2** (el contractor existe, pero el alcance no se acordó así, o en
+    el control de la semana 7 de T2 los entregables cerrados no tienen su
+    documentación mínima reproducible; la excepción se activa ahí, no al cierre
+    de T2): T2 queda en
     2,5 FTE clave y corresponde la **excepción acotada de 0,3 FTE**, que el board
     aprueba en G0 como respaldo (salida 2 de B; ver DP3 y T2 en
     [Anexo F](06-roadmap-riesgo.md)). Son ~5 mil de tiempo (3-8) y nada de caja
@@ -385,7 +390,7 @@ documentado.
 
 | Disparador | Acción |
 |---|---|
-| Al cierre de T2, uso activo en Tecnología <60% pese a tiempo asignado | Frenar la expansión de seats y rediseñar la formación con casos por rol; revisar causas con los managers |
+| Al cierre de T2, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en T3 las horas de champions y de intermedio que no sean rediseño (~13 de tiempo en el medio, como en F); rediseñar la formación con casos por rol; revisar causas con los managers. El plan no suma seats: no hay expansión que frenar |
 | Básico completado <50% al cierre de T2 | Cambiar el formato (de sesión a práctica en equipo) y reasignar tiempo; no repetir el mismo curso |
 | Asistencia de champions <60% dos meses seguidos | Disolver la red o rediseñar su mandato con sponsor nuevo |
 | Subida de incidentes o retrabajo asociada a uso de IA | Pausar el nivel avanzado hasta revisar compuertas de calidad con `architect` |
@@ -399,7 +404,7 @@ documentado.
 | Operaciones no puede adoptar por contrato del cliente | Alta | Medio | Matriz de clientes; meta sobre habilitadas; usos permitidos | Matriz sin completar al cierre de T1 |
 | Champions sin tiempo ni entregable | Media | Medio | Mandato, sponsor y entregable trimestral | Ver tabla de abandono |
 | Pérdida de una persona clave en arquitectura, seguridad o gobierno | Media | Alto | Contractor a prueba, documentación, transferencia | No hay reemplazo documentado al cierre de T3 |
-| El 0,2 del contractor no está libre en T2 y el replan de B no se sostiene | Media (supuesto sin confirmar) | Medio: T2 vuelve a 2,5 FTE clave | Alcance contractual con evals en CI y prueba de portabilidad antes de G0; excepción de 0,3 FTE aprobada como respaldo | Entregables de T2 incompletos o documentación sin recuperar al cierre de T2: rige la excepción |
+| El 0,2 del contractor no está libre en T2 y el replan de B no se sostiene | Media (supuesto sin confirmar) | Medio: T2 vuelve a 2,5 FTE clave | Alcance contractual con evals en CI y prueba de portabilidad antes de G0; excepción de 0,3 FTE aprobada como respaldo | Control de la semana 7 de T2 sin documentación mínima reproducible, o alcance contractual sin los dos entregables al cierre de T1: rige la excepción |
 | No hay contractor (no se aprueba o no se contrata a tiempo): la excepción de 0,3 no alcanza | Media (depende del Directorio, D2) | Alto: falta toda la fracción de 0,8 FTE de IA aplicada; con fracción interna T2 pediría ~3,3 FTE clave | Modo control de B (2,2 FTE clave, sin hitos de IA aplicada) en vez de cubrirlo con tiempo; decisión del board en G0 | Sin contractor contratado al cierre de T1: G1 libera el modo control ([Anexo E](05-business-case.md)) |
 | Adopción declarada ≠ uso real (seats comprados, uso detectado) | Media | Medio | Medir uso real semanal por área, no seats | Métrica de seats sin correlato en uso |
 | Telemetría solo cubre el agente de código | Alta | Medio | Medir chat y Gemini por encuesta o telemetría ampliada, con `architect` y `governance` | Sin medición de staff al cierre de T1 |
@@ -477,7 +482,7 @@ costo de oportunidad real es la tarifa facturable de esas horas, que no está en
 | **Subtotal horas de capacitación** | T1-T4 | **~2.620 - 2.860** | **~26.200 - 100.100** | Suma |
 | Líder del programa, 20% de una persona, 12 meses | T1-T4 | 0 (reasignación) | 10.800 - 24.000 | 20% x 12 x USD 4.500-10.000 ([tech lead](../../context/supuestos/costo-cargado-por-rol.md)) |
 | Contractor de IA aplicada, 9 meses, 100% | T2-T4 | n/a | 40.500 - 99.000 | 9 x USD 4.500-11.000 ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)). Reemplaza la fracción de 0,8 FTE de IA aplicada del Anexo B: no se suma con ella |
-| Contractor de IA aplicada en T1, 50% (alternativa B1) | T1 | n/a | 6.750 - 16.500 | 0,5 x 3 meses x USD 4.500-11.000. Reemplaza el 0,5 FTE de IA aplicada de T1 del Anexo B. **Pasa a caja un costo que B tenía como tiempo** |
+| Contractor de IA aplicada en T1, 50% (alternativa B1) | T1 | n/a | 6.750 - 16.500 | 0,5 x 3 meses x USD 4.500-11.000. Reemplaza el 0,3 FTE de IA aplicada de T1-b del Anexo B; el 0,2 restante es incorporación y documentación. **Pasa a caja un costo que B tenía como tiempo.** Alternativa a decidir con `finance`: contratar al 30% en T1 (−2.700 a −6.600 de caja: 0,2 x 3 x 4.500-11.000), si el contrato lo admite |
 | T0: reconstrucción retrospectiva y diseño de encuesta | T0 | 60 - 100 | 1.700 - 6.300 | Supuesto del equipo: 1,5 a 2,5 semanas del perfil técnico que lidera el programa, a USD 28-63 por hora (4.500-10.000 mensuales de tech lead sobre 160 h) |
 | Certificación o curso externo del nivel avanzado | T2 | n/a | **Sin estimar** | Falta cotización; no se inventa |
 | Instrumentación de medición de uso en chat y Gemini | T1 | n/a | Incluida en DevOps/QA del [Anexo B](02-arquitectura.md) (1.400-7.100 de tiempo); no suma | Costeada por `architect`, sin cotización de proveedores |
