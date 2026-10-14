@@ -301,8 +301,9 @@ La contingencia B no se cubre con tiempo: con la fracción interna, pediría amp
 50% por encima de su máximo en T2, con 0 holgura hoy, y lo que ahorra es caja
 (~94), el recurso que no falta. **Propuesta de Finanzas: el contractor (o el rol
 interno demostrado en T1 y el contractor desde T2, fila 2) es condición de no
-inicio de los hitos de IA aplicada de T2-T4**: gateway con ruteo, evals en CI,
-caso de referencia y prueba de portabilidad y costo. B ya aplica esa regla en T1.
+inicio de los hitos de IA aplicada de T2-T4**: ruteo a modelos más baratos y
+caché, evals en CI, caso de referencia y prueba de portabilidad y costo; el
+gateway sigue para control y telemetría (modo control del Anexo B). B ya aplica esa regla en T1.
 Sin contractor contratado al cierre de T1, G1 no libera el T2 diseñado; libera
 el **modo control** que dimensiona `architect` ([Anexo B](02-arquitectura.md),
 "Exceso de T2"): gateway en laboratorio, bypass por superficie y FinOps, con 1,2
@@ -597,23 +598,25 @@ una **regla de precedencia** para `caio`:
 3. **Caja al final:** todo lo demás de la base común y del frente cortado se
    corta, con su cierre.
 
-La **base común mínima para P** en T4 es un supuesto de Finanzas que confirma
-`architect` ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md)):
-infraestructura de base al nivel de T2 (gateway, trazas y evals en CI), pasarela,
-el contractor al 50% para las evals del piloto, 0,5 FTE de DevOps/QA y el núcleo
-de gobierno. La capa D (red team externo e ISO ampliada) se financia porque G3
+La **base común mínima para P** en T4 es un supuesto de Finanzas que
+`architect` confirmó con una corrección ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md),
+[Anexo B](02-arquitectura.md), "Caja y otros costos"): infraestructura de base al
+nivel de T2 (gateway, trazas y evals en CI), pasarela, el contractor al 50% para
+las evals del piloto (sin dato que lo respalde), 0,5 FTE de DevOps/QA, **0,1 FTE
+de arquitecto** para el gate scale/kill y el paquete de cumplimiento de Q4 (+2
+de tiempo, 1,4-3: 0,1 × 3 meses × 4.500-10.000) y el núcleo de gobierno. La capa D (red team externo e ISO ampliada) se financia porque G3
 la habilita con P liberado. Año con P liberado en G2, medios (rango):
 
 | Escenario | Caja | Tiempo | Económico |
 |---|---|---|---|
 | Con P, sin corte | 214 (114-314) | 257 (137-376) | 471 |
-| **Corte mixto en G3: I y base común cortados, P sigue con su base mínima** | **205 (109-300)** | **226 (121-332)** | **431** |
-| Ídem, si G3 no financia la capa D | 180 (95-265) | 226 (121-332) | 406 |
+| **Corte mixto en G3: I y base común cortados, P sigue con su base mínima** | **205 (109-300)** | **228 (122-335)** | **433** |
+| Ídem, si G3 no financia la capa D | 180 (95-265) | 228 (122-335) | 408 |
 
 T4 en el corte mixto: caja 52 (28-75) de la base común mínima para P, 13
 (5-21) del tramo P y 4 (2-6) de cierre del 50% del contractor que se deja; tiempo
-17 (10-25) de base mínima para P y 16 (9-23) de P. **Lectura para el CFO: con P
-vivo, el gate de throughput de G3 protege tiempo (~30), no caja (~9).** La caja
+19 (11-28) de base mínima para P y 16 (9-23) de P. **Lectura para el CFO: con P
+vivo, el gate de throughput de G3 protege tiempo (~29), no caja (~9).** La caja
 de T4 es casi toda infraestructura, contractor y capa D, que P también necesita.
 
 **Pesimista con la regla de F.** El pesimista (g = 5%) da +0,5% de throughput
@@ -821,7 +824,7 @@ tiene una consecuencia por condición, acá se lista la misma; la pérdida de la
 | G0 | Aprobación | T1: 33 / 62; reserva 6 | Pedido G0 completo; techo y piso de capacidad confirmados; vía de IA aplicada | No arranca T1; T0 queda hundido (≤ 7). Sin vía de IA aplicada, sus hitos pasan a T2 | — | Sí |
 | G1 | Fin de T1 | T2: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15** | Base congelada con la unidad de B; matriz de los clientes que concentran la facturación; uso de T1 dentro del sobre; contractor contratado (propuesta de Finanzas) | **Ninguna condición de G1 corta el plan.** Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: T2 solo con replan de capacidad. Política sin ratificar: 6 semanas; si no se ratifica, no hay P en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en T2; sin ella en G3, la capa D (11,6-31 de caja) no se financia. Básico <50% al cierre de T2: cambio de formato de la capacitación. Sin contractor: T2 en el modo control de B, sin los hitos de IA aplicada; la caja de T2 baja ~27 (contractor con contingencia) (propuesta, pendiente en F) | Solo si el board decide no liberar T2: hasta 106 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 146 en el año | Sí |
 | G2 | Fin de T2 | T3: 59 / 78; P, solo con señal: 38 / 34 más; reserva 15 (**17** con P) | Throughput: **pasa** ≥ +3% con intervalo que no cruza +3%, sin más retrabajo; **espera** entre 0% y +3% o con intervalo que cruza +3%: T3 sin escalado y nueva medición a las 6 semanas; **corta** ≤ 0% o con más retrabajo. FinOps con el múltiplo medido; destino de la capacidad decidido | Throughput: espera o corte del frente interno, que deja la base mínima; la espera vencida corta igual. Cobertura de precio no demostrada: la palanca sale del deck. Más de 6× sin mitigar: se congela la expansión y se topea el consumo. Sin señal de cliente: P se difiere y sus condiciones de G3 no aplican | Corte del frente interno: 198 (máximo 291) hasta cerrar; año 224 / 330 | Sí |
-| G3 | Fin de T3 | T4: 95 / 69; P, si sigue: 21 / 23 más; reserva 15 (17 con P) | Throughput: **pasa** ≥ +8%; **espera** +5% a +8%, solo base mínima y mantenimiento, nueva medición a las 6 semanas; **corta** < +5%. Costo por PR sin subir. Señal contractual o P liberado para la capa D. SLO del piloto, solo si P se liberó | Throughput < +5%: corte del frente interno y de la base común; queda la base mínima. **Si P sigue, rige la precedencia** (seguridad, dependencias, caja) y P conserva su base común mínima. Sin señal contractual ni P: la capa D no se financia | Sin P: 292 (máximo 427) hasta cerrar; año 305 / 447. Con P vivo, corte mixto: año 431 (con P sin corte, 471) | Sí |
+| G3 | Fin de T3 | T4: 95 / 69; P, si sigue: 21 / 23 más; reserva 15 (17 con P) | Throughput: **pasa** ≥ +8%; **espera** +5% a +8%, solo base mínima y mantenimiento, nueva medición a las 6 semanas; **corta** < +5%. Costo por PR sin subir. Señal contractual o P liberado para la capa D. SLO del piloto, solo si P se liberó | Throughput < +5%: corte del frente interno y de la base común; queda la base mínima. **Si P sigue, rige la precedencia** (seguridad, dependencias, caja) y P conserva su base común mínima. Sin señal contractual ni P: la capa D no se financia | Sin P: 292 (máximo 427) hasta cerrar; año 305 / 447. Con P vivo, corte mixto: año 433 (con P sin corte, 471) | Sí |
 | G4 | Fin de T4 | Año 2: régimen de ~143 (~188 con P), en el presupuesto 2028 | Trayectoria hacia ~17% de throughput **atribuible contra la base de T1** (~23% si P sigue; menos si la capacidad se vende) **o** interés contractual en el producto; decisiones sobre contractor, on-premise e ISO 42001 | No se financia el régimen. Queda el frente interno con las licencias vigentes y la base mínima, ~53 por año (29-78); el gateway se da de baja salvo que FinOps muestre que acota más de lo que cuesta | — | Contrato a más de 12 meses o hardware: irreversible |
 
 Las bandas "espera" son la parte económica; la tabla completa de pasa, espera y
@@ -912,9 +915,10 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
   alcanzara solo al frente interno y la base común siguiera en T4, el ahorro
   sería ~13 de tiempo: el año quedaría en ~381 y el neto en ≈ −369, casi igual al
   estrés (−382). El gate de throughput protege solo si también frena la base común.
-  Con P vivo, la base común mínima para P (supuesto de Finanzas, sin confirmar
-  por `architect`; el 50% del contractor es un supuesto sin dato) deja el
-  ahorro del corte mixto en ~9 de caja y ~30 de tiempo.
+  Con P vivo, la base común mínima para P (supuesto de Finanzas que `architect`
+  confirmó sumando 0,1 FTE de arquitecto en T4; el 50% del contractor es un
+  supuesto sin dato) deja el ahorro del corte mixto en ~9 de caja y ~29 de
+  tiempo (~38 en total).
 - El replan de T2 depende de que el contractor tenga 0,2 FTE pagados y sin
   asignar en T2, que tiene que confirmar `people` ([Anexo D](04-personas-cultura.md)).
   Si el traspaso se los come (contingencia A), rige la excepción: +5 mil de

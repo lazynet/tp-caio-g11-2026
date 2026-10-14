@@ -4,7 +4,7 @@ title: "Base mínima que queda después de un corte"
 description: "Si el plan se corta en un gate, se supone que la empresa conserva el resto del año un núcleo de gobierno (fracciones de liderazgo y seguridad más el comité) y la pasarela de salida si ya está instalada; si el frente producto sigue, conserva además la parte de la base común que usa."
 status: draft
 tags: [supuesto, finanzas, gobierno, riesgo]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T12:00:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-14T14:00:00Z }
 ---
 # Supuesto
 
@@ -33,6 +33,7 @@ supuesta es:
 | Infraestructura de base (gateway, trazas, evals en CI) | Al nivel del segundo trimestre del plan |
 | Contractor de IA aplicada | Al 50%, para las evals y el harness del piloto |
 | DevOps/QA | 0,5 FTE para operar el gateway y las evals del piloto |
+| Arquitecto | 0,1 FTE para el gate scale/kill del piloto y el paquete de cumplimiento del cuarto trimestre (aislamiento por tenant, ubicación de datos, ADR) |
 | Capa de demostración externa | Si el gate la habilita por el producto liberado |
 | Capacitación, champions y caso de referencia interno | No |
 
@@ -56,6 +57,6 @@ supuesta es:
 
 - Los montos por gate están en el anexo E; esta ficha fija la composición.
 - No describe personas: las fracciones son por función.
-- La base común mínima para el producto es un supuesto de Finanzas que tiene
-  que confirmar el dueño de la arquitectura; el 50% del contractor no tiene
-  dato que lo respalde.
+- La base común mínima para el producto es un supuesto de Finanzas que el
+  anexo de arquitectura confirmó con una corrección (el 0,1 FTE de arquitecto);
+  el 50% del contractor no tiene dato que lo respalde.
