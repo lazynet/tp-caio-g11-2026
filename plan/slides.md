@@ -61,7 +61,7 @@ No se paga con productividad sola: compra la opción de cobertura de precio (se 
 
 - Gateway con **≥2 proveedores**, ruteo por nivel de dato y registro de costo.
 - Aislamiento por cliente y harness con evals en CI y gate humano.
-- 3 de las 4 superficies de IA de hoy pueden no pasar por el gateway: control compensatorio probado en T2.
+- Fuera del gateway, control compensatorio probado en T2; el agente de código entra solo si no rompe la suscripción.
 - Sin fine-tuning ni datos productivos de clientes en los 12 meses.
 
 | Aprobar en G0 | Se libera en G1-G2 | No aprobar todavía |
@@ -76,7 +76,7 @@ No se paga con productividad sola: compra la opción de cobertura de precio (se 
 
 - **AI Council de 5 asientos** dentro del comité de tecnología, con CoE virtual.
 - Intake en 3 niveles: respuesta en 5 días hábiles para el riesgo medio.
-- Secretos y datos prohibidos, siempre bloqueados; el primer secreto expuesto ya dispara la contención.
+- Secretos y datos prohibidos: bloqueo técnico en la pasarela y en el equipo; en chat, IDE y suite, solo control compensatorio, con residual que acepta el Council. El primer secreto expuesto dispara la contención.
 - Autonomía en el producto: L1-L2 en los 12 meses.
 
 **Decisiones:**
@@ -105,14 +105,12 @@ Ver [Anexo D — Personas y cultura](annexes/04-personas-cultura.md).
 
 | | T1 → G1 | T2 → G2 | T3 → G3 | T4 → G4 |
 |---|---|---|---|---|
-| Técnico | Inventario, línea de base, telemetría | Gateway, evals, prueba de costo | Caso interno en L2; piloto si hay señal | Go/no-go de modelo propio |
-| Gobierno | Política, matriz de clientes | Pasarela, bypass, red team | Cláusula tipo, sin firma | Red team externo, si hay señal |
-| Cultural | Básico ≥90%, champions | Operaciones y staff | Casos por rol | Tecnología ≥85% |
-| Techo (miles USD, caja / tiempo) | 33 / 62 | 71 / 106 | 59 / 78 | 95 / 69 |
-| Pasa si | Base, política, básico ≥90% | Throughput ≥ +3%, Tecnología ≥80% | Throughput ≥ +8% | Camino a ~17% o interés contractual |
+| Técnico y gobierno | Base, política, matriz | Gateway, evals, red team | Caso interno en L2 | Go/no-go de modelo propio |
+| Cultural | Básico ≥90% | Operaciones y staff | Casos por rol | Tecnología ≥85% |
+| Techo (caja / tiempo) | 33 / 62 | 71 / 106 | 59 / 78 | 95 / 69 |
+| Pasa si | Base, política, contractor | Throughput ≥ +3%; Tec. ≥80% | Throughput ≥ +8% | Camino a ~17% o interés contractual |
 
-- **Espera:** se sigue sin escalar y se vuelve a medir; la de throughput en G2 vence a las 6 semanas y, si no mejora, corta.
-- **Corta por frente:** sin política, no hay producto en el año; matriz ambigua al mes 4, sin piloto con ese cliente; debajo de la banda, queda la base mínima (en G3, el corte es del frente interno y de la base común); en G4, no se financia el régimen (~53 por año de base mínima).
+Miles de USD. Throughput: límite inferior del intervalo. En espera se vuelve a medir a las 6 semanas; si no mejora, corta el frente.
 
 **Decisión:** adoptar los gates como regla de liberación de fondos. Ver [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md).
 
@@ -127,11 +125,11 @@ Ver [Anexo D — Personas y cultura](annexes/04-personas-cultura.md).
 | Cortar en G1 | 73 en el medio; hasta 106 hasta cerrar y 146 en el año |
 
 - ROI a 12 meses negativo en los tres escenarios; beneficio de caja: cero.
-- Equilibrio a régimen: **~17% de throughput**, 3 puntos debajo del +20% del OKR: la meta lo cubre en el medio, sin certeza (~23% si se le carga el producto).
+- Equilibrio: **~17% de throughput atribuible** (~23% con producto); el OKR, contra T0, lo cubre solo si de T0 a T1 sube <2,8% (se mide en G1).
 
 **Decisión, el pedido G0 completo:**
-1. T1: hasta 33 de caja más 6 de reserva de cierre; hasta 62 de tiempo (1,6 FTE clave y 590 h distribuidas).
-2. Piso de capacidad: 1,6 FTE clave en T1; 2,2 / 2,2 / 2,1 en T2-T4 con el replan de T2 (respaldo: 2,5 en T2).
+1. T1: hasta 33 de caja más 6 de reserva de cierre (15 desde G1); hasta 62 de tiempo (1,6 FTE clave y 590 h distribuidas).
+2. Piso: 1,6 FTE clave en T1; 2,2 / 2,2 / 2,1 en T2-T4 con el replan (respaldo: 2,5 en T2). Sin contractor, T2 solo con gateway y controles, sin harness ni evals.
 3. Si se corta, base mínima hasta 41 de tiempo; T0, propuesto, hasta 7.
 
 Ver [Anexo E — Business case](annexes/05-business-case.md).
@@ -149,9 +147,9 @@ Ver [Anexo E — Business case](annexes/05-business-case.md).
 
 - A 12× de consumo, 211-267 por año: exposición de la empresa, con o sin plan.
 
-**Irreversibles, decididos en G4 y vigentes después:** datos de cliente a un modelo, contrato de IA con un cliente, L3 en producto, compromisos de más de 12 meses.
+**Irreversibles, en G4 y vigentes después:** datos de cliente a un modelo, contrato de IA con un cliente, L3 en producto, compromisos de más de 12 meses.
 
-**Decisión:** el replan de T2, con la excepción de 0,3 FTE como respaldo. Ver [Anexo F](annexes/06-roadmap-riesgo.md) y [Anexo E](annexes/05-business-case.md).
+**Decisión:** el replan de T2; la excepción de 0,3 FTE cubre solo la falta del 0,2 del contractor. Ver [Anexo F](annexes/06-roadmap-riesgo.md) y [Anexo E](annexes/05-business-case.md).
 
 ---
 

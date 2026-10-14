@@ -52,18 +52,25 @@ controles y métricas.
 ## Acto 3: cómo se protege la plata (slides 7-10)
 
 - Lo decimos primero: con productividad sola, el plan no se paga en 12 meses y
-  no genera caja ([Anexo E](../plan/annexes/05-business-case.md)). Cumplir la
-  meta de +20% del OKR cubre el régimen sin producto solo en el medio: el
-  equilibrio pide ~17% (~23% si el régimen carga el producto). Lo que compra es
+  no genera caja ([Anexo E](../plan/annexes/05-business-case.md)). El
+  equilibrio pide ~17% de throughput atribuible contra la base de T1 (~23% si
+  el régimen carga el producto). No lo comparamos restando puntos con el OKR,
+  que se mide contra T0: lo cubre solo si de T0 a T1 el throughput sube menos
+  de ~2,8%, y eso lo medimos en G1. Lo que compra es
   la opción de cobertura de precio, una opción de ingreso y, si la evidencia
   contractual de T1 la confirma, licencia para venderles a bancos.
 - Por eso no pedimos el año: pedimos un único G0. T1 con hasta 33 mil USD de
-  caja más 6 de reserva de cierre, 1,6 FTE clave y 590 h distribuidas. Cortar en
+  caja más 6 de reserva de cierre, que se amplía a 15 en G1 antes de pasar el
+  contractor al 100%, 1,6 FTE clave y 590 h distribuidas. Cortar en
   G1 cuesta 73 mil económicos en el medio, hasta 106 hasta cerrar y 146 en el
   año si se conserva la base mínima.
 - Lo que antes no cerraba, ahora cierra justo: con el producto diferido y el
   replan de arquitectura, T2-T4 entra en el sobre sin holgura. La excepción de
-  T2 es el respaldo, y el producto amplía el sobre solo si un cliente da señal.
+  T2 es el respaldo si falta el 0,2 del contractor; sin contractor no alcanza:
+  los hitos de IA aplicada no arrancan y T2 corre en modo control (2,2 FTE
+  clave, caja del año 83 en lugar de 177); cubrirlo con tiempo pediría ~3,3. El
+  producto amplía el sobre solo si un cliente da una señal comercial con
+  presupuesto.
 - Cada gate dice qué pasa si falla cada condición, y los dos frentes se cortan
   por separado. Una espera vence a las 6 semanas: en el pesimista, el plan corta
   en T3 y pierde ≈ 262 mil, contra 382 sin frenar. Lo irreversible se decide en
@@ -78,6 +85,11 @@ deciden si seguimos."
 - Que la plataforma o el producto propio A están certificados.
 - Que el gateway ya cubre el precio, o que los bancos ya exigen IA: son
   hipótesis que se prueban en T2 y T1.
+- Que el OKR de +20% cubre el equilibrio: se miden contra bases distintas.
+- Que los secretos están bloqueados en toda superficie: en chat, IDE y suite
+  hay prohibición y control compensatorio, no bloqueo.
+- Que la señal de G2 prueba disposición a pagar: prueba interés con presupuesto
+  y un rango de precio aceptado como referencia.
 - Porcentajes de ahorro de inferencia o de ROI del curso sin fuente
   ([huecos](../material/huecos.md)).
 - Cualquier cifra que no esté en un anexo.
