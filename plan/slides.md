@@ -35,7 +35,7 @@ Grupo 11 · Diplomatura CAIO · UTN BA · caso propuesto, borrador sin verificac
 |---|---|---|
 | Estrategia | 2 | Propuestas de IA sin decidir |
 | Datos e infraestructura | 2 | Buena nube, datos sin inventario |
-| Talento y cultura | 2 | Tecnología ~7 de 10 usan IA; Operaciones ~1 de 10 |
+| Talento y cultura | 2 | Agente de código: Tecnología ~7 de 10; Operaciones ~1 de 10 |
 | Gobernanza | 2 | Política en borrador desde abril de 2026 |
 | Adopción y valor | 1-2 | Cero IA en producción en el producto |
 
@@ -93,9 +93,10 @@ Ver [Anexo C — Gobierno, seguridad y compliance](annexes/03-gobierno-seguridad
 - En el piloto de abril (n=12, autoseleccionado) el uso fue alto (NPS +42) y la capacitación falló: solo 17% completó los cursos. Es una señal, no una medición de toda la organización: la base de T1 la mide.
 - Formación por rol, en horario laboral, con champions con tiempo asignado.
 - Se mide **uso real semanal por área**, no seats comprados.
-- Ni las metas del plan llegan al 80% combinado del OKR: publicamos Tecnología y Operaciones habilitadas por separado.
 
-**Decisiones:** capacitar en vez de contratar; IA aplicada de T1 con **un** contractor a prueba, que choca con "no contratar", o un rol interno demostrado. Y la postura sobre el empleo: proponemos un compromiso con excepciones.
+**Decisiones:** capacitar en vez de contratar; IA aplicada de T1 con **un** contractor a prueba (G0 autoriza solo su tramo de T1; G1-G3 liberan el resto), que choca con "no contratar", o un rol interno demostrado. La postura sobre el empleo: un compromiso con excepciones.
+
+**OKR 2027, a decidir con el OKR y el presupuesto, no en G0:** (1) el 80% combinado no se alcanza ni con las metas del plan (72,5% como mucho): proponemos reemplazarlo por Tecnología ≥80% y Operaciones habilitadas, cada una con su denominador y el 80% combinado informado al lado. (2) Gasto de tecnología bajo 3,5% de la facturación: mantenerlo y recortar el plan, o medirlo sin la inversión del plan o por persona activa. Cambia cómo se mide, no lo que se gasta.
 
 Ver [Anexo D — Personas y cultura](annexes/04-personas-cultura.md).
 
@@ -110,7 +111,7 @@ Ver [Anexo D — Personas y cultura](annexes/04-personas-cultura.md).
 | Techo (caja / tiempo) | 33 / 62 | 71 / 106 | 59 / 78 | 95 / 69 |
 | Pasa si | Base, política, contractor | Throughput ≥ +3%; Tec. ≥80% | Throughput ≥ +8% | Camino a ~17% o interés contractual |
 
-Miles de USD. Throughput: límite inferior del intervalo. En espera se vuelve a medir a las 6 semanas; si no mejora, corta el frente.
+Miles de USD. Throughput: límite inferior del intervalo. G2 en espera: T3 sin escalado y nueva medición a las 6 semanas; si sigue en la banda, corta el frente interno. G3 en espera: T4 con la base mínima, sin corte. Adopción de 60%-80%: T3 sigue y se mide al cierre de T3. G1 no corta el plan: el board puede no liberar T2.
 
 **Decisión:** adoptar los gates como regla de liberación de fondos. Ver [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md).
 
@@ -125,10 +126,10 @@ Miles de USD. Throughput: límite inferior del intervalo. En espera se vuelve a 
 | Cortar en G1 | 73 en el medio; hasta 106 hasta cerrar y 146 en el año |
 
 - ROI a 12 meses negativo en los tres escenarios; beneficio de caja: cero.
-- Equilibrio: **~17% de throughput atribuible** (~23% con producto); el +20% del OKR lo cubre solo si 1,20/(1+d) − 1 − c ≥ 16,7% (d: T0→T1, en G1; c: quien no adopta, desde G2).
+- **Equilibrio operativo anual del año 2: ~17% de throughput atribuible** (~23% con producto). No recupera la inversión del año 1 ni es ROI ni payback.
 
 **Decisión, el pedido G0 completo:**
-1. T1: hasta 33 de caja más 6 de reserva de cierre (15 desde G1); hasta 62 de tiempo (1,6 FTE clave y 590 h distribuidas).
+1. T1: hasta 33 de caja (contractor: solo su tramo de T1, hasta 16,5) más 6 de reserva de cierre (15 desde G1); hasta 62 de tiempo (1,6 FTE clave y 590 h distribuidas).
 2. Piso: 1,6 FTE clave en T1; 2,2 / 2,2 / 2,1 en T2-T4 con el replan (respaldo: 2,5 en T2). Sin contractor, T2 en modo control, sin harness ni evals.
 3. Si se corta, base mínima hasta 41 de tiempo; T0, propuesto, hasta 7.
 
