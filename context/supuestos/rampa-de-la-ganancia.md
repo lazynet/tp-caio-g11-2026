@@ -41,6 +41,7 @@ no se aplica sobre horas ya convertidas.
   combina con un objetivo de 5%, por debajo del piso de la
   [ganancia de productividad](/supuestos/ganancia-de-productividad.md): da +0,5%
   en T2, +1,5% en T3 y +3% en T4. Es un caso de corte, no un escenario que el
-  plan espere; con los gates vigentes cae en espera en G2 y corta en G3.
+  plan espere; con los gates cae en espera en G2 y, si la espera vence a las
+  6 semanas sin mejora, corta el frente interno.
 - La unidad de throughput y su valuación las define el anexo E; la rampa se
   aplica sobre el throughput, no sobre su valuación.
