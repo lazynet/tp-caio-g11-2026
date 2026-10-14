@@ -35,8 +35,9 @@ organigrama: lo elige Finanzas para poder expresar el sobre en FTE.
 
 # Qué lo invalidaría
 
-- Que las personas disponibles sean menos de 11 al 15% o menos de 16 al 10%: el
-  piso de 1,6 FTE clave de T1 no se alcanza y ninguna versión de T1 entra.
+- Que las personas disponibles sean menos de 12 al 15% o menos de 15 al 12%: el
+  piso de ~1,8 FTE clave de T1 con la prueba chica no se alcanza. Con menos de 11
+  al 15%, el piso de 1,6 (sin la prueba) tampoco, y ninguna versión de T1 entra.
 - Que las personas con los roles necesarios sean menos de 10: el extremo inferior
   de 1,0 FTE ya no es alcanzable.
 - Que el presupuesto 2027 o la carga de proyectos de clientes reduzcan el

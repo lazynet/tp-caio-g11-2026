@@ -37,7 +37,8 @@ capacitación, como distribuido, aunque participe alguna persona clave.
 - Que las horas distribuidas bajen la utilización facturable por debajo de la
   meta (ver [capacidad y utilización](/hechos/capacidad-y-utilizacion.md)).
 - Que el sobre clave disponible esté en el extremo inferior del rango (1 FTE): el
-  plan necesita un piso de 1,6 FTE clave en T1, y ninguna versión de T1 entra.
+  plan necesita un piso de ~1,8 FTE clave en T1 con la prueba chica (1,6 sin ella):
+  bajo 1,6 ninguna versión de T1 entra.
 
 # Cautelas
 
