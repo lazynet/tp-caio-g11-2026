@@ -128,7 +128,8 @@ propone condicionar a la evidencia contractual que se junta en T1 y se decide
 en G3. Como esa evidencia no depende de la señal de producto de G2, el base la
 cuenta como cota superior. Si se saca a un tramo condicional, como P, la caja
 base baja a 152 (85-220) y el techo de caja de T4 a 59; el tramo suma 25
-(13-36). Lo decide `caio`.
+(13-36). `caio` la deja en la base como cota superior, con la liberación
+condicionada en G3 a la señal contractual ([Anexo F](06-roadmap-riesgo.md)).
 
 **Tramo condicional del frente producto (P).** Solo si G2 trae la señal de
 cliente. Si no la trae, no se gasta.
@@ -283,8 +284,8 @@ g × rampa_t / (1 + g × rampa_t). El throughput que resulta en cada escenario:
 | Base | 15% | +3,75% | +9,0% | +15,0% | 62 (28-105) |
 | Optimista | 25% | +10,0% | +20,0% | +25,0% | 114 (51-192) |
 
-La base pasa G2 (≥ +3%) y G3 (≥ +8%). El pesimista cae en "espera" en G2 y corta
-en G3 (ver "Pesimista con la regla vigente"). Aplicar la rampa sobre las horas
+La base pasa G2 (≥ +3%) y G3 (≥ +8%). El pesimista cae en "espera" en G2 y, al
+vencer las 6 semanas, corta (ver "Pesimista con la regla de F"). Aplicar la rampa sobre las horas
 ya convertidas, g/(1+g) × rampa_t, daría 60 / 12 / 110: subestima levemente y no
 corresponde a la definición de la ficha.
 
@@ -403,7 +404,8 @@ a ~188.
 - **Si el régimen carga también el producto**, el equilibrio sube a **~23%**
   (13%-71%) y la meta no alcanza: a +20% faltan ~21 mil por año. Finanzas
   propone el ~17%: el producto lo tiene que pagar el producto, no la
-  productividad. La decisión de qué cifra va a las slides es de `caio`.
+  productividad. `caio` adopta el ~17% como titular, con el ~23% en la misma
+  línea ([Anexo F](06-roadmap-riesgo.md)).
 - Si la capacidad se vende, el equilibrio baja en proporción a cuánto supera la
   tarifa al costo, y eso se calcula en `private/`.
 - **Inversión del año 1:** ningún escenario la recupera en 24 meses con
@@ -442,13 +444,12 @@ autoriza hasta 41 por la regla de techos). La caja del corte,
 hasta 38, supera el techo de T1 (33): la diferencia es la reserva de cierre, y
 por eso el pedido G0 la autoriza de antemano (ver "Pedido G0").
 
-**Pesimista con la regla vigente.** El pesimista (g = 5%) da +0,5% de throughput
+**Pesimista con la regla de F.** El pesimista (g = 5%) da +0,5% de throughput
 en G2. La regla de G2 del [Anexo F](06-roadmap-riesgo.md) manda a **esperar**, no
 a cortar, entre 0% y +3%: T3 se libera sin escalado y se vuelve a medir a las 6
-semanas. La regla no dice qué pasa si a las 6 semanas sigue entre 0% y +3%, así
-que T3 se ejecuta entero. En G3 el throughput es +1,5%, debajo de +5%: **corta el
-frente interno**. El producto nunca se liberó, porque sin señal de cliente G2
-lo difiere. Queda la base mínima en T4.
+semanas. La espera vence ahí: si sigue entre 0% y +3%, se corta el frente
+interno y queda la base mínima. El producto nunca se liberó, porque sin señal de
+cliente G2 lo difiere.
 
 Supuesto de Finanzas para costearlo: "T3 sin escalado" cuesta lo mismo que T3 sin
 producto. Ningún renglón del cuadro está identificado como escalado (el plan no
@@ -456,21 +457,16 @@ suma seats y P ya salió), así que es una cota superior.
 
 | Pesimista | Año: medio (rango) | Capacidad liberada | Neto |
 |---|---|---|---|
-| **Con la regla vigente: espera en G2, corte en G3** | **305 (164-447)** | ~5 | **≈ −300** |
-| Con la regla propuesta: la espera vence a las 6 semanas y corta | 265 (141-388) | ~3 | ≈ −262 |
+| **Con la regla de F: la espera vence a las 6 semanas y corta** | **265 (141-388)** | ~3 | **≈ −262** |
+| Si la espera no venciera: espera en G2, corte en G3 | 305 (164-447) | ~5 | ≈ −300 |
 | Estrés sin frenar: base común e interno enteros | 394 (213-575) | 12 | −382; −502 si el precio pasa a 12× desde T3 |
 | Comparación: el estrés con el producto desde T2 | 492 (264-720) | 12 | −480; −600 con 12× desde T3 |
 
-Con la regla vigente, los gates le ahorran al pesimista **~82 mil** contra el
-estrés del mismo plan. Un corte en G2 daría ≈ −223, pero la regla vigente no lo
-ordena. La mayor parte del ahorro contra la comparación (~180 mil) viene de
-diferir el producto, no del gate de throughput.
-
-**Propuesta de Finanzas para `caio`:** cerrar la espera de G2. Si a las 6 semanas
-el throughput sigue entre 0% y +3%, o el intervalo sigue cruzando +3%, se corta
-el frente interno en ese momento y queda la base mínima. Lleva el ahorro del
-pesimista a ~120 mil y le pone fecha a la espera. Una espera sin regla de salida
-es gasto sin techo.
+Con la regla de F, los gates le ahorran al pesimista **~120 mil** contra el
+estrés del mismo plan (~82 si la espera no venciera). Un corte directo en G2
+daría ≈ −223, pero la regla no lo ordena: espera antes de cortar. La mayor parte
+del ahorro contra la comparación (~180 mil) viene de diferir el producto, no del
+gate de throughput.
 
 ### Costo por outcome
 
@@ -505,7 +501,7 @@ poco por la rampa. Los escenarios los combinan:
 
 | Escenario | Throughput a T4 y rampa | Precio de tokens | Producto |
 |---|---|---|---|
-| Pesimista | 5%, rampa 0/10/30/60: por debajo del piso del supuesto; con la regla vigente corta en G3 | Consumo a 12× desde T3, sin mitigar (solo en el estrés) | Sin señal de cliente: P no se libera |
+| Pesimista | 5%, rampa 0/10/30/60: por debajo del piso del supuesto; con la regla de F la espera vence a las 6 semanas y corta | Consumo a 12× desde T3, sin mitigar (solo en el estrés) | Sin señal de cliente: P no se libera |
 | Base | 15%, rampa 0/25/60/100 | Plano | Sin señal en G2: P no se libera. Con señal, suma su tramo |
 | Optimista | 25%, rampa 0/40/80/100 | Plano | Señal en G2, piloto en T3-T4 y un cliente con interés contractual en G4 (sin ingreso en los 12 meses) |
 
@@ -570,7 +566,7 @@ techo, sin excepciones.
 | El replan de T2 no se sostiene: el contractor no se aprueba o su 0,2 libre se consume en el traspaso | Media | Medio | Excepción acotada de 0,3 FTE aprobada en G0 como respaldo; `people` confirma el 0,2 libre | Contractor no aprobado en G0: T2 va con la excepción (2,5 FTE clave) |
 | Cambio a pago por consumo | Alta ([Anexo B](02-arquitectura.md)) | Alto | Gateway con ruteo, caché y topes; FinOps mensual desde T2; no enrutar el agente si eso pierde la suscripción plana | Múltiplo efectivo de más de 6× sin mitigar en un trimestre: se congela la expansión y se topea el consumo |
 | La ganancia no aparece o se paga con retrabajo | Media | Alto | Base congelada; costo por PR aceptado; incidentes y retrabajo junto al throughput | Bandas de G2 y G3 (abajo) |
-| La espera de G2 se estira sin decisión | Media | Medio | Propuesta: la espera vence a las 6 semanas | Sin la regla, el pesimista llega hasta G3 |
+| La espera de G2 se estira sin decisión | Media | Medio | Regla de F: la espera vence a las 6 semanas | — |
 | La capacidad liberada no se vuelve caja | Alta | Medio | Destino decidido en G2 (producto propio, producto del Cliente A o venta) | Sin destino en G2: la capacidad no se cuenta como beneficio |
 | El piloto de producto no tiene comprador | Media | Medio | P diferido: el presupuesto base no lo incluye y su tramo se libera solo con señal de cliente y matriz habilitante | Sin señal en G2: P no se libera (16-59 de caja y 23-56 de tiempo que no se gastan) |
 | El cierre cuesta más que lo previsto | Baja | Medio | Contratos por etapa, preaviso de un mes, nada a más de 12 meses antes de G4; reserva de cierre autorizada en G0 | — |
@@ -635,8 +631,8 @@ El techo de caja se confirma contra el presupuesto 2027 en `private/`.
 |---|---|---|---|---|---|
 | G0 | Aprobación | T1: 33 / 62, más reserva de cierre de 6 de caja | Pedido G0 completo y piso de capacidad confirmado | No arranca T1; T0 queda hundido (≤ 7) | Sí |
 | G1 | Fin de T1 | T2: 71 / 106 (71 / 114 con la excepción) | Base congelada con la unidad del Anexo B; matriz de los clientes que concentran la facturación; el uso de T1 dentro del sobre aprobado | Corte: perdido hasta 106; base mínima, hasta 41 de tiempo el resto del año (año: hasta 146) | Sí |
-| G2 | Fin de T2 | T3: 59 / 78; P, solo con señal: 38 / 34 más | **Pasa:** throughput ≥ +3% como tendencia con intervalo, sin más retrabajo. **Espera:** entre 0% y +3% o con un intervalo que cruza +3%; se libera T3 sin escalado y se vuelve a medir a las 6 semanas (propuesta: si sigue igual, corta). **Corta:** sin mejora o con más retrabajo. Además, FinOps con el múltiplo medido y el destino de la capacidad decidido | Corte: perdido 198 (máximo 291) | Sí |
-| G3 | Fin de T3 | T4: 95 / 69; P, si sigue: 21 / 23 más | **Pasa:** throughput ≥ +8%. **Espera:** +5% a +8%; se liberan solo la base mínima y el mantenimiento, y se vuelve a medir a las 6 semanas. **Corta:** menos de +5%. SLO del piloto solo si P se liberó; costo por PR sin subir | Corte: perdido 292 (máximo 427) | Sí |
+| G2 | Fin de T2 | T3: 59 / 78; P, solo con señal: 38 / 34 más | **Pasa:** throughput ≥ +3% como tendencia con intervalo, sin más retrabajo. **Espera:** entre 0% y +3% o con un intervalo que cruza +3%; se libera T3 sin escalado y se vuelve a medir a las 6 semanas (si sigue igual, corta el frente interno). **Corta:** sin mejora o con más retrabajo. Además, FinOps con el múltiplo medido y el destino de la capacidad decidido | Corte: perdido 198 (máximo 291) | Sí |
+| G3 | Fin de T3 | T4: 95 / 69; P, si sigue: 21 / 23 más | **Pasa:** throughput ≥ +8%. **Espera:** +5% a +8%; se liberan solo la base mínima y el mantenimiento, y se vuelve a medir a las 6 semanas. **Corta:** menos de +5%; corta el frente interno y la base común, y queda la base mínima. SLO del piloto solo si P se liberó; costo por PR sin subir | Corte: perdido 292 (máximo 427) | Sí |
 | G4 | Fin de T4 | Año 2: régimen de ~143 (~188 con P), en el presupuesto 2028 | Trayectoria hacia ~17% de throughput (~23% si P sigue; menos si la capacidad se vende) **o** interés contractual en el producto; decisiones sobre contractor, on-premise e ISO 42001 | No se financia el régimen. Queda el frente interno con las licencias vigentes y la base mínima, ~53 por año (29-78); el gateway se da de baja salvo que FinOps muestre que acota más de lo que cuesta | Contrato a más de 12 meses o hardware: irreversible |
 
 Las bandas "espera" son la parte económica; la tabla completa de pasa, espera y
@@ -665,8 +661,8 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 |---|---|---|---|
 | Vía de IA aplicada en T1: rol interno de 0,3 FTE (B) o contractor al 50% (D) | `architect`, `people` | Las dos están costeadas. Finanzas recomienda el contractor porque el recurso que no entra es el tiempo clave (1,6 contra 1,9 FTE), con ~13 mil más de caja. Si G0 demuestra un rol interno con experiencia, la alternativa 2 cuesta lo mismo | **Desacuerdo a la vista**; decide el Directorio en G0 |
 | Exceso de ~0,3 FTE clave en T2 con el producto diferido | `finance` | `architect` propone el replan de B (T2 en 2,2 FTE clave, −5 mil de tiempo) y la excepción acotada como respaldo. Finanzas toma el replan como base y deja la excepción costeada | **Pendiente del board en G0**: replan o excepción |
-| El equilibrio queda en ~17% sin producto y ~23% si el régimen carga el producto, contra la meta de +20% del OKR | `finance` | El producto lo paga el producto: la cifra que corresponde es ~17%, ~3 puntos debajo de la meta. En el medio, la meta cubre el régimen con ~24 mil de margen; no en el extremo bajo de N y costo | **Escalada a `caio`**: qué cifra va a las slides |
-| La espera de G2 no tiene regla de salida | `finance` | Propuesta: si a las 6 semanas sigue entre 0% y +3%, corta | **Propuesta a `caio`** (regla de F) |
+| El equilibrio queda en ~17% sin producto y ~23% si el régimen carga el producto, contra la meta de +20% del OKR | `finance` | El producto lo paga el producto: la cifra que corresponde es ~17%, ~3 puntos debajo de la meta. En el medio, la meta cubre el régimen con ~24 mil de margen; no en el extremo bajo de N y costo | **Resuelta**: `caio` lleva ~17% a las slides, con ~23% al lado ([Anexo F](06-roadmap-riesgo.md)) |
+| La espera de G2 no tiene regla de salida | `finance` | Si a las 6 semanas sigue entre 0% y +3%, corta el frente interno | **Resuelta**: adoptada por `caio` en F |
 | +20% de throughput con agentes a 12× lo pagado, contra el OKR de gasto de tecnología de menos de 3,5% | `architect` | A régimen, la base libera ~130 mil por año, que cubren consumo incremental hasta ~7× la suscripción. La caja del plan suma gasto de tecnología: el OKR es incompatible salvo que baje la nube. Propuesta: medirlo sin la inversión del plan, o por persona activa | **Escalada a `caio`** para reformular el resultado clave |
 | Sobre de capacidad: lectura estricta o separada | `finance` | La separada es propuesta de Finanzas; con la estricta, T1 no entra sin recortar el básico | **Decide el board en G0** |
 | Horas por persona-trimestre: 520 (D, calendario) o 480 (E, costeo) | `finance` | E usa 480 para FTE y costo; D ya costea el avanzado con 480 (480-720 h) | **Resuelta** |
@@ -695,9 +691,9 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 - **Equilibrio:** ~17% de throughput a régimen sin producto, ~3 puntos debajo de
   la meta de +20% del OKR: en el medio, cumplir la meta cubre el régimen con
   ~24 mil de margen. ~23% si se le carga el producto: ahí la meta no alcanza.
-- **Para la Slide 9:** el pesimista con la regla vigente espera en G2 y corta en
-  G3 (≈ −300), contra el estrés sin frenar del mismo plan (−382). Con la espera
-  que vence a las 6 semanas, ≈ −262.
+- **Para la Slide 9:** el pesimista espera en G2, la espera vence a las 6 semanas
+  y corta (≈ −262), contra el estrés sin frenar del mismo plan (−382); ≈ −300 si
+  la espera no venciera.
 
 ## Cautelas
 
@@ -710,12 +706,11 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 - Supuestos sin ficha propia: las fracciones por rol de T1-E (están en los
   Anexos B, C y D), las bandas de espera de G2 y G3 (Anexo F) y el costo de "T3
   sin escalado" (lectura de Finanzas en este anexo).
-- El corte de G3 en el pesimista deja solo la base mínima en T4: es la lectura
-  de la columna de fondos de G3 en el [Anexo F](06-roadmap-riesgo.md) ("T4"
-  entero). Si el corte alcanzara solo al frente interno y la base común siguiera
-  en T4, el ahorro sería ~13 de tiempo: el año quedaría en ~381 y el neto en
-  ≈ −369, casi igual al estrés (−382). El gate de throughput protege solo si también
-  frena la base común; lo define `caio`.
+- El corte de G3 deja solo la base mínima en T4: `caio` adopta el corte del
+  frente interno y de la base común ([Anexo F](06-roadmap-riesgo.md)). Si el corte
+  alcanzara solo al frente interno y la base común siguiera en T4, el ahorro
+  sería ~13 de tiempo: el año quedaría en ~381 y el neto en ≈ −369, casi igual al
+  estrés (−382). El gate de throughput protege solo si también frena la base común.
 - El replan de T2 depende de que el contractor tenga 0,2 FTE pagados y sin
   asignar en T2, que tiene que confirmar `people` ([Anexo D](04-personas-cultura.md)).
   Si el traspaso se los come, rige la excepción: +5 mil de tiempo y 2,5 FTE
