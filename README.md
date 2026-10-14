@@ -348,8 +348,12 @@ mitigación, y decisiones. `plan-check` exige esas secciones y el frontmatter
 que una slide lo enlace. Los archivos que empiezan con `_` no se validan ni se
 entregan.
 
-En el PDF los links a los anexos no navegan: en la slide, nombrá el anexo
-("ver Anexo B — Finanzas") además de enlazarlo.
+En `entrega.pdf`, los links a slides y anexos incluidos navegan dentro del PDF,
+también hacia sus anclas. Los demás archivos del repo apuntan a GitHub, con
+`CAIO_PUBLIC_REF=main` por defecto. Para fijar una versión auditable, usá un
+commit publicado: `CAIO_PUBLIC_REF=<sha> ./scripts/build-deck.sh entrega`.
+El build rechaza links a `private/`, destinos internos inexistentes y cualquier
+URI `file://` que sobreviva en el PDF final.
 
 ## Validar
 

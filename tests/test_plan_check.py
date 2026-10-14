@@ -15,6 +15,14 @@ spec.loader.exec_module(checker)
 
 
 class PlanCheckTests(unittest.TestCase):
+    def test_spanish_todo_is_not_a_pending_marker(self):
+        self.write(
+            "# Deck\nsobre todo la terminal\nTODO real\nPendiente humano\nPOR DEFINIR\nFIXME real"
+        )
+        pending = self.result()["pending"]
+        self.assertEqual(len(pending), 4)
+        self.assertFalse(any("sobre todo" in item for item in pending))
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
