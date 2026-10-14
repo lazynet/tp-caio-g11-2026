@@ -70,6 +70,7 @@ generado se edita: se corrige el markdown y se regenera. Requisitos (Python
 | `context/` | Bundle OKF: hechos públicos o anonimizados y supuestos sobre el caso, cada uno con su fuente |
 | `material/` | Bundle OKF: unidades y frameworks de la cursada, y qué sección del plan respalda cada uno |
 | `plan/slides.md` | Las 10 slides, fuente única del deck |
+| `plan/theme/acme.css` | El tema de Marp del deck (diseño portado de Claude Design); `slides.md` usa sus clases en bloques HTML con Markdown adentro |
 | `plan/annexes/` | Un anexo por archivo (`NN-tema.md` desde `_template.md`), referenciado desde las slides |
 | `defense/` | Storyline, banco de objeciones; `defense/evidence/` es un bundle OKF |
 | `reviews/` | Revisiones del board y del peer review, con fecha |

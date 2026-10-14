@@ -21,8 +21,13 @@ esac
 "${CAIO_PYTHON:-python3}" "$root/scripts/plan-check.py" --mode draft
 mkdir -p "$out"
 
-# Versión de Marp fija para que todo el equipo genere el mismo deck.
-marp() { npx -y @marp-team/marp-cli@4.1.2 --allow-local-files "$@"; }
+# Versión de Marp fija para que todo el equipo genere el mismo deck. El tema
+# vive en plan/theme y el diseño necesita los bloques HTML de slides.md.
+marp() {
+  # --theme-set acepta varios paths: va al final para no tragarse la entrada.
+  npx -y @marp-team/marp-cli@4.1.2 --allow-local-files --html --no-stdin \
+    "$@" --theme-set "$root/plan/theme"
+}
 
 if [[ "$renderer" == all || "$renderer" == marp || "$renderer" == html ]]; then
   marp "$src" -o "$out/deck-marp.html"
