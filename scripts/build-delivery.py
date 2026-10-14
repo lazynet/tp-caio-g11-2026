@@ -31,6 +31,8 @@ th { background: #eee; }
 tr { break-inside: avoid; page-break-inside: avoid; }
 img { max-width: 100%; }
 a.heading-link { color: inherit; text-decoration: none; }
+a.annex-start { display: block; font-size: 1pt; line-height: 1pt;
+                 color: transparent; text-decoration: none; }
 """
 
 
@@ -209,7 +211,8 @@ def annexes_html(root, checker, public_ref):
         )
         start = annex_id(path, annexes)
         parts.append(
-            f'<div id="{start}"><a href="#{start}">Inicio del anexo</a>{rendered}</div>'
+            f'<div id="{start}"><a class="annex-start" href="#{start}"'
+            f' aria-hidden="true">&nbsp;</a>{rendered}</div>'
         )
     return PAGE_BREAK.join(parts)
 

@@ -129,6 +129,8 @@ class BuildDeliveryTests(unittest.TestCase):
                 markup,
             )
             self.assertNotIn("§", markup)
+            self.assertNotIn("Inicio del anexo", markup)
+            self.assertIn('<a class="annex-start" href="#annex-0"', markup)
             self.assertIn("https://caio.invalid/slides#page-3", markup)
             self.assertIn("blob/v1/context/source.md#fuente", markup)
 
