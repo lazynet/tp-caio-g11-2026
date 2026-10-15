@@ -18,12 +18,18 @@ con el borrador de OKR de Tecnología 2027.[^okr]
 
 ## Objetivo
 
-Sustentar la decisión de personas que se le pide al board: **capacitar y
-reasignar en lugar de contratar**, con un programa de AI literacy por nivel y por
+Sustentar la decisión de personas que se le pide al board: **formar, reasignar y
+decidir una excepción externa**, con un programa de AI literacy por nivel y por
 rol, una red de champions con tiempo asignado y un solo perfil especializado a
 prueba, medido por **uso real semanal** y no por seats comprados. Este anexo
 desarrolla roles y capacidad dentro de los derechos de decisión que defina
 `governance`; no los redefine.
+
+**Alcance económico en revisión (ronda 11).** Las horas y los costos del programa
+publicado se conservan como referencia de ese alcance. El pedido inicial pasa a
+un paquete mínimo sin plataforma central, pendiente de costeo por `finance` e
+integración por `caio`. No hereda los techos ni la contratación del pedido anterior;
+las decisiones del borrador que siguen son propuestas, no autorizaciones vigentes.
 
 ## Supuestos de partida
 
@@ -31,7 +37,7 @@ desarrolla roles y capacidad dentro de los derechos de decisión que defina
 |---|---|---|
 | Dotación | 60 a 70 personas, nómina y contractors; ~40% Operaciones (staffing en equipos de clientes), ~40% Tecnología, el resto staff | [Tamaño y estructura](../../context/hechos/tamano-y-estructura.md) |
 | Utilización facturable | 83-90%, bench menor a 1 FTE: la capacitación compite con horas facturables | [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md) |
-| Restricción de contratación | No contratar gente nueva y potenciar al equipo con IA; sin contrataciones masivas | [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md), [Capacidad de inversión](../../context/supuestos/capacidad-de-inversion.md) |
+| Restricción de contratación | No contratar gente nueva y potenciar al equipo con IA. Un contractor también requiere una excepción explícita; no ampliar nómina no elimina su consumo de caja | [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md); encuadre de la excepción: propuesta de este anexo |
 | Tiempo de capacitación aceptado por la propia empresa | 10% a 15% del tiempo semanal durante una certificación | [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md) |
 | Clientes financieros | Por defecto prohíben modelos externos sobre su código y datos; la matriz de restricciones por cliente no existe todavía | [Apetito de riesgo](../../context/supuestos/apetito-de-riesgo-de-clientes.md), [Gobierno y política](../../context/hechos/gobierno-y-politica-ia.md) |
 | Costo cargado por rol | Rangos de mercado en USD por mes, amplios y no calibrados contra la nómina (staff 1.500-5.000; desarrollador semisenior 2.000-5.000; analista 2.000-5.500; tech lead 4.500-10.000; especialista IA 4.500-11.000) | [Costo cargado por rol](../../context/supuestos/costo-cargado-por-rol.md) |
@@ -57,12 +63,12 @@ desarrolla roles y capacidad dentro de los derechos de decisión que defina
 **Lectura.** La brecha no se cierra con más cursos: en Operaciones hay un freno
 contractual que la cultura no resuelve. El borrador de OKR 2027 pide 80% de
 uso activo semanal en Operaciones y Tecnología juntas.[^okr] Con ambas áreas de
-peso parecido, la base de hoy es ~4 de cada 10 (promedio de ~7 y ~1 de cada 10,
-cálculo de este anexo). Y si Tecnología llegara a 85%, Operaciones tendría que
-llegar a ~75% para cumplir la meta combinada. Eso no es alcanzable si los clientes
-prohíben las herramientas, y las metas propias de este anexo tampoco llegan a 80%
-combinado (ver "Meta de adopción y OKR combinado"). Ver el desacuerdo sobre la
-meta de adopción en la tabla de decisiones.
+peso parecido, el proxy de agente de código de hoy es ~4 de cada 10 (promedio de
+~7 y ~1 de cada 10, cálculo de este anexo), **no la base de toda la IA**. Con
+Tecnología en 85%, Operaciones necesita 75% sobre su total para llegar a 80%
+combinado. Las restricciones contractuales condicionan esa cobertura; las metas
+por área, cumplidas exactamente, tampoco dan 80% (ver "Meta de adopción y OKR
+combinado"). No se infiere de ese cálculo un techo de adopción real.
 
 ### Calidad de uso y capacitación
 
@@ -102,9 +108,10 @@ encuesta de la línea base de los meses 1-3.
 
 ## Roles y capacidad
 
-Principio: **cada rol se cubre primero reasignando o capacitando**. Se contrata o
-se terceriza solo donde hay un riesgo de continuidad que la capacitación no
-cierra a tiempo. La ficha de estructura marca que arquitectura, seguridad y
+Principio: **cada rol se cubre primero reasignando o capacitando**. La restricción
+literal es no contratar; una incorporación externa exige que el Directorio
+apruebe la excepción y su caja cuando la formación no cierre la capacidad a
+tiempo. La ficha de estructura marca que arquitectura, seguridad y
 gobierno están concentradas en pocas personas y pide tratarlo como riesgo de
 continuidad.[^estructura]
 
@@ -131,6 +138,52 @@ RACI de personas (roles, no personas; una sola A por decisión,
 | Herramientas permitidas por cliente | Área comercial | Delivery manager | Gobierno y seguridad, CAIO | Operaciones |
 
 Responsable humano de cada fila: **pendiente**.
+
+### Capacidad efectiva: dos bolsas sobre las mismas personas
+
+Separar sobre clave y distribuido **no crea tiempo**. La utilización promedio y
+el bench no demuestran disponibilidad por rol. Antes de comprometer el tramo,
+Operaciones y cada manager validan las mismas agendas con Talento y Finanzas;
+los responsables humanos nominales siguen pendientes. No se financian las horas
+iniciales con productividad futura ni se da por liberado tiempo porque tenga costo.
+
+Contraste del **programa publicado**, con 480 h por FTE-tramo
+([convenciones](../../context/supuestos/convenciones-de-calculo.md)) y las bolsas
+del [Anexo E](05-business-case.md), "Conciliación de los meses 4-6" y "Pedido de
+hoy y gates económicos":
+
+| Tramo | Sobre clave interno | Sobre distribuido interno | Total interno | Externo y límite |
+|---|---|---|---|---|
+| Meses 1-3, con prueba chica | ~1,8 FTE, redondeo publicado | 654 h / 480 = 1,3625 FTE | **~3,16 FTE**; aproximado por el redondeo clave | Contractor 0,5 FTE adicional, si se aprueba la excepción |
+| Meses 4-6, con replan y señal | 1.068 h / 480 = 2,225 FTE | 1.208 h / 480 = 2,5167 FTE | **~4,74 FTE** (2.276 h) | Contractor 1 FTE adicional; contra 2,25 FTE clave quedan **12 h** (1.080 − 1.068) |
+
+Los totales no prueban que las agendas entren. El avanzado puede usar 480-720 h
+en vez del medio 600; ausencias, simultaneidad y personas con más de un rol pueden
+cambiar el encaje. El piso clave no sustituye la validación del total interno.
+
+**Matriz semanal a completar en privado**, una fila por persona, rol y semana,
+con identificador privado para conciliar a quienes cubren varias funciones.
+Esta es la estructura; no publica dotación nominal, tarifas ni asignaciones reales:
+
+| Semana / rol (ID privado) | Horas disponibles netas | Compromisos vigentes | Horas clave + distribuidas del plan | Trabajo desplazado y quién lo cubre | Recuperación: horas, fecha y evidencia | Efecto en ingresos y contribución | Valida / fuente |
+|---|---|---|---|---|---|---|---|
+| Arquitectura / liderazgo técnico | Completar | Completar | Completar ambas bolsas | Completar | Completar | Finanzas, en privado | Manager / agenda |
+| DevOps / QA | Completar | Completar | Completar ambas bolsas | Completar | Completar | Finanzas, en privado | Manager / agenda |
+| Gobierno / seguridad / Council | Completar | Completar | Completar ambas bolsas | Completar | Completar | Finanzas, en privado | Manager / agenda |
+| Líder de adopción / facilitadores | Completar | Completar | Completar ambas bolsas | Completar | Completar | Finanzas, en privado | Manager / agenda |
+| Participantes / champions por área | Completar | Completar | Completar ambas bolsas | Completar | Completar | Finanzas, en privado | Manager / agenda |
+
+Horas disponibles netas = jornada menos ausencias; de ahí se descuentan los
+compromisos que se mantienen y las horas de **ambas** bolsas. Un mismo bloque
+horario cuenta una sola vez aunque la persona sea líder, champion y participante.
+El trabajo que se retira de la agenda debe tener destino, impacto y responsable;
+una recuperación futura no habilita una semana sobreasignada. Los sobrantes
+de otro rol o semana no cubren automáticamente un faltante.
+
+Finanzas distingue costo cargado, ingreso no facturado y contribución perdida,
+documenta qué se recupera y no suma dos veces las mismas horas como ahorro e
+ingreso ni como costo y contribución. Solo se publican rangos o índices autorizados.
+Sin conciliación semanal, reducir o diferir el alcance y recostear antes de iniciar.
 
 ### Antes y después de un proceso: del requerimiento al cambio en producción
 
@@ -317,7 +370,7 @@ verificación.
 
 | Freno | Evidencia en el caso | Quién pierde qué | Respuesta |
 |---|---|---|---|
-| Falta de tiempo | Dos de cada tres en el piloto; utilización 83-90% | Operaciones: cada hora de curso es una hora no facturada | Horas dentro de la jornada, módulos cortos, calendario por equipo; el costo está en Insumos para Finanzas |
+| Falta de tiempo | Dos de cada tres en el piloto; utilización 83-90% | Operaciones: la formación puede desplazar facturación; depende de la agenda, el contrato y la recuperación efectiva | Horas dentro de la jornada, módulos cortos, calendario por equipo; el costo está en Insumos para Finanzas |
 | Prohibición del cliente | Supuesto de apetito de riesgo; matriz inexistente | Staffing: queda afuera de la ganancia | Ver "Staffing" abajo |
 | Miedo al reemplazo | Freno de la cursada; no hay medición propia | Todos, y más en perfiles junior | Comunicación transparente y la decisión sobre el compromiso con el empleo |
 | Dependencia de un proveedor | El piloto lo advierte y propone consumo multimodelo | Equipos que ya construyeron hábitos | Fuera del alcance de este anexo; lo resuelve `architect` |
@@ -364,6 +417,22 @@ declarado).
 "Habilitadas" = personas cuyos clientes y herramientas lo permiten según la
 matriz, como denominador. Se informa también el valor sobre el total, para no
 esconder la brecha.
+
+**Definir «activo» antes de medir.** Propuesta a ratificar por CAIO, Talento y
+`governance` antes de congelar la base: persona que en la semana completó al menos
+una tarea laboral con una herramienta de IA permitida y revisó su resultado.
+La fuente debe permitir distinguir esa actividad de un seat o una conexión;
+si solo registra eventos del agente de código, se publica como proxy. No se
+publican tareas ni datos individuales y no se usa la métrica para evaluar personas.
+
+El diccionario previo fija tarea válida, fuente, padrón por área, numerador,
+denominador, semana de corte, umbral de cobertura y tratamiento del faltante. Chat/Gemini requieren
+una fuente adicional; una encuesta se rotula como uso declarado. No se suman
+usuarios de herramientas sin deduplicarlos. Se publican personas con medición / total
+y su porcentaje de cobertura; sin cobertura suficiente, el OKR queda «sin medir»
+para ese alcance, sin convertir ausencias en inactividad. La ventana móvil de
+cuatro semanas es **una propuesta pendiente de aprobación**; no reemplaza la
+medición semanal del borrador ni se impone retrospectivamente.
 
 **Revisión mensual del Council.** Las metas de arriba se cierran por tramo, pero el
 uso se mide cada semana, por área: ese uso semanal alimenta el tablero mensual del
@@ -412,8 +481,10 @@ de la prueba chica en la decisión del mes 3 si no hace falta. Pendiente de `cai
 no se da por resuelto.
 
 **Meta de adopción y OKR combinado.** El borrador de OKR pide 80% en
-Operaciones y Tecnología juntas. Con áreas de igual peso, las metas de este anexo
-no lo alcanzan, ni siquiera en el mejor caso:
+Operaciones y Tecnología juntas. Con áreas de igual peso, **cumplir exactamente**
+85% en Tecnología y 60% en Operaciones habilitadas da los siguientes resultados.
+Si `e` es la fracción de Operaciones habilitada, y solo ese grupo aporta uso
+contado, el combinado es `(85% + 60% × e) / 2`:
 
 | Operaciones habilitada (% de Operaciones) | Operaciones habilitadas 60% da, sobre Operaciones total | Combinado con Tecnología 85% (igual peso) |
 |---|---|---|
@@ -421,12 +492,19 @@ no lo alcanzan, ni siquiera en el mejor caso:
 | 50% | 30% | 57,5% |
 | 100% (toda Operaciones habilitada) | 60% | 72,5% |
 
-Para llegar a 80% combinado con Tecnología 85%, Operaciones debería llegar a 75% sobre
-su total. Por eso: **no se presenta ninguna meta propia como cumplimiento del 80%**.
-Se publican siempre las dos métricas, cada una con numerador y denominador:
-(a) uso semanal activo de Tecnología y (b) uso semanal de Operaciones habilitadas, con
-el valor sobre el total de Operaciones al lado. Si el Directorio mantiene el OKR
-combinado, se informa su resultado real, que será menor al 80%. Metas por tramo
+El 72,5% es el resultado de esas metas exactas con toda Operaciones habilitada,
+**no un máximo teórico**: son metas mínimas y pueden superarse; ambas áreas al
+100% darían 100%. Para llegar a 80% combinado con Tecnología en 85%, Operaciones
+necesita 75% sobre su total. Por eso no se declara cumplido el OKR con la tabla.
+
+Se conservan las metas por área y se publica además el **combinado original**:
+`(activos de Tecnología + activos de Operaciones) / (total de Tecnología + total de
+Operaciones)`, con los pesos del padrón real. Para cada área se muestran activos / total;
+para Operaciones también activos habilitados / habilitados, habilitados / total y
+su tasa sobre el total. Se informa la cobertura de medición por área y combinada;
+el proxy de código no representa toda la IA. Un uso permitido fuera del grupo
+habilitado por la matriz requiere registro específico y recalcular el ejemplo.
+No se predice el resultado real del OKR a partir de metas. Metas por tramo
 unificadas para todo el plan (incluido el Anexo F): Tecnología ≥80% desde los meses
 4-6 (cifra del OKR) y ≥85% al cierre de los meses 10-12 (meta interna de este
 anexo); la diferencia 80/85 no es una contradicción, sino meta del OKR y meta de
@@ -443,6 +521,8 @@ dispara por sí solo.
 
 | Disparador | Acción |
 |---|---|
+| Capacidad clave efectiva en los meses 1-3 <1,6 FTE | No iniciar ninguna versión publicada; reducir o diferir alcance y recostear. Este umbral pertenece al alcance publicado, no es el piso todavía desconocido del paquete mínimo |
+| Capacidad clave entre 1,6 y ~1,8 FTE en los meses 1-3 | Retirar la prueba chica y revisar metas, calendario y costeo antes de iniciar; confirmar también las horas distribuidas. No completar horas iniciales con ganancias futuras ([Anexo E](05-business-case.md), "Pedido de hoy y gates económicos") |
 | Al cierre de los meses 4-6, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en los meses 7-9 las horas de champions y de intermedio que no sean rediseño (~13 de tiempo en el medio, como en el Anexo F); rediseñar la formación con casos por rol; revisar causas con los managers. El plan no suma seats: no hay expansión que frenar |
 | Al cierre de los meses 4-6, uso activo en Tecnología ≥60% y <80% | Los meses 7-9 siguen; formación rediseñada con casos por rol; se vuelve a medir al cierre de los meses 7-9 (como en el Anexo F) |
 | Básico completado <50% al cierre de los meses 4-6 | Cambiar el formato (de sesión a práctica en equipo) y reasignar tiempo; no repetir el mismo curso |
@@ -472,7 +552,7 @@ dispara por sí solo.
 | Tema | Decisión | Alternativas | Elección | Reversibilidad |
 |---|---|---|---|---|
 | Meta de adopción | Cómo medir la meta de adopción en Operaciones | (1) 80% sobre Operaciones y Tecnología, como el borrador de OKR. (2) 80% en Tecnología y una meta propia sobre personas **habilitadas** en Operaciones. | **La segunda**, informando también la primera | Reversible: se cambia al completar la matriz |
-| IA aplicada | Capacidad especializada en IA aplicada | (1) Sin incorporación, solo reasignar. (2) Un contractor a prueba desde el mes 1 (50% en los meses 1-3, 100% en los meses 4-12), que reemplaza la fracción de IA aplicada del Anexo B. (3) Lo mismo desde el mes 4. (4) Dos contrataciones en nómina. | **El contractor desde el mes 1**: única forma de cubrir la concentración de capacidades sin romper la restricción de no contratar de forma masiva. La aprobación de hoy lo elige y autoriza solo el tramo de los meses 1-3 (hasta 16,5 de caja); el tramo de los meses 4-12 al 100% se libera en la decisión del mes 3 solo con una señal, y sin ella el contractor se cierra y los meses 4-12 corren como (b) (Anexo E). **Choca con la restricción literal de "no contratar gente nueva"**: lo decide el Directorio. Sin incorporación es viable si ese techo se mantiene, con más riesgo de continuidad | El contractor es reversible (contrato corto); las dos contrataciones son poco reversibles. Condición del contractor desde el mes 1: el 0,2 de los meses 4-6 que usa el replan del Anexo B no está confirmado; si no se sostiene ("sin el 0,2"), rige la excepción de 0,3 FTE. Si el Directorio rechaza el contractor ("sin contractor"), la excepción no alcanza y rige el modo control del Anexo B |
+| IA aplicada | Capacidad especializada en IA aplicada | (1) Sin incorporación, solo reasignar con perfil demostrado. (2) Contractor a prueba desde el mes 1 (50% en los meses 1-3, 100% posterior condicional). (3) Lo mismo desde el mes 4. (4) Dos contrataciones en nómina. | **El programa publicado propone el contractor desde el mes 1 como excepción externa**, no como cumplimiento de «no contratar». Consume caja aunque no amplíe nómina; la excepción y el contrato los decide el Directorio. El paquete mínimo se recostea antes de decidir si requiere esa vía. Sin perfil interno demostrado ni excepción aprobada, no se inician sus hitos | Contrato corto, con cierre y traspaso costeados. Si existe contractor, pero falta el 0,2 del replan, la excepción de 0,3 FTE internos cubre ese exceso acotado. Sin especialista falta el 0,8 completo: la excepción de 0,3 **no lo reemplaza**; aplicar modo control o diferir y recostear según B/E |
 | Compromiso sobre el empleo | Qué se dice sobre el empleo | (1) Sin compromiso. (2) Compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. (3) Compromiso con excepciones. | **Postura propuesta: el compromiso con excepciones**, con el texto de "Postura sobre el empleo (propuesta)". La decide el Directorio, con asesoría laboral; no es una política aprobada. El compromiso sin excepciones baja más el miedo pero ata margen; sin compromiso deja el freno sin respuesta | Los dos compromisos son poco reversibles una vez comunicados |
 | Formato de la formación | Formato de la formación | (1) Curso obligatorio genérico. (2) Casos prácticos por rol con champions, en horario laboral. | **Los casos prácticos por rol**, por el pedido del piloto (más de la mitad de 12 autoseleccionados) y porque la falta de tiempo fue el primer freno; el efecto del formato se mide en los meses 4-9 | Reversible |
 | Piso de alfabetización | Art. 4 del AI Act | (1) Esperar a decidir si alcanza a Acme Labs. (2) Adoptarlo como piso, con registro. | **Adoptarlo como piso**, sin citar fechas ni sanciones | Reversible |
@@ -529,9 +609,12 @@ rezagados) se lee como uso de trámite y dispara la revisión del formato.
 
 ## Insumos para Finanzas
 
-Costo de horas = horas x USD 10-35 (supuesto del equipo). **Es un piso**: el
-costo de oportunidad real es la tarifa facturable de esas horas, que no está en
-`context/` ([huecos](../../material/huecos.md)); Finanzas la aplica sobre las horas.
+Costo de horas = horas x USD 10-35 (supuesto del equipo). Es valuación a costo
+cargado, no ingreso perdido ni caja incremental. Finanzas estima aparte el trabajo,
+ingreso y contribución efectivamente desplazados con la matriz de capacidad;
+la tarifa sola no representa ese costo de oportunidad. Evitá sumar dos veces
+costo cargado y contribución perdida de las mismas horas. Faltan agendas y
+contribución por trabajo ([huecos](../../material/huecos.md)).
 
 | Concepto | Tramo | Horas | Rango de costo (USD) | Fuente o supuesto |
 |---|---|---|---|---|
@@ -541,7 +624,7 @@ costo de oportunidad real es la tarifa facturable de esas horas, que no está en
 | Champions, 8 personas x 10% x 9 meses | Meses 4-12 | ~1.150 | 11.500 - 40.250 | 10% de [programa](../../material/conceptos/m3u2-programa-champions.md); resto, supuesto |
 | Prueba chica de los meses 1-3: 2 champions de Tecnología al 10% durante 2 meses | Meses 1-3 | 64 | 1.200 - 3.000 | 2 x 10% x 2 x 160 h; el costo es el que fija el Anexo E ("Prueba chica de los meses 1-3 (primeros 100 días)"). El diseño (40-80 h de tech lead) y la lectura (16-24 h de DevOps/QA) los costea el Anexo E como tiempo clave, no entran acá |
 | **Subtotal horas de capacitación** | Meses 1-12 | **~2.684 - 2.924** | **~27.400 - 103.100** | Suma |
-| Líder del programa, 20% de una persona, 12 meses | Meses 1-12 | 0 (reasignación) | 10.800 - 24.000 | 20% x 12 x USD 4.500-10.000 ([tech lead](../../context/supuestos/costo-cargado-por-rol.md)) |
+| Líder del programa, 20% de una persona, 12 meses | Meses 1-12 | **384 (sobre clave)** | 10.800 - 24.000 | 20% x 12 x 160 h; costo: 20% x 12 x USD 4.500-10.000 ([tech lead](../../context/supuestos/costo-cargado-por-rol.md)). Reasignar no elimina las horas; no integra el subtotal de capacitación |
 | Contractor de IA aplicada, 9 meses, 100%, **solo si la decisión del mes 3 encuentra una señal** | Meses 4-12 | n/a | 40.500 - 99.000 | 9 x USD 4.500-11.000 ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)). Sin señal el renglón sale y queda el cierre que costea el Anexo E (~4 mil en el medio). Reemplaza la fracción de 0,8 FTE de IA aplicada del Anexo B: no se suma con ella |
 | Contractor de IA aplicada en los meses 1-3, 50% (contractor desde el mes 1) | Meses 1-3 | n/a | 6.750 - 16.500 | 0,5 x 3 meses x USD 4.500-11.000. Reemplaza el 0,3 FTE de IA aplicada de los meses 1-3 del Anexo B (contractor que reemplaza); el 0,2 restante es incorporación y documentación. **Pasa a caja un costo que el Anexo B tenía como tiempo.** Alternativa a decidir con `finance`: contratar al 30% en los meses 1-3 (−2.700 a −6.600 de caja: 0,2 x 3 x 4.500-11.000), si el contrato lo admite |
 | Preparación previa: reconstrucción retrospectiva y diseño de encuesta | Preparación previa | 60 - 100 | 1.700 - 6.300 | Supuesto del equipo: 1,5 a 2,5 semanas del perfil técnico que lidera el programa, a USD 28-63 por hora (4.500-10.000 mensuales de tech lead sobre 160 h) |
@@ -565,31 +648,24 @@ E](05-business-case.md)). El desglose de las 590 h de los meses 1-3 entre básic
 intermedio lo consolida el Anexo E; las 64 h de la prueba son los 2 champions de
 arriba. Este anexo da las poblaciones y las horas por nivel.
 
-**Horas del avanzado: 480-720 en este anexo, y el Anexo E las cuenta de dos
-maneras.** El Anexo E concilia los meses 4-6 con 600 h (el punto medio de 480-720)
-y dice que el costo usa 480. Manda este anexo: el avanzado es un **rango de 480-720
-h**, y acá se costea completo (4.800-25.200). Para el sobre de horas de los meses
-4-6 vale el punto medio, 600; 480 es el piso del rango, no su valor central, y no
-es la convención de costeo (esa es 480 h por persona-tramo, la base del cálculo). Si
-el Anexo E costea el medio con 480, subestima ese renglón. Propuesta para `finance`:
-en el Anexo E, línea 120, `y el avanzado del Anexo D se costea con 480 h.` → `y el
-avanzado del Anexo D se costea con el rango de 480-720 h (medio 600, el mismo de la
-conciliación de los meses 4-6).` y en el Anexo E, línea 230-231, `y el costo usa 480
-(convención del Anexo D)` → `y el costo usa el mismo rango (Anexo D)`, recalculando el
-medio de la fila del Anexo D (hoy 32,5 en los meses 4-6) si cambia. No se publica
-una base de horas totales de la empresa. Si el costo total entra dentro del 1% a 3%
-de la facturación que se asume como capacidad de inversión
+**Horas y costo del avanzado, conciliados con el Anexo E.** El rango es 480-720 h;
+para capacidad se usa su punto medio, 600 h. El costo es USD 4.800-25.200 y su
+medio es USD 15.000, como ya recoge E en "Conciliación de los meses 4-6"; no es
+600 h × USD 22,5 (USD 13.500). Son dos convenciones de resumen explícitas, no
+una corrección pendiente ni un costo adicional. Las 480 h por persona-tramo son
+la base del cálculo de jornada, distintas del piso de horas totales del avanzado.
+No se publica una base de horas totales de la empresa. Si el costo total entra
+dentro del 1% a 3% de la facturación que se asume como capacidad de inversión
 ([supuesto](../../context/supuestos/capacidad-de-inversion.md)) lo calcula
 Finanzas: la facturación en USD no se publica.
 
 ## Insumos para el deck
 
-- **Decisión que se le pide al board:** aprobar capacitar y reasignar en vez de
-  contratar, más **un** perfil especializado a prueba (la decisión sobre IA
-  aplicada), aclarando que choca con la restricción actual de no contratar. La
-  aprobación de hoy autoriza su tramo de los meses 1-3 y la prueba chica; el tramo
-  de los meses 4-12 se libera en la decisión del mes 3 solo con una señal, y sin
-  ella el contractor se cierra y los meses 4-12 corren como la alternativa de gobierno mínimo y formación del Anexo E.
+- **Decisión que se le pide al board:** «Formar, reasignar y decidir una excepción
+  externa». El pedido inicial será el paquete mínimo sin plataforma central,
+  una vez costeado por `finance`; la excepción externa se decide solo si falta
+  perfil/capacidad demostrados. El programa publicado sirve como referencia de
+  alcance y no transfiere automáticamente contractor, prueba ni techos al mínimo.
 - **Frase central:** en el piloto de abril (12 personas que se anotaron solas) el
   uso fue alto (NPS +42) y la capacitación falló: el primer freno fue el tiempo.
   El plan responde con casos por rol, horas dentro de la jornada y champions con
@@ -601,11 +677,15 @@ Finanzas: la facturación en USD no se publica.
   completó los cursos. Es una señal, no una medición de toda la organización:
   la base de los meses 1-3 la mide.»
 - **Cifra para el CFO:** ~2.684-2.924 horas de capacitación, ~41-45 horas por
-  persona, a USD 27.400-103.100 al costo cargado; Finanzas suma el costo de
-  oportunidad a tarifa facturable. Total de personas identificado ~USD 87.200-248.900 (con contractor desde el mes 1 y al 100% en los meses 4-12; ~46.700-149.900 si la decisión del mes 3 no encuentra señal).
-- **Señal de alerta que debe ir en la slide:** la meta combinada de 80% del
-  borrador de OKR 2027 es inalcanzable con Operaciones prohibida por contrato (ver
-  la decisión sobre la meta de adopción).
+  persona, a USD 27.400-103.100 al costo cargado; además hay 384 h del líder en el
+  sobre clave. Finanzas concilia ingreso y contribución desplazados sin duplicar
+  esas horas. Total de personas del programa publicado ~USD 87.200-248.900
+  (con contractor desde el mes 1 y al 100% en los meses 4-12; ~46.700-149.900 sin
+  señal). No es el presupuesto del nuevo paquete mínimo.
+- **Señal de alerta que debe ir en la slide:** cumplir exactamente 85%/60% con
+  igual peso y toda Operaciones habilitada da 72,5%, no cumplimiento del OKR 80%.
+  Conservar metas por área y publicar combinado original, habilitados/total y
+  cobertura; las prohibiciones condicionan el uso y deben medirse.
 - **Qué se mide:** uso real semanal por área, no seats, que alimenta el tablero
   mensual del Council; condiciones de abandono a los meses 6 y 9 explícitas.
 
