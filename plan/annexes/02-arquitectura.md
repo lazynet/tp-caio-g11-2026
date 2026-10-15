@@ -28,6 +28,12 @@ Los responsables humanos de cada hito están **pendientes** (el equipo no los
 acordó). Las cifras económicas del anexo son insumos para Finanzas, no el
 business case.
 
+**Actualización de ronda 11.** El pedido inicial se recostea como un paquete
+mínimo de los meses 1-3, sin plataforma central. Las tablas económicas y de
+capacidad del paquete anterior quedan como comparación pendiente de recosteo
+por `finance`, no como el nuevo pedido. La arquitectura objetivo y los meses
+4-12 conservan su carácter condicional; `caio` integra el nuevo alcance.
+
 ## Supuestos de partida
 
 | Supuesto | Valor | Fuente o tipo |
@@ -246,10 +252,81 @@ ruido. La responsabilidad humana de ratificarlo con la aprobación de hoy está 
 | Precisión mínima | Semiancho ≤ 3 puntos porcentuales: con más, el intervalo no separa las bandas de +3%, +5% y +8% |
 | Muestra mínima | **15 personas activas** (el piso del supuesto de 15-20), y "activa" es tener base congelada propia y PR en al menos 6 de las 8 semanas de la ventana. Lo que discrimina es el semiancho, no N: con 15-20 personas el piso se cumple si no hay bajas |
 | Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: cuenta como "espera" y la ventana se extiende 6 semanas; la extensión suma semanas por persona, no personas, así que solo baja el ruido de cada una. Vencida, rige la regla del Anexo F. Con N < 15, esperar no lo arregla: no se decide por valor y aplica "Viabilidad" |
-| Calidad | El mismo estimador e intervalo sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, con un margen de no inferioridad δ = +10% relativo (**supuesto sin dato**; se recalibra con la tasa de la preparación previa y se fija con la aprobación de hoy). Tres casos. **Daño** (límite inferior > 0): la ganancia no cuenta y el gate corta aunque el throughput pase. **Incierto** (el intervalo incluye 0 y el límite superior > δ): no hay evidencia de daño, pero tampoco de no deterioro; el throughput no puede pasar, cuenta como espera (6 semanas, una vez) y, vencida, como no pasa. **No deterioro demostrado** (límite superior ≤ δ): el gate decide solo por throughput. Con pocos eventos por 100 PR el intervalo es ancho: la serie de la preparación previa dice cuántos hay, y si no alcanzan para el tercer caso, el Anexo F lo sabe antes de la aprobación de hoy |
-| Respaldo | Cambio de base solo por un criterio mecánico que usa datos de la base, antes de cualquier tratamiento y ciego al resultado. En la semana 4 se mide el ruido placebo: semiancho del cambio entre las semanas 1-2 y 3-4, con el mismo estimador e intervalo, proyectado a la ventana del gate con el factor que la preparación previa calibre con la aprobación de hoy. Si el proyectado > 3 puntos con N ≥ 15, la base "no resuelve". Lo aplica la oficina del CAIO, sin discreción, y deja constancia (fecha, N, semiancho placebo, factor, versión) que ve el Directorio en la decisión del mes 3. **La retrospectiva no sirve para atribuir**: mezcla tendencia, estacionalidad (los meses 1-3 caen en enero-marzo; supuesto), adopción previa y cambios de equipo, y no baja la dispersión entre personas, que es la que domina. Si se usa, es una lectura contra tendencia, sin atribución: no libera capital (las lecturas de los meses 6 y 9 no pasan por throughput) y solo puede producir espera o corte. Alternativa con su costo, a decidir por `people` y `caio`: prolongar la base prospectiva a la semana 8 y correr 4 semanas la formación intermedia |
+| Calidad | El mismo estimador e intervalo sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, por separado, con un margen de no inferioridad δ = +10% relativo (**supuesto sin dato**; se recalibra con la tasa de la preparación previa y se fija con la aprobación de hoy). Tres casos ordenados. **Primero, daño** (algún límite inferior > 0): la ganancia no cuenta y el gate corta aunque el throughput pase o el límite superior sea ≤ δ. **Luego, incierto** (sin daño, algún intervalo incluye 0 y su límite superior > δ): no se demuestra no deterioro; cuenta como espera (6 semanas, una vez) y, vencida, como no pasa. **Solo sin daño ni incertidumbre, no deterioro demostrado** (ambos límites superiores ≤ δ): el gate decide por throughput. Tasas base cero: aplica la regla específica de abajo. Con pocos eventos el intervalo puede impedir probar no inferioridad; el acta de viabilidad lo declara antes de ratificar el método |
+| Respaldo | Cambio de base solo por un criterio mecánico que usa datos de la base, antes de cualquier tratamiento y ciego al resultado. En la semana 4 se mide el ruido placebo: semiancho del cambio entre las semanas 1-2 y 3-4, con el mismo estimador e intervalo, proyectado a la ventana del gate con el factor que la preparación previa calibre con la aprobación de hoy. Si el proyectado > 3 puntos con N ≥ 15, la base "no resuelve". Lo aplica la oficina del CAIO, sin discreción, y deja constancia (fecha, N, semiancho placebo, factor, versión) que ve el Directorio en la decisión del mes 3. **La retrospectiva no sirve para atribuir**: mezcla tendencia, estacionalidad (los meses 1-3 caen en enero-marzo; supuesto), adopción previa y cambios de equipo, y no baja la dispersión entre personas, que es la que domina. Si se usa, es una lectura contra tendencia, sin atribución: no libera capital (las lecturas de los meses 6 y 9 no pasan por throughput) y solo puede producir espera o corte. Alternativa con su costo, a decidir por `people` y `caio`: prolongar la base prospectiva a la semana 8 y desplazar 4 semanas la formación básica, la prueba y la formación intermedia, antes de iniciar cualquier tratamiento |
 | Congelamiento | Versión, δ, factor y umbral se fechan con la aprobación de hoy y no se editan desde que se congela la base. Un cambio posterior es un desvío: se registra con fecha y motivo, rige desde la ventana siguiente y la ventana en curso se lee con la versión anterior |
 | Viabilidad | Antes de la aprobación de hoy, con la serie de la preparación previa, se estima σ (dispersión entre personas del cambio relativo) y el semiancho esperado con la cohorte real, también para calidad. Condición, sin dato observado: con semiancho ≈ 1,645 σ / √n, el caso base (+3,75% en los meses 4-6, +9% en los meses 7-9) pasa la lectura del mes 6 con semiancho ≤ 0,75 (σ ≤ 1,8 con n = 15; ≤ 2,0 con n = 20; equivale a n ≥ 4,8 σ²) y la lectura del mes 9 con ≤ 1 (σ ≤ 2,4; ≤ 2,7; n ≥ 2,7 σ²). Con el máximo permitido (3), los límites son 0,75 y 6, y ninguno pasa: la precisión mínima separa las bandas, pero no alcanza para que el caso base pase. Si el σ de la preparación previa supera esos valores, el caso base espera en la lectura del mes 6 y corta; el Anexo F lo sabe antes de la aprobación de hoy y reformula (por ejemplo, decidir solo en la lectura del mes 9 si σ ≤ 2,4 / 2,7) o presenta el caso base como espera-y-corte. Con N < 15 no se decide por valor |
+
+**Precedencia de calidad.** Evaluá incidentes y retrabajo por separado: si
+cualquiera tiene límite inferior > 0, hay daño y el gate corta, incluso si su
+límite superior es ≤ δ. Solo sin daño en ambos indicadores se evalúa no
+inferioridad: ambos límites superiores deben ser ≤ δ. Si alguno queda incierto,
+se aplica espera y su vencimiento según el Anexo F; recién con calidad resuelta
+se decide por throughput. Así los casos no se superponen.
+
+**Tasas base cero o sin denominador.** No calcules variaciones relativas con
+base cero, ni agregues pseudoconteos. En throughput, una persona sin tasa base
+positiva no es elegible para el estimador apareado: dejá la exclusión y su efecto
+en cobertura y N en el acta, antes del tratamiento. En calidad, una tasa base
+cero impide probar el margen relativo: informá conteos, exposición y diferencia
+absoluta por 100 PR como descripción, sin declarar no inferioridad ni pasar por
+valor. Cero eventos en ambas ventanas tampoco demuestra equivalencia.
+
+Si no hay PR o personas-semana en el denominador, el indicador es no estimable,
+no cero. Reformulá antes de empezar (por ejemplo, margen absoluto y método para
+eventos escasos, sujetos a ratificación humana); si ocurre en una lectura,
+aplicá espera y luego la salida del Anexo F. Un incidente que activa suspensión
+en el Anexo C conserva esa precedencia, aunque no haya tasa relativa calculable.
+
+**Cuenta de precisión, aproximación de planificación.** Con semiancho simétrico
+de ±3 pp: +3,75% − 3 pp = +0,75% < +3% en M6; +9% − 3 pp = +6% < +8% en M9.
+Para esos estimados, pasar requiere semianchos ≤0,75 pp y ≤1 pp,
+respectivamente. No son resultados observados ni garantía de potencia: el
+bootstrap percentil puede ser asimétrico y el gate usa su límite inferior real.
+
+### Acta de viabilidad de datos, antes de ratificar el método
+
+Propuesta del equipo, pendiente de ejecución y ratificación humanas. Tener PR,
+CI y tickets no prueba que las series sean enlazables. Antes de aprobar el
+método y de iniciar el tratamiento, el acta debe permitir que otro operador
+reproduzca la extracción y las acciones del gate con el mismo corte.
+
+- Guardá consulta o script versionado, permisos de lectura, fecha de corte,
+  zona horaria, filtros, versión y huella del extracto. Los datos identificables
+  quedan en el entorno autorizado; al board llega evidencia anonimizada.
+- Documentá el diccionario y las claves PR→commit→CI→reversión→ticket→incidente,
+  incluidos enlaces faltantes, duplicados, correcciones y reglas de atribución.
+  Ausencia de enlace no equivale a ausencia de incidente o retrabajo.
+- Registrá padrón elegible, exclusiones y bajas, personas-semana expuestas,
+  mezcla de estratos, cohorte con base positiva y cobertura de cada enlace.
+  Una encuesta de uso no sustituye estas series.
+- Estimá precisión con la cohorte real y eventos disponibles; simulá pasa,
+  espera y corta de M6/M9, incluido daño, base cero y muestra insuficiente.
+  El ensayo no certifica atribución ni inventa observaciones.
+
+Cada ficha de indicador completa los siguientes campos; los responsables son
+roles propuestos, con asignación humana **pendiente**. Cobertura significa
+registros enlazados y maduros sobre registros elegibles, informando ambos
+conteos y los faltantes, sin reducir el denominador para ocultarlos.
+
+| Indicador | Fuente y numerador | Denominador | Ventana y maduración | Cobertura y responsable propuesto |
+|---|---|---|---|---|
+| Throughput | PR + CI + registro de reversiones: PR mergeados con calidad aprobada y sin reversión a 14 días | Personas-semana activas de la cohorte elegible; cambio apareado por persona contra su base | Base semanas 1-4 y ventana de gate de al menos 8 semanas, con corte fechado; cada PR madura 14 días | PR con CI y reversiones observables / PR elegibles; DevOps/QA produce, dirección técnica verifica |
+| Incidentes | Tickets e incidentes enlazados a PR: incidentes únicos atribuibles dentro de 30 días, con severidad separada | PR mergeados con CI aprobado y seguimiento completo de 30 días; tasa ×100, sin excluir los PR revertidos | Mismos cortes y estratos que throughput; seguimiento de 30 días | PR con seguimiento y enlace auditable / PR elegibles; QA produce, Seguridad verifica |
+| Retrabajo | PR, reversiones y tickets: PR con reversión o corrección atribuible dentro de 30 días, contados una vez por PR | Mismos PR maduros de calidad; tasa ×100 | Mismos cortes; seguimiento de 30 días | PR con reversiones/tickets observables / PR elegibles; QA produce, dirección técnica verifica |
+
+Fijá antes del tratamiento el cierre de cada ventana, dejando 30 días de
+seguimiento antes de la lectura de calidad; throughput exige sus 14 días.
+Los registros inmaduros quedan pendientes, nunca como ceros. El acta declara
+el desfase entre actividad y lectura, su cobertura y cualquier corrección
+versionada por eventos tardíos. Sin cobertura suficiente, no se pasa por valor.
+
+La autoridad del gate y quien ratifica el método son funciones distintas de
+quien extrae y verifica; sus responsables humanos siguen pendientes. Sin
+extracción reproducible, enlaces o precisión suficientes, reformulá el método
+y el calendario antes de iniciar. Si se extiende la base hasta la semana 8,
+desplazá también formación básica y prueba que comenzarían en la semana 5,
+además de la intermedia: ninguna intervención nueva entra en la base.
 
 **Conversión a valor: dos lecturas que responden preguntas distintas.** Con una
 ganancia de throughput *g*:
@@ -266,6 +343,33 @@ sensibilidad, con el destino de la capacidad decidido en la lectura del mes 6. N
 es caja por sí sola. El cálculo de capacidad liberada y del equilibrio lo hace
 Finanzas en el [Anexo E](05-business-case.md); este anexo le pide que use la
 lectura de horas evitadas y separe el retorno económico del retorno de caja.
+
+### Medición del problema de integración, antes del mes 6
+
+Antes de decidir construir el asistente de producto, observá a usuarios
+elegibles intentando integrar con la documentación y el soporte actuales en un
+sandbox autorizado, con datos propios o sintéticos. Registrá tarea, versión,
+pasos, obstáculos, ayuda recibida y resultado; no hace falta plataforma central
+para observar el problema.
+
+**Métrica principal propuesta:** tiempo a la primera integración exitosa,
+desde que el usuario dispone de acceso y prerrequisitos acordados hasta que
+completa el flujo de prueba y pasa la aceptación de integración definida antes
+de observarlo. Fuente: marcas del sandbox/CI y bitácora de la sesión. Registrá
+tiempo transcurrido y tiempo de trabajo por separado, población y ventana;
+reportá dispersión, integraciones completadas y pendientes, sin borrar fallas.
+
+**Secundaria propuesta:** consultas de soporte por integración (tickets y
+consultas de la misma tarea / intentos de integración elegibles), con ventana
+de seguimiento fijada previamente e intentos abiertos informados aparte.
+Producto y Comercial, con asignación humana pendiente, acuerdan elegibilidad,
+criterio de éxito y umbral antes de M6; `finance` costea el descubrimiento y
+elige cómo capturar valor. No se presume porcentaje de mejora ni ingreso.
+
+Compará mejorar documentación/soporte, configurar un asistente e integrarlo al
+producto sobre la misma tarea. Sin dolor observado, base o señal suficiente,
+diferí la construcción. Esta medición no elimina la dependencia de plataforma
+del itinerario vigente de producto: otra ruta requiere diseño y costeo.
 
 ### Contexto, evals y lo que el curso no resuelve
 
@@ -399,7 +503,7 @@ plantea propietario frente a open source; el partner es criterio del plan
 | Capacidad | Decisión | Por qué (ejes) | Alternativa descartada | Reversible |
 |---|---|---|---|---|
 | Modelos fundacionales | **Buy** vía API, ≥ 2 proveedores | Tiempo y capacidad: no se entrena | Entrenar o ajustar un modelo propio: sin datos de cliente utilizables | Sí |
-| Gateway, ruteo y registro de costo | **Agentificar**: ensamblar sobre piezas abiertas | Control: es donde se aplican nivel de dato, cliente y costo | Comprar una plataforma cerrada: lock-in en el punto de control | Sí |
+| Gateway, ruteo y registro de costo | **Agentificar**: ensamblar sobre piezas abiertas, como hipótesis de diseño a comparar en M3 | Control de nivel de dato, cliente y costo en llamadas enrutadas; no cubre por sí solo IDE, chat ni suite | Configurar herramientas existentes o comprar plataforma: siguen abiertas hasta probar cobertura y TCO equivalentes | Sí |
 | Agentes de código y asistentes internos | **Buy** la herramienta, **build** el contrato, skills y compuertas | Lo diferencial es el contrato de agente, no el producto | Atar el flujo a funciones exclusivas | Sí |
 | Orquestación para casos del producto | **Agentificar**: framework y runtime abiertos (clasificación del curso, a reverificar) | Control y trazabilidad | Caja negra de un proveedor | Parcial |
 | Retrieval y almacén vectorial | **Buy** gestionado sobre la nube existente | Tiempo y capacidad | Operar uno propio | Sí |
@@ -407,6 +511,50 @@ plantea propietario frente a open source; el partner es criterio del plan
 | Enmascarado de PII y DLP | **Buy** u open source | Capacidad interna escasa | Desarrollo propio | Sí |
 | Modelo en infraestructura propia (on-premise) | **Partner o diferir** hasta la decisión de los meses 10-12 | Hoy es una opción exploratoria de la propuesta al Directorio ([ficha](../../context/hechos/ia-en-producto-y-oferta.md)) | Comprometer hardware ya | **No** (capex) |
 | Programa de partners del proveedor de modelos | **Seguir la aplicación sin ponerla en el camino crítico** | Exige certificaciones y despliegues productivos que aún no existen | Condicionar la arquitectura al programa | Sí |
+
+### Comparación configurar / comprar / ensamblar en M3
+
+La tabla anterior expresa hipótesis de arquitectura objetivo, no una compra
+adjudicada. Compará las tres alternativas con los mismos requisitos, población,
+superficies, volumen, calidad y horizonte de 12 meses. Separá costos existentes
+de incrementales; `finance` completa montos de caja y tiempo, sin atribuir a una
+alternativa controles o beneficios que no se probaron.
+
+| Alternativa | Ventaja propuesta | Trabajo y residual a demostrar |
+|---|---|---|
+| Configurar las herramientas existentes | Ahorra integración nueva | Administración, permisos/MCP, exclusiones, escaneo local, exportación y revisión humana; comprobar capacidades del plan contratado y límites de cada superficie |
+| Comprar una solución | Puede reducir operación propia | Probar cobertura efectiva y operación delegada; contar integración, licencias, soporte, límites contractuales, salida y dependencia del proveedor |
+| Ensamblar sobre piezas abiertas | Adapta controles e integración | Más mantenimiento propio: upgrades, pruebas, incidentes, disponibilidad, seguridad y salida; probar portabilidad y capacidad operativa |
+
+**Matriz a completar en M3.** Cada fila se desdobla por alternativa con la
+misma prueba y criterio de aceptación; registrá resultado y evidencia, no solo
+presencia de una función. Todos los resultados y costos están pendientes.
+
+| Requisito | Superficie | Prueba | Residual | Alternativa | Costo |
+|---|---|---|---|---|---|
+| Datos y repositorios habilitados, secretos excluidos, autonomía y MCP acotados | Terminal/agente de código | Acción permitida; secreto sintético; permiso denegado; inyección indirecta; intento de bypass | Primera exposición, evasión y evidencia incompleta: aceptación o restricción pendiente | Configurar / comprar / ensamblar, por separado | Finanzas: caja, horas de configuración, prueba y operación |
+| Restricciones de datos, acceso y retención | Chat/escritorio e IDE, cada uno separado | Verificar configuración del plan y repos/contenido permitido; dato sintético prohibido; bypass con cliente/cuenta alternativos | Sin bloqueo probado, no declarar cobertura; limitar o suspender uso afectado | Las mismas tres, sin atribuir cobertura al gateway | Finanzas: administración, eventual cambio de plan y compensatorios |
+| Compartición, datos del dominio y auditoría | Correo/documentos/reuniones | Probar permisos, salida de dato sintético y evento auditable en entorno autorizado | Capacidad según edición y equipo, pendiente; aceptación no reemplaza permiso contractual | Las mismas tres | Finanzas: licencias incrementales, administración y revisión |
+| Medición reproducible y calidad | PR/CI/reversiones/tickets/incidentes y consolas de uso | Reejecutar extracción y tasas; probar maduración, faltantes y lectura simulada del gate | Cohorte o enlaces insuficientes impiden atribuir y pasar por valor | Las mismas tres con idéntico conjunto de indicadores | Finanzas: instrumentación, lectura y mantenimiento |
+| Nivel de dato, aislamiento y trazabilidad, solo si se habilitan casos propios | Aplicaciones nuevas, por cliente | Probar denegación, trazas y cruces de tenant; calidad sobre el mismo lote | No se habilitan sin diseño y controles; sin casos propios no es requisito del paquete mínimo | Las mismas tres para ese alcance ampliado | Finanzas: desarrollo/integración, operación, salida y contingencia |
+
+El TCO comparable incluye configuración/integración, prueba, licencias y
+consumo, operación, mantenimiento de controles, respuesta a incidentes y
+migración/salida, con iguales supuestos de volumen y reserva. Una oferta sin
+cobertura equivalente debe declarar su brecha; una prohibición contractual se
+cumple excluyendo el uso, no comprando más tecnología. El gateway no reemplaza
+los controles de IDE, chat ni suite.
+
+**Recomendación técnica:** elegir la respuesta mínima que pase las pruebas;
+ninguna alternativa gana sin evidencia. Las cuatro condiciones —brecha
+documentada, alternativas comparables, economía incremental o aprendizaje con
+pérdida aceptada, y capacidad demostrada— son una **propuesta pendiente de
+ratificación humana**, no la regla vigente de señal del mes 3. Dirección técnica,
+Seguridad, Council y Directorio: responsables humanos pendientes.
+
+Si no hay brecha incremental justificada, proponé diferir plataforma y
+reevaluarla en M6/M9, con calendario y costo actualizados. Si falla un control
+obligatorio, suspendé el uso afectado. No se traslada toda plataforma al año 2.
 
 ### Puertas de un solo sentido
 
@@ -528,7 +676,70 @@ fondos, que quedan en las decisiones de los meses 3, 6, 9 y 12. Este anexo aport
 tablero el reporte mensual de FinOps con el escenario de consumo y la telemetría
 unificada; no suma salidas ni costo nuevos.
 
-### Pedido de hoy (parte técnica)
+### Paquete técnico mínimo de los meses 1-3, para recostear
+
+**Alcance propuesto en ronda 11:** configurar las herramientas ya contratadas
+y medir prácticas sobre repositorios propios habilitados, con controles
+equivalentes para ese uso. No incluye gateway, harness central, retrieval,
+casos propios nuevos ni piloto de producto. El valor que se intenta medir es
+el de las prácticas de uso y revisión del agente existente, no el de plataforma.
+
+Configurá permisos, autonomía con aprobación humana, MCP aprobados, escaneo
+local y en repositorio, repositorios/contenido permitido y administración de
+acceso, datos y retención de chat, IDE y suite, según lo que admita cada plan.
+Probá acción permitida, dato sintético prohibido y bypass en cada superficie
+que se habilite; para el agente, agregá inyección indirecta y revisión de sus
+acciones. Cerrá críticos y registrá aceptación del residual según el Anexo C.
+Sin capacidad técnica o permiso contractual, restringí o suspendé el uso
+afectado; una encuesta no lo convierte en control probado.
+
+Exportá uso de las consolas existentes, PR/CI/reversiones/tickets/incidentes a
+extractos y scripts versionados de lectura, en almacenamiento existente con
+acceso limitado, sin guardar prompts ni secretos. Conciliá uso por superficie,
+seats y personas activas con resultados; si no hay exportación, reportá uso
+estimado aparte. Eso permite un tablero periódico sin servicio central nuevo.
+
+Entregables: inventario y matriz de controles, acta de viabilidad reproducible,
+base congelada, registro de cambios de prácticas, lecturas de uso y calidad y
+comparación de alternativas en M3. Aplicá los controles obligatorios antes de
+medir la base y documentalos como punto de partida; formación y prácticas
+nuevas empiezan después del congelamiento. M1-M3 no promete ganancia atribuida.
+
+**Horas-persona estimadas para todo M1-M3**, incluida la preparación técnica
+previa, como supuesto de planificación de este anexo, no capacidad confirmada:
+
+| Rol propuesto | Horas | Trabajo incluido y supuesto |
+|---|---|---|
+| Arquitectura / tech lead | 24-40 | Alcance, fuentes, protocolo, diseño de pruebas y comparación M3; incluye 4-8 h previas de viabilidad |
+| DevOps / administración de herramientas | 32-56 | Configuración de las cuatro superficies, exportaciones y pruebas; acceso administrativo y funciones del plan disponibles |
+| QA / análisis de datos | 40-64 | Extracción, diccionario/enlaces, base, maduración y lectura reproducible; incluye 8-16 h previas; fuentes exportables sin saneamiento masivo |
+| IA aplicada | 8-16 | Revisar contrato/skills y ensayos del agente; capacidad demostrada interna o servicio acotado, sin suponer contractor dedicado |
+| Seguridad, aporte técnico compartido con C | 24-40 | Clasificación, pruebas negativas/bypass, red team acotado y residual; no incluye política, legal ni operación completa de gobierno |
+| Senior / champion de la cohorte, compartido con D | 16-24 | Validar tareas, revisión humana y registro de prácticas; no incluye formación general ni todas las horas de los participantes |
+
+Total técnico: **144-240 h**; de ellas, **104-176 h** son los cuatro primeros
+roles y **40-64 h** son aportes compartidos con C/D. `finance`, `governance` y
+`people` concilian actividades antes de sumar: una hora compartida se cuenta
+una sola vez. No se suman estas horas a las fracciones del paquete anterior.
+
+Supuestos: una cohorte propia de 15-20 personas, cuatro superficies existentes,
+una ronda de configuración y corrección de hallazgos, fuentes accesibles y
+sin conectores nuevos. No incluye formación, horas de prueba de toda la
+cohorte, gobierno/legal, descubrimiento de producto ni operación M4-M12;
+los otros dueños deben agregarlos al paquete completo. Toda caja incremental,
+cambio de plan o nueva licencia queda por cotizar por `finance`, sin asumir cero.
+
+**Éxito:** otro operador reproduce los indicadores y cada uso habilitado tiene
+controles probados y residual aceptado antes de extender la prueba. Responsable
+humano pendiente. **Abandono/revisión:** sin datos, horas liberadas o controles,
+reducí/diferí y recosteá; si hacen falta saneamiento, conectores o más rondas,
+el rango deja de ser válido. No se presume que la plataforma resuelva esa falta.
+
+### Pedido de hoy (parte técnica): referencia anterior, pendiente de recosteo
+
+La tabla siguiente conserva la referencia del paquete anterior para `finance`;
+el nuevo pedido se arma con el mínimo de arriba y los aportes de C/D. Sus FTE,
+caja y contractor no son el presupuesto vigente del mínimo de ronda 11.
 
 | Elemento | Qué se pide |
 |---|---|
@@ -561,7 +772,7 @@ y el estudio de la matriz. Desde la arquitectura, la propuesta es:
 | Cuándo | Qué | Costo |
 |---|---|---|
 | Antes de la aprobación de hoy (la preparación previa, octubre-diciembre de 2026) | Verificar que existe historial utilizable de PR, integración continua, incidentes y tickets de los últimos dos trimestres (1 día-persona, supuesto del equipo) y extraer la **serie retrospectiva**, que sirve para estimar tendencia y ruido, no como base de atribución. Es un costo previo propuesto: el [Anexo E](05-business-case.md) lo consolida y la aprobación de hoy lo autoriza, o lo ratifica si consta la ejecución | ~USD 0,1-0,4 mil de tiempo de este anexo |
-| Semanas 1-4 del plan | **Base prospectiva congelada**, con la unidad de la sección "Throughput", antes de cualquier formación o herramienta nueva (formación intermedia de Tecnología y gateway); se fecha y no se edita | Dentro de la fracción de DevOps/QA de los meses 1-3 (3-5 días-persona, supuesto del equipo) |
+| Semanas 1-4 del plan | **Base prospectiva congelada**, con la unidad de la sección "Throughput", antes de cualquier formación, prueba de prácticas o herramienta nueva; controles obligatorios previos documentados como punto de partida. Si la base se extiende a semana 8, también se desplazan básico, prueba e intermedio | Dentro de la fracción de DevOps/QA del paquete anterior (3-5 días-persona, supuesto del equipo); recosteo del mínimo arriba |
 | Semanas 5-13 del plan | Matriz de superficies y telemetría unificada; medición contra la base, con control concurrente donde exista. **La ganancia no se atribuye antes de los meses 4-6** (la rampa base es 0% en los meses 1-3) | Dentro del esfuerzo de los meses 1-3 |
 
 La serie retrospectiva y la base prospectiva no se mezclan: la primera estima
@@ -622,7 +833,7 @@ y la escala al Directorio, pero no libera la plataforma: eso queda en la decisi�
 | Piloto de producto y red team (meses 7-12) | Solo si la lectura del mes 6 lo libera | No corre; con señal de cliente en la lectura del mes 6 no arranca en los meses 7-9 por falta de base (ver abajo) |
 | Prueba extendida: contrato de agente, skills y guía de revisión en toda la cohorte, sobre repositorios que la matriz habilite | Dentro de la formación | **Se mantiene**; es el mecanismo de la ganancia g ([ficha](../../context/supuestos/alternativas-de-menor-alcance.md)) |
 | Medición contra la base, telemetría, matrices de superficie y de clientes | Se mantienen | **Se mantienen**, con la cohorte completa |
-| Controles | Controles con bloqueo y registro del Anexo C | Solo el gobierno mínimo del Anexo C (política, matriz, inventario, legal): el riesgo de inyección indirecta de prompts y el de fuga de secretos quedan en política |
+| Controles | Controles con bloqueo y registro del Anexo C | Gobierno mínimo más compensatorios probados del Anexo C: hooks, escaneo local, MCP acotados y red team interno del agente de código, con críticos cerrados y residual aceptado por el Council; no equivale a cobertura central de todas las superficies |
 | Infraestructura propia y revisión de contratos (meses 10-12) | Meses 10-12 | Meses 10-12, sin demanda: no se compra |
 
 **Qué se pierde o se atrasa sin señal.**
@@ -635,8 +846,10 @@ y la escala al Directorio, pero no libera la plataforma: eso queda en la decisi�
   lo corre un tramo: liberar en la lectura del mes 6 lo lleva a los meses 10-12, sin margen; en la del mes 9
   no llega a nivel 2 en el año.
 - **Modo control:** el gateway en laboratorio y el bypass por superficie no
-  corren en los meses 4-6. Las superficies quedan cubiertas solo por política y matriz,
-  sin control verificado.
+  corren en los meses 4-6. Se mantienen los compensatorios del Anexo C: prueba
+  de secreto sintético y bypass del agente de código, red team acotado y
+  aceptación fechada del residual. Las demás superficies conservan sus
+  restricciones y administración; no se declaran cubiertas sin prueba propia.
 - **Producto:** una señal de cliente en la lectura del mes 6 no alcanza para un piloto en los meses 7-9,
   porque gateway, harness y aislamiento no existen. Arranca como pronto en los meses 10-12
   con una base recién armada, o pasa al año 2 (lo decide `caio` en esa lectura).
@@ -659,11 +872,14 @@ cambio de precio o una demanda contractual). *Recomendación:* la bifurcación.
 leer cada señal; este anexo aporta la telemetría. *Costo:* el del Anexo E; la
 diferencia entre ramas, ≈ 400 − 199 ≈ 201, es lo que no se gasta sin señal.
 *Riesgo (para `governance`):* en la rama sin señal no hay bloqueo ni registro
-en el gateway, y los riesgos de inyección indirecta de prompts y de fuga de secretos dependen de la política. *Responsable humano:*
+central en el gateway; inyección indirecta y fuga de secretos requieren los
+compensatorios probados del Anexo C y residual aceptado, sin garantía de bloqueo
+en las otras superficies. *Responsable humano:*
 pendiente. *Criterio de éxito:* en la lectura del mes 6 la rama que corrió deja las condiciones de
-la tabla. *Abandono:* la prueba extendida no arranca si la matriz no habilita
-repositorios para 15 personas activas; ahí la rama sin señal queda en medición y
-formación.
+la tabla. *Abandono:* la prueba extendida no arranca sin repositorios habilitados
+para 15 personas activas, compensatorios probados, críticos cerrados y residual
+aceptado; ahí la rama sin señal queda en medición y formación. Un incidente
+revoca la aceptación según el Anexo C y suspende la extensión.
 
 ## Insumos para Finanzas
 
