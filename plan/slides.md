@@ -10,7 +10,7 @@ size: 16:9
 <!-- Fuente única del deck. Nunca edites un deck generado: corré scripts/build-deck.sh.
      Una slide por `---`, con un título `#` cada una. Máximo 10 slides. Arco:
      problema → beneficio → alternativas → costo → resolución. Borrador del CAIO: toda
-     cifra viene de un anexo y de fichas en draft. El pedido completo vive solo en la
+     cifra viene de un anexo y de una fuente. El pedido completo vive solo en la
      slide 10; la 9 muestra su pérdida máxima. Diseño: plan/theme/acme.css; los bloques
      HTML llevan Markdown adentro, separado por líneas en blanco, y los links siguen en
      Markdown. -->
@@ -30,7 +30,7 @@ size: 16:9
 
 <p style="max-width:820px">Hoy la IA se usa, pero su valor incremental no está medido. Proponemos empezar por lo mínimo que compra esa medición, con controles probados y las herramientas que ya pagamos, y ampliar solo con evidencia.</p>
 
-<p class="fine">Caso propuesto · borrador sin verificación humana · sin promesa de repago en el año</p>
+<p class="fine">Cifras estimadas, por validar antes de comprometer presupuesto · sin promesa de repago en el año</p>
 
 ---
 
@@ -41,7 +41,7 @@ size: 16:9
 <div class="grid main-side">
 <div class="plain">
 
-| Dimensión (M1U1) | Madurez propuesta | Lo que la explica |
+| Dimensión | Madurez propuesta | Lo que la explica |
 |---|---|---|
 | Estrategia | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Propuestas de IA sin decidir |
 | Datos e infraestructura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Buena nube, datos sin inventario |
@@ -123,14 +123,14 @@ size: 16:9
 |---|---|
 | Piloto sobre el agente actual | 47 |
 | Gobierno y formación desde el inicio | 161 |
-| Rama sin señal, paquete anterior | ≈199 |
+| Rama sin señal, paquete completo | ≈199 |
 | Plataforma sin producto | 394 (≈400) |
 | Plataforma con producto | 471 |
 
 </div>
 </div>
 
-<p class="note">Miles de USD. Alcances distintos, sin comparación homogénea: no prueban que el mínimo sea la mejor compra. El pedido anterior (33 + 6 de caja, 72 + 7 de tiempo) queda como alternativa. En el mes 3 se comparan gastos futuros evitables.</p>
+<p class="note">Miles de USD. Alcances distintos, sin comparación homogénea: no prueban que el mínimo sea la mejor compra. El pedido completo (33 + 6 de caja, 72 + 7 de tiempo) queda como alternativa. En el mes 3 se comparan gastos futuros evitables.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -328,10 +328,10 @@ size: 16:9
 <div>
 <p class="eyebrow">Equipo · Grupo 11</p>
 <p>Gabriela Temporale · Martin Vago · Pablo Ces · Eduardo Chaparro · Rafael Cioffi · Nicolás Tanos · Luciano De Corso · Maximiliano Zerr Morinigo</p>
-<p class="fine">Responsables por sección y por gate: pendientes de acordar en el equipo.</p>
+<p class="fine">Responsables por sección y por gate: a designar.</p>
 </div>
 <div class="fine">
-<p>Miles de USD. Sujeto a horas liberadas y controles probados antes de usar; plataforma y producto se recostean.</p>
-<p>Hecho con el modelo que proponemos: roles de agentes, revisión adversarial y chequeos de fuentes y fuga. Fichas en borrador; ensayo pendiente.</p>
+<p>Miles de USD. Sujeto a horas liberadas y controles probados antes de usar; plataforma y producto se vuelven a costear.</p>
+<p>Hecho con el modelo que proponemos: roles de IA, revisión adversarial y chequeos de fuentes y fuga. Cifras estimadas, por validar contra fuentes internas; ensayo pendiente.</p>
 </div>
 </div>

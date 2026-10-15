@@ -10,37 +10,37 @@ Slide que sustenta: [Slide 2 — Problema y diagnóstico por conciliar](../slide
 El diagnóstico también ordena el beneficio que se mide en la
 [Slide 3 — Beneficio principal y captura](../slides.md).
 
-> **Borrador sin verificación humana.** Todas las fichas de `context/` que cita
-> este anexo están en `draft`; ninguna cifra es apta para el peer review ni para
-> la entrega.
+> **Cifras estimadas, todavía sin validar contra fuentes internas.** Se validan
+> antes de comprometer presupuesto.
 
 ## Objetivo
 
-Mostrar dónde está Acme Labs hoy en las cinco dimensiones de madurez de M1U1
-([ficha](../../material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md)) y
+Mostrar dónde está Acme Labs hoy en las cinco dimensiones del diagnóstico de
+madurez
+([Fuente](../../material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md)) y
 de ahí sacar las dos o tres brechas que el plan ataca primero.
 
 **El diagnóstico es una hipótesis.** Antes de comprometer horas, hay que
 conciliar corte, nómina, contratistas, personas/FTE y horas por rol: las fuentes
 documentales cubren poblaciones, unidades y fechas distintas (ver "Perímetro por
-conciliar"). Para el peer review y la entrega, además, las fichas pasan a
-`verified` con bloque humano. Son exigencias distintas: una etiqueta `verified`
-no libera agendas, y una agenda aprobada no sustituye la trazabilidad.
+conciliar"). Además, las cifras se validan contra fuentes internas. Son
+exigencias distintas: validar una cifra no libera agendas, y una agenda aprobada
+no sustituye la trazabilidad.
 
-**El puntaje es una propuesta del CAIO a validar por el equipo, no un hecho.** Sale
-de leer las fichas de `context/`, todas en `draft`, sin entrevistas ni encuestas
-propias: el paso 2 del método de M1U1 (entrevistas y encuestas por nivel) no se
-hizo. Responsable humano de validar el puntaje: **pendiente**.
+**El puntaje es una propuesta del CAIO a validar, no un hecho.** Sale de leer las
+fuentes del caso, todas con cifras estimadas, sin entrevistas ni encuestas
+propias: el paso 2 del método de diagnóstico de madurez (entrevistas y encuestas
+por nivel) no se hizo. Responsable de validar el puntaje: a designar.
 
 ## Supuestos de partida
 
 | Supuesto | Valor | Fuente o tipo |
 |---|---|---|
-| Escala | 1 (Inicial) a 5 (Transformacional); el curso describe solo los niveles 1, 3 y 5 | [Ficha M1U1](../../material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md) |
-| Cómo se lee un 2 | Entre el nivel 1 y el 3 descriptos: hay piezas del 3, pero sin formalizar ni medir | Criterio del CAIO, porque el curso no describe el 2 |
+| Escala | 1 (Inicial) a 5 (Transformacional); el método describe solo los niveles 1, 3 y 5 | [Fuente: diagnóstico de madurez](../../material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md) |
+| Cómo se lee un 2 | Entre el nivel 1 y el 3 descriptos: hay piezas del 3, pero sin formalizar ni medir | Criterio del CAIO, porque el método no describe el 2 |
 | Alcance | La organización completa: producto que se vende y operación interna | [Índice del caso](../../context/index.md) |
-| Evidencia | Solo fichas de `context/` (hechos y supuestos anonimizados) | [Índice del caso](../../context/index.md) |
-| Corte temporal | Datos hasta octubre de 2026 con cortes distintos por ficha: nómina y contratistas a septiembre, utilización promedio de 2026, concentración y cifras financieras del cierre de agosto | [Situación económica](../../context/hechos/situacion-economica.md), [tamaño](../../context/hechos/tamano-y-estructura.md), [capacidad](../../context/hechos/capacidad-y-utilizacion.md) |
+| Evidencia | Solo hechos y supuestos anonimizados del caso | [Índice del caso](../../context/index.md) |
+| Corte temporal | Datos hasta octubre de 2026 con cortes distintos por fuente: nómina y contratistas a septiembre, utilización promedio de 2026, concentración y cifras financieras del cierre de agosto | [Situación económica](../../context/hechos/situacion-economica.md), [tamaño](../../context/hechos/tamano-y-estructura.md), [capacidad](../../context/hechos/capacidad-y-utilizacion.md) |
 
 ## Evidencia
 
@@ -55,7 +55,7 @@ hizo. Responsable humano de validar el puntaje: **pendiente**.
 | Adopción y valor | 1 en producto, 2 en interno | Sin IA productiva documentada en la oferta ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). En lo interno hay uso alto en Tecnología y un piloto con criterios cumplidos, pero sin línea de base de productividad ([productividad](../../context/supuestos/ganancia-de-productividad.md)) | Un caso en producción con valor medido contra una línea de base |
 
 No se promedia: un promedio de 2 esconde que la brecha más grande está en el
-producto que se vende y en Operaciones. Las fichas no permiten afirmar ausencia
+producto que se vende y en Operaciones. Las fuentes no permiten afirmar ausencia
 universal de toda medición: lo que falta es valor incremental medido contra una base.
 
 ### Perímetro por conciliar antes de comprometer horas
@@ -69,11 +69,11 @@ universal de toda medición: lo que falta es valor incremental medido contra una
 **Qué se concilia, en privado y con quien tenga acceso:** el corte común, la
 nómina, los contratistas, la conversión personas→FTE y las horas por rol, en la
 matriz semanal de [Anexo D](04-personas-cultura.md) ("Capacidad efectiva"). La
-supuesta diferencia con una conversación de dotación no está respaldada en el
-repo: no se afirma que el rango esté mal ni se explica la diferencia como hecho.
-Sin conciliación no se derivan las horas del [Anexo E](05-business-case.md) de
-los agregados; si cambian los insumos, se recalcula. Responsables humanos
-(Talento, Operaciones, Finanzas, Seguridad): **pendientes**.
+supuesta diferencia con una conversación de dotación no está respaldada por
+ninguna fuente: no se afirma que el rango esté mal ni se explica la diferencia
+como hecho. Sin conciliación no se derivan las horas del
+[Anexo E](05-business-case.md) de los agregados; si cambian los insumos, se
+recalcula. Responsables (Talento, Operaciones, Finanzas, Seguridad): a designar.
 
 ### Hechos de contexto que condicionan el plan
 
@@ -88,7 +88,7 @@ los agregados; si cambian los insumos, se recalcula. Responsables humanos
 
 ### Brechas que el plan prioriza
 
-Siguiendo el paso 6 de M1U1 (dos o tres brechas críticas), el CAIO propone:
+Siguiendo el método de diagnóstico de madurez (paso 6: dos o tres brechas críticas), el CAIO propone:
 
 1. **Gobernanza:** ratificar la política y armar la matriz de clientes. Es la
    condición para cualquier caso de IA en el producto ([Anexo C](03-gobierno-seguridad.md)).
@@ -100,35 +100,35 @@ Siguiendo el paso 6 de M1U1 (dos o tres brechas críticas), el CAIO propone:
    comercial escrita, no se construye ([Anexo F](06-roadmap-riesgo.md)).
 
 Talento y cultura no queda afuera: es el habilitador de las tres
-([Anexo D](04-personas-cultura.md)). Igual que en el caso resuelto del curso, no
+([Anexo D](04-personas-cultura.md)). Como en el caso de referencia del método, no
 tiene base sólida sin estrategia y datos confiables.
 
 ## Riesgos y mitigación
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
-| El puntaje refleja documentos y no la práctica | Alta | Medio | Validar con 2-3 sesiones con referentes de cada área, como propone la versión extendida de M1U1 | Si la validación mueve dos o más dimensiones, se rehace el orden de prioridades |
+| El puntaje refleja documentos y no la práctica | Alta | Medio | Validar con 2-3 sesiones con referentes de cada área, como propone la variante extendida del diagnóstico de madurez | Si la validación mueve dos o más dimensiones, se rehace el orden de prioridades |
 | El perímetro de personas mezcla poblaciones y fechas | Alta | Alto para la capacidad | Conciliar corte, nómina, contratistas, personas/FTE y horas por rol antes de comprometer horas | Sin conciliación no se inicia el paquete mínimo |
-| Las fichas de `context/` están en `draft` | Alta | Alto para la entrega | Verificación humana de las fichas que sostienen cada puntaje | Sin fichas `verified`, el diagnóstico no va a la versión de peer review como hecho |
+| Las cifras del caso son estimadas y no están validadas contra fuentes internas | Alta | Alto | Validar las fuentes que sostienen cada puntaje | Sin validación, el diagnóstico se presenta como hipótesis y no como hecho |
 | La telemetría solo mide el agente de código y subestima el uso en staff | Alta | Medio | Medir chat y Workspace en los meses 1-3 ([Anexo D](04-personas-cultura.md)) | — |
 | Leer la baja adopción de Operaciones como problema cultural | Media | Medio | Separar lo contractual (el cliente fija herramientas) de lo cultural | — |
 
 ## Decisiones
 
-- **Usar las cinco dimensiones de M1U1** y no la variante extendida (seis ejes de
-  NovaGob y AIMM): son las que pide la cursada y AIMM sigue en `draft`
-  ([huecos](../../material/huecos.md)). Reversible.
+- **Usar las cinco dimensiones del diagnóstico de madurez** y no la variante
+  extendida (seis ejes de NovaGob y AIMM): son las del método base y AIMM sigue
+  sin validar ([fuentes faltantes](../../material/huecos.md)). Reversible.
 - **Puntuar producto e interno por separado** en Adopción y valor, y Tecnología y
   Operaciones por separado en Talento. Alternativa descartada: un solo número por
   dimensión, que esconde dónde está la brecha. Reversible.
-- **Validar antes del peer review:** el equipo confirma o corrige los puntajes en
-  una sesión; quien valida queda **pendiente**. Criterio de éxito: cada puntaje con
-  al menos una ficha `verified` detrás.
+- **Validar antes de comprometer presupuesto:** se confirman o corrigen los
+  puntajes en una sesión; quien valida: a designar. Criterio de éxito: cada puntaje
+  con al menos una fuente validada detrás.
 
 ## Cautelas
 
 - Es un diagnóstico de escritorio, sin entrevistas: se toma como hipótesis.
 - El estado de la política es al 2026-04-21; no hay registro posterior.
-- Los niveles 2 y 4 no están descritos en el curso; el 2 se usa como intermedio.
-- Ninguna cifra de este anexo es apta para la entrega hasta que sus fichas pasen a
-  `verified`.
+- Los niveles 2 y 4 no están descritos en el método; el 2 se usa como intermedio.
+- Las cifras de este anexo son estimadas y se validan contra fuentes internas
+  antes de comprometer presupuesto.

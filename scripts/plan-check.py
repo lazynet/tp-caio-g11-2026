@@ -23,6 +23,47 @@ ANNEX_SECTIONS = (
     "Decisiones",
 )
 
+# El PDF es un informe para el directorio: no muestra quién iteró, cómo trabajó el
+# equipo ni los códigos internos de la cursada.
+PROCESS_TEXT = re.compile(
+    # El nombre suelto va en la slide del equipo; lo que no va es su autoría de decisiones.
+    r"\blazynet\b|\bdecisi[óo]n (?:humana )?de Mart[ií]n\b|\bdecidi[óo] Mart[ií]n\b"
+    r"|\bronda\s+\d+\w*|\besta ronda\b"
+    r"|\bversi[óo]n (?:anterior|previa|original)\b"
+    r"|\b(?:pedido|paquete|programa|propuesta|alcance) anterior\b"
+    r"|\breemplazad[oa] como\b|\bpeer review\b|\bdocentes?\b"
+    r"|\bfichas?\b|\bdraft\b|\bcodex\b|\bhuecos\b|\b(?:context|material|private)/"
+    r"|\b(?:regla|referencia|versi[óo]n|recomendaci[óo]n)(?: \w+)? del borrador\b"
+    r"|`(?:caio|architect|governance|people|finance|board)`"
+    r"|\bm\d+ ?u\d+\b",
+    re.IGNORECASE,
+)
+
+
+def frontmatter_lines(text):
+    # Los errores citan la línea del archivo, no la del cuerpo.
+    lines = text.lstrip("\ufeff").splitlines()
+    return next(i for i in range(1, len(lines)) if lines[i].strip() == "---") + 1
+
+
+def process_text(name, body, offset=0):
+    # No se renderizan: comentarios, destinos de links, definiciones de referencia
+    # y etiquetas de notas al pie.
+    body = re.sub(
+        r"<!--.*?-->", lambda m: "\n" * m[0].count("\n"), body, flags=re.DOTALL
+    )
+    found = []
+    for line_number, line in enumerate(body.splitlines(), offset + 1):
+        if re.match(r"\s{0,3}\[(?!\^)[^\]]+\]:\s*\S", line):
+            continue
+        line = re.sub(r"\]\([^)]*\)|\[\^[^\]]*\]", "]", line)
+        match = PROCESS_TEXT.search(line)
+        if match:
+            found.append(
+                f"{name}:{line_number}: texto de proceso en el informe: {match[0]!r}"
+            )
+    return found
+
 
 def evidence_kind(path, root):
     for name in ("context", "material", "defense/evidence"):
@@ -220,9 +261,8 @@ def annex_files(root):
 def check_annex(path, root, mode):
     name = path.relative_to(root)
     try:
-        metadata, body = split_frontmatter(
-            path.read_text(encoding="utf-8"), ANNEX_TYPES
-        )
+        text = path.read_text(encoding="utf-8")
+        metadata, body = split_frontmatter(text, ANNEX_TYPES)
     except (OSError, ValueError) as exc:
         return [f"{name}: {exc}"]
     errors = []
@@ -243,6 +283,7 @@ def check_annex(path, root, mode):
     for section in ANNEX_SECTIONS:
         if section.casefold() not in headings:
             errors.append(f"{name}: falta la sección ## {section}")
+    errors.extend(process_text(name, body, frontmatter_lines(text)))
     return errors
 
 
@@ -264,6 +305,7 @@ def check(root, deck, mode):
         )
     if mode == "delivery" and metadata.get("status") == "draft":
         errors.append("Entrega rechazada: deck declarado draft")
+    errors.extend(process_text(deck.relative_to(root), body, frontmatter_lines(text)))
     for line_number, line in enumerate(visible(body).splitlines(), 1):
         if re.fullmatch(
             r" {0,3}(?:-(?:[ \t]*-){2,}|\*(?:[ \t]*\*){2,}|_(?:[ \t]*_){2,})[ \t]*",
