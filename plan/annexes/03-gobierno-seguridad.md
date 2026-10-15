@@ -6,7 +6,7 @@ title: "Anexo C — Gobierno, seguridad y compliance"
 
 # Anexo C — Gobierno, seguridad y compliance
 
-Slide que sustenta: [Slide 5 — Gobierno y seguridad](../slides.md).
+Slides que sustenta: [Slide 6 — Gobierno y seguridad](../slides.md).
 
 ## Objetivo
 
@@ -596,13 +596,13 @@ del riesgo o el Council acepta el residual según su autoridad, con vencimiento;
 quedan pendientes de asignación. Gasto dentro del techo o buena adopción no reemplazan esta
 aceptación. Seguridad puede suspender el uso afectado según "Derechos de decisión".
 
-**Calendario conservado.** Las pruebas y compensatorios de las tablas siguientes siguen en
-M4-M6. Llevar los controles aplicables a M1-M3 para operar el pedido mínimo es una **opción
-pendiente de validar horas, costo y capacidad**, estimada en "Insumo para el paquete mínimo
-M1-M3". No se adelantan por esta edición ni se declaran instalados. Si se quiere iniciar o
-ampliar antes, primero se aprueba y ejecuta esa opción; sin prueba y aceptación, ese uso
-no se inicia ni se amplía. El residual de usos existentes también debe revisarse: no hay
-aceptación automática por ser una herramienta ya aprobada.
+**Calendario del mínimo propuesto.** Para los usos del paquete mínimo, las pruebas por
+superficie se ejecutan en M1-M3 antes de habilitar, con las horas de E; el resto de las
+tablas sigue en M4-M6. La ejecución queda **condicionada a validar horas, costo y capacidad**
+del "Insumo para el paquete mínimo M1-M3", consolidado en el [Anexo E](05-business-case.md).
+No se declaran controles instalados. Sin esa validación, prueba y aceptación, el uso
+afectado no se inicia ni se amplía. El residual de usos existentes también debe revisarse:
+no hay aceptación automática por ser una herramienta ya aprobada.
 
 | Control | Rige en las dos ramas | Solo con señal en el mes 3 |
 |---|---|---|
@@ -727,11 +727,19 @@ independencia disponible, no se declara probado el control. Los USD de tiempo sa
 [supuesto de costo cargado por rol](../../context/supuestos/costo-cargado-por-rol.md);
 las licencias existentes y la capacitación las concilian `architect` y `people`.
 
+**Seguridad: política fuera del aporte técnico de B.** Las 24-40 h técnicas del
+[Anexo B](02-arquitectura.md) pueden reutilizarse para matriz y pruebas solo con confirmación
+de alcance. Las 4-8 h de política de este anexo no están incluidas en B: se suman aparte,
+más 6 h de Council; total provisional de Seguridad: 34-54 h. No se absorbe la política
+en el aporte técnico ni se presume confirmado el solape de matriz y pruebas; `finance`
+debe conciliarlo y recostear el mínimo antes de comprometer horas.
+
 **Criterio de éxito:** cada superficie habilitada tiene prueba reproducible, hallazgos
 críticos cerrados y residual firmado por su autoridad antes de operar. **Abandono:** control
 obligatorio incumplido, incidente, falta de verificador o capacidad no liberada: suspender
-el uso afectado, reducir alcance y recostear. Adelantar estos entregables a M1-M3 sigue
-pendiente de validación humana de horas y costo; esta tabla no mueve el calendario vigente.
+el uso afectado, reducir alcance y recostear. La ejecución de estos entregables en M1-M3
+queda condicionada a validar horas, costo y capacidad; el resto de las tablas conserva
+su calendario.
 
 ### Referencia anual del borrador, pendiente de conciliación con el pedido mínimo
 
@@ -783,16 +791,15 @@ redondeado). Tres lecturas de gobierno sobre esas cifras:
   de bloqueo.
 - **Revisión mensual:** el Council mira el riesgo cada mes (2 h, con tablero) y puede frenar,
   cortar o escalar; los fondos se liberan solo en los meses 3, 6, 9 y 12. No suma costo.
-- **Slide de Gobierno y seguridad:** el texto ya dice bloqueo en la pasarela y en el equipo.
+- **Slide 6 — Gobierno y seguridad:** el texto ya dice bloqueo en la pasarela y en el equipo.
   Propuesta a `caio` para su punto 3: ver el reporte de esta ronda.
 - **Pedido al board 1:** ratificar la política de IA que está en borrador desde abril de 2026.
 - **Pedido al board 2:** aprobar el alcance explícito (sin decisiones de crédito ni
   scoring en 12 meses) y los topes de la escala de autonomía del plan (niveles 0 a 4).
-- **Pedido al board 3:** financiar por gate. Gobierno mínimo siempre (32.650-82.150, supuesto
-  del equipo, sujeto a cotización). Con señal en el mes 3, los controles técnicos (6.375-27.375),
-  y la demostración externa (11.600-31.000 de caja) se decide en la lectura del mes 9 contra la
-  evidencia contractual. Con los tres paquetes, 50.625-140.525 (24.100-69.000 de caja). Sin
-  señal, ver "Controles según la decisión del mes 3".
+- **Pedido al board 3:** pedido vigente de controles: insumo M1-M3 de este anexo,
+  consolidado en el [Anexo E](05-business-case.md), sección "Pedido inicial: paquete mínimo".
+  Los tres paquetes y montos anuales anteriores son referencia de otro alcance; no se
+  autorizan hoy ni se trasladan a la continuación del mínimo.
 - **Mensaje sobre la licencia para vender:** hoy es un supuesto; los meses 1-3 juntan la
   evidencia, la decisión del mes 3 la lee para liberar la plataforma y la lectura del mes 9
   decide si se paga el paquete que la demuestra.
