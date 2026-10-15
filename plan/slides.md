@@ -28,7 +28,7 @@ size: 16:9
 
 <p class="eyebrow">Doce meses de IA en la operación y en el producto, con fondos por decisión</p>
 
-<p style="max-width:820px">Hoy la IA se usa, pero nadie midió cuánto vale. Proponemos empezar por lo mínimo que compra esa medición, con controles probados y las herramientas que ya pagamos, y ampliar solo con evidencia.</p>
+<p style="max-width:820px">Hoy la IA se usa, pero su valor incremental no está medido. Proponemos empezar por lo mínimo que compra esa medición, con controles probados y las herramientas que ya pagamos, y ampliar solo con evidencia.</p>
 
 <p class="fine">Caso propuesto · borrador sin verificación humana · sin promesa de repago en el año</p>
 

@@ -115,9 +115,9 @@ desplazan juntos el básico, el intermedio y la prueba a la semana 9**: mover so
 intermedio no protege la base. La meta de completitud del básico en el mes 3
 (≥90%) se revisa con ese calendario más corto, sin presentarla como lograda por
 asistencia. La retrospectiva nunca atribuye ganancia ni libera capital
-([convenciones](../../context/supuestos/convenciones-de-calculo.md)). Es la
-alternativa que comparten B, D y E; queda propuesta del CAIO hasta que la
-ratifique un humano.
+([convenciones](../../context/supuestos/convenciones-de-calculo.md)). B, D y E
+coinciden en mover los tres si se extiende; cuándo extender sigue abierto (F,
+"Base que no resuelve" en Decisiones). Lo ratifica un humano.
 
 ### Primeros 100 días: por qué no hay quick win de negocio en los meses 1-3
 
