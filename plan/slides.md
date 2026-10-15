@@ -78,7 +78,7 @@ size: 16:9
 <div class="card dark">
 <span class="tag">Beneficio principal</span>
 <h3>Capacidad con calidad</h3>
-<p>PR aceptados por persona activa contra una base congelada, con retrabajo e incidentes primero. Pasa por el límite inferior del intervalo: +3% en el mes 6, +8% en el mes 9.</p>
+<p>PR aceptados por persona activa contra una base congelada, retrabajo e incidentes primero. Pasa si el límite inferior llega a +3% en el mes 6 y +8% en el 9.</p>
 </div>
 <div class="card">
 <span class="tag">En el modelo</span>
@@ -92,7 +92,7 @@ size: 16:9
 </div>
 </div>
 
-<p style="margin-top:14px">El paso no está asegurado: con +3,75% y un semiancho de 3 puntos, el límite inferior queda en +0,75%. Por eso medimos antes de ampliar.</p>
+<p style="margin-top:14px">El paso no está asegurado: con +3,75% y semiancho de 3 puntos, el límite inferior queda en +0,75%.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -108,22 +108,29 @@ size: 16:9
 
 <p class="eyebrow">03 · Alternativas</p>
 
-# Costos publicados de alcances distintos, pendientes de homogeneizar
+# El mínimo compra la medición; lo demás es referencia
 
+<div class="grid main-side">
+<div class="card dark">
+<span class="tag">Qué compra el mínimo</span>
+<h3>Saber si hay valor, con controles probados</h3>
+<p>Básico, cohorte, controles por superficie, base y medición, y descubrimiento del asistente, con las herramientas que ya pagamos. Sin plataforma.</p>
+<p>Todo el año, si pasan los gates: <strong>≈67 (26-109)</strong>, proyección no aprobada.</p>
+</div>
 <div class="plain">
 
-| Alcance publicado | Caja / tiempo → económico | Qué compra |
-|---|---|---|
-| Piloto sobre el agente actual | 5 / 42 → **47** | Cohorte, matriz, prácticas y medición; sin formación general ni legal |
-| Gobierno y formación desde el inicio | 21 / 141 → **161** | Política, matriz, inventario, legal y medición |
-| Rama sin señal del paquete anterior | ≈39 / ≈160 → **≈199** | Gobierno y formación después de arrancar el paquete, con compensatorios |
-| Paquete con plataforma, sin producto | 177 / 217 → **394** (≈400 con prueba) | Plataforma, controles, formación y demostración externa |
-| Paquete con producto | 214 / 257 → **471** | Otro alcance; neto optimista ≈ −357 |
-| **Paquete mínimo, todo el año** | **≈67 (25-108)**, proyección | Básico, cohorte, controles probados, medición y descubrimiento; sin plataforma |
+| Referencia, otro alcance | Económico |
+|---|---|
+| Piloto sobre el agente actual | 47 |
+| Gobierno y formación desde el inicio | 161 |
+| Rama sin señal, paquete anterior | ≈199 |
+| Plataforma sin producto | 394 (≈400) |
+| Plataforma con producto | 471 |
 
 </div>
+</div>
 
-<p class="note">Miles de USD. No hay comparación homogénea todavía: controles, población y medición no son iguales. El pedido anterior de 33 + 6 de caja y 72 + 7 de tiempo queda como alternativa. En el mes 3 se comparan gastos futuros evitables, sin costos hundidos.</p>
+<p class="note">Miles de USD. Alcances distintos, sin comparación homogénea: no prueban que el mínimo sea la mejor compra. El pedido anterior (33 + 6 de caja, 72 + 7 de tiempo) queda como alternativa. En el mes 3 se comparan gastos futuros evitables.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -186,7 +193,7 @@ size: 16:9
 <div class="kpi"><div class="num" style="font-size:30px">“Prepara, no ejecuta”</div><div class="lbl">techo de autonomía en el producto durante los 12 meses</div></div>
 </div>
 
-<p class="note" style="margin-top:12px">Sin plataforma, no alcanza la política: cada superficie prueba sus compensatorios (secreto sintético, prueba adversarial, revisión humana) con críticos cerrados y residual aceptado. Lo que no cumple se excluye. Seguridad puede suspender el uso aunque el gasto o la adopción cumplan.</p>
+<p class="note" style="margin-top:12px">Sin plataforma, no alcanza la política: cada superficie prueba sus compensatorios (secreto sintético, prueba adversarial, revisión humana) con críticos cerrados y residual aceptado. Lo que no cumple se excluye, y Seguridad puede suspender un uso aunque gasto y adopción cumplan.</p>
 
 <div class="decision block">
 <div class="decision-head"><span class="pill">Decisiones</span><span class="ref">
@@ -220,7 +227,7 @@ size: 16:9
 
 - Básico para toda la organización e intermedio para una cohorte de 15-20.
 - Piloto de abril (n=12, autoseleccionado): uso alto, 17% completó los cursos.
-- **Metas por área:** Tecnología ≥80% en el mes 6, Operaciones habilitadas ≥60%. Cumplir exactamente esas metas da 72,5% combinado: no es un techo; publicamos el combinado y la cobertura.
+- **Metas por área:** Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones habilitadas ≥60% en el 12. Cumplir exactamente 85%/60%, con igual peso y toda Operaciones habilitada, da 72,5%; no es un techo ni cumplimiento del OKR combinado.
 
 </div>
 </div>
@@ -244,11 +251,11 @@ size: 16:9
 | | Meses 1-3 → mes 3 | Meses 4-6 → mes 6 | Meses 7-9 → mes 9 | Meses 10-12 → cierre |
 |---|---|---|---|---|
 | Qué pasa | Diagnóstico, base, política, controles, formación y prueba | Solución según evidencia; medición del asistente | Aplicación; producto solo con señal | Evaluación y traspaso |
-| Techo caja / tiempo | **9 / 58** (aprobar hoy) | 2 / 14 | 2 / 11 | 2 / 11 |
+| Techo caja / tiempo | **9 / 59** (aprobar hoy) | 2 / 14 | 2 / 11 | 2 / 11 |
 | Pasa si | Base, política, controles probados, básico ≥90% | Límite inferior ≥ +3%, sin daño; Tec. ≥80% | Límite inferior ≥ +8% | Tec. ≥85%; Op. habilitadas ≥60% |
 | Plataforma | Se evalúa | Se relee | Se relee | Irreversibles, para después |
 
-<p class="note">Miles de USD; los meses 4-12 no se aprueban hoy. Cada mes el Council puede frenar o cortar, sin liberar fondos. Calidad primero: un daño corta aunque el throughput pase. Espera del mes 6: 6 semanas y, si sigue debajo, corta. Si la base se extiende a la semana 8, básico, intermedio y prueba arrancan en la 9.</p>
+<p class="note">Miles de USD; los meses 4-12 no se aprueban hoy. El Council puede frenar o cortar cada mes, sin liberar fondos. Un daño corta aunque el throughput pase. Las esperas de los meses 6 y 9 duran 6 semanas, con subtramo aprobado aparte; si no pasa, corta. Base extendida a la semana 8: formación y prueba arrancan en la 9.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -271,10 +278,10 @@ size: 16:9
 
 | Si salimos en | Hasta cerrar (caja / tiempo) | Máximo del año |
 |---|---|---|
-| Mes 3 | 10 / 63 → **73** | **79** con núcleo de gobierno |
-| Mes 6 | 12 / 77 → **89** | **93** |
-| Mes 9 | 14 / 88 → **102** | **104** |
-| Mes 12 | 16 / 99 → **115** | **115** |
+| Mes 3 | 10 / 64 → **74** | **80** con núcleo de gobierno |
+| Mes 6 | 12 / 78 → **90** | **94** |
+| Mes 9 | 14 / 89 → **103** | **105** |
+| Mes 12 | 16 / 100 → **116** | **116** |
 
 </div>
 <div class="grid" style="gap:8px">
@@ -284,7 +291,7 @@ size: 16:9
 </div>
 </div>
 
-<p class="note">Miles de USD; límites por suma de techos, sin restar beneficio. Tras un corte, el núcleo (accesos, incidentes, permisos) cuesta caja 0 y hasta 6 de tiempo. A 12× de consumo, el incremental (211-267 por año) es exposición de la empresa, con o sin plan.</p>
+<p class="note">Miles de USD; suma de techos, sin restar beneficio. Esperar 6 semanas y cortar: 97 en el mes 6, 110 en el 9. El núcleo posterior (accesos, incidentes, permisos) cuesta caja 0 y hasta 6 de tiempo, y se aprueba al salir.</p>
 
 <p class="eyebrow" style="margin-bottom:6px">Irreversibles: en el mes 12 y para después</p>
 
@@ -297,7 +304,7 @@ size: 16:9
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Aceptar una pérdida máxima de aprendizaje de 73 al mes 3.</span>
+<span class="body">Aceptar una pérdida máxima de aprendizaje de 74 al mes 3.</span>
 <span class="ref">
 
 [Anexo E](annexes/05-business-case.md) · [Anexo F](annexes/06-roadmap-riesgo.md)
@@ -309,9 +316,13 @@ size: 16:9
 
 <!-- _class: closing -->
 
+<style scoped>h1 { font-size: 54px; }</style>
+
 <p class="eyebrow">Valor medible · seguridad aceptable · fondos por decisión</p>
 
-# El Directorio autoriza solo el paquete mínimo de los meses 1-3, hasta 9 de caja más 1 de reserva y 58 de tiempo más 3 de preparación y 2 de cierre, y adopta los gates de los meses 3, 6, 9 y 12.
+# Autorizar el mínimo M1-M3
+
+<p style="font-size:24px;line-height:1.4;max-width:1000px;color:#f3efe4">El Directorio autoriza solo el paquete mínimo de los meses 1-3: caja 9 + 1 de reserva; tiempo 59 + 3 de preparación + 2 de cierre. Pérdida máxima hasta cerrar: 74; no se aprueba el año. Adopta los gates de los meses 3, 6, 9 y 12.</p>
 
 <div class="grid g2" style="margin-top:auto;position:relative">
 <div>
@@ -320,7 +331,7 @@ size: 16:9
 <p class="fine">Responsables por sección y por gate: pendientes de acordar en el equipo.</p>
 </div>
 <div class="fine">
-<p>Miles de USD. Sujeto a horas liberadas por persona y controles probados antes de usar. Plataforma y producto se recostean antes de liberarse.</p>
-<p>Usamos el modelo operativo que proponemos: roles asumidos por agentes, revisión adversarial y chequeos de fuentes y de fuga de datos. Las fichas siguen en borrador; el ensayo de la defensa está pendiente.</p>
+<p>Miles de USD. Sujeto a horas liberadas y controles probados antes de usar; plataforma y producto se recostean.</p>
+<p>Hecho con el modelo que proponemos: roles de agentes, revisión adversarial y chequeos de fuentes y fuga. Fichas en borrador; ensayo pendiente.</p>
 </div>
 </div>

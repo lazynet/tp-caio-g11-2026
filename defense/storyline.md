@@ -68,15 +68,17 @@ barata por el ROI de un paquete que no medimos.
   meses 1-3; solución según evidencia en los 4-6; aplicación y producto
   condicional en los 7-9; evaluación y traspaso en los 10-12. El Council revisa
   cada mes y puede cortar; los fondos se liberan en los meses 3, 6, 9 y 12.
-- **Pérdida máxima:** salir en el mes 3 cuesta hasta 73 hasta cerrar (10 de caja
-  y 63 de tiempo) y 79 en el año con el núcleo de gobierno. Es el precio de
-  aprender, sin restar beneficio.
+- **Pérdida máxima:** salir en el mes 3 cuesta hasta 74 hasta cerrar (10 de caja
+  y 64 de tiempo) y 80 en el año si se aprueba el núcleo de gobierno al salir.
+  Es el precio de aprender, sin restar beneficio. Esperar seis semanas en el mes
+  6 y cortar cuesta 97; cortar sin esperar, 90.
 
 ## Cierre: resolución (slide 10)
 
 **Valor medible; seguridad aceptable; fondos por decisión.** "Autoricen solo el
-paquete mínimo de los meses 1-3: hasta 9 de caja más 1 de reserva, y 58 de
-tiempo más 3 de preparación y 2 de cierre, y adopten los gates. En marzo les
+paquete mínimo de los meses 1-3: hasta 9 de caja más 1 de reserva, y 59 de
+tiempo más 3 de preparación y 2 de cierre, y adopten los gates. Pérdida máxima
+hasta cerrar: 74; el año no se aprueba hoy. En marzo les
 traemos la base congelada, la política, la matriz, los controles probados y lo
 que aprendió la prueba, y deciden si sigue, se amplía o se corta."
 
