@@ -4,123 +4,98 @@ Borrador del CAIO a validar por el equipo, sobre un caso propuesto y pendiente
 del acuerdo del equipo. Responsable humano de la storyline: **pendiente**. Cada
 cifra remonta a un anexo de `plan/annexes/`; ninguna tiene verificación humana.
 **No hubo ensayo todavía**: cuando lo haya, se registra con fecha, tiempos, roles
-y feedback.
+y feedback. El arco sigue la revisión del 2026-10-15
+(`reviews/2026-10-15-comentarios-equipo.md`): problema → beneficio →
+alternativas → costo → resolución.
 
 ## Tesis en una oración
 
-Acme Labs tiene que gobernar y aprender la IA que ya usa antes de que sus
-clientes se lo exijan, y pagar la plataforma para venderla solo cuando una señal
-de contrato, de precio o de cliente la justifique: el riesgo se revisa cada mes,
-la plata se libera cada tres, diferir es la regla y cortar a tiempo cuesta poco.
+Acme Labs ya usa IA sin saber cuánto vale: proponemos medir el valor antes de
+ampliar la inversión, con un paquete mínimo sobre las herramientas que ya paga,
+controles probados antes de usar y fondos que se liberan solo por decisión en
+cada gate.
 
-## Acto 1: por qué ahora (slides 1-2)
+## Acto 1: el problema (slides 1-2)
 
 - La empresa es rentable y crece, pero concentrada: el cliente principal pesa
   40%-50% de la facturación ([Anexo A](../plan/annexes/01-diagnostico.md)).
-- La IA ya está adentro: Tecnología la usa mucho, y en el piloto de abril (12
-  personas que se anotaron solas) el NPS fue +42. Pero no hay nada de IA en el
-  producto que se vende, y la política sigue en borrador.
-- Los clientes son bancos y PSP que el BCRA obliga a gobernar la IA propia y de
-  terceros. Acme Labs es ese tercero. Si eso se traduce en exigencias
-  contractuales, lo dice la evidencia que se junta en los meses 1-3, no lo
-  suponemos.
-- Y el costo ya se mueve: el consumo real del agente de código es ~12 veces lo que
-  se paga por suscripción.
+- La IA ya está adentro: Tecnología usa mucho el agente de código; Operaciones,
+  poco, en buena parte porque el cliente fija las herramientas. No hay IA
+  productiva documentada en la oferta, y la política estaba en borrador en el
+  último registro, de abril.
+- Lo que falta es valor incremental medido contra una base. Y el propio
+  diagnóstico es una hipótesis: las fuentes mezclan poblaciones y fechas, así que
+  antes de comprometer horas conciliamos corte, nómina, contratistas, personas y
+  horas por rol.
 
-**Cierre del acto:** el riesgo no es invertir en IA; es seguir sin gobierno ni
-producto mientras el costo y la exigencia de los clientes suben.
+**Cierre del acto:** el riesgo no es invertir poco; es ampliar sin saber qué compra.
 
-## Acto 2: qué proponemos (slides 3-6)
+## Acto 2: qué beneficio buscamos y qué alternativas hay (slides 3-4)
 
-- Dos frentes sobre una base: la operación interna y el producto que se vende.
-  El producto tiene un caso elegido con RICE, un asistente de integración en la
-  plataforma propia, sin datos de clientes, y **está diferido** hasta que un
-  cliente dé señal en la lectura de impacto del mes 6
+- El beneficio principal es capacidad con calidad: PR aceptados contra una base
+  congelada, con retrabajo e incidentes primero. **Beneficio de caja estimado: 0;
+  ingreso nuevo: 0** en el modelo ([Anexo E](../plan/annexes/05-business-case.md)).
+- El paso no está asegurado: con el caso base y un semiancho de 3 puntos, el
+  límite inferior queda debajo de los umbrales. Por eso medimos primero
   ([Anexo F](../plan/annexes/06-roadmap-riesgo.md)).
-- Gobierno, base y formación van siempre, con una prueba chica sobre el agente
-  de código que Tecnología ya usa. La plataforma (arquitectura neutral al modelo,
-  aislada por cliente, sin datos de clientes en 12 meses) se gana con una señal
-  en la decisión de plataforma del mes 3; la cobertura de precio es una opción
-  que la prueba de los meses 4-6 confirma o descarta
-  ([Anexo B](../plan/annexes/02-arquitectura.md)).
-- Un gobierno liviano que habilita: Council de 5, intake en niveles, política
-  ratificada y una revisión mensual con poder de corte
+- El asistente de integración es una hipótesis de producto: antes del mes 6
+  medimos el tiempo a la primera integración exitosa con la documentación y el
+  soporte actuales. Sin problema, base y señal comercial escrita, no se construye.
+- Las alternativas publicadas (47, 161, ≈199, 394, ≈400, 471) son costos de
+  alcances distintos, pendientes de homogeneizar. No las comparamos como si
+  fueran equivalentes. El pedido anterior (33 + 6 de caja, 72 + 7 de tiempo)
+  queda como alternativa.
+
+**Cierre del acto:** elegimos lo mínimo que compra la medición, no la opción más
+barata por el ROI de un paquete que no medimos.
+
+## Acto 3: cuánto cuesta y cómo se controla (slides 5-9)
+
+- **Arquitectura proporcional:** configurar lo que ya pagamos antes de comprar o
+  ensamblar. La plataforma se relee en los meses 3, 6 y 9: la regla vigente pide
+  una señal; la propuesta, pendiente de ratificación, suma cuatro condiciones.
+  Nada pasa al año 2 por defecto ([Anexo B](../plan/annexes/02-arquitectura.md)).
+- **Seguridad antes de usar:** sin plataforma no alcanza la política; cada
+  superficie prueba sus compensatorios, con críticos cerrados y residual
+  aceptado. Seguridad puede suspender el uso aunque el gasto o la adopción
+  cumplan, y quien produce la evidencia no es quien la verifica ni quien firma
   ([Anexo C](../plan/annexes/03-gobierno-seguridad.md)).
-- Personas: capacitar y reasignar, medir uso real, un solo contractor a prueba
+- **Personas:** formar, reasignar y decidir una excepción externa solo si falta
+  un facilitador. El mínimo pide 2,0-2,8 FTE internos en total (0,9-1,4 clave),
+  que salen de horas facturables y se concilian por persona
   ([Anexo D](../plan/annexes/04-personas-cultura.md)).
-- **Dogfooding:** este plan se hizo con el modelo operativo que proponemos:
-  roles asumidos por agentes, una revisión adversarial del board y chequeos
-  automáticos de fuentes y fugas. No decimos que todas las herramientas invoquen
-  los agentes de punta a punta: eso no está probado.
+- **Roadmap:** diagnóstico, base, política, controles, formación y prueba en los
+  meses 1-3; solución según evidencia en los 4-6; aplicación y producto
+  condicional en los 7-9; evaluación y traspaso en los 10-12. El Council revisa
+  cada mes y puede cortar; los fondos se liberan en los meses 3, 6, 9 y 12.
+- **Pérdida máxima:** salir en el mes 3 cuesta hasta 73 hasta cerrar (10 de caja
+  y 63 de tiempo) y 79 en el año con el núcleo de gobierno. Es el precio de
+  aprender, sin restar beneficio.
 
-**Cierre del acto:** no es una lista de iniciativas; es un sistema con dueños,
-controles y métricas.
+## Cierre: resolución (slide 10)
 
-## Acto 3: cómo se protege la plata (slides 7-10)
-
-- Lo decimos primero: con productividad sola, el plan no se paga en 12 meses y
-  no genera caja ([Anexo E](../plan/annexes/05-business-case.md)). El
-  equilibrio operativo anual del año 2 pide ~17% de throughput atribuible
-  contra la base del plan (~23% si el régimen carga el producto); no recupera la
-  inversión del año 1 ni es ROI ni payback. El OKR, que se mide contra el cuarto
-  trimestre de 2026, lo cubre solo si, descontadas la mejora previa (d, medida
-  en el mes 3) y la del grupo que no adopta (c, desde el mes 6), queda al menos
-  16,7%. Lo que compra es la opción de cobertura de precio, una opción de
-  ingreso y, si la evidencia contractual de los meses 1-3 la confirma, licencia
-  para venderles a bancos.
-- Y lo decimos segundo: en el año 1, gobierno mínimo y formación (161) o un
-  piloto sobre el agente actual (47) le ganan al paquete completo (394). Por eso
-  la plataforma no se compra hoy: **la decisión del mes 3 la libera solo con una
-  señal** contractual, de precio por consumo o de cliente. Sin señal, el año
-  cuesta ≈ 199 en lugar de ≈ 400, y las lecturas de los meses 6 y 9 vuelven a
-  leer. No es un corte: es diferir.
-- Hacemos un único pedido hoy: los meses 1-3 con la prueba chica, hasta 33 mil
-  USD de caja (del contractor, solo su tramo de los meses 1-3) más 6 de reserva
-  de cierre, que se amplía a 15 en el mes 3 solo si se libera la plataforma, y
-  hasta 72 de tiempo (~1,8 FTE clave y ~654 h distribuidas). Cortar en el mes 3
-  cuesta 79 mil económicos en el medio, hasta 115 hasta cerrar y 155 en el año si
-  se conserva la base mínima.
-- Con señal, los meses 4-12 entran en el sobre sin holgura, con el producto
-  diferido y el replan de arquitectura; la excepción de los meses 4-6 es el
-  respaldo si falta el 0,2 del contractor, y sin contractor los meses 4-6 corren
-  en modo control. El producto amplía el sobre solo si un cliente da una señal
-  comercial con presupuesto.
-- **El riesgo se mira cada mes; la plata se libera cada tres.** El Council revisa
-  cada mes un tablero con caja, uso, incidentes y señales: puede frenar, cortar,
-  activar una contingencia o escalar una señal, pero no libera fondos. Eso queda
-  en los meses 3, 6, 9 y 12, y la revisión mensual no suma costo.
-- Cada decisión dice qué pasa si falla cada condición, y los dos frentes se
-  cortan por separado. La espera del mes 6 vence a las 6 semanas y corta el
-  frente interno; la del mes 9 mantiene la base mínima, y el mes 3 no corta:
-  decide la plataforma. En el pesimista, el plan corta en los meses 7-9 y pierde
-  ≈ 262 mil, contra 382 sin frenar. Lo irreversible se decide en el cierre del
-  mes 12 y rige después.
-
-**Cierre:** "Aprueben los primeros tres meses, con techo. Cada mes les mostramos
-el tablero de riesgo. En marzo les traemos la línea de base congelada, la
-política ratificada, la matriz, la evidencia de clientes y lo que aprendió la
-prueba chica, y deciden si la plataforma se ganó su lugar."
+**Valor medible; seguridad aceptable; fondos por decisión.** "Autoricen solo el
+paquete mínimo de los meses 1-3: hasta 9 de caja más 1 de reserva, y 58 de
+tiempo más 3 de preparación y 2 de cierre, y adopten los gates. En marzo les
+traemos la base congelada, la política, la matriz, los controles probados y lo
+que aprendió la prueba, y deciden si sigue, se amplía o se corta."
 
 ## Qué no decir
 
-- Que la plataforma o el producto propio A están certificados.
-- Que el gateway ya cubre el precio, o que los bancos ya exigen IA: son
-  hipótesis: la primera se prueba en los meses 4-6 y la segunda, en los
-  meses 1-3.
-- Que el OKR de +20% cubre el equilibrio: se miden contra bases distintas.
-- Que el escenario base pasa las lecturas de los meses 6 y 9: con la regla del
-  límite inferior, es condicional a la precisión del intervalo, y si la calidad
-  queda incierta cuenta como espera.
-- Que la revisión mensual libera fondos o decide por el throughput: lo muestra
-  como tendencia; la lectura sigue a las 6 semanas y en los gates.
-- Que la plataforma se paga con productividad: en el año 1 las opciones baratas
-  ganan; la plataforma se paga solo con una señal.
-- Que los secretos están bloqueados en toda superficie: en chat, IDE y suite
-  hay prohibición y control compensatorio, no bloqueo.
-- Que la señal del mes 6 prueba disposición a pagar: prueba interés con
-  presupuesto y un rango de precio aceptado como referencia.
-- Porcentajes de ahorro de inferencia o de ROI del curso sin fuente
-  ([huecos](../material/huecos.md)).
-- Cualquier cifra que no esté en un anexo.
+- Que el plan se paga en el año o que genera caja: el modelo presupuesta
+  beneficio de caja 0 e ingreso nuevo 0.
+- "Caja cero": se confunde con desembolso cero. Decir "beneficio de caja
+  estimado: 0".
+- Que 47/161/394 son alternativas equivalentes: son alcances distintos.
+- Que las cuatro condiciones de plataforma ya rigen: son una propuesta pendiente.
+- Que la plataforma pasa al año 2: se relee en los meses 3, 6 y 9.
+- Que el 72,5% es un techo de adopción: es el resultado de cumplir exactamente
+  las metas por área.
+- Que el escenario base pasa las lecturas de los meses 6 y 9.
+- Que hay horas libres porque la utilización promedio lo sugiere.
+- Que los secretos están bloqueados en toda superficie: hay compensatorios
+  probados y residual aceptado, no bloqueo universal.
+- Que la señal del mes 6 prueba disposición a pagar.
+- Cualquier cifra que no esté en un anexo, o qué cliente o producto hay detrás
+  de un alias o un rango.
 - Que la defensa está ensayada, mientras no haya un ensayo registrado.
-- Qué producto o qué cliente podría estar detrás de un alias o un rango.
