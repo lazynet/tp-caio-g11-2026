@@ -13,19 +13,20 @@ alimentan además [Slide 7 — Roadmap técnico, financiero y cultural](../slide
 ## Objetivo
 
 Decirle al board, con números trazables, **qué compra la plata, cuándo se ve y
-cómo se frena**. La conclusión adelantada: con la valuación conservadora de este
-anexo, el plan a 12 meses **no se paga con productividad interna** y no genera
-caja propia. Es un año de inversión con salida por etapas. Se justifica solo si
-prende una de sus opciones: ingresos por IA en el producto, protección del
-ingreso de los clientes financieros o cobertura del precio de los tokens. Por eso se le pide al board un único
-pedido de hoy por los meses 1-3, con techo máximo de caja y de capacidad, y no el año entero.
+cómo se frena**. El paquete anterior a 12 meses **no se paga con productividad
+interna**. El mínimo compra evidencia sin presupuestar beneficios: medir valor,
+riesgo y demanda antes de ampliar. Se pide al board solo M1-M3, con techos de
+caja y capacidad; no el año entero.
 
-**Escenario recomendado (decidido, lazynet, 2026-10-14): la aprobación de hoy con la prueba chica y
-bifurcación en el mes 3.** Sin una señal que pague la plataforma, los meses 4-12 corren como
-gobierno mínimo y formación: el año es **≈ 199**. Con señal, **≈ 400** (el paquete
-de 394 más la prueba); es la cabecera, porque es lo máximo que el board puede
-llegar a liberar. En las dos ramas el producto se difiere hasta la lectura del mes 6, y la rama con
-señal usa en los meses 4-6 el replan del Anexo B; la excepción acotada queda costeada.
+**Pedido inicial: paquete mínimo (decisión de Martin, ronda 11, 2026-10-15).**
+Medir antes de ampliar, con herramientas existentes y controles aplicables probados,
+sin plataforma central. La propuesta económica vigente está en «Pedido inicial:
+paquete mínimo»: caja 9 + reserva 1; tiempo 58 + preparación 3, más reserva de cierre
+interno 2 (miles de USD, techos). No autoriza el año.
+
+El pedido anterior 33+6 de caja / 72+7 de tiempo y sus ramas ≈199/≈400 quedan
+como **alternativa anterior**, no como pedido vigente. Las tablas históricas de
+plataforma, retorno y cortes que siguen describen ese alcance y no el mínimo.
 
 Responsable humano de cada cifra y de cada gate: **pendiente**. Ninguna cifra es
 apta para entrega: todo es borrador sin verificación humana, las fichas de
@@ -88,7 +89,7 @@ horas propias sin gasto externo. Si el Directorio la quiere en la caja, suma
 
 ## Evidencia
 
-### Inversión por tramo de tres meses (miles de USD, rama con señal: plataforma desde el mes 4, producto diferido y replan de los meses 4-6)
+### Inversión del paquete anterior por tramo (alternativa, miles de USD)
 
 Consolidado de los Insumos para Finanzas de los Anexos [B](02-arquitectura.md),
 [C](03-gobierno-seguridad.md) y [D](04-personas-cultura.md), con valores medios.
@@ -162,7 +163,17 @@ anuales (3,8-10,5 con el producto), y en el 1% si es de al menos 9,8-25,5 millon
 (11,4-31,4 con el producto). Lo verifica en `private/` quien tiene acceso, sin publicar el
 dato ni el resultado.
 
-### Contra el sobre de tiempo: los meses 1-3 entran; los meses 4-6, con el replan
+### Capacidad del paquete anterior: piso clave y total interno
+
+**No trasladar estos pisos al mínimo.** Con prueba, usando el piso clave
+redondeado publicado: 1,8 + 654/480 = **3,1625 FTE internos M1-M3**.
+Es una aproximación de planificación, no disponibilidad probada por persona.
+M4-M6: (1.068 + 1.208)/480 = **4,7417 FTE internos**, de los cuales
+2,225 son clave; margen clave: 2,25×480 − 1.068 = **12 h**.
+El contractor externo va aparte. Los sobres separados no liberan agendas:
+la matriz semanal privada de D concilia ambas bolsas, trabajo desplazado,
+recuperación e ingresos/contribución. No se financian horas iniciales con
+ganancias futuras ni se suman costo cargado y contribución perdida dos veces.
 
 El sobre del [supuesto de capacidad](../../context/supuestos/capacidad-de-inversion.md)
 es 10%-15% del tiempo de un grupo acotado de personas clave. Cuántas son es un
@@ -269,7 +280,7 @@ Lo decide el board en la aprobación de hoy. La holgura que queda es mínima en 
 (0,025 en los meses 4-6, ~0,04 en los meses 7-9, ~0,14 en los meses 10-12). Si la lectura del mes 6 libera el producto, el sobre de los meses 7-12 se
 amplía a 3,7 / 3,1: esa ampliación se decide en el mes 6, no en la aprobación de hoy.
 
-### IA aplicada: alternativas costeadas
+### IA aplicada del paquete anterior: alternativas costeadas
 
 Los Anexos B y D coinciden en que el contractor **reemplaza** la fracción interna de los meses 4-12,
 no la complementa, y los dos adoptan como base el contractor al 50% desde el mes 1
@@ -432,6 +443,13 @@ un porcentaje con fuente.
 
 ### Gateway: suscripción contra consumo
 
+**La señal no es repago.** El ejemplo medio **33/(6×21,5)=25,6%** cubre
+solo la infraestructura anual del gateway a régimen, no el paquete.
+Cubrir el diferencial publicado de **233** a 12× pide
+**233/(12×21,5)=90,3%** ponderado del gasto elegible (fc×s).
+Son costos, horizontes de inversión y bases de consumo distintos; ninguna
+de las dos cuentas mide ahorro real ni prueba que una señal pague plataforma.
+
 El gateway no se justifica por un ahorro prometido. Lo que compra depende del
 esquema de precio del agente de código, y en dos de los tres casos no ahorra
 nada (miles de USD por año; la suscripción es 19-24). Los casos son los
@@ -483,6 +501,13 @@ umbral a 6× (25%). Hasta entonces la cobertura de precio es una opción, no un
 ahorro.
 
 ### ROI, payback y equilibrio
+
+**Alternativa anterior, no retorno del mínimo.** Recálculo con N=17,5,
+costo=4.750, tres meses por tramo y las rampas publicadas:
+base 62,1313−394 = **−331,8687; ROI −84,2306%**;
+optimista sin producto 114,1080−394 = **−279,8920; ROI −71,0386%**;
+optimista con producto 114,1080−471 = **−356,8920; ROI −75,7733%**.
+La denominación de base y optimista no implica probabilidad ni pase de gates.
 
 Modelo del equipo con valores medios. La preparación previa entra en el año. La capacidad se valúa
 con la lectura de horas evitadas a costo cargado: es el piso.
@@ -781,20 +806,42 @@ techo, sin excepciones.
 
 ## Decisiones
 
-### Alternativas equivalentes: qué compra cada opción
+### Costos publicados de alcances distintos, pendientes de homogeneizar
+
+No se realizó todavía la comparación corregida a doce meses con igual fecha,
+población, controles aplicables, medición y calidad. La tabla inventaría los
+alcances publicados; sus netos son ilustrativos, no una elección equivalente.
+Montos económicos en miles de USD; no son techos anuales aprobados.
+
+| Alcance | Caja / tiempo → económico | Qué significa |
+|---|---|---|
+| Piloto independiente | 5 / 42 → **47** | Cohorte, matriz, prácticas y medición; sin formación general ni legal; −47 a +15 solo como sensibilidad |
+| Gobierno y formación desde el inicio | 21 / 141 redondeados → **161 publicado** | Política, matriz, inventario, legal y medición; sin compensatorios añadidos a la rama posterior; no forzar 162 con sumandos redondeados |
+| Rama sin señal después de arrancar paquete | ≈39 / ≈160 → **≈199** | ≈69 previa/arranque +6 prueba +114 continuación +4 cierre +6 compensatorios; no es corte total M3 |
+| Paquete con señal sin producto ni prueba | 177 / 217 → **394** | Plataforma, controles, formación y demostración externa condicional como cota superior |
+| Mismo paquete con prueba | +≈6 de tiempo → **≈400** | Cabecera anterior con señal; ni caja ni autorización anual |
+| Paquete con producto sin prueba | 214 / 257 → **471** | Otro alcance; optimista ≈114 de capacidad, neto ≈−357 |
+| **Paquete mínimo nuevo, sin plataforma** | **Caja 2,3-13,8 / tiempo con previa 23,15-94,59375 → ≈67 (25-108)** | Proyección condicional M1-M12 de la ficha nueva; básico general, cohorte/intermedio, controles probados, medición y descubrimiento; sin valor de capacidad presupuestado; sin reservas gastadas ni construcción de producto |
+
+La fila nueva no homogeneiza retroactivamente las anteriores. Los diferenciales
+**394−161=233**, **394−47=347** y **400−199=201** contestan preguntas distintas.
+En M3 se comparan únicamente gastos futuros evitables desde el historial común;
+preparación y M1-M3 ya ejecutados son hundidos, no costo incremental de continuar.
+
+#### Composición histórica de las tres opciones originales
 
 La pregunta del CFO: por qué pagar 394 si opciones más baratas compran parte del
-mismo aprendizaje. Las tres llevan la misma medición (la preparación previa, base congelada,
-telemetría y 0,2 FTE para contar), el mismo gate de throughput del Anexo F y el
-producto diferido ([supuesto](../../context/supuestos/alternativas-de-menor-alcance.md)).
+mismo aprendizaje. El supuesto anterior declara misma medición, pero no prueba
+equivalencia de controles ni costo completo para cada superficie habilitada
+([supuesto anterior](../../context/supuestos/alternativas-de-menor-alcance.md)).
 Año 1, miles de USD, medio (rango):
 
-| | Paquete recomendado | Gobierno mínimo y formación, sin plataforma ni contractor | Piloto sobre el agente de código |
+| | Paquete anterior | Gobierno mínimo y formación, sin plataforma ni contractor | Piloto sobre el agente de código |
 |---|---|---|---|
 | Caja | 177 (98-255) | 21 (12-30): legal y telemetría, con contingencia | 5 (2-7): telemetría |
 | Tiempo | 217 (115-320); 1,6-2,2 FTE clave | 141 (71-211); ~1,2 FTE clave en los meses 1-3, ~0,9 después | 42 (22-62); ~0,8 FTE clave en los meses 1-3, ~0,4 después |
 | Costo económico | 394 (213-575) | 161 (82-240) | 47 (24-69) |
-| Qué compra | Todo lo del gobierno mínimo y formación, más controles con bloqueo y registro (los controles técnicos propios del Anexo C), harness y evals, caso de referencia, prueba de portabilidad y costo, base común del producto y demostración externa | Los controles de política del Anexo C (política, matriz, inventario, legal), la formación del Anexo D para toda la dotación y la medición. El riesgo de inyección indirecta de prompts y el de fuga de secretos quedan solo en política; sin opción de producto | Prácticas sobre el agente en la cohorte que genera el beneficio, matriz y medición. Sin protección nueva ni opción de producto; Operaciones y staff sin formación |
+| Qué compra | Plataforma, controles, harness y evals, caso de referencia, portabilidad, base común del producto y demostración externa | Política, matriz, inventario, legal, formación y medición. El costo original no incluye todos los compensatorios hoy exigidos por C: no habilita uso solo por política | Cohorte, prácticas, matriz y medición; faltan formación general y legal; controles aplicables por conciliar antes de habilitar |
 | Capacidad liberada en 12 meses | 62 (28-105) | ≥ φ_gobierno × 62 | ≥ φ_piloto × 62 |
 | Neto 12 m (ROI) | −332 (−84%) | −161 a −99 (−100% a −62%) | −47 a +15 (−100% a +32%) |
 | Señal de valor y gate | Throughput por límite inferior en el mes 6 (+3%) y en el mes 9 (+8%); caso de referencia y prueba de portabilidad en el mes 6 | El mismo throughput en los meses 6 y 9; adopción | El mismo throughput en los meses 6 y 9, en la cohorte |
@@ -816,20 +863,21 @@ para cuantificarlo:
   el caso de referencia, evidencia técnica para un banco y la base del producto.
   Que las evals en CI bajen el retrabajo es una hipótesis sin dato.
 
-**Resultado: en el año 1, el gobierno mínimo y formación y el piloto acotado le ganan al paquete con cualquier φ.** Aun
+**Resultado ilustrativo sobre costos publicados, sin equivalencia demostrada:** aun
 con φ = 0, pierden 161 y 47 contra 332; ni el optimista del paquete (−280) lo
 cambia. El piloto acotado se paga en el año si φ_piloto ≥ ~76% (47 / 62). El diferencial del
 paquete sobre el gobierno mínimo y formación, ~233, lo pagan solo opciones sin valor medido:
 
-- **Precio:** a 12×, la cobertura pide bajar ~90% el consumo enrutable en el año
-  (233 / (12 × 21,5)); a 6×, más del 100%. Sola no lo paga.
+- **Precio:** cubrir 233 exige **90,3% ponderado de todo el gasto elegible**
+  a 12×: fc×s = 233/(12×21,5) = 0,9031; a 6×, más del 100%.
+  No es reducción solo del tráfico enrutable: si fc≤0,9, ni s=100% alcanza.
 - **Protección del ingreso:** se paga si baja en Δp la probabilidad de perder el
   ingreso protegido ("Cómo se lee la palanca de riesgo"). Lo juzga el board.
 - **Producto:** la opción de un contrato en el mes 12, sin ingreso en el año.
 
 Lo caro del paquete empieza en los meses 4-6: por eso la señal se lee en el mes 3, antes de gastar la plataforma.
 
-### Prueba chica de los meses 1-3 (primeros 100 días)
+### Prueba chica anterior de los meses 1-3 (referencia de actividades)
 
 El [Anexo F](06-roadmap-riesgo.md) ("Primeros 100 días") deja sin costear una
 prueba desde la semana 5 con el agente de código actual
@@ -845,9 +893,9 @@ prueba desde la semana 5 con el agente de código actual
 | Gate | Se lee en el mes 3, sin atribuir ganancia (la rampa de los meses 1-3 es 0%) y sin poder de corte |
 | Abandono | Se suspende si sube el retrabajo o los incidentes contra la base congelada, o si la matriz no habilita repositorios para la cohorte |
 
-**No contamina la base.** La base se congela en las semanas 1-4 y la prueba
-arranca en la 5, con el intermedio de Tecnología que el plan ya pone ahí: la
-cohorte cambia desde la semana 5 con prueba o sin ella. Lo que no despeja es la
+**Secuencia condicionada a la base.** Si se congela en semana 4, básico,
+intermedio y prueba arrancan desde semana 5; si se extiende hasta semana 8,
+los tres se desplazan a semana 9 y se revisa completitud M3. Lo que no despeja es la
 atribución: con 15-20 personas y σ sin dato, su efecto no se separa del de la
 formación. Eso la vuelve aprendizaje, no valor, pero no la impide. Va en la aprobación de hoy.
 
@@ -856,16 +904,22 @@ desarrolladores senior ([costo por rol](../../context/supuestos/costo-cargado-po
 no capacitación masiva: los 10-35 USD/h del Anexo D son un piso para la dotación entera
 (darían 0,6-2,2 y un techo de 71). El Anexo D costea así sus champions: es sesgo del Anexo D.
 
-### Recomendación de Finanzas (decidida, lazynet, 2026-10-14)
+### Recomendación anterior de Finanzas (alternativa del 2026-10-14)
+
+**Reemplazada como pedido inicial por el mínimo de ronda 11.** Se conserva
+para comparar alcances; una señal habilita evaluar inversión, no demuestra repago.
+La restricción de C incluye prohibición o condicionamiento: una prohibición pura
+excluye el uso y no libera plataforma. Las cuatro condiciones adicionales de B/C
+son propuesta pendiente de ratificación humana; no reemplazan por esta edición
+la regla vigente del borrador. Se conservan relecturas M6/M9 dentro del año.
 
 **La aprobación de hoy por el primer tramo acotado con la prueba chica, y la decisión del mes 3 como bifurcación.** El board aprueba el primer tramo acotado,
 la prueba, el marco de gates y el producto diferido.
 
 - **La decisión del mes 3 libera la plataforma de los meses 4-6** (contractor al 100%, gateway, pasarela) solo
-  con al menos una señal que pague lo que el gobierno mínimo y formación no compra: restricción o licencia
+  con al menos una señal para evaluar lo que el gobierno mínimo y formación no compra: restricción o licencia
   para vender según el [umbral contractual](../../context/supuestos/umbral-de-evidencia-contractual.md)
-  (el Anexo C la recorta: la restricción cuenta en el mes 3 solo si condiciona el uso de IA;
-  desacuerdo a la vista que el Anexo F registra como la decisión sobre qué restricción cuenta como señal y decide el board en la aprobación de hoy, no se resuelve acá),
+  (prohibición o condicionamiento; la prohibición pura excluye uso y no libera plataforma),
   anuncio del proveedor de pasar a consumo, o señal de cliente para el producto.
   Año de esta rama: ≈ **400** (216-584), el paquete más la prueba.
 - **Sin ninguna, los meses 4-12 corren como gobierno mínimo y formación, con la prueba extendida al piloto acotado:** ≈ **199**
@@ -885,7 +939,175 @@ un año completo de hasta 255 de caja y 320 de tiempo: esa es la reversibilidad.
 Quedan descartados aprobar el año completo (compromete la caja con un caso que no
 cierra) y el producto desde el mes 4 (gasta 37 de caja y 55 de tiempo antes de la señal).
 
-### Pedido de hoy y gates económicos
+### Pedido inicial: paquete mínimo
+
+**Problema y recomendación.** Falta evidencia de valor incremental para ampliar
+inversión. Comprar configuración, controles y aprendizaje con herramientas existentes,
+sin plataforma central. Fuente de **todos los supuestos nuevos**, conciliaciones
+y límites: [paquete mínimo de aprendizaje](../../context/supuestos/paquete-minimo-de-aprendizaje.md).
+No son precios cotizados ni disponibilidad humana demostrada.
+
+**Entregables M1-M3.** Política/intake con estado actualizado, matriz de restricciones,
+inventario y legal focalizado; permisos/MCP/escaneo y pruebas por superficie,
+críticos cerrados y residual aceptado; padrón y extracción reproducible de
+PR/CI/reversiones/tickets/incidentes, calidad y base congelada; básico para toda
+la organización, intermedio de 15-20 personas y prueba de prácticas sobre el agente.
+Uso, cobertura y faltantes se informan separados de resultados.
+
+No incluye gateway, retrieval, harness central, evals en CI de plataforma,
+producto, avanzado ni contractor continuo. Controles equivalentes significa
+mismo requisito y prueba para el mismo uso habilitado; no equivalencia con una
+plataforma de producto. Si lo existente no cumple, excluir/suspender ese uso.
+
+**Conciliación por actividad y rol.** Miles de USD; rangos de horas y costo,
+sin preparación. Formación distribuida a 10-35 USD/h, según el piso de D;
+soporte al costo mensual de su rol/160. No se usan tarifas facturables.
+
+| Rol / actividad | Horas M1-M3 | FTE internos (h/480) | Tiempo a costo cargado |
+|---|---|---|---|
+| Tech lead / arquitectura / líder / facilitación / managers | 146-276 | 0,304-0,575 | 4,10625-17,25 |
+| DevOps productor | 44-72 | 0,092-0,150 | 0,825-3,375 |
+| QA / datos | 48-72 | 0,100-0,150 | 0,9-3,375 |
+| IA aplicada interna | 8-16 | 0,017-0,033 | 0,225-1,1 |
+| Seguridad verificadora, distinta persona del productor | 30-46 | 0,063-0,096 | 0,5625-2,15625 |
+| Seniors de soporte de prácticas | 64 | 0,133 | 1,2-3,0 |
+| Analista funcional | 60-96 | 0,125-0,200 | 0,75-3,3 |
+| Staff | 26-40 | 0,054-0,083 | 0,24375-1,25 |
+| **Soporte clave total** | **426-682** | **0,8875-1,4208** | **8,8125-34,80625** |
+| Básico, 60-70 × 6 h | 360-420 | 0,750-0,875 | 3,6-14,7 |
+| Intermedio, cohorte 15-20 × 12 h | 180-240 | 0,375-0,500 | 1,8-8,4 |
+| **Distribuido total** | **540-660** | **1,125-1,375** | **5,4-23,1** |
+| **Total interno M1-M3** | **966-1.342** | **2,0125-2,7958** | **14,2125-57,90625** |
+
+Referencia de planificación: 1.154/480 = **2,4042 FTE internos**,
+1,1542 clave + 1,25 distribuido; no reemplaza reservar máximos por rol.
+Sin capacidad demostrada no se inicia la actividad. No hereda el piso de ~1,8
+clave ni el contractor del paquete anterior. Ambas bolsas se concilian sobre
+las mismas personas en la matriz privada de D; no hay ganancias futuras para pagarlas.
+
+Solapes propuestos, pendientes de validar por B/C/D: DevOps B 32-56 y C 40-64
+son una unión de configuración/prueba de 40-64, más inventario 4-8;
+QA B contiene D 8-16; Seguridad B contiene C 16-32, más Council 6;
+seniors 64 contienen B 16-24. Diseño de prueba 40-80 y lectura 16-24 de E
+anterior se incluyen una vez. Council ya está repartido: TL 12, Seguridad 6,
+staff 12. No sumar porcentajes anuales de C/D sobre estas mismas tareas.
+
+**Preparación, separada y sin ejecución registrada:** TL 12-24 h y QA 8-16 h,
+total **20-40 h / 0,4875-2,25 mil; techo 3**. Ya se extrajo de B/D en la tabla;
+no se vuelve a sumar a M1-M3. Requiere autorización previa y agenda fuera del tramo.
+
+**Caja M1-M3:** legal focalizado **2-6** (C: 8-16 h externas × 250-375 USD/h)
+y provisión para herramientas/exportación **0-1,5**, más 15%: **2,3-8,625;
+techo 9**. No incluye seats nuevos ni contractor. La provisión no acredita precio
+ni necesidad de compra; si el costo real no entra, reducir o recostear antes de usar.
+Legal externo no se cuenta también como tiempo interno.
+
+**Reservas de salida:** caja **1**, por hasta un mes de herramientas (máximo
+0,5, redondeado arriba); legal por hitos sin preaviso. Cierre interno 16-24 h
+de senior para exportar/revocar/archivar: 0,3-1,125, **reserva de tiempo 2**.
+Si la contratación exige más preaviso, ampliar reserva antes de comprometer.
+Son autorizaciones contingentes, no gasto ni doble contingencia del 15%.
+
+**Autorización inicial:** **caja 9 + reserva 1 = 10**;
+**tiempo M1-M3 58 + preparación 3 + reserva de cierre 2 = 63**.
+El tiempo existente no representa nueva nómina ni pago externo incremental.
+El techo de caja 10 requiere facturación anual de al menos 334 mil al 3%
+o 1 millón al 1%; quien tiene acceso verifica presupuesto 2027 en privado.
+
+**Pérdida máxima de aprendizaje M3:** si nada demuestra valor y se abandona
+la prueba, hasta **73 mil económicos hasta cerrar = 10 caja + 63 tiempo**,
+sin deducir ganancias. Núcleo posterior M4-M12: **108 h**, 36 por tramo
+(TL 12 + Seguridad 12 + staff 12), **caja 0 / tiempo hasta 6** (2 por tramo).
+Se ocupa de accesos, incidentes y permisos; no mantiene el experimento ni habilita
+usos sin controles. El máximo del año con corte M3 es **79 = 73+6**.
+El núcleo posterior requiere aprobación explícita; si no hay capacidad, suspender
+usos afectados hasta cubrir obligaciones. No suma a la continuación de abajo.
+
+**Continuación condicional sin plataforma (no aprobada hoy).** Supuestos de
+operación de la ficha nueva, sin sumar fracciones del paquete anterior:
+
+| Rol | Horas por tramo M4-M12 | Descubrimiento adicional, solo M4-M6 |
+|---|---|---|
+| Tech lead | 36-60 | 8-16 |
+| DevOps | 8-16 | — |
+| QA / datos | 32-48 | — |
+| IA aplicada | 4-8 | — |
+| Seguridad | 12-20 | — |
+| Senior | 16-24 | 8-16 |
+| Analista funcional | 8-16 | 16-24 |
+| Staff | 12-20 | 4-8 |
+| **Total interno** | **128-212 h / 0,267-0,442 FTE** | **36-64 h / 0,075-0,133 FTE** |
+
+Mantiene controles/prácticas, seguimiento y lectura; no hay nuevas cohortes,
+avanzado ni formación general adicional presupuestada. El descubrimiento antes
+de M6 observa integración con documentación/soporte actuales, tiempo a primera
+integración exitosa y consultas por intento; no compra construcción de producto.
+Si hacen falta cambios legales, conectores o más soporte, recostear.
+
+| Tramo condicional | Caja calculada / techo | Tiempo calculado / techo | FTE internos totales |
+|---|---|---|---|
+| M4-M6, con descubrimiento | 0-1,725 / **2** | 3,225-13,3625 / **14** | 164-276 h / 480 = **0,342-0,575** |
+| M7-M9 | 0-1,725 / **2** | 2,6125-10,5375 / **11** | **0,267-0,442** |
+| M10-M12 | 0-1,725 / **2** | 2,6125-10,5375 / **11** | **0,267-0,442** |
+
+Proyección de continuar el mínimo todo el año: **≈67 (25-108) económicos**,
+caja 2,3-13,8 y tiempo con preparación 23,15-94,59375. Suma de techos por
+tramo y preparación: **112 = caja 15 + tiempo 97**, sin gastar reservas;
+con salida, hasta **115**, si no hubo una ampliación de alcance que obligue a recostear.
+No es un presupuesto anual aprobado ni equiparable automáticamente a 47/161/394.
+
+Con alcance y contratos constantes se mantienen reservas 1 de caja / 2 de
+tiempo; cada gate las recalcula antes de asumir obligaciones nuevas.
+Salidas sin plataforma, máximos por suma de techos, sin restar beneficio:
+
+| Decisión de salida | Hasta cerrar, caja / tiempo → económico | Núcleo restante, h / techo de tiempo | Máximo económico del año con salida |
+|---|---|---|---|
+| M3 | 10 / 63 → **73** | 108 / 6 | **79** |
+| M6 | 12 / 77 → **89** | 72 / 4 | **93** |
+| M9 | 14 / 88 → **102** | 36 / 2 | **104** |
+| M12 | 16 / 99 → **115** | — | **115**, sin autorizar régimen posterior |
+
+Estas pérdidas son límites propuestos, no costos ejecutados. La continuidad
+y el núcleo se reemplazan en los tramos restantes; no se suman ambas ramas.
+
+**Beneficio de caja estimado: 0; ingreso nuevo: 0 en el modelo.** Capacidad
+liberada: sin cifra hasta medir; no asignar automáticamente los 62 del paquete
+anterior. Para este presupuesto conservador sin beneficios cuantificados, ROI
+económico modelado −100%, no resultado observado. Una misma hora no se suma
+como capacidad evitada y venta; conciliar trabajo y contribución desplazados
+sin sumar dos veces el mismo costo de oportunidad.
+
+**Lecturas M3/M6/M9.** M3 compra acta reproducible, cobertura, calidad,
+dispersiones y restricciones; no promete atribución (rampa inicial cero).
+Básico/intermedio/prueba solo después de congelar base: semana 5 o semana 9
+si se extiende; revisar completitud M3. M6/M9 releen valor/calidad, adopción,
+riesgo, precio y demanda; continuidad usa los gates de F, sin inventar umbral.
+Seguridad puede suspender antes de cualquier lectura económica.
+
+La opción de configurar/comprar/ensamblar plataforma sigue abierta en **M3,
+M6 y M9**, dentro de los 12 meses. Comparar costos futuros evitables con igual
+cobertura, volumen, calidad, operación y salida, incluida la capacidad que
+falta para construir más tarde; no copiar tramos anteriores ni costos hundidos.
+Regla vigente del borrador: señal contractual/precio/producto; una prohibición
+pura excluye uso. B/C proponen sumar brecha documentada, alternativas equivalentes,
+economía incremental o pérdida de aprendizaje aceptada y capacidad demostrada:
+**pendientes de ratificación humana**. Ni una señal ni el mero anuncio de precio
+demuestran que la inversión se pague. No se difiere plataforma al año 2 por defecto.
+
+**Responsables humanos:** pendientes: quien produce, quien verifica (otra persona),
+autoridad que acepta residual y firma el gate, y quien libera agendas/presupuesto.
+**Éxito:** controles probados antes de habilitar, básicos ≥90% con evaluación
+práctica si el calendario lo permite, medición reproducible con faltantes visibles,
+horas conciliadas y decisión documentada. **Abandono/revisión:** control obligatorio
+incumplido, críticos abiertos, daño, falta de perfil/verificador/agenda, costos fuera
+del techo o base no resolutiva: suspender uso afectado, reducir/resecuenciar o cortar
+la prueba según F; no declarar valor ni ampliar con datos insuficientes.
+
+### Pedido anterior 33+6 / 72+7 y gates económicos (alternativa)
+
+Todo «hoy», «recomendado» o «aprueba» dentro de esta sección y su tabla se refiere
+al pedido anterior. No constituye el pedido vigente ni libera caja o tiempo del
+paquete mínimo. Los gates técnicos vigentes siguen en F, pendiente de integración.
 
 **Pedido de hoy, único.** Elige la vía del contractor desde el mes 1 y autoriza solo
 su tramo de los meses 1-3 (hasta 16,5 de caja, dentro del techo de 33); los tramos de los meses 4-12
@@ -973,19 +1195,22 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 | Sobre de capacidad: lectura estricta o separada | `finance` | La separada es propuesta de Finanzas; con la estricta, los meses 1-3 no entran sin recortar el básico | **Decide el board en la aprobación de hoy** |
 | Staffing facturado por hora desincentiva el uso de IA | `people` | Productividad en staffing = 0 en el base. Las horas de capacitación de Operaciones (~400 h) cuestan 4-14 mil a costo; a tarifa de venta valen más, y eso se calcula en `private/` | **Resuelta** para el costo; el modelo comercial queda **escalado a `caio`** |
 | Contractor contra la restricción de no contratar; vía de IA en los meses 1-3 (contractor desde el mes 1 o rol interno de 0,3 FTE) | `people`, `architect` | El Anexo B y el Anexo D adoptan el contractor desde el mes 1: el recurso que no entra es el tiempo clave (1,6 contra 1,9 FTE), con ~13 mil más de caja. 47-116 mil de caja en el año, reversible por ser un contrato corto. La aprobación de hoy autoriza solo el tramo de los meses 1-3 (hasta 16,5); las decisiones de los meses 3, 6 y 9 liberan el resto | **Decide el Directorio en la aprobación de hoy** |
-| El paquete contra alternativas más baratas que compran el mismo aprendizaje | `finance` (corrección docente) | En el año 1, el gobierno mínimo y formación y el piloto acotado le ganan al paquete con cualquier φ; la plataforma solo se paga con señal de precio, contractual o de producto: la decisión del mes 3 como bifurcación y prueba chica en la aprobación de hoy | **Decidida** (lazynet, 2026-10-14); `caio` la integra en el Anexo F y en las slides 7-9 |
+| El paquete contra alcances más baratos | `finance` | Comparación publicada pendiente de homogeneizar; una señal no demuestra repago | **Actualizada, ronda 11:** pedido inicial mínimo; plataforma se reevalúa M3/M6/M9, con cuatro condiciones adicionales pendientes de ratificación |
 
 ## Insumos para el deck
 
-- **Frase para el CFO:** el año cuesta hasta ~400 mil USD económicos (98-255 de
-  caja y ~3,5 FTE) si la decisión del mes 3 trae una señal que pague la plataforma, y ≈ 199 (caja
-  ≈ 39) si no la trae; en ninguna rama genera caja propia en 12 meses.
-  Compra opciones, no certezas: acotar el riesgo de precio de los tokens si la
-  prueba de los meses 4-6 lo demuestra, tener los controles que los bancos podrían exigirle
-  a un proveedor (hipótesis que se verifica en los meses 1-3 con sus contratos) y un ingreso de
-  producto que se paga solo si la lectura del mes 6 trae señal (16-59 de caja más). Cortarlo en el mes 3
-  cuesta 79, hasta 115 hasta cerrar y hasta 155 en el año con la base mínima.
-- **Decisión que se le pide al board:** el pedido de hoy de arriba.
+- **Frase para el CFO:** «Medir antes de ampliar: pedido inicial, paquete mínimo
+  sin plataforma central. Caja hasta 9+1 de reserva; tiempo hasta 58+3 de
+  preparación+2 de cierre. Beneficio de caja estimado: 0; ingreso nuevo: 0».
+- **Capacidad inicial:** 966-1.342 h / 480 = 2,0125-2,7958 FTE internos,
+  incluidos 0,8875-1,4208 clave y 1,125-1,375 distribuidos; referencia 2,4042.
+  Preparación 20-40 h aparte; agendas por persona pendientes, sin contractor continuo.
+- **Salida M3:** máximo 73 hasta cerrar; núcleo M4-M12 108 h, caja 0 y techo
+  6 de tiempo; máximo anual con corte 79. Reservas no se gastan automáticamente.
+- **Continuidad por gate:** M4-M6 2/14 de caja/tiempo, con descubrimiento de
+  integración; M7-M9 2/11; M10-M12 2/11. No aprobada hoy. Plataforma abierta
+  en M3/M6/M9, con recosteo de futuro evitable y cuatro condiciones propuestas,
+  pendientes de ratificación. F y slides deben integrar este pedido.
 - **Cifra de alerta:** a 12×, el consumo incremental (211-267 mil al año) iguala
   a toda la caja del plan. Es exposición de la empresa, con o sin plan. El
   gateway la acota solo si baja el consumo (~13% a 12×, ~25% a 6×), y eso lo
@@ -995,12 +1220,10 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
   base de los meses 1-3. El +20% del OKR lo cubre solo si 1,20/(1+d) − 1 − c ≥ 16,7%: d es
   la mejora del cuarto trimestre de 2026 a la base de los meses 1-3 (se mide en el mes 3) y c, el cambio del grupo que no
   adopta (desde el mes 6).
-- **Para la Slide 9:** columnas homogéneas (costo económico, capacidad, neto y
-  ROI). Sin señal en el mes 3, ≈ 199 (neto −199 a −137). El base es condicional a que las lecturas de los meses 6 y 9 pasen por límite inferior (−332); si
-  la espera del mes 6 vence, ≈ −245. El pesimista espera, vence y corta (≈ −262),
-  contra −382 sin frenar.
-- **Alternativas:** gobierno mínimo y formación cuesta 161 (neto −161 a −99) y un
-  piloto sobre el agente actual, 47 (−47 a +15), contra 394 (−332) del paquete.
+- **Alternativas históricas:** 47/161/≈199/394/≈400/471 son costos publicados
+  de alcances distintos, pendientes de homogeneizar. Base del paquete −331,9
+  (ROI −84,2%); optimista sin producto −279,9 y con producto −356,9.
+  No trasladar capacidad o retorno del paquete anterior al mínimo.
 
 ## Cautelas
 

@@ -33,6 +33,8 @@ Hechos sobre el caso en los que se apoya el plan (`type: Hecho`), uno por archiv
 Lo que el plan da por cierto sin una fuente que lo pruebe (`type: Supuesto`).
 Cada uno dice por qué es razonable y qué lo invalidaría.
 
+* [Paquete mínimo de aprendizaje sin plataforma central](/supuestos/paquete-minimo-de-aprendizaje.md) - Finanzas concilia los insumos de B/C/D para medir valor con controles probados y herramientas existentes, con techos por etapa y salida acotada.
+
 * [Alternativas de menor alcance y prueba chica de los meses 1-3](/supuestos/alternativas-de-menor-alcance.md) - Para comparar el paquete con opciones más baratas, Finanzas supone la composición y el costo de gobierno mínimo más formación, de un piloto acotado sobre el agente de código actual y de la prueba chica desde la semana 5 del plan, con la misma medición en las tres.
 * [Apetito de riesgo de los clientes financieros frente a la IA](/supuestos/apetito-de-riesgo-de-clientes.md) - Se asume que los bancos y PSP clientes no van a permitir que su código ni sus datos pasen por modelos externos sin una cláusula contractual explícita y controles demostrables.
 * [Base mínima que queda después de un corte](/supuestos/base-minima-tras-un-corte.md) - Si el plan se corta en un gate, se supone que la empresa conserva el resto del año un núcleo de gobierno (fracciones de liderazgo y seguridad más el comité) y la pasarela de salida si ya está instalada; si el frente producto sigue, conserva además la parte de la base común que usa.
