@@ -82,7 +82,7 @@ Comisión y los Estados miembros "apoyen y faciliten" el desarrollo de AI litera
 artículo se mantiene, pero la carga sobre cada organización baja.[^cooley-omnibus][^abreu-omnibus]
 
 Tratalo como **no resuelto**: no se leyó el texto consolidado del Official Journal.
-Para una slide, no afirmar que el art. 4 "obliga" a Flexibility a capacitar; sí que
+Para una slide, no afirmar que el art. 4 "obliga" a Acme Labs a capacitar; sí que
 la AI literacy es una práctica recomendada y está en el texto. Ver
 [AI Omnibus y SIGEN](/conceptos/m1u4-ai-omnibus-sigen.md).
 

@@ -23,6 +23,47 @@ ANNEX_SECTIONS = (
     "Decisiones",
 )
 
+# El PDF es un informe para el directorio: no muestra quién iteró, cómo trabajó el
+# equipo ni los códigos internos de la cursada.
+PROCESS_TEXT = re.compile(
+    # El nombre suelto va en la slide del equipo; lo que no va es su autoría de decisiones.
+    r"\blazynet\b|\bdecisi[óo]n (?:humana )?de Mart[ií]n\b|\bdecidi[óo] Mart[ií]n\b"
+    r"|\bronda\s+\d+\w*|\besta ronda\b"
+    r"|\bversi[óo]n (?:anterior|previa|original)\b"
+    r"|\b(?:pedido|paquete|programa|propuesta|alcance) anterior\b"
+    r"|\breemplazad[oa] como\b|\bpeer review\b|\bdocentes?\b"
+    r"|\bfichas?\b|\bdraft\b|\bcodex\b|\bhuecos\b|\b(?:context|material|private)/"
+    r"|\b(?:regla|referencia|versi[óo]n|recomendaci[óo]n)(?: \w+)? del borrador\b"
+    r"|`(?:caio|architect|governance|people|finance|board)`"
+    r"|\bm\d+ ?u\d+\b",
+    re.IGNORECASE,
+)
+
+
+def frontmatter_lines(text):
+    # Los errores citan la línea del archivo, no la del cuerpo.
+    lines = text.lstrip("\ufeff").splitlines()
+    return next(i for i in range(1, len(lines)) if lines[i].strip() == "---") + 1
+
+
+def process_text(name, body, offset=0):
+    # No se renderizan: comentarios, destinos de links, definiciones de referencia
+    # y etiquetas de notas al pie.
+    body = re.sub(
+        r"<!--.*?-->", lambda m: "\n" * m[0].count("\n"), body, flags=re.DOTALL
+    )
+    found = []
+    for line_number, line in enumerate(body.splitlines(), offset + 1):
+        if re.match(r"\s{0,3}\[(?!\^)[^\]]+\]:\s*\S", line):
+            continue
+        line = re.sub(r"\]\([^)]*\)|\[\^[^\]]*\]", "]", line)
+        match = PROCESS_TEXT.search(line)
+        if match:
+            found.append(
+                f"{name}:{line_number}: texto de proceso en el informe: {match[0]!r}"
+            )
+    return found
+
 
 def evidence_kind(path, root):
     for name in ("context", "material", "defense/evidence"):
@@ -167,7 +208,8 @@ def links(text, include_definitions=True):
         r"!?\[[^\]]*\]\(\s*(<[^>]+>|[^\s)]+)(?:\s+[^)]*)?\)", text
     ):
         yield destination.strip("<>")
-    for label, reference in re.findall(r"!?\[([^\]]+)\]\[([^\]]*)\]", text):
+    # `[^a][^b]` son dos notas al pie seguidas, no un link por referencia.
+    for label, reference in re.findall(r"!?\[(?!\^)([^\]]+)\]\[(?!\^)([^\]]*)\]", text):
         key = " ".join((reference or label).lower().split())
         yield definitions.get(key, f"__undefined_reference__/{key}")
     for key in re.findall(r"\[([^\]^]+)\](?![\[(:])", text):
@@ -219,23 +261,29 @@ def annex_files(root):
 def check_annex(path, root, mode):
     name = path.relative_to(root)
     try:
-        metadata, body = split_frontmatter(path.read_text(encoding="utf-8"), ANNEX_TYPES)
+        text = path.read_text(encoding="utf-8")
+        metadata, body = split_frontmatter(text, ANNEX_TYPES)
     except (OSError, ValueError) as exc:
         return [f"{name}: {exc}"]
     errors = []
     if metadata["owner"] not in ANNEX_OWNERS:
-        errors.append(f"{name}: owner del anexo debe ser uno de {', '.join(ANNEX_OWNERS)}")
+        errors.append(
+            f"{name}: owner del anexo debe ser uno de {', '.join(ANNEX_OWNERS)}"
+        )
     if metadata["status"] not in ("draft", "ready"):
         errors.append(f"{name}: el status del anexo debe ser draft o ready")
     if mode == "delivery" and metadata["status"] == "draft":
         errors.append(f"Entrega rechazada: anexo declarado draft: {name}")
     headings = {
         heading.strip().casefold()
-        for heading in re.findall(r"^\s{0,3}##\s+(.+?)\s*#*$", visible(body), re.MULTILINE)
+        for heading in re.findall(
+            r"^\s{0,3}##\s+(.+?)\s*#*$", visible(body), re.MULTILINE
+        )
     }
     for section in ANNEX_SECTIONS:
         if section.casefold() not in headings:
             errors.append(f"{name}: falta la sección ## {section}")
+    errors.extend(process_text(name, body, frontmatter_lines(text)))
     return errors
 
 
@@ -257,6 +305,7 @@ def check(root, deck, mode):
         )
     if mode == "delivery" and metadata.get("status") == "draft":
         errors.append("Entrega rechazada: deck declarado draft")
+    errors.extend(process_text(deck.relative_to(root), body, frontmatter_lines(text)))
     for line_number, line in enumerate(visible(body).splitlines(), 1):
         if re.fullmatch(
             r" {0,3}(?:-(?:[ \t]*-){2,}|\*(?:[ \t]*\*){2,}|_(?:[ \t]*_){2,})[ \t]*",
@@ -318,9 +367,8 @@ def check(root, deck, mode):
             visible(documents.get(origin, "")).splitlines(), 1
         ):
             if re.search(
-                r"\b(pendiente\w*|TODO|TBD|FIXME|por definir|falta evidencia|sin evidencia|esqueleto)\b",
+                r"\b(TODO|TBD|FIXME|(?i:pendiente\w*|por definir|falta evidencia|sin evidencia|esqueleto))\b",
                 line,
-                re.IGNORECASE,
             ):
                 pending.append(
                     f"{origin.relative_to(root)}:{line_number}: {line.strip()}"

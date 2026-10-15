@@ -91,7 +91,7 @@ chequear EUR-Lex antes de ponerlas en una slide. Calendario original:
   se leyó. Los considerandos hablan de "orientar"; el texto no usa la palabra
   "obligatoria", aunque el art. 2 dice que "será de aplicación".[^sigen-197]
 
-Consecuencia para el plan: la guía **no es obligatoria para Flexibility** como
+Consecuencia para el plan: la guía **no es obligatoria para Acme Labs** como
 empresa privada. Importa si un cliente es un organismo público o como referencia de
 controles. La lectura la presenta como instrumento del sector público
 (p. 19).[^m1u4-lectura]
