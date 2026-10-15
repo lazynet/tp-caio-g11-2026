@@ -6,9 +6,9 @@ title: "Anexo E — Business case y escenarios"
 
 # Anexo E — Business case y escenarios
 
-Slide que sustenta: [Slide 8 — Business case](../slides.md). Los gates económicos
-alimentan además [Slide 7 — Roadmap técnico, financiero y cultural](../slides.md) y
-[Slide 9 — Riesgos, escenarios y decisiones reversibles](../slides.md).
+Slides que sustenta: [Slide 4 — Alternativas](../slides.md) y
+[Slide 9 — Costo y riesgo](../slides.md). Los gates económicos alimentan además
+[Slide 8 — Roadmap técnico, financiero y cultural](../slides.md).
 
 ## Objetivo
 
@@ -21,7 +21,7 @@ caja y capacidad; no el año entero.
 **Pedido inicial: paquete mínimo (decisión de Martin, ronda 11, 2026-10-15).**
 Medir antes de ampliar, con herramientas existentes y controles aplicables probados,
 sin plataforma central. La propuesta económica vigente está en «Pedido inicial:
-paquete mínimo»: caja 9 + reserva 1; tiempo 58 + preparación 3, más reserva de cierre
+paquete mínimo»: caja 9 + reserva 1; tiempo 59 + preparación 3, más reserva de cierre
 interno 2 (miles de USD, techos). No autoriza el año.
 
 El pedido anterior 33+6 de caja / 72+7 de tiempo y sus ramas ≈199/≈400 quedan
@@ -821,7 +821,7 @@ Montos económicos en miles de USD; no son techos anuales aprobados.
 | Paquete con señal sin producto ni prueba | 177 / 217 → **394** | Plataforma, controles, formación y demostración externa condicional como cota superior |
 | Mismo paquete con prueba | +≈6 de tiempo → **≈400** | Cabecera anterior con señal; ni caja ni autorización anual |
 | Paquete con producto sin prueba | 214 / 257 → **471** | Otro alcance; optimista ≈114 de capacidad, neto ≈−357 |
-| **Paquete mínimo nuevo, sin plataforma** | **Caja 2,3-13,8 / tiempo con previa 23,15-94,59375 → ≈67 (25-108)** | Proyección condicional M1-M12 de la ficha nueva; básico general, cohorte/intermedio, controles probados, medición y descubrimiento; sin valor de capacidad presupuestado; sin reservas gastadas ni construcción de producto |
+| **Paquete mínimo nuevo, sin plataforma** | **Caja 2,3-13,8 / tiempo con previa 23,225-94,96875 → ≈67 (26-109)** | Proyección condicional M1-M12 de la ficha nueva; básico general, cohorte/intermedio, controles probados, medición y descubrimiento; sin valor de capacidad presupuestado; sin reservas gastadas ni construcción de producto |
 
 La fila nueva no homogeneiza retroactivamente las anteriores. Los diferenciales
 **394−161=233**, **394−47=347** y **400−199=201** contestan preguntas distintas.
@@ -969,27 +969,32 @@ soporte al costo mensual de su rol/160. No se usan tarifas facturables.
 | DevOps productor | 44-72 | 0,092-0,150 | 0,825-3,375 |
 | QA / datos | 48-72 | 0,100-0,150 | 0,9-3,375 |
 | IA aplicada interna | 8-16 | 0,017-0,033 | 0,225-1,1 |
-| Seguridad verificadora, distinta persona del productor | 30-46 | 0,063-0,096 | 0,5625-2,15625 |
+| Seguridad verificadora, distinta persona del productor | 34-54 | 0,071-0,113 | 0,6375-2,53125 |
 | Seniors de soporte de prácticas | 64 | 0,133 | 1,2-3,0 |
 | Analista funcional | 60-96 | 0,125-0,200 | 0,75-3,3 |
 | Staff | 26-40 | 0,054-0,083 | 0,24375-1,25 |
-| **Soporte clave total** | **426-682** | **0,8875-1,4208** | **8,8125-34,80625** |
+| **Soporte clave total** | **430-690** | **0,8958-1,4375** | **8,8875-35,18125** |
 | Básico, 60-70 × 6 h | 360-420 | 0,750-0,875 | 3,6-14,7 |
 | Intermedio, cohorte 15-20 × 12 h | 180-240 | 0,375-0,500 | 1,8-8,4 |
 | **Distribuido total** | **540-660** | **1,125-1,375** | **5,4-23,1** |
-| **Total interno M1-M3** | **966-1.342** | **2,0125-2,7958** | **14,2125-57,90625** |
+| **Total interno M1-M3** | **970-1.350** | **2,0208-2,8125** | **14,2875-58,28125** |
 
-Referencia de planificación: 1.154/480 = **2,4042 FTE internos**,
-1,1542 clave + 1,25 distribuido; no reemplaza reservar máximos por rol.
+Referencia de planificación: 1.160/480 = **2,4167 FTE internos**,
+1,1667 clave + 1,25 distribuido; no reemplaza reservar máximos por rol.
 Sin capacidad demostrada no se inicia la actividad. No hereda el piso de ~1,8
 clave ni el contractor del paquete anterior. Ambas bolsas se concilian sobre
 las mismas personas en la matriz privada de D; no hay ganancias futuras para pagarlas.
 
 Solapes propuestos, pendientes de validar por B/C/D: DevOps B 32-56 y C 40-64
 son una unión de configuración/prueba de 40-64, más inventario 4-8;
-QA B contiene D 8-16; Seguridad B contiene C 16-32, más Council 6;
-seniors 64 contienen B 16-24. Diseño de prueba 40-80 y lectura 16-24 de E
-anterior se incluyen una vez. Council ya está repartido: TL 12, Seguridad 6,
+QA B contiene D 8-16; seniors 64 contienen B 16-24.
+
+Seguridad B 24-40 puede reutilizarse para matriz y pruebas de C solo con
+confirmación de alcance. Política C 4-8 no está en B y se suma aparte,
+más Council 6: Seguridad provisional 34-54 h.
+
+Diseño de prueba 40-80 y lectura 16-24 de E anterior se incluyen una vez.
+Council ya está repartido: TL 12, Seguridad 6,
 staff 12. No sumar porcentajes anuales de C/D sobre estas mismas tareas.
 
 **Preparación, separada y sin ejecución registrada:** TL 12-24 h y QA 8-16 h,
@@ -1009,18 +1014,21 @@ Si la contratación exige más preaviso, ampliar reserva antes de comprometer.
 Son autorizaciones contingentes, no gasto ni doble contingencia del 15%.
 
 **Autorización inicial:** **caja 9 + reserva 1 = 10**;
-**tiempo M1-M3 58 + preparación 3 + reserva de cierre 2 = 63**.
+**tiempo M1-M3 59 + preparación 3 + reserva de cierre 2 = 64**.
 El tiempo existente no representa nueva nómina ni pago externo incremental.
 El techo de caja 10 requiere facturación anual de al menos 334 mil al 3%
 o 1 millón al 1%; quien tiene acceso verifica presupuesto 2027 en privado.
 
 **Pérdida máxima de aprendizaje M3:** si nada demuestra valor y se abandona
-la prueba, hasta **73 mil económicos hasta cerrar = 10 caja + 63 tiempo**,
+la prueba, hasta **74 mil económicos hasta cerrar = 10 caja + 64 tiempo**,
 sin deducir ganancias. Núcleo posterior M4-M12: **108 h**, 36 por tramo
 (TL 12 + Seguridad 12 + staff 12), **caja 0 / tiempo hasta 6** (2 por tramo).
+
 Se ocupa de accesos, incidentes y permisos; no mantiene el experimento ni habilita
-usos sin controles. El máximo del año con corte M3 es **79 = 73+6**.
-El núcleo posterior requiere aprobación explícita; si no hay capacidad, suspender
+usos sin controles. El máximo del año con corte M3 es **80 = 74+6**.
+
+Los **6 de núcleo requieren aprobación explícita en el gate de salida M3**:
+no forman parte del total autorizado hoy de 74. Si no hay capacidad, suspender
 usos afectados hasta cubrir obligaciones. No suma a la continuación de abajo.
 
 **Continuación condicional sin plataforma (no aprobada hoy).** Supuestos de
@@ -1050,25 +1058,80 @@ Si hacen falta cambios legales, conectores o más soporte, recostear.
 | M7-M9 | 0-1,725 / **2** | 2,6125-10,5375 / **11** | **0,267-0,442** |
 | M10-M12 | 0-1,725 / **2** | 2,6125-10,5375 / **11** | **0,267-0,442** |
 
-Proyección de continuar el mínimo todo el año: **≈67 (25-108) económicos**,
-caja 2,3-13,8 y tiempo con preparación 23,15-94,59375. Suma de techos por
-tramo y preparación: **112 = caja 15 + tiempo 97**, sin gastar reservas;
-con salida, hasta **115**, si no hubo una ampliación de alcance que obligue a recostear.
+Proyección de continuar el mínimo todo el año, sin esperas: **≈67 (26-109) económicos**,
+caja 2,3-13,8 y tiempo con preparación 23,225-94,96875. Suma de techos por
+tramo y preparación: **113 = caja 15 + tiempo 98**, sin gastar reservas;
+
+con salida, hasta **116**, si no hubo una ampliación de alcance que obligue a recostear.
 No es un presupuesto anual aprobado ni equiparable automáticamente a 47/161/394.
 
 Con alcance y contratos constantes se mantienen reservas 1 de caja / 2 de
 tiempo; cada gate las recalcula antes de asumir obligaciones nuevas.
-Salidas sin plataforma, máximos por suma de techos, sin restar beneficio:
+Salidas sin plataforma, máximos por suma de techos, sin restar beneficio.
+Las filas M3/M6/M9/M12 suponen corte inmediato al cierre del gate; las esperas
+se costean por separado abajo, con aprobación explícita antes de iniciarlas:
 
 | Decisión de salida | Hasta cerrar, caja / tiempo → económico | Núcleo restante, h / techo de tiempo | Máximo económico del año con salida |
 |---|---|---|---|
-| M3 | 10 / 63 → **73** | 108 / 6 | **79** |
-| M6 | 12 / 77 → **89** | 72 / 4 | **93** |
-| M9 | 14 / 88 → **102** | 36 / 2 | **104** |
-| M12 | 16 / 99 → **115** | — | **115**, sin autorizar régimen posterior |
+| M3 | 10 / 64 → **74** | 108 / 6 | **80** |
+| M6 inmediato | 12 / 78 → **90** | 72 / 4 | **94** |
+| Espera M6 vencida, corte tras 6 semanas | 13 / 84 → **97** | 54 / 3 | **100** |
+| M9 inmediato | 14 / 89 → **103** | 36 / 2 | **105** |
+| Espera M9 vencida, corte tras 6 semanas | 15 / 95 → **110** | 18 / 1 | **111** |
+| M12 | 16 / 100 → **116** | — | **116**, sin autorizar régimen posterior |
 
 Estas pérdidas son límites propuestos, no costos ejecutados. La continuidad
 y el núcleo se reemplazan en los tramos restantes; no se suman ambas ramas.
+El núcleo restante requiere aprobación explícita en cada gate de salida.
+
+**89 era el máximo de corte inmediato al cierre de M6 con el costeo anterior**,
+no el de esperar seis semanas; corregida Seguridad, ese máximo es **90**.
+
+**Subtramos de espera M6/M9, supuestos nuevos.** Una sola espera de seis semanas
+por gate, sin expansión, producto ni nuevo descubrimiento.
+
+La carga se estima por tareas: TL 18-30 h coordina y lee; DevOps 4-8 mantiene
+configuración y exporta; QA 16-24 repite extracción, enlaces y cálculo.
+
+IA 2-4 y seniors 8-12 sostienen prácticas congeladas; Seguridad 6-10 revisa
+accesos/incidentes/residual; analista 4-8 concilia registros; staff 6-10
+documenta decisión y permisos.
+
+La bolsa equivale a la mitad de las tareas trimestrales de mantenimiento:
+**64-106 h**, costo **1,30625-5,26875**, techo **6** de tiempo por espera.
+Es un supuesto de carga, no una conversión de semanas calendario a meses.
+
+Caja: herramientas 0-0,75 +15% = **0-0,8625**, techo **1** por espera.
+Si no alcanza para controles, muestra madura y relectura, cortar o recostear
+antes de comprometer; no prorrogar ni atribuir ganancia con muestra insuficiente.
+
+| Subtramo a aprobar | Actividades y horas | Caja / tiempo, techos del subtramo | Reserva de salida caja / tiempo | Pérdida acumulada al vencer y cortar, caja / tiempo → total |
+|---|---|---|---|---|
+| Espera M6 | Controles, prácticas congeladas, nueva medición y lectura; 64-106 h | 1 / 6 | 1 / 2, vigentes y usadas una sola vez | 13 / 84 → **97**; con núcleo restante, **100** |
+| Espera M9 | Controles, prácticas congeladas, nueva medición y lectura; 64-106 h | 1 / 6 | 1 / 2, vigentes y usadas una sola vez | 15 / 95 → **110**; con núcleo restante, **111** |
+
+La espera **sustituye** la porción de continuidad de M7-M9 o M10-M12 que utiliza;
+no se agrega al trimestre completo 2/11 ni a un núcleo simultáneo. La reserva
+1/2 cubre solo cierre: no financia medición y no se vuelve a sumar por esperar.
+
+Después de la espera, el núcleo del trimestre parcial es TL 6 + Seguridad 6 +
+staff 6 = **18 h**, costo **0,3375-0,84375**, techo **1** de tiempo y caja 0;
+en M6 quedan además 36 h / techo 2 de M10-M12.
+
+Es una distribución propuesta de tareas; validar la cadencia obligatoria
+antes de aprobar el gate.
+
+Si pasa la relectura, recostear y aprobar el resto del trimestre descontando
+las actividades ya financiadas en la espera, sin sumar otra vez 128-212 h.
+Las filas de espera suponen continuidad sin esperas anteriores; una espera M6
+seguida de continuidad y otra espera M9 requiere recomponer los subtramos.
+
+Los techos anuales 113/116 describen continuidad sin esperas; una nueva secuencia
+se recompone por subtramos y redondeos, no recibe una autorización anual implícita.
+
+Propuesta a ratificar: si al vencer M9 no pasa valor/calidad con versión congelada,
+cortar el frente interno; si otro frente sigue, aplicar la precedencia de F y
+recostearlo. Los máximos de esta tabla son del mínimo sin plataforma ni producto.
 
 **Beneficio de caja estimado: 0; ingreso nuevo: 0 en el modelo.** Capacidad
 liberada: sin cifra hasta medir; no asignar automáticamente los 62 del paquete
@@ -1187,6 +1250,10 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 
 ## Tensiones con otras miradas
 
+Las tensiones de capacidad/contratación del paquete anterior son antecedentes:
+ningún «hoy» de esas filas autoriza ese alcance. Rige el pedido mínimo de E;
+cualquier excepción exige recosteo y decisión nueva.
+
 | Tensión | Planteada por | Posición de Finanzas | Estado |
 |---|---|---|---|
 | Exceso de ~0,3 FTE clave en los meses 4-6 con el producto diferido | `finance` | `architect` propone el replan del Anexo B (los meses 4-6 en 2,2 FTE clave, −5 mil de tiempo) y la excepción acotada como respaldo. Finanzas toma el replan como base y deja la excepción costeada | **Pendiente del board en la aprobación de hoy**: replan o excepción |
@@ -1194,28 +1261,37 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 | +20% de throughput con agentes a 12× lo pagado, contra el OKR de gasto de tecnología de menos de 3,5% | `architect` | A régimen, la base libera ~130 mil por año, que cubren consumo incremental hasta ~7× la suscripción. La caja del plan suma gasto de tecnología: el OKR es incompatible salvo que baje la nube. Propuesta: medirlo sin la inversión del plan, o por persona activa | **Escalada a `caio`** para reformular el resultado clave |
 | Sobre de capacidad: lectura estricta o separada | `finance` | La separada es propuesta de Finanzas; con la estricta, los meses 1-3 no entran sin recortar el básico | **Decide el board en la aprobación de hoy** |
 | Staffing facturado por hora desincentiva el uso de IA | `people` | Productividad en staffing = 0 en el base. Las horas de capacitación de Operaciones (~400 h) cuestan 4-14 mil a costo; a tarifa de venta valen más, y eso se calcula en `private/` | **Resuelta** para el costo; el modelo comercial queda **escalado a `caio`** |
-| Contractor contra la restricción de no contratar; vía de IA en los meses 1-3 (contractor desde el mes 1 o rol interno de 0,3 FTE) | `people`, `architect` | El Anexo B y el Anexo D adoptan el contractor desde el mes 1: el recurso que no entra es el tiempo clave (1,6 contra 1,9 FTE), con ~13 mil más de caja. 47-116 mil de caja en el año, reversible por ser un contrato corto. La aprobación de hoy autoriza solo el tramo de los meses 1-3 (hasta 16,5); las decisiones de los meses 3, 6 y 9 liberan el resto | **Decide el Directorio en la aprobación de hoy** |
+| Contractor contra la restricción de no contratar; vía de IA en los meses 1-3 | `people`, `architect` | Antecedente del paquete anterior, sin decisión de contratación hoy. Pedido vigente: mínimo de E; una excepción externa o plataforma exige cotización, recosteo y decisión nueva. No se autoriza el tramo de contractor de 16,5 | **Sin contratación autorizada hoy** |
 | El paquete contra alcances más baratos | `finance` | Comparación publicada pendiente de homogeneizar; una señal no demuestra repago | **Actualizada, ronda 11:** pedido inicial mínimo; plataforma se reevalúa M3/M6/M9, con cuatro condiciones adicionales pendientes de ratificación |
 
 ## Insumos para el deck
 
 - **Frase para el CFO:** «Medir antes de ampliar: pedido inicial, paquete mínimo
-  sin plataforma central. Caja hasta 9+1 de reserva; tiempo hasta 58+3 de
+  sin plataforma central. Caja hasta 9+1 de reserva; tiempo hasta 59+3 de
   preparación+2 de cierre. Beneficio de caja estimado: 0; ingreso nuevo: 0».
-- **Capacidad inicial:** 966-1.342 h / 480 = 2,0125-2,7958 FTE internos,
-  incluidos 0,8875-1,4208 clave y 1,125-1,375 distribuidos; referencia 2,4042.
+- **Capacidad inicial:** 970-1.350 h / 480 = 2,0208-2,8125 FTE internos,
+  incluidos 0,8958-1,4375 clave y 1,125-1,375 distribuidos; referencia 2,4167.
   Preparación 20-40 h aparte; agendas por persona pendientes, sin contractor continuo.
-- **Salida M3:** máximo 73 hasta cerrar; núcleo M4-M12 108 h, caja 0 y techo
-  6 de tiempo; máximo anual con corte 79. Reservas no se gastan automáticamente.
+- **Salida M3:** máximo 74 hasta cerrar; núcleo M4-M12 108 h, caja 0 y techo
+  6 de tiempo; máximo anual con corte 80 solo si el núcleo se aprueba explícitamente
+  en el gate de salida. Los 6 no están en los 74 de hoy; reservas no son gasto automático.
+- **Salidas y esperas:** corte inmediato M6 90 hasta cerrar / 94 con núcleo;
+  M9 103/105; M12 116. Una espera de seis semanas requiere subtramo aprobado
+  64-106 h, caja 1 / tiempo 6, reservas 1/2 compartidas; al vencer y cortar:
+  M6 97/100; M9 110/111. Sustituye continuidad y núcleo del período, sin duplicarlos.
+- **Proyección anual sin esperas:** ≈67 (26-109); techos sin gastar reservas
+  113 (15 caja / 98 tiempo), con cierre 116. No es autorización anual.
 - **Continuidad por gate:** M4-M6 2/14 de caja/tiempo, con descubrimiento de
   integración; M7-M9 2/11; M10-M12 2/11. No aprobada hoy. Plataforma abierta
   en M3/M6/M9, con recosteo de futuro evitable y cuatro condiciones propuestas,
   pendientes de ratificación. F y slides deben integrar este pedido.
-- **Cifra de alerta:** a 12×, el consumo incremental (211-267 mil al año) iguala
-  a toda la caja del plan. Es exposición de la empresa, con o sin plan. El
+- **Cifra de alerta del paquete anterior, no aplicable al mínimo:** a 12×,
+  el consumo incremental (211-267 mil al año) se comparaba con la caja de ese paquete.
+  Es exposición de la empresa, con o sin plan. El
   gateway la acota solo si baja el consumo (~13% a 12×, ~25% a 6×), y eso lo
   mide la prueba de los meses 4-6.
-- **Equilibrio operativo anual del año 2** (no recupera la inversión del año 1,
+- **Equilibrio del paquete anterior, no aplicable al mínimo:** régimen del año 2
+  (no recupera la inversión del año 1,
   no es ROI ni payback): ~17% de throughput atribuible (~23% con producto), contra la
   base de los meses 1-3. El +20% del OKR lo cubre solo si 1,20/(1+d) − 1 − c ≥ 16,7%: d es
   la mejora del cuarto trimestre de 2026 a la base de los meses 1-3 (se mide en el mes 3) y c, el cambio del grupo que no
