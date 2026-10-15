@@ -8,11 +8,11 @@ size: 16:9
 ---
 
 <!-- Fuente única del deck. Nunca edites un deck generado: corré scripts/build-deck.sh.
-     Una slide por `---`, con un título `#` cada una. Máximo 10 slides. Cada slide dice
-     qué decisión le pide al board y apunta a su anexo. Borrador del CAIO: toda cifra
-     viene de un anexo y de fichas en draft. El pedido de hoy completo vive solo en la
-     slide 8; las demás piden su parte. Diseño: plan/theme/acme.css; los bloques HTML
-     llevan Markdown adentro, separado por líneas en blanco, y los links siguen en
+     Una slide por `---`, con un título `#` cada una. Máximo 10 slides. Arco:
+     problema → beneficio → alternativas → costo → resolución. Borrador del CAIO: toda
+     cifra viene de un anexo y de fichas en draft. El pedido completo vive solo en la
+     slide 10; la 9 muestra su pérdida máxima. Diseño: plan/theme/acme.css; los bloques
+     HTML llevan Markdown adentro, separado por líneas en blanco, y los links siguen en
      Markdown. -->
 
 <!-- _class: cover -->
@@ -22,25 +22,21 @@ size: 16:9
 
 <span class="chip">Grupo 11 · Diplomatura CAIO · UTN BA</span>
 
-# IA que se vende y se gobierna
+# Medir el valor antes de ampliar la inversión
 
 <p class="sub">Plan Maestro CAIO 2027 para <strong>Acme Labs</strong>, software para bancos, fintechs y grandes empresas</p>
 
-<p class="eyebrow">Lo que pedimos hoy: los primeros tres meses, no el año</p>
+<p class="eyebrow">Doce meses de IA en la operación y en el producto, con fondos por decisión</p>
 
-<div class="grid g3" style="max-width:820px;margin:8px 0 14px">
-<div class="card kpi"><div class="num">33</div><div class="lbl">mil USD de caja para los meses 1-3, con una prueba chica</div></div>
-<div class="card kpi"><div class="num">~1,8</div><div class="lbl">FTE clave como piso de capacidad</div></div>
-<div class="card kpi"><div class="num">Mes 3</div><div class="lbl">una señal libera la plataforma: la regla de decisión</div></div>
-</div>
+<p style="max-width:820px">Hoy la IA se usa, pero nadie midió cuánto vale. Proponemos empezar por lo mínimo que compra esa medición, con controles probados y las herramientas que ya pagamos, y ampliar solo con evidencia.</p>
 
-<p class="fine">Caso propuesto · borrador sin verificación humana · el pedido completo, en la slide 8</p>
+<p class="fine">Caso propuesto · borrador sin verificación humana · sin promesa de repago en el año</p>
 
 ---
 
-<p class="eyebrow">01 · Punto de partida</p>
+<p class="eyebrow">01 · Problema</p>
 
-# Rentable, concentrada y sin IA en lo que vende
+# Uso sin valor medido, y un diagnóstico por conciliar
 
 <div class="grid main-side">
 <div class="plain">
@@ -50,19 +46,21 @@ size: 16:9
 | Estrategia | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Propuestas de IA sin decidir |
 | Datos e infraestructura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Buena nube, datos sin inventario |
 | Talento y cultura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Agente de código: Tecnología ~7 de 10; Operaciones ~1 de 10 |
-| Gobernanza | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Política en borrador desde abril de 2026 |
-| Adopción y valor | <span class="dots"><span class="on">●</span><span class="half">●</span><span class="off">●●●</span></span> 1-2 | Cero IA en producción en el producto |
+| Gobernanza | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Política en borrador; último registro, abril de 2026 |
+| Adopción y valor | <span class="dots"><span class="on">●</span><span class="half">●</span><span class="off">●●●</span></span> 1-2 | Sin IA productiva documentada en la oferta; valor interno sin medir |
 
 </div>
 <div class="grid">
-<div class="card kpi"><div class="num">40-50%</div><div class="lbl">de la facturación viene del cliente principal</div></div>
-<div class="card kpi"><div class="num">83-90%</div><div class="lbl">de utilización: poco margen para sumar trabajo</div></div>
+<div class="card kpi"><div class="num">40-50%</div><div class="lbl">de la facturación viene del cliente principal (agosto)</div></div>
+<div class="card kpi"><div class="num">83-90%</div><div class="lbl">de utilización promedio, sin corte por proyecto</div></div>
 </div>
 </div>
 
+<p class="note">Fuentes de escritorio con poblaciones y fechas distintas: nómina y contratistas a septiembre, utilización de 2026, concentración de agosto. Son hipótesis, no hechos certificados.</p>
+
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Validar el diagnóstico como base del plan.</span>
+<span class="body">Tomar el diagnóstico como hipótesis: antes de comprometer horas, conciliar corte, nómina, contratistas, personas/FTE y horas por rol.</span>
 <span class="ref">
 
 [Anexo A — Diagnóstico](annexes/01-diagnostico.md)
@@ -72,74 +70,103 @@ size: 16:9
 
 ---
 
-<p class="eyebrow">02 · Tesis</p>
+<p class="eyebrow">02 · Beneficio</p>
 
-# Gobierno y formación primero; la plataforma, con una señal
+# Lo que compramos es capacidad con calidad, medida
 
 <div class="grid g3">
 <div class="card dark">
-<span class="tag">Siempre · desde hoy</span>
-<h3>La base</h3>
-<p>Gobierno ratificado, línea de base congelada, formación para toda la empresa y una prueba chica con el agente de código que ya se usa.</p>
+<span class="tag">Beneficio principal</span>
+<h3>Capacidad con calidad</h3>
+<p>PR aceptados por persona activa contra una base congelada, con retrabajo e incidentes primero. Pasa por el límite inferior del intervalo: +3% en el mes 6, +8% en el mes 9.</p>
 </div>
 <div class="card">
-<span class="tag">Solo con señal en el mes 3</span>
-<h3>La plataforma</h3>
-<p>Gateway neutral al modelo, controles con bloqueo, harness y evals. La señal puede ser de precio, de contrato o de un cliente.</p>
+<span class="tag">En el modelo</span>
+<h3>Beneficio de caja estimado: 0</h3>
+<p>Ingreso nuevo: 0. La capacidad liberada no es caja: solo se convierte si se vende o evita una contratación, con evidencia.</p>
 </div>
 <div class="card dashed">
-<span class="tag">Con señal de un cliente · mes 6</span>
-<h3>IA en el producto</h3>
-<p>Un asistente de integración en la plataforma propia, que solo asiste y sin datos de clientes. Le ganó en RICE a dos alternativas (puntajes propuestos, sin medir).</p>
+<span class="tag">Hipótesis, no beneficio</span>
+<h3>Asistente de integración</h3>
+<p>Antes del mes 6 medimos el tiempo a la primera integración exitosa con la documentación y el soporte actuales. Sin problema, base y señal comercial escrita, no se construye.</p>
 </div>
 </div>
 
-<p style="margin-top:14px">Con productividad sola, las opciones baratas ganan el año 1. La plataforma compra opciones (cobertura de precio, un ingreso y licencia para venderles a bancos, si los meses 1-3 la confirman) y se paga solo si una prende.</p>
+<p style="margin-top:14px">El paso no está asegurado: con +3,75% y un semiancho de 3 puntos, el límite inferior queda en +0,75%. Por eso medimos antes de ampliar.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Adoptar la tesis: la plataforma se gana en el mes 3 y el producto, en el mes 6.</span>
+<span class="body">Aceptar capacidad con calidad como beneficio a medir, sin presupuestar caja ni ingreso.</span>
 <span class="ref">
 
-[Anexo F — Roadmap ajustado por riesgo](annexes/06-roadmap-riesgo.md)
+[Anexo B](annexes/02-arquitectura.md) · [Anexo E](annexes/05-business-case.md) · [Anexo F](annexes/06-roadmap-riesgo.md)
 
 </span>
 </div>
 
 ---
 
-<p class="eyebrow">03 · Arquitectura</p>
+<p class="eyebrow">03 · Alternativas</p>
 
-# Un gateway si hay señal, cero datos de cliente
+# Costos publicados de alcances distintos, pendientes de homogeneizar
+
+<div class="plain">
+
+| Alcance publicado | Caja / tiempo → económico | Qué compra |
+|---|---|---|
+| Piloto sobre el agente actual | 5 / 42 → **47** | Cohorte, matriz, prácticas y medición; sin formación general ni legal |
+| Gobierno y formación desde el inicio | 21 / 141 → **161** | Política, matriz, inventario, legal y medición |
+| Rama sin señal del paquete anterior | ≈39 / ≈160 → **≈199** | Gobierno y formación después de arrancar el paquete, con compensatorios |
+| Paquete con plataforma, sin producto | 177 / 217 → **394** (≈400 con prueba) | Plataforma, controles, formación y demostración externa |
+| Paquete con producto | 214 / 257 → **471** | Otro alcance; neto optimista ≈ −357 |
+| **Paquete mínimo, todo el año** | **≈67 (25-108)**, proyección | Básico, cohorte, controles probados, medición y descubrimiento; sin plataforma |
+
+</div>
+
+<p class="note">Miles de USD. No hay comparación homogénea todavía: controles, población y medición no son iguales. El pedido anterior de 33 + 6 de caja y 72 + 7 de tiempo queda como alternativa. En el mes 3 se comparan gastos futuros evitables, sin costos hundidos.</p>
+
+<div class="decision">
+<span class="pill">Decisión</span>
+<span class="body">Empezar por el paquete mínimo, sin llamar presupuesto aprobado a ninguna proyección anual.</span>
+<span class="ref">
+
+[Anexo E — Business case](annexes/05-business-case.md)
+
+</span>
+</div>
+
+---
+
+<p class="eyebrow">04 · Arquitectura</p>
+
+# La respuesta mínima que pase las pruebas
 
 <div class="chips">
-<span>Gateway con ≥2 proveedores, ruteo por nivel de dato</span>
-<span>Registro de costo</span>
-<span>Aislamiento por cliente</span>
-<span>Harness con evals en CI y gate humano</span>
-<span>Fuera del gateway: control compensatorio probado en los meses 4-6</span>
-<span>El agente de código entra solo si no rompe la suscripción</span>
-<span class="hot">Sin fine-tuning ni datos productivos de clientes en 12 meses</span>
+<span>Configurar lo que ya pagamos antes de comprar o ensamblar</span>
+<span>Permisos, MCP acotados y escaneo local por superficie</span>
+<span>Extracción reproducible de PR, CI, reversiones e incidentes</span>
+<span>El gateway no reemplaza controles de IDE, chat ni suite</span>
+<span class="hot">Sin datos productivos de clientes en 12 meses</span>
 </div>
 
 <div class="grid g3">
 <div class="card dark">
 <h3>Aprobar hoy</h3>
-<p>Meses 1-3: inventario, línea de base, matriz de superficies, telemetría, prueba chica.</p>
+<p>Meses 1-3 con herramientas existentes: configuración, telemetría, base y prueba de prácticas.</p>
 </div>
 <div class="card">
-<h3>Meses 3 y 6, solo con señal</h3>
-<p>Gateway, harness y prueba de portabilidad y costo (meses 4-6); piloto de los meses 7-9.</p>
+<h3>Meses 3, 6 y 9: opción de plataforma</h3>
+<p>Regla vigente: una señal de contrato, precio o cliente. Propuesta pendiente de ratificación: además, brecha documentada, alternativas comparables, economía incremental o pérdida aceptada, y capacidad demostrada.</p>
 </div>
 <div class="card dashed">
 <h3>No aprobar todavía</h3>
-<p>Modelo propio y contratos de más de 12 meses.</p>
+<p>Gateway, harness central, modelo propio y contratos de más de 12 meses. Nada pasa al año 2 por defecto.</p>
 </div>
 </div>
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Solo la columna de la izquierda.</span>
+<span class="body">Aprobar la columna izquierda; ratificar o no las cuatro condiciones.</span>
 <span class="ref">
 
 [Anexo B — Arquitectura](annexes/02-arquitectura.md)
@@ -149,17 +176,17 @@ size: 16:9
 
 ---
 
-<p class="eyebrow">04 · Gobierno</p>
+<p class="eyebrow">05 · Gobierno y seguridad</p>
 
-# Gobierno que habilita, no que frena
+# Controles probados antes de usar
 
 <div class="grid g3">
-<div class="kpi"><div class="num">5</div><div class="lbl">asientos en el AI Council, dentro del comité de tecnología y con CoE virtual: revisión mensual con poder de corte</div></div>
-<div class="kpi"><div class="num">5 días</div><div class="lbl">hábiles de respuesta para el riesgo medio, con intake en 3 niveles</div></div>
+<div class="kpi"><div class="num">5</div><div class="lbl">asientos en el AI Council, dentro del comité de tecnología: revisión mensual con poder de corte</div></div>
+<div class="kpi"><div class="num">3 roles</div><div class="lbl">distintos en cada gate: quien produce la evidencia, quien la verifica y quien firma</div></div>
 <div class="kpi"><div class="num" style="font-size:30px">“Prepara, no ejecuta”</div><div class="lbl">techo de autonomía en el producto durante los 12 meses</div></div>
 </div>
 
-<p class="note" style="margin-top:12px">Secretos y datos prohibidos: bloqueo técnico en la pasarela (con señal en el mes 3) y en el equipo; en chat, IDE y suite, solo control compensatorio, con residual que acepta el Council. El primer secreto expuesto dispara la contención.</p>
+<p class="note" style="margin-top:12px">Sin plataforma, no alcanza la política: cada superficie prueba sus compensatorios (secreto sintético, prueba adversarial, revisión humana) con críticos cerrados y residual aceptado. Lo que no cumple se excluye. Seguridad puede suspender el uso aunque el gasto o la adopción cumplan.</p>
 
 <div class="decision block">
 <div class="decision-head"><span class="pill">Decisiones</span><span class="ref">
@@ -168,39 +195,39 @@ size: 16:9
 
 </span></div>
 <div class="grid g3">
-<div><strong>1.</strong> Ratificar la política de IA en los meses 1-3: compromiso interno, enmendable.</div>
+<div><strong>1.</strong> Ratificar la política en los meses 1-3, después de confirmar su estado actual.</div>
 <div><strong>2.</strong> Sin crédito ni scoring en 12 meses; el resto, clasificado caso por caso.</div>
-<div><strong>3.</strong> Financiar los controles por decisión: gobierno mínimo siempre; controles técnicos de la plataforma si en el mes 3 hay señal; la demostración externa (red team externo e ISO ampliada), solo con señal contractual en el mes 9 o si en el mes 6 se libera el producto.</div>
+<div><strong>3.</strong> Ningún uso nuevo sin prueba previa por superficie; una prohibición contractual se cumple excluyendo el uso.</div>
 </div>
 </div>
 
 ---
 
-<p class="eyebrow">05 · Personas</p>
+<p class="eyebrow">06 · Personas</p>
 
-# Capacitar y reasignar, no contratar
+# Formar, reasignar y decidir una excepción externa
 
 <div class="grid g2">
 <div class="card">
-<p class="eyebrow" style="color:var(--muted)">Piloto de abril · n=12, autoseleccionado</p>
+<p class="eyebrow" style="color:var(--muted)">Capacidad interna de los meses 1-3</p>
 <div class="grid g2" style="margin:6px 0">
-<div class="kpi"><div class="num">+42</div><div class="lbl">NPS: el uso fue alto</div></div>
-<div class="kpi"><div class="num">17%</div><div class="lbl">completó los cursos</div></div>
+<div class="kpi"><div class="num">2,0-2,8</div><div class="lbl">FTE internos en total (referencia 2,4)</div></div>
+<div class="kpi"><div class="num">0,9-1,4</div><div class="lbl">FTE clave, dentro del total</div></div>
 </div>
-<p class="note">Es una señal, no una medición de toda la organización: la base de los meses 1-3 la mide.</p>
+<p class="note">Salen de horas facturables: cada hora tiene origen, tarea desplazada y responsable en una matriz privada.</p>
 </div>
 <div>
 
-- Formación por rol, en horario laboral, con champions con tiempo asignado.
-- Se mide **uso real semanal por área**, no seats comprados.
-- **OKR 2027, con el presupuesto, no hoy.** El 80% combinado no se alcanza ni con las metas del plan (72,5% como mucho): proponemos Tecnología ≥80% y Operaciones habilitadas, cada una con su denominador. El gasto de tecnología bajo 3,5% de la facturación: mantenerlo y recortar el plan, o medirlo sin la inversión del plan. Cambia cómo se mide, no lo que se gasta.
+- Básico para toda la organización e intermedio para una cohorte de 15-20.
+- Piloto de abril (n=12, autoseleccionado): uso alto, 17% completó los cursos.
+- **Metas por área:** Tecnología ≥80% en el mes 6, Operaciones habilitadas ≥60%. Cumplir exactamente esas metas da 72,5% combinado: no es un techo; publicamos el combinado y la cobertura.
 
 </div>
 </div>
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Capacitar en vez de contratar. IA aplicada de los meses 1-3 con <strong>un</strong> contractor a prueba (los meses 4-12, solo con señal en el mes 3), que choca con "no contratar", o un rol interno demostrado. Empleo: un compromiso con excepciones.</span>
+<span class="body">No contratar. Si falta un facilitador interno, decidir una excepción externa de 16-32 h que lo reemplaza, con cotización. Empleo: compromiso con excepciones.</span>
 <span class="ref">
 
 [Anexo D — Personas y cultura](annexes/04-personas-cultura.md)
@@ -210,24 +237,22 @@ size: 16:9
 
 ---
 
-<p class="eyebrow">06 · Roadmap</p>
+<p class="eyebrow">07 · Roadmap</p>
 
-# Revisión cada mes, fondos cada tres
-
-<p><strong>Cada mes, el Council revisa el tablero y puede frenar o cortar. Los fondos se liberan en los meses 3, 6, 9 y 12.</strong></p>
+# Doce meses, revisión cada mes, fondos cada tres
 
 | | Meses 1-3 → mes 3 | Meses 4-6 → mes 6 | Meses 7-9 → mes 9 | Meses 10-12 → cierre |
 |---|---|---|---|---|
-| Técnico y gobierno | Base, política, matriz, prueba chica | Con señal: gateway, evals, red team | Caso interno: prepara, no ejecuta | Go/no-go de modelo propio |
-| Cultural | Básico ≥90% | Operaciones y staff | Casos por rol | Tecnología ≥85% |
-| Techo caja / tiempo | **33 / 72** | **71 / 106** | **59 / 78** | **95 / 69** |
-| Pasa si | Base y política; **una señal libera la plataforma** | Throughput ≥ +3%; Tec. ≥80% | Throughput ≥ +8% | Camino a ~17% o interés contractual |
+| Qué pasa | Diagnóstico, base, política, controles, formación y prueba | Solución según evidencia; medición del asistente | Aplicación; producto solo con señal | Evaluación y traspaso |
+| Techo caja / tiempo | **9 / 58** (aprobar hoy) | 2 / 14 | 2 / 11 | 2 / 11 |
+| Pasa si | Base, política, controles probados, básico ≥90% | Límite inferior ≥ +3%, sin daño; Tec. ≥80% | Límite inferior ≥ +8% | Tec. ≥85%; Op. habilitadas ≥60% |
+| Plataforma | Se evalúa | Se relee | Se relee | Irreversibles, para después |
 
-<p class="note">Miles de USD; meses 4-12, rama con señal. <strong>El mes 3 no corta: decide la plataforma.</strong> Sin señal, gobierno mínimo y formación (≈ 199 en el año); los meses 6 y 9 releen. Throughput por límite inferior del intervalo; calidad incierta cuenta como espera. Espera en el mes 6: se remide a las 6 semanas y, si sigue en la banda, corta el frente interno; en el mes 9, base mínima.</p>
+<p class="note">Miles de USD; los meses 4-12 no se aprueban hoy. Cada mes el Council puede frenar o cortar, sin liberar fondos. Calidad primero: un daño corta aunque el throughput pase. Espera del mes 6: 6 semanas y, si sigue debajo, corta. Si la base se extiende a la semana 8, básico, intermedio y prueba arrancan en la 9.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Adoptar esta regla para liberar fondos.</span>
+<span class="body">Adoptar estos gates como regla para liberar fondos.</span>
 <span class="ref">
 
 [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md)
@@ -237,62 +262,29 @@ size: 16:9
 
 ---
 
-<p class="eyebrow">07 · Business case</p>
+<p class="eyebrow">08 · Costo y riesgo</p>
 
-# Lo barato gana el año 1; la plataforma, con señal
+# Cuánto podemos perder para aprender
 
 <div class="grid main-side">
 <div class="plain">
 
-| Miles de USD | Sin señal en el mes 3 | Con señal en el mes 3 |
+| Si salimos en | Hasta cerrar (caja / tiempo) | Máximo del año |
 |---|---|---|
-| Costo económico del año | **≈ 199** | **≈ 400** (216-584) |
-| Caja, con contingencia | ≈ 39 | 98-255 (114-314 si en el mes 6 se libera el producto) |
-| Tiempo reasignado, a costo cargado | ≈ 160 | 115-320 (~3,5 FTE), más ~6 de la prueba |
+| Mes 3 | 10 / 63 → **73** | **79** con núcleo de gobierno |
+| Mes 6 | 12 / 77 → **89** | **93** |
+| Mes 9 | 14 / 88 → **102** | **104** |
+| Mes 12 | 16 / 99 → **115** | **115** |
 
 </div>
 <div class="grid" style="gap:8px">
-<div class="card"><strong>Gobierno mínimo y formación</strong><br>161 · neto −161 a −99</div>
-<div class="card"><strong>Piloto sobre el agente actual</strong><br>47 · neto −47 a +15</div>
-<div class="card rose"><strong>Paquete completo</strong><br>394 · neto −332</div>
+<div class="card"><strong>Caja:</strong> legal y herramientas</div>
+<div class="card"><strong>Tiempo:</strong> horas existentes, no nómina nueva</div>
+<div class="card rose"><strong>Beneficio presupuestado: 0</strong> (ROI modelado −100%)</div>
 </div>
 </div>
 
-<p class="note">ROI a 12 meses negativo y caja cero: <strong>en el año 1 ganan las alternativas baratas</strong>, y por eso pedimos solo los meses 1-3.</p>
-
-<div class="decision block">
-<div class="decision-head"><span class="pill">Decisión: el pedido de hoy completo</span><span class="ref">
-
-[Anexo E — Business case](annexes/05-business-case.md)
-
-</span></div>
-<div class="grid g2">
-<div><strong>1.</strong> Meses 1-3 con la prueba chica: 33 de caja (contractor hasta 16,5) y 6 de reserva de cierre; 72 de tiempo (~1,8 FTE clave, ~654 h).</div>
-<div><strong>2.</strong> Piso: ~1,8 FTE clave; con señal, 2,2 / 2,2 / 2,1 en los meses 4-12 con el replan (respaldo: 2,5 en los meses 4-6).</div>
-<div><strong>3.</strong> El mes 3 libera la plataforma y amplía la reserva a 15 solo con señal. Cortar en el mes 3: 79 en el medio, 115 hasta cerrar, 155 en el año.</div>
-<div><strong>4.</strong> Base mínima tras un corte: hasta 41 de tiempo; preparación previa: hasta 7.</div>
-</div>
-</div>
-
----
-
-<p class="eyebrow">08 · Riesgos</p>
-
-# Sin señal, el año cuesta la mitad; lo irreversible, al cierre
-
-<div class="plain">
-
-| Escenario | Qué pasa | Costo | Capacidad | Neto 12 m | ROI 12 m |
-|---|---|---|---|---|---|
-| Sin señal en el mes 3 | Sin plataforma en los meses 4-12 | ≈ 199 | ≥ φ × 62 | −199 a −137 | −100% a −69% |
-| Pesimista, con la regla | Espera en el mes 6, vence y corta | 265 | ~3 | ≈ −262 | ≈ −99% |
-| Pesimista, sin frenar | Sin la regla | 394 | 12 | −382 | −97% |
-| Base | Pasan los meses 6 y 9 (o la espera vence) | 394 (265) | 62 (~19) | −332 (≈ −245) | −84% (≈ −93%) |
-| Optimista | Producto en los meses 7-12 | 471 | 114 | −357 | −76% |
-
-</div>
-
-<p class="note">Miles de USD; salvo la primera fila, con señal y sin la prueba. φ: ganancia sin plataforma, sin dato (0 a 1). A 12× de consumo, 211-267 por año, con o sin plan (−502 sin frenar).</p>
+<p class="note">Miles de USD; límites por suma de techos, sin restar beneficio. Tras un corte, el núcleo (accesos, incidentes, permisos) cuesta caja 0 y hasta 6 de tiempo. A 12× de consumo, el incremental (211-267 por año) es exposición de la empresa, con o sin plan.</p>
 
 <p class="eyebrow" style="margin-bottom:6px">Irreversibles: en el mes 12 y para después</p>
 
@@ -305,10 +297,10 @@ size: 16:9
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Con señal, el replan de los meses 4-6; la excepción de 0,3 FTE cubre solo el 0,2 faltante del contractor.</span>
+<span class="body">Aceptar una pérdida máxima de aprendizaje de 73 al mes 3.</span>
 <span class="ref">
 
-[Anexo F](annexes/06-roadmap-riesgo.md) · [Anexo E](annexes/05-business-case.md)
+[Anexo E](annexes/05-business-case.md) · [Anexo F](annexes/06-roadmap-riesgo.md)
 
 </span>
 </div>
@@ -317,18 +309,18 @@ size: 16:9
 
 <!-- _class: closing -->
 
-<p class="eyebrow">Resolución que proponemos</p>
+<p class="eyebrow">Valor medible · seguridad aceptable · fondos por decisión</p>
 
-# El Directorio aprueba el pedido de hoy de la slide 8, los meses 1-3 con la prueba chica, y adopta la regla de decisión: el Council revisa el riesgo cada mes y puede cortar; la plataforma se gana con una señal en el mes 3, y los fondos del resto del año se liberan en los meses 6, 9 y 12.
+# El Directorio autoriza solo el paquete mínimo de los meses 1-3, hasta 9 de caja más 1 de reserva y 58 de tiempo más 3 de preparación y 2 de cierre, y adopta los gates de los meses 3, 6, 9 y 12.
 
 <div class="grid g2" style="margin-top:auto;position:relative">
 <div>
 <p class="eyebrow">Equipo · Grupo 11</p>
 <p>Gabriela Temporale · Martin Vago · Pablo Ces · Eduardo Chaparro · Rafael Cioffi · Nicolás Tanos · Luciano De Corso · Maximiliano Zerr Morinigo</p>
-<p class="fine">Responsables por sección: pendiente de acordar en el equipo.</p>
+<p class="fine">Responsables por sección y por gate: pendientes de acordar en el equipo.</p>
 </div>
 <div class="fine">
-<p>Usamos el modelo operativo que proponemos: roles asumidos por agentes, una revisión adversarial del board y chequeos automáticos de fuentes y de fuga de datos.</p>
-<p>Cada cifra remonta a un anexo; las fichas siguen en borrador, sin verificación humana. El ensayo de la defensa está pendiente.</p>
+<p>Miles de USD. Sujeto a horas liberadas por persona y controles probados antes de usar. Plataforma y producto se recostean antes de liberarse.</p>
+<p>Usamos el modelo operativo que proponemos: roles asumidos por agentes, revisión adversarial y chequeos de fuentes y de fuga de datos. Las fichas siguen en borrador; el ensayo de la defensa está pendiente.</p>
 </div>
 </div>
