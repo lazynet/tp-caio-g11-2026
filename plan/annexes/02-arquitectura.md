@@ -6,21 +6,23 @@ title: "Anexo B — Arquitectura y roadmap técnico"
 
 # Anexo B — Arquitectura y roadmap técnico
 
-Slide que sustenta: [Slide 4 — Arquitectura objetivo](../slides.md). Los hitos
-técnicos alimentan además [Slide 7 — Roadmap técnico, financiero y cultural](../slides.md).
+Slides que sustenta: [Slide 3 — Beneficio](../slides.md) y
+[Slide 5 — Arquitectura objetivo](../slides.md). Los hitos técnicos alimentan
+además [Slide 8 — Roadmap técnico, financiero y cultural](../slides.md).
 
 ## Objetivo
 
-Sustentar **un único pedido al board, el de hoy: autorizar los meses 1-3** (enero-marzo
-de 2027, los hitos del primer tramo) con un tope de caja y de capacidad, y adoptar el
+Sustentar **un único pedido al board, el de hoy: el mínimo técnico de M1-M3** (enero-marzo
+de 2027), consolidado en el [Anexo E](05-business-case.md), sección
+«Pedido inicial: paquete mínimo», con un tope de caja y de capacidad, y adoptar el
 marco de gates (los puntos de decisión de los meses 3, 6, 9 y 12). La
 arquitectura de abajo, una plataforma común de IA neutral al modelo y aislada
 por cliente, que sirve a dos frentes, la IA en lo que Acme Labs vende a
 bancos y fintechs y la IA en su operación interna, es la **dirección de
 diseño**: los meses 4-12 no se autorizan hoy, se liberan decisión por decisión (ver
-"Pedido de hoy"). Hoy no hay IA en producción dentro de lo que se vende
+«Pedido vigente (parte técnica)»). Hoy no hay IA en producción dentro de lo que se vende
 ([ficha](../../context/hechos/ia-en-producto-y-oferta.md)), así que el primer
-tramo construye base. El frente producto es un tramo condicional: en el
+tramo configura herramientas existentes y mide. El frente producto es un tramo condicional: en el
 escenario base está diferido, y entra en los meses 7-9 solo si la lectura del mes 6 trae
 una señal de cliente ([Anexo E](05-business-case.md)).
 
@@ -28,11 +30,13 @@ Los responsables humanos de cada hito están **pendientes** (el equipo no los
 acordó). Las cifras económicas del anexo son insumos para Finanzas, no el
 business case.
 
-**Actualización de ronda 11.** El pedido inicial se recostea como un paquete
-mínimo de los meses 1-3, sin plataforma central. Las tablas económicas y de
-capacidad del paquete anterior quedan como comparación pendiente de recosteo
-por `finance`, no como el nuevo pedido. La arquitectura objetivo y los meses
-4-12 conservan su carácter condicional; `caio` integra el nuevo alcance.
+**Actualización de ronda 11.** El pedido inicial es el paquete mínimo de los
+meses 1-3, sin plataforma central, consolidado en el [Anexo E](05-business-case.md),
+sección «Pedido inicial: paquete mínimo». Las tablas económicas y de capacidad
+del paquete anterior quedan como comparación de otro alcance. No se aprueban
+el contractor ni la excepción de 0,3 FTE del paquete anterior. La arquitectura
+objetivo y los meses 4-12 conservan su carácter condicional: una ampliación
+exige nuevo alcance, calendario y costeo.
 
 ## Supuestos de partida
 
@@ -590,6 +594,10 @@ al modelo** (supuesto vigente) comprobada con un ensayo, no declarada.
 
 ### Recurso de IA aplicada: los meses 1-3 y el contractor
 
+**Referencia del paquete anterior, sin autorización vigente.** Las vías y
+fracciones siguientes no integran el mínimo de M1-M3 consolidado en E,
+sección «Pedido inicial: paquete mínimo»; requieren una decisión nueva.
+
 El esfuerzo técnico necesita una fracción de IA aplicada (evals, harness,
 gateway): 0,3 FTE en el escenario recomendado de los meses 1-3 y 0,8 en los meses 4-12 (el 0,5 de los
 meses 1-3 es el del escenario conservador, con contractor que complementa). El contractor al 50% **reemplaza** ese 0,3, no lo
@@ -598,11 +606,11 @@ Lo que sigue abierto es la vía de los meses 1-3:
 
 | Vía de los meses 1-3 | FTE clave de este anexo en los meses 1-3 | Caja | Condición |
 |---|---|---|---|
-| Contractor al 50% desde el mes 1 (recomendado; **base** del Anexo E y de este anexo) | 0,6 (arquitecto y DevOps/QA) | Contractor de los meses 1-3 ([Anexo D](04-personas-cultura.md)) | El Directorio lo aprueba hoy, por la restricción de no contratar |
-| Rol interno de Tecnología, 0,3 FTE | 0,9 | Ninguna | Antes de la aprobación de hoy, la dirección técnica demuestra por rol experiencia en evals y harness. Usar agentes de código (~7 de 10, [ficha](../../context/hechos/uso-ia-interno.md)) no lo prueba (supuesto del equipo) |
+| Contractor al 50% desde el mes 1 (base del paquete anterior) | 0,6 (arquitecto y DevOps/QA) | Contractor de los meses 1-3 ([Anexo D](04-personas-cultura.md)) | Requeriría nueva aprobación del Directorio, por la restricción de no contratar |
+| Rol interno de Tecnología, 0,3 FTE | 0,9 | Ninguna | Antes de aprobar esta alternativa, la dirección técnica demuestra por rol experiencia en evals y harness. Usar agentes de código (~7 de 10, [ficha](../../context/hechos/uso-ia-interno.md)) no lo prueba (supuesto del equipo) |
 
-Este anexo adopta el contractor desde el mes 1 como base porque el recurso que no entra es el tiempo de
-las personas clave, no la caja (Anexo E, "Contra el sobre de tiempo: los meses 1-3 entran; los meses 4-6, con el replan"). Si hoy no se aprueba
+El paquete anterior adoptaba el contractor desde el mes 1 como base porque el recurso que no entra es el tiempo de
+las personas clave, no la caja (Anexo E, "Contra el sobre de tiempo: los meses 1-3 entran; los meses 4-6, con el replan"). Si al evaluar esa ampliación no se aprueba
 ninguna de las dos vías, el gateway y las evals pasan a los meses 4-6 y los meses 1-3 quedan en
 inventario, línea base y matriz de superficies.
 
@@ -627,11 +635,11 @@ portabilidad y FinOps.
 | Salida | Qué cambia | FTE clave de los meses 4-6 | Costo | Qué arriesga |
 |---|---|---|---|---|
 | **Replan del Anexo B (recomendada)** | Arquitecto 0,5 → 0,4: el 0,1 era el diseño del piloto de producto, que con el producto diferido pasa a los meses 7-9. DevOps/QA 1,0 → 0,8: el pipeline de evals en CI y la reejecución de la prueba de portabilidad pasan al contractor, que tiene 0,2 FTE pagados y sin asignar (cubre la fracción de 0,8 con una persona al 100%, Anexo D) | 2,2: entra, con 0,05 de holgura | Baja el tiempo de los meses 4-6 en ~5 mil (3,2-7,5) y no suma caja | Más concentración en el contractor (ver Riesgos). El piloto, si la lectura del mes 6 lo libera, arranca sin diseño previo. Las condiciones de la lectura del mes 6 no se tocan: bypass, gateway y FinOps quedan en DevOps/QA |
-| Excepción acotada hoy | El board aprueba 0,3 FTE clave por encima del sobre en los meses 4-6 | 2,5 | Sin costo nuevo: ya está en el cuadro del Anexo E. Salen ~3-7 mil de horas facturables | Rompe el sobre que el propio plan pide confirmar. Cubre solo la falta del 0,2 adicional; sin contractor no alcanza (ver la tabla de contingencias abajo y [Anexo E](05-business-case.md), "Dos contingencias del contractor") |
+| Excepción acotada del paquete anterior | El board debería aprobar 0,3 FTE clave por encima del sobre en los meses 4-6, en una decisión nueva | 2,5 | Sin costo adicional al paquete anterior: ya está en su cuadro del Anexo E. Salen ~3-7 mil de horas facturables | Rompe el sobre que ese paquete pide confirmar. Cubre solo la falta del 0,2 adicional; sin contractor no alcanza (ver la tabla de contingencias abajo y [Anexo E](05-business-case.md), "Dos contingencias del contractor") |
 | Descartada: correr hitos de los meses 4-6 a los meses 7-9 | Portabilidad o FinOps pasan a los meses 7-9 | 2,2 | — | La lectura del mes 6 queda sin dos de sus condiciones, y los meses 7-9 no tienen holgura (0,05) |
 
-**Recomendación:** el replan, que el board ratifica hoy junto con el piso de
-capacidad. Lo decide el board; este anexo no da el exceso por resuelto hasta esa
+**Recomendación para el paquete anterior:** el replan, sujeto a una decisión
+nueva con alcance, calendario y costeo. Este anexo no da el exceso por resuelto hasta esa
 decisión. La excepción acotada cubre **una sola** contingencia, y no hay que confundirla
 con la otra:
 
@@ -657,7 +665,7 @@ explícitamente el exceso que calcula el Anexo E.
 | Personas | Reasignar 10-15% del tiempo de pocas personas clave | Utilización 83-90% y bench < 1 FTE; restricción de no contratar | `people`: suplentes y capacidad; el especialista de IA se capacita, se reasigna o se contrata por contrato |
 | Alcance | La plataforma sirve a dos frentes | Qué caso concreto va en el producto lo define el portfolio | `caio`: este anexo no elige el caso |
 | Precio | El deck y la defensa usan el gateway como cobertura del cambio de precio | La cobertura no está medida: depende de *fc* × *s*, de la suscripción y de la calidad | `caio`: la palanca se afirma solo si pasa la prueba de portabilidad y costo de los meses 4-6 |
-| Capacidad | El primer tramo acotado del Anexo E pide 1,6 FTE clave y 590 h distribuidas ([Anexo E](05-business-case.md)); los meses 1-3 entran si el board confirma ese piso | Con el producto diferido, los meses 4-6 exceden el sobre en ~0,3 FTE; sin contractor, el plan pediría ~3,3 FTE clave (Anexo E) | El board, hoy: replan del Anexo B (recomendado) o excepción acotada para "sin el 0,2"; modo control para "sin contractor" (ver "Exceso de los meses 4-6 con el producto diferido") |
+| Capacidad | El paquete anterior pedía 1,6 FTE clave y 590 h distribuidas; el mínimo vigente se consolida en el [Anexo E](05-business-case.md), sección «Pedido inicial: paquete mínimo» | En el paquete anterior, con el producto diferido, los meses 4-6 exceden el sobre en ~0,3 FTE; sin contractor, pediría ~3,3 FTE clave (Anexo E) | El mínimo no aprueba el replan ni la excepción del paquete anterior; una ampliación exige nuevo alcance, calendario y costeo (ver «Exceso de los meses 4-6 con el producto diferido») |
 
 ## Roadmap técnico a 12 meses
 
@@ -735,20 +743,24 @@ humano pendiente. **Abandono/revisión:** sin datos, horas liberadas o controles
 reducí/diferí y recosteá; si hacen falta saneamiento, conectores o más rondas,
 el rango deja de ser válido. No se presume que la plataforma resuelva esa falta.
 
-### Pedido de hoy (parte técnica): referencia anterior, pendiente de recosteo
+### Pedido vigente (parte técnica)
 
-La tabla siguiente conserva la referencia del paquete anterior para `finance`;
-el nuevo pedido se arma con el mínimo de arriba y los aportes de C/D. Sus FTE,
-caja y contractor no son el presupuesto vigente del mínimo de ronda 11.
+El pedido vigente es el mínimo técnico de M1-M3 de arriba, consolidado con C/D
+en el [Anexo E](05-business-case.md), sección «Pedido inicial: paquete mínimo».
+No se aprueban el contractor ni la excepción de 0,3 FTE del paquete anterior;
+una ampliación exige nuevo alcance, calendario y costeo.
 
-| Elemento | Qué se pide |
+La tabla siguiente conserva la referencia del paquete anterior para `finance`.
+Sus FTE, caja, entregables y condiciones no son el pedido vigente del mínimo.
+
+| Elemento | Qué se pedía en el paquete anterior |
 |---|---|
 | Qué se autoriza | Los hitos de los meses 1-3, en su versión acotada (el escenario recomendado, abajo), más la prueba chica de los meses 1-3 ([Anexo E](05-business-case.md)). Los meses 4-6 no se autorizan: la decisión del mes 3 los libera, con o sin señal ("Bifurcación en el mes 3") |
 | Capacidad máxima de este anexo | 0,6 FTE clave con el contractor desde el mes 1 (0,9 con el rol interno), más 16-24 h de lectura de DevOps/QA de la prueba chica. El sobre del plan completo y su piso (1,6 FTE clave; techo de tiempo 62, o 72 con la prueba) los cierra el [Anexo E](05-business-case.md) |
 | Caja de este anexo | Infraestructura de telemetría y registro, USD 500-1.500 en el tramo de tres meses; el tope total de los meses 1-3 lo fija el Anexo E |
 | Entregables | Inventario de datos, línea base congelada, matriz superficie→control→telemetría, telemetría unificada, matriz de restricciones por cliente |
 | Decisiones delegadas | Elegir herramientas y proveedores detrás del gateway (reversible), a la dirección técnica |
-| Condiciones de la aprobación de hoy | Vía de IA aplicada aprobada (contractor desde el mes 1, o rol interno demostrado); disponibilidad de historial de PR, integración continua y tickets para la línea base; salida para el exceso de los meses 4-6 (replan del Anexo B o excepción) |
+| Condiciones de la aprobación anterior propuesta | Vía de IA aplicada aprobada (contractor desde el mes 1, o rol interno demostrado); disponibilidad de historial de PR, integración continua y tickets para la línea base; salida para el exceso de los meses 4-6 (replan del Anexo B o excepción) |
 | Fuera del pedido | Los meses 4-12 (incluida la plataforma de los meses 4-6, que la decisión del mes 3 libera solo con señal), el modelo propio, cualquier compromiso mayor a 12 meses y todo compromiso contractual con clientes |
 
 **Escenario conservador y escenario recomendado.** El conservador pone el gateway en laboratorio con dos proveedores en el
@@ -772,7 +784,7 @@ y el estudio de la matriz. Desde la arquitectura, la propuesta es:
 | Cuándo | Qué | Costo |
 |---|---|---|
 | Antes de la aprobación de hoy (la preparación previa, octubre-diciembre de 2026) | Verificar que existe historial utilizable de PR, integración continua, incidentes y tickets de los últimos dos trimestres (1 día-persona, supuesto del equipo) y extraer la **serie retrospectiva**, que sirve para estimar tendencia y ruido, no como base de atribución. Es un costo previo propuesto: el [Anexo E](05-business-case.md) lo consolida y la aprobación de hoy lo autoriza, o lo ratifica si consta la ejecución | ~USD 0,1-0,4 mil de tiempo de este anexo |
-| Semanas 1-4 del plan | **Base prospectiva congelada**, con la unidad de la sección "Throughput", antes de cualquier formación, prueba de prácticas o herramienta nueva; controles obligatorios previos documentados como punto de partida. Si la base se extiende a semana 8, también se desplazan básico, prueba e intermedio | Dentro de la fracción de DevOps/QA del paquete anterior (3-5 días-persona, supuesto del equipo); recosteo del mínimo arriba |
+| Semanas 1-4 del plan | **Base prospectiva congelada**, con la unidad de la sección "Throughput", antes de cualquier formación, prueba de prácticas o herramienta nueva; controles obligatorios previos documentados como punto de partida. Si la base se extiende a semana 8, también se desplazan básico, prueba e intermedio | Incluida en QA / análisis de datos del mínimo de arriba, consolidado en E, sección «Pedido inicial: paquete mínimo»; los 3-5 días-persona de DevOps/QA eran referencia del paquete anterior |
 | Semanas 5-13 del plan | Matriz de superficies y telemetría unificada; medición contra la base, con control concurrente donde exista. **La ganancia no se atribuye antes de los meses 4-6** (la rampa base es 0% en los meses 1-3) | Dentro del esfuerzo de los meses 1-3 |
 
 La serie retrospectiva y la base prospectiva no se mezclan: la primera estima
@@ -885,10 +897,11 @@ revoca la aceptación según el Anexo C y suspende la extensión.
 
 Todo es **supuesto del equipo** salvo donde se indica fuente. USD, rangos. El
 esfuerzo es mayormente reasignación (costo de oportunidad contra horas
-facturables), no caja incremental. El escenario recomendado es el que consume
-el [Anexo E](05-business-case.md): primer tramo acotado, contractor desde el mes 1 que reemplaza la
-fracción de IA aplicada y producto diferido. El conservador queda como
-comparación.
+facturables), no caja incremental. Las tablas siguientes describen el paquete
+anterior: primer tramo acotado, contractor desde el mes 1 que reemplaza la
+fracción de IA aplicada y producto diferido, con el conservador como comparación.
+El pedido vigente se consolida en el [Anexo E](05-business-case.md), sección
+«Pedido inicial: paquete mínimo»; estas tablas no lo sustituyen.
 
 ### Escenario conservador, como comparación (contractor que complementa y producto desde el mes 4)
 
@@ -973,13 +986,12 @@ montos de facturación.
   por el gateway, y el agente de código pasa solo si eso no rompe la suscripción
   plana. Las que no pasan se cubren con control compensatorio verificado; los
   casos propios, siempre por gateway.
-- **Qué pedimos al board (un solo pedido, el de hoy):** autorizar los meses 1-3 en su versión
-  acotada (el escenario recomendado) con tope de caja y de capacidad, y adoptar el marco de gates. Los meses 4-6
-  son dirección de diseño y se liberan en la decisión del mes 3 solo con señal (sin ella, los meses 4-12 corren
-  como la opción de gobierno mínimo y formación, y las lecturas de los meses 6 y 9 vuelven a leer); el piloto de producto, además, depende
-  de la matriz de restricciones, de la política ratificada y de la señal de
-  cliente en la lectura del mes 6. La aprobación de hoy también decide la salida para el exceso de ~0,3 FTE de los meses 4-6.
-  **No** se aprueba el modelo propio ni compromisos mayores a 12 meses.
+- **Qué pedimos al board (un solo pedido, el de hoy):** el mínimo técnico de
+  M1-M3, consolidado en el [Anexo E](05-business-case.md), sección
+  «Pedido inicial: paquete mínimo», y adoptar el marco de gates. No se aprueban
+  el contractor ni la excepción de 0,3 FTE del paquete anterior. Una ampliación
+  exige nuevo alcance, calendario y costeo. No se aprueba el modelo propio
+  ni compromisos mayores a 12 meses.
 - **Mensaje al CFO:** la IA ya es una línea propia del gasto de tecnología y
   el consumo real es un múltiplo de la suscripción. Se presupuesta el escenario de
   consumo y se prueba la salida de proveedor, no se declara. La cobertura de
@@ -1020,5 +1032,6 @@ montos de facturación.
   portfolio de `caio` (Anexo F). El tamaño del dataset (~200 preguntas) es una propuesta sin
   cálculo de potencia estadística.
 - El 0,2 libre del contractor en los meses 4-6 no está confirmado ([Anexo D](04-personas-cultura.md)):
-  el replan es condicional al alcance contractual que se apruebe hoy. Las horas de la
+  el replan del paquete anterior requiere una decisión nueva de alcance,
+  calendario y costeo; el mínimo no autoriza esa contratación. Las horas de la
   documentación mínima reproducible son supuesto del equipo.
