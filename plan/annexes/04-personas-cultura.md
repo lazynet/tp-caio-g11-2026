@@ -6,7 +6,7 @@ title: "Anexo D — Personas, cambio y roadmap cultural"
 
 # Anexo D — Personas, cambio y roadmap cultural
 
-Slide que sustenta: [Slide 6 — Personas y cultura](../slides.md).
+Slides que sustenta: [Slide 7 — Personas y cultura](../slides.md).
 
 Convención de tiempo: el plan tiene una **preparación previa** (octubre-diciembre
 de 2026) y **cuatro tramos de tres meses** (meses 1-3, 4-6, 7-9 y 10-12, de
@@ -25,11 +25,11 @@ prueba, medido por **uso real semanal** y no por seats comprados. Este anexo
 desarrolla roles y capacidad dentro de los derechos de decisión que defina
 `governance`; no los redefine.
 
-**Alcance económico en revisión (ronda 11).** Las horas y los costos del programa
-publicado se conservan como referencia de ese alcance. El pedido inicial pasa a
-un paquete mínimo sin plataforma central, pendiente de costeo por `finance` e
-integración por `caio`. No hereda los techos ni la contratación del pedido anterior;
-las decisiones del borrador que siguen son propuestas, no autorizaciones vigentes.
+**Alcance económico (ronda 11b).** Las horas y los costos del programa anterior
+se conservan como referencia de ese alcance. El pedido inicial vigente es el
+paquete mínimo sin plataforma central, consolidado en el [Anexo E](05-business-case.md#pedido-inicial-paquete-mínimo).
+No hereda los techos ni la contratación del pedido anterior; las decisiones del
+borrador que siguen son propuestas, no autorizaciones vigentes.
 
 ## Supuestos de partida
 
@@ -408,9 +408,9 @@ declarado).
 | Tramo | Hitos | Indicador adelantado (uso real) | Indicador rezagado |
 |---|---|---|---|
 | Preparación previa (antes de la aprobación de hoy) | Solo reconstrucción **retrospectiva** con datos que ya existen (telemetría y reportes de adopción de los últimos meses, series de incidentes y retrabajo si el repositorio las conserva) y diseño de la encuesta de chat y Gemini. Política: queda lista para ratificar, no ratificada | Serie retrospectiva de uso del agente de código por área | Serie retrospectiva de throughput, incidentes y retrabajo, con su hueco declarado si no existe |
-| Meses 1-3, semanas 1 a 4 del plan | **Congelar la base prospectiva** antes de cualquier capacitación o herramienta nueva para usuarios: encuesta de chat y Gemini, uso semanal por área, throughput, incidentes y retrabajo de los equipos propios | Línea de base por área publicada y congelada al cierre de la semana 4 | Línea de base prospectiva de throughput, incidentes y retrabajo |
-| Meses 1-3, semanas 5 a 13 del plan | Ratificación de la política y matriz de los cinco clientes principales (con `governance`); básico para todos; selección de champions; intermedio para Tecnología. **Prueba chica** desde la semana 5 (Anexo E): 2 champions de Tecnología al 10% durante 2 meses, con la cohorte del intermedio como vehículo | Básico completado: ≥90% de la dotación al cierre de los meses 1-3. Prueba: uso semanal de la cohorte, retrabajo y PR aceptados, y la dispersión entre personas; se leen en la decisión del mes 3, sin atribuir ganancia | Sin objetivo: se mide la línea de base |
-| Meses 4-6 | Intermedio para Operaciones y staff; arranca el avanzado; champions con tiempo asignado (el contractor está desde el mes 1 si se aprueba; al 100% solo si la decisión del mes 3 encuentra una señal, si no se cierra y la prueba se extiende a la cohorte) | Uso activo semanal de Tecnología ≥80% (la meta del OKR); Operaciones habilitadas ≥40% | Throughput de equipos propios: sin deterioro de calidad |
+| Meses 1-3, semanas 1 a 4 del plan, ampliables a 8 según B | **Congelar la base prospectiva** antes de cualquier capacitación o herramienta nueva para usuarios: encuesta de chat y Gemini, uso semanal por área, throughput, incidentes y retrabajo de los equipos propios | Línea de base por área publicada y congelada; si se extiende, se revisa completitud M3 | Línea de base prospectiva de throughput, incidentes y retrabajo |
+| Meses 1-3, desde semana 5 o 9 según cierre de base | Política ratificada y matriz de restricciones (con `governance`); básico para todos; intermedio y prueba con la cohorte del mínimo definido en E. Básico, intermedio y prueba comienzan juntos, solo después de congelar la base | Básico completado: ≥90% de la dotación al cierre de los meses 1-3, a revalidar si la base se extiende. Prueba: uso semanal de la cohorte, retrabajo y PR aceptados, y la dispersión entre personas; se leen en la decisión del mes 3, sin atribuir ganancia | Sin objetivo: se mide la línea de base |
+| Meses 4-6 | Intermedio para Operaciones y staff; arranca el avanzado; champions con tiempo asignado (el contractor está desde el mes 1 si se aprueba; al 100% solo si la decisión del mes 3 encuentra una señal, si no se cierra y la prueba se extiende a la cohorte) | Uso activo semanal de Tecnología ≥80% en M6 (la meta del OKR); Operaciones habilitadas ≥40% en M6, **meta intermedia** hacia ≥60% en M12 | Throughput de equipos propios: sin deterioro de calidad |
 | Meses 7-9 | Casos prácticos por rol publicados por champions; revisión de calidad de prompts | Tecnología ≥80% sostenido; prompts con ejemplos del resultado esperado: de ≤5% a ≥30% (muestra agregada) | Incidentes y retrabajo sin aumento sobre la base |
 | Meses 10-12 | Traspaso del contractor a la oficina del CAIO (si la decisión del mes 3 lo liberó; si no, el traspaso se hizo en el mes de preaviso); evaluación de lo que escala | Tecnología ≥85%; Operaciones habilitadas ≥60%; staff ≥50% | Throughput entre +10% y +25% en equipos propios ([supuesto](../../context/supuestos/ganancia-de-productividad.md)) |
 
@@ -444,41 +444,26 @@ meses 3, 6, 9 y 12. Las metas y el momento en que se decide no cambian. La
 revisión no suma costo: usa el uso semanal por área que este anexo ya mide y el
 Council que el Anexo E ya presupuesta.
 
-**Calendario único de la preparación previa y los meses 1-3.** Una sola secuencia
-reemplaza las tres versiones anteriores (una en este anexo y otras en los Anexos B,
-C y F):
+**Calendario del mínimo.** Preparación total consolidada **20-40 h** en
+[E, «Pedido inicial: paquete mínimo»](05-business-case.md#pedido-inicial-paquete-mínimo).
+El calendario de 60-100 h pertenece al programa anterior, no al pedido vigente.
 
 | Cuándo | Qué existe | Quién lo verifica | Costo |
 |---|---|---|---|
-| Antes de la aprobación de hoy (preparación previa) | Serie retrospectiva de uso, incidentes y retrabajo; diseño de la encuesta; política lista para ratificar | Responsable humano pendiente; el Directorio ve el resultado en la aprobación de hoy | 60-100 h del perfil técnico que lidera el programa (Insumos para Finanzas) |
-| Meses 1-3, semanas 1 a 4 del plan | Base prospectiva congelada | Oficina del CAIO, con `finance` para throughput | Dentro del 20% del líder del programa |
-| Meses 1-3, semanas 5 a 13 del plan | Política ratificada, matriz de cinco clientes, básico e intermedio de Tecnología; prueba chica con la cohorte del intermedio | `governance` y área comercial | Horas de capacitación y +64 h de la prueba (Insumos para Finanzas) |
+| Preparación previa, con autorización y agenda propias | Reconstrucción retrospectiva y diseño con fuentes existentes; sin ejecución registrada | Responsable humano pendiente | Total consolidado 20-40 h en E, separado de M1-M3, sin volver a sumarlo |
+| Meses 1-3, semanas 1 a 4, ampliables a 8 por el criterio de B | Base prospectiva congelada antes de cualquier tratamiento | Oficina del CAIO, con `architect` para el criterio y `finance` para throughput | Dentro de las tareas de soporte del mínimo conciliadas en E |
+| Meses 1-3, desde semana 5 si cierra la base, o semana 9 si se amplía | Política ratificada y permisos aplicables; básico, intermedio y prueba comienzan juntos, con la cohorte definida en E | `governance`, Operaciones y oficina del CAIO; responsables humanos pendientes | Participantes y soporte consolidados en E; agendas aún no liberadas |
 
-Retrospectiva y prospectiva no se mezclan: la serie retrospectiva sirve para
-entender la tendencia previa y el ruido; **la ganancia se atribuye solo contra la
-base prospectiva congelada; si en la semana 4 esa base no resuelve (criterio
-mecánico del Anexo B, "Respaldo"), la retrospectiva se usa como lectura contra
-tendencia, sin atribuir, y el Directorio ve la constancia en la decisión del mes
-3**. La ganancia no se computa antes de los meses 4-6 (la rampa del Anexo E ya
-asume 0% en los meses 1-3). Capacitación e intermedio para Tecnología empiezan en
-la semana 5 para que formación y herramientas nuevas no contaminen la base. Esto
-comprime el básico a nueve semanas: sigue siendo viable para el 90% al cierre de
-los meses 1-3, pero lo valida la oficina del CAIO en la semana 5.
+Retrospectiva y prospectiva no se mezclan: la retrospectiva informa tendencia y
+ruido, sin atribuir ganancia. La atribución requiere base prospectiva congelada;
+si no resuelve en semana 4, se aplica el criterio de extensión de B y se deja
+constancia para la decisión M3. No se presume que el básico no contamina la base.
 
-**Desacuerdo abierto (people y `caio`): qué hacer si la base no resuelve.**
-Propuesta de `architect` en el Anexo B, con costo:
-
-| Alternativa | Qué compra | Qué cuesta |
-|---|---|---|
-| Retrospectiva como lectura contra tendencia (texto de arriba) | Sin demora; el plan sigue | No libera capital: las lecturas de los meses 6 y 9 no pasan por throughput y la base cae en espera y corte (≈ −245 según el Anexo B, a validar por `finance`) |
-| Prolongar siempre la base a la semana 8 y correr 4 semanas la formación intermedia | Una base más larga para atribuir | La prueba chica y el intermedio de Tecnología arrancan en la semana 9, y la decisión del mes 3 lee la dispersión con 5 semanas en vez de 9; el básico también capacita desde la semana 5, así que habría que correrlo o aceptar que no contamina (supuesto sin dato) |
-| Prolongar solo si el criterio de la semana 4 dice que la base no resuelve | Prolongar solo cuando hace falta | Decide en la semana 4, con la constancia ya prevista; mantiene el calendario si la base resuelve |
-
-**Recomendación de people: prolongar solo si el criterio de la semana 4 lo pide.**
-Paga la demora únicamente cuando la base sola no alcanza, y no sacrifica la lectura
-de la prueba chica en la decisión del mes 3 si no hace falta. Pendiente de `caio`
-(que integra el calendario en el Anexo F) y de `architect` (el criterio es suyo);
-no se da por resuelto.
+Si se amplía la base hasta semana 8, **básico, intermedio y prueba comienzan
+juntos en semana 9**. Se revisan completitud ≥90% en M3, agendas y costeo con
+B/E/F; no se promete completar el mismo alcance en cinco semanas sin validarlo.
+Si tampoco resuelve al cierre de la extensión, se informa el faltante y no se
+atribuye ganancia ni se sustituye la base por la retrospectiva.
 
 **Meta de adopción y OKR combinado.** El borrador de OKR pide 80% en
 Operaciones y Tecnología juntas. Con áreas de igual peso, **cumplir exactamente**
@@ -507,8 +492,9 @@ habilitado por la matriz requiere registro específico y recalcular el ejemplo.
 No se predice el resultado real del OKR a partir de metas. Metas por tramo
 unificadas para todo el plan (incluido el Anexo F): Tecnología ≥80% desde los meses
 4-6 (cifra del OKR) y ≥85% al cierre de los meses 10-12 (meta interna de este
-anexo); la diferencia 80/85 no es una contradicción, sino meta del OKR y meta de
-cierre.
+anexo); Operaciones habilitadas ≥40% en M6 es una meta intermedia hacia ≥60% en
+M12. El 72,5% corresponde a **85%/60% en M12**, con igual peso y toda Operaciones
+habilitada; no corresponde a las metas de M6.
 
 **Criterios de éxito (al cierre de los meses 10-12):** Tecnología ≥85% de uso
 semanal activo; Operaciones habilitadas ≥60%; nivel básico ≥90%; ningún aumento de
@@ -521,8 +507,8 @@ dispara por sí solo.
 
 | Disparador | Acción |
 |---|---|
-| Capacidad clave efectiva en los meses 1-3 <1,6 FTE | No iniciar ninguna versión publicada; reducir o diferir alcance y recostear. Este umbral pertenece al alcance publicado, no es el piso todavía desconocido del paquete mínimo |
-| Capacidad clave entre 1,6 y ~1,8 FTE en los meses 1-3 | Retirar la prueba chica y revisar metas, calendario y costeo antes de iniciar; confirmar también las horas distribuidas. No completar horas iniciales con ganancias futuras ([Anexo E](05-business-case.md), "Pedido de hoy y gates económicos") |
+| Programa anterior: capacidad clave efectiva en los meses 1-3 <1,6 FTE | No iniciar ese alcance; reducir o diferir y recostear. Este umbral no es el piso del mínimo vigente: sus tareas y horas se concilian en E, «Pedido inicial: paquete mínimo» |
+| Programa anterior: capacidad clave entre 1,6 y ~1,8 FTE en los meses 1-3 | Retirar la prueba de ese alcance y revisar metas, calendario y costeo; confirmar también las horas distribuidas. No completar horas iniciales con ganancias futuras ni trasladar estos pisos al mínimo de E |
 | Al cierre de los meses 4-6, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en los meses 7-9 las horas de champions y de intermedio que no sean rediseño (~13 de tiempo en el medio, como en el Anexo F); rediseñar la formación con casos por rol; revisar causas con los managers. El plan no suma seats: no hay expansión que frenar |
 | Al cierre de los meses 4-6, uso activo en Tecnología ≥60% y <80% | Los meses 7-9 siguen; formación rediseñada con casos por rol; se vuelve a medir al cierre de los meses 7-9 (como en el Anexo F) |
 | Básico completado <50% al cierre de los meses 4-6 | Cambiar el formato (de sesión a práctica en equipo) y reasignar tiempo; no repetir el mismo curso |
@@ -607,7 +593,89 @@ rezagados) se lee como uso de trámite y dispara la revisión del formato.
 - **Con `architect`.** Medir uso en chat y Gemini requiere instrumentación
   que hoy no existe; sin eso, la métrica de staff es una encuesta.
 
+## Insumo para el paquete mínimo
+
+**Supuestos de planificación a conciliar con B/C/E, no agendas liberadas.**
+Recomendación para M1-M3: básico de uso seguro para toda la organización, sin
+plataforma central, avanzado, red de champions al 10% ni contractor especializado
+continuo por defecto. No sustituye los controles de B/C ni prueba throughput.
+
+**Formación.** Mantener 6 h por persona del básico: clasificación de datos,
+herramientas y superficies permitidas por cliente, revisión del resultado,
+consulta e incidente. Incluye Tecnología, Operaciones, staff y dirección, con
+casos por rol y datos sintéticos o autorizados.
+
+Las restricciones del cliente no excluyen a las personas del básico ni autorizan
+uso sobre ese cliente. Población supuesta: 60-70 personas, referencia ~65
+([tamaño y estructura](../../context/hechos/tamano-y-estructura.md)); reservar
+**360-420 h**, aunque la meta de completitud M3 sea ≥90%.
+
+| Rol / actividad | Horas M1-M3 propuestas | Fuente o supuesto / qué desplaza |
+|---|---|---|
+| Participantes de todas las áreas: básico | 360-420 distribuidas | 60-70 × 6 h, desde tamaño/estructura y el nivel básico de este anexo. Puede desplazar delivery, soporte o trabajo de staff, según agenda y contrato |
+| Líder interno de adopción: agenda, base, diccionario de actividad, seguimiento y cierre | 48-96 clave | Supuesto de people: 0,1-0,2 × 480 h; el extremo alto coincide con el líder del programa anterior al 20%. Desplaza liderazgo técnico; no es tiempo libre |
+| Facilitación técnica del básico: adaptar casos y dictar sesiones | 16-32 clave | Supuesto de people: 8-16 h de preparación + 8-16 h de facilitación de grupos. No incluye evals, harness ni implementación. Desplaza trabajo técnico |
+| Managers / Operaciones: validar agendas y restricciones por persona | 8-16 clave | Supuesto de people agregado, no por manager. Desplaza coordinación de delivery |
+| Talento / administración: convocatorias y registro de completitud | 8-16 distribuidas | Supuesto de people agregado. Desplaza trabajo de staff |
+| QA / datos: extracción y reproducción del indicador existente | 8-16 clave | Supuesto de people, solo sobre fuentes existentes, sin plataforma nueva. Desplaza QA o análisis. Si la fuente no permite medir, declarar «sin medir» y recostear la instrumentación |
+| **Subtotal people interno** | **448-596 h** | **80-160 clave + 368-436 distribuidas**, extremos sumados; punto poblacional ~65: 478-566 h |
+
+No es el total del paquete: B/C/E agregan arquitectura, controles, gobierno,
+intermedio y prueba. Finanzas concilia solapes antes de sumar: diccionario,
+extracción y revisión pueden figurar en otros insumos. Ningún bloque cuenta
+dos veces por tener dos dueños.
+
+Las 6 h de básico del líder, facilitador o manager están en participantes;
+el soporte es trabajo adicional, con bloques distintos. Si una persona cubre
+varios roles, libera la suma en su agenda semanal. No se heredan los ~1,8 FTE
+ni el contrato 0,5 FTE del programa anterior.
+
+**Preparación.** Las 8-16 h de preparación de facilitación están dentro de su
+fila, no son un adicional. E separa la preparación total de 20-40 h fuera de
+M1-M3: conciliar qué tareas de D absorbe y descontarlas una sola vez; no sumar
+el subtotal bruto de people a la tabla consolidada de E.
+
+**Trabajo desplazado y recuperaciones.** Completar en privado la matriz de
+«Capacidad efectiva: dos bolsas sobre las mismas personas», con personas,
+semanas, entrega desplazada, reemplazo y recuperación verificable.
+No se supone recuperación ni ingreso o contribución cero.
+
+La formación puede desplazar facturación; el salario existente es costo de
+tiempo, no caja incremental. Finanzas valúa costo cargado por rol y concilia
+ingreso y contribución perdidos sin duplicación. Son hipótesis de planificación,
+no capacidad demostrada.
+
+**Excepción externa sustitutiva.** Si no hay perfil interno con esas 16-32 h de
+facilitación, comparar liberarlo contra una intervención externa acotada de
+**16-32 h que reemplace esa fila**, sin sumar ambas. Precio, caja y preaviso
+requieren cotización; no se presume permiso para contratar.
+
+La excepción la decide el Directorio. Sin vía demostrada, diferir el módulo y
+recostear; no reemplazar un especialista de B con 0,3 FTE internos.
+
+**Dependencias y secuencia.** C define política, permisos y superficies;
+Operaciones y managers liberan agendas antes de iniciar. Responsables humanos
+pendientes. Básico, intermedio y prueba respetan el calendario del mínimo:
+base congelada primero, inicio conjunto desde semana 5 o semana 9.
+
+**Intermedio de cohorte.** E incorpora 15-20 participantes × 12 h = 180-240 h,
+además del básico; no están en el subtotal people de arriba. B define el soporte
+de prueba y E lo concilia una sola vez. La cohorte y su capacidad requieren
+validación humana; el básico solo no compra la prueba publicada.
+
+**Éxito.** Básico completado ≥90% al cierre M3 con evaluación práctica por rol;
+diccionario de actividad congelado y cobertura publicada; todas las horas
+conciliadas sin doble asignación. Responsable humano: pendiente.
+
+**Abandono o revisión.** Sin permisos, horas o facilitación, no iniciar la
+actividad afectada. Si el calendario no sostiene ≥90%, reducir o resecuenciar
+y recostear con decisión humana visible; no dar la meta por lograda por asistir.
+
 ## Insumos para Finanzas
+
+**Referencia del programa anterior.** Las tablas anuales siguientes describen
+ese alcance, no el pedido inicial vigente ni una autorización de contratación.
+El insumo del mínimo está en la sección anterior y su consolidación está en E.
 
 Costo de horas = horas x USD 10-35 (supuesto del equipo). Es valuación a costo
 cargado, no ingreso perdido ni caja incremental. Finanzas estima aparte el trabajo,
@@ -639,14 +707,15 @@ Escala: las ~2.684-2.924 horas son unas 41-45 horas por persona de la dotación
 a este anexo: el uso semanal por área ya está en la medición de las filas
 anteriores.
 
-**Cómo entra en el Anexo E.** Las horas de este anexo son **tiempo distribuido**
-en la dotación (el segundo sobre del Anexo E: 590 h en los meses 1-3, 654 con la
-prueba chica), no el sobre de personas clave. El tiempo clave que este anexo aporta
-en los meses 1-3 es el 20% del líder del programa, y el sobre que el board confirma
-hoy es de **≥1,6 FTE clave** en los meses 1-3, ~1,8 con la prueba ([Anexo
-E](05-business-case.md)). El desglose de las 590 h de los meses 1-3 entre básico e
-intermedio lo consolida el Anexo E; las 64 h de la prueba son los 2 champions de
-arriba. Este anexo da las poblaciones y las horas por nivel.
+**Cómo entra en el Anexo E.** Para el mínimo, la referencia vigente de soporte,
+participantes y preparación es [E, «Pedido inicial: paquete mínimo»](05-business-case.md#pedido-inicial-paquete-mínimo),
+incluida la corrección del solape de Seguridad B/C que concilie `finance`.
+Las partidas de people se detallan en «Insumo para el paquete mínimo» y no se
+suman al consolidado sin descontar solapes y preparación.
+
+Los pisos **1,6/~1,8 FTE clave** y las **590/654 h distribuidas** pertenecen
+al programa anterior y **no se confirman hoy**. Sus 64 h de prueba y el líder
+al 20% tampoco se trasladan automáticamente al mínimo.
 
 **Horas y costo del avanzado, conciliados con el Anexo E.** El rango es 480-720 h;
 para capacidad se usa su punto medio, 600 h. El costo es USD 4.800-25.200 y su
@@ -662,28 +731,28 @@ Finanzas: la facturación en USD no se publica.
 ## Insumos para el deck
 
 - **Decisión que se le pide al board:** «Formar, reasignar y decidir una excepción
-  externa». El pedido inicial será el paquete mínimo sin plataforma central,
-  una vez costeado por `finance`; la excepción externa se decide solo si falta
+  externa». El pedido inicial es el paquete mínimo sin plataforma central,
+  consolidado en E; la excepción externa se decide solo si falta
   perfil/capacidad demostrados. El programa publicado sirve como referencia de
   alcance y no transfiere automáticamente contractor, prueba ni techos al mínimo.
 - **Frase central:** en el piloto de abril (12 personas que se anotaron solas) el
   uso fue alto (NPS +42) y la capacitación falló: el primer freno fue el tiempo.
   El plan responde con casos por rol, horas dentro de la jornada y champions con
   tiempo asignado, y mide en los meses 1-3 si pasa lo mismo en toda la organización.
-- **Redacción sugerida para la slide 6 (propuesta para `caio`):** reemplazar
-  «El piloto mostró que la gente valora la IA (NPS +42) y que falló la
-  capacitación: 17% completó los cursos.» por «En el piloto de abril (n=12,
-  autoseleccionado) el uso fue alto (NPS +42) y la capacitación falló: solo 17%
-  completó los cursos. Es una señal, no una medición de toda la organización:
-  la base de los meses 1-3 la mide.»
+- **Redacción sugerida para la slide 7 (propuesta para `caio`):** «En el piloto
+  de abril (n=12, autoseleccionado) el uso fue alto y solo 17% completó los
+  cursos». La slide ya publica esa señal; conservar la cautela: no representa
+  a toda la organización, cuya base se mide en M1-M3.
 - **Cifra para el CFO:** ~2.684-2.924 horas de capacitación, ~41-45 horas por
   persona, a USD 27.400-103.100 al costo cargado; además hay 384 h del líder en el
   sobre clave. Finanzas concilia ingreso y contribución desplazados sin duplicar
   esas horas. Total de personas del programa publicado ~USD 87.200-248.900
   (con contractor desde el mes 1 y al 100% en los meses 4-12; ~46.700-149.900 sin
   señal). No es el presupuesto del nuevo paquete mínimo.
-- **Señal de alerta que debe ir en la slide:** cumplir exactamente 85%/60% con
-  igual peso y toda Operaciones habilitada da 72,5%, no cumplimiento del OKR 80%.
+- **Señal de alerta para la slide 7:** Tecnología ≥80% en M6 y ≥85% en M12;
+  Operaciones habilitadas ≥60% en M12 (≥40% en M6, meta intermedia).
+  Cumplir exactamente 85%/60% en M12 con igual peso y toda Operaciones habilitada
+  da 72,5%, no cumplimiento del OKR 80%.
   Conservar metas por área y publicar combinado original, habilitados/total y
   cobertura; las prohibiciones condicionan el uso y deben medirse.
 - **Qué se mide:** uso real semanal por área, no seats, que alimenta el tablero
