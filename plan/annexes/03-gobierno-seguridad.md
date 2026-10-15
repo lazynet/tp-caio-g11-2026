@@ -12,9 +12,10 @@ Slide que sustenta: [Slide 5 — Gobierno y seguridad](../slides.md).
 
 Sustentar tres pedidos al board: aprobar un modelo de gobierno liviano (un AI Council
 de cinco asientos que se apoya en el comité de tecnología, sin gatekeeper), ratificar
-la política de IA que hoy está en borrador y financiar por gate un paquete de controles:
+la política de IA cuyo último registro es el borrador de abril de 2026, sin constancia
+posterior de ratificación, y financiar por gate un paquete de controles:
 el gobierno mínimo siempre, los controles técnicos de la plataforma si la decisión del
-mes 3 encuentra una señal y la demostración externa si la señal contractual llega a la
+mes 3 los autoriza ante una señal y la demostración externa si la señal contractual llega a la
 lectura del mes 9. Los gates son los puntos de decisión de los meses 3, 6, 9 y 12; los
 tramos son los meses 1-3 (enero-marzo de 2027), 4-6, 7-9 y 10-12. El gobierno tiene que
 habilitar la entrega: cada control declara cuánta velocidad cuesta y cuándo se abandona.
@@ -28,7 +29,7 @@ así que el gobierno se construye antes del primer caso, no después del primer 
 | Supuesto | Valor | Fuente o tipo |
 |---|---|---|
 | Tamaño de la organización | 60-70 personas, ~80% en Operaciones y Tecnología | [Ficha](../../context/hechos/tamano-y-estructura.md) |
-| Política de IA | v1.0 en borrador desde abril de 2026, sin ratificación del Directorio, sin matriz de restricciones de clientes | [Ficha](../../context/hechos/gobierno-y-politica-ia.md) |
+| Política de IA | Último registro: v1.0 en borrador al 21 de abril de 2026, con ratificación y matriz pendientes a esa fecha. No hay registro posterior: confirmar el estado actual antes de pedir ratificación | [Ficha y cautela temporal](../../context/hechos/gobierno-y-politica-ia.md) |
 | Inventario de casos de uso y registro de riesgos de IA | No existen | [Ficha](../../context/hechos/gobierno-y-politica-ia.md) |
 | Herramientas aprobadas | 3 (Claude Team, GitHub Copilot, Gemini en Workspace); 40-45 seats de Claude | [Ficha](../../context/hechos/uso-ia-interno.md) |
 | Certificación de seguridad | ISO/IEC 27001 de la organización; un producto propio no tiene la suya | [Ficha](../../context/hechos/seguridad-y-certificaciones.md) |
@@ -48,7 +49,7 @@ así que el gobierno se construye antes del primer caso, no después del primer 
 
 | Métrica | Hoy | Esperado a los 12 meses | Fuente |
 |---|---|---|---|
-| Política de IA | Borrador v1.0, sin ratificar | Ratificada por el Directorio, con revisión anual y onboarding | [Ficha](../../context/hechos/gobierno-y-politica-ia.md) |
+| Política de IA | Último registro al 21 de abril de 2026: borrador v1.0, sin constancia posterior de ratificación; estado actual pendiente de confirmar | Ratificada por el Directorio, con revisión anual y onboarding | [Ficha](../../context/hechos/gobierno-y-politica-ia.md) |
 | Inventario de usos de IA | No hay | 100% de las herramientas, servidores MCP, funciones de IA embebidas y casos de producto | Objetivo propuesto por el equipo |
 | Matriz de restricciones por cliente | No hay; se valida a mano | Cubre los clientes que concentran la mayor parte de la facturación (la ficha da el alcance) | [Ficha](../../context/hechos/cartera-y-concentracion.md) |
 | Registro de riesgos de IA | No hay | Vivo, revisado cada mes por el Council | Objetivo propuesto por el equipo |
@@ -220,11 +221,23 @@ función es habilitar; no aprueba nada que el Council no le delegó.
 | Salida a producción de una función de IA en el producto | Dueño de producto | Ingeniería | Seguridad, Operaciones | Council |
 | Excepción a una política de riesgo alto | Council | Responsable de seguridad | Dueño del caso | CEO |
 | Incidente de IA (contención y comunicación al cliente) | Responsable de seguridad | Ingeniería | Comercial, Legal externo | CEO, Council |
+| Suspensión preventiva de un uso por control incumplido, incidente o residual no aceptado | Responsable de seguridad | Ingeniería y dueño del caso | Dueño del riesgo | Council, CEO y autoridad del gate |
 | Gasto de IA fuera del presupuesto | Responsable de Finanzas | Tecnología | Council | CEO |
 
 Regla de la cursada: la IA cambia el proceso, no elimina a su dueño
 ([RACI](../../material/conceptos/m1u4-raci-ownership.md)). El responsable humano de cada
 rol queda **pendiente**; el equipo lo asigna y `people` lo desarrolla.
+
+**Seguridad precede a valor, gasto y adopción.** El responsable de seguridad puede
+suspender preventivamente el uso o la superficie afectados aunque los indicadores
+económicos y de adopción cumplan. El Council también puede frenar un frente en su revisión
+mensual. La contención no espera la siguiente reunión ni habilita gasto nuevo.
+
+Para reanudar, ingeniería produce la prueba corregida y una persona distinta la verifica;
+la autoridad del residual lo acepta según la tabla de este anexo. La autoridad del gate
+registra la reanudación y decide los fondos, si corresponden. Productor, verificador y
+persona que firma el gate se asignan por separado y quedan pendientes; quien produce la
+evidencia no verifica su propio trabajo ni autoriza su propio pase.
 
 ### Ritmo operativo
 
@@ -265,7 +278,7 @@ ve en la revisión mensual solo como estado del tablero.
 | Capa | Qué existe | Qué se hace | Tramo |
 |---|---|---|---|
 | Principios | 4 principios de la política en borrador (herramientas corporativas, desconfiar del output, responsable humano, lo que no se mide no se justifica) | Se mantienen | Meses 1-3 |
-| Política | Política de uso aceptable v1.0, sin ratificar | Se ratifica y se parte en tres: uso interno, IA en el producto y proveedores o modelos | Meses 1-6 |
+| Política | Último registro: v1.0 en borrador en abril de 2026; no hay registro posterior de ratificación | Se confirma el estado actual y se ratifica si sigue pendiente; se parte en tres: uso interno, IA en el producto y proveedores o modelos | Meses 1-6 |
 | Estándares | Clasificación de datos en 4 niveles; lista de lo que nunca se envía | Se suma la matriz de restricciones por cliente, la escala de autonomía (niveles 0 a 4) y la de riesgo | Meses 1-3 |
 | Controles | Revisión del output, aprobación por el comité, reporte de incidentes sin sanción | Se suman pasarela de salida, DLP, escaneo de secretos y logs de acciones | Meses 4-9 |
 | Evidencia | Auditoría mensual de uso | Inventario, registro de riesgos, logs y actas del Council: la evidencia sale del trabajo normal | Meses 1-12 |
@@ -453,10 +466,12 @@ demostración externa, de la señal contractual o del producto en la lectura del
 | Demostración externa | Red team externo; extensión de la ISO 27001 a IA | 11.600-31.000 | — | 11.600-31.000 | Declarar controles que no existen, con evidencia de un tercero; la condición del cierre del mes 12 (red team externo sin críticos) | Ningún riesgo propio que los controles técnicos no cubran: vale si un cliente la pide o si el producto sigue |
 | **Paquete completo (rama con señal en el mes 3)** | | **24.100-69.000** | **26.525-71.525** | **50.625-140.525** | | |
 
-**Recomendación.** El gobierno mínimo se financia siempre. Los controles técnicos y la
-demostración externa se liberan por señal, como decidió el board en el [Anexo E](05-business-case.md):
+**Recomendación del borrador, pendiente de recosteo del pedido mínimo.** El gobierno mínimo
+se financia siempre. Los controles técnicos y la demostración externa se liberan por señal,
+según la regla vigente del borrador del [Anexo E](05-business-case.md):
 la decisión del mes 3 libera la plataforma (y con ella los controles técnicos) si hay al
-menos una señal; la demostración externa se decide en la lectura del mes 9. Sin señal, el
+menos una señal; una prohibición pura se cumple excluyendo el uso, como se aclara abajo.
+La demostración externa se decide en la lectura del mes 9. Sin señal, el
 año corre como la alternativa de gobierno mínimo y formación del Anexo E y cuesta lo que el gobierno mínimo: 32.650-82.150,
 más hasta 1.875-9.375 de tiempo de los controles compensatorios (ver "Controles según la
 decisión del mes 3"; el Anexo E los suma: ≈ 199 en el año). Ahorra
@@ -464,9 +479,10 @@ la caja de los controles técnicos (4.500-18.000) y la de la demostración exter
 (11.600-31.000). **Desacuerdo a la vista:** antes este
 anexo financiaba los controles técnicos por riesgo propio, porque los riesgos de datos de
 cliente en un modelo externo y de fuga de secretos exponen a Acme Labs aunque no venda
-IA, y eso sigue siendo cierto. Con la decisión del board ese riesgo no se mitiga con
+IA, y eso sigue siendo cierto. En la rama sin plataforma ese riesgo no se mitiga con
 pasarela: se acepta como residual con controles compensatorios. Quien quiera los controles
-técnicos sin señal tiene que pedir una excepción al board, con su caja.
+técnicos sin señal tiene que pedir una excepción al board, con su caja. Las cuatro
+condiciones propuestas más abajo requieren ratificación humana; no se presuponen aprobadas.
 
 **Qué evidencia se pide (meses 1-3).** No se inventan clientes ni cláusulas: se leen los
 documentos que ya existen, con la misma lectura que arma la matriz.
@@ -491,26 +507,53 @@ los meses 1-3 y se vuelve a leer en los meses 6 y 9.
 
 | Señal | Umbral | Cuenta en el mes 3 | Qué decide |
 |---|---|---|---|
-| Restricción | Al menos un contrato de los cinco primeros prohíbe o condiciona la IA de terceros | **Solo si condiciona**: acepta la IA con controles que Acme Labs debe demostrar. Si solo prohíbe, no | La matriz y el *default-deny* pasan de prudencia a obligación (gobierno mínimo) |
-| Licencia para vender | Uno de los dos primeros clientes, o dos de los cinco primeros, piden evidencia de controles de IA como condición o puntaje de contratación o renovación dentro de 18 meses. Las preguntas sin consecuencia no cuentan | Sí | Libera los controles técnicos en el mes 3, solos o con otra señal; la demostración externa se decide en el mes 9 |
+| Restricción | Al menos un contrato de los cinco primeros prohíbe o condiciona la IA de terceros | Sí: prohibición y condicionamiento cuentan como restricción, igual que en la ficha. Registrar cuál de las dos aplica | La prohibición pura se cumple excluyendo el uso afectado; no libera plataforma. Si condiciona, documentar los controles exigidos y evaluar la respuesta |
+| Licencia para vender | Uno de los dos primeros clientes, o dos de los cinco primeros, piden evidencia de controles de IA como condición o puntaje de contratación o renovación dentro de 18 meses. Las preguntas sin consecuencia no cuentan | Sí | Bajo la regla vigente del borrador, habilita liberar los controles técnicos en el mes 3, solos o con otra señal; la demostración externa se decide en el mes 9. Ver propuesta de condiciones adicionales |
 | Demanda | Un cliente pide una función de IA | No es esta señal: es la de cliente para el producto, que define el [Anexo F](06-roadmap-riesgo.md) | Libera el piloto de producto en el mes 6 |
 | Sin señal | Ninguna de las anteriores | Sin señal contractual en el mes 3 | Meses 4-12 como la alternativa de gobierno mínimo y formación (ver "Controles según la decisión del mes 3"); los meses 6 y 9 releen |
 
-**Desacuerdo a la vista sobre la restricción.** El Anexo E escribe "restricción o licencia" sin
-distinguir. Esta lectura la recorta porque el supuesto de partida ya es que los clientes
-prohíben por defecto: un contrato que solo prohíbe confirma ese supuesto, probablemente
-exista entre cinco bancos, y liberaría la plataforma casi siempre sin que nadie pida nada
-que la alternativa de gobierno mínimo y formación no compre. La alternativa es la lectura literal del Anexo E, que desactiva la
-bifurcación en la práctica. Decide el board en la aprobación de hoy.
+**Una señal, respuestas distintas.** La definición de restricción incluye tanto el
+condicionamiento como la prohibición, como la
+[ficha de umbral](../../context/supuestos/umbral-de-evidencia-contractual.md). Contarla no
+autoriza el uso prohibido ni justifica comprar plataforma. La exclusión del uso afectado
+es la respuesta a una prohibición pura; el Council registra su cumplimiento.
+
+**Regla vigente del borrador y cambio propuesto.** El [Anexo E](05-business-case.md) y el
+[Anexo F](06-roadmap-riesgo.md) liberan plataforma ante al menos una de las señales de
+contrato, precio por consumo o cliente. La redacción "restricción o licencia" requiere
+alinearse con la exclusión anterior. Los umbrales contractuales siguen siendo supuestos
+sin ratificación humana; este anexo no declara un acuerdo nuevo del board.
+
+**Cuatro condiciones adicionales propuestas, pendientes de ratificación humana por el
+Council/Directorio.** Ante una señal, se recomienda evaluar la respuesta mínima y exigir:
+
+1. **Brecha documentada:** requisito y superficie afectados, control actual probado y
+   residual; explicar qué falta y por qué excluir el uso o configurar lo existente no alcanza.
+2. **Alternativas comparables:** configuración actual, compra y ensamblado, con igual
+   requisito, superficie, pruebas, cobertura y costo total de operación e integración.
+3. **Economía incremental o aprendizaje con pérdida aceptada:** comparar costos futuros
+   evitables desde el mismo historial; declarar límite de pérdida, evidencia buscada y
+   condición de corte si se elige aprender. Una señal contractual no demuestra repago.
+4. **Capacidad demostrada:** horas por rol liberadas, operación y mantenimiento asignables,
+   dependencia comercial validada y controles aplicables probados antes de ampliar.
+
+El Council recomienda con evidencia; una persona designada por el Directorio firma la
+decisión del gate y el presupuesto, con nombre y alcance de autoridad en el acta
+**pendientes de asignación**. No decide el agente ni un indicador automático. Estas cuatro
+condiciones no sustituyen la regla vigente hasta su ratificación. Si se ratifican y falta
+brecha incremental, se difiere plataforma y se reevalúa en M6/M9; no se la pasa por defecto
+al año 2. Un control obligatorio incumplido suspende el uso afectado.
 
 **Cómo se lee en el mes 3.** La evidencia de los meses 1-3 son los mismos contratos de la
 matriz, que ya es condición de la decisión del mes 3; los cuestionarios, RFP y auditorías
 pueden llegar después.
 
-- **Quién junta:** los roles de la tabla de fuentes. **Quién consolida:** el responsable de
-  seguridad, que arma el agregado (cuántos de los cinco primeros, qué clasificación, sin alias
-  ni textos). **Quién declara la señal:** el Council, con Legal externo para los textos
-  ambiguos. Personas pendientes.
+- **Quién produce:** los roles de la tabla de fuentes; seguridad consolida el agregado
+  (cuántos de los cinco primeros, qué clasificación, sin alias ni textos). **Quién verifica:**
+  una persona del equipo distinta del productor, con Legal externo para los textos ambiguos.
+  **Quién declara la señal:** el Council sobre esa verificación. **Quién firma el gate:**
+  la persona designada por el Directorio, con autoridad y límites asentados. Las tres
+  personas (productor, verificador y autoridad del gate) quedan pendientes de asignación.
 - **Cuándo:** el agregado llega al Council al menos dos semanas antes de la decisión del mes 3
   (propuesta, a fijar en la aprobación de hoy). La ficha anonimizada la verifica una persona
   del equipo antes; hasta entonces es supuesto y no sustenta la decisión.
@@ -521,7 +564,8 @@ pueden llegar después.
 - **Meses 6 y 9:** misma tabla, sobre lo nuevo desde la decisión anterior (renovaciones, RFP,
   cuestionarios) y la lectura que faltaba. Una señal que aparece en el mes 6 libera los
   controles técnicos desde los meses 7-9; una que aparece en el mes 9, desde los meses 10-12
-  (ver "Controles según la decisión del mes 3").
+  (ver "Controles según la decisión del mes 3"). La prohibición pura sigue excluyendo el
+  uso; las cuatro condiciones adicionales solo rigen si fueron ratificadas.
 
 La lectura cabe en las horas de la matriz porque son los mismos contratos. Si no
 alcanza, el faltante es de 20-40 h de analista funcional (260-1.360 USD, al costo
@@ -532,6 +576,33 @@ horario del supuesto), que no está sumado al total.
 Cada control dice si rige desde la decisión del mes 3 en las dos ramas o solo si esa
 decisión libera la plataforma. La velocidad que cuesta es la de "Controles por tramo"; los
 compensatorios son tiempo, sin caja.
+
+**Requisito previo por superficie (propuesta del equipo).** Antes de ejecutar una prueba
+o ampliar un uso, completar y probar la ficha requisito→superficie→control→evidencia→residual.
+Debe declarar fuentes y repositorios habilitados por política y matriz, datos propios o
+sintéticos permitidos, permisos y MCP acotados, ausencia de credenciales productivas,
+escaneo local aplicable, prueba adversarial y revisión humana del resultado.
+
+| Superficie que se propone usar | Prueba previa y evidencia mínima | Límite si no puede bloquearse |
+|---|---|---|
+| Agente de código en terminal | Lista de repositorios y fuentes habilitados; permisos y MCP efectivos; secreto sintético bloqueado y alertado por el escaneo local; intento de instrucción indirecta y acción no autorizada; revisión humana de cambios antes de ejecutar | No se declara bloqueo fuera de las rutas probadas; una falla del control obligatorio impide iniciar o ampliar ese uso |
+| IDE | Repositorios habilitados y configuración corporativa; escaneo local antes de enviar contexto o aceptar cambios; prueba con secreto e instrucción sintéticos; revisión humana del código | Si no se puede impedir el envío automático de contexto excluido, deshabilitar esa función o excluir el repositorio; el residual restante requiere aceptación |
+| Chat y escritorio | Fuentes y conectores permitidos, ajustes corporativos y retención; escaneo local de archivos a adjuntar; prueba adversarial sintética de exfiltración y revisión humana previa al envío y al uso del resultado | No atribuir DLP central ni bloqueo técnico al control manual; excluir contenido no autorizado |
+| Suite ofimática | Permisos efectivos de documentos y conectores; revisión de funciones embebidas; escaneo local de archivos que se incorporan; prueba sintética de acceso indebido e instrucción indirecta; revisión humana | Si no se puede acotar el contexto a fuentes permitidas, no habilitar esa función sobre el conjunto afectado |
+| MCP y conectores | Lista cerrada de servidores y acciones, permisos mínimos probados y sin credenciales productivas; prueba de lectura y acción no autorizadas con fuentes sintéticas; revisión humana de acciones | Deshabilitar el servidor o la acción que no pueda acotarse; probar también la superficie desde la que se invoca |
+
+Ingeniería produce la evidencia por superficie; un verificador distinto la revisa. El dueño
+del riesgo o el Council acepta el residual según su autoridad, con vencimiento; las personas
+quedan pendientes de asignación. Gasto dentro del techo o buena adopción no reemplazan esta
+aceptación. Seguridad puede suspender el uso afectado según "Derechos de decisión".
+
+**Calendario conservado.** Las pruebas y compensatorios de las tablas siguientes siguen en
+M4-M6. Llevar los controles aplicables a M1-M3 para operar el pedido mínimo es una **opción
+pendiente de validar horas, costo y capacidad**, estimada en "Insumo para el paquete mínimo
+M1-M3". No se adelantan por esta edición ni se declaran instalados. Si se quiere iniciar o
+ampliar antes, primero se aprueba y ejecuta esa opción; sin prueba y aceptación, ese uso
+no se inicia ni se amplía. El residual de usos existentes también debe revisarse: no hay
+aceptación automática por ser una herramienta ya aprobada.
 
 | Control | Rige en las dos ramas | Solo con señal en el mes 3 |
 |---|---|---|
@@ -558,12 +629,13 @@ inyección indirecta y de fuga de secretos aceptado por el Council con fecha de 
 lectura de la señal contractual hecha. No se piden cobertura por pasarela ni bypass de todas
 las superficies.
 
-**Riesgo residual sin pasarela.** Sin los controles técnicos, la inyección indirecta y la
-fuga de secretos no tienen bloqueo central ni registro; en el gobierno mínimo quedan en la
-política. Propuesta: **aceptarlo**, con los compensatorios de la
+**Riesgo residual sin pasarela.** Sin los controles técnicos centrales, la inyección
+indirecta y la fuga de secretos no tienen bloqueo ni registro centrales. El gobierno mínimo
+solo no alcanza: la rama operativa sin señal exige los compensatorios probados de la
 tabla, porque la rama sin señal no agrega superficie: no hay casos propios ni agentes nuevos,
 y la prueba extendida corre sobre los repositorios que la matriz habilita, sin datos de
-cliente. Hoy hay 40-45 seats de Claude y no hay evidencia de controles específicos de IA.
+cliente. Propuesta: aceptar el residual solo después de esas pruebas. Hoy hay 40-45 seats
+de Claude y no hay evidencia de controles específicos de IA.
 
 | Riesgo | Residual objetivo sin controles técnicos | Acepta | Vence |
 |---|---|---|---|
@@ -571,21 +643,26 @@ cliente. Hoy hay 40-45 seats de Claude y no hay evidencia de controles específi
 | Inyección indirecta de prompts | Media / Alto (sin logs centrales) | Council, con informe al CEO | Meses 6 y 9 |
 | Fuga de secretos | Baja / Medio-alto en el agente de código (bloqueo local); Media / Medio-alto en el resto | Council | Meses 6 y 9 |
 
-La aceptación vale **solo si** se cumplen cuatro condiciones: repositorios habilitados por
-la matriz, autonomía hasta el nivel 3 ("actúa con aprobación") con aprobación humana, sin
-credenciales productivas, y los compensatorios probados. Si falta una, la prueba no se
-extiende. Un incidente confirmado de datos de cliente en un modelo externo, de inyección
+La aceptación vale **solo si** se cumple el requisito previo por superficie: fuentes y
+repositorios habilitados por política y matriz, datos propios o sintéticos permitidos,
+permisos y MCP acotados, autonomía hasta el nivel 3 ("actúa con aprobación") con revisión
+humana, sin credenciales productivas, escaneo local y prueba adversarial con compensatorios
+probados y residual aceptado por la autoridad correspondiente. Si falta una condición, la
+prueba no se inicia ni se extiende. Un incidente confirmado de datos de cliente en un
+modelo externo, de inyección
 indirecta o de fuga de secretos la revoca: se suspende la extensión y el Council le pide al
 board reabrir los controles técnicos como decisión de seguridad, fuera de las tres señales
 (propuesta). El responsable humano de la aceptación queda pendiente.
 
 **Alternativas.** (i) Financiar los controles técnicos sin señal: 4.500-18.000 de caja,
-contra la decisión del board. (ii) No extender la prueba a la cohorte: reduce el riesgo,
+como excepción a la regla del borrador. (ii) No extender la prueba a la cohorte: reduce el riesgo,
 pero deja a la alternativa de gobierno mínimo y formación sin su medición. (iii) Aceptar solo con la política: descartada,
 es lo que hoy deja sin prueba.
-**Costo:** los compensatorios suman hasta 1.875-9.375 de tiempo (la parte de tiempo de los
-controles técnicos), que el Anexo E suma a la rama sin señal (no a la alternativa de gobierno mínimo y formación de
-"Alternativas equivalentes"); sin el escaneo local de secretos probado, la fuga de secretos
+**Costo de la rama anual publicada:** los compensatorios suman hasta 1.875-9.375 de tiempo
+(la parte de tiempo de los controles técnicos), que el Anexo E suma a la rama sin señal
+de **≈199**, no a la alternativa original de **161** de "Alternativas equivalentes". El
+pedido mínimo M1-M3 se recostea aparte; no hereda esos totales. Sin el escaneo local de
+secretos probado, la fuga de secretos
 no tiene bloqueo en ninguna superficie. **Éxito:** secreto sintético bloqueado y alertado
 en el agente; críticos del red team cerrados. **Abandono:** incidente confirmado o
 condición incumplida.
@@ -613,6 +690,50 @@ condición incumplida.
   no la matriz de clientes ni la prohibición de crédito.
 
 ## Insumos para Finanzas
+
+### Insumo para el paquete mínimo M1-M3: controles aplicables equivalentes
+
+**Propuesta de alcance, no presupuesto aprobado.** Para operar sobre herramientas
+corporativas existentes sin plataforma central, se mantienen los mismos requisitos de
+datos, permisos, prueba, revisión y aceptación; cambia la implementación y se excluyen
+superficies que no puedan cumplirlos. No se promete cobertura de pasarela ni producto nuevo.
+
+Los rangos siguientes son **supuestos nuevos del equipo para planificación**, sin medición
+ni cotización. Suponen reutilizar política, consolas, escáner local y contratos existentes;
+una cohorte acotada a repositorios propios o sintéticos, sin datos de cliente, y una primera
+prueba con corrección y repetición. No presuponen disponibilidad de agendas ni controles
+ya funcionando. Si hace falta compra, integración nueva o más ciclos, reducir alcance o
+recostear antes de iniciar. El responsable humano de cada rol queda pendiente.
+
+| Control mínimo | Entregable verificable | Horas por rol en M1-M3 (supuesto) | Pago externo incremental (supuesto) |
+|---|---|---|---|
+| Política e intake | Estado actual confirmado contra registro posterior a abril, política ratificada si sigue pendiente, datos permitidos/prohibidos, revisión humana y ruta de incidentes y suspensión | Tech lead de gobierno: 8-16 h; seguridad: 4-8 h; staff de Operaciones/comercial: 2-4 h | 0 USD adicionales; revisión legal en su fila |
+| Matriz habilitante | Restricciones de los clientes principales clasificadas, fuentes/repositorios habilitados y excluidos, ambigüedades con *default-deny*; agregado verificado por otra persona | Analista funcional: 32-48 h; seguridad: 4-8 h; staff de Operaciones/comercial: 4-8 h | 0 USD adicionales; revisión legal en su fila |
+| Inventario y riesgo | Herramientas, funciones embebidas, repositorios, MCP, permisos, superficie→control→telemetría, responsables por rol y registro de residuales con vencimiento | Analista funcional: 16-24 h; senior DevOps: 4-8 h | 0 USD; se reutilizan registros y consolas disponibles |
+| Revisión legal focalizada | Dictamen de alcance y textos ambiguos, límites de uso/no entrenamiento y tratamiento de datos; no reemplaza la revisión normativa completa posterior | Tech lead de gobierno: 2-4 h; analista funcional: 4-8 h; asesor externo: 8-16 h | 2.000-6.000 USD; supuesto de 250-375 USD/h × 8-16 h, sin cotización; sustituye la porción inicial del renglón anual, no se suma dos veces |
+| Compensatorios y prueba previa por superficie habilitada | Configuración y escaneo local, permisos/MCP acotados, sin credenciales productivas; secreto e instrucción sintéticos, intentos de acceso/acción indebidos, corrección y repetición; verificación independiente, revisión humana y acta de aceptación o exclusión | Senior DevOps productor: 40-64 h; seguridad verificadora independiente: 8-16 h; analista funcional: 8-16 h para fuentes, casos de prueba y registro | 0 USD si las herramientas existentes alcanzan; no incluye compra ni red team externo |
+
+**Decisión y seguimiento incluidos en el alcance.** Conservar la cadencia existente del
+Council: por M1-M3, cinco asientos × 6 h por asiento, distribuidos en 12 h de tech lead,
+6 h de senior DevOps/seguridad y 12 h de staff (supuesto ya usado en el renglón anual).
+Incluye lectura, aceptación o rechazo del residual y revisión mensual; no es una reunión
+adicional. Si esas horas no alcanzan, Finanzas debe recostearlas antes de comprometerlas.
+
+**Regla de costeo para `finance`.** Las horas por entregable son partidas disjuntas: no
+sumar además los porcentajes anuales de líder y seguridad sobre esas mismas actividades;
+no duplicar matriz/inventario, Council, legal ni los compensatorios anuales. Productor y
+verificador deben ser personas distintas aunque compartan banda de costo; si no hay
+independencia disponible, no se declara probado el control. Los USD de tiempo salen del
+[supuesto de costo cargado por rol](../../context/supuestos/costo-cargado-por-rol.md);
+las licencias existentes y la capacitación las concilian `architect` y `people`.
+
+**Criterio de éxito:** cada superficie habilitada tiene prueba reproducible, hallazgos
+críticos cerrados y residual firmado por su autoridad antes de operar. **Abandono:** control
+obligatorio incumplido, incidente, falta de verificador o capacidad no liberada: suspender
+el uso afectado, reducir alcance y recostear. Adelantar estos entregables a M1-M3 sigue
+pendiente de validación humana de horas y costo; esta tabla no mueve el calendario vigente.
+
+### Referencia anual del borrador, pendiente de conciliación con el pedido mínimo
 
 Todas las cifras son rangos en USD, supuestos del equipo sin cotización, salvo donde se
 cita una ficha. Cada costo de tiempo se calcula por actividad y por rol con el supuesto de
