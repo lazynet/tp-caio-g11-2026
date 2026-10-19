@@ -51,7 +51,6 @@ def main():
             fail("denylist ausente o vacía; modo estricto rechazado")
         print("⚠ leak-check: revisión PARCIAL; sin denylist privada", file=sys.stderr)
     patterns = [
-        ("mail corporativo", r"[A-Za-z0-9._%+-]+@flexibility(services)?\.com\.ar"),
         ("clave privada", r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
         ("confidencialidad", r"^confidential:[[:space:]]*true"),
         ("CUIT", r"(^|[^0-9])(20|23|24|27|30|33|34)-[0-9]{8}-[0-9]([^0-9]|$)"),

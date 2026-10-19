@@ -13,7 +13,9 @@ SCRIPT = Path(
     )
 )
 TERM = "Synthetic" + "Customer"
-MAIL = "fake.person" + "@" + "flexibility" + ".com.ar"
+# El dominio corporativo real vive solo en la denylist privada.
+MAIL_TERM = "synthetic" + "corp"
+MAIL = "fake.person" + "@" + MAIL_TERM + ".com.ar"
 KEY = "-----BEGIN " + "RSA PRIVATE " + "KEY-----"
 CUIT = "30-" + "12345678" + "-9"
 CONFIDENTIAL = "confidential:" + " true"
@@ -83,7 +85,6 @@ class LeakCheckTests(unittest.TestCase):
 
     def test_fixed_patterns_and_redaction(self):
         for value, category in (
-            (MAIL, "mail corporativo"),
             (KEY, "clave privada"),
             (CUIT, "CUIT"),
             (CONFIDENTIAL, "confidencialidad"),
@@ -97,7 +98,18 @@ class LeakCheckTests(unittest.TestCase):
                 self.assertIn("línea 2", result.stderr)
                 self.assert_redacted(result, value, TERM, path)
 
+    def test_mail_domain_via_denylist(self):
+        self.env["LEAK_DENYLIST"] = MAIL_TERM
+        path = TERM + ".md"
+        self.stage(path, "public\n" + MAIL + "\n")
+        result = self.scan("--all")
+        self.assertEqual(result.returncode, 1, self.output(result))
+        self.assertIn("denylist privada", result.stderr)
+        self.assertIn("línea 2", result.stderr)
+        self.assert_redacted(result, MAIL, TERM, path)
+
     def test_index_differs_from_worktree(self):
+        self.env["LEAK_DENYLIST"] = MAIL_TERM
         path = self.stage(content=MAIL + "\n")
         path.write_text("public\n")
         self.assertEqual(self.scan("--staged").returncode, 1)

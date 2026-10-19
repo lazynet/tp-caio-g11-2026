@@ -50,7 +50,7 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 
 **Lo que el curso afirma y el texto no respalda.** M1U2 dice que FINMA "establece ciclos de revisión trimestrales o según criticidad para la gestión de portafolios de IA".[^m1u2] En el texto primario completo no aparece ninguna frecuencia de revisión, y tampoco una gestión de "portafolios". Lo más cercano es que el riesgo se pondera por materialidad y probabilidad, y que los tests y el monitoreo son continuos y definidos de antemano; ninguna frecuencia es trimestral.[^finma-08-2024] Un resumen jurídico independiente tampoco menciona ciclos trimestrales.[^finma-mll]
 
-**Cómo usarla en el plan.** Citarla como referencia suiza de buenas prácticas para entidades financieras (inventario con clasificación de riesgo, independencia de la revisión, monitoreo de deriva de datos), nunca como obligación para Flexibility ni como fuente del ritmo trimestral. Los clientes argentinos o internacionales de Flexibility no están sujetos a ella salvo que operen en Suiza (a verificar caso a caso).
+**Cómo usarla en el plan.** Citarla como referencia suiza de buenas prácticas para entidades financieras (inventario con clasificación de riesgo, independencia de la revisión, monitoreo de deriva de datos), nunca como obligación para Acme Labs ni como fuente del ritmo trimestral. Los clientes argentinos o internacionales de Acme Labs no están sujetos a ella salvo que operen en Suiza (a verificar caso a caso).
 
 # Reglamento (UE) 2024/1689 (AI Act)
 

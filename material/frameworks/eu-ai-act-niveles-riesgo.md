@@ -139,7 +139,7 @@ Comisión según el Anexo XIII. Se notifica a la Comisión en menos de dos seman
 (art. 52). Los códigos de buenas prácticas del art. 56 sirven para demostrar
 cumplimiento hasta que haya normas armonizadas.[^eu-ai-act]
 
-Para Flexibility lo relevante es la figura de **proveedor posterior** (art.
+Para Acme Labs lo relevante es la figura de **proveedor posterior** (art.
 3.68): quien integra un modelo de terceros en su sistema. No es proveedor del
 modelo, pero el art. 53.1.b obliga al proveedor del modelo a darle documentación
 para que cumpla, y el art. 25.4 exige un acuerdo escrito entre ambos (ver

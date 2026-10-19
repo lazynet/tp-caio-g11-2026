@@ -1,0 +1,49 @@
+---
+type: Supuesto
+title: "Sobre de capacidad separado en tiempo clave y distribuido"
+description: "Propuesta de Finanzas, todavía no aprobada: el tiempo de las personas clave se mide contra el sobre de 1 a 2,25 FTE, y las horas repartidas en toda la dotación forman un segundo sobre que el board aprueba hoy."
+status: draft
+tags: [supuesto, finanzas, capacidad, propuesta]
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-14T22:00:00Z }
+---
+# Supuesto
+
+El sobre de la [capacidad de inversión](/supuestos/capacidad-de-inversion.md)
+(10-15% del tiempo de 10-15 personas clave, de 1 a 2,25 FTE; el número de personas es
+un [supuesto aparte](/supuestos/personas-clave-del-sobre.md)) se lee **separado**:
+
+| Sobre | Qué cuenta | Quién lo aprueba |
+|---|---|---|
+| Tiempo clave | Fracciones de arquitectura, IA aplicada, plataforma, gobierno y liderazgo del programa | Ya está en el supuesto de capacidad |
+| Tiempo distribuido | Horas de capacitación básica, intermedia y avanzada, de champions y de los ejercicios de mesa de incidentes (2 × 8 personas × 3 h al año), repartidas en la dotación (ver [poblaciones](/supuestos/poblaciones-de-capacitacion.md)) | El board, como sobre propio, en la aprobación de hoy |
+
+La alternativa es la lectura **estricta**: todo cuenta contra 1-2,25 FTE.
+
+Regla de clasificación: las pruebas de *bypass*, el red team interno y el Council
+cuentan como tiempo clave; los ejercicios de mesa de incidentes y toda la
+capacitación, como distribuido, aunque participe alguna persona clave.
+
+# Por qué es razonable
+
+- El supuesto de capacidad habla de un grupo acotado de personas clave y no
+  dice nada de las horas repartidas en toda la dotación.
+- Las horas distribuidas son pocas por persona (del orden de 9 h en los meses 1-3) y no
+  salen del mismo grupo que sostiene la plataforma.
+
+# Qué lo invalidaría
+
+- Que el board no apruebe el sobre distribuido en la aprobación de hoy: rige la lectura estricta,
+  y con ella ninguna versión de los meses 1-3 que cumpla la meta de capacitación básica entra.
+- Que las horas distribuidas bajen la utilización facturable por debajo de la
+  meta (ver [capacidad y utilización](/hechos/capacidad-y-utilizacion.md)).
+- Que el sobre clave disponible esté en el extremo inferior del rango (1 FTE): el
+  plan necesita un piso de ~1,8 FTE clave en los meses 1-3 con la prueba chica (1,6 sin ella):
+  bajo 1,6 ninguna versión de los meses 1-3 entra.
+
+# Cautelas
+
+- **Es una propuesta de `finance`, no un hecho ni una decisión tomada.** Elegir
+  entre lectura estricta y separada es una decisión del board en la aprobación de hoy.
+- Leerlo separado no agranda la capacidad real: las horas igual salen de horas
+  facturables. Solo hace visible un segundo sobre que hay que aprobar.
+- Valores vigentes en el Anexo E al 2026-10-14.

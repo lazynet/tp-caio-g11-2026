@@ -7,8 +7,9 @@ Repo del Trabajo Integrador Final de la Diplomatura CAIO (UTN BA): un Plan
 Maestro del CAIO a 12 meses, entregado en un único PDF de menos de 10 MB: 10
 slides como máximo (incluyendo portada y equipo) más anexos.
 
-**Estado:** estamos en setup. El caso todavía no está elegido; Flexibility
-(software para fintech y bancos) es un candidato. Ver
+**Estado:** hay un borrador completo. El caso de trabajo es Acme Labs
+(software para fintech y bancos), la organización completa, con el OK de su CEO;
+falta que el equipo lo confirme. Ver
 [Pendientes del equipo](#pendientes-del-equipo).
 
 > **El repo es público.** Ningún dato interno de ninguna organización entra acá:
@@ -256,9 +257,9 @@ anonimizados y supuestos, nunca el dato real.
 | `leak-guard` en push | lo mismo en modo estricto: falla si falta la denylist. Detecta, no previene: el push ya es público | GitHub Actions |
 
 El chequeo combina patrones fijos (claves privadas, CUIT, archivos marcados
-confidenciales, cualquier cosa en `private/` y mails corporativos, solo del
-dominio del candidato actual) con una denylist privada de nombres que vive fuera
-del repo. No uses nunca `git commit --no-verify`.
+confidenciales y cualquier cosa en `private/`) con una denylist privada que
+vive fuera del repo y lleva los nombres y los dominios de mail de la
+organización del caso. No uses nunca `git commit --no-verify`.
 Ninguna capa garantiza que no se filtre nada: la defensa principal es no
 escribir el dato. La protección de `main` exige la aprobación de Martin, pero
 no exige que pasen los chequeos. Que el secreto `LEAK_DENYLIST` esté
@@ -323,7 +324,7 @@ duplicadas.
 
 | Salida | Sirve para |
 |---|---|
-| `entrega.pdf` | **lo que se entrega**: el deck seguido de los anexos, en un solo PDF |
+| `entrega.pdf` | **lo que se entrega**: el deck, el índice de anexos y los anexos, en un solo PDF |
 | `deck-marp.html` / `.pdf` | revisar y presentar; el mejor diseño |
 | `deck-marp.pptx` | entregar si piden pptx (las slides van como imagen) |
 | `deck-pandoc.pptx` | pptx con texto editable, diseño básico |
@@ -336,7 +337,12 @@ al script, no se arma a mano.
 La consigna pide **un único PDF de menos de 10 MB** con la presentación y los
 anexos. `build-deck.sh entrega` lo arma en `out/entrega.pdf`: el deck de Marp y
 después cada anexo de `plan/annexes/` en orden de nombre (`01-finanzas.md`,
-`02-arquitectura.md`...), en A4. Si pasa los 10 MB, el script falla y dice el peso.
+`02-arquitectura.md`...), en A4. Entre el deck y los anexos agrega una página
+de índice con títulos y links internos. Las páginas de anexos se numeran desde
+1 al pie; el índice usa esa numeración. Las filas de tablas se mantienen juntas
+si caben en una página, sin achicar la tipografía. El pie requiere un Chrome
+con soporte de cajas de margen CSS; verificá que aparezca en el PDF generado.
+Si pasa los 10 MB, el script falla y dice el peso.
 
 Un anexo no es un depósito de datos crudos: es la **evidencia procesada** que
 deja ver al CFO o al board de dónde salió cada número de una slide. Para
@@ -347,8 +353,12 @@ mitigación, y decisiones. `plan-check` exige esas secciones y el frontmatter
 que una slide lo enlace. Los archivos que empiezan con `_` no se validan ni se
 entregan.
 
-En el PDF los links a los anexos no navegan: en la slide, nombrá el anexo
-("ver Anexo B — Finanzas") además de enlazarlo.
+En `entrega.pdf`, los links a slides y anexos incluidos navegan dentro del PDF,
+también hacia sus anclas. Los demás archivos del repo apuntan a GitHub, con
+`CAIO_PUBLIC_REF=main` por defecto. Para fijar una versión auditable, usá un
+commit publicado: `CAIO_PUBLIC_REF=<sha> ./scripts/build-deck.sh entrega`.
+El build rechaza links a `private/`, destinos internos inexistentes y cualquier
+URI `file://` que sobreviva en el PDF final.
 
 ## Validar
 
@@ -393,8 +403,9 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 
 - [x] Dónde colaboramos: GitHub, `lazynet/tp-caio-g11-2026` (público hasta que estemos todos)
 - [x] Diplomatura, plan a 12 meses y tope de 10 slides incluyendo portada y equipo
-- [ ] Caso: Flexibility es candidato, no está elegido
-- [ ] Alcance del caso, una vez elegido
+- [ ] Caso: confirmar Acme Labs (propuesto, con el OK de su CEO)
+- [ ] Alcance: confirmar la organización completa (IA en el producto y en la operación interna)
+- [ ] Verificar las fichas de `context/` contra su fuente (`status: verified`)
 - [ ] Responsables humanos de cada sección
 - [x] Formato de entrega: un único PDF de menos de 10 MB con slides y anexos (ver "Generar el deck")
 - [ ] Material de M3U4 (cierre y defensa del Plan Maestro), que no tenemos

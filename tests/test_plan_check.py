@@ -15,6 +15,14 @@ spec.loader.exec_module(checker)
 
 
 class PlanCheckTests(unittest.TestCase):
+    def test_spanish_todo_is_not_a_pending_marker(self):
+        self.write(
+            "# Deck\nsobre todo la terminal\nTODO real\nPendiente humano\nPOR DEFINIR\nFIXME real"
+        )
+        pending = self.result()["pending"]
+        self.assertEqual(len(pending), 4)
+        self.assertFalse(any("sobre todo" in item for item in pending))
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
@@ -389,6 +397,46 @@ class PlanCheckTests(unittest.TestCase):
         self.write("# Deck\n[Anexo](annex.md)")
         self.assertEqual(self.result()["pending"], ["plan/annex.md:9: TODO: real"])
 
+    def test_process_text_rejected_in_deck_and_annex(self):
+        for phrase in (
+            "La bifurcación que decidió lazynet el 14",
+            "Actualización de ronda 11b",
+            "Reemplaza a la versión anterior",
+            "El pedido anterior queda como alternativa",
+            "Cifras no aptas para el peer review",
+            "Las fichas siguen en `draft`",
+            "Lo revisa `finance`",
+            "Decisión de Martin",
+            "Lo marcó la re-revisión docente",
+            "Las cinco dimensiones de M1U1",
+            "Sin fuente primaria ([huecos](../x.md))",
+            "y `context/` no registra ninguno",
+            "Regla vigente del borrador: una señal",
+            "| Dimensión (m2 u4) |",
+        ):
+            with self.subTest(phrase=phrase):
+                self.write(f"# Plan\n{phrase}")
+                self.assertTrue(
+                    any("texto de proceso" in e for e in self.result()["errors"])
+                )
+        self.write()
+        self.annex(body="Ver el reporte de esta ronda")
+        self.assertTrue(any("texto de proceso" in e for e in self.result()["errors"]))
+
+    def test_business_text_is_not_process_text(self):
+        self.concept("material/unidades/m1u1-x.md")
+        self.write(
+            "# Plan\nUna ronda de configuración, el mes anterior y la "
+            "[fuente](../material/unidades/m1u1-x.md) del CFO.[^m1u2]\n"
+            "<!-- ronda 11 -->\n\n[^m1u2]: Modelo de madurez.\n"
+            "Equipo: Gabriela T. · Martin V."
+        )
+        self.assertEqual(self.result()["errors"], [])
+
+    def test_process_text_cites_file_line(self):
+        self.write("# Plan\n\nVer esta ronda")
+        self.assertTrue(any("plan/slides.md:8:" in e for e in self.result()["errors"]))
+
     def test_empty_slide_rejected(self):
         self.write("# Portada\n---\n")
         self.assertTrue(self.result()["errors"])
@@ -500,6 +548,12 @@ class PlanCheckTests(unittest.TestCase):
         self.assertEqual(self.result()["errors"], [])
         self.write("# Deck\n[Anexo][missing]\n![Imagen](absent.png)")
         self.assertEqual(len(self.result()["errors"]), 2)
+
+    def test_adjacent_footnotes_are_not_reference_links(self):
+        self.write("# Deck\nDato.[^a][^b]\n\n[^a]: Fuente A\n[^b]: Fuente B")
+        self.assertEqual(self.result()["errors"], [])
+        self.write("# Deck\n[Anexo][missing][^a]\n\n[^a]: Fuente A")
+        self.assertEqual(len(self.result()["errors"]), 1)
 
     def test_same_document_anchor_and_escape(self):
         self.write("# Deck\n[Inicio](#deck)")

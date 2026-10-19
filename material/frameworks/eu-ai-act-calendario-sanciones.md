@@ -105,7 +105,7 @@ reportó la infracción; intencionalidad o negligencia; medidas de mitigación.
   el 3 % de la facturación mundial anual, no 15 M. Esto es distinto del cliente
   bancario grande, donde el mayor de los dos casi siempre son los 15 M o más.
 - La clasificación de PyME (Recomendación 2003/361/CE) depende de los datos
-  reales de Flexibility, que no van en el repo.
+  reales de Acme Labs, que no van en el repo.
 
 # Cautelas
 

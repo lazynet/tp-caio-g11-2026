@@ -26,7 +26,7 @@ Qué afirmación o decisión de las slides sustenta este anexo, en una o dos ora
 
 | Supuesto | Valor | Fuente o tipo |
 |---|---|---|
-| Costo por consulta humana | USD X | [Ficha](/context/ejemplo.md) o "supuesto del equipo" |
+| Costo por consulta humana | USD X | [Fuente](/context/ejemplo.md) o "supuesto del equipo" |
 | Volumen mensual | N consultas | ... |
 
 ## Evidencia

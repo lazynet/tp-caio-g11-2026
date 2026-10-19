@@ -40,7 +40,7 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-12T01:40:00Z }
   riesgo del Anexo III al 2027-12-02 y el del Anexo I al 2028-08-02
   ([AI Omnibus y SIGEN](/conceptos/m1u4-ai-omnibus-sigen.md)).
 * **SIGEN 197/2026** existe, pero aplica al Sector Público Nacional: no obliga a
-  Flexibility.
+  Acme Labs.
 * **CAIE** dice "más de 90 rasgos" pero enumera 86.
 * **AIMM:** el PDF es una elaboración independiente, no el informe de Gartner. Queda en
   `draft`.
@@ -51,7 +51,7 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-12T01:40:00Z }
   el desarrollo", más liviano que el "exige" del curso) se leyeron de una copia del
   DOUE y coinciden entre las fichas. Falta cotejarlos contra el ELI oficial de
   EUR-Lex, junto con las guidelines del 2026-07-20 y la fecha de los arts. 43 y 49.
-* **Alcance del AI Act sobre Flexibility:** decidir con el equipo si alcanza a sus
+* **Alcance del AI Act sobre Acme Labs:** decidir con el equipo si alcanza a sus
   clientes (art. 2.1.c).
 * **SIGEN 197/2026:** no se leyó el anexo.
 * **AIMM:** el informe de Gartner es de pago; sin acceso no se puede salir de `draft`.
