@@ -1,0 +1,66 @@
+name: Tarea del plan
+description: Registrá una tarea del Grupo 11 con responsable, resultado y criterios de cierre.
+title: "Tarea: "
+labels: [tarea, "estado:pendiente"]
+body:
+  - type: markdown
+    attributes:
+      value: Antes de abrir la tarea, buscá si ya existe. Para agregar un avance o una duda sobre una tarea existente, comentá en su issue.
+  - type: input
+    id: owner
+    attributes:
+      label: Responsable humano
+      description: Indicá quién coordina la tarea y completá Assignees si tiene acceso al repo.
+      placeholder: Nombre o usuario de GitHub
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Sección principal
+      options:
+        - Anexo A — Diagnóstico
+        - Anexo B — Arquitectura
+        - Anexo C — Gobierno y seguridad
+        - Anexo D — Personas y cultura
+        - Anexo E — Business case
+        - Anexo F — Roadmap y riesgo
+        - Defensa
+        - Material de la cursada
+        - Integración o herramientas del repo
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo y resultado esperado
+      description: Explicá qué hay que resolver y qué resultado permitirá revisarlo.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Archivos y evidencia de partida
+      description: Enlazá los archivos, fuentes o revisión que justifican la tarea.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de cierre
+      description: Indicá cómo se comprueba el resultado y quién debe revisarlo.
+      placeholder: "- [ ] Resultado observable y evidencia enlazada"
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias y decisiones pendientes
+      description: Enlazá otros issues y aclaraciones que condicionen el trabajo.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Datos privados
+      options:
+        - label: El texto y los adjuntos respetan la sección Datos privados de AGENTS.md.
+          required: true

@@ -7,10 +7,11 @@ Repo del Trabajo Integrador Final de la Diplomatura CAIO (UTN BA): un Plan
 Maestro del CAIO a 12 meses, entregado en un único PDF de menos de 10 MB: 10
 slides como máximo (incluyendo portada y equipo) más anexos.
 
-**Estado:** hay un borrador completo. El caso de trabajo es Acme Labs
-(software para fintech y bancos), la organización completa, con el OK de su CEO;
-falta que el equipo lo confirme. Ver
-[Pendientes del equipo](#pendientes-del-equipo).
+**Estado:** hay un borrador completo y el caso elegido es **Acme Labs**,
+confirmado por el equipo. El borrador propone la organización completa
+(IA en el producto y en la operación interna); ese alcance sigue por ratificar.
+Los [responsables](#responsables-del-equipo) están acordados y el seguimiento
+se hace en el [backlog de GitHub Issues](#backlog-y-seguimiento).
 
 > **El repo es público.** Ningún dato interno de ninguna organización entra acá:
 > ver [Datos privados](#datos-privados) antes de escribir nada.
@@ -145,7 +146,7 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 |---|---|---|
 | `plan/slides.md` | las 10 slides, fuente única del deck | `caio`, único editor; los demás le proponen |
 | `plan/annexes/` | un anexo por tema (`NN-tema.md`, copiado de `_template.md`): la evidencia que sostiene cada slide | el agente dueño del tema (`owner:`) |
-| `context/` | hechos **públicos** o anonimizados del caso y supuestos, uno por archivo, con su fuente; vacío hasta que elijamos caso | — |
+| `context/` | hechos **públicos** o anonimizados de Acme Labs y supuestos, uno por archivo, con su fuente y estado de revisión | — |
 | `private/` | datos internos reales — **solo local, nunca se versiona** | quien tenga el acceso |
 | `material/` | una ficha por unidad y por framework de la cursada, y qué sección del plan respalda cada uno | — |
 | `defense/` | storyline, objeciones, evidencia | `caio`; `board` aporta desde `reviews/` |
@@ -153,8 +154,29 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 | `reviews/` | revisiones del board y del peer review, con fecha | `board` |
 | `out/` | decks generados y `entrega.pdf` — **no se versiona ni se edita** | el script |
 
-El agente dueño no es el responsable humano: quién del grupo se hace cargo de
-cada sección se decide cuando elijamos caso.
+El agente dueño organiza la edición; el responsable humano coordina la revisión
+y la defensa de su sección. El reparto acordado está en la tabla siguiente.
+
+## Responsables del equipo
+
+| Actividad | Responsable humano | Fuente | Tarea de seguimiento |
+|---|---|---|---|
+| Diagnóstico: leerlo y defenderlo | Martín | [Anexo A](plan/annexes/01-diagnostico.md) | [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15) |
+| Arquitectura | Nico | [Anexo B](plan/annexes/02-arquitectura.md) | [#16](https://github.com/lazynet/tp-caio-g11-2026/issues/16) |
+| Gobierno y seguridad | Rafa | [Anexo C](plan/annexes/03-gobierno-seguridad.md) | [#17](https://github.com/lazynet/tp-caio-g11-2026/issues/17) |
+| Personas y cultura | Pablo | [Anexo D](plan/annexes/04-personas-cultura.md) | [#18](https://github.com/lazynet/tp-caio-g11-2026/issues/18) |
+| Business case | Gabriela | [Anexo E](plan/annexes/05-business-case.md) | [#19](https://github.com/lazynet/tp-caio-g11-2026/issues/19) |
+| Roadmap y riesgo | Maxi | [Anexo F](plan/annexes/06-roadmap-riesgo.md) | [#20](https://github.com/lazynet/tp-caio-g11-2026/issues/20) |
+| Defensa: storyline, objeciones y quién presenta cada slide | Lucho | [Defensa](defense/) | [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21) |
+| Verificar el material de la cursada | Eduardo | [Índice del material](material/index.md) | [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22) |
+
+Estos responsables son del TP: no reemplazan a las autoridades de Acme Labs
+que deben validar datos, liberar agendas, aceptar riesgos o aprobar presupuesto.
+El reparto de slides se acuerda en la tarea de defensa.
+
+Rafa, Maxi y Eduardo tienen tarea y responsabilidad registradas, pero todavía
+no figuran como asignables en GitHub. Cuando tengan acceso, se completa el
+campo **Assignees** de sus issues; hasta entonces, el responsable figura en el texto.
 
 `context/`, `material/` y `defense/evidence/` siguen el formato abierto
 [OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md):
@@ -209,9 +231,9 @@ No las copies a otras carpetas para "tu" herramienta: se desincronizan.
 
 ## Cómo trabajamos
 
-1. **Una sección, un dueño.** Antes de arrancar un anexo, avisá en el grupo cuál
-   tomás. Cada anexo declara su agente dueño (`owner:`) arriba; las slides las
-   edita solo `caio`, y los demás le proponen cambios.
+1. **Una sección, un dueño.** Coordiná con el responsable humano y registrá
+   el trabajo en su issue. Cada anexo declara su agente dueño (`owner:`) arriba;
+   las slides las edita solo `caio`, y los demás le proponen cambios.
 2. **Todo número tiene fuente.** Si es un supuesto, se marca como supuesto. Una
    cifra entra a la entrega solo si una persona la verificó contra la fuente.
 3. **Nada interno de ninguna organización en el repo.** Ver [Datos privados](#datos-privados).
@@ -226,8 +248,8 @@ No las copies a otras carpetas para "tu" herramienta: se desincronizan.
    `main`: trabajá en una rama y abrí un PR. Cada PR le pide review a Martin
    automáticamente (`.github/CODEOWNERS`) y no se puede mergear sin su
    aprobación. Antes de pedirla, esperá que pasen los chequeos de GitHub
-   Actions. Si no sabés cómo, pedíselo a tu agente: *"commiteá esto en una rama
-   nueva y abrí un PR"*.
+   Actions. Enlazá el issue que resuelve y su evidencia de cierre. Si no sabés
+   cómo, pedíselo a tu agente: *"commiteá esto en una rama nueva y abrí un PR"*.
 
 ## Datos privados
 
@@ -384,8 +406,9 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
   archivos o carpetas de `context/`, `material/` y `defense/evidence/`: pasá
   las fichas que de verdad cita la entrega. El ejemplo de arriba es una ficha
   real y hoy falla porque sigue en `draft`.
-- Hoy, en setup, `okf-check.sh --delivery` sin paths y `plan-check.py --mode
-  delivery` **tienen que fallar**: si pasan, algo está mal.
+- El borrador todavía tiene fichas sin verificación humana. Los chequeos de
+  entrega rechazan las fichas sin revisión declarada y los pendientes del deck;
+  no se resuelve cambiando etiquetas sin revisar las fuentes.
 - Los chequeos validan estructura y que la revisión humana esté declarada. No
   prueban que una cifra sea cierta ni que el plan esté completo: eso lo revisan
   personas.
@@ -401,11 +424,108 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 
 ## Pendientes del equipo
 
-- [x] Dónde colaboramos: GitHub, `lazynet/tp-caio-g11-2026` (público hasta que estemos todos)
-- [x] Diplomatura, plan a 12 meses y tope de 10 slides incluyendo portada y equipo
-- [ ] Caso: confirmar Acme Labs (propuesto, con el OK de su CEO)
-- [ ] Alcance: confirmar la organización completa (IA en el producto y en la operación interna)
-- [ ] Verificar las fichas de `context/` contra su fuente (`status: verified`)
-- [ ] Responsables humanos de cada sección
-- [x] Formato de entrega: un único PDF de menos de 10 MB con slides y anexos (ver "Generar el deck")
-- [ ] Material de M3U4 (cierre y defensa del Plan Maestro), que no tenemos
+Ya están acordados el caso Acme Labs, los ocho responsables y el formato de
+entrega. Falta ratificar el alcance propuesto, verificar las fuentes y resolver
+las revisiones de cada sección antes del peer review.
+
+La ratificación de alcance se sigue en [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15).
+La verificación de datos del caso se coordina con los responsables de A–F;
+la del material y sus faltantes, incluido M3U4, en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
+
+## Backlog y seguimiento
+
+**GitHub Issues es el backlog del equipo.** Este README enlaza las tareas;
+el estado y las decisiones se actualizan en cada issue, sin duplicar una lista
+de pendientes en otro archivo.
+
+- [Todas las tareas abiertas](https://github.com/lazynet/tp-caio-g11-2026/issues?q=is%3Aissue+is%3Aopen+-label%3Aacceso).
+- [Mis tareas](https://github.com/lazynet/tp-caio-g11-2026/issues?q=is%3Aissue+is%3Aopen+assignee%3A%40me+-label%3Aacceso).
+- [Tareas cerradas](https://github.com/lazynet/tp-caio-g11-2026/issues?q=is%3Aissue+is%3Aclosed+-label%3Aacceso).
+- [Cargar un issue con los formularios del equipo](https://github.com/lazynet/tp-caio-g11-2026/issues/new/choose).
+
+Las ocho tareas de revisión están en [Responsables del equipo](#responsables-del-equipo).
+Los comentarios de Gabriela se siguen por separado para discutir cada propuesta:
+
+| Issue | Qué hay que resolver | Coordina |
+|---|---|---|
+| [#11](https://github.com/lazynet/tp-caio-g11-2026/issues/11) | Explicitar el valor estratégico de gobierno, seguridad y medición | Gabriela |
+| [#12](https://github.com/lazynet/tp-caio-g11-2026/issues/12) | Diseñar una exploración comercial gradual antes de decidir un MVP | Gabriela |
+| [#13](https://github.com/lazynet/tp-caio-g11-2026/issues/13) | Validar capacidad real y ajustar presupuesto y formación | Gabriela |
+| [#14](https://github.com/lazynet/tp-caio-g11-2026/issues/14) | Definir una validación inicial antes de liberar el esfuerzo completo | Gabriela |
+
+Orden propuesto: resolver capacidad y validación inicial (#13 y #14), trabajar
+el relato estratégico (#11) en paralelo y encajar la exploración comercial (#12)
+en el esfuerzo acordado. Es una propuesta de secuencia, no una aprobación de cambios.
+
+### Estados
+
+Cada issue abierto del backlog lleva **una sola** etiqueta de estado. Al moverlo, sacá la
+anterior y agregá la nueva; no se considera iniciado solo por estar asignado.
+Los pedidos de acceso al equipo se siguen aparte, con la etiqueta `acceso`.
+
+| Estado | Cuándo usarlo | Ver tareas |
+|---|---|---|
+| `estado:pendiente` | La tarea está registrada y todavía no empezó | [Pendientes](https://github.com/lazynet/tp-caio-g11-2026/issues?q=is%3Aissue+is%3Aopen+label%3A%22estado%3Apendiente%22) |
+| `estado:en-curso` | El responsable está trabajando y registra avances | [En curso](https://github.com/lazynet/tp-caio-g11-2026/issues?q=is%3Aissue+is%3Aopen+label%3A%22estado%3Aen-curso%22) |
+| `estado:en-revision` | Hay un resultado enlazado, pendiente de feedback | [En revisión](https://github.com/lazynet/tp-caio-g11-2026/issues?q=is%3Aissue+is%3Aopen+label%3A%22estado%3Aen-revision%22) |
+| `estado:bloqueada` | No puede avanzar: el issue explica qué falta y cómo destrabarlo | [Bloqueadas](https://github.com/lazynet/tp-caio-g11-2026/issues?q=is%3Aissue+is%3Aopen+label%3A%22estado%3Abloqueada%22) |
+| Cerrado | Cumple los criterios con evidencia y feedback, o se descartó con una decisión registrada | [Cerradas](https://github.com/lazynet/tp-caio-g11-2026/issues?q=is%3Aissue+is%3Aclosed+-label%3Aacceso) |
+
+### Cómo seguir una tarea
+
+1. Abrí el issue, confirmá el responsable y revisá objetivo, archivos,
+   dependencias y criterios de cierre. Si no podés asignarlo, dejá el nombre en el texto.
+2. Al empezar, pasalo a `estado:en-curso`. Comentá avances, dudas y decisiones;
+   lo que se acuerde por WhatsApp se registra ahí con su autor y contexto.
+3. Enlazá el resultado: conclusiones de revisión, evidencia o un PR. Si una tarea
+   es grande, abrí issues específicos y enlazalos desde la tarea de sección.
+4. Pasalo a `estado:en-revision` y pedí feedback al responsable del tema. Un PR
+   mergeado puede cerrar una subtarea, pero no prueba por sí solo toda la revisión.
+5. Cerrá cuando se cumplan sus criterios, con un comentario que resuma resultado,
+   evidencia y feedback humano. Quitá la etiqueta de estado al cerrarlo.
+
+Una propuesta descartada también se cierra, dejando el motivo y la decisión
+humana. Si el resultado requiere cambios en varias secciones, la tarea queda
+abierta hasta enlazar su integración o registrar el seguimiento pendiente.
+
+### Cómo cargar un issue propio
+
+No necesitás usar git ni un agente: podés hacerlo desde la web de GitHub.
+
+1. Entrá al repo, abrí **Issues** y elegí **New issue**. Antes de crear uno,
+   buscá si el tema ya está abierto: si solo agregás una duda o un avance,
+   comentá en el issue existente.
+2. Elegí el formulario según lo que necesitás:
+
+   | Formulario | Para qué sirve |
+   |---|---|
+   | [Tarea del plan](https://github.com/lazynet/tp-caio-g11-2026/issues/new?template=task.yml) | Registrar trabajo concreto, con resultado y criterios de cierre |
+   | [Propuesta de cambio](https://github.com/lazynet/tp-caio-g11-2026/issues/new?template=proposal.yml) | Discutir una observación o mejora antes de modificar el plan |
+   | [Verificación de fuentes](https://github.com/lazynet/tp-caio-g11-2026/issues/new?template=verification.yml) | Cotejar una cita, cifra o supuesto, o registrar material faltante |
+   | Sumarme al equipo | Pedir acceso al repo; no se usa para tareas del plan |
+
+3. Completá el título con una acción concreta. Por ejemplo: «Revisar las horas
+   del básico del anexo D». El formulario te pide responsable, contexto,
+   archivos o fuentes y qué tiene que pasar para cerrar.
+4. En **Assignees**, elegí quién coordina. Si cargás una tarea tuya, elegí tu
+   usuario. Si no podés editar ese campo o la persona no aparece, dejá su nombre
+   en el formulario y avisá en el issue para completar la asignación.
+5. Enlazá la tarea de sección y los issues relacionados usando `#` y el número
+   (por ejemplo, `#18` para Personas). Las propuestas no quedan aprobadas por
+   abrir el issue: registrá quién debe revisarlas.
+6. Revisá que el texto y los adjuntos respeten [Datos privados](#datos-privados)
+   y publicá con **Submit new issue**. Los tres formularios de trabajo agregan
+   `estado:pendiente`; pasalo a en curso cuando efectivamente empieces.
+
+Para seguirlo, usá **Comment** en el mismo issue. Dejá qué avanzó, qué falta y
+el link a la evidencia o al PR; si traés un acuerdo de WhatsApp, atribuíselo
+a quien lo hizo y registrá la decisión, sin copiar datos privados.
+
+Ejemplo de avance: «Revisé el básico de D y propongo separar uso seguro de
+práctica por herramienta. Falta acordar la población con Pablo. La comparación
+de horas está en el PR enlazado». Esto registra una propuesta, no un cambio aprobado.
+
+Para terminar, cumplí los criterios y dejá el feedback humano y el resultado.
+Usá **Close issue** y quitá la etiqueta de estado; si se descarta una propuesta,
+usá **Close as not planned** con el motivo. Si no tenés permiso para cerrar o
+cambiar etiquetas, pedilo en un comentario y dejá explícito el estado real.

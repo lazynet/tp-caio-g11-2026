@@ -1,0 +1,60 @@
+name: Verificación de fuentes
+description: Registrá una fuente por revisar, una cita dudosa o material faltante.
+title: "Verificación: "
+labels: [documentation, "estado:pendiente"]
+body:
+  - type: markdown
+    attributes:
+      value: Usá este formulario para seguir la revisión de una fuente o un faltante. Abrir o cerrar el issue no cambia por sí solo el estado de verificación de una ficha.
+  - type: input
+    id: owner
+    attributes:
+      label: Responsable de la revisión
+      description: Indicá quién hará o coordinará el cotejo con la fuente. Completá Assignees si tiene acceso.
+    validations:
+      required: true
+  - type: dropdown
+    id: corpus
+    attributes:
+      label: Qué hay que revisar
+      options:
+        - Material de la cursada
+        - Hechos o supuestos del caso
+        - Evidencia de defensa
+        - Cita o cifra de slides o anexos
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Archivo y afirmación por verificar
+      description: Enlazá la ficha o sección y precisá qué cifra, cita, supuesto o faltante necesita revisión.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Fuente y acceso
+      description: Enlazá solo fuentes públicas o indicá que la fuente se consulta en privado. Si falta o no tenés acceso, registralo sin publicar rutas, enlaces ni extractos internos.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Qué decisión o sección depende de esto
+      description: Enlazá la tarea principal e indicá qué no puede sostenerse hasta resolver la revisión.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de cierre
+      description: Indicá qué cotejo y evidencia permitirán cerrar. Solo quien hizo la revisión humana declara verified con fecha y alcance; un supuesto revisado sigue siendo supuesto.
+      placeholder: "- [ ] Registrar resultado, alcance revisado, correcciones y faltantes"
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Datos privados
+      options:
+        - label: El texto y los adjuntos respetan la sección Datos privados de AGENTS.md.
+          required: true
