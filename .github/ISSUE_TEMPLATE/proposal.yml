@@ -1,0 +1,56 @@
+name: Propuesta de cambio
+description: Proponé una mejora del plan para discutirla antes de editar los anexos.
+title: "Propuesta: "
+labels: [enhancement, "estado:pendiente"]
+body:
+  - type: markdown
+    attributes:
+      value: Una propuesta abre una discusión; no implica aprobación. Buscá primero si ya hay un issue sobre el tema y enlazá la tarea de sección correspondiente.
+  - type: input
+    id: owner
+    attributes:
+      label: Quién propone y quién coordina
+      description: Si traés un comentario de otra persona, atribuíselo y aclará quién sigue el tema. Completá Assignees si tiene acceso.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema y efecto sobre el plan
+      description: Explicá qué observaste y por qué conviene revisarlo.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Archivos y evidencia
+      description: Enlazá secciones, fuentes o issues. Distinguí evidencia, supuestos y opiniones; no pegues datos privados.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propuesta y alternativas
+      description: Describí el cambio que recomendás y las alternativas relevantes. Si todavía no tenés solución, dejalo explícito.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Dependencias, esfuerzo y riesgos
+      description: Indicá qué otras secciones afecta y qué recursos o decisiones exige. Lo desconocido queda pendiente; no se inventa un costo.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Decisión y criterios de cierre
+      description: Indicá quién debe revisar la propuesta y qué evidencia permite aceptarla o descartarla. Si se acepta, enlazá su implementación antes de cerrar.
+      placeholder: "- [ ] Decisión del equipo registrada con su motivo"
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Datos privados
+      options:
+        - label: El texto y los adjuntos respetan la sección Datos privados de AGENTS.md.
+          required: true
