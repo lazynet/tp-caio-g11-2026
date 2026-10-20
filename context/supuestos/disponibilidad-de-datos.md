@@ -32,5 +32,8 @@ En los 12 meses del plan, los casos de IA se alimentan de:
 
 # Cómo verificarlo
 
-Inventario de fuentes de datos internas con dueño, calidad y clasificación, como
-primer entregable de la fase de diagnóstico.
+Revisar el [inventario existente](/hechos/inventario-y-distribucion-de-datos.md)
+como primer entregable de la fase de diagnóstico: contrastar su vigencia,
+cobertura, responsables, clasificación y calidad documentada para las fuentes
+elegibles de los casos de IA. Completar las brechas sobre ese inventario y
+verificar accesos e integración entre los sistemas que contienen los datos.

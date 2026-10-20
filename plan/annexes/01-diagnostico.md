@@ -50,14 +50,31 @@ por nivel) no se hizo. Responsable de validar el puntaje: a designar.
 | Dimensión | Propuesta | Evidencia principal | Brecha frente al nivel 3 |
 |---|---|---|---|
 | Estrategia y liderazgo | 2 | El escenario parte sin estrategia de IA formal aprobada ([supuesto](../../context/supuestos/estrategia-de-ia-de-partida.md)). Hay iniciativas y objetivos propuestos: propuestas al Directorio y un borrador de OKR 2027 con eficiencia con IA ([OKR](../../context/hechos/okrs-y-objetivos.md), [IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). El 2 refleja ese avance parcial; no se deriva solo de la ausencia de aprobación | Estrategia de IA aprobada, con dueño y atada a resultados del negocio |
-| Datos e infraestructura | 2 | La infraestructura está cerca del 3: AWS en varias cuentas, Kubernetes, GitOps, observabilidad ([stack](../../context/hechos/stack-y-plataforma.md)). Los datos, no: sin inventario formal, y los datos productivos de clientes no se pueden usar ([datos](../../context/supuestos/disponibilidad-de-datos.md)) | Inventario de datos con dueño y calidad, y una capa común para servir casos de IA |
-| Talento y cultura | 2 (Tecnología 3, Operaciones 1) | Tecnología: ~7 de cada 10 usan el agente de código. Operaciones: ~1 de cada 10, en buena parte porque el cliente fija las herramientas ([uso de IA](../../context/hechos/uso-ia-interno.md)). El piloto de abril (n=12, autoseleccionado) dio NPS +42, pero solo el 17% completó los cursos ([piloto](../../context/hechos/encuesta-y-pilotos-ia.md)). Capacidades críticas en pocas personas ([estructura](../../context/hechos/tamano-y-estructura.md)) | Capacitación por rol que se complete y suplentes para los roles críticos |
-| Gobernanza y ética | 2 | Política de uso con clasificación en cuatro niveles y contrato para agentes de código, en borrador según el último registro, del 21 de abril de 2026; no hay constancia posterior de su ratificación, y su estado actual se confirma antes de pedirla, sin matriz de clientes, sin inventario de casos ni registro de riesgos ([gobierno](../../context/hechos/gobierno-y-politica-ia.md)). ISO/IEC 27001 de la organización, sin controles específicos de IA verificados ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) | Política ratificada, inventario, registro de riesgos y comité operando |
-| Adopción y valor | 1 en producto, 2 en interno | Sin IA productiva documentada en la oferta ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). En lo interno hay uso alto en Tecnología y un piloto con criterios cumplidos, pero sin línea de base de productividad ([productividad](../../context/supuestos/ganancia-de-productividad.md)) | Un caso en producción con valor medido contra una línea de base |
+| Datos e infraestructura | 2 provisional | Hay AWS en varias cuentas, Kubernetes, GitOps y observabilidad ([stack](../../context/hechos/stack-y-plataforma.md)). Existe inventario de datos con responsables, clasificación y calidad documentada; las fuentes están distribuidas entre sistemas ([inventario](../../context/hechos/inventario-y-distribucion-de-datos.md)). Falta contrastar cobertura, accesos, integración y gobierno operativo para los casos de IA | Reutilizar y completar el inventario existente; demostrar acceso común, gobierno y calidad adecuados a las fuentes elegibles |
+| Talento y cultura | 2 provisional | No hay programa de formación en IA por rol con seguimiento de finalización ([formación](../../context/hechos/formacion-ia-por-rol.md)). Hay uso de herramientas y experiencias de aprendizaje: el piloto de abril (n=12, autoseleccionado) incluyó cursos, con 17% de finalización ([piloto](../../context/hechos/encuesta-y-pilotos-ia.md)). La adopción del agente de código difiere entre áreas y está condicionada por los clientes ([uso de IA](../../context/hechos/uso-ia-interno.md)); no prueba por sí sola madurez cultural ni competencias | Programa por rol con seguimiento de finalización y aprendizaje aplicado; suplentes para roles críticos, sujetos al diagnóstico de capacidades |
+| Gobernanza y ética | 2 provisional | Política de uso de IA aprobada según el responsable del caso; faltan revisar la documentación de aprobación y el estado actual de la matriz de clientes, el inventario de casos, el registro de riesgos y la operación del Council ([gobierno](../../context/hechos/gobierno-y-politica-ia.md)). La certificación de seguridad de la organización no demuestra controles específicos de IA ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) | Aplicación de la política y gobierno operativo con inventario de casos, registro de riesgos, matriz y comité funcionando con evidencia |
+| Adopción y valor | 1 en producto, 2 en interno, provisionales | No se documenta IA productiva en la oferta; el harness confirmado no se entrega ni comercializa a clientes ([oferta](../../context/hechos/ia-en-producto-y-oferta.md)). Hay herramientas de harness para el SDLC de uso exclusivamente interno, sin mediciones de tiempo, calidad o costo contra una línea de base para evaluar su impacto, según el responsable del caso ([uso interno](../../context/hechos/uso-ia-interno.md)) | Medir valor y calidad contra una base en los procesos internos; para producto, evidencia de una funcionalidad u oferta de IA con valor medido |
 
-No se promedia: un promedio de 2 esconde que la brecha más grande está en el
-producto que se vende y en Operaciones. Las fuentes no permiten afirmar ausencia
-universal de toda medición: lo que falta es valor incremental medido contra una base.
+No se promedian dimensiones ni frentes: en Adopción y valor se conserva la
+diferencia entre producto e interno. Las fuentes no permiten afirmar ausencia
+universal de toda medición: falta evidencia de valor incremental medido contra una base.
+
+El harness del SDLC se clasifica en el frente interno. Su existencia no prueba
+por sí sola valor incremental ni eleva el puntaje de producto; otros casos de
+IA en la oferta requieren evidencia propia.
+
+El harness existente integra el punto de partida de la medición prospectiva.
+La base y el protocolo permiten contrastar mejoras posteriores; no se atribuyen
+beneficios retrospectivos sin una comparación válida.
+
+En Talento y cultura, el 2 refleja uso y aprendizaje parciales, sin programa por
+rol con seguimiento. No se asignan niveles de madurez por área a partir de la
+telemetría de una herramienta; se contrastan competencias y prácticas culturales.
+
+En Datos e infraestructura, la distribución entre sistemas no determina por sí
+sola el nivel de madurez. El 2 se conserva como hipótesis provisional hasta
+contrastar la plataforma y el gobierno operativo; el inventario existente es un
+avance y su cobertura para los casos de IA sigue por verificar.
 
 ### Perímetro por conciliar antes de liberar M1-M3
 
@@ -113,10 +130,13 @@ continuar, reducir/resecuenciar o detener antes de ejecutar M1-M3.
 
 Siguiendo el método de diagnóstico de madurez (paso 6: dos o tres brechas críticas), el CAIO propone:
 
-1. **Gobernanza:** ratificar la política y armar la matriz de clientes. Es la
-   condición para cualquier caso de IA en el producto ([Anexo C](03-gobierno-seguridad.md)).
-2. **Datos y medición:** inventario de datos y línea de base de productividad,
-   incidentes y costo. Sin línea de base no hay gates ([Anexo B](02-arquitectura.md)).
+1. **Gobernanza:** verificar el alcance y la aplicación de la política aprobada,
+   revisar la matriz de clientes y completar sus brechas antes de habilitar casos
+   de IA en el producto ([Anexo C](03-gobierno-seguridad.md)).
+2. **Datos y medición:** revisar y completar el inventario existente para las
+   fuentes elegibles, verificar su acceso e integración y producir la línea de
+   base de productividad, incidentes y costo. Sin línea de base no hay gates
+   ([Anexo B](02-arquitectura.md)).
 3. **Adopción y valor:** medir capacidad con calidad contra la base y, en el
    producto, observar el problema del asistente de integración (tiempo a la
    primera integración exitosa) antes del mes 6. Sin problema, base y señal
@@ -141,9 +161,10 @@ tiene base sólida sin estrategia y datos confiables.
 - **Usar las cinco dimensiones del diagnóstico de madurez** y no la variante
   extendida (seis ejes de NovaGob y AIMM): son las del método base y AIMM sigue
   sin validar ([fuentes faltantes](../../material/huecos.md)). Reversible.
-- **Puntuar producto e interno por separado** en Adopción y valor, y Tecnología y
-  Operaciones por separado en Talento. Alternativa descartada: un solo número por
-  dimensión, que esconde dónde está la brecha. Reversible.
+- **Puntuar producto e interno por separado** en Adopción y valor. En Talento,
+  distinguir competencias y prácticas por área durante la validación, sin
+  equiparar uso de una herramienta con madurez. Alternativa descartada: derivar
+  subpuntajes de talento solo de la telemetría de adopción. Reversible.
 - **Financiar la validación antes de liberar M1-M3:** el primer hito confirma o
   corrige los puntajes con evidencia y conserva los faltantes como hipótesis.
   Quien produce, quien verifica y quien firma: personas distintas, a designar.
@@ -153,7 +174,8 @@ tiene base sólida sin estrategia y datos confiables.
 ## Cautelas
 
 - Es un diagnóstico de escritorio, sin entrevistas: se toma como hipótesis.
-- El estado de la política es al 2026-04-21; no hay registro posterior.
+- La aprobación de la política fue informada por el responsable del caso;
+  versión, fecha, autoridad y respaldo documental siguen por revisar.
 - Los niveles 2 y 4 no están descritos en el método; el 2 se usa como intermedio.
 - Las cifras de este anexo son estimadas y se validan contra fuentes internas
   durante la validación autorizada, antes de liberar la ejecución de M1-M3.

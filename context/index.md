@@ -12,13 +12,17 @@ datos reales viven en `private/`.
 
 Hechos sobre el caso en los que se apoya el plan (`type: Hecho`), uno por archivo.
 
+* [Formación en IA por rol al inicio del plan](/hechos/formacion-ia-por-rol.md) - El responsable del caso informa que no hay un programa de formación en IA por rol con seguimiento de finalización; los cursos del piloto previo no equivalen a ese programa.
+
+* [Inventario y distribución de datos](/hechos/inventario-y-distribucion-de-datos.md) - El responsable del caso informa que existe un inventario de datos con responsables, clasificación y calidad documentada, y que las fuentes están distribuidas entre distintos sistemas.
+
 * [Capacidad, utilización y bench](/hechos/capacidad-y-utilizacion.md) - La utilización facturable ronda el 83% con bench casi nulo: no hay capacidad ociosa, así que cualquier iniciativa de IA compite con horas facturables.
 * [Cartera de clientes y concentración](/hechos/cartera-y-concentracion.md) - La facturación está muy concentrada: el cliente principal pesa entre 40% y 50%, los dos primeros cerca del 70% y los cinco primeros más del 90%, contra una meta interna de menos del 30% por cliente.
 * [Costos de tecnología e IA](/hechos/costos-tecnologia-e-ia.md) - El gasto de tecnología se duplicó entre febrero y septiembre de 2026 y pasó de cerca de 2% a 4% de la facturación; la nube es la mayor parte, y el consumo real de IA equivale a unas doce veces lo que se paga por suscripción.
 * [Encuesta y pilotos internos de IA](/hechos/encuesta-y-pilotos-ia.md) - El piloto de IA de abril de 2026 superó sus criterios de valor y falló en capacitación: alta frecuencia de uso y NPS de +42, pero la mitad no hizo ningún curso y casi nadie usa ejemplos al pedir.
 * [Estructura de ingresos por línea de negocio](/hechos/estructura-de-ingresos.md) - Cerca del 40% de la facturación sale de un producto operado bajo suscripción para un solo cliente y otro tanto de staffing; el margen más alto está en el soporte a la plataforma propia.
-* [Gobierno y política de IA existentes](/hechos/gobierno-y-politica-ia.md) - Acme Labs tiene una política de uso aceptable de IA con clasificación de datos y matriz de herramientas, pero sigue en borrador y con pendientes clave, como la matriz de restricciones de clientes.
-* [IA en el producto y en la oferta a clientes](/hechos/ia-en-producto-y-oferta.md) - Acme Labs no tiene hoy IA en producción dentro de lo que vende; su posicionamiento en IA está en evaluación y depende de los productos propios.
+* [Gobierno y política de IA existentes](/hechos/gobierno-y-politica-ia.md) - Acme Labs tiene una política de uso aceptable de IA aprobada, según el responsable del caso; la aprobación no acredita la implementación de controles ni actualiza por sí sola los pendientes del registro de abril.
+* [IA en el producto y en la oferta a clientes](/hechos/ia-en-producto-y-oferta.md) - No se documenta IA en producción en la oferta a clientes; las herramientas de harness para el SDLC confirmadas corresponden al uso interno.
 * [Qué hace Acme Labs y para quién](/hechos/oferta-y-segmentos.md) - Acme Labs vende una plataforma de funcionalidades financieras y equipos de desarrollo a bancos, fintechs y grandes empresas, con oficinas en dos países de Latinoamérica.
 * [OKR y objetivos de la organización y de Tecnología](/hechos/okrs-y-objetivos.md) - Los OKR de la empresa son financieros y comerciales; Tecnología prepara para 2027 objetivos de productos recurrentes, eficiencia con IA y una base técnica segura.
 * [Regulación argentina que pesa sobre los clientes financieros](/hechos/regulacion-clientes-financieros.md) - Los bancos y proveedores de servicios de pago clientes de Acme Labs están obligados por el BCRA a gobernar el uso de IA propio y de terceros, y por ley a guardar secreto financiero y proteger datos personales.
@@ -26,7 +30,7 @@ Hechos sobre el caso en los que se apoya el plan (`type: Hecho`), uno por archiv
 * [Situación económica 2026](/hechos/situacion-economica.md) - La facturación creció cerca de 35% entre enero y agosto de 2026, con margen EBITDA de 21-30% mensual.
 * [Stack y plataforma de delivery](/hechos/stack-y-plataforma.md) - Acme Labs desarrolla sobre Node/TypeScript, Java y Python, despliega en AWS con Kubernetes y GitOps, y gestiona el trabajo en GitHub y en la suite de Atlassian.
 * [Tamaño y estructura de la organización](/hechos/tamano-y-estructura.md) - Acme Labs tiene entre 60 y 70 personas, con un modelo mixto de nómina y contractors, y cerca del 80% en Operaciones y Tecnología.
-* [Uso actual de IA en la operación interna](/hechos/uso-ia-interno.md) - Acme Labs usa tres herramientas de IA generativa con licencia corporativa; la adopción es alta en Tecnología y baja en Operaciones y en las áreas de staff.
+* [Uso actual de IA en la operación interna](/hechos/uso-ia-interno.md) - Acme Labs usa herramientas de IA corporativas y un harness del SDLC exclusivamente interno; no tiene mediciones contra una línea de base para evaluar el impacto de ese harness, según el responsable del caso.
 
 # Supuestos
 

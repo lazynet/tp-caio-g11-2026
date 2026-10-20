@@ -70,14 +70,27 @@ mapean los siete componentes del harness
 ([fuente](../../material/conceptos/harness-agente-modelo-mas-harness.md)) a lo que
 Acme Labs ya tiene y a lo que falta.
 
+**Harness de SDLC existente.** El punto de partida incluye herramientas de harness
+para SDLC de uso exclusivamente interno: no se entregan ni comercializan a clientes
+([confirmación anonimizada](../../context/hechos/uso-ia-interno.md)).
+
+Su cobertura, funciones, estado operativo, controles, contexto y memoria, métricas
+y ahorro siguen sin verificar; se relevan antes de decidir qué reutilizar o ampliar.
+
+La existencia del harness de SDLC no demuestra que ya estén cubiertas las capacidades
+del harness central, gateway o plataforma de casos propios previstos.
+
+Se contrasta qué reutilizar o ampliar antes de sumar trabajo o presupuesto;
+su existencia no autoriza reconstruirlo automáticamente.
+
 | Componente | Estado objetivo | Punto de partida |
 |---|---|---|
 | Modelos y gateway | Capa única con ≥ 2 proveedores detrás y registro de uso y costo. Enruta por clasificación de datos y por cliente todos los casos propios; el agente de código, solo si su régimen comercial lo permite (ver "Política de ruteo") | Sin gateway (supuesto); herramientas por suscripción |
-| Contexto y memoria | Working set con presupuesto; si no entra, falla en voz alta; memoria externa versionada; retrieval con metadata (vigente, fuente, nivel, cliente) | No hay diseño de contexto formal |
-| Datos | Inventario con dueño, calidad y nivel; data contracts en las fuentes que alimentan casos ([fuente](../../material/conceptos/m1u3-data-contracts.md)); datos sintéticos donde no se puede usar el real | Fuentes internas disponibles, sin inventario |
+| Contexto y memoria | Working set con presupuesto; si no entra, falla en voz alta; memoria externa versionada; retrieval con metadata (vigente, fuente, nivel, cliente) | Diseño de contexto y memoria sin verificar, incluido el del harness interno de SDLC |
+| Datos | Revisar y ampliar el inventario existente para las fuentes elegibles; data contracts en las fuentes que alimenten casos ([fuente](../../material/conceptos/m1u3-data-contracts.md)); datos sintéticos donde no se puede usar el real | Existe inventario con responsables, clasificación y calidad documentada; datos distribuidos entre sistemas. Cobertura, vigencia, integración y gobierno operativo común no confirmados ([confirmación anonimizada, sin validación documental](../../context/hechos/inventario-y-distribucion-de-datos.md)) |
 | Herramientas (MCP) | Lista cerrada y aprobada; salida resumida con id, el dato nunca es una orden | Existe contrato de agentes de código con MCP aprobados ([fuente](../../context/hechos/gobierno-y-politica-ia.md)) |
 | Ejecución y aislamiento | Un tenant = cuenta AWS + namespace + índice + claves propias; cero contexto compartido entre clientes | Ya hay cuentas AWS separadas por proyecto ([fuente](../../context/hechos/stack-y-plataforma.md)) |
-| Guardrails y auditoría | Nivel de autonomía por caso (cinco niveles, de "sin IA" a "autónomo dentro de límites"; escala pedagógica, no estándar: [fuente](../../material/conceptos/m1u4-escala-autonomia-l0-l4.md)); gate humano antes de efecto irreversible; enmascarado de PII en inferencia ([fuente](../../material/conceptos/m1u3-anonimizacion-inferencia.md)) | Política en borrador, sin controles específicos de IA verificados ([fuente](../../context/hechos/seguridad-y-certificaciones.md)) |
+| Guardrails y auditoría | Nivel de autonomía por caso (cinco niveles, de "sin IA" a "autónomo dentro de límites"; escala pedagógica, no estándar: [fuente](../../material/conceptos/m1u4-escala-autonomia-l0-l4.md)); gate humano antes de efecto irreversible; enmascarado de PII en inferencia ([fuente](../../material/conceptos/m1u3-anonimizacion-inferencia.md)) | Política aprobada según confirmación del responsable del caso ([fuente](../../context/hechos/gobierno-y-politica-ia.md)); controles específicos de IA no verificados ([fuente](../../context/hechos/seguridad-y-certificaciones.md)) |
 | Verificación | Evals propios en CI, trazas, y cuatro tipos de release gate: rendimiento, seguridad, ética, impacto ([fuente](../../material/conceptos/m2u4-versionado-release-gates.md)) | Telemetría solo del agente de código |
 
 Los cinco elementos de diseño ([fuente](../../material/conceptos/harness-cinco-elementos-diseno.md))
@@ -418,7 +431,7 @@ verifica; los niveles son los de la [política](../../context/hechos/gobierno-y-
 
 | # | Paso | Qué pasa con el dato | Control | Si falla |
 |---|---|---|---|---|
-| 1 | Fuente | Documentación de productos propios, runbooks y tickets internos resueltos de los últimos dos trimestres | Inventario de los meses 1-3 con dueño, calidad y nivel | Sin dueño, la fuente no entra |
+| 1 | Fuente | Documentación de productos propios, runbooks y tickets internos resueltos de los últimos dos trimestres | Inventario existente revisado y ampliado en los meses 1-3 para las fuentes elegibles, con dueño, calidad y nivel | Sin dueño, la fuente no entra |
 | 2 | Clasificación | Entran Público, Interno y Confidencial. Restringido (datos personales de clientes, credenciales, código bajo NDA, contratos) queda afuera, igual que la documentación de proyectos de clientes con restricción | Filtro por nivel al ingerir; *default-deny* si falta el nivel | El documento no se indexa |
 | 3 | Data contract | El productor garantiza el esquema y los metadatos ([fuente](../../material/conceptos/m1u3-data-contracts.md)); ver el YAML abajo | Validación automática en cada carga | La carga se rechaza y se avisa al dueño |
 | 4 | Higiene | Escaneo de secretos; detección y seudonimización de datos personales en tickets; vencidos y duplicados afuera ([fuente](../../material/conceptos/m1u3-higiene-de-datos.md)) | Detector en el pipeline, con muestreo manual | Un secreto detectado bloquea la carga entera |
@@ -615,7 +628,7 @@ Lo que sigue abierto es la vía de los meses 1-3:
 El paquete completo adoptaba el contractor desde el mes 1 como base porque el recurso que no entra es el tiempo de
 las personas clave, no la caja (Anexo E, "Contra el sobre de tiempo: los meses 1-3 entran; los meses 4-6, con el replan"). Si al evaluar esa ampliación no se aprueba
 ninguna de las dos vías, el gateway y las evals pasan a los meses 4-6 y los meses 1-3 quedan en
-inventario, línea base y matriz de superficies.
+revisión del inventario de datos existente, línea base y matriz de superficies.
 
 Para los meses 4-12, sin el frente producto (los desarrolladores senior son del producto, ver
 "Insumos para Finanzas"), quedan dos alternativas. La de sumar el contractor a
@@ -664,7 +677,7 @@ explícitamente el exceso que calcula el Anexo E.
 | Tensión | Una mirada | La otra | Qué resuelve |
 |---|---|---|---|
 | Costo | La meta de +20% de throughput depende de agentes cuyo consumo real es 12× lo pagado | El borrador de OKR pide gasto de tecnología < 3,5% de la facturación, y hoy es ~4% | Finanzas: si el precio migra a consumo, el ahorro de horas se come en tokens; hay que mostrar el neto |
-| Gobierno | La política sigue en borrador y la matriz de restricciones por cliente no existe | El ruteo por clasificación y el piloto de producto dependen de ambas | Gobierno: ratificación y matriz antes de los meses 7-9 |
+| Gobierno | La política está aprobada según confirmación del responsable del caso; falta validar su aplicación y el estado de la matriz de restricciones por cliente ([fuente](../../context/hechos/gobierno-y-politica-ia.md)) | El ruteo por clasificación y el piloto de producto dependen de ambas | Gobierno: validar y aplicar la política y las restricciones por cliente antes de los meses 7-9 |
 | Personas | Reasignar 10-15% del tiempo de pocas personas clave | Utilización 83-90% y bench < 1 FTE; restricción de no contratar | Personas: suplentes y capacidad; el especialista de IA se capacita, se reasigna o se contrata por contrato |
 | Alcance | La plataforma sirve a dos frentes | Qué caso concreto va en el producto lo define el portfolio | CAIO: este anexo no elige el caso |
 | Precio | El deck y la defensa usan el gateway como cobertura del cambio de precio | La cobertura no está medida: depende de *fc* × *s*, de la suscripción y de la calidad | CAIO: la palanca se afirma solo si pasa la prueba de portabilidad y costo de los meses 4-6 |
@@ -711,7 +724,9 @@ acceso limitado, sin guardar prompts ni secretos. Conciliá uso por superficie,
 seats y personas activas con resultados; si no hay exportación, reportá uso
 estimado aparte. Eso permite un tablero periódico sin servicio central nuevo.
 
-Entregables: inventario y matriz de controles, acta de viabilidad reproducible,
+Entregables: revisión y ampliación del inventario de datos existente para las
+fuentes elegibles, con brechas y requisitos para futuros contratos de datos;
+matriz de controles, acta de viabilidad reproducible,
 base congelada, registro de cambios de prácticas, lecturas de uso y calidad y
 comparación de alternativas en M3. El acta se produce en la preparación previa,
 se verifica antes de M1 y se actualiza si cambian las fuentes o el método.
@@ -789,14 +804,14 @@ Sus FTE, caja, entregables y condiciones no son el pedido vigente del mínimo.
 | Qué se autoriza | Los hitos de los meses 1-3, en su versión acotada (el escenario recomendado, abajo), más la prueba chica de los meses 1-3 ([Anexo E](05-business-case.md)). Los meses 4-6 no se autorizan: la decisión del mes 3 los libera, con o sin señal ("Bifurcación en el mes 3") |
 | Capacidad máxima de este anexo | 0,6 FTE clave con el contractor desde el mes 1 (0,9 con el rol interno), más 16-24 h de lectura de DevOps/QA de la prueba chica. El sobre del plan completo y su piso (1,6 FTE clave; techo de tiempo 62, o 72 con la prueba) los cierra el [Anexo E](05-business-case.md) |
 | Caja de este anexo | Infraestructura de telemetría y registro, USD 500-1.500 en el tramo de tres meses; el tope total de los meses 1-3 lo fija el Anexo E |
-| Entregables | Inventario de datos, línea base congelada, matriz superficie→control→telemetría, telemetría unificada, matriz de restricciones por cliente |
+| Entregables | Revisión y ampliación del inventario de datos existente, línea base congelada, matriz superficie→control→telemetría, telemetría unificada, matriz de restricciones por cliente |
 | Decisiones delegadas | Elegir herramientas y proveedores detrás del gateway (reversible), a la dirección técnica |
 | Condiciones de aprobación del paquete completo | Vía de IA aplicada aprobada (contractor desde el mes 1, o rol interno demostrado); disponibilidad de historial de PR, integración continua y tickets para la línea base; salida para el exceso de los meses 4-6 (replan del Anexo B o excepción) |
 | Fuera del pedido | Los meses 4-12 (incluida la plataforma de los meses 4-6, que la decisión del mes 3 libera solo con señal), el modelo propio, cualquier compromiso mayor a 12 meses y todo compromiso contractual con clientes |
 
 **Escenario conservador y escenario recomendado.** El conservador pone el gateway en laboratorio con dos proveedores en el
 primer tramo; el recomendado lo difiere al inicio de los meses 4-6 y conserva
-inventario, línea base, matriz de superficies y telemetría. El
+revisión del inventario de datos existente, línea base, matriz de superficies y telemetría. El
 [Anexo F](06-roadmap-riesgo.md) ya ubica el gateway en los meses 4-6. Con la misma provisión
 de IA aplicada (los otros anexos suman 1,0 FTE clave en los meses 1-3, [Anexo E](05-business-case.md)),
 el conservador pide +0,2 FTE clave con el contractor desde el mes 1 (0,8 contra 0,6) y +0,4 con el rol
@@ -830,7 +845,7 @@ señal** (señal en el mes 3); la rama sin señal está en "Bifurcación en el m
 
 | Tramo | Frente | Hito | Criterio de éxito | Condición de abandono |
 |---|---|---|---|---|
-| Meses 1-3 | Base | Inventario de datos internos con dueño, calidad y nivel | Toda fuente del caso de referencia está inventariada | Sin dueño para una fuente: queda fuera de los casos |
+| Meses 1-3 | Base | Revisar cobertura y vigencia del inventario de datos existente y ampliarlo para las fuentes elegibles | Toda fuente elegible del caso de referencia tiene dueño, calidad y nivel revisados; brechas y requisitos para futuros contratos de datos documentados | Sin dueño para una fuente: queda fuera de los casos |
 | Meses 1-3 | Interno | Base prospectiva de throughput, incidentes y retrabajo congelada en las semanas 1-4 (serie retrospectiva de la preparación previa para estimar ruido) | Unidad, cohorte y fórmula de la sección "Throughput"; numerador y denominador; versión congelada con fecha | Sin historial utilizable de al menos dos trimestres: la ganancia no se atribuye y se elimina el resultado clave (regla del OKR) |
 | Meses 1-3 | Base | Matriz superficie→control→telemetría y denominador de la cobertura | Las cuatro superficies con ruta, control y telemetría declarados; denominador armado con datos de administración | Una superficie sin telemetría posible: se declara no medible y la meta de cobertura no la incluye |
 | Meses 1-3 | Interno | Telemetría unificada de chat, terminal y Workspace | Uso por persona activa y por resultado | Sin exportación del proveedor: encuesta cada tres meses, marcada como estimada |
