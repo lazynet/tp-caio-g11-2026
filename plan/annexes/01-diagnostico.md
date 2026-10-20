@@ -11,7 +11,7 @@ El diagnóstico también ordena el beneficio que se mide en la
 [Slide 3 — Beneficio principal y captura](../slides.md).
 
 > **Cifras estimadas, todavía sin validar contra fuentes internas.** Se validan
-> antes de comprometer presupuesto.
+> antes de liberar la ejecución de M1-M3. La validación tiene una autorización propia.
 
 ## Objetivo
 
@@ -20,7 +20,7 @@ madurez
 ([Fuente](../../material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md)) y
 de ahí sacar las dos o tres brechas que el plan ataca primero.
 
-**El diagnóstico es una hipótesis.** Antes de comprometer horas, hay que
+**El diagnóstico es una hipótesis.** Antes de liberar la ejecución de M1-M3, hay que
 conciliar corte, nómina, contratistas, personas/FTE y horas por rol: las fuentes
 documentales cubren poblaciones, unidades y fechas distintas (ver "Perímetro por
 conciliar"). Además, las cifras se validan contra fuentes internas. Son
@@ -58,7 +58,7 @@ No se promedia: un promedio de 2 esconde que la brecha más grande está en el
 producto que se vende y en Operaciones. Las fuentes no permiten afirmar ausencia
 universal de toda medición: lo que falta es valor incremental medido contra una base.
 
-### Perímetro por conciliar antes de comprometer horas
+### Perímetro por conciliar antes de liberar M1-M3
 
 | Dato | Población, unidad y fecha | Qué no permite derivar |
 |---|---|---|
@@ -74,6 +74,28 @@ ninguna fuente: no se afirma que el rango esté mal ni se explica la diferencia
 como hecho. Sin conciliación no se derivan las horas del
 [Anexo E](05-business-case.md) de los agregados; si cambian los insumos, se
 recalcula. Responsables (Talento, Operaciones, Finanzas, Seguridad): a designar.
+
+### Validación inicial con autorización propia
+
+El [hito inicial](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial)
+resuelve el trabajo que necesita la validación: el Directorio o una autoridad
+formalmente delegada autoriza primero la preparación de 2026. Antes de iniciarla,
+Operaciones y los managers confirman sus agendas, trabajo desplazado e imputación
+presupuestaria. No se exige un diagnóstico ya validado para producir esa evidencia.
+
+Se proponen diez días hábiles, con 4-6 entrevistas de una hora a referentes de
+las funciones necesarias, contraste documental y una ronda de conciliación.
+El resultado es un diagnóstico revisado por dimensión, con fuentes, cambios de
+puntaje, brechas y faltantes explícitos. Las hipótesis pendientes se conservan;
+una incertidumbre que bloquee el alcance impide liberar esa actividad.
+
+La validación organizativa suma 60-96 h internas nuevas; junto con las 20-40 h
+técnicas existentes, la primera liberación totaliza 80-136 h y un techo de 8 mil
+USD de tiempo, sin caja incremental. Incluye participantes, verificación y cierre
+documental. Son supuestos para el borrador, elegidos por Martín; falta el acuerdo
+del equipo y la autorización empresarial. El [Anexo E](05-business-case.md)
+costea las tareas y el [Anexo F](06-roadmap-riesgo.md) define el segundo pase:
+continuar, reducir/resecuenciar o detener antes de ejecutar M1-M3.
 
 ### Hechos de contexto que condicionan el plan
 
@@ -107,8 +129,8 @@ tiene base sólida sin estrategia y datos confiables.
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
-| El puntaje refleja documentos y no la práctica | Alta | Medio | Validar con 2-3 sesiones con referentes de cada área, como propone la variante extendida del diagnóstico de madurez | Si la validación mueve dos o más dimensiones, se rehace el orden de prioridades |
-| El perímetro de personas mezcla poblaciones y fechas | Alta | Alto para la capacidad | Conciliar corte, nómina, contratistas, personas/FTE y horas por rol antes de comprometer horas | Sin conciliación no se inicia el paquete mínimo |
+| El puntaje refleja documentos y no la práctica | Alta | Medio | Contraste documental y 4-6 entrevistas focalizadas en el hito inicial, supuesto de alcance a ratificar | Si la validación mueve dos o más dimensiones, se rehace el orden de prioridades |
+| El perímetro de personas mezcla poblaciones y fechas | Alta | Alto para la capacidad | Conciliar corte, nómina, contratistas, personas/FTE y horas por rol dentro de la primera liberación | Sin conciliación no se libera la ejecución de M1-M3 |
 | Las cifras del caso son estimadas y no están validadas contra fuentes internas | Alta | Alto | Validar las fuentes que sostienen cada puntaje | Sin validación, el diagnóstico se presenta como hipótesis y no como hecho |
 | La telemetría solo mide el agente de código y subestima el uso en staff | Alta | Medio | Medir chat y Workspace en los meses 1-3 ([Anexo D](04-personas-cultura.md)) | — |
 | Leer la baja adopción de Operaciones como problema cultural | Media | Medio | Separar lo contractual (el cliente fija herramientas) de lo cultural | — |
@@ -121,9 +143,11 @@ tiene base sólida sin estrategia y datos confiables.
 - **Puntuar producto e interno por separado** en Adopción y valor, y Tecnología y
   Operaciones por separado en Talento. Alternativa descartada: un solo número por
   dimensión, que esconde dónde está la brecha. Reversible.
-- **Validar antes de comprometer presupuesto:** se confirman o corrigen los
-  puntajes en una sesión; quien valida: a designar. Criterio de éxito: cada puntaje
-  con al menos una fuente validada detrás.
+- **Financiar la validación antes de liberar M1-M3:** el primer hito confirma o
+  corrige los puntajes con evidencia y conserva los faltantes como hipótesis.
+  Quien produce, quien verifica y quien firma: personas distintas, a designar.
+  Éxito: puntajes revisados con trazabilidad y alcance ejecutable; si una brecha
+  bloquea el alcance, se reduce/resecuencia o se detiene, sin liberación automática.
 
 ## Cautelas
 
@@ -131,4 +155,4 @@ tiene base sólida sin estrategia y datos confiables.
 - El estado de la política es al 2026-04-21; no hay registro posterior.
 - Los niveles 2 y 4 no están descritos en el método; el 2 se usa como intermedio.
 - Las cifras de este anexo son estimadas y se validan contra fuentes internas
-  antes de comprometer presupuesto.
+  durante la validación autorizada, antes de liberar la ejecución de M1-M3.

@@ -4,14 +4,17 @@ title: "Paquete mínimo de aprendizaje sin plataforma central"
 description: "Finanzas concilia los insumos de B/C/D para medir valor con controles probados y herramientas existentes, con techos por etapa y salida acotada."
 status: draft
 tags: [supuesto, finanzas, capacidad, controles]
-generated: { by: codex/gpt-6, at: 2026-10-20T15:08:36Z }
+generated: { by: codex/gpt-6, at: 2026-10-20T15:45:52Z }
 ---
 
 # Supuesto
 
-Propuesta de Finanzas de ronda 11, pendiente de aprobación humana. No es una
-cotización ni prueba de disponibilidad. El detalle reproducible vive en el anexo E,
-«Pedido inicial: paquete mínimo»; B/C/D son insumos de diseño, no evidencia externa.
+Propuesta de Finanzas de ronda 11, ampliada con validación inicial. Martin eligió
+esta propuesta para el borrador; no acredita consenso del equipo ni autorización
+de Acme Labs. No es cotización ni prueba de disponibilidad.
+
+El detalle reproducible vive en el anexo E, «Pedido inicial: paquete mínimo»;
+B/C/D son insumos de diseño, no evidencia externa. Los supuestos siguen draft.
 
 ## Alcance y conciliación M1-M3
 
@@ -82,6 +85,87 @@ Los 40-80 h de diseño y las 64 h de seniors de E anterior sostienen la prueba;
 no se hereda su costo redondeado de 6 mil ni su lectura adicional de 16-24 h dos
 veces. Básico e intermedio de esos mismos roles son bloques distintos.
 
+## Validación inicial
+
+Primera autorización específica durante octubre-diciembre de 2026, por **10 días
+hábiles**. Antes de trabajar: imputación del tiempo a presupuesto 2026 aprobada,
+agendas, fuentes y trabajo desplazado confirmados por las autoridades correspondientes.
+
+Sin esas condiciones la ventana no comienza. Los responsables humanos se deben
+designar; los responsables del TP no sustituyen a quienes liberan agendas,
+aceptan riesgo o aprueban presupuesto en Acme Labs.
+
+**Validación organizativa adicional**, supuestos nuevos de Finanzas. Costo
+horario según [costo por rol](/supuestos/costo-cargado-por-rol.md)/160; las horas
+incluyen entrevistadores, entrevistados, managers, staff y autoridad que decide:
+
+| Rol | Horas | USD/h | Tiempo, miles de USD |
+|---|---|---|---|
+| TL, coordinación, managers y autoridad de decisión | 16-24 | 28,125-62,5 | 0,45-1,5 |
+| Analista funcional | 20-32 | 12,5-34,375 | 0,25-1,1 |
+| Staff de Operaciones, Talento, Comercial y Finanzas | 16-24 | 9,375-31,25 | 0,15-0,75 |
+| Senior verificador independiente | 8-16 | 18,75-46,875 | 0,15-0,75 |
+| **Total organizativo adicional** | **60-96** | Por rol | **1-4,1; techo 5** |
+
+La autoridad se aproxima con TL/staff según la tarea; no es su remuneración real.
+El verificador es otra persona que quien produjo lo revisado. Si esas funciones
+o su costo no encajan en los rangos, se vuelve a costear.
+
+| Actividad | TL | Analista | Staff | Verificador | Total, h |
+|---|---|---|---|---|---|
+| Entrevistas y contraste del diagnóstico | 4-8 | 4-6 | 8-12 | — | 16-26 |
+| Conciliación del padrón y matriz persona/semana | 4 | 8-14 | 4-6 | — | 16-24 |
+| Estado de políticas, restricciones y separación de funciones | 4-6 | 4-6 | 2 | 4-8 | 14-22 |
+| Conciliación económica, solapes y trabajo desplazado | 2 | 4-6 | 2-4 | — | 8-12 |
+| Verificación, decisión y cierre documental | 2-4 | — | — | 4-8 | 6-12 |
+| **Total, h** | **16-24** | **20-32** | **16-24** | **8-16** | **60-96** |
+
+Alcance: 4-6 entrevistas de una hora y una ronda de contraste con documentos
+existentes; todas las horas de participación están incluidas. No supone entrevistar
+individualmente a toda la organización ni implementar controles.
+
+Entregables: diagnóstico contrastado y faltantes; padrón conciliado; matriz privada
+persona/semana con capacidad, formación y trabajo desplazado; productor, verificador
+independiente y autoridades identificados por entregable.
+
+También: estado actual de políticas y restricciones, viabilidad técnica/de medición,
+conciliación de solapes y recosteo. La decisión documentada es continuar,
+reducir/resecuenciar o detener; un bloqueo no se presenta como aprobación.
+
+Todo el trabajo organizativo se trata como adicional hasta confirmar equivalencias
+con B/C/D; una equivalencia se descuenta una sola vez de la ejecución posterior.
+No se presume absorbido en 59 mil, 720 h ni las 30 h de margen de M1-M3.
+
+La preparación técnica existente se conserva separada: **20-40 h / 0,4875-2,25
+mil; techo 3**, ya extraída de B/D, sin ejecución registrada. Validación y
+preparación suman **80-136 h / 1,4875-6,35 mil; techo de tiempo 8 = 5+3**.
+
+**Caja de la primera liberación: 0.** Agenda propia pre-M1 e imputación 2026;
+sin formación, prácticas, herramientas nuevas, despliegues ni contratos nuevos.
+La retrospectiva no sustituye la base prospectiva de semanas 1-4 de M1.
+
+Se prepara alcance y solicita cotización legal sin contratar el dictamen. No
+se supone cotización gratuita: si se cobra, requiere autorización y recosteo
+previos. El dictamen completo permanece en M1-M3.
+
+**Corte previo a M1:** costo efectivamente ejecutado hasta 8 mil de tiempo,
+caja 0; el cierre documental está incluido. No se activa el cierre técnico
+16-24 h de M1-M3 porque no se despliegan herramientas ni se asumen contratos.
+
+Diez días son una ventana propuesta, no disponibilidad demostrada. Más entrevistas,
+participantes o rondas, fuentes no exportables, instrumentación nueva, falta de
+verificador o costos fuera de rango exigen reducir/resecuenciar o recostear.
+
+## Segunda autorización antes de M1
+
+Condiciones: diagnóstico y padrón aceptados; matriz de capacidad validada por
+Operaciones/managers; autoridades identificadas; viabilidad técnica/de medición,
+recosteo y presupuesto 2027 aprobados por la autoridad presupuestaria correspondiente.
+
+Libera base y controles con herramientas existentes; no habilita prácticas
+automáticamente. Requieren base congelada, dictamen aplicable, controles probados,
+verificación independiente y aceptación del residual.
+
 ## Costos y límites
 
 Costo horario = rango mensual del [rol](/supuestos/costo-cargado-por-rol.md)/160;
@@ -106,9 +190,16 @@ Seguridad provisional cuesta 0,6375-2,53125 mil. Soporte clave total: 430-690 h,
 8,8875-35,18125 mil, 0,8958-1,4375 FTE. Con formación distribuida 540-660 h,
 M1-M3 totaliza **970-1.350 h / 2,0208-2,8125 FTE**, costo **14,2875-58,28125**.
 
-Techos iniciales: caja 9 + reserva 1 = **10**; tiempo 59 + preparación 3 +
-reserva de cierre 2 = **64**. Total autorizado hoy propuesto: **74** económicos,
-sin núcleo posterior ni continuidad autorizados.
+Segunda liberación, condicionada y no aprobada ahora: caja 9 + reserva 1 = **10**;
+tiempo M1-M3 59 + reserva de cierre 2 = **61**. Total **71**, disjunto de la
+primera liberación de caja 0 / tiempo 8.
+
+Límite acumulado propuesto **79 = 8 + 71**, caja **10** / tiempo **69**
+(59 + preparación técnica 3 + validación organizativa 5 + cierre 2). El techo
+anterior era 74; el adicional organizativo agrega 5 sin cambiar caja ni M1-M3.
+
+Núcleo posterior y continuidad no están autorizados. La elección del borrador
+no libera las dos etapas: cada una requiere su autorización empresarial.
 
 ## Continuación condicional y salida
 
@@ -132,16 +223,20 @@ No mantiene un piloto activo ni autoriza uso que requiera controles no cubiertos
 
 Después de M3: 108 h y techo 6 mil de tiempo para M4-M12, en reemplazo de la
 continuación, nunca además de ella. Los 6 requieren **aprobación explícita en el
-gate de salida M3** y no forman parte de los 74 iniciales.
+gate de salida M3** y no forman parte del límite acumulado de 79.
 
 Sin capacidad para el núcleo, excluir/suspender uso hasta que se cubran
 obligaciones; no se abandona una obligación legal.
 
 Proyección anual sin esperas ni reservas gastadas: caja 2,3-13,8 y tiempo con
-preparación 23,225-94,96875; económico 25,525-108,76875, **≈67 (26-109)**.
+preparación técnica y validación organizativa 24,225-99,06875; económico
+26,525-112,86875, **≈70 (27-113)**.
 
-Suma de techos por tramo y preparación **113** (caja 15 / tiempo 98); con cierre
-**116**. Es una proyección condicional, no autorización anual.
+Los acumulados incluyen preparación imputada a 2026 más ejecución 2027;
+no representan exclusivamente presupuesto 2027.
+
+Suma de techos por tramo y preparación **118** (caja 15 / tiempo 103); con cierre
+**121**. Es una proyección condicional, no autorización anual.
 
 ### Esperas M6/M9 y pérdidas de salida
 
@@ -174,18 +269,20 @@ completos; esta distribución de tareas requiere validar la cadencia obligatoria
 
 | Salida | Pérdida acumulada hasta cerrar, caja / tiempo → total | Núcleo restante, h / techo | Máximo anual con núcleo aprobado al salir |
 |---|---|---|---|
-| M3 inmediato | 10 / 64 → 74 | 108 / 6 | 80 |
-| M6 inmediato | 12 / 78 → 90 | 72 / 4 | 94 |
-| Espera M6 vencida | 13 / 84 → 97 | 54 / 3 | 100 |
-| M9 inmediato | 14 / 89 → 103 | 36 / 2 | 105 |
-| Espera M9 vencida | 15 / 95 → 110 | 18 / 1 | 111 |
-| M12 | 16 / 100 → 116 | — | 116, sin régimen posterior |
+| Previo a M1 | 0 / 8 → 8 | — | 8, sin inicio M1-M3 |
+| M3 inmediato | 10 / 69 → 79 | 108 / 6 | 85 |
+| M6 inmediato | 12 / 83 → 95 | 72 / 4 | 99 |
+| Espera M6 vencida | 13 / 89 → 102 | 54 / 3 | 105 |
+| M9 inmediato | 14 / 94 → 108 | 36 / 2 | 110 |
+| Espera M9 vencida | 15 / 100 → 115 | 18 / 1 | 116 |
+| M12 | 16 / 105 → 121 | — | 121, sin régimen posterior |
 
 Las filas de espera suponen continuidad sin esperas anteriores; si una espera
 M6 pasa y luego se espera en M9, recomponer los subtramos antes de autorizar.
 
-89 era el máximo de corte inmediato M6 del costeo anterior; corregida Seguridad
-es 90. Nunca fue el máximo tras esperar. Una sola espera por gate; propuesta
+Antecedente del mínimo sin validación organizativa: 89 era el máximo de corte
+inmediato M6 antes de corregir Seguridad; luego fue 90. Hoy es **95**, con 5
+adicionales de validación, sin esperar. Una sola espera por gate; propuesta
 pendiente de ratificación para M9:
 
 Si no pasa valor/calidad con versión congelada,
@@ -209,7 +306,9 @@ cambio contractual o base que no resuelve. Se reduce/resecuencia o recostea.
 
 # Cautelas
 
-Responsables humanos, ratificación del calendario, solapes y precios: pendientes.
+Responsables humanos, ratificación empresarial del calendario, solapes y precios:
+pendientes. Primera liberación e imputación 2026 requieren aprobación empresarial
+antes de trabajar; no consta preparación ejecutada ni costo hundido de esa etapa.
 La reserva de capacidad es un supuesto del borrador, pendiente de confirmación
 por persona y semana; no libera por sí sola el hito de validación organizativa.
 La base puede extenderse hasta semana 8; básico, intermedio y prueba se desplazan

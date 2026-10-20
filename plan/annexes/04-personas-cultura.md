@@ -12,8 +12,10 @@ Convención de tiempo: el plan tiene una **preparación previa** (octubre-diciem
 de 2026) y **cuatro tramos de tres meses** (meses 1-3, 4-6, 7-9 y 10-12, de
 enero a diciembre de 2027), con una revisión mensual del AI Council entre
 decisiones ([convenciones](../../context/supuestos/convenciones-de-calculo.md)). Se
-asume que el mes 1 arranca con la aprobación del presupuesto 2027 (supuesto) y que la preparación previa es la línea de base retrospectiva, coherente
-con el borrador de OKR de Tecnología 2027.[^okr]
+asume que el mes 1 arranca con la aprobación del presupuesto 2027 (supuesto).
+La preparación previa comprende la validación inicial con autorización propia
+y la reconstrucción retrospectiva; la base prospectiva se congela en M1-M3.
+El horizonte es coherente con el borrador de OKR de Tecnología 2027.[^okr]
 
 ## Objetivo
 
@@ -183,6 +185,23 @@ Finanzas distingue costo cargado, ingreso no facturado y contribución perdida,
 documenta qué se recupera y no suma dos veces las mismas horas como ahorro e
 ingreso ni como costo y contribución. Solo se publican rangos o índices autorizados.
 Sin conciliación semanal, reducir o diferir el alcance y volver a costear antes de iniciar.
+
+**Dos agendas y dos liberaciones para el mínimo.** La validación inicial de
+2026 necesita su propia agenda autorizada antes de empezar: incluye a quienes
+entrevistan, responden, verifican y deciden, además de los managers que liberan
+su tiempo. No presupone ya conciliada la agenda de ejecución de M1-M3.
+
+Con esa primera liberación se completa la matriz privada de capacidad por
+persona y semana: padrón, ausencias, compromisos, soporte, básico e intermedio
+sobre las mismas personas, desplazamiento y cobertura. Esta matriz es de D;
+la matriz de restricciones por cliente, herramienta y superficie es de C.
+Se cruzan para delimitar el alcance, sin que una sustituya a la otra.
+
+La segunda liberación, antes de M1, exige capacidad real y trabajo desplazado
+validados por Operaciones y managers, diagnóstico revisado y presupuesto 2027
+comprobado. Productor, verificador independiente y autoridad empresarial
+firmante son personas distintas, a designar conforme a C. Los responsables
+del TP no sustituyen esos roles de la empresa.
 
 ### Antes y después de un proceso: del requerimiento al cambio en producción
 
@@ -396,9 +415,10 @@ continuidad.
 
 ## Roadmap cultural por tramo y métricas
 
-La preparación previa (octubre-diciembre de 2026) es la línea de base
-retrospectiva, anterior a la aprobación del presupuesto 2027 (la aprobación de
-hoy). Los umbrales son supuestos, a validar con la línea de base. Toda
+La preparación previa (octubre-diciembre de 2026) reúne validación inicial y
+reconstrucción retrospectiva, con autorización y agendas propias anteriores a
+la liberación de M1-M3 y al presupuesto 2027. No adelanta formación ni prácticas.
+Los umbrales son supuestos, a validar con la línea de base. Toda
 métrica se reporta con numerador y denominador y **por área, agregada**: ningún
 dato individual ([OKR](../../context/hechos/okrs-y-objetivos.md)). El alcance y la
 retención de la telemetría los define Gobierno con Talento (pendiente
@@ -406,7 +426,7 @@ declarado).
 
 | Tramo | Hitos | Indicador adelantado (uso real) | Indicador rezagado |
 |---|---|---|---|
-| Preparación previa (antes de la aprobación de hoy) | Solo reconstrucción **retrospectiva** con datos que ya existen (telemetría y reportes de adopción de los últimos meses, series de incidentes y retrabajo si el repositorio las conserva) y diseño de la encuesta de chat y Gemini. Política: queda lista para ratificar, no ratificada | Serie retrospectiva de uso del agente de código por área | Serie retrospectiva de throughput, incidentes y retrabajo, con su hueco declarado si no existe |
+| Preparación previa de 2026, primera liberación propia | Validación inicial del diagnóstico y capacidad; reconstrucción **retrospectiva** con datos existentes y diseño de la encuesta de chat y Gemini. Política: queda lista para ratificar, no ratificada | Acta con diagnóstico revisado, agendas M1-M3 conciliadas o faltantes explícitos; serie retrospectiva de uso por área | Serie retrospectiva de throughput, incidentes y retrabajo, con su hueco declarado si no existe |
 | Meses 1-3, semanas 1 a 4 del plan, ampliables a 8 según B | **Congelar la base prospectiva** antes de cualquier capacitación o herramienta nueva para usuarios: encuesta de chat y Gemini, uso semanal por área, throughput, incidentes y retrabajo de los equipos propios | Línea de base por área publicada y congelada; si se extiende, se revisa completitud M3 | Línea de base prospectiva de throughput, incidentes y retrabajo |
 | Meses 1-3, desde semana 5 o 9 según cierre de base | Política ratificada y matriz de restricciones (con Gobierno); básico para todos; intermedio y prueba con la cohorte del mínimo definido en E. Básico, intermedio y prueba comienzan juntos, solo después de congelar la base | Básico completado: ≥90% de la dotación al cierre de los meses 1-3, a revalidar si la base se extiende. Prueba: uso semanal de la cohorte, retrabajo y PR aceptados, y la dispersión entre personas; se leen en la decisión del mes 3, sin atribuir ganancia | Sin objetivo: se mide la línea de base |
 | Meses 4-6 | Intermedio para Operaciones y staff; arranca el avanzado; champions con tiempo asignado (el contractor está desde el mes 1 si se aprueba; al 100% solo si la decisión del mes 3 encuentra una señal, si no se cierra y la prueba se extiende a la cohorte) | Uso activo semanal de Tecnología ≥80% en M6 (la meta del OKR); Operaciones habilitadas ≥40% en M6, **meta intermedia** hacia ≥60% en M12 | Throughput de equipos propios: sin deterioro de calidad |
@@ -438,18 +458,23 @@ uso se mide cada semana, por área: ese uso semanal alimenta el tablero mensual 
 AI Council (revisión de 2 horas). El tablero lo muestra como tendencia, sin decidir
 por él, y suma señales de incidentes y avance de hitos. La revisión mensual puede
 frenar o cortar un frente, activar una contingencia o escalar una señal al
-Directorio cuando llega; **no libera fondos**, que quedan en las decisiones de los
-meses 3, 6, 9 y 12. Las metas y el momento en que se decide no cambian. La
+Directorio cuando llega; **no libera fondos**, que quedan en las dos autorizaciones
+iniciales y las decisiones de los meses 3, 6, 9 y 12. Las metas y el momento en que se decide no cambian. La
 revisión no suma costo: usa el uso semanal por área que este anexo ya mide y el
 Council que el Anexo E ya presupuesta.
 
-**Calendario del mínimo.** Preparación total consolidada **20-40 h** en
-[E, «Pedido inicial: paquete mínimo»](05-business-case.md#pedido-inicial-paquete-mínimo).
+**Calendario del mínimo.** Primera liberación propuesta de **80-136 h**:
+20-40 h técnicas existentes y 60-96 h organizativas nuevas; **techo de USD 8.000
+de tiempo valorizado y caja incremental cero**, con autorización e imputación
+previas para 2026. Son supuestos de la
+[validación inicial](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial),
+consolidados en [E](05-business-case.md#pedido-inicial-paquete-mínimo).
 El calendario de 60-100 h pertenece al programa completo, no al pedido vigente.
 
 | Cuándo | Qué existe | Quién lo verifica | Costo |
 |---|---|---|---|
-| Preparación previa, con autorización y agenda propias | Reconstrucción retrospectiva y diseño con fuentes existentes; sin ejecución registrada | Responsable a designar | Total consolidado 20-40 h en E, separado de M1-M3, sin volver a sumarlo |
+| Preparación previa de 2026, diez días hábiles condicionados a agendas y accesos | Validación del diagnóstico, padrón, matriz persona-semana y restricciones; conciliación económica, verificación y acta de continuar, reducir/resecuenciar o detener | Productor, verificador independiente y autoridad firmante distintos, a designar conforme a C | 80-136 h y techo de tiempo de USD 8.000; caja cero; autorización e imputación 2026 propias, separadas de M1-M3 |
+| Antes de M1, segunda liberación | Diagnóstico revisado, capacidad y desplazamiento aceptados, roles empresariales designados y presupuesto 2027 comprobado | Autoridad empresarial según C, con conformidad de Operaciones y managers sobre agendas | Libera el alcance y los recursos M1-M3 conciliados en E; no habilita por sí sola herramientas ni prácticas |
 | Meses 1-3, semanas 1 a 4, ampliables a 8 por el criterio de B | Base prospectiva congelada antes de cualquier tratamiento | Oficina del CAIO, con Arquitectura para el criterio y Finanzas para throughput | Dentro de las tareas de soporte del mínimo conciliadas en E |
 | Meses 1-3, desde semana 5 si cierra la base, o semana 9 si se amplía | Política ratificada y permisos aplicables; básico, intermedio y prueba comienzan juntos, con la cohorte definida en E | Gobierno, Operaciones y oficina del CAIO; responsables a designar | Participantes y soporte consolidados en E; agendas aún no liberadas |
 
@@ -626,7 +651,7 @@ uso sobre ese cliente. Población supuesta: 60-70 personas, referencia ~65
 | Participantes de todas las áreas: básico | 360-420 distribuidas | 60-70 × 6 h, desde tamaño/estructura y el nivel básico de este anexo. Puede desplazar delivery, soporte o trabajo de staff, según agenda y contrato |
 | Líder interno de adopción: agenda, base, diccionario de actividad, seguimiento y cierre | 48-96 clave | Supuesto de Personas: 0,1-0,2 × 480 h; el extremo alto coincide con el líder del programa completo al 20%. Desplaza liderazgo técnico; no es tiempo libre |
 | Facilitación técnica del básico: adaptar casos y dictar sesiones | 16-32 clave | Supuesto de Personas: 8-16 h de preparación + 8-16 h de facilitación de grupos. No incluye evals, harness ni implementación. Desplaza trabajo técnico |
-| Managers / Operaciones: validar agendas y restricciones por persona | 8-16 clave | Supuesto de Personas agregado, no por manager. Desplaza coordinación de delivery |
+| Managers / Operaciones: validar agendas y cruzarlas con las restricciones de C | 8-16 clave | Supuesto de Personas agregado, no por manager. Desplaza coordinación de delivery |
 | Talento / administración: convocatorias y registro de completitud | 8-16 distribuidas | Supuesto de Personas agregado. Desplaza trabajo de staff |
 | QA / datos: extracción y reproducción del indicador existente | 8-16 clave | Supuesto de Personas, solo sobre fuentes existentes, sin plataforma nueva. Desplaza QA o análisis. Si la fuente no permite medir, declarar «sin medir» y volver a costear la instrumentación |
 | **Subtotal interno de Personas** | **448-596 h** | **80-160 clave + 368-436 distribuidas**, extremos sumados; punto poblacional ~65: 478-566 h |
@@ -642,9 +667,44 @@ varios roles, libera la suma en su agenda semanal. No se heredan los ~1,8 FTE
 ni el contrato 0,5 FTE del programa completo.
 
 **Preparación.** Las 8-16 h de preparación de facilitación están dentro de su
-fila, no son un adicional. E separa la preparación total de 20-40 h fuera de
-M1-M3: conciliar qué tareas de D absorbe y descontarlas una sola vez; no sumar
-el subtotal bruto de Personas a la tabla consolidada de E.
+fila, no son un adicional. Las 20-40 h técnicas existentes quedan separadas de
+las **60-96 h organizativas nuevas** de la primera liberación. Toda tarea de
+B/C/D ya presupuestada que se adelante se descuenta una sola vez de su
+ejecución posterior; no se suma el subtotal bruto de Personas a E.
+
+**Validación organizativa inicial: propuesta de Personas.** Estimación de
+planificación de la [fuente canónica](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial),
+sin agendas ni responsables empresariales confirmados:
+
+| Rol, incluidos participantes y decisores | Horas nuevas de preparación 2026 | Trabajo incluido |
+|---|---:|---|
+| Liderazgo técnico, coordinación y managers | 16-24 | Convocar y coordinar; validar agendas propias y M1-M3, desplazamiento y cobertura; preparar y tomar la decisión y cerrar el acta |
+| Analista funcional | 20-32 | Contrastar diagnóstico y documentación; preparar, conducir y sintetizar 4-6 entrevistas de una hora; conciliar padrón y matriz persona-semana |
+| Staff de Operaciones, Talento, Comercial y Finanzas, incluidos entrevistados | 16-24 | Participar de entrevistas; aportar compromisos y ausencias; relevar restricciones y roles con C; conciliar horas, costos y solapes B/C/D; aportar evidencia al cierre |
+| Verificador senior independiente del productor | 8-16 | Contrastar entregables y conciliación con fuentes; registrar brechas, revisar acta y cierre documental |
+| **Total organizativo adicional** | **60-96** | Entrevistados, managers, decisor, preparación, síntesis, verificación y cierre incluidos; no volver a sumar sus horas |
+
+El rol concreto de cada entrevistado se registra en privado y sus horas se
+imputan una sola vez a su fila. No se presupone que coordinación, entrevistas
+y decisión puedan hacerse por fuera de la jornada.
+
+El plazo propuesto es **diez días hábiles**, sujeto a accesos, fuentes y agendas:
+días 1-4, diagnóstico y entrevistas; 2-7, padrón y capacidad; 4-8, restricciones
+y roles con C; 7-9, conciliación y verificación; día 10, decisión y acta.
+La primera liberación autoriza producir esa evidencia; no exige tenerla antes.
+
+Operaciones y managers confirman la agenda de esta preparación y el trabajo
+desplazado antes de iniciarla. No consume las **720 h** de reserva de soporte
+ni las **30 h** de margen de M1-M3. Si las fuentes, entrevistas o correcciones
+exceden el alcance, se vuelve al autorizante antes de ampliar plazo o recursos.
+
+La salida admite **continuar, reducir/resecuenciar o detener**. Continuar exige
+diagnóstico revisado, capacidad M1-M3 sin sobreasignaciones y presupuesto 2027
+comprobado; los faltantes que bloqueen el alcance impiden esa segunda liberación.
+El crédito presupuestario no reemplaza permisos legales ni de seguridad.
+
+La conformidad de Martin habilita incorporar esta propuesta al borrador; no
+representa autorización empresarial, designación de roles ni consenso del equipo.
 
 **Trabajo desplazado y recuperaciones.** Completar en privado la matriz de
 «Capacidad efectiva: dos bolsas sobre las mismas personas», con personas,

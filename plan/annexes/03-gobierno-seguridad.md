@@ -19,6 +19,8 @@ mes 3 los autoriza ante una señal y la demostración externa si la señal contr
 lectura del mes 9. Los gates son los puntos de decisión de los meses 3, 6, 9 y 12; los
 tramos son los meses 1-3 (enero-marzo de 2027), 4-6, 7-9 y 10-12. El gobierno tiene que
 habilitar la entrega: cada control declara cuánta velocidad cuesta y cuándo se abandona.
+El inicio requiere dos autorizaciones específicas: preparación en 2026 y liberación de
+M1-M3 después de la validación inicial; no se libera todo el esfuerzo con la primera.
 
 La IA que Acme Labs vende a bancos y fintechs es la que más exige: hoy no hay IA en
 producción dentro de lo que se vende ([fuente](../../context/hechos/ia-en-producto-y-oferta.md)),
@@ -213,6 +215,8 @@ función es habilitar; no aprueba nada que el Council no le delegó.
 
 | Decisión | A (decide) | R | C | I |
 |---|---|---|---|---|
+| Autorizar la validación inicial en preparación de 2026 | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |
+| Liberar M1-M3 tras la validación inicial | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |
 | Política de IA y sus cambios | Directorio (ratifica) | Responsable de seguridad | Council, CEO | Toda la organización |
 | Aprobar una herramienta o modelo nuevo | Responsable de Tecnología | Administrador de licencias | Seguridad, Finanzas | Council |
 | Qué datos puede usar un caso | Dueño del dato | Seguridad | Legal externo, Operaciones | Council |
@@ -239,9 +243,55 @@ registra la reanudación y decide los fondos, si corresponden. Productor, verifi
 persona que firma el gate se asignan por separado y quedan a designar; quien produce la
 evidencia no verifica su propio trabajo ni autoriza su propio pase.
 
+### Validación inicial: dos autorizaciones antes de M1
+
+**Propuesta en borrador.** El diseño se detalla en la
+[fuente de horas y techos](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial)
+y en el [Anexo F](06-roadmap-riesgo.md).
+
+El aval para incorporar la propuesta al borrador no acredita acuerdo del equipo
+ni autorización empresarial.
+
+**Primera autorización.** El Directorio o su autoridad formalmente delegada autoriza
+una preparación de diez días hábiles en 2026: 60-96 h organizativas más las 20-40 h
+técnicas existentes, total 80-136 h.
+
+El techo es 8 mil USD de tiempo valorizado y cero caja incremental. Operaciones y
+managers liberan las agendas y explicitan el trabajo desplazado antes de empezar;
+CAIO coordina y Finanzas concilia costo y solapes.
+
+Se contrasta el diagnóstico, concilia la capacidad semanal y confirma el estado de
+políticas y restricciones; se prepara el alcance y pide cotización legal. Esta etapa
+no ejecuta el dictamen externo ni habilita nuevos despliegues o contratos.
+
+Su verificador independiente valida evidencia organizativa; no sustituye las
+pruebas técnicas de C.
+
+**Segunda autorización, antes de M1.** La misma autoridad decide continuar, reducir o
+resecuenciar, o detener, con diagnóstico revisado, capacidad aceptada, acta de viabilidad
+técnica y presupuesto 2027 comprobado.
+
+Puede liberar hasta los 71 mil USD restantes del pedido: el acumulado propuesto
+es 79 mil (10 de caja y 69 de tiempo), no 79 nuevos.
+
+Productor, verificador y firmante son personas distintas, con designaciones empresariales
+pendientes; el Council recomienda y revisa riesgos, sin liberar fondos.
+
+El pase económico no habilita prácticas ni superficies. El dictamen externo de 8-16 h
+ya presupuestado permanece en M1; política, matriz y controles aplicables deben estar
+completos antes de los usos que los requieran, con residual aceptado según la tabla de C.
+
+La base prospectiva ocupa semanas 1-4, con extensión hasta la 8; formación y prácticas
+empiezan después de congelarla. Los controles urgentes y la suspensión preventiva de
+Seguridad no esperan a la base.
+
+Si faltan evidencia, independencia o agendas, o se excede el techo, se reduce o detiene
+y se vuelve al autorizante antes de ampliar el alcance.
+
 ### Ritmo operativo
 
-**El riesgo se mira cada mes; la plata se libera cada tres.** Hay tres cadencias:
+**El riesgo se mira cada mes.** Después de las dos autorizaciones iniciales, la
+liberación de fondos sigue las decisiones trimestrales. Hay tres cadencias:
 
 | Cadencia | Qué se revisa | Dónde se hace |
 |---|---|---|
@@ -251,7 +301,8 @@ evidencia no verifica su propio trabajo ni autoriza su propio pase.
 
 **Qué puede hacer la revisión mensual:** frenar o cortar un frente, activar una
 contingencia, registrar una señal en el mes en que llega y escalarla al Directorio.
-**No libera fondos:** eso queda en las decisiones de los meses 3, 6, 9 y 12.
+**No libera fondos:** eso queda en las autorizaciones iniciales y en las decisiones
+de los meses 3, 6, 9 y 12, a cargo del Directorio o autoridad formalmente delegada.
 
 **Qué no cambia.** Las esperas de 6 semanas y los métodos de medición (intervalo de
 throughput, base congelada) siguen igual: el throughput necesita semanas de datos y una
@@ -353,7 +404,7 @@ excepción puede contradecir una prohibición del horizonte.
 
 | Decisión | Ámbito | Fecha mínima | Autoridad | Condición | Compromiso exacto |
 |---|---|---|---|---|---|
-| Ratificar la política de IA | Interno | Meses 1-3 | Directorio | Aprobación de hoy | Compromiso interno enmendable; sin firma con clientes |
+| Ratificar la política de IA | Interno | Meses 1-3 | Directorio | Segunda autorización: M1-M3 tras la validación inicial | Compromiso interno enmendable; sin firma con clientes |
 | Cláusula tipo de IA para contratos | Interno y negociación | Meses 7-9 | Council | Una función de IA con documentación técnica y supervisión humana | Texto listo y negociación no vinculante |
 | Firma de un compromiso contractual de IA con un cliente | Externo | Cierre del mes 12 | Council | Cláusula tipo, matriz del cliente y red team sin críticos | Irreversible: el compromiso queda firmado |
 | Enviar datos productivos de un cliente a un modelo externo | Externo | No antes del cierre del mes 12 | Responsable comercial del cliente, con Council | Cláusula firmada, matriz y controles demostrados | Irreversible |
@@ -790,13 +841,17 @@ redondeado). Tres lecturas de gobierno sobre esas cifras:
   política y control compensatorio con residual aceptado por el Council, no una garantía
   de bloqueo.
 - **Revisión mensual:** el Council mira el riesgo cada mes (2 h, con tablero) y puede frenar,
-  cortar o escalar; los fondos se liberan solo en los meses 3, 6, 9 y 12. No suma costo.
+  cortar o escalar; no libera fondos. Las dos autorizaciones iniciales y las decisiones
+  de los meses 3, 6, 9 y 12 corresponden al Directorio o autoridad formalmente delegada.
+  La revisión mensual no suma costo.
 - **Slide 6 — Gobierno y seguridad:** el texto dice bloqueo en la pasarela y en el equipo.
 - **Pedido al board 1:** ratificar la política de IA que está en borrador desde abril de 2026.
 - **Pedido al board 2:** aprobar el alcance explícito (sin decisiones de crédito ni
   scoring en 12 meses) y los topes de la escala de autonomía del plan (niveles 0 a 4).
 - **Pedido al board 3:** pedido vigente de controles: insumo M1-M3 de este anexo,
   consolidado en el [Anexo E](05-business-case.md), sección "Pedido inicial: paquete mínimo".
+  La validación inicial se autoriza primero; M1-M3 requiere el segundo pase y conserva
+  las condiciones de habilitación por superficie de este anexo.
   Los tres paquetes y montos anuales del paquete completo son referencia de otro alcance; no se
   autorizan hoy ni se trasladan a la continuación del mínimo.
 - **Mensaje sobre la licencia para vender:** hoy es un supuesto; los meses 1-3 juntan la

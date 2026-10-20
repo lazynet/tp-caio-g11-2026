@@ -12,10 +12,12 @@ además [Slide 8 — Roadmap técnico, financiero y cultural](../slides.md).
 
 ## Objetivo
 
-Sustentar **un único pedido al board, el de hoy: el mínimo técnico de M1-M3** (enero-marzo
-de 2027), consolidado en el [Anexo E](05-business-case.md), sección
-«Pedido inicial: paquete mínimo», con un tope de caja y de capacidad, y adoptar el
-marco de gates (los puntos de decisión de los meses 3, 6, 9 y 12). La
+Sustentar **dos autorizaciones separadas**: la validación inicial durante la
+preparación de 2026 y, si sus resultados lo permiten, el mínimo técnico de M1-M3
+(enero-marzo de 2027). El [Anexo E](05-business-case.md), sección
+«Pedido inicial: paquete mínimo», consolida sus topes de caja y capacidad.
+Se propone además adoptar el marco de gates (los puntos de decisión de los
+meses 3, 6, 9 y 12). La
 arquitectura de abajo, una plataforma común de IA neutral al modelo y aislada
 por cliente, que sirve a dos frentes, la IA en lo que Acme Labs vende a
 bancos y fintechs y la IA en su operación interna, es la **dirección de
@@ -29,8 +31,9 @@ una señal de cliente ([Anexo E](05-business-case.md)).
 El responsable de cada hito está **a designar**. Las cifras económicas del anexo son insumos para Finanzas, no el
 business case.
 
-El pedido inicial es el paquete mínimo de los
-meses 1-3, sin plataforma central, consolidado en el [Anexo E](05-business-case.md),
+La primera autorización no libera M1-M3: habilita una validación acotada con
+agenda e imputación 2026 confirmadas. La segunda libera el paquete mínimo de los
+meses 1-3, sin plataforma central, bajo las condiciones del [Anexo E](05-business-case.md),
 sección «Pedido inicial: paquete mínimo». Las tablas económicas y de capacidad
 del paquete completo quedan como comparación de otro alcance. No se aprueban
 el contractor ni la excepción de 0,3 FTE del paquete completo. La arquitectura
@@ -241,10 +244,10 @@ Finanzas lo convierta en valor con la misma unidad.
 | Ruido | Con cohortes de pocas decenas de personas, la variación entre tramos puede superar +3%: se estima con la serie retrospectiva de la preparación previa y los umbrales de las lecturas de los meses 6 y 9 se leen con el intervalo de abajo, no como un punto |
 
 **Protocolo de medición único (propuesto para que el [Anexo F](06-roadmap-riesgo.md) lo adopte en las lecturas de los meses 6 y 9;
-[fuente](../../context/supuestos/umbrales-tecnicos-propuestos.md)).** Se fecha con la aprobación de hoy, con
+[fuente](../../context/supuestos/umbrales-tecnicos-propuestos.md)).** Se produce durante la primera autorización y se fecha al ratificarlo antes de la segunda liberación, con
 la serie de la preparación previa y antes de ver un solo dato de los meses 1-3: así "tendencia con intervalo" decide
 de forma repetible y nadie elige base, umbral ni regla de calidad después de ver el
-ruido. El responsable de ratificarlo con la aprobación de hoy está **a designar**.
+ruido. El responsable de ratificarlo antes de la segunda liberación está **a designar**.
 
 | Elemento | Propuesta |
 |---|---|
@@ -254,10 +257,10 @@ ruido. El responsable de ratificarlo con la aprobación de hoy está **a designa
 | Precisión mínima | Semiancho ≤ 3 puntos porcentuales: con más, el intervalo no separa las bandas de +3%, +5% y +8% |
 | Muestra mínima | **15 personas activas** (el piso del supuesto de 15-20), y "activa" es tener base congelada propia y PR en al menos 6 de las 8 semanas de la ventana. Lo que discrimina es el semiancho, no N: con 15-20 personas el piso se cumple si no hay bajas |
 | Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: cuenta como "espera" y la ventana se extiende 6 semanas; la extensión suma semanas por persona, no personas, así que solo baja el ruido de cada una. Vencida, rige la regla del Anexo F. Con N < 15, esperar no lo arregla: no se decide por valor y aplica "Viabilidad" |
-| Calidad | El mismo estimador e intervalo sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, por separado, con un margen de no inferioridad δ = +10% relativo (**supuesto sin dato**; se recalibra con la tasa de la preparación previa y se fija con la aprobación de hoy). Tres casos ordenados. **Primero, daño** (algún límite inferior > 0): la ganancia no cuenta y el gate corta aunque el throughput pase o el límite superior sea ≤ δ. **Luego, incierto** (sin daño, algún intervalo incluye 0 y su límite superior > δ): no se demuestra no deterioro; cuenta como espera (6 semanas, una vez) y, vencida, como no pasa. **Solo sin daño ni incertidumbre, no deterioro demostrado** (ambos límites superiores ≤ δ): el gate decide por throughput. Tasas base cero: aplica la regla específica de abajo. Con pocos eventos el intervalo puede impedir probar no inferioridad; el acta de viabilidad lo declara antes de ratificar el método |
-| Respaldo | Cambio de base solo por un criterio mecánico que usa datos de la base, antes de cualquier tratamiento y ciego al resultado. En la semana 4 se mide el ruido placebo: semiancho del cambio entre las semanas 1-2 y 3-4, con el mismo estimador e intervalo, proyectado a la ventana del gate con el factor que la preparación previa calibre con la aprobación de hoy. Si el proyectado > 3 puntos con N ≥ 15, la base "no resuelve". Lo aplica la oficina del CAIO, sin discreción, y deja constancia (fecha, N, semiancho placebo, factor, versión) que ve el Directorio en la decisión del mes 3. **La retrospectiva no sirve para atribuir**: mezcla tendencia, estacionalidad (los meses 1-3 caen en enero-marzo; supuesto), adopción previa y cambios de equipo, y no baja la dispersión entre personas, que es la que domina. Si se usa, es una lectura contra tendencia, sin atribución: no libera capital (las lecturas de los meses 6 y 9 no pasan por throughput) y solo puede producir espera o corte. Alternativa con su costo, a decidir por Personas y CAIO: prolongar la base prospectiva a la semana 8 y desplazar 4 semanas la formación básica, la prueba y la formación intermedia, antes de iniciar cualquier tratamiento |
-| Congelamiento | Versión, δ, factor y umbral se fechan con la aprobación de hoy y no se editan desde que se congela la base. Un cambio posterior es un desvío: se registra con fecha y motivo, rige desde la ventana siguiente y la ventana en curso se lee con la versión vigente al abrirse |
-| Viabilidad | Antes de la aprobación de hoy, con la serie de la preparación previa, se estima σ (dispersión entre personas del cambio relativo) y el semiancho esperado con la cohorte real, también para calidad. Condición, sin dato observado: con semiancho ≈ 1,645 σ / √n, el caso base (+3,75% en los meses 4-6, +9% en los meses 7-9) pasa la lectura del mes 6 con semiancho ≤ 0,75 (σ ≤ 1,8 con n = 15; ≤ 2,0 con n = 20; equivale a n ≥ 4,8 σ²) y la lectura del mes 9 con ≤ 1 (σ ≤ 2,4; ≤ 2,7; n ≥ 2,7 σ²). Con el máximo permitido (3), los límites son 0,75 y 6, y ninguno pasa: la precisión mínima separa las bandas, pero no alcanza para que el caso base pase. Si el σ de la preparación previa supera esos valores, el caso base espera en la lectura del mes 6 y corta; el Anexo F lo sabe antes de la aprobación de hoy y reformula (por ejemplo, decidir solo en la lectura del mes 9 si σ ≤ 2,4 / 2,7) o presenta el caso base como espera-y-corte. Con N < 15 no se decide por valor |
+| Calidad | El mismo estimador e intervalo sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, por separado, con un margen de no inferioridad δ = +10% relativo (**supuesto sin dato**; se recalibra con la tasa de la preparación previa y se fija antes de la segunda liberación). Tres casos ordenados. **Primero, daño** (algún límite inferior > 0): la ganancia no cuenta y el gate corta aunque el throughput pase o el límite superior sea ≤ δ. **Luego, incierto** (sin daño, algún intervalo incluye 0 y su límite superior > δ): no se demuestra no deterioro; cuenta como espera (6 semanas, una vez) y, vencida, como no pasa. **Solo sin daño ni incertidumbre, no deterioro demostrado** (ambos límites superiores ≤ δ): el gate decide por throughput. Tasas base cero: aplica la regla específica de abajo. Con pocos eventos el intervalo puede impedir probar no inferioridad; el acta de viabilidad lo declara antes de ratificar el método |
+| Respaldo | Cambio de base solo por un criterio mecánico que usa datos de la base, antes de cualquier tratamiento y ciego al resultado. En la semana 4 se mide el ruido placebo: semiancho del cambio entre las semanas 1-2 y 3-4, con el mismo estimador e intervalo, proyectado a la ventana del gate con el factor que la preparación previa calibre antes de la segunda liberación. Si el proyectado > 3 puntos con N ≥ 15, la base "no resuelve". Lo aplica la oficina del CAIO, sin discreción, y deja constancia (fecha, N, semiancho placebo, factor, versión) que ve el Directorio en la decisión del mes 3. **La retrospectiva no sirve para atribuir**: mezcla tendencia, estacionalidad (los meses 1-3 caen en enero-marzo; supuesto), adopción previa y cambios de equipo, y no baja la dispersión entre personas, que es la que domina. Si se usa, es una lectura contra tendencia, sin atribución: no libera capital (las lecturas de los meses 6 y 9 no pasan por throughput) y solo puede producir espera o corte. Alternativa con su costo, a decidir por Personas y CAIO: prolongar la base prospectiva a la semana 8 y desplazar 4 semanas la formación básica, la prueba y la formación intermedia, antes de iniciar cualquier tratamiento |
+| Congelamiento | Versión, δ, factor y umbral se fechan antes de la segunda liberación y no se editan desde que se congela la base. Un cambio posterior es un desvío: se registra con fecha y motivo, rige desde la ventana siguiente y la ventana en curso se lee con la versión vigente al abrirse |
+| Viabilidad | Durante la primera autorización, con la serie de la preparación previa, se estima σ (dispersión entre personas del cambio relativo) y el semiancho esperado con la cohorte real, también para calidad; se verifica antes de la segunda liberación. Condición, sin dato observado: con semiancho ≈ 1,645 σ / √n, el caso base (+3,75% en los meses 4-6, +9% en los meses 7-9) pasa la lectura del mes 6 con semiancho ≤ 0,75 (σ ≤ 1,8 con n = 15; ≤ 2,0 con n = 20; equivale a n ≥ 4,8 σ²) y la lectura del mes 9 con ≤ 1 (σ ≤ 2,4; ≤ 2,7; n ≥ 2,7 σ²). Con el máximo permitido (3), los límites son 0,75 y 6, y ninguno pasa: la precisión mínima separa las bandas, pero no alcanza para que el caso base pase. Si el σ de la preparación previa supera esos valores, el caso base espera en la lectura del mes 6 y corta; el Anexo F lo sabe antes de la segunda liberación y reformula (por ejemplo, decidir solo en la lectura del mes 9 si σ ≤ 2,4 / 2,7) o presenta el caso base como espera-y-corte. Con N < 15 no se decide por valor |
 
 **Precedencia de calidad.** Evaluá incidentes y retrabajo por separado: si
 cualquiera tiene límite inferior > 0, hay daño y el gate corta, incluso si su
@@ -289,8 +292,10 @@ bootstrap percentil puede ser asimétrico y el gate usa su límite inferior real
 ### Acta de viabilidad de datos, antes de ratificar el método
 
 Propuesta pendiente de ejecución y ratificación. Tener PR,
-CI y tickets no prueba que las series sean enlazables. Antes de aprobar el
-método y de iniciar el tratamiento, el acta debe permitir que otro operador
+CI y tickets no prueba que las series sean enlazables. El acta y el protocolo
+retrospectivo se producen durante la primera autorización, mediante lectura de
+datos corporativos autorizados, y se verifican antes de la segunda liberación.
+Antes de aprobar el método y de iniciar el tratamiento, el acta debe permitir que otro operador
 reproduzca la extracción y las acciones del gate con el mismo corte.
 
 - Guardá consulta o script versionado, permisos de lectura, fecha de corte,
@@ -673,8 +678,9 @@ tramo. Los meses 1-3 absorben la fase de diagnóstico de los primeros 100
 días ([fuente](../../material/conceptos/m1u2-plan-100-dias.md)). Responsable de
 todos los hitos: **a designar**. Los criterios de abandono siguen el patrón
 kill/scale ([fuente](../../material/conceptos/m1u2-kill-scale-gates.md)).
-**Hoy solo se autorizan los meses 1-3**; las filas de los meses 4-12 son la secuencia
-prevista y se liberan decisión por decisión.
+**Primero se solicita autorizar la validación previa; M1-M3 requiere una segunda
+liberación condicionada**. Las filas de los meses 4-12 son la secuencia prevista
+y se liberan decisión por decisión.
 
 **Cada mes** el AI Council hace su revisión mensual con el tablero ([Anexo C](03-gobierno-seguridad.md),
 "Ritmo operativo"): esa revisión puede frenar o cortar un frente, pero no libera
@@ -707,7 +713,9 @@ estimado aparte. Eso permite un tablero periódico sin servicio central nuevo.
 
 Entregables: inventario y matriz de controles, acta de viabilidad reproducible,
 base congelada, registro de cambios de prácticas, lecturas de uso y calidad y
-comparación de alternativas en M3. Aplicá los controles obligatorios antes de
+comparación de alternativas en M3. El acta se produce en la preparación previa,
+se verifica antes de M1 y se actualiza si cambian las fuentes o el método.
+Aplicá los controles obligatorios antes de
 medir la base y documentalos como punto de partida; formación y prácticas
 nuevas empiezan después del congelamiento. M1-M3 no promete ganancia atribuida.
 
@@ -745,6 +753,31 @@ el rango deja de ser válido. No se presume que la plataforma resuelva esa falta
 
 El pedido vigente es el mínimo técnico de M1-M3 de arriba, consolidado con C/D
 en el [Anexo E](05-business-case.md), sección «Pedido inicial: paquete mínimo».
+Su ejecución requiere una segunda autorización; la primera cubre la validación
+inicial de [la fuente del mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial).
+Martin eligió esta propuesta para el borrador; no acredita consenso del equipo,
+autorización empresarial ni disponibilidad confirmada.
+
+La preparación técnica conserva **20-40 h**: tech lead **4-8 h** de viabilidad
+de B, tech lead **8-16 h** de preparación/facilitación de D y QA **8-16 h** de B.
+Son horas ya incluidas en B/D y extraídas de M1-M3 en E, no un adicional.
+La validación organizativa agrega **60-96 h** separadas. En conjunto, la primera
+liberación propone **80-136 h**, techo de **8 mil USD de tiempo** y **caja 0**.
+
+Esa ventana de **10 días hábiles** comienza después de la autorización específica
+y de confirmar agenda, fuentes, trabajo desplazado e imputación 2026.
+El trabajo técnico se limita a lectura y reproducción sobre datos corporativos
+autorizados; no incluye instrumentación nueva, despliegues, herramientas ni
+contratos nuevos. No consta ejecución previa.
+
+Antes de M1, la segunda autorización exige diagnóstico, matriz de capacidad,
+roles empresariales, viabilidad de medición, recosteo y presupuesto 2027
+aprobados según E y [Anexo F](06-roadmap-riesgo.md). Libera hasta **71 mil USD**
+restantes: límite acumulado **79 mil**, de los cuales **10 mil son caja** y
+**69 mil son tiempo**. No habilita prácticas automáticamente: cada uso requiere
+dictamen y restricciones aplicables, controles probados, verificación
+independiente y aceptación del residual, además de base congelada.
+
 No se aprueban el contractor ni la excepción de 0,3 FTE del paquete completo;
 una ampliación exige nuevo alcance, calendario y costeo.
 
@@ -776,13 +809,13 @@ su caja entre en el techo de los meses 1-3 lo verifica el Anexo E.
 
 ### Calendario de prerrequisitos (preparación previa y meses 1-3)
 
-Los Anexos B, C, D y F ubican en lugares distintos la línea base, la ratificación
-y el estudio de la matriz. Desde la arquitectura, la propuesta es:
+La propuesta articula preparación y ejecución mediante las dos autorizaciones
+del Anexo E y los gates del Anexo F:
 
 | Cuándo | Qué | Costo |
 |---|---|---|
-| Antes de la aprobación de hoy (la preparación previa, octubre-diciembre de 2026) | Verificar que existe historial utilizable de PR, integración continua, incidentes y tickets de los últimos dos trimestres (1 día-persona, supuesto) y extraer la **serie retrospectiva**, que sirve para estimar tendencia y ruido, no como base de atribución. Es un costo previo propuesto: el [Anexo E](05-business-case.md) lo consolida y la aprobación de hoy lo autoriza, o lo ratifica si consta la ejecución | ~USD 0,1-0,4 mil de tiempo de este anexo |
-| Semanas 1-4 del plan | **Base prospectiva congelada**, con la unidad de la sección "Throughput", antes de cualquier formación, prueba de prácticas o herramienta nueva; controles obligatorios previos documentados como punto de partida. Si la base se extiende a semana 8, también se desplazan básico, prueba e intermedio | Incluida en QA / análisis de datos del mínimo de arriba, consolidado en E, sección «Pedido inicial: paquete mínimo»; los 3-5 días-persona de DevOps/QA eran referencia del paquete completo |
+| Tras la primera autorización específica, preparación de octubre-diciembre de 2026, dentro de la ventana propuesta de 10 días hábiles | Verificar historial utilizable de PR, integración continua, incidentes y tickets de los últimos dos trimestres; producir el acta de viabilidad y el protocolo retrospectivo reproducible, con **serie retrospectiva** para estimar tendencia y ruido. Lectura sobre datos corporativos autorizados, sin instrumentación nueva. Verificar resultados antes de la segunda liberación; agenda e imputación 2026 confirmadas antes de trabajar | Las 20-40 h técnicas existentes de B/D, sin duplicación; junto con 60-96 h organizativas nuevas, techo conjunto de 8 mil USD de tiempo y caja 0, consolidado en E |
+| Semanas 1-4 del plan, después de la segunda autorización | **Base prospectiva congelada**, con la unidad de la sección "Throughput", antes de cualquier formación, prueba de prácticas o herramienta nueva; controles obligatorios previos documentados como punto de partida. Si la base se extiende a semana 8, también se desplazan básico, prueba e intermedio | Incluida en QA / análisis de datos del mínimo de arriba, consolidado en E, sección «Pedido inicial: paquete mínimo»; los 3-5 días-persona de DevOps/QA eran referencia del paquete completo |
 | Semanas 5-13 del plan | Matriz de superficies y telemetría unificada; medición contra la base, con control concurrente donde exista. **La ganancia no se atribuye antes de los meses 4-6** (la rampa base es 0% en los meses 1-3) | Dentro del esfuerzo de los meses 1-3 |
 
 La serie retrospectiva y la base prospectiva no se mezclan: la primera estima
@@ -984,9 +1017,9 @@ montos de facturación.
   por el gateway, y el agente de código pasa solo si eso no rompe la suscripción
   plana. Las que no pasan se cubren con control compensatorio verificado; los
   casos propios, siempre por gateway.
-- **Qué pedimos al board (un solo pedido, el de hoy):** el mínimo técnico de
-  M1-M3, consolidado en el [Anexo E](05-business-case.md), sección
-  «Pedido inicial: paquete mínimo», y adoptar el marco de gates. No se aprueban
+- **Qué pedimos al board:** primera autorización para validar en 2026;
+  segunda liberación condicionada para M1-M3, según el [Anexo E](05-business-case.md),
+  sección «Pedido inicial: paquete mínimo», y adoptar el marco de gates. No se aprueban
   el contractor ni la excepción de 0,3 FTE del paquete completo. Una ampliación
   exige nuevo alcance, calendario y costeo. No se aprueba el modelo propio
   ni compromisos mayores a 12 meses.
