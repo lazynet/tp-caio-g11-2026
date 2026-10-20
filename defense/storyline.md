@@ -8,6 +8,22 @@ y feedback. El arco sigue la revisión del 2026-10-15
 (`reviews/2026-10-15-comentarios-equipo.md`): problema → beneficio →
 alternativas → costo → resolución.
 
+## Qué tiene que demostrar la defensa
+
+El [capstone ante un panel ejecutivo](../material/conceptos/m3u4-capstone-panel-ejecutivo.md)
+evalúa cuatro competencias. Este es dónde las sostiene el plan, sin cambiar el
+orden de los actos:
+
+| Competencia | Dónde se demuestra | Cómo se prepara |
+|---|---|---|
+| Visión estratégica | Tesis y acto 1: medir el valor antes de ampliar | Síntesis ejecutiva: la tesis y la slide 10, dichas en menos de un minuto |
+| Justificación de inversiones | Actos 2 y 3: beneficio medido, pérdida máxima por salida, narrativa financiera | Cada cifra con su anexo; ninguna fuera del deck o de un anexo |
+| Gestión de objeciones | [Banco de objeciones](objeciones.md), con respuesta y evidencia por objeción | Mapeo de objeciones probables por tema, con quien responde cada una a designar |
+| Comunicación ejecutiva | Una decisión por slide y el cierre con el pedido | Ensayo con tiempos y preguntas bajo presión: todavía no se hizo |
+
+**Bajo presión:** responder con la cifra y el anexo; si no se sabe, decir qué se
+mide y en qué gate; no estimar en vivo ni cambiar el pedido en la sala.
+
 ## Tesis en una oración
 
 Acme Labs ya usa IA sin saber cuánto vale: proponemos medir el valor antes de
@@ -78,9 +94,20 @@ barata por el ROI de un paquete que no medimos.
 - **Pérdida máxima:** el resto de M1-M3 y las reservas requiere una
   segunda autorización de hasta 71; el acumulado es 79 (10 de caja y 69 de
   tiempo), no 79 nuevos. Si se corta antes de M1, el límite es 8; si se sale en
-  M3, es 79 hasta cerrar y 85 en el año con núcleo aprobado al salir. Son
-  Es el precio de aprender, sin restar beneficio. Esperar seis semanas en M6 y cortar
+  M3, es 79 hasta cerrar y 85 en el año con núcleo aprobado al salir. Es el
+  precio de aprender, sin restar beneficio. Esperar seis semanas en M6 y cortar
   tiene techo 102; cortar sin esperar, 95.
+- **Narrativa financiera, datos → narrativa → decisión** ([Anexo E](../plan/annexes/05-business-case.md#insumos-para-el-deck)):
+  *datos*, beneficio de caja 0 y un mínimo que cuesta hasta 79; *narrativa*, sin
+  retorno prometido se compra información, y si el board dice que no siguen
+  abiertas tres exposiciones sin monto: clientes que prohíben modelos externos y
+  uso sin regla, que el mínimo cubre, y consumo de modelos, que no cubre;
+  *decisión*, la primera autorización y los criterios de la segunda. La plata es
+  interna, por etapas y sin deuda.
+- **Personas, sin eludir el empleo:** formar y reasignar antes que desvincular,
+  con un estudio de un rol crítico que no decide desvinculaciones, chequeo de
+  equidad por grupo y sin compensación monetaria nueva en 12 meses
+  ([Anexo D](../plan/annexes/04-personas-cultura.md)).
 
 ## Cierre: resolución (slide 10)
 
@@ -116,3 +143,10 @@ liberar fondos."
 - Cualquier cifra que no esté en un anexo, o qué cliente o producto hay detrás
   de un alias o un rango.
 - Que la defensa está ensayada, mientras no haya un ensayo registrado.
+- Un monto para el costo de no actuar: son exposiciones sin probabilidad ni
+  pérdida estimada.
+- Un VPN: no hay tasa en el caso ni flujos positivos que descontar.
+- Que el reskilling retiene un porcentaje del talento: la cifra del curso no
+  tiene fuente.
+- Que el estudio del rol crítico decide recortes o que la postura sobre el
+  empleo ya está aprobada: es propuesta, la decide el Directorio con asesoría laboral.

@@ -228,6 +228,7 @@ size: 16:9
 - Básico para toda la organización e intermedio para una cohorte de 15-20.
 - Piloto de abril (n=12, autoseleccionado): uso alto, 17% completó los cursos.
 - **Metas por área:** Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones habilitadas ≥60% en el 12. Cumplir exactamente 85%/60%, con igual peso y toda Operaciones habilitada, da 72,5%; no es un techo ni cumplimiento del OKR combinado.
+- **Transición:** formar y reasignar antes que desvincular, con un estudio de un rol crítico y chequeo de equidad por grupo. Sin compensación monetaria nueva en 12 meses.
 
 </div>
 </div>
@@ -244,7 +245,7 @@ size: 16:9
 
 ---
 
-<p class="eyebrow">07 · Roadmap</p>
+<p class="eyebrow">07 · Roadmap técnico, financiero y cultural</p>
 
 # Validación inicial y fondos por decisión
 
@@ -252,12 +253,13 @@ size: 16:9
 
 | | Meses 1-3 → mes 3 | Meses 4-6 → mes 6 | Meses 7-9 → mes 9 | Meses 10-12 → cierre |
 |---|---|---|---|---|
-| Qué pasa | Diagnóstico, base, política, controles, formación y prueba | Solución según evidencia; medición del asistente | Aplicación; producto solo con señal | Evaluación y traspaso |
-| Techo caja / tiempo | **9 / 59** (segunda autorización) | 2 / 14 | 2 / 11 | 2 / 11 |
+| Técnico | Base, política, controles y prueba de prácticas | Solución según evidencia; medición del asistente | Aplicación; producto solo con señal | Evaluación y traspaso |
+| Cultural | Básico para todos; intermedio de la cohorte | Champions; diagnóstico de un rol crítico | Casos por rol; diseño del rol | Evaluación de lo que escala |
+| Financiero: techo caja / tiempo | **9 / 59** (segunda autorización) | 2 / 14 | 2 / 11 | 2 / 11 |
 | Pasa si | Base, política, controles probados, básico ≥90% | Límite inferior ≥ +3%, sin daño; Tec. ≥80% | Límite inferior ≥ +8% | Tec. ≥85%; Op. habilitadas ≥60% |
 | Plataforma | Se evalúa | Se relee | Se relee | Irreversibles, para después |
 
-<p class="note">Miles de USD; los meses 4-12 no se aprueban hoy. El Council puede frenar o cortar cada mes, sin liberar fondos. Un daño corta aunque el throughput pase. Las esperas de los meses 6 y 9 duran 6 semanas, con subtramo aprobado aparte; si no pasa, corta. Base extendida a la semana 8: formación y prueba arrancan en la 9.</p>
+<p class="note">Miles de USD; los meses 4-12 no se aprueban hoy. El Council puede frenar o cortar cada mes, sin liberar fondos. Un daño corta aunque el throughput pase. Las esperas de los meses 6 y 9 duran 6 semanas, con subtramo aprobado aparte; si no pasa, corta. Base extendida a la semana 8: formación y prueba arrancan en la 9. Cada gate lee adopción, impacto financiero y calidad.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -291,10 +293,11 @@ size: 16:9
 <div class="card"><strong>Caja:</strong> legal y herramientas</div>
 <div class="card"><strong>Tiempo:</strong> horas existentes, no nómina nueva</div>
 <div class="card rose"><strong>Beneficio presupuestado: 0</strong> (ROI modelado −100%)</div>
+<div class="card"><strong>Fuente:</strong> interna, por etapas, sin deuda</div>
 </div>
 </div>
 
-<p class="note">Miles de USD; suma de techos, sin restar beneficio. Esperar 6 semanas y cortar: 102 en el mes 6, 115 en el 9. El núcleo posterior (accesos, incidentes, permisos) cuesta caja 0 y hasta 6 de tiempo, y se aprueba al salir.</p>
+<p class="note">Miles de USD; suma de techos, sin restar beneficio. Esperar 6 semanas y cortar: 102 en el mes 6, 115 en el 9. El núcleo posterior (accesos, incidentes, permisos) cuesta caja 0 y hasta 6 de tiempo, y se aprueba al salir. Si no actuamos, siguen abiertos los clientes que prohíben modelos externos y el uso sin regla, que el mínimo cubre, y el consumo de modelos, que no cubre: sin montos.</p>
 
 <p class="eyebrow" style="margin-bottom:6px">Irreversibles: en el mes 12 y para después</p>
 
