@@ -65,7 +65,7 @@ verificador y autoridad firmante diferenciados ([Anexo C](03-gobierno-seguridad.
 ### El pedido de hoy: validar antes de liberar M1-M3
 
 El pedido completo está en la [Slide 10](../slides.md); la [Slide 9](../slides.md)
-muestra su pérdida máxima. Cifras en miles de USD, techos propuestos por Finanzas
+muestra su exposición presupuestaria máxima autorizada. Cifras en miles de USD, techos propuestos por Finanzas
 (Anexo E, "Pedido inicial: paquete mínimo"). La slide redondea los FTE; acá van
 los rangos exactos.
 
@@ -94,10 +94,11 @@ de validación organizativa ([fuente](../../context/supuestos/paquete-minimo-de-
 
 **Primera autorización propuesta: caja 0 y tiempo hasta 8.** Una segunda decisión
 puede liberar hasta **71 adicionales: caja 10 y tiempo 61**, incluidas reservas.
-El techo acumulado hasta cerrar en M3 es **79 = caja 10 + tiempo 69**
+La exposición presupuestaria máxima autorizada del tramo, acumulada hasta
+cerrar en M3, es **79 = caja 10 + tiempo 69**
 (59 de M1-M3 + 3 de técnica + 5 de organización + 2 de cierre), sin deducir
 beneficios; **85 en el año** si se aprueba el núcleo al salir. Son límites de
-autorización, no pérdida económica observada. El tiempo no es nueva nómina ni
+autorización, no pérdida económica incremental ni salida de caja. El tiempo no es nueva nómina ni
 pago externo. Fuera del pedido: los meses 4-12, la plataforma, el producto, el
 modelo propio, compromisos a más de 12 meses y todo compromiso con clientes.
 El techo de caja se confirma contra el presupuesto 2027 en privado.
@@ -384,7 +385,8 @@ fecha de revisión. Seguridad antes que dependencias y caja.
 Para el paquete mínimo, el [Anexo E](05-business-case.md) no presupuesta
 beneficios: **beneficio de caja estimado: 0; ingreso nuevo: 0**; capacidad sin
 cifra hasta medir. Por eso los escenarios se expresan como pérdida máxima por
-punto de salida, no como ROI. El ROI económico modelado sin beneficios es −100%;
+punto de salida, no como ROI. Al cortar en M3 coincide con la exposición
+presupuestaria máxima autorizada del tramo (79); los demás puntos no están autorizados hoy. El ROI económico modelado sin beneficios es −100%;
 no es un resultado observado.
 
 | Escenario | Qué pasa | Hasta cerrar, caja / tiempo → económico | Máximo del año |

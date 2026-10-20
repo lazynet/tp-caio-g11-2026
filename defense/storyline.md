@@ -95,11 +95,11 @@ barata por el ROI de un paquete que no medimos.
   agendas e imputación 2026 confirmadas antes de empezar. Incluye diagnóstico,
   matriz privada, viabilidad, verificación y cierre documental. Sin despliegues
   ni dictamen externo; el alcance y la cotización legal preparan la decisión.
-- **Pérdida máxima:** el resto de M1-M3 y las reservas requiere una
+- **Exposición presupuestaria máxima autorizada del tramo:** el resto de M1-M3 y las reservas requiere una
   segunda autorización de hasta 71; el acumulado es 79 (10 de caja y 69 de
   tiempo), no 79 nuevos. Si se corta antes de M1, el límite es 8; si se sale en
-  M3, es 79 hasta cerrar y 85 en el año con núcleo aprobado al salir. Es el
-  precio de aprender, sin restar beneficio. Esperar seis semanas en M6 y cortar
+  M3, es 79 hasta cerrar y 85 en el año con núcleo aprobado al salir. Son
+  techos, sin restar beneficio: no es pérdida económica incremental ni salida de caja. Esperar seis semanas en M6 y cortar
   tiene techo 102; cortar sin esperar, 95.
 - **Narrativa financiera, datos → narrativa → decisión** ([Anexo E](../plan/annexes/05-business-case.md#insumos-para-el-deck)):
   *datos*, beneficio de caja 0 y un mínimo que cuesta hasta 79; *narrativa*, sin
