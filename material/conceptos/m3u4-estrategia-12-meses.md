@@ -39,6 +39,9 @@ Fuente: [^m3u4]
 
 Fuente: [^m3u4]
 
+En el esquema de integración, el módulo 1 se resume como visión, KPIs y
+despliegue ético.[^m3u4]
+
 # Cautelas
 
 Las slides nombran los grupos de KPIs, pero no dan metas ni umbrales. "Usuarios

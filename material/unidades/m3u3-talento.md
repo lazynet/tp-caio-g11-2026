@@ -19,6 +19,9 @@ Cuatro bloques en las slides (20 en total):
 - **Compensación futura:** qué valorará el mercado y cuatro modelos emergentes. Ver [Compensación en el futuro sintético](/conceptos/m3u3-compensacion-futuro-sintetico.md).[^m3u3]
 - **Caso práctico:** estudio de impacto de la IA en un rol crítico, en cuatro fases. Ver [Deep Research de impacto en un rol](/conceptos/m3u3-deep-research-rol-critico.md).[^m3u3]
 
+Nota de fuente: la definición de reskilling y upskilling está solo en una imagen
+de la slide 9; se leyó renderizando el PDF.
+
 # Qué no cubren las slides
 
 El [programa](/programa.md) lista para esta unidad evaluación de desempeño en

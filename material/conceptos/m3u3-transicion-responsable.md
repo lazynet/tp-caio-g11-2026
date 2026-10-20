@@ -32,11 +32,17 @@ cada miembro de la fuerza laboral.[^m3u3]
 # Reskilling vs. upskilling
 
 El curso los presenta como enfoques complementarios para mantener el talento
-dentro de la organización. Según las slides, el upskilling mejora la productividad
-y la motivación de equipos existentes y reduce costos de contratación externa.[^m3u3]
-La extracción de texto no distingue una definición propia de cada término; la
-lectura habitual (reskilling = formar para otro rol, upskilling = profundizar el
-actual) es síntesis nuestra.
+dentro de la organización; ambos convergen en una "fuerza laboral preparada para la
+IA". La definición de cada uno está en una imagen de la slide:[^m3u3]
+
+| Reskilling | Upskilling |
+|---|---|
+| Aprendizaje de nuevas habilidades para un rol diferente | Profundización de habilidades existentes en el rol actual |
+| Nueva trayectoria profesional | Mejora del desempeño actual |
+| Capacitación completa para un rol totalmente distinto | Adquisición de nuevas capacidades dentro de la misma función |
+
+Según las slides, el upskilling mejora la productividad y la motivación de equipos
+existentes y reduce costos de contratación externa.[^m3u3]
 
 # Imperativo ético
 

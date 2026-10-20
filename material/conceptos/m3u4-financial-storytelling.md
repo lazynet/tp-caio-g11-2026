@@ -40,6 +40,10 @@ hacen posible, conectando cada cifra con la visión estratégica.[^m3u4]
 
 Fuente: [^m3u4]
 
+El esquema de integración de la unidad suma a este módulo la **alineación de
+partes interesadas** (stakeholders) como tercer componente, junto a la narrativa
+ejecutiva y la justificación de ROI; las slides no la desarrollan.[^m3u4]
+
 # Cautelas
 
 Las slides no dan fórmulas, plantillas ni un ejemplo numérico, y no tratan al CFO

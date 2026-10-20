@@ -36,6 +36,17 @@ Fuente: [^m3u4]
 
 Fuente: [^m3u4]
 
+# Integración de los cuatro módulos
+
+Esquema circular de la unidad "Plan Maestro CAIO":[^m3u4]
+
+| Módulo | Contenido |
+|---|---|
+| 1. Estrategia de 12 meses | Visión, KPIs, despliegue ético |
+| 2. Hoja de ruta tripartita | Infraestructura técnica, ROI financiero, cambio cultural |
+| 3. Narrativa financiera | Narrativa ejecutiva, justificación de ROI, alineación de partes interesadas |
+| 4. Panel de capstone | Defensa ejecutiva, manejo de objeciones, comunicación estratégica |
+
 Cierre de la unidad: el CAIO que domina estrategia, roadmap, financial storytelling
 y defensa está listo para liderar con impacto medible y sostenible.[^m3u4]
 

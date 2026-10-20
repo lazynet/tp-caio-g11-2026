@@ -16,6 +16,11 @@ status: draft
 Tres dimensiones interdependientes que deben avanzar en paralelo para que la
 estrategia sea sostenible: técnica, financiera y cultural.[^m3u4]
 
+Resumen visual de las tres dimensiones: técnico (infraestructura, MLOps,
+ciberseguridad, gobernanza de datos), financiero (asignación presupuestaria,
+cálculo de ROI, gestión de riesgos) y cultural (gestión del cambio, desarrollo de
+talento, alfabetización en IA).[^m3u4]
+
 # Roadmap técnico
 
 Evolución de los sistemas que soportan la IA, de la infraestructura a MLOps y la
