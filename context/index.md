@@ -2,9 +2,13 @@
 okf_version: "0.2"
 ---
 
-Caso propuesto, pendiente del acuerdo del equipo: **Acme Labs, la organización completa** (empresa argentina de
+Caso y alcance acordados en comisión: **Acme Labs, la organización completa** (empresa argentina de
 software para bancos, fintechs y grandes empresas). El plan cubre la IA en lo que
-se vende a clientes y en la operación interna. Solo hay datos públicos, con su
+se vende a clientes y en la operación interna.
+
+Acuerdo informado por Martín el 20/10/2026. Seguimiento: [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15).
+
+Solo hay datos públicos, con su
 URL, o datos internos anonimizados (alias, rangos, ratios, índices base 100); los
 datos reales viven en `private/`.
 

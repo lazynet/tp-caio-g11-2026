@@ -8,8 +8,10 @@ Maestro del CAIO a 12 meses, entregado en un único PDF de menos de 10 MB: 10
 slides como máximo (incluyendo portada y equipo) más anexos.
 
 **Estado:** hay un borrador completo y el caso elegido es **Acme Labs**,
-confirmado por el equipo. El borrador propone la organización completa
-(IA en el producto y en la operación interna); ese alcance sigue por ratificar.
+confirmado por el equipo. El alcance acordado en comisión es la organización
+completa (IA en el producto y en la operación interna).
+
+Acuerdo informado por Martín el 20/10/2026. Seguimiento: [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15).
 Los [responsables](#responsables-del-equipo) están acordados y el seguimiento
 se hace en el [backlog de GitHub Issues](#backlog-y-seguimiento).
 
@@ -451,11 +453,11 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 
 ## Pendientes del equipo
 
-Ya están acordados el caso Acme Labs, los ocho responsables y el formato de
-entrega. Falta ratificar el alcance propuesto, verificar las fuentes y resolver
+Ya están acordados el caso Acme Labs, el alcance de toda la organización, los
+ocho responsables y el formato de entrega. Falta verificar las fuentes y resolver
 las revisiones de cada sección antes del peer review.
 
-La ratificación de alcance se sigue en [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15).
+La revisión del diagnóstico se sigue en [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15).
 La verificación de datos del caso se coordina con los responsables de A–F;
 la del material y sus faltantes, incluido M3U4, en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
 
