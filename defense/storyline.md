@@ -1,7 +1,9 @@
 # Storyline de la defensa
 
-Borrador del CAIO a validar por el equipo, sobre un caso propuesto y pendiente
-del acuerdo del equipo. Responsable humano de la storyline: **pendiente**. Cada
+Borrador del CAIO a validar por el equipo, sobre el caso Acme Labs y el alcance
+de toda la organización (producto y operación interna), acordados en comisión
+([acuerdo de alcance informado por Martín](https://github.com/lazynet/tp-caio-g11-2026/issues/15)).
+Responsable humano de la storyline: **pendiente**. Cada
 cifra remonta a un anexo de `plan/annexes/`; ninguna tiene verificación humana.
 **No hubo ensayo todavía**: cuando lo haya, se registra con fecha, tiempos, roles
 y feedback. El arco sigue la revisión del 2026-10-15
