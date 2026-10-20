@@ -53,11 +53,19 @@ por nivel) no se hizo. Responsable de validar el puntaje: a designar.
 | Datos e infraestructura | 2 provisional | Hay AWS en varias cuentas, Kubernetes, GitOps y observabilidad ([stack](../../context/hechos/stack-y-plataforma.md)). Existe inventario de datos con responsables, clasificación y calidad documentada; las fuentes están distribuidas entre sistemas ([inventario](../../context/hechos/inventario-y-distribucion-de-datos.md)). Falta contrastar cobertura, accesos, integración y gobierno operativo para los casos de IA | Reutilizar y completar el inventario existente; demostrar acceso común, gobierno y calidad adecuados a las fuentes elegibles |
 | Talento y cultura | 2 provisional | No hay programa de formación en IA por rol con seguimiento de finalización ([formación](../../context/hechos/formacion-ia-por-rol.md)). Hay uso de herramientas y experiencias de aprendizaje: el piloto de abril (n=12, autoseleccionado) incluyó cursos, con 17% de finalización ([piloto](../../context/hechos/encuesta-y-pilotos-ia.md)). La adopción del agente de código difiere entre áreas y está condicionada por los clientes ([uso de IA](../../context/hechos/uso-ia-interno.md)); no prueba por sí sola madurez cultural ni competencias | Programa por rol con seguimiento de finalización y aprendizaje aplicado; suplentes para roles críticos, sujetos al diagnóstico de capacidades |
 | Gobernanza y ética | 2 provisional | Política de uso de IA aprobada según el responsable del caso; faltan revisar la documentación de aprobación y el estado actual de la matriz de clientes, el inventario de casos, el registro de riesgos y la operación del Council ([gobierno](../../context/hechos/gobierno-y-politica-ia.md)). La certificación de seguridad de la organización no demuestra controles específicos de IA ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) | Aplicación de la política y gobierno operativo con inventario de casos, registro de riesgos, matriz y comité funcionando con evidencia |
-| Adopción y valor | 1 en producto, 2 en interno | Sin IA productiva documentada en la oferta ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). En lo interno hay uso alto en Tecnología y un piloto con criterios cumplidos, pero sin línea de base de productividad ([productividad](../../context/supuestos/ganancia-de-productividad.md)) | Un caso en producción con valor medido contra una línea de base |
+| Adopción y valor | 1 en producto, 2 en interno, provisionales | No se documenta IA productiva en la oferta; el harness confirmado no se entrega ni comercializa a clientes ([oferta](../../context/hechos/ia-en-producto-y-oferta.md)). Hay herramientas de harness para el SDLC de uso exclusivamente interno, sin mediciones de tiempo, calidad o costo contra una línea de base para evaluar su impacto, según el responsable del caso ([uso interno](../../context/hechos/uso-ia-interno.md)) | Medir valor y calidad contra una base en los procesos internos; para producto, evidencia de una funcionalidad u oferta de IA con valor medido |
 
 No se promedian dimensiones ni frentes: en Adopción y valor se conserva la
 diferencia entre producto e interno. Las fuentes no permiten afirmar ausencia
-universal de toda medición: falta valor incremental medido contra una base.
+universal de toda medición: falta evidencia de valor incremental medido contra una base.
+
+El harness del SDLC se clasifica en el frente interno. Su existencia no prueba
+por sí sola valor incremental ni eleva el puntaje de producto; otros casos de
+IA en la oferta requieren evidencia propia.
+
+El harness existente integra el punto de partida de la medición prospectiva.
+La base y el protocolo permiten contrastar mejoras posteriores; no se atribuyen
+beneficios retrospectivos sin una comparación válida.
 
 En Talento y cultura, el 2 refleja uso y aprendizaje parciales, sin programa por
 rol con seguimiento. No se asignan niveles de madurez por área a partir de la

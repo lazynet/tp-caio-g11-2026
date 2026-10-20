@@ -70,10 +70,23 @@ mapean los siete componentes del harness
 ([fuente](../../material/conceptos/harness-agente-modelo-mas-harness.md)) a lo que
 Acme Labs ya tiene y a lo que falta.
 
+**Harness de SDLC existente.** El punto de partida incluye herramientas de harness
+para SDLC de uso exclusivamente interno: no se entregan ni comercializan a clientes
+([confirmación anonimizada](../../context/hechos/uso-ia-interno.md)).
+
+Su cobertura, funciones, estado operativo, controles, contexto y memoria, métricas
+y ahorro siguen sin verificar; se relevan antes de decidir qué reutilizar o ampliar.
+
+La existencia del harness de SDLC no demuestra que ya estén cubiertas las capacidades
+del harness central, gateway o plataforma de casos propios previstos.
+
+Se contrasta qué reutilizar o ampliar antes de sumar trabajo o presupuesto;
+su existencia no autoriza reconstruirlo automáticamente.
+
 | Componente | Estado objetivo | Punto de partida |
 |---|---|---|
 | Modelos y gateway | Capa única con ≥ 2 proveedores detrás y registro de uso y costo. Enruta por clasificación de datos y por cliente todos los casos propios; el agente de código, solo si su régimen comercial lo permite (ver "Política de ruteo") | Sin gateway (supuesto); herramientas por suscripción |
-| Contexto y memoria | Working set con presupuesto; si no entra, falla en voz alta; memoria externa versionada; retrieval con metadata (vigente, fuente, nivel, cliente) | No hay diseño de contexto formal |
+| Contexto y memoria | Working set con presupuesto; si no entra, falla en voz alta; memoria externa versionada; retrieval con metadata (vigente, fuente, nivel, cliente) | Diseño de contexto y memoria sin verificar, incluido el del harness interno de SDLC |
 | Datos | Revisar y ampliar el inventario existente para las fuentes elegibles; data contracts en las fuentes que alimenten casos ([fuente](../../material/conceptos/m1u3-data-contracts.md)); datos sintéticos donde no se puede usar el real | Existe inventario con responsables, clasificación y calidad documentada; datos distribuidos entre sistemas. Cobertura, vigencia, integración y gobierno operativo común no confirmados ([confirmación anonimizada, sin validación documental](../../context/hechos/inventario-y-distribucion-de-datos.md)) |
 | Herramientas (MCP) | Lista cerrada y aprobada; salida resumida con id, el dato nunca es una orden | Existe contrato de agentes de código con MCP aprobados ([fuente](../../context/hechos/gobierno-y-politica-ia.md)) |
 | Ejecución y aislamiento | Un tenant = cuenta AWS + namespace + índice + claves propias; cero contexto compartido entre clientes | Ya hay cuentas AWS separadas por proyecto ([fuente](../../context/hechos/stack-y-plataforma.md)) |
