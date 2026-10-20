@@ -4,7 +4,7 @@ title: "Paquete mínimo de aprendizaje sin plataforma central"
 description: "Finanzas concilia los insumos de B/C/D para medir valor con controles probados y herramientas existentes, con techos por etapa y salida acotada."
 status: draft
 tags: [supuesto, finanzas, capacidad, controles]
-generated: { by: codex/gpt-6, at: 2026-10-15T22:00:00Z }
+generated: { by: codex/gpt-6, at: 2026-10-20T15:08:36Z }
 ---
 
 # Supuesto
@@ -42,6 +42,31 @@ del mismo entregable técnico, sin absorber política en Seguridad.
 
 Si no se confirma, recostear antes de iniciar; no declarar estos solapes como
 ahorro acordado. Roles acumulados requieren agenda por persona.
+
+## Reserva propuesta de capacidad M1-M3
+
+Supuesto de planificación para solicitar capacidad; Operaciones y los managers
+deben confirmar personas, agendas y trabajo desplazado antes de cada actividad.
+La elección para el borrador no acredita disponibilidad empresarial.
+
+| Destino | Reserva propuesta | Derivación |
+|---|---|---|
+| Soporte clave, repartido entre roles | Hasta 720 h / 1,5 FTE de costeo | 1,5 × 480 h; demanda estimada de soporte 430-690 h |
+| Formación básica | 360-420 h | 60-70 personas × 6 h |
+| Formación intermedia | 180-240 h | Cohorte de 15-20 personas × 12 h |
+| Máximo combinado | 1.380 h / 2,875 FTE de costeo | 720 + 420 + 240; no incluye preparación previa ni cierre condicional |
+
+El soporte tiene 30 h de margen sobre su demanda máxima estimada (720 − 690).
+Ese margen agregado no cubre automáticamente faltantes de otro rol o semana.
+La formación de quienes también producen o verifican se suma en su agenda.
+
+La demanda costeada sigue en 970-1.350 h; la reserva de capacidad no es ejecución
+ni una reserva financiera adicional. El margen de 30 h no tiene actividad ni
+rol costeado: usarlo exige estimar su costo y autorizarlo antes de comprometerlo.
+
+Se mantienen los techos financieros del mínimo. Si la asignación adicional no
+cabe en ellos, reducir o resecuenciar el alcance, o elevar un recosteo para
+aprobación. No financiar agendas iniciales con productividad futura.
 
 Los insumos de D se refieren al Anexo D (`plan/annexes/04-personas-cultura.md`),
 sección «Insumo para el paquete mínimo»; son supuestos de planificación,
@@ -185,6 +210,8 @@ cambio contractual o base que no resuelve. Se reduce/resecuencia o recostea.
 # Cautelas
 
 Responsables humanos, ratificación del calendario, solapes y precios: pendientes.
+La reserva de capacidad es un supuesto del borrador, pendiente de confirmación
+por persona y semana; no libera por sí sola el hito de validación organizativa.
 La base puede extenderse hasta semana 8; básico, intermedio y prueba se desplazan
 a semana 9 y se revisa completitud M3. No se promete señal causal M3.
 Beneficio de caja estimado: 0; ingreso nuevo: 0. Capacidad sin cifra hasta medir;

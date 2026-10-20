@@ -982,6 +982,18 @@ Sin capacidad demostrada no se inicia la actividad. No hereda el piso de ~1,8
 clave ni el contractor del paquete completo. Ambas bolsas se concilian sobre
 las mismas personas en la matriz privada de D; no hay ganancias futuras para pagarlas.
 
+**Reserva propuesta de capacidad:** hasta **720 h / 1,5 FTE de soporte clave**,
+más **540-660 h de formación**; máximo combinado **1.380 h / 2,875 FTE de
+costeo**, sin preparación ni cierre condicional.
+
+Es un supuesto para solicitar agendas, según la [fuente del mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md#reserva-propuesta-de-capacidad-m1-m3).
+La demanda costeada sigue en 970-1.350 h. Las 30 h de margen sobre las 690 h
+de soporte máximo no representan ejecución ni reserva financiera adicional.
+
+El margen no tiene actividad ni rol costeado; usarlo requiere estimación y
+autorización previa. Si no cabe en el techo de tiempo de 59, reducir o
+resecuenciar, o elevar un recosteo. Los techos de caja, tiempo y salida se mantienen.
+
 Solapes propuestos, pendientes de validar por B/C/D: DevOps B 32-56 y C 40-64
 son una unión de configuración/prueba de 40-64, más inventario 4-8;
 QA B contiene D 8-16; seniors 64 contienen B 16-24.
@@ -1269,6 +1281,8 @@ cualquier excepción exige nuevo costeo y nueva decisión.
 - **Capacidad inicial:** 970-1.350 h / 480 = 2,0208-2,8125 FTE internos,
   incluidos 0,8958-1,4375 clave y 1,125-1,375 distribuidos; referencia 2,4167.
   Preparación 20-40 h aparte; agendas por persona pendientes, sin contractor continuo.
+- **Reserva propuesta:** 720 h clave más formación de hasta 660 h; máximo
+  1.380 h, sujeto a agendas confirmadas. Reserva no equivale a horas ejecutadas.
 - **Salida M3:** máximo 74 hasta cerrar; núcleo M4-M12 108 h, caja 0 y techo
   6 de tiempo; máximo anual con corte 80 solo si el núcleo se aprueba explícitamente
   en el gate de salida. Los 6 no están en los 74 de hoy; reservas no son gasto automático.

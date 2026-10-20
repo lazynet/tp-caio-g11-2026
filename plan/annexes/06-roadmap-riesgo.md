@@ -78,6 +78,17 @@ los rangos exactos.
 | 8. Núcleo tras un corte | Si se corta en el mes 3: 108 h en M4-M12 (36 por tramo), caja 0, **tiempo hasta 6**. Accesos, incidentes y permisos; no mantiene el experimento. Requiere aprobación explícita en el gate de salida y **no forma parte del total autorizado hoy** | Anexo E |
 | 9. Marco de decisión | Las tablas de abajo como regla de liberación de fondos, con la revisión mensual del Council (que puede frenar o cortar, pero no libera fondos) y la precedencia de seguridad sobre dependencias y caja | Este anexo |
 
+**Reserva propuesta de capacidad M1-M3:** hasta 720 h de soporte clave
+(1,5 FTE de costeo), más 540-660 h de formación; máximo combinado 1.380 h.
+Es un supuesto; Operaciones y los managers confirman agendas por persona y semana.
+
+La preparación previa y el cierre condicional tienen sus propias horas y
+autorizaciones, fuera de ese sobre de M1-M3.
+
+La demanda costeada sigue en 970-1.350 h. Las 30 h de margen sobre el máximo
+clave requieren costeo y autorización antes de usarse; no sustituyen el hito
+de validación organizativa ([fuente](../../context/supuestos/paquete-minimo-de-aprendizaje.md#reserva-propuesta-de-capacidad-m1-m3)).
+
 **Autorización total de hoy: caja 9 + 1 = 10; tiempo 59 + 3 + 2 = 64.** El tiempo
 no es nueva nómina ni pago externo. Pérdida máxima de aprendizaje si se sale en el
 mes 3: **74 hasta cerrar** (10 + 64), sin deducir beneficios; **80 en el año** si

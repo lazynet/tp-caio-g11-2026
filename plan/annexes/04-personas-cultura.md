@@ -599,6 +599,18 @@ Recomendación para M1-M3: básico de uso seguro para toda la organización, sin
 plataforma central, avanzado, red de champions al 10% ni contractor especializado
 continuo por defecto. No sustituye los controles de B/C ni prueba throughput.
 
+**Reserva propuesta.** Solicitar hasta **720 h de soporte clave (1,5 FTE de
+costeo)**, repartidas entre roles, más **540-660 h de formación**; máximo
+combinado **1.380 h**, sin preparación previa ni cierre condicional.
+
+Es un supuesto de planificación: Operaciones y los managers confirman personas,
+agendas y trabajo desplazado antes de iniciar cada actividad. La demanda de
+soporte sigue en 430-690 h; las 30 h de margen no están costeadas para ejecutar.
+
+La [fuente del mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md#reserva-propuesta-de-capacidad-m1-m3)
+separa demanda, reserva y autorización. Si alguien cumple varios roles y se
+capacita, la matriz semanal suma todas sus cargas sin duplicarlas.
+
 **Formación.** Mantener 6 h por persona del básico: clasificación de datos,
 herramientas y superficies permitidas por cliente, revisión del resultado,
 consulta e incidente. Incluye Tecnología, Operaciones, staff y dirección, con

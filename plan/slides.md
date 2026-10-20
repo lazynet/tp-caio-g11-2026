@@ -216,12 +216,12 @@ size: 16:9
 
 <div class="grid g2">
 <div class="card">
-<p class="eyebrow" style="color:var(--muted)">Capacidad interna de los meses 1-3</p>
+<p class="eyebrow" style="color:var(--muted)">Reserva propuesta para los meses 1-3</p>
 <div class="grid g2" style="margin:6px 0">
-<div class="kpi"><div class="num">2,0-2,8</div><div class="lbl">FTE internos en total (referencia 2,4)</div></div>
-<div class="kpi"><div class="num">0,9-1,4</div><div class="lbl">FTE clave, dentro del total</div></div>
+<div class="kpi"><div class="num">1,5</div><div class="lbl">FTE clave a reservar (720 h)</div></div>
+<div class="kpi"><div class="num">660 h</div><div class="lbl">Formación: máximo del tramo</div></div>
 </div>
-<p class="note">Salen de horas facturables: cada hora tiene origen, tarea desplazada y responsable en una matriz privada.</p>
+<p class="note">Supuesto: reserva máxima de 1.380 h; demanda estimada de 970-1.350 h. Confirmar agendas por persona y semana en una matriz privada.</p>
 </div>
 <div>
 
