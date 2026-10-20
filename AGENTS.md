@@ -140,28 +140,31 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
 
 ## Reglas
 
-- **La audiencia es toda la cohorte**, y además cualquiera en internet: aplicá
-  siempre la sección "Datos privados".
+- **La audiencia es toda la cohorte** y cualquiera en internet: aplicá siempre
+  "Datos privados".
 - **Todo número tiene fuente.** Una cifra en una slide se rastrea hasta un anexo,
   y el anexo dice el supuesto o la fuente. Los supuestos se marcan como tales.
+- **Los totales se recalculan.** Antes de commitear un anexo, recalculá cada total
+  y promedio desde sus componentes y mostrá la comparación.
 - **Un editor por archivo.** `caio` es el único que edita `plan/slides.md`. Cada
   anexo declara su agente dueño en el frontmatter (`owner: finance`) y lo escribe
-  ese dueño; los demás le proponen cambios. Los responsables humanos acordados
-  están en `README.md`; cualquier asignación nueva requiere acuerdo del equipo.
-- **Seguimiento.** GitHub Issues es el backlog. Registrá el trabajo en el issue
-  de su sección y enlazalo desde el PR con la evidencia de cierre. Estados,
-  formularios y flujo: `README.md`, sección "Backlog y seguimiento".
+  ese dueño; los demás le proponen cambios. Los responsables humanos están en
+  `README.md`; una asignación nueva requiere acuerdo del equipo.
+- **Seguimiento.** GitHub Issues es el backlog: registrá el trabajo en el issue
+  de su sección y enlazalo desde el PR con evidencia de cierre. Flujo:
+  `README.md`, "Backlog y seguimiento".
 - **Edición entre sesiones.** El rol define quién puede editar, no bloquea el
-  archivo: coordiná en el issue y usá una rama o worktree por tarea. Dos sesiones
-  con el mismo rol no editan el mismo archivo en paralelo.
-- **Desacuerdos a la vista.** Si dos miradas chocan, se deja explícito con las
-  alternativas y la evidencia de cada una; nadie lo resuelve inventando consenso.
-- **Revisiones proporcionales.** El borrador de una sección alcanza con una
-  revisión focalizada (el agente de esa mirada o `board` sobre esa sección) y
-  feedback humano. El skill `board-review` completo se corre antes del peer
-  review y de la entrega.
+  archivo: coordiná en el issue, con una rama o worktree por tarea. Dos sesiones
+  del mismo rol no editan el mismo archivo en paralelo.
+- **Desacuerdos a la vista.** Si dos miradas chocan, se dejan explícitas con
+  alternativas y evidencia; nadie lo resuelve inventando consenso.
+- **Revisiones proporcionales.** Un borrador alcanza con una revisión focalizada
+  (el agente de esa mirada o `board` sobre la sección) y feedback humano. El skill
+  `board-review` completo se corre antes del peer review y de la entrega.
+- Que slides o PDF no desbordan se afirma tras abrir el render y describir lo
+  visto; conteo de páginas y estructura no son revisión visual.
 - Commits: `tipo: descripción corta` en español, sin trailers.
-- Cambios a `main` por PR, con los chequeos en verde y aprobación del code owner.
+- Cambios a `main` por PR, con chequeos en verde y aprobación del code owner.
   No uses `--admin` ni saltees hooks. No publiques sin autorización del pedido.
 
 ## Agentes
