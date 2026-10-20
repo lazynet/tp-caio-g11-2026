@@ -606,7 +606,7 @@ pueden llegar después.
   la persona designada por el Directorio, con autoridad y límites asentados. Las tres
   personas (productor, verificador y autoridad del gate) están a designar.
 - **Cuándo:** el agregado llega al Council al menos dos semanas antes de la decisión del mes 3
-  (propuesta, a fijar en la aprobación de hoy). El agregado anonimizado lo valida una persona
+  (propuesta, a fijar antes de la segunda liberación). El agregado anonimizado lo valida una persona
   designada antes; hasta entonces es supuesto y no sustenta la decisión.
 - **Qué cuenta:** solo el documento leído y clasificado. El ambiguo o no leído no cuenta;
   si por eso no se llega al umbral, el resultado es "sin señal por lectura incompleta" y no

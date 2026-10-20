@@ -672,7 +672,7 @@ las **60-96 h organizativas nuevas** de la primera liberación. Toda tarea de
 B/C/D ya presupuestada que se adelante se descuenta una sola vez de su
 ejecución posterior; no se suma el subtotal bruto de Personas a E.
 
-**Validación organizativa inicial: propuesta de Personas.** Estimación de
+**Validación organizativa inicial: estimación de Finanzas (agente); la estimación humana de Personas (#18, pregunta 3) sigue pendiente.** Estimación de
 planificación de la [fuente canónica](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial),
 sin agendas ni responsables empresariales confirmados:
 

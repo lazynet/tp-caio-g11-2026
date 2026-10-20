@@ -261,7 +261,7 @@ size: 16:9
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Primero validar; después decidir hasta 71 adicionales, con reservas. Acumulado máximo: 79.</span>
+<span class="body">Adoptar estos gates como regla para liberar fondos: primero validar; después decidir hasta 71 adicionales, con reservas. Acumulado máximo: 79.</span>
 <span class="ref">
 
 [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md)
@@ -273,7 +273,7 @@ size: 16:9
 
 <p class="eyebrow">08 · Costo y riesgo</p>
 
-# Exposición autorizada y condiciones de corte
+# Cuánto podemos perder para aprender
 
 <div class="grid main-side">
 <div class="plain">
@@ -294,7 +294,7 @@ size: 16:9
 </div>
 </div>
 
-<p class="note">Miles de USD; suma de techos, no pérdida económica observada. Esperar 6 semanas y cortar: 102 en el mes 6, 115 en el 9. El núcleo posterior (accesos, incidentes, permisos) cuesta caja 0 y hasta 6 de tiempo, y se aprueba al salir.</p>
+<p class="note">Miles de USD; suma de techos, sin restar beneficio. Esperar 6 semanas y cortar: 102 en el mes 6, 115 en el 9. El núcleo posterior (accesos, incidentes, permisos) cuesta caja 0 y hasta 6 de tiempo, y se aprueba al salir.</p>
 
 <p class="eyebrow" style="margin-bottom:6px">Irreversibles: en el mes 12 y para después</p>
 
@@ -307,7 +307,7 @@ size: 16:9
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Aceptar un techo acumulado de 79 hasta cerrar en M3, sujeto a dos autorizaciones.</span>
+<span class="body">Aceptar una pérdida máxima de aprendizaje de 79 hasta cerrar en M3, sujeta a dos autorizaciones.</span>
 <span class="ref">
 
 [Anexo E](annexes/05-business-case.md) · [Anexo F](annexes/06-roadmap-riesgo.md)
@@ -325,7 +325,7 @@ size: 16:9
 
 # Autorizar la validación inicial
 
-<p style="font-size:24px;line-height:1.4;max-width:1000px;color:#f3efe4">Autorizar primero diez días hábiles de validación: hasta 8 de tiempo interno y caja incremental 0, con agendas e imputación 2026 confirmadas. Con evidencia, decidir hasta 71 adicionales para M1-M3 y reservas: caja 10 y tiempo 61. Techo acumulado: 79; la segunda liberación y el año quedan condicionados.</p>
+<p style="font-size:24px;line-height:1.4;max-width:1000px;color:#f3efe4">Autorizar primero diez días hábiles de validación: hasta 8 de tiempo interno y caja incremental 0, con agendas e imputación 2026 confirmadas. Adoptar los gates de los meses 3, 6, 9 y 12. Con evidencia, decidir hasta 71 adicionales para M1-M3 y reservas: caja 10 y tiempo 61. Pérdida máxima hasta cerrar: 79; la segunda liberación y el año quedan condicionados.</p>
 
 <div class="grid g2" style="margin-top:auto;position:relative">
 <div>

@@ -95,7 +95,7 @@ Sin esas condiciones la ventana no comienza. Los responsables humanos se deben
 designar; los responsables del TP no sustituyen a quienes liberan agendas,
 aceptan riesgo o aprueban presupuesto en Acme Labs.
 
-**Validación organizativa adicional**, supuestos nuevos de Finanzas. Costo
+**Validación organizativa adicional**, estimación de Finanzas (agente) de 60-96 h; la estimación humana de Personas (#18, pregunta 3) sigue pendiente. Costo
 horario según [costo por rol](/supuestos/costo-cargado-por-rol.md)/160; las horas
 incluyen entrevistadores, entrevistados, managers, staff y autoridad que decide:
 

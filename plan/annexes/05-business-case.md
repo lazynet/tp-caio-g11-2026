@@ -379,7 +379,7 @@ el throughput no puede pasar; sin dato de la preparación previa, el pase del ba
 no un estimado.
 Que pase depende de σ, la dispersión entre personas del cambio relativo, y de n,
 las personas activas (semiancho ≈ 1,645 σ / √n, aproximación normal del
-*bootstrap*). **σ no tiene dato:** el Anexo B lo estima con la serie de la preparación previa antes de la aprobación de hoy.
+*bootstrap*). **σ no tiene dato:** el Anexo B lo estima con la serie de la preparación previa durante la primera autorización, antes de la segunda liberación.
 La tabla dice qué σ haría falta, no cuál hay:
 
 | n activas | σ máx. para pasar la lectura del mes 6 | σ máx. para pasar la lectura del mes 9 | σ máx. para semiancho ≤ 3 |
@@ -397,7 +397,7 @@ vence y corta** (≈ −245: 265 de costo, ~19 de capacidad, con la misma
 aproximación de medio tramo (meses 7-9) del pesimista; las partes publicadas dan −246). Es también
 el camino de una base que no resuelve (la decisión sobre la base que no resuelve, del [Anexo F](06-roadmap-riesgo.md)): si no se puede atribuir, la
 capacidad no cuenta y el neto es ≈ −265. Ninguna alternativa de esa decisión está costeada. Si la serie de la preparación previa da semiancho > 3 con
-la cohorte completa, el Anexo F reformula la lectura del mes 6 antes de la aprobación de hoy (por ejemplo, decidir solo en el mes 9
+la cohorte completa, el Anexo F reformula la lectura del mes 6 antes de la segunda liberación (por ejemplo, decidir solo en el mes 9
 si σ ≤ 2,4 con n=15), como prevé el Anexo B, o presenta el base como espera-y-corte. El mínimo es de
 **15 activas** ([N y cohorte](../../context/supuestos/desarrolladores-en-equipos-propios.md)).
 El pesimista espera en el mes 6 y corta al vencer las 6 semanas.
