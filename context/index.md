@@ -30,7 +30,7 @@ Hechos sobre el caso en los que se apoya el plan (`type: Hecho`), uno por archiv
 * [Situación económica 2026](/hechos/situacion-economica.md) - La facturación creció cerca de 35% entre enero y agosto de 2026, con margen EBITDA de 21-30% mensual.
 * [Stack y plataforma de delivery](/hechos/stack-y-plataforma.md) - Acme Labs desarrolla sobre Node/TypeScript, Java y Python, despliega en AWS con Kubernetes y GitOps, y gestiona el trabajo en GitHub y en la suite de Atlassian.
 * [Tamaño y estructura de la organización](/hechos/tamano-y-estructura.md) - Acme Labs tiene entre 60 y 70 personas, con un modelo mixto de nómina y contractors, y cerca del 80% en Operaciones y Tecnología.
-* [Uso actual de IA en la operación interna](/hechos/uso-ia-interno.md) - Acme Labs usa herramientas de IA corporativas y herramientas de harness para su SDLC de uso exclusivamente interno; su alcance e impacto siguen por contrastar.
+* [Uso actual de IA en la operación interna](/hechos/uso-ia-interno.md) - Acme Labs usa herramientas de IA corporativas y un harness del SDLC exclusivamente interno; no tiene mediciones contra una línea de base para evaluar el impacto de ese harness, según el responsable del caso.
 
 # Supuestos
 

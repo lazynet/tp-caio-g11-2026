@@ -40,7 +40,8 @@ cada gate.
   de harness para el SDLC de uso exclusivamente interno; no se cuentan como IA
   productiva de la oferta. La política de IA está aprobada según
   el responsable del caso; su aplicación y los controles siguen por verificar.
-- Lo que falta es valor incremental medido contra una base. Y el propio
+- No hay medición del impacto del harness contra una base, según el responsable
+  del caso ([uso interno](../context/hechos/uso-ia-interno.md)). El propio
   diagnóstico es una hipótesis: las fuentes mezclan poblaciones y fechas, así que
   financiamos primero una validación acotada para conciliar corte, nómina,
   contratistas, personas y horas por rol antes de liberar M1-M3.
