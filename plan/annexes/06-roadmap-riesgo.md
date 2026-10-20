@@ -6,10 +6,11 @@ title: "Anexo F — Roadmap ajustado por riesgo"
 
 # Anexo F — Roadmap ajustado por riesgo
 
-Slides que sustenta: [Slide 3 — Beneficio principal y captura](../slides.md),
-[Slide 8 — Roadmap a doce meses](../slides.md),
-[Slide 9 — Compromiso, pérdida y escenarios](../slides.md) y
-[Slide 10 — Resolución propuesta](../slides.md).
+Slides que sustenta (numeradas por página del deck, portada incluida):
+[Slide 3 — Beneficio](../slides.md),
+[Slide 8 — Roadmap técnico, financiero y cultural](../slides.md),
+[Slide 9 — Costo y riesgo](../slides.md) y
+[Slide 10 — Autorizar la validación inicial](../slides.md).
 
 > **Cifras estimadas, todavía sin validar contra fuentes internas;** se validan
 > antes de liberar la ejecución de M1-M3; la validación tiene autorización propia.
@@ -313,8 +314,13 @@ semanas no garantizan pasar.
 
 **Qué familia de indicador lee cada gate.** La
 [estrategia de IA a 12 meses](../../material/conceptos/m3u4-estrategia-12-meses.md)
-conecta la IA con el negocio por tres familias de KPI. Las condiciones de la tabla
-ya las cubren; acá se nombran para que el board vea qué mira en cada gate:
+conecta la IA con el negocio por tres familias de KPI. Esta tabla ordena por familia
+lo que mira el board en cada gate. Suma métricas de seguimiento que no están en la
+tabla de gates de abajo: de los Anexos D y E, Operaciones habilitadas ≥40% y destino
+de la capacidad liberada (mes 6), y Tecnología ≥80% sostenido, pedidos con ejemplos
+≥30% y costo por PR aceptado que no sube (mes 9); de la columna de gobierno de este
+anexo, residuales revisados (mes 12). En este anexo esas métricas se informan y no
+liberan ni cortan fondos; si tienen consecuencia, la fija el anexo de su dueño:
 
 | Gate | Adopción interna | Impacto financiero | Calidad |
 |---|---|---|---|
@@ -554,6 +560,7 @@ toman ahí rigen para el plan siguiente.
 - El cierre de un corte de la revisión mensual a mitad de tramo no está calculado
   aparte: usa las reservas vigentes.
 - Las fases y tramos del estudio del rol crítico son propuesta del Anexo D, sin
-  inventario real del rol. La tabla de familias de indicadores nombra condiciones
-  que ya estaban en los gates: no agrega umbrales.
+  inventario real del rol. La tabla de familias de indicadores suma métricas de
+  seguimiento (Anexos D y E, y la columna de gobierno) que no son condiciones de
+  gate: se informan y no mueven fondos en este anexo.
 - Responsable de cada gate y de cada decisión: a designar.

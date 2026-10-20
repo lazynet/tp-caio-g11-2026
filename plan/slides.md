@@ -254,12 +254,12 @@ size: 16:9
 | | Meses 1-3 → mes 3 | Meses 4-6 → mes 6 | Meses 7-9 → mes 9 | Meses 10-12 → cierre |
 |---|---|---|---|---|
 | Técnico | Base, política, controles y prueba de prácticas | Solución según evidencia; medición del asistente | Aplicación; producto solo con señal | Evaluación y traspaso |
-| Cultural | Básico para todos; intermedio de la cohorte | Champions; diagnóstico de un rol crítico | Casos por rol; diseño del rol | Evaluación de lo que escala |
+| Cultural | Básico para todos (≥90%); intermedio de la cohorte | Champions; diagnóstico de un rol crítico; Tec. ≥80% | Casos por rol; diseño del rol | Lo que escala; Tec. ≥85%, Op. habilitadas ≥60% |
 | Financiero: techo caja / tiempo | **9 / 59** (segunda autorización) | 2 / 14 | 2 / 11 | 2 / 11 |
-| Pasa si | Base, política, controles probados, básico ≥90% | Límite inferior ≥ +3%, sin daño; Tec. ≥80% | Límite inferior ≥ +8% | Tec. ≥85%; Op. habilitadas ≥60% |
+| Libera fondos si | Base, política, controles probados; consumo dentro de los techos | Límite inferior ≥ +3%, sin daño | Límite inferior ≥ +8% | Año 2: trayectoria al equilibrio o interés contractual |
 | Plataforma | Se evalúa | Se relee | Se relee | Irreversibles, para después |
 
-<p class="note">Miles de USD; los meses 4-12 no se aprueban hoy. El Council puede frenar o cortar cada mes, sin liberar fondos. Un daño corta aunque el throughput pase. Las esperas de los meses 6 y 9 duran 6 semanas, con subtramo aprobado aparte; si no pasa, corta. Base extendida a la semana 8: formación y prueba arrancan en la 9. Cada gate lee adopción, impacto financiero y calidad.</p>
+<p class="note">Miles de USD; los meses 4-12 no se aprueban hoy. El Council puede frenar o cortar cada mes, sin liberar fondos. Un daño corta aunque el throughput pase. Las esperas de los meses 6 y 9 duran 6 semanas, con subtramo aprobado aparte; si no pasa, corta. Base extendida a la semana 8: formación y prueba arrancan en la 9. Cada gate lee adopción, impacto financiero y calidad; la adopción reorienta la formación o se informa, no libera fondos.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
