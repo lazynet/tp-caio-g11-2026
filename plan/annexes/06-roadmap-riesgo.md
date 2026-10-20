@@ -236,10 +236,29 @@ revisión del Council con poder de corte, sin liberar fondos.** Techos en miles 
 | Tramo | Técnico y datos | Gobierno y seguridad | Cultural | Financiero: techo caja / tiempo |
 |---|---|---|---|---|
 | Preparación previa, con autorización propia | Acta de viabilidad; protocolo congelado | Estado de política y restricciones; roles y cotización legal | Diagnóstico y matriz privada; agenda 2026 propia | **0 / 8**, primera liberación |
-| Meses 1-3: diagnóstico, base, política, formación y prueba | Configuración de herramientas existentes; extracción y base; prueba de prácticas | Política/intake, matriz, inventario, legal focalizado; controles probados por superficie | Básico para todos; intermedio de la cohorte | **9 / 59**, más reserva de caja 1 y de cierre 2 |
-| Meses 4-6: solución según evidencia | Mantener controles y medición; descubrimiento del asistente (tiempo a primera integración exitosa); opción de plataforma si se cumplen regla y condiciones | Pruebas y residuales con vencimiento; lectura de señal contractual | Seguimiento de adopción con denominadores | 2 / 14, condicional |
-| Meses 7-9: aplicación y producto condicional | Continuidad; producto solo con base y señal del mes 6 y ruta técnica costeada | Amenazas de la función, si existe; cláusula tipo sin firma | Casos por rol dentro de horas aprobadas | 2 / 11, condicional |
+| Meses 1-3: diagnóstico, base, política, formación y prueba | Configuración de herramientas existentes; extracción y base; prueba de prácticas | Política/intake, matriz, inventario, legal focalizado; controles probados por superficie | Básico para todos; intermedio de la cohorte; mapeo de tareas de un rol crítico (propuesta del Anexo D) | **9 / 59**, más reserva de caja 1 y de cierre 2 |
+| Meses 4-6: solución según evidencia | Mantener controles y medición; descubrimiento del asistente (tiempo a primera integración exitosa); opción de plataforma si se cumplen regla y condiciones | Pruebas y residuales con vencimiento; lectura de señal contractual | Seguimiento de adopción con denominadores; champions con tiempo asignado; diagnóstico y proyección del rol | 2 / 14, condicional |
+| Meses 7-9: aplicación y producto condicional | Continuidad; producto solo con base y señal del mes 6 y ruta técnica costeada | Amenazas de la función, si existe; cláusula tipo sin firma | Casos por rol dentro de horas aprobadas; diseño de la ruta de desarrollo del rol | 2 / 11, condicional |
 | Meses 10-12: evaluación y traspaso | Lectura contra la base; traspaso y salida documentada | Revisión de residuales; irreversibles para después | Tecnología ≥85%; Operaciones habilitadas ≥60% | 2 / 11, condicional |
+
+**Tres dimensiones que dependen entre sí.** El [roadmap tridimensional](../../material/conceptos/m3u4-roadmap-tridimensional.md)
+pide que lo técnico, lo financiero y lo cultural avancen en paralelo porque se
+condicionan; los principios de gobernanza ética que el curso suma a ese roadmap
+viven acá en la columna de gobierno. En este plan, las dependencias que mueven
+fechas o fondos son estas:
+
+| Si se atrasa o falla | Qué arrastra | Regla |
+|---|---|---|
+| Base congelada (técnico) | Básico, intermedio, prueba y mapeo del rol (cultural); la lectura de throughput que libera fondos (financiero) | Formación y prueba arrancan después de congelar; extensión a la semana 8 desplaza las tres juntas |
+| Política y matriz (gobierno) | Repositorios habilitados para la prueba; frente producto | Sin matriz no hay prueba en ese repositorio; sin política ratificada, sin producto en el año |
+| Cohorte activa y tiempo liberado (cultural) | La lectura del throughput (financiero) | Con menos de 15 personas activas no se decide por valor: cuenta como espera |
+| Agendas y horas por rol (cultural y financiero) | Cualquier actividad del tramo | Sin horas liberadas por rol, la actividad no se inicia |
+| Postura sobre el empleo comunicada (cultural) | Participación franca en el estudio del rol | El estudio no arranca antes de esa comunicación ([Anexo D](04-personas-cultura.md)) |
+| Techo del tramo (financiero) | Alcance técnico y horas de formación del tramo siguiente | Excedido, la continuidad exige costeo nuevo aprobado |
+
+Las actas de los meses 3, 6 y 9 dejan además una línea con lo que se probó y no
+funcionó, como práctica de cultura de innovación del [Anexo D](04-personas-cultura.md);
+no suma costo ni hito.
 
 **Sin plataforma, la base no es "solo política".** En cualquier tramo sin
 plataforma central rige gobierno mínimo **más compensatorios aplicables probados
@@ -290,6 +309,25 @@ puntos, los límites inferiores son +0,75% y +6%, debajo de +3% y +8%. Pasarían
 solo con semianchos ≤0,75 y ≤1 punto. Es aproximación de planificación: el
 bootstrap real puede ser asimétrico y decide su límite inferior. N≥15 y ocho
 semanas no garantizan pasar.
+
+**Qué familia de indicador lee cada gate.** La
+[estrategia de IA a 12 meses](../../material/conceptos/m3u4-estrategia-12-meses.md)
+conecta la IA con el negocio por tres familias de KPI. Las condiciones de la tabla
+ya las cubren; acá se nombran para que el board vea qué mira en cada gate:
+
+| Gate | Adopción interna | Impacto financiero | Calidad |
+|---|---|---|---|
+| Mes 3 | Básico ≥90%; cohorte activa de al menos 15 | Caja y tiempo dentro del techo; consumo dentro de los techos | Base congelada; controles probados, críticos cerrados |
+| Mes 6 | Tecnología ≥80%; Operaciones habilitadas ≥40% (intermedia) | Límite inferior ≥ +3%; destino de la capacidad liberada | Retrabajo e incidentes sin daño; cobertura de controles |
+| Mes 9 | Tecnología ≥80% sostenido; pedidos con ejemplos ≥30% | Límite inferior ≥ +8%; costo por PR aceptado que no sube | Incidentes y retrabajo sin aumento; SLO y cero cruces de tenant si hay producto |
+| Mes 12 | Tecnología ≥85%; Operaciones habilitadas ≥60% | Trayectoria al equilibrio o interés contractual | Residuales revisados |
+
+Adopción no equivale a valor: un uso alto sin mejora de throughput o calidad se
+lee como uso de trámite. Las métricas financieras y su dueño están en el
+[Anexo E](05-business-case.md#métricas-financieras-que-se-leen-en-cada-gate); las de
+adopción y comportamiento, en el [Anexo D](04-personas-cultura.md). En el mes 6, el
+diagnóstico del rol crítico entra como evidencia de qué tareas se aumentan, no
+como condición de pase.
 
 | Gate | Condición | Pasa | Espera (plazo) | Corta o falta | Fondos que afecta |
 |---|---|---|---|---|---|
@@ -385,6 +423,8 @@ en que aparece el disparador; lo que requiera fondos nuevos espera al gate.
 | Incidente de datos de un cliente | Se suspende la IA sobre ese cliente y se reporta el mismo día | [Anexo C](03-gobierno-seguridad.md) |
 | Primer secreto expuesto | Revocar y rotar, contener el canal y decidir la reanudación con evidencia; la recurrencia escala a bloqueo | [Anexo C](03-gobierno-seguridad.md) |
 | Se va una persona clave sin suplente | Se congelan altas de casos de riesgo alto y se baja el alcance del tramo siguiente | [Anexo C](03-gobierno-seguridad.md) |
+| El rol no valida el mapeo al cierre de los meses 4-6, o se lee como paso previo a un recorte | Se vuelve al flujo de delivery como único insumo del rol; la postura sobre el empleo se comunica antes de retomar | [Anexo D](04-personas-cultura.md) |
+| Diferencia entre grupos en horas de formación liberadas o en rotación, que la agenda o el contrato no explican | Se corrige la agenda antes de seguir con el formato | [Anexo D](04-personas-cultura.md) |
 | La utilización cae bajo 80% dos meses por el plan | Se recorta el frente que más tiempo consume | [Anexo D](04-personas-cultura.md) |
 | Cortar en un gate o en una revisión mensual | Cierre con las reservas vigentes: 1 de caja y 2 de tiempo (16-24 h senior), recalculadas en cada gate antes de asumir obligaciones nuevas; si un contrato exige más preaviso, ampliarlas antes de comprometer | [Anexo E](05-business-case.md) |
 
@@ -418,6 +458,7 @@ en que aparece el disparador; lo que requiera fondos nuevos espera al gate.
 | Espera del mes 6 | Vence a las 6 semanas, con subtramo costeado y aprobado aparte: si sigue en la banda, corta el frente interno (102 hasta cerrar) | Sin salida hasta el mes 9 | Una espera sin regla de salida es gasto sin techo | Reversible |
 | Meta de adopción | Metas por área (Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones habilitadas ≥60% en el 12, con ≥40% en el 6 como meta intermedia), con combinado original, habilitados/total y cobertura publicados | Mantener el 80% combinado como meta única | Cumplir exactamente 85%/60% con toda Operaciones habilitada da 72,5%: es el resultado de esas metas, no un techo; las metas pueden superarse ([Anexo D](04-personas-cultura.md)) | Reversible, con el OKR 2027 |
 | Equilibrio en las slides | No va a las slides del mínimo: sin beneficio presupuestado no hay equilibrio que mostrar | ~17% de throughput atribuible del paquete completo como titular | Mostrarlo sugeriría un retorno que el mínimo no modela | Reversible |
+| Narrativa financiera | Datos → narrativa → decisión sin ROI positivo: el año compra información; el costo de no actuar se presenta como exposición abierta, sin monto ([Anexo E](05-business-case.md#costo-de-no-actuar)) | Narrativa de retorno con ROI, payback y VPN, como propone el [financial storytelling](../../material/conceptos/m3u4-financial-storytelling.md) | El mínimo presupuesta beneficio de caja 0; un ROI positivo o un costo de no actuar con monto exigirían inventar probabilidades o tasa | Reversible: se cambia cuando haya flujos positivos |
 
 ### Hipótesis de producto (RICE ajustado por riesgo)
 
@@ -510,4 +551,7 @@ toman ahí rigen para el plan siguiente.
   concentración siguen siendo inferibles para quien conozca la cartera.
 - El cierre de un corte de la revisión mensual a mitad de tramo no está calculado
   aparte: usa las reservas vigentes.
+- Las fases y tramos del estudio del rol crítico son propuesta del Anexo D, sin
+  inventario real del rol. La tabla de familias de indicadores nombra condiciones
+  que ya estaban en los gates: no agrega umbrales.
 - Responsable de cada gate y de cada decisión: a designar.
