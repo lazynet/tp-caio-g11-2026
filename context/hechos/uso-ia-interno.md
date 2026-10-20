@@ -1,10 +1,13 @@
 ---
 type: Hecho
 title: "Uso actual de IA en la operación interna"
-description: "Acme Labs usa tres herramientas de IA generativa con licencia corporativa; la adopción es alta en Tecnología y baja en Operaciones y en las áreas de staff."
+description: "Acme Labs usa herramientas de IA corporativas y herramientas de harness para su SDLC de uso exclusivamente interno; su alcance e impacto siguen por contrastar."
 status: draft
 tags: [caso, ia, adopcion]
 sources:
+  - id: confirmacion-caso-2026-10-20
+    resource: "Confirmación del responsable del caso, 20/10/2026 (anonimizada)"
+    title: "Herramientas de harness para el SDLC de uso exclusivamente interno"
   - id: interno-adopcion-ia-2026
     resource: "Documento interno de Acme Labs (privado, no publicado)"
     title: "Reportes de adopción de IA y licencias, abril a octubre de 2026 (privado, anonimizado)"
@@ -17,8 +20,22 @@ sources:
   - id: interno-okr-2026
     resource: "Documento interno de Acme Labs (privado, no publicado)"
     title: "OKR organizacionales 2026 y borrador de OKR de Tecnología 2027 (privado, anonimizado)"
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-13T23:00:00Z }
+generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
+# Harness para el SDLC
+
+El responsable del caso confirmó que hay herramientas de harness para el SDLC
+y que su uso es exclusivamente interno: no se entregan ni se comercializan a
+clientes.[^confirmacion-caso-2026-10-20]
+
+Esta confirmación acredita uso interno informado, no una funcionalidad de IA
+de la oferta. Su alcance, cobertura y capacidades concretas siguen por relevar;
+no se infiere que sean una plataforma central o un gateway de modelos.
+
+La existencia de herramientas no demuestra impacto incremental. La línea de
+base, la calidad de resultados y los costos se contrastan antes de atribuirles
+valor o ahorro.
+
 # Herramientas aprobadas
 
 | Herramienta | Uso | Alcance |
@@ -61,6 +78,10 @@ no por seats asignados.[^interno-okr-2026]
 
 # Cautelas
 
+- El harness del SDLC se registra por confirmación del responsable, sin revisión
+  documental ni técnica de su alcance o resultados en esta sesión.
+- Su uso exclusivamente interno no demuestra ni descarta otros posibles casos
+  de IA en producto; esos casos requieren evidencia propia.
 - La telemetría mide solo el agente de código. Las áreas de staff usan sobre todo
   el chat y Gemini, que esa telemetría no capta: su valor subestima el uso real.
 - Las personas de Operaciones trabajan con las herramientas que permite cada
@@ -68,6 +89,7 @@ no por seats asignados.[^interno-okr-2026]
 - Hay diferencias entre fuentes sobre la cantidad de seats; se publican rangos.
 
 [^interno-adopcion-ia-2026]: Reportes de adopción de IA y licencias, abril a octubre de 2026 (privado, anonimizado)
+[^confirmacion-caso-2026-10-20]: Confirmación del responsable del caso, 20/10/2026: existen herramientas de harness para el SDLC, solo de uso interno.
 [^interno-telemetria-ia-2026]: Telemetría de uso de agentes de código por área, septiembre y octubre de 2026 (privado, anonimizado)
 [^interno-politica-ia-2026]: Política de uso aceptable de IA, versión 1.0 en borrador, abril de 2026 (privado, anonimizado)
 [^interno-okr-2026]: OKR organizacionales 2026 y borrador de OKR de Tecnología 2027 (privado, anonimizado)
