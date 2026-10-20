@@ -61,8 +61,9 @@ barata por el ROI de un paquete que no medimos.
   cumplan, y quien produce la evidencia no es quien la verifica ni quien firma
   ([Anexo C](../plan/annexes/03-gobierno-seguridad.md)).
 - **Personas:** formar, reasignar y decidir una excepción externa solo si falta
-  un facilitador. El mínimo pide 2,0-2,8 FTE internos en total (0,9-1,4 clave),
-  que salen de horas facturables y se concilian por persona
+  un facilitador. Se propone reservar 720 h clave (1,5 FTE) más 540-660 h de
+  formación: máximo 1.380 h, con demanda costeada de 970-1.350 h. Son supuestos;
+  Operaciones confirma agendas y trabajo desplazado por persona y semana
   ([Anexo D](../plan/annexes/04-personas-cultura.md)).
 - **Roadmap:** diagnóstico, base, política, controles, formación y prueba en los
   meses 1-3; solución según evidencia en los 4-6; aplicación y producto
