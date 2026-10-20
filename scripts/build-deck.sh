@@ -9,16 +9,18 @@ src="$root/plan/slides.md"
 out="$root/out"
 
 renderer="${1:-all}"
-if [[ $# -gt 1 ]]; then
-  echo "Uso: $0 [all|entrega|marp|pandoc|html]" >&2
+mode=draft
+if [[ $# -gt 2 || ( $# -eq 2 && ( "$renderer" != entrega || "$2" != --delivery ) ) ]]; then
+  echo "Uso: $0 [all|entrega|marp|pandoc|html] [--delivery solo con entrega]" >&2
   exit 2
 fi
+if [[ $# -eq 2 ]]; then mode=delivery; fi
 case "$renderer" in
   all|entrega|marp|pandoc|html) ;;
   *) echo "Renderer inválido: $renderer. Usá all, entrega, marp, pandoc o html." >&2; exit 2 ;;
 esac
 # CAIO_PYTHON elige el intérprete: en Windows suele ser python, no python3.
-"${CAIO_PYTHON:-python3}" "$root/scripts/plan-check.py" --mode draft
+"${CAIO_PYTHON:-python3}" "$root/scripts/plan-check.py" --mode "$mode"
 mkdir -p "$out"
 
 # Versión de Marp fija para que todo el equipo genere el mismo deck. El tema

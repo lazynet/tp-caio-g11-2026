@@ -1,8 +1,8 @@
 # AGENTS.md — tp-caio-g11-2026
 
 `AGENTS.md` es el contrato portable para los agentes de IA y la fuente única de
-las reglas del repo. No agregues un `CLAUDE.md` ni copias de estas reglas para
-otra herramienta: dos contratos se desincronizan.
+las reglas del repo. Claude y VS Code consumen los roles compartidos; los
+adaptadores de Codex se generan. Nunca se mantienen copias de las reglas a mano.
 
 ## Idioma
 
@@ -17,20 +17,12 @@ frontmatter y los identificadores de código, porque las herramientas los espera
 El Trabajo Integrador Final de la *Diplomatura Chief AI Officer (CAIO)* de UTN BA:
 un **Plan Maestro del CAIO a 12 meses** para una organización, defendido ante un board.
 
-**Estado (borrador):**
+**Estado y responsables:** consultá el estado y el reparto acordado en
+`README.md`; es su única fuente. No conviertas acuerdos pendientes en decisiones.
 
-- **Acordado:** la diplomatura, el plan a 12 meses y la entrega: un único PDF de
-  menos de 10 MB, con máximo diez slides (portada y equipo incluidas) y anexos.
-- **Caso de trabajo:** Acme Labs (empresa argentina de software para fintech
-  y bancos), la **organización completa**: IA en el producto que vende y en su
-  operación interna. Lo propuso Martin con el OK del CEO; **falta registrar el
-  acuerdo del equipo**. `context/` tiene sus hechos y supuestos,
-  públicos o anonimizados.
-- **Hay un borrador completo:** deck, anexos A-F y defensa, todo en `draft`.
-- **Pendiente:** el acuerdo del equipo sobre el caso, los responsables humanos
-  de cada sección y la verificación
-  humana de las fichas de `context/` (`status: verified`), que la versión de peer
-  review necesita.
+**Entrega:** un único PDF de menos de 10 MB, con máximo diez slides (portada y
+equipo incluidas) y anexos. Generar el PDF no lo habilita para entrega: usá
+`scripts/build-deck.sh entrega --delivery` para exigir el gate de entrega.
 
 El plan tiene que integrar:
 
@@ -77,6 +69,8 @@ generado se edita: se corrige el markdown y se regenera. Requisitos (Python
 | `scripts/build-deck.sh` | Genera el deck y la entrega: `all` (default), `entrega`, `marp`, `pandoc` o `html` |
 | `.claude/agents/` | Los agentes por rol, fuente única para todas las herramientas |
 | `.agents/skills/` | Skills portables; `.claude/skills` es un symlink a esta carpeta |
+| `.codex/agents/` | Adaptadores TOML generados desde `.claude/agents/`; no se editan |
+| `scripts/harness-check.py` | Valida roles, rutas y adaptadores; `--write` los regenera |
 
 ## Fuentes
 
@@ -129,8 +123,8 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   sumalo acá. Para buscar algo en `material/`, empezá por `material/index.md` y
   `material/mapa-plan-fuentes.md`; antes de usar una cifra, mirá `material/huecos.md`.
 - **También van** `title`, `description` (una oración) y `generated: { by, at }`.
-  Quien escribe va en `generated.by` (`claude-code/<modelo>`, `codex/<modelo>` o
-  `human:<usuario-github>`).
+  Quien escribe va en `generated.by` (`claude-code/<modelo>`, `codex/<modelo>`,
+  `copilot/<modelo>` o `human:<usuario-github>`).
 - **Fuentes.** `sources` lleva un `id` por fuente, y cada afirmación la cita con
   una nota al pie cuya etiqueta es el `id`: `[^m1u2]`. Es obligatorio en `Hecho`,
   `Evidencia` y en toda afirmación atribuida a terceros. `Mapa` y `Hueco` pueden
@@ -163,6 +157,9 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   anexo declara su agente dueño en el frontmatter (`owner: finance`) y lo escribe
   ese dueño; los demás le proponen cambios. El dueño agente no es el responsable
   humano: esos se asignan cuando el equipo los acuerde, y no se inventan.
+- **Edición entre sesiones.** El rol define quién puede editar, no bloquea el
+  archivo: coordiná en el issue y usá una rama o worktree por tarea. Dos sesiones
+  con el mismo rol no editan el mismo archivo en paralelo.
 - **Desacuerdos a la vista.** Si dos miradas chocan, se deja explícito con las
   alternativas y la evidencia de cada una; nadie lo resuelve inventando consenso.
 - **Revisiones proporcionales.** El borrador de una sección alcanza con una
@@ -170,6 +167,8 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   feedback humano. El skill `board-review` completo se corre antes del peer
   review y de la entrega.
 - Commits: `tipo: descripción corta` en español, sin trailers.
+- Cambios a `main` por PR, con los chequeos en verde y aprobación del code owner.
+  No uses `--admin` ni saltees hooks. No publiques sin autorización del pedido.
 
 ## Agentes
 
@@ -191,17 +190,10 @@ dependencias, costo (si corresponde), riesgo, responsable humano (pendiente o
 acordado), criterio de éxito y condición de abandono. Si falta información, el
 agente la marca como faltante o supuesto y sigue; no la inventa.
 
-**Soporte por herramienta.** Que las definiciones sean compartidas no prueba que
-todas las herramientas las carguen igual:
-
-- **Claude Code:** observado (2026-10-11) que inyecta `AGENTS.md` al iniciar y
-  lista los seis agentes de `.claude/agents/` y el skill `board-review` como
-  disponibles. Invocarlos de punta a punta está pendiente de probar.
-- **GitHub Copilot (VS Code):** `.vscode/settings.json` activa
-  `chat.useAgentsMdFile`; la carga de agentes y skills está pendiente de probar.
-- **Codex:** observado que lee este contrato y ejecuta briefs, editando y
-  validando en worktrees. Con codex-cli 0.162.1 no deja elegir un agente
-  personalizado; alternativa: pasarle el contenido de `.claude/agents/<rol>.md`
-  como instrucciones, o adoptar el rol. No está probado rol por rol, ni que
-  descubra roles o invoque skills solo.
-- **Windows y Linux:** los scripts no están probados ahí.
+**Multi harness.** Las instrucciones del rol son compartidas; descubrimiento,
+herramientas y permisos dependen del runtime. Leé la matriz y las condiciones de
+carga en `README.md`, sección "Los agentes". Si no podés invocar un
+rol nativo, leé `.claude/agents/<rol>.md` y adoptalo explícitamente. Su campo
+`tools` no configura permisos fuera de Claude: respetá los límites del texto y
+reportá qué controles puede aplicar el runtime. Listado, carga e invocación de
+punta a punta son evidencias distintas; nunca las des por equivalentes.

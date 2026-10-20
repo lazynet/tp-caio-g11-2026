@@ -186,7 +186,8 @@ ver qué hay, abrí el `index.md` de cada carpeta. Las reglas están en `AGENTS.
 
 ## Los agentes
 
-Cada agente es un copiloto con una mirada. Se invocan por nombre:
+Cada agente es un copiloto con una mirada. Probá invocarlo por nombre según
+el soporte de tu harness (ver la matriz de abajo):
 
 | Agente | Le pedís… |
 |---|---|
@@ -199,14 +200,14 @@ Cada agente es un copiloto con una mirada. Se invocan por nombre:
 
 Ejemplos:
 
-- *"Con el agente finance, armá el borrador de plan/annexes/finance.md"*
+- *"Con el agente finance, iterá plan/annexes/05-business-case.md"*
 - *"Usá architect para proponer 2 alternativas de arquitectura con tradeoffs"*
-- *"Corré board-review sobre plan/annexes/finance.md"*: revisión focalizada de
+- *"Corré board-review sobre plan/annexes/05-business-case.md"*: revisión focalizada de
   un borrador, con un solo revisor pertinente. El path es obligatorio.
 - *"Corré board-review --integral y guardá la revisión en reviews/"*: las cuatro
-  miradas y después el board consolida, sobre `plan/` si no das otro objetivo.
+  miradas y después el board consolida, sobre `plan/` y `defense/` si no das otro objetivo.
   Es para antes del peer review y de la entrega.
-- *"Corré board-review sobre plan/annexes/finance.md --chat"*: la revisión vuelve
+- *"Corré board-review sobre plan/annexes/05-business-case.md --chat"*: la revisión vuelve
   en la conversación y no se escribe ningún archivo.
 
 Ni el skill ni el agente `board` escriben en `reviews/` si no se lo pedís; ante
@@ -216,18 +217,41 @@ Cada agente devuelve lo mismo, adaptado a su rol: problema, evidencia o
 supuesto, alternativas, recomendación, dependencias, costo, riesgo, responsable
 humano, criterio de éxito y condición de abandono (ver `AGENTS.md`).
 
-Las definiciones son compartidas, pero eso no prueba que cada herramienta las
-cargue igual. Esto es lo que sabemos hoy:
+Las definiciones son compartidas. El descubrimiento, las herramientas y los
+permisos dependen del harness. La compatibilidad documentada no equivale a una
+invocación probada con el plan:
 
 | Herramienta | Instrucciones (`AGENTS.md`) | Agentes por rol | Skill `board-review` |
 |---|---|---|---|
-| Claude Code | observado | listados como disponibles; invocación a probar | listado como disponible; invocación a probar |
-| VS Code + Copilot | configurado en `.vscode/settings.json`; a probar | a probar | a probar |
-| Codex | observado: leyó `AGENTS.md` y ejecutó briefs en worktrees | **no** deja elegirlos (codex-cli 0.162.1); alternativa: pasarle `.claude/agents/<rol>.md` como instrucciones, no probada rol por rol | a probar |
+| Claude Code | observado el 2026-10-11; requiere condiciones de carga de abajo | `.claude/agents/`; listados, invocación a probar | `.claude/skills/`; listado, invocación a probar |
+| VS Code + Copilot | configurado en `.vscode/settings.json`; carga a probar | `.claude/agents/` compatible según documentación; invocación a probar | `.agents/skills/` y alias Claude; invocación a probar |
+| Codex | observado: leyó `AGENTS.md` y ejecutó briefs en worktrees | `.codex/agents/*.toml` generado; carga e invocación a probar en el runtime de cada integrante | `.agents/skills/`; listado en esta sesión de Codex, invocación a probar |
 
-Si probás una celda "a probar", contalo en el grupo y actualizá la tabla.
-Las definiciones viven una sola vez en `.claude/agents/` y `.agents/skills/`.
-No las copies a otras carpetas para "tu" herramienta: se desincronizan.
+Claude Code admite `AGENTS.md` directamente desde la versión 2.1.277, pero su
+carga puede quedar desplazada por un `CLAUDE.md` o `CLAUDE.local.md` en el repo o
+en sus ancestros. Revisá la configuración de instrucciones del proyecto; para
+versiones anteriores, actualizá o pedí explícitamente leer `AGENTS.md`.
+Ver [condiciones de carga de Claude](https://code.claude.com/docs/en/memory#agentsmd).
+
+VS Code documenta agentes en formato Claude; esto no certifica Copilot CLI ni el
+agente cloud. Ver [ubicaciones y formatos de VS Code](https://code.visualstudio.com/docs/agent-customization/custom-agents).
+Codex documenta agentes propios en TOML; que no tenga un flag `--agent` no
+demuestra que no pueda delegar a un rol. Ver [subagentes de Codex](https://learn.chatgpt.com/docs/agent-configuration/subagents).
+
+Los roles se editan solo en `.claude/agents/`; los skills, en `.agents/skills/`.
+Después de cambiar un rol, corré `python3 scripts/harness-check.py --write` y
+versioná los adaptadores generados. CI rechaza rutas inexistentes, dueños sin
+rol y adaptadores desactualizados. `--write` no borra archivos huérfanos.
+
+Si no hay invocación nativa, pedile al agente leer `.claude/agents/<rol>.md` y
+adoptar ese rol. El frontmatter `tools` configura Claude; los adaptadores Codex
+transportan el texto y heredan los permisos de su sesión. Las restricciones de
+escritura por rol siguen siendo instrucciones, no un aislamiento de filesystem.
+
+Para registrar una prueba, anotá herramienta y versión, rol, prompt, archivos
+leídos o modificados y resultado. Probá lectura, edición del archivo propio y
+revisión sin cambios; para `board-review`, además aislamiento de contexto y
+consolidación. Nunca marques toda una fila como probada por haber listado roles.
 
 ## Cómo trabajamos
 
@@ -331,22 +355,24 @@ Separa por NUL, así que funciona aunque el nombre tenga espacios o saltos de l�
 
 ```bash
 ./scripts/build-deck.sh          # todos los formatos y la entrega
-./scripts/build-deck.sh entrega  # solo out/entrega.pdf: deck + anexos
+./scripts/build-deck.sh entrega  # PDF de borrador: deck + anexos
+./scripts/build-deck.sh entrega --delivery  # exige ready y fuentes verificadas
 ./scripts/build-deck.sh marp     # solo Marp: html, pdf, pptx
 ./scripts/build-deck.sh pandoc   # solo pandoc: pptx
 ./scripts/build-deck.sh html     # solo el html de Marp, lo más rápido
 ```
 
-Antes de renderizar, el script corre `plan-check.py --mode draft` y corta si la
-estructura del deck no es válida. Separá slides solo con `---` o `***` en su
+Antes de renderizar, el script corre `plan-check.py --mode draft`; con
+`entrega --delivery`, usa `--mode delivery` y corta antes del render si falla.
+Separá slides solo con `---` o `***` en su
 propia línea: se rechazan variantes con espacios (`- - -`) o `___`. Los links
-locales van en Markdown (`[anexo](annexes/finance.md)`); `href`/`src` locales
+locales van en Markdown (`[anexo](annexes/05-business-case.md)`); `href`/`src` locales
 en HTML se rechazan. El frontmatter se lee como YAML seguro y no admite claves
 duplicadas.
 
 | Salida | Sirve para |
 |---|---|
-| `entrega.pdf` | **lo que se entrega**: el deck, el índice de anexos y los anexos, en un solo PDF |
+| `entrega.pdf` | deck, índice y anexos en un PDF; para entrega, generarlo con `entrega --delivery` y revisar el render |
 | `deck-marp.html` / `.pdf` | revisar y presentar; el mejor diseño |
 | `deck-marp.pptx` | entregar si piden pptx (las slides van como imagen) |
 | `deck-pandoc.pptx` | pptx con texto editable, diseño básico |
@@ -357,8 +383,8 @@ al script, no se arma a mano.
 ### La entrega y los anexos
 
 La consigna pide **un único PDF de menos de 10 MB** con la presentación y los
-anexos. `build-deck.sh entrega` lo arma en `out/entrega.pdf`: el deck de Marp y
-después cada anexo de `plan/annexes/` en orden de nombre (`01-finanzas.md`,
+anexos. `build-deck.sh entrega --delivery` lo arma en `out/entrega.pdf`: el deck de Marp y
+después cada anexo de `plan/annexes/` en orden de nombre (`01-diagnostico.md`,
 `02-arquitectura.md`...), en A4. Entre el deck y los anexos agrega una página
 de índice con títulos y links internos. Las páginas de anexos se numeran desde
 1 al pie; el índice usa esa numeración. Las filas de tablas se mantienen juntas
@@ -378,7 +404,7 @@ entregan.
 En `entrega.pdf`, los links a slides y anexos incluidos navegan dentro del PDF,
 también hacia sus anclas. Los demás archivos del repo apuntan a GitHub, con
 `CAIO_PUBLIC_REF=main` por defecto. Para fijar una versión auditable, usá un
-commit publicado: `CAIO_PUBLIC_REF=<sha> ./scripts/build-deck.sh entrega`.
+commit publicado: `CAIO_PUBLIC_REF=<sha> ./scripts/build-deck.sh entrega --delivery`.
 El build rechaza links a `private/`, destinos internos inexistentes y cualquier
 URI `file://` que sobreviva en el PDF final.
 
@@ -389,6 +415,7 @@ donde dice `python3` usá `python`.
 
 ```bash
 ./scripts/okf-check.sh                                    # bundles OKF de tu working tree, borrador (CI lo corre sobre el checkout)
+python3 scripts/harness-check.py                         # roles, rutas y adaptadores generados
 ./scripts/okf-check.sh --staged                           # índice completo, borrador (como el hook)
 ./scripts/okf-check.sh --delivery --path material/unidades/m1u2-portfolio-100-dias.md
 python3 scripts/plan-check.py --mode draft                # estructura del deck

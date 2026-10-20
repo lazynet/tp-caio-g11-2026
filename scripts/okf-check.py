@@ -31,7 +31,9 @@ BUNDLES = {
     "defense/evidence": {"Evidencia"},
 }
 ID = re.compile(r"^[\w.-]+$", re.UNICODE)
-AUTHOR = re.compile(r"^(?:human:[A-Za-z0-9][A-Za-z0-9-]*|(?:codex|claude-code)/\S+)$")
+AUTHOR = re.compile(
+    r"^(?:human:[A-Za-z0-9][A-Za-z0-9-]*|(?:codex|claude-code|copilot)/\S+)$"
+)
 HUMAN = re.compile(r"^human:[A-Za-z0-9][A-Za-z0-9-]*$")
 
 

@@ -1,10 +1,11 @@
 ---
 name: board-review
 description: Revisión del plan CAIO desde las miradas de rol y del board. Focalizada (una sección o anexo en borrador, con un revisor pertinente) o integral (cuatro miradas más consolidación del board, antes del peer review y de la entrega). Usalo cuando pidan una revisión del board, una pre-revisión o poner a prueba slides o anexos.
-argument-hint: "<objetivo> [--rol architect|governance|people|finance|board] [--integral] [--chat]"
 ---
 
 # board-review
+
+Uso: `<objetivo> [--rol architect|governance|people|finance|board] [--integral] [--chat]`.
 
 Dos modos. Elegí el más chico que sirva: el borrador de una sección no necesita
 cinco revisiones antes del feedback humano (ver "Revisiones proporcionales" en
@@ -20,7 +21,8 @@ cinco revisiones antes del feedback humano (ver "Revisiones proporcionales" en
 Antes de lanzar a nadie, dejá por escrito:
 
 - **Objetivo:** paths exactos. Focalizada: el argumento es obligatorio; si falta,
-  preguntá. Integral: sin argumento es `plan/`, y lo decís.
+  preguntá. Integral: sin argumento es `plan/` y `defense/`, y lo decís. Si el
+  pedido limita el alcance, respetalo y marcá lo que queda fuera de evaluación.
 - **Versión (captura inmutable):** los revisores leen una copia capturada, nunca
   paths vivos que otro revisor o el equipo pueda tocar. Capturá en memoria:
   1. SHA base (`git rev-parse HEAD`) y `git status --short -- <objetivo>`.
@@ -34,8 +36,11 @@ Antes de lanzar a nadie, dejá por escrito:
   5. Verificación: repetí `git status` y los hashes. Si algo cambió durante la
      captura, descartá el paquete y reintentá; no revises una mezcla de versiones.
 
-  Todo revisor recibe exactamente ese paquete. Con `--chat` o sin escritura, el
-  paquete vive en memoria: ni diff ni copias en archivos temporales.
+  Conservá la captura completa en variables del runtime cuando sea posible,
+  sin volcarla entera a la conversación. Cada revisor recibe el mismo manifiesto
+  de versión y solo los archivos necesarios para su mirada, siempre extraídos
+  de esa captura. Con `--chat` o sin escritura, el paquete vive en memoria: ni
+  diff ni copias en archivos temporales.
 - **Criterios:** la consigna del TIF tal como la resume `.claude/agents/board.md`
   (no un framework de la cursada) y la mirada del rol. Una cifra se acepta solo
   si remonta a una ficha `verified` con bloque `verified:`. Distinguí dos
@@ -52,7 +57,8 @@ Antes de lanzar a nadie, dejá por escrito:
 
 ## 2. Armá el paquete de cada revisor
 
-Cada revisor recibe **solo**: el objetivo y su versión, las fuentes pertinentes
+Cada revisor recibe **solo**: las instrucciones del rol y las reglas aplicables
+de `AGENTS.md`, el objetivo y su versión, las fuentes pertinentes
 (fichas de `context/`, `material/` o `defense/evidence/` que el objetivo cita) y
 los criterios. No le pases la justificación del autor, el historial de la
 conversación ni los hallazgos de otro revisor: la independencia es un criterio
@@ -61,6 +67,10 @@ cuatro, y nada más que eso además del objetivo.
 
 Si tu herramienta no puede aislar el contexto (por ejemplo, corrés vos mismo
 las miradas), no lo finjas: en el reporte escribí "sin aislamiento de contexto".
+Usá una sesión nueva o el equivalente a `fork_turns: none`; una copia de la
+conversación del autor no es una revisión independiente. Si el paquete no cabe,
+dividí por secciones conservando el manifiesto y declarando las omisiones; no
+dejes que un truncamiento silencioso se convierta en un aprobado.
 
 ## 3. Planificá las tandas
 
@@ -79,6 +89,7 @@ las miradas), no lo finjas: en el reporte escribí "sin aislamiento de contexto"
    comandos slash.
 5. Al trasladar un rol, respetá las herramientas reales: los revisores no
    editan nada; `board` solo escribe en `reviews/` y solo si la sección 5 lo permite.
+   El orquestador lanza las tandas; no dependas de que cada revisor pueda delegar.
 
 ## 4. Cada revisor devuelve
 
@@ -101,13 +112,14 @@ no pudo leer algo (archivo ausente, fuente sin acceso), lo reporta aparte como
   los anonimiza (ver "Datos privados" en `AGENTS.md`). Un snapshot crudo con
   datos privados, si el usuario autoriza conservarlo, va solo en `private/`.
 
-El reporte (guardado o en chat) lleva: SHA base, status, `git diff HEAD` del
-objetivo y lista de archivos nuevos con su sha256 (y su contenido, salvo que
-sea dato privado); paths revisados; criterios usados; modo, tandas y si hubo
+El reporte (guardado o en chat) lleva: SHA base, status y manifiesto de paths y
+sha256 de la captura; resumen del diff y de los archivos nuevos (el contenido
+completo queda en el paquete, no se repite en cada reporte); criterios usados;
+modo, tandas y si hubo
 aislamiento o ejecución secuencial; veredicto por sombrero del board (integral o
 `board`); hallazgos ordenados por severidad con ubicación, dueño y condición de
 cierre; limitaciones de acceso en sección aparte; y las 5 preguntas más difíciles
-para `defense/objections.md`.
+para `defense/objeciones.md` a través de `caio`.
 
 ## 6. Devolvé al usuario
 
