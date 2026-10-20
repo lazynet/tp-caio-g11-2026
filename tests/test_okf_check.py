@@ -74,6 +74,19 @@ class CheckerTests(unittest.TestCase):
         self.assertEqual(self.check(path, True).errors, [])
         self.assertIn("type: Supuesto", path.read_text())
 
+    def test_authorship_accepts_each_supported_harness(self):
+        for author in (
+            "codex/test",
+            "claude-code/test",
+            "copilot/test",
+            "human:author",
+        ):
+            with self.subTest(author=author):
+                path = self.concept(META.replace("codex/test", author))
+                self.assertEqual(self.check(path).errors, [])
+        path = self.concept(META.replace("codex/test", "unknown/test"))
+        self.assertTrue(self.check(path).errors)
+
     def test_verified_requires_human_complete_block(self):
         cases = [
             "status: verified\n",

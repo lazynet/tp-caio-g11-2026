@@ -42,7 +42,7 @@ español rioplatense, con:
 - Checklist de la consigna con cumple / no cumple (en la focalizada, solo los
   ítems que toca la sección).
 - Las 5 preguntas más difíciles que harías en la defensa, para alimentar
-  `defense/objections.md`.
+  `defense/objeciones.md` a través de `caio`.
 
 ## Límites y faltantes
 
