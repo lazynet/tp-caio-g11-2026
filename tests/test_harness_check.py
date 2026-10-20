@@ -36,6 +36,7 @@ class HarnessTests(unittest.TestCase):
             self.write(f"plan/annexes/{name}.md", f"---\nowner: {owner}\n---\n")
         for name in ("plan/slides.md", "defense/storyline.md", "defense/objeciones.md"):
             self.write(name, "# Ejemplo\n")
+        (self.root / "defense/evidence").mkdir()
 
     def write(self, name, content):
         path = self.root / name
@@ -107,6 +108,45 @@ class HarnessTests(unittest.TestCase):
         )
         errors = checker.check(self.root, write=True)
         self.assertTrue(any("más de un rol" in error for error in errors), errors)
+
+    def claim_as(self, role, target):
+        path = self.root / f".claude/agents/{role}.md"
+        path.write_text(
+            path.read_text().replace(
+                "## Sos dueño de", f"## Sos dueño de\n\n- `{target}`"
+            )
+        )
+
+    def test_two_roles_cannot_claim_the_deck_or_the_defense(self):
+        for target in (
+            "plan/slides.md",
+            "defense/storyline.md",
+            "defense/objeciones.md",
+        ):
+            with self.subTest(target=target):
+                self.claim_as("people", target)
+                errors = checker.check(self.root, write=True)
+                self.assertTrue(
+                    any(target in e and "más de un rol" in e for e in errors), errors
+                )
+                shutil.copy(REPO / ".claude/agents/people.md", self.root / ".claude/agents/people.md")
+
+    def test_sole_owner_must_declare_the_deck(self):
+        path = self.root / ".claude/agents/caio.md"
+        path.write_text(path.read_text().replace("- `plan/slides.md`", "- slides"))
+        errors = checker.check(self.root, write=True)
+        self.assertTrue(
+            any("plan/slides.md" in e and "caio no declara" in e for e in errors),
+            errors,
+        )
+
+    def test_missing_role_folder_is_rejected(self):
+        (self.root / "defense/evidence").rmdir()
+        errors = checker.check(self.root, write=True)
+        self.assertTrue(
+            any("ruta inexistente" in e and "defense/evidence/" in e for e in errors),
+            errors,
+        )
 
     def test_invalid_role_description_is_a_validation_error(self):
         path = self.root / ".claude/agents/board.md"

@@ -8,6 +8,13 @@ from pathlib import Path
 import yaml
 
 ROLES = {"caio", "architect", "governance", "people", "finance", "board"}
+ROLE_PATH = r"`((?:plan|defense)/[^`]+(?:\.md|/))`"
+# Archivos de dueño único fijado por AGENTS.md y README.md.
+SOLE_OWNER = {
+    "plan/slides.md": "caio",
+    "defense/storyline.md": "caio",
+    "defense/objeciones.md": "caio",
+}
 
 
 def expected_adapters(root):
@@ -35,14 +42,19 @@ def expected_adapters(root):
         except (ValueError, TypeError, KeyError, yaml.YAMLError) as exc:
             errors.append(f"{path.relative_to(root)}: frontmatter inválido: {exc}")
             continue
-        for target in re.findall(r"`((?:plan|defense)/[^`]+\.md)`", body):
-            if not (root / target).is_file():
+        for target in re.findall(ROLE_PATH, body):
+            found_target = (
+                (root / target).is_dir()
+                if target.endswith("/")
+                else (root / target).is_file()
+            )
+            if not found_target:
                 errors.append(f"{path.relative_to(root)}: ruta inexistente: {target}")
         owned = re.search(
             r"^## Sos dueño de\n(.*?)(?=^## |\Z)", body, re.MULTILINE | re.DOTALL
         )
         if owned:
-            for target in re.findall(r"`((?:plan|defense)/[^`]+\.md)`", owned[1]):
+            for target in re.findall(ROLE_PATH, owned[1]):
                 claims.setdefault(target, set()).add(path.stem)
         # El TOML transporta instrucciones, no una traducción ficticia de permisos.
         instructions = (
@@ -93,6 +105,11 @@ def check(root, write=False):
             )
         elif claims[path.relative_to(root).as_posix()] != {owner}:
             errors.append(f"{path.relative_to(root)}: más de un rol reclama el anexo")
+    for target, owner in SOLE_OWNER.items():
+        if owner not in claims.get(target, set()):
+            errors.append(f"{target}: su dueño {owner} no declara el archivo")
+        elif claims[target] != {owner}:
+            errors.append(f"{target}: más de un rol reclama el archivo")
     if (
         not (root / ".claude/skills").is_dir()
         or (root / ".claude/skills").resolve() != (root / ".agents/skills").resolve()
