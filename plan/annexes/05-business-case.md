@@ -13,25 +13,51 @@ Slides que sustenta: [Slide 4 — Alternativas](../slides.md) y
 ## Objetivo
 
 Decirle al board, con números trazables, **qué compra la plata, cuándo se ve y
-cómo se frena**. El paquete completo a 12 meses **no se paga con productividad
-interna**. El mínimo compra evidencia sin presupuestar beneficios: medir valor,
-riesgo y demanda antes de ampliar. Se pide primero una validación previa acotada;
-M1-M3 requiere una segunda autorización, con techos de caja y capacidad.
+cómo se frena**. El plan protege, mide y explora, y cada frente se justifica de
+manera distinta:
+
+- **Protección del negocio existente.** Hay usos de IA en curso. Los controles
+  que los acompañan no se justifican por principio ni por retorno: cada uno
+  declara **qué restricción contractual, qué riesgo específico o qué necesidad de
+  evidencia** lo motiva, y cuál es la alternativa de menor costo —configurar lo
+  existente, restringir el uso o ampliar controles—. Un control que no pueda
+  nombrar ese motivo se reformula o se retira. Este anexo informa su costo; el
+  valor lo juzga quien acepta el riesgo.
+- **Eficiencia operativa.** La productividad interna se mide, no se presupuesta.
+  La capacidad liberada no es caja hasta que exista una vía para convertirla
+  —venderla o evitar una contratación—, y hoy no existe ninguna de las dos.
+- **Crecimiento comercial.** Es una opción estratégica a explorar con evidencia,
+  no un ingreso del año ni un alcance aprobado. El modelo imputa ingresos
+  nuevos 0.
 
 **Pedido inicial: paquete mínimo.**
 Medir antes de ampliar, con herramientas existentes y controles aplicables probados,
-sin plataforma central. La propuesta económica vigente está en «Pedido inicial:
-paquete mínimo»: primera autorización de caja 0 / tiempo 8 durante la preparación
-de 2026; segunda, condicionada y no liberada ahora, de caja 10 / tiempo 61 para
-M1-M3 y reservas de cierre (miles de USD, techos).
+sin plataforma central. Se pide primero una validación previa acotada; M1-M3
+requiere una segunda autorización, con techos de caja y capacidad. La propuesta
+económica vigente está en «Pedido inicial: paquete mínimo»: primera autorización
+de caja 0 / tiempo 8 durante la preparación de 2026; segunda, condicionada y no
+liberada ahora, de caja 10 / tiempo 61 para M1-M3 y reservas de cierre (miles de
+USD, techos).
 
-El límite acumulado propuesto es **79 = caja 10 + tiempo 69**: validación
-organizativa 5 + preparación técnica 3 + M1-M3 59 + cierre interno 2 de tiempo.
-No autoriza el año ni acredita aprobación empresarial.
+**Qué es el número que se pide.** El límite acumulado de **79** es el **límite de
+autorización del alcance presupuestado**, y se compone de caja 9, tiempo
+valorizado a costo cargado 59, preparación técnica 3, validación organizativa 5 y
+reservas contingentes 3 (1 de caja y 2 de cierre), en miles de USD. Equivale a
+caja 10 + tiempo 69, y a las dos liberaciones, 8 + 71. No autoriza el año ni
+acredita aprobación empresarial.
+
+No es una previsión de gasto: es un techo, y los rangos calculados de cada
+componente, más abajo, quedan por debajo de los techos redondeados. Tampoco es el
+costo económico incremental total: la contribución comercial desplazada es una
+magnitud distinta, todavía sin medir, que se informa por separado
+(«Conclusión económica»).
 
 El pedido completo 33+6 de caja / 72+7 de tiempo y sus ramas ≈199/≈400 quedan
 como **alternativa** (paquete completo), no como pedido vigente. Las tablas de
-plataforma, retorno y cortes que siguen describen ese alcance y no el mínimo.
+plataforma, retorno y cortes que siguen describen ese alcance: **su ROI de −84%
+corresponde a una inversión que hoy no se solicita** y no debe leerse como
+resultado del mínimo. El paquete completo a 12 meses no se paga con productividad
+interna; el mínimo compra evidencia sin presupuestar beneficios.
 
 Responsable de cada cifra y de cada gate: **a designar**. Son cifras estimadas,
 todavía sin validar contra fuentes internas; se validan antes de comprometer
@@ -708,8 +734,8 @@ ninguno de estos ítems**: cada uno remonta a un hecho o supuesto del caso.
 | Clientes financieros | Sin matriz de restricciones, inventario de uso ni cláusula, un cliente que por defecto prohíbe modelos externos sobre su código no tiene base para habilitar IA | Matriz, inventario y legal focalizado (caja 2-6) como entregables de M1-M3 | El ingreso en juego es el del cliente principal (40%-50% de la facturación). Si los controles costaran 1% de la facturación, alcanzaría con bajar entre 7 y 12 puntos la probabilidad de perderlo (el mínimo cuesta mucho menos); esa probabilidad no tiene estimación y la juzga el board | [apetito de riesgo de los clientes](../../context/supuestos/apetito-de-riesgo-de-clientes.md), [continuidad de clientes](../../context/supuestos/continuidad-de-clientes-principales.md) |
 | Reglas y aplicación por contrastar | El responsable del caso informó que la política está aprobada; falta revisar su respaldo documental y contrastar la regla vigente sobre uso personal del seat corporativo, su aplicación y el intake | Revisión documental de la política aprobada, aplicación e intake con estado actualizado, inventario de uso | La aprobación informada no acredita aplicación ni controles. El uso fuera de las herramientas aprobadas **no está medido**: no se le pone cifra ni se atribuye ahorro a la aprobación | [gobierno y política de IA](../../context/hechos/gobierno-y-politica-ia.md), [encuesta y pilotos](../../context/hechos/encuesta-y-pilotos-ia.md) |
 
-**Cómo se usa en la defensa.** Contra el pedido de 79 de pérdida máxima (caja 10 +
-tiempo 69) no se pone una cifra de «costo de no actuar» para ganar el ROI, que es
+**Cómo se usa en la defensa.** Contra el pedido de 79 de exposición presupuestaria
+máxima autorizada (caja 10 + tiempo 69) no se pone una cifra de «costo de no actuar» para ganar el ROI, que es
 −84% en el paquete completo y no se positiviza. Se dice qué exposición sigue abierta
 si el board dice que no, cuál cubre el mínimo (clientes, reglas y aplicación por contrastar) y cuál no
 (consumo). Es la forma honesta de contestar al CFO escéptico: el plan no promete
@@ -769,7 +795,7 @@ conservan su dueño.
 
 | Familia | Métrica | Cómo se lee en el gate | Dónde se define |
 |---|---|---|---|
-| Impacto financiero | Caja y tiempo ejecutados contra el techo y la reserva de cierre vigente | Pérdida máxima hasta cerrar (79 en M3); sin reserva ampliada no se libera el compromiso nuevo | Este anexo («Cuánto pierdo si corto») |
+| Impacto financiero | Caja y tiempo ejecutados contra el techo y la reserva de cierre vigente | Exposición presupuestaria máxima autorizada hasta cerrar (79 en M3); sin reserva ampliada no se libera el compromiso nuevo | Este anexo («Cuánto pierdo si corto») |
 | Impacto financiero | Throughput atribuible por límite inferior (+3% en el mes 6, +8% en el mes 9) | Pasa, espera o corta. Rige si el board amplía al paquete completo; en el mínimo, M3 no atribuye ganancia | [Anexo F](06-roadmap-riesgo.md) y este anexo |
 | Impacto financiero | Costo por PR aceptado | No sube en el mes 9; separa lo que cuesta producir del throughput | Este anexo («Costo por outcome») |
 | Impacto financiero | Múltiplo efectivo del consumo y destino de la capacidad liberada | Más de 6× sin mitigar en un tramo congela la expansión; sin destino en el mes 6 la capacidad no se cuenta como beneficio | Este anexo («Riesgos y mitigación») |
@@ -1043,11 +1069,47 @@ cierra) y el producto desde el mes 4 (gasta 37 de caja y 55 de tiempo antes de l
 
 ### Pedido inicial: paquete mínimo
 
-**Problema y recomendación.** Falta evidencia de valor incremental para ampliar
-inversión. Comprar configuración, controles y aprendizaje con herramientas existentes,
-sin plataforma central. Fuente de **todos los supuestos del mínimo**, conciliaciones
-y límites: [paquete mínimo de aprendizaje](../../context/supuestos/paquete-minimo-de-aprendizaje.md).
+**Problema y recomendación.** Tres frentes con justificación distinta y una sola
+respuesta mínima.
+
+- **Protección.** Hay usos de IA en curso sin controles probados por superficie
+  y sin matriz de restricciones de clientes. Cada control de este tramo se
+  vincula a una restricción contractual, a un riesgo identificado o a una
+  necesidad de evidencia concreta, y se prueba antes de habilitar el uso; los
+  que no puedan hacerlo se reducen o se excluyen junto con el uso que los
+  motiva. No se presupuesta beneficio por este frente.
+- **Eficiencia.** Falta evidencia de valor incremental. Hay uso y hay gasto, y no
+  hay una base contra la cual compararlos. Lo que se compra es la medición, no
+  la mejora: la rampa de los meses 1-3 es 0% y el tramo no promete atribución.
+- **Crecimiento.** No se compra en este tramo y no se amplía el alcance. El
+  descubrimiento de integración ya costeado en la continuación condicional
+  (meses 4-6) es la única actividad comercial prevista; cualquier exploración
+  más amplia exige alcance, costeo y decisión propios.
+
+La respuesta mínima es común a los tres: configuración, controles probados y
+medición sobre herramientas existentes, sin plataforma central. Fuente de
+**todos los supuestos del mínimo**, conciliaciones y límites:
+[paquete mínimo de aprendizaje](../../context/supuestos/paquete-minimo-de-aprendizaje.md).
 No son precios cotizados ni disponibilidad humana demostrada.
+
+**Validación temprana: qué cubre la preparación y qué no.** La preparación
+técnica previa de 20-40 h (techo 3) ya tiene contenido asignado: 4-8 h de
+viabilidad técnica y 8-16 h de extracción e historial del
+[Anexo B](02-arquitectura.md), más 8-16 h de preparación de facilitación del
+[Anexo D](04-personas-cultura.md). Esas horas **no cubren** la validación
+organizativa que el hito necesita: completar la matriz de capacidad, designar al
+verificador independiente que exige el [Anexo C](03-gobierno-seguridad.md) y
+cotizar el dictamen legal con alcance acordado. Completar la matriz no estaba
+costeado en ningún anexo.
+
+Por eso **el hito no se afirma contenido en el techo anterior de 74**: se
+recosteó como primera liberación acotada («Primera autorización») con 60-96 h
+organizativas adicionales (techo 5), y el acumulado pasó a 79. Quedan por
+conciliar qué tareas ya están dentro de la preparación y la estimación de horas
+de la matriz por parte de Personas; si exceden el techo, se vuelve a costear. Dos
+cosas siguen pendientes y condicionan su ejecución: **no consta ejecución previa
+de la preparación** y **las autoridades que la aprueban están a designar**. La
+liberación del resto del tramo no es automática por aprobar la validación.
 
 **Entregables M1-M3.** Política/intake con estado actualizado, matriz de restricciones,
 inventario y legal focalizado; permisos/MCP/escaneo y pruebas por superficie,
@@ -1230,9 +1292,13 @@ cierre ya estaban costeados; solo la validación organizativa agrega 5 al techo.
 El techo de caja 10 requiere facturación anual de al menos 334 mil al 3%
 o 1 millón al 1%; quien tiene acceso verifica presupuesto 2027 en privado.
 
-**Pérdida máxima de aprendizaje M3:** si nada demuestra valor y se abandona
-la prueba, hasta **79 mil económicos hasta cerrar = 10 caja + 69 tiempo**,
-sin deducir ganancias. Núcleo posterior M4-M12: **108 h**, 36 por tramo
+**Exposición presupuestaria máxima autorizada del tramo (M3):** si nada demuestra
+valor y se abandona la prueba, la autorización comprometida hasta cerrar llega a
+**79 = 10 de caja + 69 de tiempo**, sin deducir ganancias. **No equivale a una
+pérdida económica incremental ni a una salida de caja de ese monto:** el
+desembolso efectivo de caja es 2,3-8,6 (techo 9; la reserva de caja de 1 es
+contingente) y el resto es tiempo valorizado de personas que ya están en la
+organización. Núcleo posterior M4-M12: **108 h**, 36 por tramo
 (TL 12 + Seguridad 12 + staff 12), **caja 0 / tiempo hasta 6** (2 por tramo).
 
 Se ocupa de accesos, incidentes y permisos; no mantiene el experimento ni habilita
@@ -1485,19 +1551,71 @@ cualquier excepción exige nuevo costeo y nueva decisión.
 | Financiar con fuentes externas o híbridas | Material de la cursada | Interna, porque el pedido es chico y reversible; la híbrida solo en el tramo del producto con señal de cliente | **Propuesta** a CAIO; responsable a designar |
 | El paquete contra alcances más baratos | Finanzas | Comparación publicada pendiente de homogeneizar; una señal no demuestra repago | **Vigente:** pedido inicial mínimo; plataforma se reevalúa M3/M6/M9, con cuatro condiciones adicionales pendientes de ratificación |
 
+## Conclusión económica
+
+Tres magnitudes distintas, que responden preguntas distintas:
+
+| Magnitud | Meses 1-3 | Qué responde |
+|---|---|---|
+| Recursos valorizados a costo cargado | 14,3-58,3 | Cuánto vale el tiempo asignado |
+| Desembolso incremental de caja | 2,3-8,6 | Cuánto sale efectivamente de la empresa |
+| Contribución comercial desplazada | sin medir | Cuánto margen se deja de ganar |
+
+La validación previa (80-136 h; 1,4875-6,35 calculados, techo 8) es tiempo
+valorizado sin desembolso de caja. Sobre estas magnitudes se fija el **límite de
+autorización del alcance presupuestado**: 79 acumulados (caja 9 + tiempo
+valorizado 59 + preparación técnica 3 + validación organizativa 5 + reservas 3).
+Es un techo, no un gasto esperado.
+
+**Cómo se combinan sin doble conteo.** Depende del escenario de comparación y de
+qué costos son evitables:
+
+- Frente a **«no hacer el programa»**, el costo cargado de una persona en nómina
+  no es evitable —el sueldo se paga igual—, así que el incremental es el
+  desembolso de caja más la contribución desplazada.
+- En una **valuación del recurso consumido**, corresponde el costo cargado,
+  porque mide lo que vale el tiempo asignado.
+- **El doble conteo aparece** al sumar, sobre la misma hora, el costo cargado y
+  la tarifa completa: la tarifa ya contiene ese costo. Se evita midiendo la
+  contribución como margen sobre costos evitables.
+
+Cada magnitud se informa por separado, con el escenario que la hace pertinente.
+
+**Alcance del ROI.** El ROI económico modelado de −100% corresponde **al alcance
+mínimo y a los supuestos de ese modelo**, que no presupuesta beneficios
+cuantificados dentro de los 12 meses. No implica que el programa carezca de
+beneficios: los de protección y de opción se declaran sin cifra porque no hay
+base para estimarlos sin inventarlos. Tampoco equivale a una pérdida efectiva de
+caja: el desembolso del tramo es 2,3-8,6 y el resto es tiempo valorizado de
+personas que ya están en la organización. El −84% corresponde al paquete
+completo, que no se pide hoy.
+
+**Lo que este pedido no promete.** Beneficio de caja estimado: 0. Ingreso nuevo:
+0. El mínimo no compra repago: compra la evidencia que permite decidir si
+ampliar, con gates que lo frenan y con la exposición presupuestaria de cada
+salida declarada por adelantado.
+
 ## Insumos para el deck
 
 - **Frase para el CFO:** «Medir antes de ampliar: pedido inicial, paquete mínimo
   sin plataforma central. Primero, caja 0 / tiempo 8 para validar; después,
-  solo si pasa el hito, caja 10 / tiempo 61 para M1-M3 y cierre. Límite acumulado
-  79, sin liberar hoy 71. Beneficio de caja estimado: 0; ingreso nuevo: 0».
+  solo si pasa el hito, caja 10 / tiempo 61 para M1-M3 y cierre. Pedimos un
+  límite de autorización acumulado de 79, sin liberar hoy 71: caja 9, tiempo
+  valorizado 59, preparación técnica 3, validación organizativa 5 y reservas 3.
+  De eso, el desembolso de caja es 2,3-8,6; el resto es tiempo de gente que ya
+  está en la organización y reservas contingentes. No promete repago: beneficio
+  de caja 0 e ingreso nuevo 0, con ROI modelado −100% porque este alcance no
+  presupuesta beneficios cuantificados. Compra tres cosas: controles probados
+  sobre usos que ya operan, la medición que hoy no existe y la opción de decidir
+  en el mes 3 con evidencia. La exposición presupuestaria de cada salida está
+  declarada».
 - **Capacidad inicial:** 970-1.350 h / 480 = 2,0208-2,8125 FTE internos,
   incluidos 0,8958-1,4375 clave y 1,125-1,375 distribuidos; referencia 2,4167.
   Previo a M1: validación organizativa 60-96 h + técnica 20-40 h = 80-136 h;
   agendas e imputación 2026 confirmadas antes de trabajar, sin contractor continuo.
 - **Reserva propuesta:** 720 h clave más formación de hasta 660 h; máximo
   1.380 h, sujeto a agendas confirmadas. Reserva no equivale a horas ejecutadas.
-- **Salida M3:** máximo 79 hasta cerrar; núcleo M4-M12 108 h, caja 0 y techo
+- **Salida M3:** exposición presupuestaria máxima autorizada de 79 hasta cerrar; núcleo M4-M12 108 h, caja 0 y techo
   6 de tiempo; máximo anual con corte 85 solo si el núcleo se aprueba explícitamente
   en el gate de salida. Los 6 no están en los 79; reservas no son gasto automático.
 - **Salidas y esperas:** corte inmediato M6 95 hasta cerrar / 99 con núcleo;
@@ -1543,6 +1661,9 @@ cualquier excepción exige nuevo costeo y nueva decisión.
 
 ## Cautelas
 
+- El pilar de protección queda nombrado sin respaldo hasta que el responsable del
+  [Anexo C](03-gobierno-seguridad.md) fije qué controles son exigibles y cuáles
+  opcionales.
 - N × costo por desarrollador es una cuenta de mercado, no la nómina de la empresa.
 - La valuación de la capacidad a costo cargado y con la lectura de horas evitadas es un piso
   deliberado. La tarifa no se publica ni se deriva de márgenes internos.
