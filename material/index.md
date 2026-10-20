@@ -22,6 +22,8 @@ okf_version: "0.2"
 * [Memoria, contexto y harness](/unidades/memoria-contexto-harness.md) - Data management en soluciones de GenAI, con las 10 fallas de contexto y el modelo Agente = Modelo + Harness
 * [M3U1 Seguridad, riesgos y resiliencia](/unidades/m3u1-seguridad.md) - Ataques a sistemas de IA y cómo defenderse, de prompt injection a red teaming
 * [M3U2 Cambio y AI Literacy](/unidades/m3u2-cambio-literacy.md) - Gestión del cambio y alfabetización en IA por rol, con programa de champions
+* [M3U3 Talento, reestructuración y fronteras futuras](/unidades/m3u3-talento.md) - Perfil de talento AI-ready, transición responsable, compensación en el futuro sintético y un Deep Research sobre un rol crítico
+* [M3U4 Cierre: Plan Maestro de IA](/unidades/m3u4-plan-maestro.md) - Estrategia de 12 meses, roadmap técnico-financiero-cultural, financial storytelling y capstone de panel ejecutivo
 
 # Conceptos: M1U1 Mentalidad CAIO
 
@@ -116,6 +118,20 @@ okf_version: "0.2"
 * [Frenos a la adopción y estrategias de transición](/conceptos/m3u2-frenos-y-transicion.md) - Qué reacciones frenan la adopción de IA y las cuatro estrategias de transición del curso, con la cautela sobre el 60% de menos resistencia
 * [Programa de AI Champions](/conceptos/m3u2-programa-champions.md) - Perfil, roles, cuatro fases y diseño de la red de embajadores internos que impulsa la adopción de IA entre pares
 * [Prompt Challenge](/conceptos/m3u2-prompt-challenge.md) - Ejercicio práctico de dos semanas para aprender prompting haciendo y detectar candidatos a AI Champion, con el caso Logística Sur
+
+# Conceptos: M3U3 Talento, reestructuración y fronteras futuras
+
+* [Compensación en el futuro sintético](/conceptos/m3u3-compensacion-futuro-sintetico.md) - Qué capacidades humanas valorará el mercado y los cuatro modelos de compensación emergentes que plantea el curso
+* [Deep Research de impacto en un rol crítico](/conceptos/m3u3-deep-research-rol-critico.md) - Estudio estructurado en cuatro fases para diseñar la versión futura de un rol crítico, con sus preguntas guía y resultados esperados
+* [Perfil de talento AI-ready](/conceptos/m3u3-perfil-talento-ai-ready.md) - Las cuatro habilidades del profesional AI-ready y los tres pilares de adaptabilidad y aprendizaje continuo que propone el curso para contratar y desarrollar
+* [Transición responsable del talento](/conceptos/m3u3-transicion-responsable.md) - Cuatro estrategias de transición, reskilling vs. upskilling e imperativo ético (transparencia, equidad, participación), con la cautela sobre el 70% de retención
+
+# Conceptos: M3U4 Cierre: Plan Maestro de IA
+
+* [Capstone: panel ejecutivo](/conceptos/m3u4-capstone-panel-ejecutivo.md) - Qué demuestra la defensa del Plan Maestro ante un panel ejecutivo y cómo prepararse según el curso
+* [Estrategia de IA a 12 meses](/conceptos/m3u4-estrategia-12-meses.md) - Visión y misión, áreas prioritarias, los cuatro pilares de la estrategia y los tres grupos de KPIs que conectan la IA con el negocio
+* [Financial storytelling](/conceptos/m3u4-financial-storytelling.md) - De los datos a la narrativa y a la decisión ejecutiva, con los tres elementos de una narrativa financiera ganadora
+* [Roadmap tridimensional](/conceptos/m3u4-roadmap-tridimensional.md) - Roadmap técnico (con MLOps), financiero (escenarios y financiación) y cultural (cuatro frentes), más la gobernanza ética que los atraviesa
 
 # Casos
 

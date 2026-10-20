@@ -43,6 +43,6 @@ Cada unidad termina con un caso práctico. Este es el temario textual, abreviado
 
 [^programa]
 
-Los temas 3 a 6 de M3 U4 son los que definen las secciones del plan; ver el [mapa sección → fuentes](/mapa-plan-fuentes.md). Unidades con archivo propio en el bundle: [M1U1](/unidades/m1u1-mentalidad-caio.md) y [M1U2](/unidades/m1u2-portfolio-100-dias.md).
+Los temas 3 a 6 de M3 U4 son los que definen las secciones del plan; ver el [mapa sección → fuentes](/mapa-plan-fuentes.md). Unidades con archivo propio en el bundle: [M1U1](/unidades/m1u1-mentalidad-caio.md), [M1U2](/unidades/m1u2-portfolio-100-dias.md), [M3U3](/unidades/m3u3-talento.md) y [M3U4](/unidades/m3u4-plan-maestro.md).
 
 [^programa]: Programa, pp. 6-12

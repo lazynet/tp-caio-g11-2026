@@ -3,14 +3,17 @@ type: Hueco
 title: Huecos del material
 description: Qué falta en el material de la cursada, qué quedó sin verificar y qué cifras no pueden ir a una slide.
 tags: [pendiente, cursada, cautelas]
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-12T01:40:00Z }
+generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
 ---
 
 # Unidades y clases sin material
 
-* No hay material de M2U1 (vibe coding), M2U2 (agentes y arquitecturas), M3U3
-  (talento y reestructuración) ni **M3U4 (cierre y defensa del Plan Maestro)**. M3U4
-  es la que más importa para el TP: hay que buscarla en el notebook o en el aula.
+* No hay material de M2U1 (vibe coding) ni M2U2 (agentes y arquitecturas).
+* M3U3 y M3U4 tienen solo slides, de nivel alto. M3U3 no desarrolla evaluación de
+  desempeño en humanos aumentados, Physical AI, Human-Agent Trust ni fronteras
+  2026-2030, que el programa lista. M3U4 no desarrolla el roadmap ajustado por
+  riesgo (contingencias, reversibilidad) ni la storyline, el banco de objeciones o
+  la rúbrica del panel. Esos temas hay que buscarlos en el notebook o en el aula.
 * El programa no publica una rúbrica de evaluación del TIF: el enunciado es la única
   fuente (ver [evaluación del programa](/conceptos/programa-evaluacion.md)).
 * Sin apuntes de las clases del 2026-08-25, 2026-09-01, 2026-09-08 y 2026-09-15: las
@@ -24,6 +27,7 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-12T01:40:00Z }
 | Cifra | Dónde | Estado |
 |---|---|---|
 | "60-80% menos costo de inferencia" | [M2U4](/conceptos/m2u4-tokenomics.md) | Sin fuente primaria. Usar los mecanismos (caché, ruteo) sin porcentaje, o un supuesto marcado |
+| "70% más de retención de talento" con reskilling | [M3U3](/conceptos/m3u3-transicion-responsable.md) | Sin fuente primaria y sin base de comparación. No va en una slide |
 | "60% menos resistencia" | [M3U2](/conceptos/m3u2-frenos-y-transicion.md) | Sin fuente primaria; solo apareció un resumen secundario de Deloitte con otras cifras |
 | ROI 2,8×-4,1× e inversiones en euros | casos de [M1U1](/conceptos/m1u1-caso-diagnostico-rrhh.md) y [M1U2](/conceptos/m1u2-caso-portfolio-financiera.md) | Ilustrativas del curso |
 | Cifras de Logística Sur | [Prompt Challenge](/conceptos/m3u2-prompt-challenge.md) | Didácticas |
@@ -46,6 +50,8 @@ generated: { by: claude-code/claude-opus-5-5, at: 2026-10-12T01:40:00Z }
   `draft`.
 
 # Pendiente de verificar
+
+* **M3U4:** el roadmap técnico habla de MLOps clásico y no de agentes ni LLMOps; no trae metas ni umbrales para los KPIs. **M3U3:** el programa describe el Deep Research con un plan a 18 meses y las slides no dan plazo.
 
 * **EU AI Act tras el Omnibus:** las fechas y el nuevo art. 4 (AI literacy: "apoyar
   el desarrollo", más liviano que el "exige" del curso) se leyeron de una copia del
