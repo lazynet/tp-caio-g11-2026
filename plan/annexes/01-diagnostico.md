@@ -50,7 +50,7 @@ por nivel) no se hizo. Responsable de validar el puntaje: a designar.
 | Dimensión | Propuesta | Evidencia principal | Brecha frente al nivel 3 |
 |---|---|---|---|
 | Estrategia y liderazgo | 2 | El escenario parte sin estrategia de IA formal aprobada ([supuesto](../../context/supuestos/estrategia-de-ia-de-partida.md)). Hay iniciativas y objetivos propuestos: propuestas al Directorio y un borrador de OKR 2027 con eficiencia con IA ([OKR](../../context/hechos/okrs-y-objetivos.md), [IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). El 2 refleja ese avance parcial; no se deriva solo de la ausencia de aprobación | Estrategia de IA aprobada, con dueño y atada a resultados del negocio |
-| Datos e infraestructura | 2 | La infraestructura está cerca del 3: AWS en varias cuentas, Kubernetes, GitOps, observabilidad ([stack](../../context/hechos/stack-y-plataforma.md)). Los datos, no: sin inventario formal, y los datos productivos de clientes no se pueden usar ([datos](../../context/supuestos/disponibilidad-de-datos.md)) | Inventario de datos con dueño y calidad, y una capa común para servir casos de IA |
+| Datos e infraestructura | 2 provisional | Hay AWS en varias cuentas, Kubernetes, GitOps y observabilidad ([stack](../../context/hechos/stack-y-plataforma.md)). Existe inventario de datos con responsables, clasificación y calidad documentada; las fuentes están distribuidas entre sistemas ([inventario](../../context/hechos/inventario-y-distribucion-de-datos.md)). Falta contrastar cobertura, accesos, integración y gobierno operativo para los casos de IA | Reutilizar y completar el inventario existente; demostrar acceso común, gobierno y calidad adecuados a las fuentes elegibles |
 | Talento y cultura | 2 (Tecnología 3, Operaciones 1) | Tecnología: ~7 de cada 10 usan el agente de código. Operaciones: ~1 de cada 10, en buena parte porque el cliente fija las herramientas ([uso de IA](../../context/hechos/uso-ia-interno.md)). El piloto de abril (n=12, autoseleccionado) dio NPS +42, pero solo el 17% completó los cursos ([piloto](../../context/hechos/encuesta-y-pilotos-ia.md)). Capacidades críticas en pocas personas ([estructura](../../context/hechos/tamano-y-estructura.md)) | Capacitación por rol que se complete y suplentes para los roles críticos |
 | Gobernanza y ética | 2 | Política de uso con clasificación en cuatro niveles y contrato para agentes de código, en borrador según el último registro, del 21 de abril de 2026; no hay constancia posterior de su ratificación, y su estado actual se confirma antes de pedirla, sin matriz de clientes, sin inventario de casos ni registro de riesgos ([gobierno](../../context/hechos/gobierno-y-politica-ia.md)). ISO/IEC 27001 de la organización, sin controles específicos de IA verificados ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) | Política ratificada, inventario, registro de riesgos y comité operando |
 | Adopción y valor | 1 en producto, 2 en interno | Sin IA productiva documentada en la oferta ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). En lo interno hay uso alto en Tecnología y un piloto con criterios cumplidos, pero sin línea de base de productividad ([productividad](../../context/supuestos/ganancia-de-productividad.md)) | Un caso en producción con valor medido contra una línea de base |
@@ -58,6 +58,11 @@ por nivel) no se hizo. Responsable de validar el puntaje: a designar.
 No se promedia: un promedio de 2 esconde que la brecha más grande está en el
 producto que se vende y en Operaciones. Las fuentes no permiten afirmar ausencia
 universal de toda medición: lo que falta es valor incremental medido contra una base.
+
+En Datos e infraestructura, la distribución entre sistemas no determina por sí
+sola el nivel de madurez. El 2 se conserva como hipótesis provisional hasta
+contrastar la plataforma y el gobierno operativo; el inventario existente es un
+avance y su cobertura para los casos de IA sigue por verificar.
 
 ### Perímetro por conciliar antes de liberar M1-M3
 
@@ -115,8 +120,10 @@ Siguiendo el método de diagnóstico de madurez (paso 6: dos o tres brechas crí
 
 1. **Gobernanza:** ratificar la política y armar la matriz de clientes. Es la
    condición para cualquier caso de IA en el producto ([Anexo C](03-gobierno-seguridad.md)).
-2. **Datos y medición:** inventario de datos y línea de base de productividad,
-   incidentes y costo. Sin línea de base no hay gates ([Anexo B](02-arquitectura.md)).
+2. **Datos y medición:** revisar y completar el inventario existente para las
+   fuentes elegibles, verificar su acceso e integración y producir la línea de
+   base de productividad, incidentes y costo. Sin línea de base no hay gates
+   ([Anexo B](02-arquitectura.md)).
 3. **Adopción y valor:** medir capacidad con calidad contra la base y, en el
    producto, observar el problema del asistente de integración (tiempo a la
    primera integración exitosa) antes del mes 6. Sin problema, base y señal

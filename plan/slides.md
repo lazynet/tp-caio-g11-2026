@@ -44,7 +44,7 @@ size: 16:9
 | Dimensión | Madurez propuesta | Lo que la explica |
 |---|---|---|
 | Estrategia | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Hay iniciativas; sin estrategia formal aprobada (supuesto) |
-| Datos e infraestructura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Buena nube, datos sin inventario |
+| Datos e infraestructura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 provisional | Inventario existente; datos distribuidos; integración por validar |
 | Talento y cultura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Agente de código: Tecnología ~7 de 10; Operaciones ~1 de 10 |
 | Gobernanza | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Política en borrador; último registro, abril de 2026 |
 | Adopción y valor | <span class="dots"><span class="on">●</span><span class="half">●</span><span class="off">●●●</span></span> 1-2 | Sin IA productiva documentada en la oferta; valor interno sin medir |

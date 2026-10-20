@@ -12,6 +12,8 @@ datos reales viven en `private/`.
 
 Hechos sobre el caso en los que se apoya el plan (`type: Hecho`), uno por archivo.
 
+* [Inventario y distribución de datos](/hechos/inventario-y-distribucion-de-datos.md) - El responsable del caso informa que existe un inventario de datos con responsables, clasificación y calidad documentada, y que las fuentes están distribuidas entre distintos sistemas.
+
 * [Capacidad, utilización y bench](/hechos/capacidad-y-utilizacion.md) - La utilización facturable ronda el 83% con bench casi nulo: no hay capacidad ociosa, así que cualquier iniciativa de IA compite con horas facturables.
 * [Cartera de clientes y concentración](/hechos/cartera-y-concentracion.md) - La facturación está muy concentrada: el cliente principal pesa entre 40% y 50%, los dos primeros cerca del 70% y los cinco primeros más del 90%, contra una meta interna de menos del 30% por cliente.
 * [Costos de tecnología e IA](/hechos/costos-tecnologia-e-ia.md) - El gasto de tecnología se duplicó entre febrero y septiembre de 2026 y pasó de cerca de 2% a 4% de la facturación; la nube es la mayor parte, y el consumo real de IA equivale a unas doce veces lo que se paga por suscripción.
