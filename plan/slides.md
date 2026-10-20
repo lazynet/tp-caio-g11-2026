@@ -47,7 +47,7 @@ size: 16:9
 | Datos e infraestructura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 provisional | Inventario existente; datos distribuidos; integración por validar |
 | Talento y cultura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 provisional | Uso y cursos previos; sin programa por rol con seguimiento |
 | Gobernanza | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 provisional | Política aprobada; aplicación y controles por verificar |
-| Adopción y valor | Producto: 1<br>Interno: 2<br>Provisionales | Harness del SDLC solo interno; impacto por verificar |
+| Adopción y valor | Producto: 1<br>Interno: 2<br>Provisionales | Harness del SDLC interno; sin medición contra una base |
 
 </div>
 <div class="grid">
