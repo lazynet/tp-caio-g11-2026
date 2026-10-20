@@ -44,15 +44,7 @@ de git) y arma `out/entrega.pdf` (deck + anexos), el único entregable. Nada
 generado se edita: se corrige el markdown y se regenera. Requisitos (Python
 3.11+, PyYAML y pypdf en `.venv`, `CAIO_PYTHON`) y chequeos en `README.md`.
 
-## Fechas
-
-| Hito | Fecha |
-|---|---|
-| Equipo y alcance | 2026-10-13 (sugerido) |
-| Versión para peer review | 2026-10-27 |
-| Entrega final | 2026-10-28 → 2026-11-04 |
-| Votación top 3 | 2026-11-05 → 2026-11-08 |
-| Defensa ante el board (tentativo) | 2026-11-10 18:30 |
+**Fechas:** consultá el cronograma de `README.md`, sección "Fechas".
 
 ## Estructura
 
