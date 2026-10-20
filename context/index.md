@@ -33,6 +33,8 @@ Hechos sobre el caso en los que se apoya el plan (`type: Hecho`), uno por archiv
 Lo que el plan da por cierto sin una fuente que lo pruebe (`type: Supuesto`).
 Cada uno dice por qué es razonable y qué lo invalidaría.
 
+* [Estrategia de IA al inicio del plan](/supuestos/estrategia-de-ia-de-partida.md) - El escenario del TP parte sin una estrategia de IA formal aprobada, aunque hay iniciativas y objetivos propuestos; el diagnóstico conserva un nivel 2 sujeto a validación.
+
 * [Paquete mínimo de aprendizaje sin plataforma central](/supuestos/paquete-minimo-de-aprendizaje.md) - Finanzas concilia los insumos de B/C/D para medir valor con controles probados y herramientas existentes, con techos por etapa y salida acotada.
 
 * [Alternativas de menor alcance y prueba chica de los meses 1-3](/supuestos/alternativas-de-menor-alcance.md) - Para comparar el paquete con opciones más baratas, Finanzas supone la composición y el costo de gobierno mínimo más formación, de un piloto acotado sobre el agente de código actual y de la prueba chica desde la semana 5 del plan, con la misma medición en las tres.
