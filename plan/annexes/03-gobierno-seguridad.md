@@ -11,9 +11,9 @@ Slides que sustenta: [Slide 6 — Gobierno y seguridad](../slides.md).
 ## Objetivo
 
 Sustentar tres pedidos al board: aprobar un modelo de gobierno liviano (un AI Council
-de cinco asientos que se apoya en el comité de tecnología, sin gatekeeper), ratificar
-la política de IA cuyo último registro es el borrador de abril de 2026, sin constancia
-posterior de ratificación, y financiar por gate un paquete de controles:
+de cinco asientos que se apoya en el comité de tecnología, sin gatekeeper), aplicar
+la política de IA aprobada según confirmación del responsable del caso del 20/10/2026,
+con revisión documental de versión, alcance y aprobación, y financiar por gate un paquete de controles:
 el gobierno mínimo siempre, los controles técnicos de la plataforma si la decisión del
 mes 3 los autoriza ante una señal y la demostración externa si la señal contractual llega a la
 lectura del mes 9. Los gates son los puntos de decisión de los meses 3, 6, 9 y 12; los
@@ -21,6 +21,10 @@ tramos son los meses 1-3 (enero-marzo de 2027), 4-6, 7-9 y 10-12. El gobierno ti
 habilitar la entrega: cada control declara cuánta velocidad cuesta y cuándo se abandona.
 El inicio requiere dos autorizaciones específicas: preparación en 2026 y liberación de
 M1-M3 después de la validación inicial; no se libera todo el esfuerzo con la primera.
+
+La [aprobación informada](../../context/hechos/gobierno-y-politica-ia.md) no acredita
+controles implementados, operación del Council ni cierre de matriz, inventarios o riesgos.
+El borrador v1.0 de abril es un antecedente histórico, por contrastar con la versión aprobada.
 
 La IA que Acme Labs vende a bancos y fintechs es la que más exige: hoy no hay IA en
 producción dentro de lo que se vende ([fuente](../../context/hechos/ia-en-producto-y-oferta.md)),
@@ -31,8 +35,8 @@ así que el gobierno se construye antes del primer caso, no después del primer 
 | Supuesto | Valor | Fuente o tipo |
 |---|---|---|
 | Tamaño de la organización | 60-70 personas, ~80% en Operaciones y Tecnología | [Fuente](../../context/hechos/tamano-y-estructura.md) |
-| Política de IA | Último registro: v1.0 en borrador al 21 de abril de 2026, con ratificación y matriz pendientes a esa fecha. No hay registro posterior: confirmar el estado actual antes de pedir ratificación | [Fuente y cautela temporal](../../context/hechos/gobierno-y-politica-ia.md) |
-| Inventario de casos de uso y registro de riesgos de IA | No existen | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |
+| Política de IA | Aprobada según confirmación del responsable del caso del 20/10/2026; versión, alcance y aprobación documentada por revisar. El borrador v1.0 y sus pendientes de abril son antecedentes históricos, salvo la aprobación informada | [Fuente y cautelas](../../context/hechos/gobierno-y-politica-ia.md) |
+| Inventario de casos de uso y registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar. La aprobación de la política no los acredita | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |
 | Herramientas aprobadas | 3 (Claude Team, GitHub Copilot, Gemini en Workspace); 40-45 seats de Claude | [Fuente](../../context/hechos/uso-ia-interno.md) |
 | Certificación de seguridad | ISO/IEC 27001 de la organización; un producto propio no tiene la suya | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |
 | Controles específicos de IA (red teaming, DLP sobre prompts) | Sin evidencia | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |
@@ -51,10 +55,10 @@ así que el gobierno se construye antes del primer caso, no después del primer 
 
 | Métrica | Hoy | Esperado a los 12 meses | Fuente |
 |---|---|---|---|
-| Política de IA | Último registro al 21 de abril de 2026: borrador v1.0, sin constancia posterior de ratificación; estado actual pendiente de confirmar | Ratificada por el Directorio, con revisión anual y onboarding | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |
-| Inventario de usos de IA | No hay | 100% de las herramientas, servidores MCP, funciones de IA embebidas y casos de producto | Objetivo propuesto por el equipo |
-| Matriz de restricciones por cliente | No hay; se valida a mano | Cubre los clientes que concentran la mayor parte de la facturación (la fuente da el alcance) | [Fuente](../../context/hechos/cartera-y-concentracion.md) |
-| Registro de riesgos de IA | No hay | Vivo, revisado cada mes por el Council | Objetivo propuesto por el equipo |
+| Política de IA | Aprobación informada el 20/10/2026; documentación e implementación por revisar | Versión, alcance y aprobación documentados; política aplicada, con revisión anual y onboarding | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |
+| Inventario de usos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | 100% de las herramientas, servidores MCP, funciones de IA embebidas y casos de producto | Objetivo propuesto por el equipo |
+| Matriz de restricciones por cliente | Pendiente en abril; se validaba a mano. Estado actual por contrastar | Cubre los clientes que concentran la mayor parte de la facturación (la fuente da el alcance) | [Antecedente](../../context/hechos/gobierno-y-politica-ia.md) y [alcance](../../context/hechos/cartera-y-concentracion.md) |
+| Registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | Vivo, revisado cada mes por el Council | Objetivo propuesto por el equipo |
 | Controles técnicos de IA | Sin evidencia | Con señal en el mes 3: pasarela de salida y DLP, logs de acciones, red team interno; el externo, si se financia la demostración externa. Sin señal: *hooks* y escaneo de secretos en el equipo y red team acotado (ver "Controles según la decisión del mes 3") | Objetivo propuesto por el equipo |
 | Certificación | ISO 27001 vigente | ISO 27001 con alcance extendido a IA; ISO 42001 como decisión de los meses 10-12, no como meta | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |
 
@@ -173,7 +177,7 @@ la prueba.
 
 | Función NIST | Qué la implementa acá | Evidencia esperada | Elemento de sistema de gestión ([ISO 42001](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md)) |
 |---|---|---|---|
-| Govern | Council, derechos de decisión, política, criterio de aceptación | Política ratificada, actas, matriz RACI | Políticas y responsabilidades |
+| Govern | Council, derechos de decisión, política, criterio de aceptación | Política aprobada con versión y alcance documentados, actas, matriz RACI | Políticas y responsabilidades |
 | Map | Intake (ver "Intake y clasificación de riesgo") con preguntas de contexto, cliente y Anexo III; matriz de restricciones; inventario | Registros del intake, matriz, inventario | Gestión de riesgos y oportunidades |
 | Measure | Pruebas de la tabla anterior, red teams, cobertura de la pasarela | Informes de prueba y métricas de cobertura | Monitoreo |
 | Manage | Controles por tramo, incidentes, aceptación del residual | Tickets, registro de residuales aceptados, revisión por tramo | Procesos y mejora continua |
@@ -260,8 +264,9 @@ El techo es 8 mil USD de tiempo valorizado y cero caja incremental. Operaciones 
 managers liberan las agendas y explicitan el trabajo desplazado antes de empezar;
 CAIO coordina y Finanzas concilia costo y solapes.
 
-Se contrasta el diagnóstico, concilia la capacidad semanal y confirma el estado de
-políticas y restricciones; se prepara el alcance y pide cotización legal. Esta etapa
+Se contrasta el diagnóstico, concilia la capacidad semanal y revisa la versión,
+el alcance y la aprobación documentada de la política, además del estado de las
+restricciones; se prepara el alcance y pide cotización legal. Esta etapa
 no ejecuta el dictamen externo ni habilita nuevos despliegues o contratos.
 
 Su verificador independiente valida evidencia organizativa; no sustituye las
@@ -328,11 +333,11 @@ ve en la revisión mensual solo como estado del tablero.
 
 | Capa | Qué existe | Qué se hace | Tramo |
 |---|---|---|---|
-| Principios | 4 principios de la política en borrador (herramientas corporativas, desconfiar del output, responsable humano, lo que no se mide no se justifica) | Se mantienen | Meses 1-3 |
-| Política | Último registro: v1.0 en borrador en abril de 2026; no hay registro posterior de ratificación | Se confirma el estado actual y se ratifica si sigue pendiente; se parte en tres: uso interno, IA en el producto y proveedores o modelos | Meses 1-6 |
-| Estándares | Clasificación de datos en 4 niveles; lista de lo que nunca se envía | Se suma la matriz de restricciones por cliente, la escala de autonomía (niveles 0 a 4) y la de riesgo | Meses 1-3 |
-| Controles | Revisión del output, aprobación por el comité, reporte de incidentes sin sanción | Se suman pasarela de salida, DLP, escaneo de secretos y logs de acciones | Meses 4-9 |
-| Evidencia | Auditoría mensual de uso | Inventario, registro de riesgos, logs y actas del Council: la evidencia sale del trabajo normal | Meses 1-12 |
+| Principios | 4 principios documentados en el antecedente de abril (herramientas corporativas, desconfiar del output, responsable humano, lo que no se mide no se justifica) | Se propone mantenerlos, contrastando con la versión aprobada | Meses 1-3 |
+| Política | Aprobada según confirmación del responsable del caso del 20/10/2026; versión y alcance por revisar | Revisar aprobación documentada y aplicar la política; proponer tres alcances: uso interno, IA en el producto y proveedores o modelos. Los cambios requieren decisión empresarial | Meses 1-6 |
+| Estándares | Clasificación de datos en 4 niveles y lista de lo que nunca se envía en el antecedente de abril; vigencia por contrastar | Se suma la matriz de restricciones por cliente, la escala de autonomía (niveles 0 a 4) y la de riesgo | Meses 1-3 |
+| Controles | El antecedente de abril define revisión del output, aprobación por el comité y reporte de incidentes sin sanción; implementación por probar | Se suman pasarela de salida, DLP, escaneo de secretos y logs de acciones | Meses 4-9 |
+| Evidencia | Auditoría mensual de uso prevista en el antecedente; ejecución por contrastar | Inventario, registro de riesgos, logs y actas del Council: la evidencia sale del trabajo normal | Meses 1-12 |
 
 ### Intake y clasificación de riesgo
 
@@ -348,8 +353,9 @@ intake (1 a 3) miden riesgo; no son los niveles de autonomía de la escala de m�
 | 3. Alto | Toca código o datos de un cliente, o va dentro del producto que se vende | Council, con verificación de la matriz del cliente. Los datos productivos de un cliente no salen hacia un modelo externo durante el horizonte | Hasta el siguiente Council (30 días como máximo) |
 | Prohibido en el plan | Decisiones de crédito o scoring sobre personas, datos de categoría especial, autonomía "autónomo dentro de límites" con acceso a producción, datos productivos de clientes hacia un modelo externo | No se aprueba en el horizonte; reabrirlo es una decisión del cierre del mes 12 que rige después (ver "Catálogo de decisiones del Anexo C") | Ver "Escala de autonomía" |
 
-El plazo de 5 días hábiles es un objetivo del equipo, más rápido que las 2 a 4 semanas de
-la política en borrador, para que el control no empuje el uso fuera del sistema oficial.
+El plazo de 5 días hábiles es un objetivo del equipo, más rápido que las 2 a 4 semanas
+del antecedente de la política de abril, cuyo plazo vigente está por contrastar, para
+que el control no empuje el uso fuera del sistema oficial. El cambio requiere decisión empresarial.
 
 ### Escala de autonomía: topes para los 12 meses
 
@@ -392,9 +398,11 @@ La escala de autonomía es un marco de referencia, no un estándar oficial.
 - **El NIST AI RMF organiza el registro de riesgos** (Govern, Map, Measure, Manage):
   cada riesgo lleva su función, su prueba y su evidencia (ver Riesgos). Se declara
   alineación, sin buscar cumplimiento formal.
-- **La política se ratifica en el Directorio (meses 1-3).** Es un compromiso interno que se enmienda
-  con costo de credibilidad, no una decisión irreversible: no firma nada con un cliente.
-  Por eso va con revisión anual y con revisión extraordinaria en la lectura del mes 6.
+- **La política aprobada se documenta y aplica (meses 1-3).** Se revisan versión,
+  alcance y constancia de aprobación; no se pide aprobarla de nuevo. Los cambios
+  propuestos siguen el derecho de decisión del Directorio y son compromisos internos
+  enmendables: no firman nada con un cliente. Se propone revisión anual y revisión
+  extraordinaria en la lectura del mes 6.
 
 ### Catálogo de decisiones del Anexo C: ámbito, fecha y compromiso
 
@@ -404,7 +412,7 @@ excepción puede contradecir una prohibición del horizonte.
 
 | Decisión | Ámbito | Fecha mínima | Autoridad | Condición | Compromiso exacto |
 |---|---|---|---|---|---|
-| Ratificar la política de IA | Interno | Meses 1-3 | Directorio | Segunda autorización: M1-M3 tras la validación inicial | Compromiso interno enmendable; sin firma con clientes |
+| Decidir cambios de alcance de la política aprobada | Interno | Meses 1-3 | Directorio | Segunda autorización: M1-M3 tras la validación inicial; versión, alcance y aprobación documentada revisados | Compromiso interno enmendable; sin firma con clientes; no es una nueva aprobación de la política existente |
 | Cláusula tipo de IA para contratos | Interno y negociación | Meses 7-9 | Council | Una función de IA con documentación técnica y supervisión humana | Texto listo y negociación no vinculante |
 | Firma de un compromiso contractual de IA con un cliente | Externo | Cierre del mes 12 | Council | Cláusula tipo, matriz del cliente y red team sin críticos | Irreversible: el compromiso queda firmado |
 | Enviar datos productivos de un cliente a un modelo externo | Externo | No antes del cierre del mes 12 | Responsable comercial del cliente, con Council | Cláusula firmada, matriz y controles demostrados | Irreversible |
@@ -422,7 +430,7 @@ injection a red teaming; [unidad](../../material/unidades/m3u1-seguridad.md)).
 | Amenaza | Prevención | Detección | Respuesta | Conexión con lo existente |
 |---|---|---|---|---|
 | Inyección de prompts directa e indirecta | Mínimo privilegio, contenido no confiable segregado, validación de salida con código | Logs de acciones de agentes y alertas de desvío | Red teaming interno (meses 4-6) y externo (meses 10-12) | Revisión de PR obligatoria para código con IA ([fuente](../../context/hechos/stack-y-plataforma.md)) |
-| Fuga de datos (DLP) | Clasificación de 4 niveles, anonimización, cifrado, control de acceso | Escaneo de secretos y PII en prompts | Plan de incidentes con aviso al cliente | Política en borrador y cuentas AWS separadas por proyecto |
+| Fuga de datos (DLP) | Clasificación de 4 niveles, anonimización, cifrado, control de acceso | Escaneo de secretos y PII en prompts | Plan de incidentes con aviso al cliente | Política con aprobación informada, definiciones de abril por contrastar y controles por probar; cuentas AWS separadas por proyecto |
 | Aislamiento de datos de clientes | Entornos y credenciales por cliente; la IA no cruza datos entre proyectos | Auditoría del acceso por proyecto | Suspensión por cliente | Staffing opera con las herramientas de cada cliente, fuera del alcance del control |
 | Cadena de suministro (modelos, servidores MCP, proveedores) | Lista cerrada de servidores MCP, contrato sin entrenamiento, revisión de cambios del proveedor | Revisión mensual de proveedores y subprocesadores | Retiro del proveedor | Contrato organizacional de agentes de código |
 | Secretos | Escaneo previo al envío y rotación | Alertas | Primera exposición: revocar y rotar, contener el canal y decidir la reanudación con evidencia; la recurrencia escala a bloqueo (riesgo de fuga de secretos) | Auditoría periódica de vulnerabilidades de código e imágenes |
@@ -479,7 +487,7 @@ alternativa de gobierno mínimo y formación del [Anexo E](05-business-case.md),
 
 | Tramo | Controles | Criterio de éxito | Costo en velocidad | Condición de abandono o cambio |
 |---|---|---|---|---|
-| Meses 1-3 | Ratificar la política; inventario v1; matriz de restricciones de los clientes principales y lectura de la evidencia contractual para la decisión del mes 3 (ver "Licencia para vender"); intake en 3 niveles; plan de incidentes | Política firmada; inventario con las 3 herramientas aprobadas, los servidores MCP y la IA embebida; matriz al 100% de los clientes principales | Bajo: solo trámite. La matriz frena los casos de cliente hasta completarse | Si más del 30% de los contratos queda ambiguo a los 4 meses, se aplica *default-deny* sobre el código de ese cliente y se pide revisión legal |
+| Meses 1-3 | Revisar versión, alcance y aprobación documentada de la política y aplicarla; inventario v1; matriz de restricciones de los clientes principales y lectura de la evidencia contractual para la decisión del mes 3 (ver "Licencia para vender"); intake en 3 niveles; plan de incidentes | Política con documentación revisada y aplicación registrada; inventario con las 3 herramientas aprobadas, los servidores MCP y la IA embebida; matriz al 100% de los clientes principales | Bajo: solo trámite. La matriz frena los casos de cliente hasta completarse | Si más del 30% de los contratos queda ambiguo a los 4 meses, se aplica *default-deny* sobre el código de ese cliente y se pide revisión legal |
 | Meses 4-6 | Matriz superficie→control→telemetría (ver "Seguridad") con prueba de integración y de *bypass* por herramienta; pasarela con allowlist y DLP sobre prompts; escaneo de secretos; logs de acciones; red team interno; ejercicio de mesa de incidentes, que incluye la ruta de primera exposición de un secreto | Si su régimen comercial lo permite, al menos el 90% de los eventos del agente de código pasa por la pasarela (denominador en "Seguridad"); si no, control verificado sin pasarela y ruteo ensayado; casos propios, 100%. Cada superficie restante tiene su control compensatorio y su cobertura reportada aparte, y el residual sin bloqueo técnico va al Council; red team con hallazgos críticos cerrados | Medio: fricción en el agente de código | Si la actividad semanal de seats cae más de 15% frente a la línea base de los meses 1-3 dos meses seguidos, **solo los usos permitidos** pasan a monitoreo; el bloqueo de secretos, PII y datos prohibidos no se relaja nunca |
 | Meses 7-9 | Revisión del modelo de amenazas de la primera función de IA en el producto; criterios de *eval* para salir a producción; documentación de proveedor; cláusula tipo para contratos | Una función de IA con documentación técnica, registro de eventos, supervisión humana y cláusula tipo lista para negociar con el cliente (la firma, no antes del cierre del mes 12) | Medio: agrega un gate antes de salir | Si tras dos ciclos de red team persisten hallazgos críticos, la función queda en autonomía nivel 0-1 ("sin IA" o "asiste") o se cancela |
 | Meses 10-12 | Red team externo; extensión del alcance de ISO 27001 a IA; revisión de niveles de autonomía; informe anual al Directorio; decisión de certificación 42001 | Cero hallazgos críticos abiertos; brecha frente a 42001 documentada; decisión registrada | Bajo | Sin señal contractual ni producto liberado en la lectura del mes 9, el red team externo y la extensión ISO (la demostración externa) se difieren. Si ningún cliente exige 42001, no se certifica; si el costo de la auditoría supera el rango de Finanzas, se difiere |
@@ -512,7 +520,7 @@ demostración externa, de la señal contractual o del producto en la lectura del
 
 | Paquete | Renglones | Caja (USD) | Tiempo (USD) | Total (USD) | Qué reduce | Qué no reduce |
 |---|---|---|---|---|---|---|
-| Gobierno mínimo | Líder, seguridad, Council, matriz e inventario, legal externo, ejercicios de mesa | 8.000-20.000 | 24.650-62.150 | 32.650-82.150 | Datos de cliente en un modelo externo, por matriz y *default-deny*; IA embebida sin aprobar; un gobierno que frena; declarar controles que no existen; la política ratificada | La inyección indirecta de prompts y la fuga de secretos quedan solo en política: no hay bloqueo, log ni prueba que mostrarle a un cliente |
+| Gobierno mínimo | Líder, seguridad, Council, matriz e inventario, legal externo, ejercicios de mesa | 8.000-20.000 | 24.650-62.150 | 32.650-82.150 | Datos de cliente en un modelo externo, por matriz y *default-deny*; IA embebida sin aprobar; un gobierno que frena; declarar controles que no existen; aplicación de la política aprobada | La inyección indirecta de prompts y la fuga de secretos quedan solo en política: no hay bloqueo, log ni prueba que mostrarle a un cliente |
 | Controles técnicos propios | Pasarela con DLP y logs, pruebas de *bypass*, red team interno | 4.500-18.000 | 1.875-9.375 | 6.375-27.375 | Datos de cliente en un modelo externo y fuga de secretos, con bloqueo y registro; inyección indirecta probada; la evidencia del ejemplo del secreto en un prompt | Las superficies sin ruta por la pasarela (residual aceptado) |
 | Demostración externa | Red team externo; extensión de la ISO 27001 a IA | 11.600-31.000 | — | 11.600-31.000 | Declarar controles que no existen, con evidencia de un tercero; la condición del cierre del mes 12 (red team externo sin críticos) | Ningún riesgo propio que los controles técnicos no cubran: vale si un cliente la pide o si el producto sigue |
 | **Paquete completo (rama con señal en el mes 3)** | | **24.100-69.000** | **26.525-71.525** | **50.625-140.525** | | |
@@ -657,7 +665,7 @@ no hay aceptación automática por ser una herramienta ya aprobada.
 
 | Control | Rige en las dos ramas | Solo con señal en el mes 3 |
 |---|---|---|
-| Política ratificada, intake en 3 niveles, inventario, plan de incidentes, ejercicios de mesa | Sí (gobierno mínimo) | — |
+| Política aprobada con documentación revisada y aplicación registrada, intake en 3 niveles, inventario, plan de incidentes, ejercicios de mesa | Sí (gobierno mínimo) | — |
 | Matriz de clientes con *default-deny* (riesgo de datos de cliente en un modelo externo) y topes de la escala de autonomía | Sí (gobierno mínimo) | — |
 | *Hooks* de permisos, escaneo de secretos en el equipo y el repositorio y lista cerrada de MCP por configuración, en el agente de código | Sí, **compensatorio**: probados con un secreto sintético antes de extender la prueba a la cohorte | — |
 | Red team interno acotado al agente de código, con repositorios y tickets sintéticos | Sí, compensatorio (riesgo de inyección indirecta de prompts) | — |
@@ -758,7 +766,7 @@ volver a costear antes de iniciar. El responsable de cada rol está a designar.
 
 | Control mínimo | Entregable verificable | Horas por rol en M1-M3 (supuesto) | Pago externo incremental (supuesto) |
 |---|---|---|---|
-| Política e intake | Estado actual confirmado contra registro posterior a abril, política ratificada si sigue pendiente, datos permitidos/prohibidos, revisión humana y ruta de incidentes y suspensión | Tech lead de gobierno: 8-16 h; seguridad: 4-8 h; staff de Operaciones/comercial: 2-4 h | 0 USD adicionales; revisión legal en su fila |
+| Política e intake | Versión, alcance y aprobación documentada revisados; aplicación de la política aprobada, datos permitidos/prohibidos, revisión humana y ruta de incidentes y suspensión; cambios propuestos sujetos a decisión empresarial | Tech lead de gobierno: 8-16 h; seguridad: 4-8 h; staff de Operaciones/comercial: 2-4 h | 0 USD adicionales; revisión legal en su fila |
 | Matriz habilitante | Restricciones de los clientes principales clasificadas, fuentes/repositorios habilitados y excluidos, ambigüedades con *default-deny*; agregado verificado por otra persona | Analista funcional: 32-48 h; seguridad: 4-8 h; staff de Operaciones/comercial: 4-8 h | 0 USD adicionales; revisión legal en su fila |
 | Inventario y riesgo | Herramientas, funciones embebidas, repositorios, MCP, permisos, superficie→control→telemetría, responsables por rol y registro de residuales con vencimiento | Analista funcional: 16-24 h; senior DevOps: 4-8 h | 0 USD; se reutilizan registros y consolas disponibles |
 | Revisión legal focalizada | Dictamen de alcance y textos ambiguos, límites de uso/no entrenamiento y tratamiento de datos; no reemplaza la revisión normativa completa posterior | Tech lead de gobierno: 2-4 h; analista funcional: 4-8 h; asesor externo: 8-16 h | 2.000-6.000 USD; supuesto de 250-375 USD/h × 8-16 h, sin cotización; sustituye la porción inicial del renglón anual, no se suma dos veces |
@@ -845,7 +853,9 @@ redondeado). Tres lecturas de gobierno sobre esas cifras:
   de los meses 3, 6, 9 y 12 corresponden al Directorio o autoridad formalmente delegada.
   La revisión mensual no suma costo.
 - **Slide 6 — Gobierno y seguridad:** el texto dice bloqueo en la pasarela y en el equipo.
-- **Pedido al board 1:** ratificar la política de IA que está en borrador desde abril de 2026.
+- **Pedido al board 1:** aplicar la política de IA cuya aprobación informó el responsable
+  del caso el 20/10/2026, revisando versión, alcance y aprobación documentada. Los cambios
+  propuestos requieren decisión empresarial; no se solicita aprobar la política de nuevo.
 - **Pedido al board 2:** aprobar el alcance explícito (sin decisiones de crédito ni
   scoring en 12 meses) y los topes de la escala de autonomía del plan (niveles 0 a 4).
 - **Pedido al board 3:** pedido vigente de controles: insumo M1-M3 de este anexo,
@@ -857,6 +867,7 @@ redondeado). Tres lecturas de gobierno sobre esas cifras:
 - **Mensaje sobre la licencia para vender:** hoy es un supuesto; los meses 1-3 juntan la
   evidencia, la decisión del mes 3 la lee para liberar la plataforma y la lectura del mes 9
   decide si se paga el paquete que la demuestra.
-- **Mensaje honesto:** hoy no hay inventario, registro de riesgos, matriz de clientes ni
-  controles técnicos de IA con evidencia; un producto propio no está certificado.
+- **Mensaje honesto:** la política tiene aprobación informada, sin documentación de
+  aprobación revisada ni controles probados. Inventario, riesgos y matriz siguen sin
+  evidencia actualizada; la operación del Council no está acreditada. Un producto propio no está certificado.
   Decir "certificados" donde no lo estamos es el riesgo de declarar controles que no existen.

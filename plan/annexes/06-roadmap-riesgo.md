@@ -199,7 +199,7 @@ promete atribución.
   no habilita repositorios.
 - **Precondiciones.** Sin matriz ni inventario no se sabe qué datos se pueden usar.
 
-Lo que se entrega al día 90: política ratificada o su estado actualizado, matriz
+Lo que se entrega al día 90: política aprobada con respaldo documental revisado y aplicación registrada, matriz
 de restricciones, inventario, controles probados por superficie con residual
 aceptado, base congelada con cobertura y faltantes, básico con su porcentaje de
 cobertura y la lectura de la prueba. Lo primero que puede pedir un banco son la
@@ -250,7 +250,7 @@ fechas o fondos son estas:
 | Si se atrasa o falla | Qué arrastra | Regla |
 |---|---|---|
 | Base congelada (técnico) | Básico, intermedio, prueba y mapeo del rol (cultural); la lectura de throughput que libera fondos (financiero) | Formación y prueba arrancan después de congelar; extensión a la semana 8 desplaza las tres juntas |
-| Política y matriz (gobierno) | Repositorios habilitados para la prueba; frente producto | Sin matriz no hay prueba en ese repositorio; sin política ratificada, sin producto en el año |
+| Política y matriz (gobierno) | Repositorios habilitados para la prueba; frente producto | Sin matriz no hay prueba en ese repositorio; la aprobación de la política no habilita por sí sola el producto: su alcance aplicable y los controles deben verificarse |
 | Cohorte activa y tiempo liberado (cultural) | La lectura del throughput (financiero) | Con menos de 15 personas activas no se decide por valor: cuenta como espera |
 | Agendas y horas por rol (cultural y financiero) | Cualquier actividad del tramo | Sin horas liberadas por rol, la actividad no se inicia |
 | Postura sobre el empleo comunicada (cultural) | Participación franca en el estudio del rol | El estudio no arranca antes de esa comunicación ([Anexo D](04-personas-cultura.md)) |
@@ -334,7 +334,7 @@ como condición de pase.
 | Primera liberación | Agenda e imputación 2026 confirmadas; alcance, accesos, productor, verificador y firmante definidos | Preparación autorizada por diez días hábiles | Sin capacidad previa, no empezar | No hay trabajo gratuito ni autorización implícita por presupuesto 2027 | Preparación: 0 / 8 |
 | Segunda liberación, antes de M1 | Diagnóstico y capacidad revisados; vía de IA aplicada y facilitación demostradas; acta y protocolo; presupuesto 2027, alcance y techos conciliados | Autorizar base y controles de M1-M3; prácticas condicionadas a habilitación por superficie | Reducir/resecuenciar y recostear antes de ejecutar | Detener: costo trabajado hasta 8; cierre documental incluido | Hasta 71 restantes: M1-M3 9 / 59, reserva 1 de caja y 2 de cierre; acumulado 79 |
 | Mes 3 | Base congelada con fecha, cobertura y faltantes | Congelada | Historial insuficiente: 6 semanas más, sin atribuir | Sin base al vencer: no se decide por valor; se reformula antes de continuar | Continuidad M4-M6 |
-| Mes 3 | Política ratificada, con su estado actual confirmado | Ratificada | En orden del día sin votar: 6 semanas; sin casos nuevos | No ratificada: sin frente producto en el año | Producto |
+| Mes 3 | Respaldo de aprobación y alcance de la política revisados | Aprobación documentada y cobertura aplicable al producto | Respaldo o alcance pendientes: 6 semanas; sin casos nuevos | Sin respaldo o cobertura demostrados al vencer: sin frente producto en el año | Producto |
 | Mes 3 | Matriz habilitante de los clientes principales | Completa | Ambiguos: *default-deny* y revisión legal hasta el mes 4 | Más de 30% ambiguo al mes 4: sin piloto con ese cliente | Producto |
 | Mes 3 | Básico ≥90% con evaluación práctica (meta revisada si la base se extendió) | ≥90% | ≥50% y <90%: se rediseña el formato | <50%: cambio de formato, no se repite el curso | Formación M4-M6 |
 | Mes 3 | Controles por superficie: críticos cerrados, residual aceptado | Probados | — | Control obligatorio incumplido: se suspende el uso afectado | Uso de esa superficie |
@@ -508,7 +508,7 @@ productivo de cliente va a un modelo.
 | Liberar plataforma | Interno | Meses 3, 6 o 9 | Directorio | Regla vigente o ratificada | A costear | Reversible hasta contratos largos |
 | Liberar construcción del producto | Interno | Mes 6 | Directorio | Base, comparación y señal comercial | A costear | Reversible en el mes 9 |
 | Sin crédito ni scoring; clasificación caso por caso | Producto | Hoy | Directorio | — | Alcance del año | Reversible al cierre |
-| Ratificar la política de IA | Interno | Meses 1-3 | Directorio | Estado actual confirmado | Compromiso interno enmendable | Reversible con costo de credibilidad |
+| Aplicar la política de IA aprobada y decidir sus cambios | Interno | Meses 1-3 | Directorio | Versión, alcance y respaldo de aprobación revisados | Compromiso interno enmendable | Reversible con costo de credibilidad |
 | Postura sobre el empleo | Interno | Hoy o meses 1-3 | Directorio, con asesoría laboral | — | Texto comunicado | Poco reversible una vez comunicada |
 | Cláusula tipo de IA | Interno | Meses 7-9 | Council | Una función con clasificación de riesgo | Texto listo | Reversible |
 | Firmar un compromiso contractual de IA con un cliente | Externo | Mes 12 | Council | Cláusula, matriz, red team sin críticos | Rige después del horizonte | **Irreversible** |

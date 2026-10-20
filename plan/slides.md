@@ -45,9 +45,9 @@ size: 16:9
 |---|---|---|
 | Estrategia | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Hay iniciativas; sin estrategia formal aprobada (supuesto) |
 | Datos e infraestructura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 provisional | Inventario existente; datos distribuidos; integración por validar |
-| Talento y cultura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Agente de código: Tecnología ~7 de 10; Operaciones ~1 de 10 |
-| Gobernanza | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 | Política en borrador; último registro, abril de 2026 |
-| Adopción y valor | <span class="dots"><span class="on">●</span><span class="half">●</span><span class="off">●●●</span></span> 1-2 | Sin IA productiva documentada en la oferta; valor interno sin medir |
+| Talento y cultura | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 provisional | Uso y cursos previos; sin programa por rol con seguimiento |
+| Gobernanza | <span class="dots"><span class="on">●●</span><span class="off">●●●</span></span> 2 provisional | Política aprobada; aplicación y controles por verificar |
+| Adopción y valor | Producto: 1<br>Interno: 2<br>Provisionales | Harness del SDLC interno; sin medición contra una base |
 
 </div>
 <div class="grid">
@@ -202,7 +202,7 @@ size: 16:9
 
 </span></div>
 <div class="grid g3">
-<div><strong>1.</strong> Ratificar la política en los meses 1-3, después de confirmar su estado actual.</div>
+<div><strong>1.</strong> Revisar y aplicar la política aprobada en M1-M3; sus cambios requieren decisión empresarial.</div>
 <div><strong>2.</strong> Sin crédito ni scoring en 12 meses; el resto, clasificado caso por caso.</div>
 <div><strong>3.</strong> Ningún uso nuevo sin prueba previa por superficie; una prohibición contractual se cumple excluyendo el uso.</div>
 </div>
