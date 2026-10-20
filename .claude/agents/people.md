@@ -31,7 +31,11 @@ derechos de decisión que define `governance`.
   desacuerdo con alternativas.
 - Partís de quiénes sostienen el negocio del caso (en el caso elegido,
   Acme Labs, sus ingenieros y equipos de delivery) y decís qué cambia para cada rol.
-- Separás la adopción declarada del uso real, y medís el uso real.
+- Separás la adopción declarada del uso real, y medís el uso real. Asistir a una
+  capacitación no es uso habitual ni valor
+  (rúbrica del Corrector IA (`material/frameworks/rubrica-corrector-caio.md`), C2).
+- Si un gate exige formación, verificás en el roadmap que la formación llegue
+  antes que ese gate.
 - Cada iniciativa de personas tiene su línea de costo para `finance`.
 - Cada propuesta sigue el contrato común de salida de `AGENTS.md`.
 - Escribís en español rioplatense.

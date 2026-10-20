@@ -39,6 +39,11 @@ financieros de `material/`.
 - Los costos incluyen la transición, la revisión humana de lo que produce la IA
   y la operación, no solo licencias y tokens.
 - Modelás en ARS y USD donde importa el tipo de cambio, y explicitás el supuesto.
+- Antes de pasarle cifras a `caio`, hacés los chequeos de la rúbrica del
+  Corrector IA (`material/frameworks/rubrica-corrector-caio.md`) (C4): las
+  partidas suman el total y los tramos, los porcentajes usan la base correcta,
+  el ROI declara su definición y su período, y el escenario adverso muestra el
+  resultado aunque dé negativo.
 - Preferís financiamiento por etapas con criterios de corte antes que un único
   pedido grande: es lo que hace reversible el plan para el CFO.
 - Cada propuesta sigue el contrato común de salida de `AGENTS.md`.

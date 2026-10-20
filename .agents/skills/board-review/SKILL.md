@@ -42,7 +42,8 @@ Antes de lanzar a nadie, dejá por escrito:
   de esa captura. Con `--chat` o sin escritura, el paquete vive en memoria: ni
   diff ni copias en archivos temporales.
 - **Criterios:** la consigna del TIF tal como la resume `.claude/agents/board.md`
-  (no un framework de la cursada) y la mirada del rol. Una cifra se acepta solo
+  (no un framework de la cursada), la mirada del rol y la rúbrica del Corrector
+  IA (`material/frameworks/rubrica-corrector-caio.md`) para puntuar C1 a C7. Una cifra se acepta solo
   si remonta a una ficha `verified` con bloque `verified:`. Distinguí dos
   niveles:
   - **Focalizada sobre un borrador:** una cifra trazable a una ficha `draft` o a
@@ -99,6 +100,19 @@ con **ubicación** (archivo y slide, sección o línea), **severidad**
 no pudo leer algo (archivo ausente, fuente sin acceso), lo reporta aparte como
 **limitación de acceso**, no como deficiencia del contenido.
 
+## 4b. Nota orientativa
+
+Solo en la integral, con los siete criterios evaluables y la revisión completa.
+Los revisores no la calculan: `board` no ejecuta código. El orquestador toma los
+niveles que devolvió `board` y corre:
+
+```bash
+python3 -c 'import sys; w=[20,20,15,15,10,10,10]; n=[int(x) for x in sys.argv[1:]]; assert len(n)==7 and all(0<=x<=4 for x in n); s=sum(a*b for a,b in zip(w,n)); assert abs(s/40-s/100*2.5)<1e-9; print(f"S={s} nota={s/40:.1f}/10")' <C1> <C2> <C3> <C4> <C5> <C6> <C7>
+```
+
+Con algún NE o una revisión parcial no hay nota: se informa la cobertura (suma
+de pesos evaluados sobre 100). Nunca renormalices los pesos.
+
 ## 5. Salida
 
 - **`--chat`** (o la herramienta sin escritura): devolvé la revisión en la
@@ -117,12 +131,14 @@ sha256 de la captura; resumen del diff y de los archivos nuevos (el contenido
 completo queda en el paquete, no se repite en cada reporte); criterios usados;
 modo, tandas y si hubo
 aislamiento o ejecución secuencial; veredicto por sombrero del board (integral o
-`board`); hallazgos ordenados por severidad con ubicación, dueño y condición de
+`board`); tabla de la rúbrica (criterio, peso, nivel o NE, evidencia) y la salida
+del cálculo de la nota, o el motivo por el que no se emite; hallazgos ordenados por severidad con ubicación, dueño y condición de
 cierre; limitaciones de acceso en sección aparte; y las 5 preguntas más difíciles
 para `defense/objeciones.md` a través de `caio`.
 
 ## 6. Devolvé al usuario
 
-El veredicto por sombrero (si corrió `board`), los 5 hallazgos principales con
+El veredicto por sombrero (si corrió `board`), los niveles C1 a C7 y la nota
+calculada (o el motivo para no emitirla), los 5 hallazgos principales con
 su agente dueño, las limitaciones de acceso y el path de la revisión, o "sin
 archivo (modo chat)".
