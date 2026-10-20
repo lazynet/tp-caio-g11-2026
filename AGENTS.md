@@ -35,8 +35,7 @@ El plan tiene que integrar:
 **Regla de formato:** lo que el board tiene que *decidir* va en las slides; lo que
 lo *sustenta*, en anexos de evidencia procesada (`plan/annexes/_template.md`).
 
-**Equipo:** Grupo 11, 8 integrantes (ver `README.md`). El onboarding del equipo
-está en `README.md`: mantenelo al día cuando cambie la forma de trabajo.
+**Equipo:** Grupo 11, 8 integrantes. Onboarding y reparto en `README.md`.
 
 **Todo se genera.** `plan/slides.md` (markdown compatible con Marp, slides
 separadas por `---` o `***` compactos; links locales en Markdown, no en HTML) es
@@ -155,8 +154,11 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   y el anexo dice el supuesto o la fuente. Los supuestos se marcan como tales.
 - **Un editor por archivo.** `caio` es el único que edita `plan/slides.md`. Cada
   anexo declara su agente dueño en el frontmatter (`owner: finance`) y lo escribe
-  ese dueño; los demás le proponen cambios. El dueño agente no es el responsable
-  humano: esos se asignan cuando el equipo los acuerde, y no se inventan.
+  ese dueño; los demás le proponen cambios. Los responsables humanos acordados
+  están en `README.md`; cualquier asignación nueva requiere acuerdo del equipo.
+- **Seguimiento.** GitHub Issues es el backlog. Registrá el trabajo en el issue
+  de su sección y enlazalo desde el PR con la evidencia de cierre. Estados,
+  formularios y flujo: `README.md`, sección "Backlog y seguimiento".
 - **Edición entre sesiones.** El rol define quién puede editar, no bloquea el
   archivo: coordiná en el issue y usá una rama o worktree por tarea. Dos sesiones
   con el mismo rol no editan el mismo archivo en paralelo.
