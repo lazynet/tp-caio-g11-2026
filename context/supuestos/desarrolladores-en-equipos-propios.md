@@ -35,7 +35,7 @@ Es el piso de la cohorte, necesario pero no suficiente: decide el semiancho.
 - Un inventario por equipo que dé menos de 15 desarrolladores en equipos propios.
 - Una mezcla de seniority muy distinta de la supuesta.
 - Que la serie de la preparación previa muestre que con 15 personas el semiancho supera 3 puntos:
-  entonces el mínimo no alcanza y el gate se reformula antes de la aprobación de hoy.
+  entonces el mínimo no alcanza y el gate se reformula antes de la segunda liberación, previa a M1.
 
 # Cautelas
 

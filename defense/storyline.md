@@ -25,8 +25,8 @@ cada gate.
   último registro, de abril.
 - Lo que falta es valor incremental medido contra una base. Y el propio
   diagnóstico es una hipótesis: las fuentes mezclan poblaciones y fechas, así que
-  antes de comprometer horas conciliamos corte, nómina, contratistas, personas y
-  horas por rol.
+  financiamos primero una validación acotada para conciliar corte, nómina,
+  contratistas, personas y horas por rol antes de liberar M1-M3.
 
 **Cierre del acto:** el riesgo no es invertir poco; es ampliar sin saber qué compra.
 
@@ -66,22 +66,33 @@ barata por el ROI de un paquete que no medimos.
   Operaciones confirma agendas y trabajo desplazado por persona y semana
   ([Anexo D](../plan/annexes/04-personas-cultura.md)).
 - **Roadmap:** diagnóstico, base, política, controles, formación y prueba en los
-  meses 1-3; solución según evidencia en los 4-6; aplicación y producto
+  meses 1-3, después de diez días hábiles de validación autorizada en 2026;
+  solución según evidencia en los 4-6; aplicación y producto
   condicional en los 7-9; evaluación y traspaso en los 10-12. El Council revisa
-  cada mes y puede cortar; los fondos se liberan en los meses 3, 6, 9 y 12.
-- **Pérdida máxima:** salir en el mes 3 cuesta hasta 74 hasta cerrar (10 de caja
-  y 64 de tiempo) y 80 en el año si se aprueba el núcleo de gobierno al salir.
-  Es el precio de aprender, sin restar beneficio. Esperar seis semanas en el mes
-  6 y cortar cuesta 97; cortar sin esperar, 90.
+  cada mes y puede cortar; a las dos liberaciones iniciales les siguen los gates
+  de los meses 3, 6, 9 y 12.
+- **Primera liberación:** 80-136 h y hasta 8 de tiempo, sin caja incremental;
+  agendas e imputación 2026 confirmadas antes de empezar. Incluye diagnóstico,
+  matriz privada, viabilidad, verificación y cierre documental. Sin despliegues
+  ni dictamen externo; el alcance y la cotización legal preparan la decisión.
+- **Pérdida máxima:** el resto de M1-M3 y las reservas requiere una
+  segunda autorización de hasta 71; el acumulado es 79 (10 de caja y 69 de
+  tiempo), no 79 nuevos. Si se corta antes de M1, el límite es 8; si se sale en
+  M3, es 79 hasta cerrar y 85 en el año con núcleo aprobado al salir. Son
+  Es el precio de aprender, sin restar beneficio. Esperar seis semanas en M6 y cortar
+  tiene techo 102; cortar sin esperar, 95.
 
 ## Cierre: resolución (slide 10)
 
-**Valor medible; seguridad aceptable; fondos por decisión.** "Autoricen solo el
-paquete mínimo de los meses 1-3: hasta 9 de caja más 1 de reserva, y 59 de
-tiempo más 3 de preparación y 2 de cierre, y adopten los gates. Pérdida máxima
-hasta cerrar: 74; el año no se aprueba hoy. En marzo les
-traemos la base congelada, la política, la matriz, los controles probados y lo
-que aprendió la prueba, y deciden si sigue, se amplía o se corta."
+**Valor medible; seguridad aceptable; fondos por decisión.** "Autoricen primero
+diez días hábiles de validación con agenda propia: hasta 8 de tiempo y caja
+incremental 0. Con diagnóstico, capacidad y viabilidad revisados, decidan continuar,
+reducir/resecuenciar o detener. Continuar requiere autorizar hasta 71 adicionales
+para M1-M3 y reservas, con presupuesto 2027 comprobado: acumulado 79. La aprobación
+económica no habilita prácticas sin controles. En marzo traemos base, política,
+matriz, pruebas y aprendizajes para decidir el siguiente tramo. El año sigue
+condicionado. Y adopten los gates de los meses 3, 6, 9 y 12 como regla para
+liberar fondos."
 
 ## Qué no decir
 
@@ -89,6 +100,9 @@ que aprendió la prueba, y deciden si sigue, se amplía o se corta."
   beneficio de caja 0 e ingreso nuevo 0.
 - "Caja cero": se confunde con desembolso cero. Decir "beneficio de caja
   estimado: 0".
+- Que los 79 se autorizan de una vez, que la preparación está ejecutada o que
+  elegir el supuesto libera agendas: son dos decisiones y falta autorización
+  empresarial. Para la primera, decir "caja incremental 0", junto con sus horas.
 - Que 47/161/394 son alternativas equivalentes: son alcances distintos.
 - Que las cuatro condiciones de plataforma ya rigen: son una propuesta pendiente.
 - Que la plataforma pasa al año 2: se relee en los meses 3, 6 y 9.

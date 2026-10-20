@@ -30,7 +30,7 @@ size: 16:9
 
 <p style="max-width:820px">Hoy la IA se usa, pero su valor incremental no está medido. Proponemos empezar por lo mínimo que compra esa medición, con controles probados y las herramientas que ya pagamos, y ampliar solo con evidencia.</p>
 
-<p class="fine">Cifras estimadas, por validar antes de comprometer presupuesto · sin promesa de repago en el año</p>
+<p class="fine">Cifras estimadas · validación con autorización propia antes de liberar M1-M3 · sin promesa de repago en el año</p>
 
 ---
 
@@ -60,7 +60,7 @@ size: 16:9
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Tomar el diagnóstico como hipótesis: antes de comprometer horas, conciliar corte, nómina, contratistas, personas/FTE y horas por rol.</span>
+<span class="body">Autorizar una validación acotada del diagnóstico, las fuentes y las agendas antes de liberar la ejecución de M1-M3.</span>
 <span class="ref">
 
 [Anexo A — Diagnóstico](annexes/01-diagnostico.md)
@@ -115,7 +115,7 @@ size: 16:9
 <span class="tag">Qué compra el mínimo</span>
 <h3>Saber si hay valor, con controles probados</h3>
 <p>Básico, cohorte, controles por superficie, base y medición, y descubrimiento del asistente, con las herramientas que ya pagamos. Sin plataforma.</p>
-<p>Todo el año, si pasan los gates: <strong>≈67 (26-109)</strong>, proyección no aprobada.</p>
+<p>Todo el año, si pasan los gates: <strong>≈70 (27-113)</strong>, incluida la validación; proyección no aprobada.</p>
 </div>
 <div class="plain">
 
@@ -158,7 +158,7 @@ size: 16:9
 
 <div class="grid g3">
 <div class="card dark">
-<h3>Aprobar hoy</h3>
+<h3>Tras la validación inicial</h3>
 <p>Meses 1-3 con herramientas existentes: configuración, telemetría, base y prueba de prácticas.</p>
 </div>
 <div class="card">
@@ -173,7 +173,7 @@ size: 16:9
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Aprobar la columna izquierda; ratificar o no las cuatro condiciones.</span>
+<span class="body">Condicionar la columna izquierda a la validación inicial; ratificar o no las cuatro condiciones.</span>
 <span class="ref">
 
 [Anexo B — Arquitectura](annexes/02-arquitectura.md)
@@ -246,12 +246,14 @@ size: 16:9
 
 <p class="eyebrow">07 · Roadmap</p>
 
-# Doce meses, revisión cada mes, fondos cada tres
+# Validación inicial y fondos por decisión
+
+<p><strong>Preparación 2026:</strong> 10 días hábiles, 80-136 h; techo <strong>0 / 8</strong>. Diagnóstico, agendas y viabilidad antes de decidir continuar, reducir o detener.</p>
 
 | | Meses 1-3 → mes 3 | Meses 4-6 → mes 6 | Meses 7-9 → mes 9 | Meses 10-12 → cierre |
 |---|---|---|---|---|
 | Qué pasa | Diagnóstico, base, política, controles, formación y prueba | Solución según evidencia; medición del asistente | Aplicación; producto solo con señal | Evaluación y traspaso |
-| Techo caja / tiempo | **9 / 59** (aprobar hoy) | 2 / 14 | 2 / 11 | 2 / 11 |
+| Techo caja / tiempo | **9 / 59** (segunda autorización) | 2 / 14 | 2 / 11 | 2 / 11 |
 | Pasa si | Base, política, controles probados, básico ≥90% | Límite inferior ≥ +3%, sin daño; Tec. ≥80% | Límite inferior ≥ +8% | Tec. ≥85%; Op. habilitadas ≥60% |
 | Plataforma | Se evalúa | Se relee | Se relee | Irreversibles, para después |
 
@@ -259,7 +261,7 @@ size: 16:9
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Adoptar estos gates como regla para liberar fondos.</span>
+<span class="body">Adoptar estos gates como regla para liberar fondos: primero validar; después decidir hasta 71 adicionales, con reservas. Acumulado máximo: 79.</span>
 <span class="ref">
 
 [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md)
@@ -278,10 +280,11 @@ size: 16:9
 
 | Si salimos en | Hasta cerrar (caja / tiempo) | Máximo del año |
 |---|---|---|
-| Mes 3 | 10 / 64 → **74** | **80** con núcleo de gobierno |
-| Mes 6 | 12 / 78 → **90** | **94** |
-| Mes 9 | 14 / 89 → **103** | **105** |
-| Mes 12 | 16 / 100 → **116** | **116** |
+| Antes de M1 | 0 / 8 → **8** | **8**, cierre documental incluido |
+| Mes 3 | 10 / 69 → **79** | **85** con núcleo de gobierno |
+| Mes 6 | 12 / 83 → **95** | **99** |
+| Mes 9 | 14 / 94 → **108** | **110** |
+| Mes 12 | 16 / 105 → **121** | **121** |
 
 </div>
 <div class="grid" style="gap:8px">
@@ -291,7 +294,7 @@ size: 16:9
 </div>
 </div>
 
-<p class="note">Miles de USD; suma de techos, sin restar beneficio. Esperar 6 semanas y cortar: 97 en el mes 6, 110 en el 9. El núcleo posterior (accesos, incidentes, permisos) cuesta caja 0 y hasta 6 de tiempo, y se aprueba al salir.</p>
+<p class="note">Miles de USD; suma de techos, sin restar beneficio. Esperar 6 semanas y cortar: 102 en el mes 6, 115 en el 9. El núcleo posterior (accesos, incidentes, permisos) cuesta caja 0 y hasta 6 de tiempo, y se aprueba al salir.</p>
 
 <p class="eyebrow" style="margin-bottom:6px">Irreversibles: en el mes 12 y para después</p>
 
@@ -304,7 +307,7 @@ size: 16:9
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Aceptar una pérdida máxima de aprendizaje de 74 al mes 3.</span>
+<span class="body">Aceptar una pérdida máxima de aprendizaje de 79 hasta cerrar en M3, sujeta a dos autorizaciones.</span>
 <span class="ref">
 
 [Anexo E](annexes/05-business-case.md) · [Anexo F](annexes/06-roadmap-riesgo.md)
@@ -320,9 +323,9 @@ size: 16:9
 
 <p class="eyebrow">Valor medible · seguridad aceptable · fondos por decisión</p>
 
-# Autorizar el mínimo M1-M3
+# Autorizar la validación inicial
 
-<p style="font-size:24px;line-height:1.4;max-width:1000px;color:#f3efe4">El Directorio autoriza solo el paquete mínimo de los meses 1-3: caja 9 + 1 de reserva; tiempo 59 + 3 de preparación + 2 de cierre. Pérdida máxima hasta cerrar: 74; no se aprueba el año. Adopta los gates de los meses 3, 6, 9 y 12.</p>
+<p style="font-size:24px;line-height:1.4;max-width:1000px;color:#f3efe4">Autorizar primero diez días hábiles de validación: hasta 8 de tiempo interno y caja incremental 0, con agendas e imputación 2026 confirmadas. Adoptar los gates de los meses 3, 6, 9 y 12. Con evidencia, decidir hasta 71 adicionales para M1-M3 y reservas: caja 10 y tiempo 61. Pérdida máxima hasta cerrar: 79; la segunda liberación y el año quedan condicionados.</p>
 
 <div class="grid g2" style="margin-top:auto;position:relative">
 <div>

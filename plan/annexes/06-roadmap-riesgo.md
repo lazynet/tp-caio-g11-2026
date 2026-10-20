@@ -12,7 +12,8 @@ Slides que sustenta: [Slide 3 — Beneficio principal y captura](../slides.md),
 [Slide 10 — Resolución propuesta](../slides.md).
 
 > **Cifras estimadas, todavía sin validar contra fuentes internas;** se validan
-> antes de comprometer presupuesto. Los umbrales, bandas y plazos de los gates son
+> antes de liberar la ejecución de M1-M3; la validación tiene autorización propia.
+> Los umbrales, bandas y plazos de los gates son
 > supuestos o decisiones propuestas por el CAIO, a calibrar con la línea de base de
 > los meses 1-3. Los gates son propuestas a ratificar, no resultados observados.
 
@@ -20,16 +21,18 @@ Slides que sustenta: [Slide 3 — Beneficio principal y captura](../slides.md),
 
 Poner en una sola línea de tiempo los tracks técnico ([Anexo B](02-arquitectura.md)),
 de gobierno ([Anexo C](03-gobierno-seguridad.md)), cultural ([Anexo D](04-personas-cultura.md))
-y financiero ([Anexo E](05-business-case.md)), con un gate cada tres meses que
-integra las condiciones de las cuatro áreas y dice qué pasa si cada una falla, y
-una revisión mensual del Council en el medio: **el riesgo se mira cada mes; la
-plata se libera cada tres.**
+y financiero ([Anexo E](05-business-case.md)), con dos autorizaciones iniciales
+y luego un gate cada tres meses que integra las condiciones de las cuatro áreas.
+El Council revisa cada mes y puede frenar o cortar; **liberar recursos requiere
+una decisión explícita de la autoridad del gate**.
 
-Sustenta **un único pedido al board: el paquete mínimo de los meses 1-3**
-(enero-marzo de 2027), costeado por Finanzas en el [Anexo E](05-business-case.md),
-"Pedido inicial: paquete mínimo". Compra configuración, controles probados y
-medición sobre herramientas existentes, sin plataforma central. El resto del año
-no se aprueba hoy. El pedido inicial es el paquete mínimo, en vez del pedido
+Sustenta **un pedido inicial de validación acotada durante la preparación de
+2026**, antes de decidir la ejecución del paquete mínimo de los meses 1-3
+(enero-marzo de 2027). Finanzas lo costea en el [Anexo E](05-business-case.md),
+"Pedido inicial: paquete mínimo". Primero se autoriza tiempo para diagnóstico,
+agendas y viabilidad; una segunda decisión puede liberar configuración, controles
+y medición con herramientas existentes, sin plataforma central. El resto del año
+no se aprueba hoy. Se conserva el paquete mínimo, en vez del pedido
 completo de 33+6 de caja y 72+7 de tiempo, que queda solo como alternativa
 (Anexo E, "Pedido completo 33+6 / 72+7 y gates económicos (alternativa)"). La
 bifurcación por señal sigue como regla vigente de la opción de plataforma, que se
@@ -48,7 +51,7 @@ verificador y autoridad firmante diferenciados ([Anexo C](03-gobierno-seguridad.
 
 | Supuesto | Valor | Fuente o tipo |
 |---|---|---|
-| Convención de tiempo | La preparación previa es octubre-diciembre de 2026, antes de la aprobación de hoy; después, cuatro tramos de tres meses: meses 1-3 (enero-marzo de 2027), 4-6, 7-9 y 10-12 (octubre-diciembre de 2027). Cada tramo termina en un gate (meses 3, 6, 9 y 12) y cada mes hay una revisión del Council, que no libera fondos | [Convenciones](../../context/supuestos/convenciones-de-calculo.md), [Anexo E](05-business-case.md) |
+| Convención de tiempo | La preparación previa es octubre-diciembre de 2026, posterior a una autorización específica; termina en la decisión que puede liberar M1-M3. Después, cuatro tramos de tres meses de 2027, con gates en los meses 3, 6, 9 y 12. El Council revisa cada mes, sin liberar fondos | [Convenciones](../../context/supuestos/convenciones-de-calculo.md), [Anexo E](05-business-case.md) |
 | Patrón de gates | Kill/scale por etapa, con criterio de éxito y de abandono declarados antes de empezar | [Kill/scale gates](../../material/conceptos/m1u2-kill-scale-gates.md), [kill-fast](../../material/conceptos/m1u1-kill-fast.md) |
 | Primeros 100 días | Los meses 1-3 absorben el diagnóstico y la base: inventario, línea de base, política, matriz y controles. No hay quick win de negocio medido; ver "Primeros 100 días" | [Plan de 100 días](../../material/conceptos/m1u2-plan-100-dias.md) |
 | Capacidad | Utilización 83%-90% como promedio de toda la empresa, sin corte por proyecto; bench menor a 1 FTE; restricción de no contratar. El promedio no prueba que haya horas libres en los roles necesarios | [Capacidad](../../context/hechos/capacidad-y-utilizacion.md) |
@@ -59,7 +62,7 @@ verificador y autoridad firmante diferenciados ([Anexo C](03-gobierno-seguridad.
 
 ## Evidencia
 
-### El pedido de hoy: paquete mínimo de los meses 1-3
+### El pedido de hoy: validar antes de liberar M1-M3
 
 El pedido completo está en la [Slide 10](../slides.md); la [Slide 9](../slides.md)
 muestra su pérdida máxima. Cifras en miles de USD, techos propuestos por Finanzas
@@ -72,7 +75,7 @@ los rangos exactos.
 | 2. Caja M1-M3 | Legal focalizado 2-6 y provisión de herramientas/exportación 0-1,5, más 15%: 2,3-8,625; **techo 9**. Sin seats nuevos ni contractor | Anexo E |
 | 3. Reserva de caja | **1**, para hasta un mes de herramientas y legal por hitos sin preaviso. Compromiso máximo de caja: **10** | Anexo E |
 | 4. Tiempo M1-M3 | 970-1.350 h internas, 14,3-58,3 a costo cargado; **techo 59**. Incluye Seguridad 34-54 h: técnico de B 24-40, política de C 4-8 aparte y Council 6 | Anexo E |
-| 5. Preparación previa | 20-40 h (tech lead y QA), 0,5-2,25; **techo 3**, separada del tramo y sin ejecución registrada | Anexo E |
+| 5. Preparación previa | Técnica existente 20-40 h, techo 3; validación organizativa adicional 60-96 h, techo 5. Total 80-136 h, **techo 8 de tiempo y caja 0**, con autorización e imputación 2026 propias, sin ejecución registrada | Anexo E; [Hito inicial](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial) |
 | 6. Cierre interno | 16-24 h de senior para exportar, revocar accesos y archivar; **reserva de tiempo 2** | Anexo E |
 | 7. Capacidad total | **2,0208-2,8125 FTE internos** en M1-M3 (referencia 2,4167): **0,8958-1,4375 clave** y **1,125-1,375 distribuidos**. Ambas bolsas sobre las mismas personas, conciliadas por persona y semana en la matriz privada de D | Anexo E; [Anexo D](04-personas-cultura.md), "Capacidad efectiva" |
 | 8. Núcleo tras un corte | Si se corta en el mes 3: 108 h en M4-M12 (36 por tramo), caja 0, **tiempo hasta 6**. Accesos, incidentes y permisos; no mantiene el experimento. Requiere aprobación explícita en el gate de salida y **no forma parte del total autorizado hoy** | Anexo E |
@@ -89,19 +92,67 @@ La demanda costeada sigue en 970-1.350 h. Las 30 h de margen sobre el máximo
 clave requieren costeo y autorización antes de usarse; no sustituyen el hito
 de validación organizativa ([fuente](../../context/supuestos/paquete-minimo-de-aprendizaje.md#reserva-propuesta-de-capacidad-m1-m3)).
 
-**Autorización total de hoy: caja 9 + 1 = 10; tiempo 59 + 3 + 2 = 64.** El tiempo
-no es nueva nómina ni pago externo. Pérdida máxima de aprendizaje si se sale en el
-mes 3: **74 hasta cerrar** (10 + 64), sin deducir beneficios; **80 en el año** si
-se aprueba el núcleo al salir. Fuera del pedido: los meses 4-12, la plataforma, el producto, el
+**Primera autorización propuesta: caja 0 y tiempo hasta 8.** Una segunda decisión
+puede liberar hasta **71 adicionales: caja 10 y tiempo 61**, incluidas reservas.
+El techo acumulado hasta cerrar en M3 es **79 = caja 10 + tiempo 69**
+(59 de M1-M3 + 3 de técnica + 5 de organización + 2 de cierre), sin deducir
+beneficios; **85 en el año** si se aprueba el núcleo al salir. Son límites de
+autorización, no pérdida económica observada. El tiempo no es nueva nómina ni
+pago externo. Fuera del pedido: los meses 4-12, la plataforma, el producto, el
 modelo propio, compromisos a más de 12 meses y todo compromiso con clientes.
 El techo de caja se confirma contra el presupuesto 2027 en privado.
 
-**Antes de iniciar**, el board recibe: alcance y techos definidos; horas por rol
+**Antes de liberar M1-M3**, el board recibe: diagnóstico revisado con brechas y
+faltantes explícitos; alcance y techos definidos; horas por rol
 liberadas en la matriz privada, con trabajo desplazado y recuperación; vía de IA
 aplicada interna demostrada (8-16 h) y perfil de facilitación (16-32 h) o la
 excepción externa decidida; acta de viabilidad del protocolo y decisión de
 calendario; controles aplicables probados antes de usar cada superficie. Si falta
 algo, se reduce o difiere y se vuelve a costear; el presupuesto no libera tiempo por sí solo.
+La autorización económica permite producir base y controles; cada superficie
+requiere dictamen, restricciones y pruebas aplicables antes de habilitar usos.
+
+### Validación inicial y dos liberaciones
+
+Propuesta elegida por Martín para el borrador, pendiente de acuerdo del equipo y
+autorización empresarial. Los roles de Acme Labs están a designar; los responsables
+humanos de las secciones del TP no los sustituyen. Fuente de horas y costos:
+[validación inicial](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial).
+
+| Decisión | Condición y evidencia | Autoridad y límite |
+|---|---|---|
+| Primera liberación, preparación 2026 | Agendas, accesos, trabajo desplazado e imputación presupuestaria de la propia preparación confirmados; alcance acotado y personas designadas para producir, verificar y firmar | Directorio o autoridad formalmente delegada; diez días hábiles, 80-136 h, caja 0 / tiempo hasta 8 |
+| Segunda liberación, antes de M1 | Diagnóstico revisado; padrón y matriz persona/semana conciliados para soporte y formación; desplazamiento y recuperación explícitos; acta de viabilidad y protocolo; roles diferenciados; alcance recosteado y presupuesto 2027 comprobado | Directorio o autoridad formalmente delegada decide continuar con alcance validado, reducir/resecuenciar o detener; hasta 71 restantes, no automáticos |
+
+Los días 1-4 contrastan documentos y 4-6 entrevistas focalizadas; los días 2-7
+concilian padrón y agendas; los días 4-8 confirman políticas, restricciones y
+responsabilidades y preparan la cotización legal; los días 7-9 concilian costos y
+solapes y verifican los entregables; el día 10 se documenta la decisión. La
+preparación técnica existente corre en paralelo. Son ventanas superpuestas de un
+alcance acotado, sin promesa de validación exhaustiva ni iteraciones ilimitadas.
+
+El CAIO coordina; Operaciones y managers liberan agendas; Finanzas concilia costo
+cargado, contribución desplazada y presupuesto; Seguridad conserva la facultad de
+suspender. Quien produce, quien verifica y quien firma son personas distintas.
+El dictamen legal externo sigue dentro de M1-M3: preparar su alcance y pedir
+cotización no compromete servicios pagos; si el proveedor cobra, se requiere otra
+autorización antes de contratar.
+
+No hay formación, prácticas nuevas, compras ni despliegues en la primera etapa.
+La preparación técnica usa lectura y exportación autorizadas de registros
+existentes. Los controles necesarios no se postergan para proteger una medición:
+se registra el cambio y se preserva o revisa la base con Arquitectura.
+
+**Corte temprano:** si la evidencia no sostiene el alcance o vence el plazo sin
+resolver bloqueantes, no se libera el resto. Se reduce/resecuencia con recosteo,
+o se detiene con el costo efectivamente trabajado, hasta 8 de tiempo y caja 0.
+El cierre documental está incluido; al no desplegar ni contratar, no se activa
+el cierre técnico de M1-M3. Una ampliación requiere aprobación previa.
+
+Las dos bolsas son disjuntas: 8 de preparación más 71 del resto del diseño,
+incluidas reservas, totalizan 79. La segunda decisión descuenta cualquier tarea
+equivalente ya financiada; no vuelve a autorizar la primera. La agenda previa
+no consume las 720 h ni el margen de 30 h de M1-M3.
 
 **Calendario de controles.** El [Anexo C](03-gobierno-seguridad.md) conserva las
 pruebas y compensatorios en M4-M6 y deja adelantarlos a M1-M3 como opción pendiente
@@ -113,7 +164,7 @@ falla, ese uso no se inicia ni se amplía en M1-M3 y la prueba de prácticas esp
 
 | Cuándo | Qué | Quién verifica | Costo |
 |---|---|---|---|
-| Antes de la aprobación de hoy (preparación previa, octubre-diciembre de 2026) | Acta de viabilidad de datos ([Anexo B](02-arquitectura.md), "Acta de viabilidad de datos"): extracción reproducible, diccionario, enlace PR/CI/reversiones/tickets/incidentes, cohorte elegible, precisión esperada y lectura simulada de pasa/espera/corta. Protocolo único del Anexo B congelado. Conciliación del perímetro de personas (ver [Anexo A](01-diagnostico.md)). La política queda lista para ratificar, con su estado actual confirmado | A designar; el Directorio ve el resultado en la aprobación de hoy | Hasta 3 de tiempo (20-40 h) |
+| Preparación, octubre-diciembre de 2026, después de la primera autorización | Diagnóstico y matriz privada de capacidad; acta de viabilidad de datos: extracción reproducible, diccionario, enlaces, cohorte, precisión y lectura simulada. Protocolo único de B congelado. Estado de política y restricciones confirmado; alcance/cotización legal preparados | Productor, verificador y firmante distintos, a designar; el Directorio recibe el resultado antes de liberar M1-M3 | Hasta 8 de tiempo (80-136 h), caja 0 |
 | Semanas 1-4 del plan | **Base prospectiva congelada** con la unidad del Anexo B, antes de cualquier formación, práctica o herramienta nueva. Política/intake, matriz, inventario y legal focalizado arrancan en paralelo | Productor: oficina del CAIO; verificador distinto, a designar | Dentro de M1-M3 |
 | Semanas 5-13 (o 9-13 si la base se extiende) | Básico para toda la organización, intermedio de la cohorte y prueba de prácticas sobre repositorios que la matriz habilite, solo en superficies con controles probados | Gobierno, Personas, Arquitectura | Dentro de M1-M3 |
 | Meses 4-12 | Continuidad condicional sin plataforma; descubrimiento del asistente antes del mes 6; opción de plataforma releída en los meses 3, 6 y 9 | Oficina del CAIO | Techos por gate |
@@ -156,7 +207,8 @@ política y la matriz.
 
 ### Revisión mensual del Council
 
-**El riesgo se mira cada mes; la plata se libera cada tres.** Entre gate y gate,
+**El riesgo se mira cada mes; los recursos se liberan por decisión.** Tras las
+dos autorizaciones iniciales, los gates son trimestrales. Entre gate y gate,
 el AI Council hace una revisión mensual de 2 horas con un tablero: caja y tiempo
 consumidos contra el techo del tramo, uso semanal por área, incidentes y secretos
 expuestos, señales de plataforma (contrato, precio por consumo, cliente) y avance
@@ -177,13 +229,13 @@ de hitos. Es la misma reunión en la que el Council revisa el registro de riesgo
 
 ### Línea de tiempo integrada
 
-**Cada mes: revisión del Council con poder de corte; los fondos se liberan en los
-meses 3, 6, 9 y 12.** Techos en miles de USD, caja / tiempo
+**Dos liberaciones iniciales y luego gates en los meses 3, 6, 9 y 12. Cada mes:
+revisión del Council con poder de corte, sin liberar fondos.** Techos en miles de USD, caja / tiempo
 ([Anexo E](05-business-case.md)). Los meses 4-12 **no se aprueban hoy**.
 
 | Tramo | Técnico y datos | Gobierno y seguridad | Cultural | Financiero: techo caja / tiempo |
 |---|---|---|---|---|
-| Preparación previa | Acta de viabilidad; protocolo congelado | Estado de la política confirmado | Conciliación del perímetro de personas | — / 3 |
+| Preparación previa, con autorización propia | Acta de viabilidad; protocolo congelado | Estado de política y restricciones; roles y cotización legal | Diagnóstico y matriz privada; agenda 2026 propia | **0 / 8**, primera liberación |
 | Meses 1-3: diagnóstico, base, política, formación y prueba | Configuración de herramientas existentes; extracción y base; prueba de prácticas | Política/intake, matriz, inventario, legal focalizado; controles probados por superficie | Básico para todos; intermedio de la cohorte | **9 / 59**, más reserva de caja 1 y de cierre 2 |
 | Meses 4-6: solución según evidencia | Mantener controles y medición; descubrimiento del asistente (tiempo a primera integración exitosa); opción de plataforma si se cumplen regla y condiciones | Pruebas y residuales con vencimiento; lectura de señal contractual | Seguimiento de adopción con denominadores | 2 / 14, condicional |
 | Meses 7-9: aplicación y producto condicional | Continuidad; producto solo con base y señal del mes 6 y ruta técnica costeada | Amenazas de la función, si existe; cláusula tipo sin firma | Casos por rol dentro de horas aprobadas | 2 / 11, condicional |
@@ -202,11 +254,13 @@ superficie que no puede cumplir se excluye; no se declara cubierta por un gatewa
 vuelven a costear antes de liberar: no se copian los tramos del paquete completo
 (71/106, 59/78, 95/69, ni el producto 38/34 y 21/23 de ese paquete). Ninguna
 proyección de continuidad es autorización anual: continuar el mínimo todo el año
-proyecta ≈67 (26-109) económicos, con suma de techos 113 y hasta 116 con salida.
+proyecta ≈70 (27-113) económicos, con suma de techos 118 y hasta 121 con salida,
+incluida una sola vez la validación organizativa adicional.
 
 ### Gates por condición (pasa, espera, corta)
 
-Los gates son la aprobación de hoy y los meses 3, 6, 9 y 12. **Solo los gates
+Los gates son la primera autorización de preparación, la segunda antes de M1 y
+los meses 3, 6, 9 y 12. **Solo los gates
 liberan fondos.** Un "espera" libera solo lo que dice la fila y fija un plazo.
 Cuatro términos que no son sinónimos: **corte** (el frente deja de financiarse y
 queda el núcleo), **suspensión** (se frena un uso o gasto puntual y se vuelve a
@@ -239,7 +293,8 @@ semanas no garantizan pasar.
 
 | Gate | Condición | Pasa | Espera (plazo) | Corta o falta | Fondos que afecta |
 |---|---|---|---|---|---|
-| Hoy | Alcance y techos definidos; horas por rol liberadas; vía de IA aplicada y facilitación demostradas; acta de viabilidad y calendario; controles aplicables probados antes de usar | Paquete mínimo aprobado | — | Reducir o diferir y volver a costear; no se afirma que el presupuesto libera tiempo. La preparación queda hundida (≤3) | M1-M3: 9 / 59, reserva 1 de caja y 2 de cierre |
+| Primera liberación | Agenda e imputación 2026 confirmadas; alcance, accesos, productor, verificador y firmante definidos | Preparación autorizada por diez días hábiles | Sin capacidad previa, no empezar | No hay trabajo gratuito ni autorización implícita por presupuesto 2027 | Preparación: 0 / 8 |
+| Segunda liberación, antes de M1 | Diagnóstico y capacidad revisados; vía de IA aplicada y facilitación demostradas; acta y protocolo; presupuesto 2027, alcance y techos conciliados | Autorizar base y controles de M1-M3; prácticas condicionadas a habilitación por superficie | Reducir/resecuenciar y recostear antes de ejecutar | Detener: costo trabajado hasta 8; cierre documental incluido | Hasta 71 restantes: M1-M3 9 / 59, reserva 1 de caja y 2 de cierre; acumulado 79 |
 | Mes 3 | Base congelada con fecha, cobertura y faltantes | Congelada | Historial insuficiente: 6 semanas más, sin atribuir | Sin base al vencer: no se decide por valor; se reformula antes de continuar | Continuidad M4-M6 |
 | Mes 3 | Política ratificada, con su estado actual confirmado | Ratificada | En orden del día sin votar: 6 semanas; sin casos nuevos | No ratificada: sin frente producto en el año | Producto |
 | Mes 3 | Matriz habilitante de los clientes principales | Completa | Ambiguos: *default-deny* y revisión legal hasta el mes 4 | Más de 30% ambiguo al mes 4: sin piloto con ese cliente | Producto |
@@ -247,11 +302,11 @@ semanas no garantizan pasar.
 | Mes 3 | Controles por superficie: críticos cerrados, residual aceptado | Probados | — | Control obligatorio incumplido: se suspende el uso afectado | Uso de esa superficie |
 | Mes 3 | Consumo dentro de los techos | Dentro | — | Excedido: continuidad solo con costeo nuevo aprobado | M4-M6 |
 | Mes 3 | Opción de plataforma: señal (ver definición abajo). Regla vigente: la señal libera evaluar la plataforma. Propuesta pendiente de ratificación: además, brecha documentada, alternativas comparables, economía incremental o pérdida de aprendizaje aceptada, y capacidad demostrada | Con regla vigente: señal. Con la propuesta ratificada: señal más las cuatro condiciones, con reserva y contrato para el compromiso nuevo | — | Sin señal: continuar el mínimo costeado y releer M6/M9. Si se ratificaron las cuatro condiciones, la falta de cualquiera impide liberar plataforma. Si no se ratificaron, elevar decisión bajo la regla vigente y volver a costear. No pasa al año 2 por defecto | Plataforma, a costear |
-| Mes 6 | Throughput, calidad primero | Límite inferior ≥ +3% sin daño | **Suspensión.** Estimado >0% sin pasar, o muestra insuficiente: una espera de 6 semanas con subtramo propio aprobado (64-106 h; techos 1 / 6); si sigue en la banda, corte del frente interno: 97 hasta cerrar, 100 en el año | Estimado ≤0% o daño: corte del frente interno; queda el núcleo | M7-M9 |
+| Mes 6 | Throughput, calidad primero | Límite inferior ≥ +3% sin daño | **Suspensión.** Estimado >0% sin pasar, o muestra insuficiente: una espera de 6 semanas con subtramo propio aprobado (64-106 h; techos 1 / 6); si sigue en la banda, corte del frente interno: 102 hasta cerrar, 105 en el año | Estimado ≤0% o daño: corte del frente interno; queda el núcleo | M7-M9 |
 | Mes 6 | Adopción de Tecnología, con cobertura y denominador publicados | ≥80% | **Mantenimiento.** ≥60% y <80%: formación rediseñada | **Suspensión.** <60%: se frenan horas de formación que no sean rediseño. Adopción no equivale a valor | Formación M7-M9 |
 | Mes 6 | Controles: cobertura por superficie probada; críticos cerrados; residual aceptado. Si hay gateway y se declara cobertura de precio: *fc* × *s* contra el umbral, calidad y portabilidad del Anexo B | Cumplidos | Superficie no cubierta: se declara y escala al Council | Sin prueba económica, se retira el beneficio de precio; conservar un gateway exige justificar control frente a la alternativa menor | Uso y plataforma |
 | Mes 6 | Producto: problema observado, base de tiempo a primera integración exitosa y métrica principal acordadas antes de liberar; comparación con documentación/soporte; señal comercial escrita (ver "Hipótesis de producto") | El board decide volver a costear y liberar construcción | — | Sin evidencia: diferir. Sin plataforma ni ruta técnica alternativa diseñada y costeada, no se promete M7-M9 | Producto, a costear |
-| Mes 9 | Throughput, calidad primero | Límite inferior ≥ +8% | **Mantenimiento.** Estimado ≥ +5% sin pasar. Propuesta a ratificar: una sola espera de 6 semanas, sin expansión, con subtramo propio aprobado (techos 1 / 6); al vencer, si no pasa valor/calidad con la versión congelada, corte del frente interno: 110 hasta cerrar, 111 en el año | Estimado < +5%: corte del frente interno; precedencia si otro frente sigue | M10-M12 |
+| Mes 9 | Throughput, calidad primero | Límite inferior ≥ +8% | **Mantenimiento.** Estimado ≥ +5% sin pasar. Propuesta a ratificar: una sola espera de 6 semanas, sin expansión, con subtramo propio aprobado (techos 1 / 6); al vencer, si no pasa valor/calidad con la versión congelada, corte del frente interno: 115 hasta cerrar, 116 en el año | Estimado < +5%: corte del frente interno; precedencia si otro frente sigue | M10-M12 |
 | Mes 9 | Producto, si existe: SLO acordado, cero cruces de tenant, críticos cerrados | Cumplidos | SLO incumplido: vuelve a "asiste" y se revisa | Una filtración: se cancela la función | Producto |
 | Mes 9 | Señal tardía de plataforma | Se evalúa con calendario y costo nuevos | — | No se usa la promesa del itinerario original | Plataforma |
 | Mes 12 | Tecnología ≥85%; Operaciones habilitadas ≥60%; ambos denominadores y el combinado original informados | Cumplidos | Se informa contra el OKR | — | Año 2 |
@@ -280,8 +335,8 @@ fecha de revisión. Seguridad antes que dependencias y caja.
   queda en mantenimiento: una sola espera de 6 semanas, sin expansión (propuesta a
   ratificar); si al vencer no pasa con la versión congelada, corta el frente interno.
 - **Pesimista (+0,5% en el mes 6):** espera; a las 6 semanas sigue debajo de +3%
-  y se corta el frente interno: hasta 97 hasta cerrar (13 / 84), 100 en el año.
-  90 es el máximo con corte inmediato al cierre del mes 6, sin espera.
+  y se corta el frente interno: hasta 102 hasta cerrar (13 / 89), 105 en el año.
+  95 es el máximo con corte inmediato al cierre del mes 6, sin espera.
 - **Control incumplido en cualquier mes:** Seguridad suspende el uso afectado sin
   esperar al gate; reanudar exige prueba corregida, verificación independiente y
   residual aceptado.
@@ -296,12 +351,13 @@ no es un resultado observado.
 
 | Escenario | Qué pasa | Hasta cerrar, caja / tiempo → económico | Máximo del año |
 |---|---|---|---|
-| Corte en el mes 3 | La base no resuelve, falla un control o no hay agendas | 10 / 64 → **74** | **80** con núcleo aprobado al salir |
-| Corte inmediato en el mes 6 | Estimado ≤0% o daño | 12 / 78 → **90** | **94** |
-| Pesimista con la regla | Espera en el mes 6, vence y corta | 13 / 84 → **97** | **100** |
-| Corte en el mes 9 | Estimado < +5% | 14 / 89 → **103** | **105** |
-| Espera en el mes 9 (propuesta a ratificar) | Vence sin pasar y corta | 15 / 95 → **110** | **111** |
-| Continuidad todo el año sin plataforma | Pasan los gates | 16 / 100 → **116** como límite | Proyección ≈67 (26-109); no autorizado hoy |
+| Corte antes de M1 | La validación inicial no sostiene el alcance | 0 / 8 → **8**, cierre documental incluido | **8** |
+| Corte en el mes 3 | La base no resuelve, falla un control o no hay agendas | 10 / 69 → **79** | **85** con núcleo aprobado al salir |
+| Corte inmediato en el mes 6 | Estimado ≤0% o daño | 12 / 83 → **95** | **99** |
+| Pesimista con la regla | Espera en el mes 6, vence y corta | 13 / 89 → **102** | **105** |
+| Corte en el mes 9 | Estimado < +5% | 14 / 94 → **108** | **110** |
+| Espera en el mes 9 (propuesta a ratificar) | Vence sin pasar y corta | 15 / 100 → **115** | **116** |
+| Continuidad todo el año sin plataforma | Pasan los gates | 16 / 105 → **121** como límite | Proyección ≈70 (27-113); no autorizado hoy |
 | Con señal y, si se ratifican, las cuatro condiciones | Respuesta mínima de plataforma | A costear antes de liberar | Sin cifra: no se hereda 394/≈400 |
 
 Las salidas son límites por suma de techos, sin restar beneficio. La diferencia
@@ -355,11 +411,11 @@ en que aparece el disparador; lo que requiera fondos nuevos espera al gate.
 
 | Decisión | Elegida | Alternativa a la vista | Por qué | Tipo |
 |---|---|---|---|---|
-| Pedido inicial | Paquete mínimo M1-M3 sin plataforma central (costeo de Finanzas) | Pedido completo 33+6 de caja y 72+7 de tiempo con la prueba chica y contractor (Anexo E, alternativa) | Falta evidencia de valor incremental para ampliar inversión; el mínimo compra la medición con la menor pérdida máxima (74 hasta cerrar) | Reversible en cada gate |
+| Pedido inicial | Validación previa con techo 0 / 8; M1-M3 sin plataforma sujeto a segunda liberación de hasta 71 | Pedido completo 33+6 de caja y 72+7 de tiempo con la prueba chica y contractor (Anexo E, alternativa) | Falta evidencia de capacidad y valor incremental; techo acumulado 79 hasta cerrar en M3, sin afirmar repago | Reversible en cada gate |
 | Opción de plataforma | Regla vigente: señal en los meses 3, 6 o 9 (bifurcación por señal); propuesta pendiente de ratificación: señal más cuatro condiciones | Pasar toda la plataforma al año 2; o liberarla con cualquier señal sin comparar alternativas | Una señal no demuestra necesidad de esa implementación ni repago; diferir al año 2 exige una decisión adicional justificada | Reversible: se relee en los meses 6 y 9 |
 | Base que no resuelve | Extender a la semana 8 solo si el criterio de la semana 4 lo dispara, y desplazar juntos básico, intermedio y prueba a la semana 9 | Retrospectiva sin atribuir; o extender siempre | No atrasa la formación cuando la base resuelve y protege la base cuando no | Reversible antes de la aprobación |
 | Medición del asistente | Base de tiempo a primera integración exitosa antes del mes 6, con descubrimiento costeado en M4-M6 | Medir recién en los meses 7-9, después de liberar | Sin base no hay criterio para financiar construcción | Reversible |
-| Espera del mes 6 | Vence a las 6 semanas, con subtramo costeado y aprobado aparte: si sigue en la banda, corta el frente interno (97 hasta cerrar) | Sin salida hasta el mes 9 | Una espera sin regla de salida es gasto sin techo | Reversible |
+| Espera del mes 6 | Vence a las 6 semanas, con subtramo costeado y aprobado aparte: si sigue en la banda, corta el frente interno (102 hasta cerrar) | Sin salida hasta el mes 9 | Una espera sin regla de salida es gasto sin techo | Reversible |
 | Meta de adopción | Metas por área (Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones habilitadas ≥60% en el 12, con ≥40% en el 6 como meta intermedia), con combinado original, habilitados/total y cobertura publicados | Mantener el 80% combinado como meta única | Cumplir exactamente 85%/60% con toda Operaciones habilitada da 72,5%: es el resultado de esas metas, no un techo; las metas pueden superarse ([Anexo D](04-personas-cultura.md)) | Reversible, con el OKR 2027 |
 | Equilibrio en las slides | No va a las slides del mínimo: sin beneficio presupuestado no hay equilibrio que mostrar | ~17% de throughput atribuible del paquete completo como titular | Mostrarlo sugeriría un retorno que el mínimo no modela | Reversible |
 
@@ -403,7 +459,8 @@ productivo de cliente va a un modelo.
 
 | Decisión | Ámbito | Fecha mínima | Autoridad | Condición | Compromiso exacto | Tipo |
 |---|---|---|---|---|---|---|
-| El pedido de hoy: paquete mínimo y marco de decisión | Interno | Hoy | Directorio | Techos y horas confirmados | Caja 9 + reserva 1; tiempo 59 + preparación 3 + cierre 2 | Reversible: salir en el mes 3 cuesta hasta 74 hasta cerrar; 80 en el año si se aprueba el núcleo al salir |
+| Primera liberación: validación inicial | Interno | Preparación 2026 | Directorio o autoridad formalmente delegada | Agenda, desplazamiento e imputación 2026 confirmados | Caja 0; tiempo hasta 8, diez días hábiles | Reversible: detener antes de M1 cuesta lo ejecutado hasta 8 |
+| Segunda liberación: ejecución M1-M3 | Interno | Antes de M1, tras la validación | Directorio o autoridad formalmente delegada | Diagnóstico, matriz privada, viabilidad, responsables y presupuesto 2027 conciliados | Hasta 71 restantes: caja 10; tiempo 61; acumulado 79 | Reversible: hasta 79 al cerrar M3; 85 en el año con núcleo aprobado al salir |
 | Ratificar o no las cuatro condiciones de plataforma | Interno | Hoy o mes 3 | Council recomienda; firma una persona designada por el Directorio | Evidencia de B y C | Regla escrita | Reversible |
 | Excepción externa para facilitación | Interno | Antes de iniciar | Directorio | Sin perfil interno demostrado | Hasta 16-32 h que reemplazan la fila interna, con cotización | Reversible |
 | Continuidad sin plataforma por tramo | Interno | Meses 3, 6 y 9 | Directorio | Gates de este anexo | 2/14, 2/11, 2/11 | Reversible en cada gate |
@@ -438,6 +495,10 @@ toman ahí rigen para el plan siguiente.
 - Las horas, techos y reservas del mínimo son supuestos de planificación sin
   cotización ni agendas liberadas; los solapes entre B, C y D los propone
   Finanzas y siguen sin validar por las áreas responsables.
+- La validación inicial y su techo adicional de 5 fueron elegidos por Martín
+  para el borrador; faltan acuerdo del equipo, designaciones y autorización
+  empresarial. Diez días y 4-6 entrevistas son un alcance estimado, no una
+  validación exhaustiva ni evidencia de disponibilidad.
 - Las bandas de espera, los plazos de 6 semanas y los umbrales de los gates son
   propuestas a ratificar, a calibrar con la base.
 - Los puntajes RICE son juicio del CAIO; el outcome del asistente no tiene base.

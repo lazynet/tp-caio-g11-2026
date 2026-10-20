@@ -57,8 +57,8 @@ está medido. Los usa el anexo de arquitectura.
 | Intervalo | *Bootstrap* percentil por persona, 2.000 réplicas, 90% bilateral; pasa si el límite inferior ≥ el umbral |
 | Precisión mínima | Semiancho ≤ 3 puntos porcentuales |
 | Muestra mínima | 15 personas activas (piso del supuesto de 15-20), con base congelada propia y PR en al menos 6 de 8 semanas de la ventana |
-| Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: "espera" (6 semanas más, que suman semanas y no personas); vencida, rige la regla del gate. Con N < 15 no se espera: el gate se reformula antes de la aprobación de hoy |
-| Calidad | Mismo método sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, con margen de no inferioridad δ = +10% (supuesto sin dato; se fija con la aprobación de hoy). **Daño** (límite inferior > 0): la ganancia no cuenta y el gate corta. **Incierto** (el intervalo incluye 0 y el límite superior > δ): el throughput no puede pasar; cuenta como espera, una vez, y vencida como no pasa. **No deterioro demostrado** (límite superior ≤ δ): decide el throughput |
+| Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: "espera" (6 semanas más, que suman semanas y no personas); vencida, rige la regla del gate. Con N < 15 no se espera: la viabilidad se evalúa durante la primera autorización y el gate se reformula antes de la segunda liberación, previa a M1 |
+| Calidad | Mismo método sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, con margen de no inferioridad δ = +10% (supuesto sin dato; el acta y el protocolo se producen durante la primera autorización y se ratifican, incluido este margen, antes de la segunda liberación, previa a M1). **Daño** (límite inferior > 0): la ganancia no cuenta y el gate corta. **Incierto** (el intervalo incluye 0 y el límite superior > δ): el throughput no puede pasar; cuenta como espera, una vez, y vencida como no pasa. **No deterioro demostrado** (límite superior ≤ δ): decide el throughput |
 | Respaldo | La serie retrospectiva de la preparación previa estima tendencia y ruido; no es base de atribución. Usada como base, es solo una lectura contra tendencia, sin atribuir ganancia: no libera capital y puede producir espera o corte, no paso. El protocolo completo está en el anexo B |
 
 ## Replan de capacidad de los meses 4-6 con el producto diferido
@@ -111,7 +111,8 @@ está medido. Los usa el anexo de arquitectura.
 - Que el proveedor confirme que enrutar el agente de código obliga a facturar
   por API: la cobertura de precio no aplica mientras la suscripción sea plana.
 - Que la serie de la preparación previa muestre que, con la cohorte completa, el semiancho supera
-  3 puntos: el gate de +3% no discrimina y hay que reformularlo antes de la aprobación de hoy.
+  3 puntos: el gate de +3% no discrimina; se evalúa durante la primera autorización
+  y hay que reformularlo antes de la segunda liberación, previa a M1.
 - La medición en sombra de los meses 4-6: si el uso o la tasa de error quedan lejos de los
   umbrales de impacto, se recalibran en la lectura del mes 6.
 
