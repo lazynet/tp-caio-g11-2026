@@ -105,6 +105,20 @@ encuesta de la línea base de los meses 1-3.
   primaria ([fuentes faltantes](../../material/huecos.md)).
 - Tres modos de la IA (automatización, aumentación, supervisión):
   [tres modos](../../material/conceptos/m2u3-tres-modos-ia.md).
+- Método de estudio de un rol crítico en cuatro fases (mapeo, diagnóstico,
+  proyección, diseño): [deep research de un rol](../../material/conceptos/m3u3-deep-research-rol-critico.md).
+  El curso lo plantea a 18 meses; acá se adapta a 12 y es decisión de este plan.
+- Transición responsable (roles en riesgo, reskilling y upskilling, nuevos roles,
+  recolocación) y sus tres principios, transparencia, equidad y participación:
+  [transición responsable](../../material/conceptos/m3u3-transicion-responsable.md).
+  La cifra "70% más de retención" con reskilling **no se usa**: no tiene fuente
+  primaria ([fuentes faltantes](../../material/huecos.md)).
+- Perfil de talento AI-ready y compensación: son marcos prospectivos sin niveles,
+  pruebas ni cifras, y se usan como criterio y como discusión, no como política:
+  [perfil AI-ready](../../material/conceptos/m3u3-perfil-talento-ai-ready.md),
+  [compensación](../../material/conceptos/m3u3-compensacion-futuro-sintetico.md).
+- Los cuatro frentes del roadmap cultural (cambio, talento, alfabetización,
+  innovación): [roadmap tridimensional](../../material/conceptos/m3u4-roadmap-tridimensional.md).
 - ADKAR, Kotter y Lean Change no están en el material: no se usan.
 
 ## Roles y capacidad
@@ -139,6 +153,83 @@ RACI de personas (roles, no personas; una sola A por decisión,
 | Herramientas permitidas por cliente | Área comercial | Delivery manager | Gobierno y seguridad, CAIO | Operaciones |
 
 Responsable de cada fila: **a designar**.
+
+### Perfil AI-ready: qué se desarrolla y qué se busca
+
+Con la restricción de no contratar, el perfil AI-ready es sobre todo un criterio
+para **desarrollar y seleccionar adentro**. Las cuatro habilidades del curso
+(interacción con IA, interpretación de datos, pensamiento crítico, creatividad)
+no traen niveles ni pruebas ([perfil AI-ready](../../material/conceptos/m3u3-perfil-talento-ai-ready.md));
+el cruce de abajo es **síntesis propia, un supuesto a validar**:
+
+| Habilidad | Dónde se desarrolla | Dónde se usa como criterio |
+|---|---|---|
+| Interacción con IA | Nivel básico e intermedio (pedir bien, supervisar) | Selección de champions |
+| Interpretación de datos | Intermedio, con los casos del rol | Perfil demostrado para la vía interna de IA aplicada |
+| Pensamiento crítico | Intermedio: verificar y detectar alucinaciones | Revisor humano de la compuerta; brief del especialista externo |
+| Creatividad | Casos prácticos por rol que publican los champions | Selección de champions |
+
+Contratar o desarrollar: el plan **desarrolla**; la única incorporación es el
+especialista externo a prueba, por excepción del Directorio (ver "Decisiones").
+Si la excepción se aprueba, el brief del perfil exige pensamiento crítico y
+capacidad de documentar y transferir, además del conocimiento técnico. No se
+publican pruebas de evaluación de estas habilidades: no hay un instrumento
+validado en el material.
+
+### Estudio de impacto sobre un rol crítico (propuesta)
+
+**Problema.** El anexo describe qué cambia para cada rol, pero a nivel de
+proceso. Falta un estudio por rol que separe lo automatizable, lo aumentado y lo
+exclusivamente humano, y que convierta ese diagnóstico en un plan de desarrollo
+y no en una lista de reemplazos. El método es el [deep research de un rol](../../material/conceptos/m3u3-deep-research-rol-critico.md),
+en cuatro fases.
+
+**Rol a estudiar.** El **desarrollador de equipos propios**: es el rol con
+mayor adopción (Tecnología ~7 de cada 10), donde se mide la ganancia de
+productividad y donde el paso de escribir a supervisar es más fuerte. Segundo
+candidato, solo si el primero cierra: **analista funcional**. Operaciones y
+staffing quedan afuera porque el cliente fija las herramientas y el estudio no
+tendría qué diagnosticar. Es supuesto de este anexo; lo confirman el CAIO y el
+manager de Tecnología.
+
+| Fase | Tramo | Producto | Quién |
+|---|---|---|---|
+| 1. Mapeo | Meses 1-3, junto con la base prospectiva | Inventario de tareas del rol, validado con el delivery manager; parte del "antes" ya propuesto en el flujo de delivery | Líder del programa, con personas del rol |
+| 2. Diagnóstico | Meses 4-6 | Cada tarea clasificada como automatizable, aumentada o humana, contrastada con el uso real medido y con los tres modos de la IA | Líder del programa y tech leads; el CAIO valida |
+| 3. Proyección | Meses 4-6 | Responsabilidades y competencias que emergen (supervisar, revisar, definir "correcto") | Ídem, con Arquitectura y Gobierno |
+| 4. Diseño | Meses 7-9 | Ruta de desarrollo del rol: contenido del avanzado, casos de los champions y criterio de reasignación | CAIO, con Talento |
+
+**Gate que alimenta.** El diagnóstico entra a la decisión del mes 6 como
+evidencia de qué tareas se aumentan; el diseño ajusta el formato del tramo 7-9 y
+el criterio de "formar, reasignar" de la decisión de personas. No decide
+desvinculaciones: el estudio responde cómo diseñar la mejor versión futura del
+rol ([deep research](../../material/conceptos/m3u3-deep-research-rol-critico.md)),
+y la postura sobre el empleo lo acota por escrito.
+
+**Datos.** Las tareas reales del rol no se publican: el anexo solo muestra el
+resultado por rol y agregado, anonimizado.
+
+**Contrato de la propuesta.**
+
+- **Evidencia o supuesto:** el método es del curso; el rol elegido y los tramos
+  son supuestos de este anexo. No hay inventario real del rol todavía.
+- **Alternativas:** (1) no hacer estudio por rol y quedarse con el flujo de
+  delivery; (2) estudiar los tres roles técnicos a la vez; (3) un rol y luego
+  otro. **Recomendación: la tercera.** Una sola vez a la vez, porque las horas del
+  líder (20% de una persona) no alcanzan para más.
+- **Dependencias:** base prospectiva congelada (mapeo y contraste), horas del
+  delivery manager, la postura sobre el empleo comunicada antes de que la
+  gente participe.
+- **Costo:** sin cifra propia. Supuesto: lo absorbe el 20% del líder ya
+  computado; si no cabe, se informa a Finanzas como horas adicionales.
+- **Riesgo:** que la persona del rol lea el estudio como paso previo a un recorte
+  y deje de participar o de ser franca.
+- **Responsable humano:** a designar.
+- **Criterio de éxito:** inventario validado por al menos dos personas del rol y
+  una ruta de desarrollo que los champions y el avanzado puedan usar.
+- **Condición de abandono:** el mapeo no se valida con el rol al cierre de los
+  meses 4-6, o el delivery manager no libera horas: se vuelve al flujo de
+  delivery como único insumo.
 
 ### Capacidad efectiva: dos bolsas sobre las mismas personas
 
@@ -413,6 +504,38 @@ gobierno está en pocas personas: el contractor de IA aplicada y la documentaci�
 obligatoria de lo que arma el champion o el líder son la mitigación de
 continuidad.
 
+### Transición responsable: roles, equidad y participación
+
+Las cuatro estrategias del curso ([transición responsable](../../material/conceptos/m3u3-transicion-responsable.md))
+aplicadas a un plan sin contratación y con compromiso sobre el empleo:
+
+| Estrategia | Qué hace el plan | Dónde está |
+|---|---|---|
+| Identificar roles en riesgo | Estudio por rol, desde las tareas y no desde el puesto; empieza por el desarrollador de equipos propios | "Estudio de impacto sobre un rol crítico" |
+| Reskilling y upskilling | Upskilling: desarrolladores, QA, analistas (capacitar). Reskilling: la reasignación a líder del programa y a champions | Tabla de roles y capacidad |
+| Nuevos roles | Líder del programa, champions y el QA que diseña compuertas: se crean reasignando, sin contratar | Tabla de roles y capacidad |
+| Recolocación | **No se desarrolla**: la postura sobre el empleo excluye desvincular por ganancia de IA, y las causales ajenas a la IA siguen su cauce | Ver decisión de empleo y cautelas |
+
+**Principios como criterio de control.**
+
+- **Transparencia.** Los cambios de rol se comunican con su razón, después de la
+  decisión del Directorio sobre el empleo, no antes.
+- **Participación.** Las personas del rol participan del mapeo; hay al menos 2
+  champions de Operaciones y 2 de staff; el pulso anónimo recoge la voz de quienes
+  no participan.
+- **Equidad.** La transición no puede cargar de más a un grupo. Se observan, por
+  grupo y agregado, tres cosas: horas de formación efectivamente liberadas,
+  reasignaciones y rotación voluntaria. Los grupos que se miran son **perfiles
+  junior** y **Operaciones y staffing**. Hipótesis a contrastar en el mapeo: las
+  tareas más automatizables son las de entrada, que hacen los junior (el curso no
+  lo afirma; es supuesto de este anexo). Staffing no se evalúa por uso: su baja
+  adopción responde al contrato del cliente, no a resistencia (ver "Habilitadas").
+
+**Disparador de abandono de esta línea.** Una diferencia entre grupos en horas
+liberadas o en rotación que la agenda o el contrato no expliquen, leída en la
+revisión mensual del Council: se corrige la agenda antes de seguir con el
+formato. El umbral se fija con la línea de base de los meses 1-3, no se inventa acá.
+
 ## Roadmap cultural por tramo y métricas
 
 La preparación previa (octubre-diciembre de 2026) reúne validación inicial y
@@ -436,6 +559,21 @@ declarado).
 "Habilitadas" = personas cuyos clientes y herramientas lo permiten según la
 matriz, como denominador. Se informa también el valor sobre el total, para no
 esconder la brecha.
+
+**Cuatro frentes del roadmap cultural.** El [roadmap tridimensional](../../material/conceptos/m3u4-roadmap-tridimensional.md)
+organiza lo cultural en cuatro frentes. Los hitos de arriba ya los cubren; el
+cruce muestra dónde hay un hueco:
+
+| Frente | Dónde está en este anexo | Hueco |
+|---|---|---|
+| Gestión del cambio | Tabla de frenos, comunicación y postura sobre el empleo | No |
+| Desarrollo de talento | Roles y capacidad, estudio de un rol crítico, transición responsable | No |
+| Alfabetización en IA | Literacy por nivel y por rol, hitos de los meses 1-9 | No |
+| Cultura de innovación | Prueba con la cohorte y condiciones de abandono | **Parcial:** falta registrar qué no funcionó |
+
+Para cerrar el hueco, cada decisión de los meses 3, 6 y 9 deja en el acta una
+línea con lo que se probó y no funcionó (aprendizaje del fracaso). No suma costo
+ni un hito nuevo; es una práctica del Council.
 
 **Definir «activo» antes de medir.** Propuesta a ratificar por CAIO, Talento y
 Gobierno antes de congelar la base: persona que en la semana completó al menos
@@ -555,6 +693,8 @@ dispara por sí solo.
 | Adopción declarada ≠ uso real (seats comprados, uso detectado) | Media | Medio | Medir uso real semanal por área, no seats; el tablero mensual del Council lo muestra cada mes | Métrica de seats sin correlato en uso |
 | Telemetría solo cubre el agente de código | Alta | Medio | Medir chat y Gemini por encuesta o telemetría ampliada, con Arquitectura y Gobierno | Sin medición de staff al cierre de los meses 1-3 |
 | Miedo al reemplazo reduce la adopción y la franqueza | Media | Medio | Comunicación transparente y compromiso sobre el empleo (ver Decisiones) | Caída de uso tras un anuncio o un cambio de estructura |
+| La transición carga de más a junior o a Operaciones y staffing | Media (hipótesis sin contrastar) | Medio | Chequeo de equidad por grupo; staffing no se evalúa por uso; participación en el mapeo | Diferencia entre grupos sin explicación de agenda o contrato en la revisión mensual |
+| El estudio de un rol se lee como paso previo a un recorte | Media | Medio | Postura sobre el empleo comunicada antes; participación del rol; el estudio no decide desvinculaciones | El rol no valida el mapeo al cierre de los meses 4-6 |
 | El consumo real a precio de API (~12x lo pagado) sube el costo si cambia el esquema de precios | Media | Alto (no es de personas) | Lo trata Finanzas; este anexo solo informa que más uso empuja ese costo | Ver anexo de Finanzas |
 
 ## Decisiones
@@ -566,6 +706,7 @@ dispara por sí solo.
 | Compromiso sobre el empleo | Qué se dice sobre el empleo | (1) Sin compromiso. (2) Compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. (3) Compromiso con excepciones. | **Postura propuesta: el compromiso con excepciones**, con el texto de "Postura sobre el empleo (propuesta)". La decide el Directorio, con asesoría laboral; no es una política aprobada. El compromiso sin excepciones baja más el miedo pero ata margen; sin compromiso deja el freno sin respuesta | Los dos compromisos son poco reversibles una vez comunicados |
 | Formato de la formación | Formato de la formación | (1) Curso obligatorio genérico. (2) Casos prácticos por rol con champions, en horario laboral. | **Los casos prácticos por rol**, por el pedido del piloto (más de la mitad de 12 autoseleccionados) y porque la falta de tiempo fue el primer freno; el efecto del formato se mide en los meses 4-9 | Reversible |
 | Piso de alfabetización | Art. 4 del AI Act | (1) Esperar a decidir si alcanza a Acme Labs. (2) Adoptarlo como piso, con registro. | **Adoptarlo como piso**, sin citar fechas ni sanciones | Reversible |
+| Compensación | Si el plan cambia cómo se compensa a quienes trabajan con IA en los 12 meses | (1) Sin cambios de compensación; los modelos nuevos quedan fuera de alcance. (2) Reconocimiento **no monetario** a champions y al líder: tiempo protegido (el 10% ya definido), visibilidad ante el Directorio y registro en su desarrollo de carrera. (3) Prima o bono por colaboración humano-IA, uno de los [modelos del curso](../../material/conceptos/m3u3-compensacion-futuro-sintetico.md). (4) Prima por gestión de sistemas complejos para el especialista | **La 1 para lo monetario, más la 2.** La 3 exige medir impacto por persona y choca con la regla de no medir uso individual, y la caja incremental es cero. La 4 solo aplica al contractor, que se negocia por contrato. Se revisa con evidencia en la decisión del mes 12 para 2028. Costo de la 2: sin cifra; es tiempo ya computado. Responsable: a designar | Reversible: se agrega después; quitar un incentivo ya comunicado es difícil |
 
 ### Postura sobre el empleo (propuesta) y métricas de comportamiento
 
@@ -596,6 +737,7 @@ con meta se leen al cierre de cada tramo:
 | Asistencia a módulos y a talleres de champions | Registro de asistencia | Tiempo realmente liberado | Supuesto |
 | Pulso anónimo cada tres meses: miedo a ser reemplazado | Encuesta de tres preguntas, con mínimo de respuestas por grupo | Si el miedo baja con la comunicación | Supuesto; no hay medición propia hoy |
 | Rotación voluntaria de perfiles junior | Dato de Talento, por área | Efecto colateral del miedo | Supuesto; la serie histórica es un faltante |
+| Horas de formación liberadas, por grupo (junior y resto; Operaciones, staffing y Tecnología) | Registro de asistencia, agregado por grupo con mínimo de personas | Equidad de la transición: nadie queda afuera por agenda | Supuesto |
 
 **No se miden** el uso por persona ni el volumen de prompts como desempeño
 individual: esa medición mataría la franqueza que se necesita. Un cambio de
@@ -614,6 +756,14 @@ rezagados) se lee como uso de trámite y dispara la revisión del formato.
   política son prerrequisito de la meta de Operaciones y están fuera de este
   anexo. Si no se cierran al fin de los meses 1-3, la decisión sobre la meta de
   adopción pasa de la meta propia sobre habilitadas a "sin meta en Operaciones".
+- **Con Finanzas, sobre incentivos.** Compensar la colaboración humano-IA
+  requiere medir impacto por persona, y este anexo no mide uso individual; además
+  la caja incremental es cero. Alternativas: reconocimiento no monetario ahora y
+  revisar un esquema monetario con evidencia en el mes 12, o aceptar la medición
+  individual con un diseño aparte que excede este anexo. Se deja visible.
+- **Con Gobierno.** El estudio de un rol usa tareas reales del rol: requiere que
+  Gobierno defina qué se puede inventariar y con qué clasificación, y quién ve el
+  resultado, sin que se convierta en evaluación de desempeño.
 - **Con Arquitectura.** Medir uso en chat y Gemini requiere instrumentación
   que hoy no existe; sin eso, la métrica de staff es una encuesta.
 
@@ -826,6 +976,9 @@ Finanzas: la facturación en USD no se publica.
   da 72,5%, no cumplimiento del OKR 80%.
   Conservar metas por área y publicar combinado original, habilitados/total y
   cobertura; las prohibiciones condicionan el uso y deben medirse.
+- **Transición responsable (una línea para la slide 7):** «Formar y reasignar
+  antes que desvincular: estudio de un rol crítico, compromiso sobre el empleo
+  y chequeo de equidad por grupo». Sin compensación monetaria nueva en 12 meses.
 - **Qué se mide:** uso real semanal por área, no seats, que alimenta el tablero
   mensual del Council; condiciones de abandono a los meses 6 y 9 explícitas.
 
@@ -850,7 +1003,11 @@ Finanzas: la facturación en USD no se publica.
   por confirmado (ver "Holgura de 0,2 FTE del contractor en los meses 4-6 (replan
   del Anexo B)").
 - Responsable de cada acción: **a designar**.
-- No se usaron cifras sin fuente primaria (60% menos de resistencia).
+- El curso describe el estudio de un rol a 18 meses; el plan lo adapta a 12 y es
+  decisión propia. Las habilidades AI-ready y los modelos de compensación son
+  marcos sin niveles ni cifras; su uso acá es criterio y discusión.
+- No se usaron cifras sin fuente primaria (60% menos de resistencia; 70% más de
+  retención con reskilling).
 
 [^okr]: [OKR y objetivos](../../context/hechos/okrs-y-objetivos.md), borrador de OKR de Tecnología 2027, objetivo de eficiencia operativa con IA.
 [^estructura]: [Tamaño y estructura](../../context/hechos/tamano-y-estructura.md), sección "Dependencia de personas clave".
