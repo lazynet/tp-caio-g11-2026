@@ -51,13 +51,17 @@ por nivel) no se hizo. Responsable de validar el puntaje: a designar.
 |---|---|---|---|
 | Estrategia y liderazgo | 2 | El escenario parte sin estrategia de IA formal aprobada ([supuesto](../../context/supuestos/estrategia-de-ia-de-partida.md)). Hay iniciativas y objetivos propuestos: propuestas al Directorio y un borrador de OKR 2027 con eficiencia con IA ([OKR](../../context/hechos/okrs-y-objetivos.md), [IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). El 2 refleja ese avance parcial; no se deriva solo de la ausencia de aprobación | Estrategia de IA aprobada, con dueño y atada a resultados del negocio |
 | Datos e infraestructura | 2 provisional | Hay AWS en varias cuentas, Kubernetes, GitOps y observabilidad ([stack](../../context/hechos/stack-y-plataforma.md)). Existe inventario de datos con responsables, clasificación y calidad documentada; las fuentes están distribuidas entre sistemas ([inventario](../../context/hechos/inventario-y-distribucion-de-datos.md)). Falta contrastar cobertura, accesos, integración y gobierno operativo para los casos de IA | Reutilizar y completar el inventario existente; demostrar acceso común, gobierno y calidad adecuados a las fuentes elegibles |
-| Talento y cultura | 2 (Tecnología 3, Operaciones 1) | Tecnología: ~7 de cada 10 usan el agente de código. Operaciones: ~1 de cada 10, en buena parte porque el cliente fija las herramientas ([uso de IA](../../context/hechos/uso-ia-interno.md)). El piloto de abril (n=12, autoseleccionado) dio NPS +42, pero solo el 17% completó los cursos ([piloto](../../context/hechos/encuesta-y-pilotos-ia.md)). Capacidades críticas en pocas personas ([estructura](../../context/hechos/tamano-y-estructura.md)) | Capacitación por rol que se complete y suplentes para los roles críticos |
+| Talento y cultura | 2 provisional | No hay programa de formación en IA por rol con seguimiento de finalización ([formación](../../context/hechos/formacion-ia-por-rol.md)). Hay uso de herramientas y experiencias de aprendizaje: el piloto de abril (n=12, autoseleccionado) incluyó cursos, con 17% de finalización ([piloto](../../context/hechos/encuesta-y-pilotos-ia.md)). La adopción del agente de código difiere entre áreas y está condicionada por los clientes ([uso de IA](../../context/hechos/uso-ia-interno.md)); no prueba por sí sola madurez cultural ni competencias | Programa por rol con seguimiento de finalización y aprendizaje aplicado; suplentes para roles críticos, sujetos al diagnóstico de capacidades |
 | Gobernanza y ética | 2 | Política de uso con clasificación en cuatro niveles y contrato para agentes de código, en borrador según el último registro, del 21 de abril de 2026; no hay constancia posterior de su ratificación, y su estado actual se confirma antes de pedirla, sin matriz de clientes, sin inventario de casos ni registro de riesgos ([gobierno](../../context/hechos/gobierno-y-politica-ia.md)). ISO/IEC 27001 de la organización, sin controles específicos de IA verificados ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) | Política ratificada, inventario, registro de riesgos y comité operando |
 | Adopción y valor | 1 en producto, 2 en interno | Sin IA productiva documentada en la oferta ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). En lo interno hay uso alto en Tecnología y un piloto con criterios cumplidos, pero sin línea de base de productividad ([productividad](../../context/supuestos/ganancia-de-productividad.md)) | Un caso en producción con valor medido contra una línea de base |
 
-No se promedia: un promedio de 2 esconde que la brecha más grande está en el
-producto que se vende y en Operaciones. Las fuentes no permiten afirmar ausencia
-universal de toda medición: lo que falta es valor incremental medido contra una base.
+No se promedian dimensiones ni frentes: en Adopción y valor se conserva la
+diferencia entre producto e interno. Las fuentes no permiten afirmar ausencia
+universal de toda medición: falta valor incremental medido contra una base.
+
+En Talento y cultura, el 2 refleja uso y aprendizaje parciales, sin programa por
+rol con seguimiento. No se asignan niveles de madurez por área a partir de la
+telemetría de una herramienta; se contrastan competencias y prácticas culturales.
 
 En Datos e infraestructura, la distribución entre sistemas no determina por sí
 sola el nivel de madurez. El 2 se conserva como hipótesis provisional hasta
@@ -148,9 +152,10 @@ tiene base sólida sin estrategia y datos confiables.
 - **Usar las cinco dimensiones del diagnóstico de madurez** y no la variante
   extendida (seis ejes de NovaGob y AIMM): son las del método base y AIMM sigue
   sin validar ([fuentes faltantes](../../material/huecos.md)). Reversible.
-- **Puntuar producto e interno por separado** en Adopción y valor, y Tecnología y
-  Operaciones por separado en Talento. Alternativa descartada: un solo número por
-  dimensión, que esconde dónde está la brecha. Reversible.
+- **Puntuar producto e interno por separado** en Adopción y valor. En Talento,
+  distinguir competencias y prácticas por área durante la validación, sin
+  equiparar uso de una herramienta con madurez. Alternativa descartada: derivar
+  subpuntajes de talento solo de la telemetría de adopción. Reversible.
 - **Financiar la validación antes de liberar M1-M3:** el primer hito confirma o
   corrige los puntajes con evidencia y conserva los faltantes como hipótesis.
   Quien produce, quien verifica y quien firma: personas distintas, a designar.

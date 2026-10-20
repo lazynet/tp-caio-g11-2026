@@ -12,6 +12,8 @@ datos reales viven en `private/`.
 
 Hechos sobre el caso en los que se apoya el plan (`type: Hecho`), uno por archivo.
 
+* [Formación en IA por rol al inicio del plan](/hechos/formacion-ia-por-rol.md) - El responsable del caso informa que no hay un programa de formación en IA por rol con seguimiento de finalización; los cursos del piloto previo no equivalen a ese programa.
+
 * [Inventario y distribución de datos](/hechos/inventario-y-distribucion-de-datos.md) - El responsable del caso informa que existe un inventario de datos con responsables, clasificación y calidad documentada, y que las fuentes están distribuidas entre distintos sistemas.
 
 * [Capacidad, utilización y bench](/hechos/capacidad-y-utilizacion.md) - La utilización facturable ronda el 83% con bench casi nulo: no hay capacidad ociosa, así que cualquier iniciativa de IA compite con horas facturables.

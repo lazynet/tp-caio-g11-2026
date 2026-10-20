@@ -73,6 +73,17 @@ combinado"). No se infiere de ese cálculo un techo de adopción real.
 
 ### Calidad de uso y capacitación
 
+**Punto de partida actual.** No hay un programa de formación en IA por rol con
+seguimiento de finalización, según la confirmación del responsable del caso del
+20/10/2026 ([fuente en borrador, sin revisión documental](../../context/hechos/formacion-ia-por-rol.md)).
+
+Esto no implica ausencia de cursos o experiencias previas: el piloto de abril
+incluyó cursos y midió su finalización. Esa evidencia histórica acotada se
+presenta abajo; no acredita un programa vigente para toda la organización.
+
+El programa por rol con seguimiento que desarrolla este anexo es una propuesta
+del plan; los cursos aislados no equivalen a ese programa.
+
 | Métrica (piloto de abril, n=12, autoseleccionado) | Resultado | Fuente |
 |---|---|---|
 | Completaron los tres cursos obligatorios | 17% | [Encuesta y pilotos](../../context/hechos/encuesta-y-pilotos-ia.md) |
