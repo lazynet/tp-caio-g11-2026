@@ -37,8 +37,8 @@ cada gate.
   40%-50% de la facturación ([Anexo A](../plan/annexes/01-diagnostico.md)).
 - La IA ya está adentro: Tecnología usa mucho el agente de código; Operaciones,
   poco, en buena parte porque el cliente fija las herramientas. No hay IA
-  productiva documentada en la oferta, y la política estaba en borrador en el
-  último registro, de abril.
+  productiva documentada en la oferta. La política de IA está aprobada según
+  el responsable del caso; su aplicación y los controles siguen por verificar.
 - Lo que falta es valor incremental medido contra una base. Y el propio
   diagnóstico es una hipótesis: las fuentes mezclan poblaciones y fechas, así que
   financiamos primero una validación acotada para conciliar corte, nómina,
