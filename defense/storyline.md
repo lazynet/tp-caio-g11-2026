@@ -38,10 +38,12 @@ cada gate.
 - La empresa es rentable y crece, pero concentrada: el cliente principal pesa
   40%-50% de la facturación ([Anexo A](../plan/annexes/01-diagnostico.md)).
 - La IA ya está adentro: Tecnología usa mucho el agente de código; Operaciones,
-  poco, en buena parte porque el cliente fija las herramientas. No hay IA
-  productiva documentada en la oferta, y la política estaba en borrador en el
-  último registro, de abril.
-- Lo que falta es valor incremental medido contra una base. Y el propio
+  poco, en buena parte porque el cliente fija las herramientas. Hay herramientas
+  de harness para el SDLC de uso exclusivamente interno; no se cuentan como IA
+  productiva de la oferta. La política de IA está aprobada según
+  el responsable del caso; su aplicación y los controles siguen por verificar.
+- No hay medición del impacto del harness contra una base, según el responsable
+  del caso ([uso interno](../context/hechos/uso-ia-interno.md)). El propio
   diagnóstico es una hipótesis: las fuentes mezclan poblaciones y fechas, así que
   financiamos primero una validación acotada para conciliar corte, nómina,
   contratistas, personas y horas por rol antes de liberar M1-M3.
