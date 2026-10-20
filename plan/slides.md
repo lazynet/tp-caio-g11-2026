@@ -11,7 +11,7 @@ size: 16:9
      Una slide por `---`, con un título `#` cada una. Máximo 10 slides. Arco:
      problema → beneficio → alternativas → costo → resolución. Borrador del CAIO: toda
      cifra viene de un anexo y de una fuente. El pedido completo vive solo en la
-     slide 10; la 9 muestra su pérdida máxima. Diseño: plan/theme/acme.css; los bloques
+     slide 10; la 9 muestra su exposición presupuestaria máxima autorizada. Diseño: plan/theme/acme.css; los bloques
      HTML llevan Markdown adentro, separado por líneas en blanco, y los links siguen en
      Markdown. -->
 
@@ -310,7 +310,7 @@ size: 16:9
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Aceptar una pérdida máxima de aprendizaje de 79 hasta cerrar en M3, sujeta a dos autorizaciones.</span>
+<span class="body">Aceptar una exposición máxima autorizada de 79 hasta cerrar en M3, sujeta a dos autorizaciones. Es techo de presupuesto, no pérdida ni salida de caja.</span>
 <span class="ref">
 
 [Anexo E](annexes/05-business-case.md) · [Anexo F](annexes/06-roadmap-riesgo.md)
@@ -328,7 +328,7 @@ size: 16:9
 
 # Autorizar la validación inicial
 
-<p style="font-size:24px;line-height:1.4;max-width:1000px;color:#f3efe4">Autorizar primero diez días hábiles de validación: hasta 8 de tiempo interno y caja incremental 0, con agendas e imputación 2026 confirmadas. Adoptar los gates de los meses 3, 6, 9 y 12. Con evidencia, decidir hasta 71 adicionales para M1-M3 y reservas: caja 10 y tiempo 61. Pérdida máxima hasta cerrar: 79; la segunda liberación y el año quedan condicionados.</p>
+<p style="font-size:24px;line-height:1.4;max-width:1000px;color:#f3efe4">Autorizar primero diez días hábiles de validación: hasta 8 de tiempo interno y caja incremental 0, con agendas e imputación 2026 confirmadas. Adoptar los gates de los meses 3, 6, 9 y 12. Con evidencia, decidir hasta 71 adicionales para M1-M3 y reservas: caja 10 y tiempo 61. Exposición máxima autorizada hasta cerrar: 79, no salida de caja; la segunda liberación y el año quedan condicionados.</p>
 
 <div class="grid g2" style="margin-top:auto;position:relative">
 <div>
