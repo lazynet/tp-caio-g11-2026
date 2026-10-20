@@ -109,7 +109,8 @@ entregables obligatorios.
 * Falta el prompt base, que según la guía conserva los controles críticos y el
   formato de respuesta.
 * El Corrector IA cita también "M3-U4 Fundamentos para la Presentación de un Plan
-  Maestro", que no está en `material/` (ver [huecos](/huecos.md)).
+  Maestro". Según el equipo, corresponde a [M3U4](/unidades/m3u4-plan-maestro.md),
+  ya incluido; no se cotejó el `.md` del aula.
 * La regla del repo es más estricta que la guía: para entrega, toda cifra remonta
   a una ficha `verified`. La guía acepta estimaciones con lógica comprensible.
 * Extracto de la guía docente; el texto completo no se versiona.

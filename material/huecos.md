@@ -20,8 +20,9 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
 * Falta el prompt base del Corrector IA (`Prompt_base_Revisor_CAIO.txt`), que según
   la guía docente conserva los controles críticos y el formato de respuesta. No está
   visible en el aula.
-* Falta "M3-U4 Fundamentos para la Presentación de un Plan Maestro", que el Corrector
-  IA usa como referencia y que no está en `material/`.
+* El Corrector IA cita "M3-U4 Fundamentos para la Presentación de un Plan Maestro"
+  como referencia. Según el equipo, es el material de [M3U4](/unidades/m3u4-plan-maestro.md)
+  que ya está incluido (`..._Modulo_3_Unidad_12.pdf`); no se cotejó el `.md` del aula.
 * Sin apuntes de las clases del 2026-08-25, 2026-09-01, 2026-09-08 y 2026-09-15: las
   notas están vacías.
 * `Video Clase 1.mp4` no está indexado.
