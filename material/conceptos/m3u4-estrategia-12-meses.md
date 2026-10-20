@@ -51,7 +51,7 @@ supuestos propios.
 
 # Cómo lo usa el plan
 
-Esqueleto de la **estrategia** y de los KPIs de la slide de resumen ejecutivo.
+Estructura de la **estrategia** y de los KPIs de la slide de resumen ejecutivo.
 Cada KPI que llegue a una slide debe rastrearse a un anexo (**Roadmap, Anexo F**;
 **Finanzas, Anexo E**). Se cruza con el [diagnóstico](/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md)
 como punto de partida.
