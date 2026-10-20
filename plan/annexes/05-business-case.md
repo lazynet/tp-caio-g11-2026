@@ -527,6 +527,15 @@ con la lectura de horas evitadas a costo cargado: es el piso.
 El optimista con el producto rinde menos en 12 meses que sin el producto (−71%): el producto compra
 la opción de un contrato en el mes 12, no retorno en el año.
 
+**VPN: no se calcula, y no se inventa una tasa.** El caso no trae tasa de descuento ni
+costo de capital, y el horizonte es de 12 meses con beneficio de caja 0 en todos los
+escenarios del año: descontar flujos que en su mayoría son egresos no cambia la
+decisión del board, que es cuánto arriesgar para medir. El VPN pasa a ser la métrica
+correcta cuando haya flujos positivos de caja que descontar (régimen del año 2 o un contrato
+del producto) y el board fije la tasa. Hasta entonces el anexo usa ROI económico,
+neto acumulado y equilibrio, que no necesitan tasa. Quien tiene acceso verifica en
+privado si Acme Labs usa una tasa interna de aprobación.
+
 En la base, el neto económico acumulado es −69 en los meses 1-3, −178 en los meses 4-6, −252 en los meses 7-9 y
 −332 en los meses 10-12.
 
@@ -685,6 +694,91 @@ Contra el producto desde el mes 4 (−480), el pesimista ahorra ~218: **~120 de 
 gates** (−382 → −262; ~82 si la espera no venciera) y **~98 de diferir el
 producto** (−480 → −382).
 
+### Costo de no actuar
+
+El costo de no actuar no es un beneficio del plan ni se suma al ROI: es lo que la
+empresa sigue exponiendo si no mide ni controla. Se lista por separado para no
+contarlo dos veces con la palanca de riesgo (ver «Cómo se lee la palanca de riesgo
+sin inventar probabilidades»). **No hay cifra de probabilidad ni de pérdida para
+ninguno de estos ítems**: cada uno remonta a un hecho o supuesto del caso.
+
+| Exposición | Sin plan | Con el mínimo | Qué se puede decir con la evidencia | Fuente |
+|---|---|---|---|---|
+| Consumo de modelos | Se paga la suscripción plana y se consume ~12× lo pagado, sin medición por superficie. Si el proveedor pasa a cobrar por consumo, el incremental es 211-267 mil al año a 12×, con o sin plan | **No la reduce**: el mínimo no incluye gateway. Se reevalúa en M3/M6/M9 con nuevo costeo | La exposición existe y el mínimo no la cubre: es un argumento para el hito de plataforma, no un beneficio del pedido | [costos de tecnología](../../context/hechos/costos-tecnologia-e-ia.md), [precio y dependencia](../../context/supuestos/precio-y-dependencia-de-modelos.md) |
+| Clientes financieros | Sin matriz de restricciones, inventario de uso ni cláusula, un cliente que por defecto prohíbe modelos externos sobre su código no tiene base para habilitar IA | Matriz, inventario y legal focalizado (caja 2-6) como entregables de M1-M3 | El ingreso en juego es el del cliente principal (40%-50% de la facturación). Si los controles costaran 1% de la facturación, alcanzaría con bajar entre 7 y 12 puntos la probabilidad de perderlo (el mínimo cuesta mucho menos); esa probabilidad no tiene estimación y la juzga el board | [apetito de riesgo de los clientes](../../context/supuestos/apetito-de-riesgo-de-clientes.md), [continuidad de clientes](../../context/supuestos/continuidad-de-clientes-principales.md) |
+| Uso sin regla | La política está en borrador y no hay regla explícita sobre el uso personal del seat corporativo | Política e intake con estado actualizado, inventario de uso | El uso fuera de las herramientas aprobadas **no está medido**: no se le pone cifra | [gobierno y política de IA](../../context/hechos/gobierno-y-politica-ia.md), [encuesta y pilotos](../../context/hechos/encuesta-y-pilotos-ia.md) |
+
+**Cómo se usa en la defensa.** Contra el pedido de 79 de pérdida máxima (caja 10 +
+tiempo 69) no se pone una cifra de «costo de no actuar» para ganar el ROI, que es
+−84% en el paquete completo y no se positiviza. Se dice qué exposición sigue abierta
+si el board dice que no, cuál cubre el mínimo (clientes, uso sin regla) y cuál no
+(consumo). Es la forma honesta de contestar al CFO escéptico: el plan no promete
+retorno en 12 meses y compra la información para decidir.
+
+**Problema y recomendación.** Sin esta lista, «medir antes de ampliar» parece
+inacción prudente. Recomendación: presentar las tres exposiciones con su fuente y
+sin monto. **Alternativa descartada:** poner un monto de pérdida esperada con una
+probabilidad supuesta; inflaría el argumento y no hay base. **Dependencias:**
+matriz de restricciones (Anexo C), medición de consumo si se reevalúa la
+plataforma (Anexo B). **Riesgo:** que el board lea la lista como beneficio; por eso
+va fuera del ROI. **Responsable humano:** a designar. **Criterio de éxito:** cada
+exposición tiene un indicador observable al cierre de M1-M3 (matriz y inventario
+entregados; consumo medido o declarado no medido). **Condición de abandono:** si la
+matriz muestra que los contratos vigentes son permisivos, la fila de clientes baja
+de prioridad y se informa.
+
+### Fuentes de financiación
+
+El plan se financia **con recursos internos**: margen operativo y reasignación de
+tiempo, no deuda ni aportes externos. El supuesto es una inversión incremental de 1%
+a 3% de la facturación anual con EBITDA de 21%-30%
+([capacidad de inversión](../../context/supuestos/capacidad-de-inversion.md)). El techo
+de caja del mínimo (10) requiere una facturación anual de al menos 334 mil al 3% o 1
+millón al 1%; se verifica en privado contra el presupuesto 2027.
+
+| Fuente | Cómo se aplicaría | Estado | Ventaja | Riesgo |
+|---|---|---|---|---|
+| Interna (margen operativo y tiempo reasignado) | Caja 10 y tiempo 69 por etapa, con techos y reserva de cierre | **Vigente** | Reversible: se frena en cada gate sin deuda ni covenants | Compite con otras inversiones del Directorio; el tiempo reasignado puede salir de horas facturables |
+| Externa (crédito, financiación de proveedor, subsidio) | No se usa | **No se asume** | Podría liberar caja | Sin cotización ni tasa en el caso; el monto del mínimo es chico frente a su costo de gestión; compromisos de volumen a más de 12 meses son irreversibles y el plan no toma ninguno antes del mes 12; USD |
+| Híbrida (el cliente cofinancia el piloto de producto) | Solo el tramo del producto, con señal de cliente en el mes 6 | **Alternativa, no presupuestada** | Valida demanda con plata ajena | Ingreso nuevo 0 en el base; condiciona al cliente y puede ceder control; requiere un acuerdo comercial que hoy no existe |
+
+**Recomendación.** Interna para todo el año y para el mínimo. La híbrida se
+evalúa solo si el producto se libera con señal de cliente (mes 6) y como
+condición comercial de ese tramo, no como fuente del plan. La externa se descarta
+mientras el pedido sea de este tamaño; se reabre si el board amplía al paquete completo
+y el presupuesto 2027 no cubre la caja (33+6). **Dependencias:** presupuesto 2027,
+agendas confirmadas. **Costo:** los techos vigentes; la financiación externa
+no tiene costo calculado. **Responsable humano:** a designar. **Criterio de éxito:**
+la caja ejecutada no supera el techo de cada liberación. **Condición de abandono:**
+si el presupuesto 2027 fija un techo de gasto de tecnología más bajo (lo que invalida
+el supuesto de capacidad de inversión), se reduce o resecuencia el pedido en vez de
+buscar fuente externa.
+
+**Riesgos financieros y dónde se gestionan.** Tipo de cambio (ver «Sensibilidad»);
+exposición por consumo (Riesgos y «Gateway: suscripción contra consumo»); costo de
+cierre (reserva por gate, «Cuánto pierdo si corto»); concentración de clientes
+(estrés aparte de «Sensibilidad»); doble conteo (tabla de solapes).
+
+### Métricas financieras que se leen en cada gate
+
+La cursada separa tres familias de indicadores que conectan la IA con el negocio:
+adopción interna, impacto financiero y calidad de los modelos
+([roadmap financiero y narrativa](../../material/conceptos/m3u4-roadmap-tridimensional.md)).
+Finanzas es dueña de la segunda y **usa, sin redefinirlas**, las otras dos, que
+conservan su dueño.
+
+| Familia | Métrica | Cómo se lee en el gate | Dónde se define |
+|---|---|---|---|
+| Impacto financiero | Caja y tiempo ejecutados contra el techo y la reserva de cierre vigente | Pérdida máxima hasta cerrar (79 en M3); sin reserva ampliada no se libera el compromiso nuevo | Este anexo («Cuánto pierdo si corto») |
+| Impacto financiero | Throughput atribuible por límite inferior (+3% en el mes 6, +8% en el mes 9) | Pasa, espera o corta. Rige si el board amplía al paquete completo; en el mínimo, M3 no atribuye ganancia | [Anexo F](06-roadmap-riesgo.md) y este anexo |
+| Impacto financiero | Costo por PR aceptado | No sube en el mes 9; separa lo que cuesta producir del throughput | Este anexo («Costo por outcome») |
+| Impacto financiero | Múltiplo efectivo del consumo y destino de la capacidad liberada | Más de 6× sin mitigar en un tramo congela la expansión; sin destino en el mes 6 la capacidad no se cuenta como beneficio | Este anexo («Riesgos y mitigación») |
+| Adopción interna | Cohorte activa (mínimo 15) y utilización | Condiciona la lectura del throughput; no se compra «uso» | [Anexo D](04-personas-cultura.md) |
+| Calidad | Incidentes y retrabajo junto al throughput | Una ganancia con más retrabajo no pasa | [Anexo B](02-arquitectura.md) y [Anexo C](03-gobierno-seguridad.md) |
+
+El beneficio de caja del año es 0 y el ingreso nuevo, 0: ningún gate se lee contra un
+retorno que el plan no presupuesta.
+
 ### Costo por outcome
 
 La métrica del costo por outcome es el **costo por outcome aceptado**
@@ -734,6 +828,12 @@ poco por la rampa. Los escenarios los combinan:
 | Pesimista | 5%, rampa 0/10/30/60: por debajo del piso del supuesto; con la regla del Anexo F la espera vence a las 6 semanas y corta | Consumo a 12× desde el mes 7, sin mitigar (solo en el estrés) | Sin señal de cliente: el producto no se libera |
 | Base | 15%, rampa 0/25/60/100 | Plano | Sin señal en el mes 6: el producto no se libera. Con señal, suma su tramo |
 | Optimista | 25%, rampa 0/40/80/100 | Plano | Señal en el mes 6, piloto en los meses 7-12 y un cliente con interés contractual en el mes 12 (sin ingreso en los 12 meses) |
+
+**Equivalencia de nombres.** El *conservador* del roadmap financiero de la cursada
+([roadmap financiero y narrativa](../../material/conceptos/m3u4-roadmap-tridimensional.md))
+corresponde acá al **pesimista**. Se mantiene «pesimista» porque no es una versión prudente del base:
+combina throughput bajo con consumo a 12× sin mitigar, así que es un estrés, y llamarlo conservador
+sugeriría un caso razonable. Los valores no cambian.
 
 Hay un estrés aparte, no modelado: la pérdida parcial del cliente principal
 ([supuesto](../../context/supuestos/continuidad-de-clientes-principales.md)). Con
@@ -1381,6 +1481,8 @@ cualquier excepción exige nuevo costeo y nueva decisión.
 | Sobre de capacidad: lectura estricta o separada | Finanzas | La separada es propuesta de Finanzas; con la estricta, los meses 1-3 no entran sin recortar el básico | **Decide el board en la aprobación de hoy** |
 | Staffing facturado por hora desincentiva el uso de IA | Personas | Productividad en staffing = 0 en el base. Las horas de capacitación de Operaciones (~400 h) cuestan 4-14 mil a costo; a tarifa de venta valen más, y eso se calcula con los datos internos | **Resuelta** para el costo; el modelo comercial queda **escalado a CAIO** |
 | Contractor contra la restricción de no contratar; vía de IA en los meses 1-3 | Personas, Arquitectura | Antecedente del paquete completo, sin decisión de contratación hoy. Pedido vigente: mínimo de E; una excepción externa o plataforma exige cotización, nuevo costeo y nueva decisión. No se autoriza el tramo de contractor de 16,5 | **Sin contratación autorizada hoy** |
+| El «costo de no actuar» como argumento de ROI | Material de la cursada | Se lista aparte y sin monto: no hay probabilidad ni pérdida con fuente, y sumarlo al ROI doblaría la palanca de riesgo. Alternativa: poner un monto supuesto con rango; infla el argumento | **Vigente**; lo juzga el board |
+| Financiar con fuentes externas o híbridas | Material de la cursada | Interna, porque el pedido es chico y reversible; la híbrida solo en el tramo del producto con señal de cliente | **Propuesta** a CAIO; responsable a designar |
 | El paquete contra alcances más baratos | Finanzas | Comparación publicada pendiente de homogeneizar; una señal no demuestra repago | **Vigente:** pedido inicial mínimo; plataforma se reevalúa M3/M6/M9, con cuatro condiciones adicionales pendientes de ratificación |
 
 ## Insumos para el deck
@@ -1423,6 +1525,21 @@ cualquier excepción exige nuevo costeo y nueva decisión.
   de alcances distintos, pendientes de homogeneizar. Base del paquete −331,9
   (ROI −84,2%); optimista sin producto −279,9 y con producto −356,9.
   No trasladar capacidad o retorno del paquete completo al mínimo.
+- **Narrativa financiera, en tres pasos (datos → narrativa → decisión):**
+  1. *Datos:* el paquete completo no se repaga en 12 meses (ROI −84% en la base) y el
+     beneficio de caja del año es 0. El mínimo cuesta hasta 79 y compra evidencia.
+  2. *Narrativa:* sin retorno prometido, se compra información para decidir. Lo que
+     el board evita es seguir expuesto sin medir: clientes que por defecto
+     prohíben modelos externos, uso sin regla y un consumo de ~12× lo pagado que el
+     mínimo no cubre. Sin montos inventados.
+  3. *Decisión:* aprobar la primera autorización (caja 0 / tiempo 8) y fijar los
+     criterios para liberar la segunda; ampliar solo si las métricas de los gates pasan.
+- **Frase para la objeción «¿y el VPN?»:** «No hay flujos positivos de caja en el
+  horizonte ni una tasa del caso; calcularlo sería inventar la tasa. Cuando haya
+  contrato o régimen del año 2, se calcula con la tasa que fije el board».
+- **Fuente de la plata:** interna (margen operativo y tiempo reasignado), por
+  etapas y reversible; sin deuda. La cofinanciación de un cliente es solo del tramo
+  del producto.
 
 ## Cautelas
 
@@ -1446,4 +1563,4 @@ cualquier excepción exige nuevo costeo y nueva decisión.
   ahorro: no hay medición de la fracción enrutable ni del efecto del ruteo.
 - El Δp de la palanca de riesgo usa el margen EBITDA como proxy conservador.
 - No se usaron cifras sin fuente primaria (60%-80% de ahorro de
-  inferencia, ROI de 2,8×-4,1×, 360 → 7 USD) ([fuentes faltantes](../../material/huecos.md)).
+  inferencia, ROI de 2,8×-4,1×, 360 → 7 USD, 70% más de retención con reskilling) ([fuentes faltantes](../../material/huecos.md)).
