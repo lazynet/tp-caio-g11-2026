@@ -11,8 +11,9 @@ size: 16:9
      Una slide por `---`, con un título `#` cada una. Máximo 10 slides. Arco:
      problema → beneficio → alternativas → costo → resolución. Borrador del CAIO: toda
      cifra viene de un anexo y de una fuente. La cuenta del pedido (preparación +
-     meses 1-3 + reservas = 79) se repite idéntica en las slides 8, 9 y 10: si cambia
-     una, cambian las tres. Escrito para un board que no leyó el caso: sin jerga ni
+     meses 1-3 + reservas = 79) vive completa solo en la slide 8; la 9 (salidas) y la 10
+     (cierre) la citan: si cambia, cambian las tres. Código de estado: .st pasa (verde),
+     espera (naranja de fondo) y corta (óxido), siempre con la palabra escrita. Escrito para un board que no leyó el caso: sin jerga ni
      siglas sin explicar. Diseño: plan/theme/acme.css; los ajustes de legibilidad del
      bloque <style> de abajo valen para todo el deck. Los bloques HTML llevan Markdown
      adentro, separado por líneas en blanco, y los links siguen en Markdown. -->
@@ -23,14 +24,20 @@ section table th { background: var(--green); }
 section .note { font-size: 16px; }
 section .decision.block .grid { font-size: 17px; }
 .cuenta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0 0 12px; }
-.cuenta div { background: var(--sand); border-radius: 10px; padding: 7px 12px; font-size: 15.5px; line-height: 1.3; }
-.cuenta b { display: block; font-family: "Caprasimo", Georgia, serif; font-weight: 400; font-size: 26px; color: var(--rust); }
+.cuenta div { background: var(--sand); border-radius: 10px; padding: 6px 12px; font-size: 15px; line-height: 1.25; display: flex; align-items: center; gap: 10px; }
+.cuenta b { font-family: "Caprasimo", Georgia, serif; font-weight: 400; font-size: 28px; color: var(--rust); }
 .cuenta .total { background: var(--green); color: #f3efe4; }
 .cuenta .total b { color: #fff; }
-section.closing .cuenta div { background: var(--green); color: #f3efe4; }
-section.closing .cuenta b { color: #fff; }
-section.closing .cuenta .total { background: #f3efe4; color: var(--green-dark); }
-section.closing .cuenta .total b { color: var(--rust); }
+.cuenta .cap { grid-column: 1 / -1; display: block; background: transparent; padding: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+/* Estado de un punto de decisión. Ratios WCAG: pasa 6,25:1, espera 4,67:1, corta 6,23:1. */
+.st { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 13.5px; font-weight: 700; white-space: nowrap; }
+.st.pasa { background: var(--green); color: #fff; }
+.st.espera { background: var(--orange); color: var(--ink); }
+.st.corta { background: var(--rust); color: #fff; }
+.semaforo table { font-size: 16px; }
+.semaforo td:first-child { width: 110px; }
+.pedido { font-size: 22px; color: #f3efe4; margin: 4px 0 0; }
+.pedido b { font-family: "Caprasimo", Georgia, serif; font-weight: 400; font-size: 34px; color: #fff; }
 </style>
 
 <!-- _class: cover -->
@@ -38,17 +45,17 @@ section.closing .cuenta .total b { color: var(--rust); }
 
 <div class="sun"></div>
 
-<span class="chip">Grupo 11 · Diplomatura CAIO · UTN BA</span>
+<span class="chip">Grupo 11 · Diplomatura Chief AI Officer (CAIO) · UTN BA</span>
 
 # Medir el valor antes de ampliar la inversión
 
-<p class="sub">Plan Maestro CAIO 2027 para <strong>Acme Labs</strong>, software para bancos, fintechs y grandes empresas</p>
+<p class="sub">Plan Maestro del CAIO, el responsable de IA, para <strong>Acme Labs</strong>, software para bancos, fintechs y grandes empresas</p>
 
-<p class="eyebrow">Doce meses de IA en la operación y en el producto, con la plata liberada por etapas</p>
+<p class="eyebrow">Plan 2027: doce meses de IA en la operación y en el producto, con la plata liberada por etapas</p>
 
 <p style="max-width:820px">Hoy la IA se usa, pero nadie midió cuánto valor agrega. Proponemos empezar por lo mínimo que permite medirlo, con controles de seguridad probados y las herramientas que ya pagamos, y ampliar solo con evidencia.</p>
 
-<p class="fine">Cifras estimadas, a confirmar con datos internos en una validación de 10 días hábiles. No presupuestamos repago en el año: pedimos lo que estamos dispuestos a arriesgar para medir, no lo que esperamos ganar.</p>
+<p class="fine">Cifras estimadas, a confirmar con datos internos en una validación de 10 días hábiles que se hace en 2026, antes de que arranque el plan. No presupuestamos repago en el año: pedimos lo que estamos dispuestos a arriesgar para medir, no lo que esperamos ganar.</p>
 
 ---
 
@@ -96,29 +103,33 @@ section.closing .cuenta .total b { color: var(--rust); }
 <div class="card dark">
 <span class="tag">Beneficio principal</span>
 <h3>Más trabajo entregado, sin perder calidad</h3>
-<p>Medimos cambios de código aceptados por persona, contra una base tomada antes de empezar. Retrabajo e incidentes se miran primero: si empeoran, se corta.</p>
+<p>Cambios de código aceptados por persona, contra una base tomada antes de empezar. Retrabajo e incidentes se miran primero.</p>
 </div>
 <div class="card">
 <span class="tag">En el presupuesto</span>
 <h3>Beneficio de caja: 0, por diseño</h3>
-<p>No sumamos ingreso nuevo. La capacidad liberada se vuelve plata solo si se vende o evita una contratación, y eso se demuestra, no se supone.</p>
+<p>La capacidad liberada es plata solo si se vende o evita una contratación, y eso se demuestra, no se supone.</p>
 </div>
 <div class="card dashed">
 <span class="tag">Hipótesis, no beneficio</span>
 <h3>Asistente para integrar clientes</h3>
-<p>Antes del mes 6 medimos cuánto tarda hoy un cliente en su primera integración. Sin problema medido y sin interés escrito de un cliente, no se construye.</p>
+<p>Sin un problema medido antes del mes 6 y sin interés escrito de un cliente, no se construye.</p>
 </div>
 </div>
 
-<p class="eyebrow" style="margin:16px 0 6px">Cómo se lee la medición en los meses 6 y 9</p>
+<p class="eyebrow" style="margin:14px 0 2px">Cómo se lee la mejora medida en los meses 6 y 9</p>
 
-<div class="grid g3">
-<div class="card"><strong>Pasa:</strong> aun en el peor caso del margen estadístico, la mejora es de al menos +3% en el mes 6 y +8% en el 9, sin más retrabajo.</div>
-<div class="card"><strong>Espera:</strong> hay mejora, pero el peor caso no llega al piso (en el mes 9, con al menos +5%; a ratificar). Seis semanas más, sin ampliar; si no pasa, se corta.</div>
-<div class="card"><strong>Corta:</strong> en el mes 6, mejora cero o negativa; en el 9, menos de +5%. En cualquier mes, si suben el retrabajo o los incidentes.</div>
+<div class="semaforo">
+
+| | Mes 6 | Mes 9 |
+|---|---|---|
+| <span class="st pasa">Pasa</span> | ≥ +3% en el peor caso, sin daño | ≥ +8% en el peor caso, sin daño |
+| <span class="st espera">Espera</span> | Estimado > 0%, sin pasar | Estimado ≥ +5%, sin pasar (a ratificar) |
+| <span class="st corta">Corta</span> | Estimado ≤ 0%, o daño | Estimado < +5%, o daño |
+
 </div>
 
-<p style="font-size:17px;margin-top:10px">La regla es exigente a propósito: con la mejora que estimamos (+3,75%) y el ruido máximo que aceptamos (±3 puntos), el peor caso da +0,75% y no pasa. Preferimos cortar barato a pagar una mejora que podría ser cero.</p>
+<p class="note">Estimado: la mejora medida. Peor caso: el piso de su margen estadístico. Espera: seis semanas más, sin ampliar; si no pasa, se corta. Daño: más retrabajo o más incidentes. Es exigente a propósito: con la mejora que estimamos (+3,75%, ±3 puntos) el peor caso da +0,75% y no pasa.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -141,7 +152,7 @@ section.closing .cuenta .total b { color: var(--rust); }
 <span class="tag">El paquete mínimo</span>
 <h3>Saber si hay valor, con controles probados</h3>
 <p>Formación básica para todos e intermedia para un grupo de 15-20, controles de seguridad por herramienta, medición contra una base y estudio del asistente para clientes. Con lo que ya pagamos, sin plataforma nueva.</p>
-<p><strong>Lo que se pide hoy no es el año:</strong> es llegar al mes 3, con un máximo de 79 (slide 8). Si todo pasa, el año costaría ≈70 (27-113), estimado; esa proyección no se aprueba hoy. Los techos suman más que el gasto esperado, por diseño.</p>
+<p><strong>Lo que se pide hoy no es el año:</strong> son 8 para validar y, con evidencia, un techo de 79 hasta el mes 3 (slide 8). Si todo pasa, el año completo tiene un costo estimado de ≈70 (27-113) y un techo de 121 (slide 9); no se aprueba hoy.</p>
 </div>
 <div class="plain">
 
@@ -156,7 +167,7 @@ section.closing .cuenta .total b { color: var(--rust); }
 </div>
 </div>
 
-<p style="font-size:17px;margin-top:4px">No es una comparación de precios: cada alcance compra cosas distintas. El piloto de 47 es más barato porque deja afuera la formación general y la revisión legal. En el mes 3 se decide cómo seguir mirando solo lo que falta gastar; lo ya gastado no cuenta.</p>
+<p style="font-size:17px;margin-top:4px">No es una comparación de precios: cada alcance compra cosas distintas. El piloto de 47 es más barato porque deja afuera la formación general y la revisión legal.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -218,7 +229,7 @@ section.closing .cuenta .total b { color: var(--rust); }
 <div class="grid g3">
 <div class="kpi"><div class="num">5</div><div class="lbl">miembros en el comité de IA, dentro del comité de tecnología: revisa todos los meses y puede cortar</div></div>
 <div class="kpi"><div class="num">3 roles</div><div class="lbl">distintos en cada punto de decisión: quien produce la evidencia, quien la verifica y quien firma</div></div>
-<div class="kpi"><div class="num" style="font-size:30px">“Prepara, no ejecuta”</div><div class="lbl">en el producto, durante los 12 meses, la IA propone y una persona decide</div></div>
+<div class="kpi"><div class="num">Nivel 2</div><div class="lbl">tope de la IA en el producto por 12 meses, en una escala de autonomía de 0 (sin IA) a 4 (autónoma): prepara, y una persona decide y ejecuta</div></div>
 </div>
 
 <p class="eyebrow" style="margin:18px 0 6px">Sin plataforma central, la política sola no alcanza: así se habilita cada herramienta</p>
@@ -237,7 +248,7 @@ section.closing .cuenta .total b { color: var(--rust); }
 </span></div>
 <div class="grid g3">
 <div><strong>1.</strong> Aplicar la política de IA ya aprobada desde el mes 1. Cambiarla lo decide la dirección de Acme Labs, no este plan.</div>
-<div><strong>2.</strong> Nada de IA en crédito ni en scoring durante 12 meses; el resto se clasifica caso por caso.</div>
+<div><strong>2.</strong> Nada de IA en crédito ni en scoring durante 12 meses: como vendemos a bancos y fintechs, son los usos de mayor riesgo regulatorio. El resto se clasifica caso por caso.</div>
 <div><strong>3.</strong> Ningún uso nuevo sin prueba previa en su herramienta. Si un contrato con un cliente prohíbe un uso, ese uso queda afuera.</div>
 </div>
 </div>
@@ -266,7 +277,7 @@ section.closing .cuenta .total b { color: var(--rust); }
 <div>
 
 - **Formación:** básica para todos; intermedia para un grupo de 15-20.
-- **Por qué casos por rol:** en el piloto de abril (12 voluntarios) la IA se usó mucho, pero solo 17% terminó los cursos. El freno fue el tiempo: formamos con casos reales, en horario laboral.
+- **Por qué casos por rol:** en el piloto de abril de 2026 (12 voluntarios) la IA se usó mucho, pero solo 17% terminó los cursos. El freno fue el tiempo: formamos con casos reales, en horario laboral.
 - **Metas de uso:** Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones ≥60% en el 12, entre quienes tengan uso permitido. Juntas no alcanzan por sí solas el 80% del objetivo de la empresa: lo informamos aparte.
 
 </div>
@@ -289,10 +300,11 @@ section.closing .cuenta .total b { color: var(--rust); }
 # Primero validar; después, fondos por etapa
 
 <div class="cuenta">
-<div><b>8</b>Preparación 2026, 10 días hábiles: caja 0 + tiempo 8</div>
-<div><b>68</b>Meses 1-3: caja 9 + tiempo 59</div>
-<div><b>3</b>Reservas para cerrar si cortamos: caja 1 + tiempo 2</div>
-<div class="total"><b>79</b>Máximo hasta el mes 3: caja 10 + tiempo 69</div>
+<div class="cap">Lo que se libera por etapa, en miles de USD</div>
+<div><b>8</b><span>Hoy: validación en 2026, 10 días hábiles. Caja 0 + tiempo 8</span></div>
+<div><b>68</b><span>Con evidencia: meses 1-3. Caja 9 + tiempo 59</span></div>
+<div><b>3</b><span>Con evidencia: reservas para cerrar si cortamos. Caja 1 + tiempo 2</span></div>
+<div class="total"><b>79</b><span>Máximo hasta el mes 3. Caja 10 + tiempo 69</span></div>
 </div>
 
 | | Meses 1-3 | Meses 4-6 | Meses 7-9 | Meses 10-12 |
@@ -300,9 +312,9 @@ section.closing .cuenta .total b { color: var(--rust); }
 | Técnico | Base de medición, política y controles; prueba de prácticas | Solución según evidencia; estudio del asistente | Aplicación; producto solo con interés de un cliente | Evaluación y traspaso |
 | Cultural | Básico para todos (≥90%); grupo intermedio | Referentes internos; Tecnología ≥80% | Casos por rol | Tecnología ≥85%; Operaciones ≥60% |
 | Techo, miles de USD | **caja 9 · tiempo 59** | caja 2 · tiempo 14 | caja 2 · tiempo 11 | caja 2 · tiempo 11 |
-| Sigue si… | Base, política y controles probados; gasto dentro del techo | Mejora ≥ +3% en el peor caso, sin daño | Mejora ≥ +8% en el peor caso | Año 2: camino al equilibrio o interés de un cliente |
+| Punto de decisión | <span class="st pasa">Pasa</span> base, política y controles probados; gasto dentro del techo | <span class="st pasa">Pasa</span> ≥ +3% en el peor caso, sin daño<br><span class="st espera">Espera</span> Estimado > 0%, sin pasar | <span class="st pasa">Pasa</span> ≥ +8% en el peor caso, sin daño<br><span class="st espera">Espera</span> Estimado ≥ +5%, sin pasar (a ratificar) | Año 2: camino al equilibrio o interés de un cliente |
 
-<p class="note" style="margin-top:2px">Caja: legal y herramientas. Tiempo: horas de personas que ya trabajan en Acme Labs, valorizadas a su costo. Los meses 4-12 no se aprueban hoy. El comité de IA puede frenar cualquier mes; un daño corta aunque la productividad mejore.</p>
+<p class="note" style="margin-top:2px">Caja: legal y herramientas. Tiempo: horas de gente de Acme Labs, a su costo. Meses 4-12: no se aprueban hoy. Lo que no pasa ni espera, corta (slide 3).</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -320,33 +332,17 @@ section.closing .cuenta .total b { color: var(--rust); }
 
 # Cuánto arriesgamos como máximo, y dónde frenamos
 
-<div class="cuenta">
-<div><b>8</b>Preparación 2026, 10 días hábiles: caja 0 + tiempo 8</div>
-<div><b>68</b>Meses 1-3: caja 9 + tiempo 59</div>
-<div><b>3</b>Reservas para cerrar si cortamos: caja 1 + tiempo 2</div>
-<div class="total"><b>79</b>Máximo hasta el mes 3: caja 10 + tiempo 69</div>
-</div>
+<p style="font-size:17px;margin:0 0 6px">Dos cifras distintas: el <strong>techo</strong> es lo máximo autorizado; el <strong>costo estimado</strong> es lo que esperamos gastar. Hoy se liberan 8; el resto hasta 79 se libera con evidencia (slide 8). Si todo pasa, el año completo tiene un costo estimado de ≈70 (27-113) y un techo de 121.</p>
 
-<div class="grid main-side">
-<div class="plain">
+| Si cortamos en | Techo hasta cerrar, miles de USD | Guardia hasta el mes 12 | Máximo del año | ¿Se decide hoy? |
+|---|---|---|---|---|
+| La validación | **8** (caja 0) | — | **8** | Sí: se liberan 8 |
+| El mes 3 | **79** (caja 10) | +6 | **85** | Sí, el techo de 79; se libera con evidencia |
+| El mes 6 | **95** (caja 12) | +4 | **99** | No |
+| El mes 9 | **108** (caja 14) | +2 | **110** | No |
+| El mes 12 | **121** (caja 16) | 0 | **121** | No |
 
-| Si cortamos en | Hasta cerrar, miles de USD | Máximo del año, con guardia mínima |
-|---|---|---|
-| La validación | caja 0 + tiempo 8 = **8** | **8** |
-| El mes 3 | caja 10 + tiempo 69 = **79** | **85** |
-| El mes 6 | caja 12 + tiempo 83 = **95** | **99** |
-| El mes 9 | caja 14 + tiempo 94 = **108** | **110** |
-| El mes 12 | caja 16 + tiempo 105 = **121** | **121** |
-
-</div>
-<div class="grid" style="gap:8px">
-<div class="card"><strong>Caja que sale de verdad hasta el mes 3:</strong> 2,3 a 8,6 estimado.</div>
-<div class="card"><strong>Lo demás es tiempo</strong> de gente que ya está: no hay nómina nueva ni deuda.</div>
-<div class="card"><strong>Retorno −100% por construcción:</strong> no presupuestamos beneficio, así que el modelo solo muestra costo.</div>
-</div>
-</div>
-
-<p class="note" style="margin-top:2px">Las filas de los meses 6 a 12 no se autorizan hoy. La guardia mínima (accesos, incidentes y permisos) cuesta caja 0 y hasta 6 de tiempo, y se aprueba al cortar. No actuar también cuesta: siguen abiertos el uso de IA sin reglas y los clientes que prohíben modelos externos.</p>
+<p class="note">Caja que sale de verdad hasta el mes 3: 2,3 a 8,6 estimado; el resto es tiempo de personas que ya están, sin nómina nueva ni deuda. Guardia mínima: accesos, incidentes y permisos hasta el mes 12, con caja 0 y 2 de tiempo por trimestre que falte; se aprueba al cortar. Sin beneficio presupuestado, el retorno modelado es −100%.</p>
 
 <p style="font-size:17px;margin:0 0 10px"><strong>Sin vuelta atrás, no se aprueba nada hoy</strong> (se evalúan en el mes 12 o después): datos de clientes a un modelo · contratos de IA con clientes · IA que ejecuta acciones en el producto, aun con aprobación humana · compromisos de más de 12 meses.</p>
 
@@ -370,14 +366,9 @@ section.closing .cuenta .total b { color: var(--rust); }
 
 # Autorizar la validación inicial
 
-<p style="font-size:22px;line-height:1.4;max-width:1100px;color:#f3efe4">Hoy pedimos 8 (miles de USD): diez días hábiles de tiempo de personas propias, sin caja, con cargo al presupuesto 2026 a confirmar junto con las agendas. Con esa evidencia, decidir hasta 71 más para los meses 1-3 y las reservas. Y adoptar los puntos de decisión de los meses 3, 6, 9 y 12.</p>
+<p style="font-size:22px;line-height:1.4;max-width:1100px;color:#f3efe4">Hoy pedimos 8 (miles de USD): diez días hábiles de tiempo de personas propias, sin caja, en 2026, antes de que arranque el plan 2027, con cargo al presupuesto 2026 a confirmar junto con las agendas. Con esa evidencia, decidir hasta 71 más para los meses 1-3 y las reservas. Y adoptar los puntos de decisión de los meses 3, 6, 9 y 12.</p>
 
-<div class="cuenta">
-<div><b>8</b>Preparación 2026, 10 días hábiles: caja 0 + tiempo 8</div>
-<div><b>68</b>Meses 1-3: caja 9 + tiempo 59</div>
-<div><b>3</b>Reservas para cerrar si cortamos: caja 1 + tiempo 2</div>
-<div class="total"><b>79</b>Máximo hasta el mes 3: caja 10 + tiempo 69</div>
-</div>
+<p class="pedido"><b>8</b> hoy &nbsp;→&nbsp; <b>+71</b> con evidencia &nbsp;→&nbsp; <b>79</b> como máximo hasta el mes 3 &nbsp;·&nbsp; miles de USD (slide 8)</p>
 
 <div class="grid g2" style="margin-top:auto;position:relative">
 <div>
@@ -387,6 +378,6 @@ section.closing .cuenta .total b { color: var(--rust); }
 </div>
 <div class="fine" style="max-width:340px">
 <p>79 es un techo, no salida de caja. Plataforma y producto se vuelven a costear antes de decidirlos. Cifras estimadas, a confirmar con fuentes internas.</p>
-<p>Armado con el método que proponemos: roles de IA, revisión adversarial y chequeos de fuentes y de datos privados.</p>
+<p>Hicimos este plan con IA: un asistente por rol, una revisión adversarial simulada y chequeos automáticos de fuentes y de datos privados.</p>
 </div>
 </div>
