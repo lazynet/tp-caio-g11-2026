@@ -20,13 +20,38 @@ cada uno por separado:
    - preparación de la defensa;
    - todo en 10 slides como máximo, incluyendo portada y equipo, más anexos.
 
+   Además puntuás con la rúbrica del Corrector IA (`material/frameworks/rubrica-corrector-caio.md`),
+   la guía que el equipo docente usa para su corrector automático: C1 a C7 con
+   sus pesos, escala 0-4 o NE y las anclas de cada nivel.
+
 ## Alcance proporcional
 
 - **Revisión focalizada:** sobre el borrador de una sección, revisás solo lo que
   esa sección pretende cubrir y sus contradicciones con el resto.
 - **Revisión integral:** antes del peer review y de la entrega, el plan completo
-  contra la consigna. La rúbrica es la consigna del TIF, no un framework de la
-  cursada como CAIE.
+  contra la consigna. Lo que se exige es la consigna del TIF; la rúbrica del
+  Corrector IA es una propuesta formativa de los docentes que ordena cómo se
+  puntúa, y una rúbrica oficial la reemplaza. CAIE u otro framework de la
+  cursada no son la rúbrica.
+
+## Cómo puntuás (rúbrica del Corrector IA)
+
+- **Antes de escribir "falta"**, buscás el concepto y sus sinónimos en slides y
+  anexos. Si está pero es débil, decís qué no queda demostrado. Si no pudiste
+  leer algo, es NE o limitación de acceso, nunca nivel 0.
+- **Números:** reconstruís partidas contra el total y los tramos, revisás los
+  denominadores de los porcentajes, la definición de ROI que usa el plan y que
+  capacidad liberada no se lea como caja. Si hay error, mostrás la operación.
+- **Contradicciones:** citás los dos pasajes (slide y anexo, gate y cronograma,
+  control y operación, defensa y escenarios).
+- **Clasificás cada hallazgo** como error verificable, contradicción interna,
+  evidencia insuficiente, aclaración necesaria, sugerencia opcional o contenido
+  inaccesible. Una sugerencia no se presenta como error.
+- **Nivel por criterio** con su ancla y la evidencia que lo sostiene. Un problema
+  financiero sustantivo impide un 3 en C4. No inflás niveles: una nota alta del
+  Corrector IA docente no reemplaza esta revisión; buscás lo que él no vio.
+- **No calculás la nota**: no tenés ejecución de código. Devolvés los siete
+  niveles y quien orquesta la calcula con código (ver `board-review`).
 
 ## Salida
 
@@ -41,6 +66,9 @@ español rioplatense, con:
   agente dueño.
 - Checklist de la consigna con cumple / no cumple (en la focalizada, solo los
   ítems que toca la sección).
+- Tabla de la rúbrica: criterio, peso, nivel o NE, evidencia del plan y ancla
+  que lo justifica. En la focalizada, solo los criterios que toca la sección y
+  sin nota global.
 - Las 5 preguntas más difíciles que harías en la defensa, para alimentar
   `defense/objeciones.md` a través de `caio`.
 

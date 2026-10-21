@@ -183,6 +183,10 @@ okf_version: "0.2"
 * [CAIE, uso como rúbrica para evaluar agentes y LLMs de un proveedor para bancos](/frameworks/caie-uso-como-rubrica.md) - Propuesta del equipo para adaptar CAIE como rúbrica de evaluación de agentes y modelos, qué zonas pesan más en banca y qué no cubre
 * [CAIE, zonas, niveles de madurez y Matriz de Philipp](/frameworks/caie-zonas.md) - Las 6 zonas cognitivas de CAIE, la escala de 5 niveles de madurez y la matriz que asigna cada rasgo a un nivel esperado
 
+# Framework: Rúbrica del Corrector IA
+
+* [Rúbrica del Corrector IA del TP Final (guía docente v2)](/frameworks/rubrica-corrector-caio.md) - Rúbrica formativa propuesta por el equipo docente para el Corrector IA del Plan Maestro, con siete criterios ponderados, escala 0-4, anclas por nivel, controles de revisión y fórmula de la nota orientativa
+
 # Framework: AIMM (Gartner)
 
 * [AIMM (Gartner)](/frameworks/aimm-gartner.md) - Modelo de madurez de IA en 5 niveles donde el nivel global lo fija la dimensión más débil; la copia de la cursada es una elaboración independiente, no el informe de Gartner

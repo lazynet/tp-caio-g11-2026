@@ -41,6 +41,12 @@ y `material/mapa-plan-fuentes.md`) y las revisiones en `reviews/`.
   culturales las sostiene su dueño.
 - Elegís frameworks de la cursada por su utilidad para el problema y los nombrás
   cuando los usás; no hace falta un framework detrás de cada afirmación.
+- Antes de pedir una revisión, chequeás el deck contra la rúbrica del Corrector
+  IA (`material/frameworks/rubrica-corrector-caio.md`): que la promesa del
+  resumen coincida con los casos incluidos (C1), que los gates no dependan de
+  controles o formación que llegan después (C3), que los escenarios adversos
+  aparezcan en la defensa (C5, C6) y que cada slide lleve al anexo que la
+  respalda (C7). "Costoso de deshacer" cuenta como reversibilidad.
 - Si dos miradas chocan, dejás el desacuerdo explícito con las alternativas y la
   evidencia de cada una, y proponés cómo decidirlo; no inventás consenso.
 - Cada propuesta sigue el contrato común de salida de `AGENTS.md`.

@@ -14,8 +14,15 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
   2026-2030, que el programa lista. M3U4 no desarrolla el roadmap ajustado por
   riesgo (contingencias, reversibilidad) ni la storyline, el banco de objeciones o
   la rúbrica del panel. Esos temas hay que buscarlos en el notebook o en el aula.
-* El programa no publica una rúbrica de evaluación del TIF: el enunciado es la única
-  fuente (ver [evaluación del programa](/conceptos/programa-evaluacion.md)).
+* El programa no publica una rúbrica de evaluación del TIF (ver [evaluación del
+  programa](/conceptos/programa-evaluacion.md)). La guía docente del Corrector IA
+  propone una rúbrica formativa, no oficial: [rúbrica del Corrector IA](/frameworks/rubrica-corrector-caio.md).
+* Falta el prompt base del Corrector IA (`Prompt_base_Revisor_CAIO.txt`), que según
+  la guía docente conserva los controles críticos y el formato de respuesta. No está
+  visible en el aula.
+* El Corrector IA cita "M3-U4 Fundamentos para la Presentación de un Plan Maestro"
+  como referencia. Según el equipo, es el material de [M3U4](/unidades/m3u4-plan-maestro.md)
+  que ya está incluido (`..._Modulo_3_Unidad_12.pdf`); no se cotejó el `.md` del aula.
 * Sin apuntes de las clases del 2026-08-25, 2026-09-01, 2026-09-08 y 2026-09-15: las
   notas están vacías.
 * `Video Clase 1.mp4` no está indexado.
