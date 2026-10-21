@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Sobre de capacidad separado en tiempo clave y distribuido"
 description: "Propuesta de separar el tiempo clave de 1 a 2,25 FTE y las horas distribuidas en la dotación, con aprobación organizacional y conciliación de la capacidad real por alcance."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Propuesta de diseño confirmada por Martín: separar tiempo clave de 1-2,25 FTE y tiempo distribuido para capacitación, champions y ejercicios de mesa, manteniendo la alternativa estricta. Incluye la clasificación de actividades, las 48 horas-persona anuales propuestas de ejercicios de mesa y la conciliación de las horas reales. Se conserva pendiente la aprobación organizacional; se reemplaza la aprobación de hoy por una propuesta y se retiran las conclusiones generales basadas en 9 horas por persona y pisos de 1,6-1,8 FTE, para calcular cada alcance por separado. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Separación de tiempo clave de 1-2,25 FTE y tiempo distribuido de capacitación y ejercicios. R-05 exige a Operaciones y managers conciliar agendas y capacidad por persona antes de la segunda liberación; sin encaje se reduce o resecuencia con recosteo y no se libera M1-M3. Cada alcance conserva su propia cuenta y los alcances ampliados requieren autorización separada. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, capacidad, propuesta]
 sources:
   - id: capacidad-inversion

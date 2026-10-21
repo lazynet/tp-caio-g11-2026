@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Desarrolladores en equipos propios y su costo"
 description: "El caso de negocio supone entre 15 y 20 desarrolladores en equipos propios (valor de cálculo 17,5) con un costo cargado de USD 2.500-7.000 por mes (valor de cálculo 4.750)."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Supuestos de diseño confirmados por Martín: 15-20 desarrolladores en equipos propios con punto medio 17,5, costo cargado mensual de USD 2.500-7.000 con punto medio 4.750 y mínimo propuesto de 15 personas activas para gates de valor. Se conserva pendiente la validación de cohorte, costos y precisión; N no se deduce del peso de Tecnología ni está calibrado contra la nómina. El mínimo requiere además semiancho de intervalo de hasta 3 puntos porcentuales; si la preparación muestra precisión insuficiente, se reformula el gate antes de la segunda liberación. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Cohorte supuesta de 15-20 personas, punto medio 17,5 y costo cargado mensual de USD 2.500-7.000, punto medio 4.750. Se adopta el protocolo agregado por área del Anexo B. Se mantiene el piso propuesto de 15 personas de la cohorte; ese N no garantiza precisión ni paso del gate, y se retira el semiancho fijo de 3 puntos como criterio de precisión. R-14 exige ratificación del método y cohorte por el AI Council antes de la segunda liberación. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, productividad]
 sources:
   - id: tamano-estructura

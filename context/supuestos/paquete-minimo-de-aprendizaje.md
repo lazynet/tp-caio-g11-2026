@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Paquete mínimo de aprendizaje sin plataforma central"
 description: "Finanzas concilia los insumos de B/C/D para medir valor con controles probados y herramientas existentes, con techos por etapa y salida acotada."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Ficha completa confirmada por Martín en tres bloques: preparación previa de 80-136 h, caja 0 y techo de tiempo 8 mil USD; ejecución M1-M3 de 970-1.350 h con reserva de capacidad de 1.380 h y segunda autorización propuesta de 71 mil, acumulado 79 mil; continuidad, descubrimiento, esperas y salidas con techos por etapa y proyección condicional de 118 mil, 121 mil con cierre. Incluye escenarios emparejados para descontar preparación, formación a 10-35 USD/h como supuesto agregado a validar, cargas de espera y núcleo parcial sujetas a cadencia, recomposición de secuencias de espera y exposición máxima separada en caja y tiempo. Se conservan pendientes el acuerdo del equipo, cotizaciones, solapes, personas, agendas, ratificaciones y autorizaciones empresariales; no se acredita ejecución, disponibilidad ni beneficios medidos. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Paquete mínimo vigente del PR #52: preparación de 80-136 h y techo de 8 mil USD de tiempo; M1-M3 con demanda de 970-1.346 h más 4-5 h declaradas de verificación independiente, reserva de capacidad de 1.380 h y techo de 59 mil de tiempo operativo. Segunda liberación de 71 mil, acumulado de 79 mil; 85 mil con núcleo y techos posteriores de 16/13/13 mil, total anual 121 mil. R-02 a R-06, R-20, R-24 a R-27 asignan autoridades, solapes, capacidad, costos y límites. Proyección condicional central 70,53 mil, rango 26,9375-114,11875 mil; sin espera de valor en M6. La ejecución requiere actas, agendas y liberaciones según esos hitos. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, capacidad, controles]
 sources:
   - id: arquitectura
@@ -428,8 +428,8 @@ La verificación de esta ficha registra la revisión humana de la propuesta de
 diseño. El costeo por sí solo no verifica las fichas referidas ni acredita
 cotizaciones, agendas, ejecución o autorizaciones empresariales.
 
-Cambios posteriores a la verificación registrada, que su alcance no cubre y
-requieren una nueva revisión humana: la demanda M1-M3 baja de 970-1.350 h a
+La revalidación del 21/10/2026, solicitada expresamente por Martín, incluye
+estos cambios del PR #52: la demanda M1-M3 baja de 970-1.350 h a
 970-1.346 h por R-25; los techos por tramo 16/13/13 y la regla de esperas dentro
 del techo de su tramo (R-03, R-04, R-27); la fila de Personas de 4-6 h por
 trimestre, con la continuidad en 132-218 h; la provisión de caja única para herramientas o consulta legal

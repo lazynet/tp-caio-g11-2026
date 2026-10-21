@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Ganancia de productividad por IA en ingeniería"
 description: "El caso de negocio supone entre 10% y 25% más de throughput por desarrollador al cabo de 12 meses en los equipos propios, no en los equipos asignados a clientes."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Hipótesis de diseño confirmada por Martín: 10%-25% de mejora de throughput por desarrollador a los 12 meses en equipos propios, excluyendo staffing y sin deterioro de calidad. Incluye base prospectiva congelada en semanas 1-4, comparación trimestral con incidentes y retrabajo, serie retrospectiva del cuarto trimestre de 2026 para tendencia y ruido y resultado del OKR informado aparte. Se corrige el fundamento: la meta propuesta de +20% y el piloto de una semana no acreditan el rango ni un piso conservador. Se conserva la validación pendiente de medición y conversión económica. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Hipótesis de mejora de throughput de 10%-25% a doce meses en equipos propios, sin deterioro de calidad. Protocolo agregado por área del Anexo B, producción por Tecnología y verificación senior independiente fuera de su línea; M6 decide por adopción, costo y controles, M9 lee valor con límite inferior mayor que cero. R-19 exige destino económico decidido en M6 para convertir capacidad en beneficio. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, productividad]
 sources:
   - id: okr-organizacion

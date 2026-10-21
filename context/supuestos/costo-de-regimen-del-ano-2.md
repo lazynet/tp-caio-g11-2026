@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Costo de régimen del año 2"
 description: "Escenario ilustrativo del paquete completo para el año 2: caja base de 48.000 USD, 45.000 adicionales con producto y mantenimiento de 1,5 FTE por 94.500 USD de tiempo, sin presupuesto integral ni autorización de continuidad."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó los supuestos y cuentas del año 2 del paquete completo: caja base central 48.000 USD (24.000-72.000), producto adicional 45.000 (18.000-72.000), mantenimiento de 1,5 FTE/2.880 h por 94.500 de tiempo (54.000-135.000); totales económicos centrales 142.500 sin producto y 187.500 con producto, rangos 78.000-207.000 y 96.000-279.000. Confirma cálculo sin redondear y equilibrio de capacidad valorizada de 16,7% y 23,1% de throughput atribuible con cohorte central supuesta. No demuestra ahorro de caja, payback ni recuperación del año 1; no es presupuesto del mínimo ni autorización 2028. Alcance operativo, capacidad y costos pendientes de validar; no acredita cobertura integral del año 2 ni ingresos del producto. Confirmado en esta conversación como supuesto."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Escenario ilustrativo del paquete completo para el año 2: caja base 48 mil USD, producto adicional 45 mil y mantenimiento de 1,5 FTE por 94,5 mil de tiempo; totales centrales 142,5 mil sin producto y 187,5 mil con producto. R-28 y R-32 separan ese escenario del mínimo y exigen presupuesto y autorización propios para 2028. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas]
 sources:
   - id: finanzas

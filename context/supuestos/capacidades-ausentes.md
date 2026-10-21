@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Capacidades que el plan da por ausentes"
 description: "El plan supone brechas de gateway, inventario de arquitectura y capacidad legal dedicada a IA, sujetas a relevamiento y cobertura según la alternativa elegida y las capacidades existentes."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Hipótesis de planificación confirmadas por Martín: gateway de modelos e inventario formal de arquitectura supuestos ausentes y capacidad legal interna dedicada a IA supuesta insuficiente. Se conserva pendiente el relevamiento técnico y legal; se distinguen el inventario de datos informado y el harness interno cuyo alcance está por relevar. Construcción y contratación dependen de la alternativa elegida y de la brecha confirmada; encontrar capacidades equivalentes obliga a revisar alcance y costos. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Brechas de gateway, inventario de arquitectura y capacidad legal como hipótesis de planificación. R-16 asigna el relevamiento técnico a Tecnología dentro de las 24-40 h de Arquitectura antes de M3 y el legal a Seguridad antes de M4; R-15 exige brecha documentada para liberar plataforma. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, arquitectura, gobierno]
 sources:
   - id: stack-plataforma

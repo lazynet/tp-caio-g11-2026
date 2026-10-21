@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Alternativas de menor alcance y prueba chica de los meses 1-3"
 description: "Composición propuesta de alternativas de gobierno y formación, piloto del agente actual y prueba chica, separadas del paquete mínimo vigente, con protocolo común sin equivalencia demostrada de controles o resultados."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó la composición de las tres alternativas como comparación separada del paquete mínimo vigente: medición anual de 0,2 FTE y telemetría de 500-1.500 USD por trimestre; formación de 15-20 personas por 12 h; champions del piloto por 384 h anuales; y prueba con 40-80 h de diseño, 64 h de champions y 16-24 h de lectura. Incluye no presumir equivalencia de controles o resultados, revisar y costear legal antes de habilitar el piloto, conciliar capacidad y solapes antes de extender sin costo adicional, condicionar inicio en semana 5 o 9 a la base congelada y distinguir la rama de 199.000 USD del mínimo vigente. Productividad como hipótesis y prueba inicial de aprendizaje. Confirmado en esta conversación; no acredita disponibilidad, ejecución ni aprobación empresarial."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Alternativas de comparación separadas del mínimo vigente, sus horas y costos supuestos y protocolo común, sin equivalencia demostrada de resultados. R-28 delega en Personas la confirmación de champions y agendas y en Seguridad la habilitación de repositorios antes de reactivarlas; sin esas condiciones no se ejecutan. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, alternativas]
 sources:
   - id: finanzas

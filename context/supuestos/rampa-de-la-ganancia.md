@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Rampa de la ganancia de productividad"
 description: "La ganancia de throughput llega por tramos: en el escenario base, 0% del objetivo en los meses 1-3, 25% en los meses 4-6, 60% en los meses 7-9 y 100% en los meses 10-12; en el pesimista 0/10/30/60% y en el optimista 0/40/80/100%."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Rampas de diseño confirmadas por Martín: base 0/25/60/100%, pesimista 0/10/30/60% y optimista 0/40/80/100% del objetivo de throughput por tramo. Incluye mejora modelada g por rampa y capacidad liberada a producción fija g por rampa dividido por uno más esa mejora; caso pesimista con objetivo 5% y espera o eventual corte según medición y gates. Se precisa que el 0% inicial es una convención de planificación, que la trayectoria temporal sigue siendo un supuesto y que los gates contrastan el modelo con mediciones reales. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Rampas supuestas base 0/25/60/100%, pesimista 0/10/30/60% y optimista 0/40/80/100% del objetivo por tramo. Capacidad liberada a producción fija calculada como mejora dividida por uno más mejora. R-19 y el Anexo B separan el modelo de las lecturas reales: M6 no lee valor; M9 exige límite inferior mayor que cero, sin daño, y conversión económica con destino decidido. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, productividad]
 sources:
   - id: ganancia-productividad

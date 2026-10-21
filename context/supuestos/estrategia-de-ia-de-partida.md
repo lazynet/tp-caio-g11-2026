@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Estrategia de IA al inicio del plan"
 description: "El escenario del TP parte sin una estrategia de IA formal aprobada, aunque hay iniciativas y objetivos propuestos; el diagnóstico conserva un nivel 2 sujeto a validación."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Supuesto de diseño del escenario confirmado por Martín: partir sin una estrategia de IA formal aprobada, con iniciativas y objetivos propuestos y nivel 2 provisional sujeto a validación. Se conserva el tipo Supuesto, la condición que obliga a revisar brecha y puntaje al incorporar una estrategia previa aprobada y la revisión humana pendiente de la ficha del método de diagnóstico de la cursada. Incluye actualizar la cautela sobre los antecedentes de OKR e IA en producto ya verificados. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Escenario del TP sin estrategia de IA formal previa aprobada, con iniciativas y objetivos propuestos y nivel 2 provisional del diagnóstico. Se conserva el tipo Supuesto; incorporar una estrategia previa aprobada obliga a revisar la brecha y el puntaje. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, estrategia, diagnostico]
 sources:
   - id: escenario-tp-2026-10-20

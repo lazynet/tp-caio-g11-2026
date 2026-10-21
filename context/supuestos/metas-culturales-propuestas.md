@@ -2,7 +2,11 @@
 type: Supuesto
 title: "Metas culturales y de adopción propuestas por el plan"
 description: "El plan propone metas de adopción por tramo, sin respaldo de benchmark: el básico ≥90% en el mes 3 es un criterio del mínimo, medido por aprobación de un caso práctico por rol, y las de Tecnología, Operaciones, prompts y staff de los meses 4-12 son del programa completo, con costeo y autorización adicionales."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Metas de diseño: básico de 60-70 personas con aprobación práctica por rol de al menos 90% en M3; Tecnología con uso semanal de al menos 80% en M6 y 85% en M12; Operaciones habilitadas con 40% en M9 y 60% en M12 solo con programa ampliado autorizado en M6, sin meta en M6. R-13, R-19, R-21 y R-23 fijan agregación, instrumento, responsables, denominadores y consecuencias; ninguna meta de adopción libera fondos por sí sola. Se declara la brecha frente al OKR conjunto de 80%. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, personas, adopcion, metas]
 sources:
   - id: okr

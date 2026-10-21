@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Base mínima que queda después de un corte"
 description: "Continuidad tras un corte: núcleo restringido del mínimo que firma el CEO en el gate de salida, superficies que autoriza el Responsable de seguridad y base del producto solo si se libera."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó los tres escenarios y sus aclaraciones: mínimo con 12 h trimestrales de tech lead, 12 h de Seguridad y 12 h de staff, total 36 h por 675-1.687,50 USD de tiempo y techo 2.000 USD por trimestre sin caja nueva; después de M3, 108 h y techo 6.000 USD sujetos a autorización propia, fuera de los 79.000 acumulados hasta cerrar y en reemplazo de la continuación. El paquete completo conserva gobierno y pasarela si está instalada y es necesaria; producto activo propone contractor al 50%, DevOps/QA 0,5 FTE y Arquitectura 0,1 FTE como hipótesis no medidas. Incluye demostración externa solo con alcance y presupuesto aprobados, no habilitar pilotos con el núcleo restringido y excluir o suspender usos si no se sostienen obligaciones y controles. Confirmado en esta conversación como supuesto, sin acreditar disponibilidad, continuidad autorizada ni aprobación empresarial."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Núcleo restringido de 36 h por trimestre y techo de 2 mil USD de tiempo; después de M3, 108 h y hasta 6 mil adicionales a los 79 mil, dentro del techo de 85 mil. R-03 exige firma del CEO en el gate de salida y autorización de superficies por Seguridad. R-30 condiciona la base del producto a su liberación y dimensionamiento. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, gobierno, riesgo]
 sources:
   - id: minimo

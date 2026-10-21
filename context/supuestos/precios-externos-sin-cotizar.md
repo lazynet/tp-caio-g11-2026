@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Precios de servicios externos sin cotización y contingencia"
 description: "Rangos de diseño sin cotización para servicios externos, diferenciados entre el paquete mínimo y las alternativas de mayor alcance, con una reserva propuesta de 15% sobre la caja estimada cuya suficiencia debe comprobarse."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Rangos confirmados por Martín como supuestos de planificación para legal, red team, auditoría, pasarela, infraestructura, consumo del piloto y contingencia de 15%. Incluye distinguir el paquete mínimo de las alternativas de mayor alcance, retirar la atribución a precios de mercado, mantener pendientes de conciliación los alcances de ambos red teams y comprobar la suficiencia de la reserva. Los gastos sin estimar requieren presupuesto y autorización. Confirmado en esta conversación; no acredita cotizaciones, contratación ni aprobación empresarial."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Rangos de planificación sin cotización de legal, red team, auditoría, pasarela, infraestructura y consumo, con contingencia de 15% de caja. Se distingue el mínimo de las alternativas amplias; asesoría laboral adicional de 500-1.500 USD fuera de 79 mil solo con decisión del Directorio. R-30 asigna la conciliación del red team de producto a Seguridad y Tecnología antes de liberarlo, con verificación del CFO. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, seguridad, arquitectura]
 sources:
   - id: arquitectura
@@ -103,9 +103,9 @@ precios de mercado ni acuerdo del equipo o aprobación empresarial.
   el paquete mínimo actual.
 - La auditoría es un costo propuesto; la ficha no acredita ampliación de
   alcance, resultado de auditoría ni nueva certificación.
-- La tabla del paquete mínimo, con la tarifa horaria, la provisión única de
-  M4-M12 y la asesoría laboral, se agregó después de la verificación registrada;
-  su alcance no la cubre y requiere una nueva revisión humana.
+- La revalidación del 21/10/2026, solicitada expresamente por Martín, incluye
+  la tabla del paquete mínimo, su tarifa horaria, la provisión única de
+  M4-M12 y la asesoría laboral como supuestos de planificación sin cotización.
 
 [^arquitectura]: Anexo B, rangos propuestos de infraestructura, red team, consumo del piloto e instrumentación como tiempo.
 [^gobierno]: Anexo C, rangos propuestos de servicios externos y sustitución de la porción inicial de legal por la revisión focalizada.

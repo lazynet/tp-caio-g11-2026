@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Umbral de evidencia contractual para la licencia para vender"
 description: "Umbrales sin calibrar para distinguir restricciones, exigencias comerciales de controles y demanda de funciones de IA, usados por la regla de plataforma que ratifica el Directorio, sin autorizar inversión ni uso prohibido."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó los criterios como propuesta pendiente de ratificación y evidencia real: restricción en al menos uno de los cinco principales; exigencia de controles con consecuencia contractual en uno de los dos principales o dos de los cinco, dentro de 18 meses; y demanda de función como señal distinta. Incluye excluir el uso ante prohibición pura, separar señal de autorización de inversión o ampliación del mínimo, aclarar que licencia para vender no es licencia regulatoria ni venta, no inferir ingresos o repago, limitar concentración a agosto de 2026 y no presumir que todos los clientes sean bancos o PSP. Confirma actualizar BCRA al texto ordenado consultado y publicar solo agregados sin alias ni cláusulas. No acredita contratos revisados, señales observadas ni aprobación empresarial. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Regla de plataforma de R-15: señal contractual y cuatro condiciones, ratificadas por el Directorio al aprobar el plan. Se conserva como diseño sin calibrar la restricción en uno de cinco clientes principales y la exigencia de controles en uno de dos o dos de cinco dentro de 18 meses, separadas de demanda de funciones. El Directorio libera fondos y recalibra a propuesta del AI Council; una prohibición contractual no habilita el uso. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, compliance, clientes, gobierno]
 sources:
   - id: bcra-tecnologia

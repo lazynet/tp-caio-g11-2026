@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Costos de cierre al cortar el plan en un gate"
 description: "Costos y reservas de salida propuestos, diferenciados entre el mínimo vigente y el paquete completo, sujetos a condiciones contractuales y autorización antes de asumir compromisos."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó la composición de salida y sus correcciones: paquete completo con un mes supuesto de preaviso y cierre de infraestructura, rangos de caja 2.417-6.000, 6.000-15.000 y 6.500-17.000 USD y reservas propuestas de 6.000, 15.000 y 17.000 USD según alcance; mínimo con herramientas hasta 500 USD, reserva de caja 1.000 USD y cierre interno 16-24 h senior por 300-1.125 USD, reserva de tiempo 2.000 USD. El preaviso es condición a negociar, legal y red team solo cierran sin costo adicional si sus contratos lo permiten, y la reserva se aprueba antes de ampliar compromisos. Incluye separar continuidad del corte parcial, exposición económica de pérdida de caja y evitar sumar dos veces un cierre ya incluido. Confirmado en esta conversación como supuesto, sin acreditar contratos, ejecución ni aprobación empresarial."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Reservas de salida por alcance: mínimo con caja de hasta 500 USD y reserva de 1.000, cierre interno de 16-24 h y reserva de tiempo de 2.000; paquete completo con preaviso y rangos de cierre supuestos, sujetos a negociación. R-03 separa la continuidad del corte y exige recostear compromisos que excedan la reserva antes de firmar. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, riesgo]
 sources:
   - id: finanzas

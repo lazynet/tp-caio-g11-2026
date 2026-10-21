@@ -2,11 +2,11 @@
 type: Supuesto
 title: "Umbrales técnicos propuestos por la arquitectura"
 description: "Umbrales que propone el anexo de arquitectura sin medición previa: los de la ficha de evaluación del caso de referencia (con el gate de impacto), la política de ruteo y el criterio de la prueba de portabilidad y costo del gateway, el método del intervalo de throughput y el replan de capacidad de los meses 4-6."
-status: draft
+status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó en esta conversación los cuatro bloques como propuestas de diseño: evaluación del asistente; ruteo, portabilidad y costo; medición de productividad y calidad; y capacidad M4-M6 del paquete completo. Incluye objetivos sin medir, ceros observados sin garantía de ausencia de riesgo, denominadores previos, costo del gateway calculado sin redondear y sin prometer repago del programa, viabilidad estadística pendiente y calidad con precedencia sobre throughput. Confirma la conciliación de 2,225 FTE y 0,025 FTE de holgura, documentación imputada a cada fracción y excepción de capacidad sujeta a autorización. No acredita resultados, disponibilidad, contratación, validación contractual ni aprobación empresarial; las alternativas ampliadas no se incorporan al paquete mínimo."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Cuatro bloques de diseño: evaluación del asistente; ruteo, portabilidad y costo; productividad y calidad agregadas por área; capacidad del paquete completo. R-13/R-14 fijan agregados y ratificación previa del método. Intervalo bilateral de 90% por conteos logarítmicos y sobredispersión; M6 no lee valor, M9 y M12 exigen límite inferior mayor que cero sin daño; respaldo de base de 8 semanas según R-18. R-15/R-17 condicionan plataforma y rutas a señal, pruebas, recursos y autorización. Se conserva la cuenta de 2,225 FTE y 0,025 FTE de holgura para el alcance que corresponde. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, arquitectura, evals, finops]
 sources:
   - id: arquitectura
