@@ -99,11 +99,13 @@ combinado"). No se infiere de ese cálculo un techo de adopción real.
 
 **Punto de partida actual.** No hay un programa de formación en IA por rol con
 seguimiento de finalización, según la confirmación del responsable del caso del
-20/10/2026 ([fuente en borrador, sin revisión documental](../../context/hechos/formacion-ia-por-rol.md)).
+20/10/2026 ([fuente verificada, sin revisión documental de las actividades](../../context/hechos/formacion-ia-por-rol.md)).
 
 Esto no implica ausencia de cursos o experiencias previas: el piloto de abril
 incluyó cursos y midió su finalización. Esa evidencia histórica acotada se
 presenta abajo; no acredita un programa vigente para toda la organización.
+La fuente está verificada por una persona del equipo, pero conserva la ausencia
+de revisión documental de las actividades formativas.
 
 El programa por rol con seguimiento que desarrolla este anexo es una propuesta
 del plan; los cursos aislados no equivalen a ese programa.
@@ -117,8 +119,10 @@ del plan; los cursos aislados no equivalen a ese programa.
 | Usan *few-shot* (ejemplos del resultado esperado) | 5% o menos | idem |
 | Uso frecuente (3+ días por semana) | 92% | idem |
 
-En el piloto, **los 12 participantes usaron y valoraron la herramienta** (NPS +42)
-y **la capacitación falló**. Es una señal de ese grupo, no una prueba sobre toda
+En el piloto, **92% usó la herramienta tres o más días por semana, el NPS fue
++42 (50% promotores y 8% detractores) y solo el 17% (2 de 12) completó los tres
+cursos**: el uso fue alto y **la capacitación falló**. Este anexo no infiere
+que los 12 la valoraron ni una adhesión unánime. Es una señal de ese grupo, no una prueba sobre toda
 la organización: n=12, autoseleccionado, sin grupo de comparación, así que el
 piloto tampoco demuestra que el formato de casos por rol cause una mejor
 capacitación. Esa hipótesis la prueba el plan midiendo, no la da por cierta. El
@@ -165,6 +169,22 @@ tiempo. La fuente de estructura marca que arquitectura, seguridad y
 gobierno están concentradas en pocas personas y pide tratarlo como riesgo de
 continuidad.[^estructura]
 
+**Vigencia de esta sección.** La tabla de roles, la RACI, el contractor, los
+champions al 10% y el track cultural de los meses 4-12 describen el **alcance del
+programa completo**, sujeto a costeo y autorización adicionales. Los techos de
+continuidad del mínimo del [Anexo E](05-business-case.md) («Continuación condicional
+sin plataforma», no aprobada hoy) no los cubren: ese tramo financia el
+seguimiento y la lectura de la base, el mantenimiento de controles y prácticas y,
+antes del mes 6, el descubrimiento del asistente, con 128-212 h internas por tramo
+M4-M12 más 36-64 h solo en M4-M6; **no incluye nuevas cohortes, avanzado ni
+formación general adicional** y no compra champions al 10%. Lo que el mínimo
+sí costea en M1-M3 son tareas y horas concretas, detalladas en «Insumo para el
+paquete mínimo»: el básico de 6 h para 60-70 personas (360-420 h), el intermedio
+de la cohorte de 15-20 (180-240 h), y el soporte del líder (48-96 h), la
+facilitación (16-32 h), la validación de agendas de managers (8-16 h), Talento
+(8-16 h) y QA o datos (8-16 h). Esos roles y esas decisiones del mínimo no
+quedan negados por este rótulo; lo rotulado es lo que excede esas tareas.
+
 | Rol de IA | Quién lo cubre | Vía | Tiempo (supuesto) | Qué cambia |
 |---|---|---|---|---|
 | Lidera el programa de adopción (oficina del CAIO) | Un perfil técnico interno | Reasignar | 20% de una persona, 12 meses | Opera literacy, champions y métricas; no decide políticas |
@@ -183,12 +203,18 @@ RACI de personas (roles, no personas; una sola A por decisión,
 |---|---|---|---|---|
 | Plan de literacy y calendario | CAIO | Líder del programa | Managers de área, Finanzas | Toda la organización |
 | Selección y tiempo de champions | Manager de cada champion | Líder del programa | CAIO | Champions |
-| Métricas de adopción | CAIO | Líder del programa | Tecnología, Talento | Directorio |
+| Definición de los KPI de adopción (qué se reporta) | CAIO | Líder del programa | Tecnología, Talento | Directorio |
 | Contratación o contractor de IA aplicada | Directorio | CAIO | Finanzas, Talento | Managers |
 | Herramientas permitidas por cliente | Área comercial | Delivery manager | Gobierno y seguridad, CAIO | Operaciones |
 
 Responsable de cada fila: **a designar**. Ningún rol de esta tabla está cubierto
 por una persona ni aceptado por quien lo ocuparía.
+
+La A de la fila de KPI define **qué se reporta**; no equivale a aprobar el
+tratamiento del dato de origen. La autoridad de tratamiento y retención de los
+eventos de uso por persona, y la revisión laboral y de datos personales que
+corresponda, están **por definir con Gobierno y Talento**
+([Anexo C](03-gobierno-seguridad.md)); este anexo no elige una A.
 
 **Propuesta operativa, fuera de la RACI: quién completa y valida la matriz
 privada de capacidad.** El líder del programa la completa; Operaciones y los
@@ -221,6 +247,13 @@ validado en el material.
 
 ### Estudio de impacto sobre un rol crítico (propuesta)
 
+**Alcance: programa ampliado, no el mínimo.** El estudio no tiene tareas ni costeo
+propios en el mínimo de E, y sus horas no se absorben en las del líder (48-96 h de
+agenda, base, diccionario, seguimiento y cierre). **No inicia con el mínimo.** Antes
+de realizarlo exige (1) la postura sobre el empleo aprobada por el Directorio y
+comunicada, (2) horas propias estimadas y (3) autorización propia. Las fases y los
+tramos de abajo son una secuencia propuesta, relativa a esas condiciones.
+
 **Problema.** El anexo describe qué cambia para cada rol, pero a nivel de
 proceso. Falta un estudio por rol que separe lo automatizable, lo aumentado y lo
 exclusivamente humano, y que convierta ese diagnóstico en un plan de desarrollo
@@ -237,14 +270,15 @@ manager de Tecnología.
 
 | Fase | Tramo | Producto | Quién |
 |---|---|---|---|
-| 1. Mapeo | Meses 1-3, junto con la base prospectiva | Inventario de tareas del rol, validado con el delivery manager; parte del "antes" ya propuesto en el flujo de delivery | Líder del programa, con personas del rol |
-| 2. Diagnóstico | Meses 4-6 | Cada tarea clasificada como automatizable, aumentada o humana, contrastada con el uso real medido y con los tres modos de la IA | Líder del programa y tech leads; el CAIO valida |
-| 3. Proyección | Meses 4-6 | Responsabilidades y competencias que emergen (supervisar, revisar, definir "correcto") | Ídem, con Arquitectura y Gobierno |
-| 4. Diseño | Meses 7-9 | Ruta de desarrollo del rol: contenido del avanzado, casos de los champions y criterio de reasignación | CAIO, con Talento |
+| 1. Mapeo | Después de la postura comunicada y de la autorización propia; no antes de congelar la base | Inventario de tareas del rol, validado con el delivery manager; parte del "antes" ya propuesto en el flujo de delivery | Líder del programa, con personas del rol |
+| 2. Diagnóstico | Tras el mapeo (tramo a definir) | Cada tarea clasificada como automatizable, aumentada o humana, contrastada con el uso real medido y con los tres modos de la IA | Líder del programa y tech leads; el CAIO valida |
+| 3. Proyección | Tras el diagnóstico (tramo a definir) | Responsabilidades y competencias que emergen (supervisar, revisar, definir "correcto") | Ídem, con Arquitectura y Gobierno |
+| 4. Diseño | Tras la proyección (tramo a definir) | Ruta de desarrollo del rol: contenido del avanzado, casos de los champions y criterio de reasignación | CAIO, con Talento |
 
-**Gate que alimenta.** El diagnóstico entra a la decisión del mes 6 como
-evidencia de qué tareas se aumentan; el diseño ajusta el formato del tramo 7-9 y
-el criterio de "formar, reasignar" de la decisión de personas. No decide
+**Gate que alimenta.** Si el estudio se autoriza y llega a tiempo, el diagnóstico
+entra a una decisión posterior como evidencia de qué tareas se aumentan; el diseño
+ajusta el formato del tramo siguiente y el criterio de "formar, reasignar" de la
+decisión de personas. El mínimo no depende de él. No decide
 desvinculaciones: el estudio responde cómo diseñar la mejor versión futura del
 rol ([deep research](../../material/conceptos/m3u3-deep-research-rol-critico.md)),
 y la postura sobre el empleo lo acota por escrito.
@@ -263,16 +297,17 @@ resultado por rol y agregado, anonimizado.
 - **Dependencias:** base prospectiva congelada (mapeo y contraste), horas del
   delivery manager, la postura sobre el empleo comunicada antes de que la
   gente participe.
-- **Costo:** sin cifra propia. Supuesto: lo absorbe el 20% del líder ya
-  computado; si no cabe, se informa a Finanzas como horas adicionales.
+- **Costo:** **sin estimación ni costeo propios**; no es una partida del mínimo.
+  No se supone absorbido por las horas del líder: antes de iniciarlo hay que
+  estimar sus horas y pedir la autorización a Finanzas y al Directorio.
 - **Riesgo:** que la persona del rol lea el estudio como paso previo a un recorte
   y deje de participar o de ser franca.
 - **Responsable humano:** a designar.
 - **Criterio de éxito:** inventario validado por al menos dos personas del rol y
   una ruta de desarrollo que los champions y el avanzado puedan usar.
-- **Condición de abandono:** el mapeo no se valida con el rol al cierre de los
-  meses 4-6, o el delivery manager no libera horas: se vuelve al flujo de
-  delivery como único insumo.
+- **Condición de abandono:** el mapeo no se valida con el rol al cierre de su
+  tramo, o el delivery manager no libera horas, o falta la postura comunicada:
+  no se inicia o se vuelve al flujo de delivery como único insumo.
 
 ### Capacidad efectiva: dos bolsas sobre las mismas personas
 
@@ -638,9 +673,12 @@ reconstrucción retrospectiva, con autorización y agendas propias anteriores a
 la liberación de M1-M3 y al presupuesto 2027. No adelanta formación ni prácticas.
 Los umbrales son supuestos, a validar con la línea de base. Toda
 métrica se reporta con numerador y denominador y **por área, agregada**: ningún
-dato individual ([OKR](../../context/hechos/okrs-y-objetivos.md)). El alcance y la
-retención de la telemetría los define Gobierno con Talento (pendiente
-declarado).
+dato individual ([OKR](../../context/hechos/okrs-y-objetivos.md)). Agregar el
+reporte por área **no vuelve anónimo el dato de origen**: la fuente registra
+eventos por persona. Qué se conserva, cuánto tiempo y quién decide ese
+tratamiento (con la revisión laboral y de datos personales que corresponda) lo
+define Gobierno con Talento, pendiente declarado; no hay una A elegida en este
+anexo. La medición se comunica a las personas antes de empezar a medir.
 
 | Tramo | Hitos | Indicador adelantado (uso real) | Indicador rezagado |
 |---|---|---|---|
@@ -649,7 +687,7 @@ declarado).
 | Meses 1-3, desde semana 5 o 9 según cierre de base | Verificar la aplicación de la política aprobada, la matriz de restricciones y los permisos (con Gobierno); básico para todos; intermedio y prueba con la cohorte del mínimo definido en E. Básico, intermedio y prueba comienzan juntos, solo después de congelar la base | Básico completado: ≥90% de la dotación al cierre de los meses 1-3, a revalidar si la base se extiende. Prueba: uso semanal de la cohorte, retrabajo y PR aceptados, y la dispersión entre personas; se leen en la decisión del mes 3, sin atribuir ganancia | Sin objetivo: se mide la línea de base |
 | Meses 4-6 | Intermedio para Operaciones y staff; arranca el avanzado; champions con tiempo asignado (el contractor está desde el mes 1 si se aprueba; al 100% solo si la decisión del mes 3 encuentra una señal, si no se cierra y la prueba se extiende a la cohorte) | Uso activo semanal de Tecnología ≥80% en M6 (la meta del OKR); Operaciones habilitadas ≥40% en M6, **meta intermedia** hacia ≥60% en M12 | Throughput de equipos propios: sin deterioro de calidad |
 | Meses 7-9 | Casos prácticos por rol publicados por champions; revisión de calidad de prompts | Tecnología ≥80% sostenido; prompts con ejemplos del resultado esperado: de ≤5% a ≥30% (muestra agregada) | Incidentes y retrabajo sin aumento sobre la base |
-| Meses 10-12 | Traspaso del contractor a la oficina del CAIO (si la decisión del mes 3 lo liberó; si no, el traspaso se hizo en el mes de preaviso); evaluación de lo que escala | Tecnología ≥85%; Operaciones habilitadas ≥60%; staff ≥50% | Throughput entre +10% y +25% en equipos propios ([supuesto](../../context/supuestos/ganancia-de-productividad.md)) |
+| Meses 10-12 | Traspaso del contractor a la oficina del CAIO (si la decisión del mes 3 lo liberó; si no, el traspaso se hizo en el mes de preaviso); evaluación de lo que escala | Tecnología ≥85%; Operaciones habilitadas ≥60%; staff ≥50% (meta sin fuente de medición hoy: la telemetría no mide chat ni Gemini) | Hipótesis, no meta: throughput entre +10% y +25% en equipos propios, según el [supuesto de ganancia](../../context/supuestos/ganancia-de-productividad.md); el caso base puede no alcanzarlo |
 
 "Habilitadas" = personas cuyos clientes y herramientas lo permiten según la
 matriz, como denominador. Se informa también el valor sobre el total, para no
@@ -662,7 +700,7 @@ cruce muestra dónde hay un hueco:
 | Frente | Dónde está en este anexo | Hueco |
 |---|---|---|
 | Gestión del cambio | Tabla de frenos, comunicación y postura sobre el empleo | No |
-| Desarrollo de talento | Roles y capacidad, estudio de un rol crítico, transición responsable | No |
+| Desarrollo de talento | Roles y capacidad, estudio de un rol crítico (alcance ampliado), transición responsable | No |
 | Alfabetización en IA | Literacy por nivel y por rol, hitos de los meses 1-9 | No |
 | Cultura de innovación | Prueba con la cohorte y condiciones de abandono | **Parcial:** falta registrar qué no funcionó |
 
@@ -685,6 +723,22 @@ y su porcentaje de cobertura; sin cobertura suficiente, el OKR queda «sin medir
 para ese alcance, sin convertir ausencias en inactividad. La ventana móvil de
 cuatro semanas es **una propuesta pendiente de aprobación**; no reemplaza la
 medición semanal del borrador ni se impone retrospectivamente.
+
+**Alcance de las metas.** El básico completado ≥90% al cierre del mes 3 es un
+criterio del **mínimo**: E costea el básico para toda la dotación (360-420 h) y D lo
+lee en M3. Sigue siendo una propuesta, con el instrumento de evaluación pendiente.
+Lo que sigue se refiere a las metas de los meses 4-12.
+
+**Alcance de las metas de los meses 4-12.** Los hitos y metas de las filas de los
+meses 4-6, 7-9 y 10-12 (intermedio ampliado, avanzado, champions con tiempo
+asignado, Operaciones ≥40% y ≥60%, prompts ≥30%, staff ≥50% y Tecnología ≥85%)
+son **alcance del programa completo**, sujeto a costeo y autorización adicionales.
+La continuidad del mínimo de E no los cubre y **no se promete que se cumplan con
+sus techos**. En el mínimo se sigue midiendo la base y el uso por área; las metas
+se informan, no se prometen, y su respaldo está en el
+[supuesto de metas culturales](../../context/supuestos/metas-culturales-propuestas.md).
+La expectativa de throughput de la última fila es una hipótesis del supuesto de
+ganancia, no una meta.
 
 **Revisión mensual del Council.** Las metas de arriba se cierran por tramo, pero el
 uso se mide cada semana, por área: ese uso semanal alimenta el tablero mensual del
@@ -723,7 +777,9 @@ Si tampoco resuelve al cierre de la extensión, se informa el faltante y no se
 atribuye ganancia ni se sustituye la base por la retrospectiva.
 
 **La formación, ¿llega antes de cada gate?** Verificación de secuencia contra el
-roadmap de arriba:
+roadmap de arriba. Salvo la fila del mes 3, la tabla describe el **programa
+completo**; en el mínimo el intermedio de M1-M3 es solo la cohorte de 15-20 y no
+hay avanzado:
 
 | Gate | Qué lee | Formación previa | Resultado de la verificación |
 |---|---|---|---|
@@ -768,7 +824,8 @@ anexo); Operaciones habilitadas ≥40% en M6 es una meta intermedia hacia ≥60%
 M12. El 72,5% corresponde a **85%/60% en M12**, con igual peso y toda Operaciones
 habilitada; no corresponde a las metas de M6.
 
-**Criterios de éxito (al cierre de los meses 10-12):** Tecnología ≥85% de uso
+**Criterios de éxito del programa completo (al cierre de los meses 10-12; no los
+cubre el mínimo):** Tecnología ≥85% de uso
 semanal activo; Operaciones habilitadas ≥60%; nivel básico ≥90%; ningún aumento de
 incidentes ni retrabajo en equipos propios; capacidades críticas con un reemplazo
 documentado.
@@ -781,9 +838,10 @@ dispara por sí solo.
 |---|---|
 | Programa completo: capacidad clave efectiva en los meses 1-3 <1,6 FTE | No iniciar ese alcance; reducir o diferir y volver a costear. Este umbral no es el piso del mínimo vigente: sus tareas y horas se concilian en E, «Pedido inicial: paquete mínimo» |
 | Programa completo: capacidad clave entre 1,6 y ~1,8 FTE en los meses 1-3 | Retirar la prueba de ese alcance y revisar metas, calendario y costeo; confirmar también las horas distribuidas. No completar horas iniciales con ganancias futuras ni trasladar estos pisos al mínimo de E |
-| Al cierre de los meses 4-6, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en los meses 7-9 las horas de champions y de intermedio que no sean rediseño (~13k USD de tiempo en el medio, como en el Anexo F); rediseñar la formación con casos por rol; revisar causas con los managers. El plan no suma seats: no hay expansión que frenar |
+| Al cierre de los meses 4-6, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en los meses 7-9 las horas de champions y de intermedio que no sean rediseño (~13k USD de tiempo en el medio del programa completo, la cifra del Anexo E; en el mínimo no hay horas de champions ni de intermedio de los meses 7-9 que suspender); rediseñar la formación con casos por rol; revisar causas con los managers. El plan no suma seats: no hay expansión que frenar |
 | Al cierre de los meses 4-6, uso activo en Tecnología ≥60% y <80% | Los meses 7-9 siguen; formación rediseñada con casos por rol; se vuelve a medir al cierre de los meses 7-9 (como en el Anexo F) |
-| Básico completado <50% al cierre de los meses 4-6 | Cambiar el formato (de sesión a práctica en equipo) y reasignar tiempo; no repetir el mismo curso |
+| Lectura del mes 3: básico completado ≥50% y <90%, con la evaluación práctica por rol y el denominador de la dotación (meta revisada si la base se extendió) | Se rediseña el formato, como en la banda del Anexo F; no se liberan ni se cortan fondos por esta lectura sola |
+| Lectura del mes 3: básico completado <50% | Cambio de formato (de sesión a práctica en equipo) y reasignación de tiempo; no se repite el mismo curso. Se decide en el mes 3, no al cierre de los meses 4-6 |
 | Asistencia de champions <60% dos meses seguidos | Disolver la red o rediseñar su mandato con sponsor nuevo |
 | Subida de incidentes o retrabajo asociada a uso de IA | Pausar el nivel avanzado hasta revisar compuertas de calidad con Arquitectura |
 | La decisión del mes 3 sin ninguna señal (contractual, precio por consumo o cliente del producto) | Cerrar el contractor (preaviso de un mes, traspaso a la oficina del CAIO) y correr los meses 4-12 como la alternativa de gobierno mínimo y formación del Anexo E, con la prueba extendida a la cohorte; las lecturas de los meses 6 y 9 releen las señales |
@@ -797,14 +855,14 @@ dispara por sí solo.
 | La capacitación desplaza horas facturables y baja utilización | Alta (utilización 83-90%, sin bench) | Medio | Horas topeadas por tramo de tres meses (ver Insumos para Finanzas); módulos cortos; calendario por equipo | Utilización <80% (meta interna) atribuible al programa |
 | Operaciones no puede adoptar por contrato del cliente | Alta | Medio | Matriz de clientes; meta sobre habilitadas; usos permitidos | Matriz sin completar al cierre de los meses 1-3 |
 | Champions sin tiempo ni entregable | Media | Medio | Mandato, sponsor y entregable por tramo | Ver tabla de abandono |
-| Pérdida de una persona clave en arquitectura, seguridad o gobierno | Media | Alto | Contractor a prueba, documentación, transferencia | No hay reemplazo documentado al cierre de los meses 7-9 |
+| Pérdida de una persona clave en arquitectura, seguridad o gobierno | Media | Alto | Contractor a prueba, documentación, transferencia (programa completo). En el mínimo no hay contractor continuo: E solo prevé 4-8 h de IA aplicada por tramo y no hay un reemplazo costeado; la documentación obligatoria con dueño y un par designado quedan **a designar y costear** | No hay reemplazo documentado al cierre de los meses 7-9 |
 | El 0,2 del contractor no está libre en los meses 4-6 y el replan del Anexo B no se sostiene | Media (supuesto sin confirmar) | Medio: los meses 4-6 vuelven a 2,5 FTE clave | Alcance contractual con evals en CI y prueba de portabilidad antes de la aprobación del paquete completo; excepción de 0,3 FTE propuesta como respaldo, que requiere aprobación antes de activarse | Control de la semana 20 del plan (la séptima de los meses 4-6) sin documentación mínima reproducible, o alcance contractual sin los dos entregables al cierre de los meses 1-3: se solicita la autorización de la excepción de 0,3 FTE; no se activa sola ni está incluida en el mínimo |
 | No hay contractor (no se aprueba o no se contrata a tiempo): la excepción de 0,3 no alcanza | Media (depende del Directorio, decisión sobre IA aplicada) | Alto: falta toda la fracción de 0,8 FTE de IA aplicada; con fracción interna los meses 4-6 pedirían ~3,3 FTE clave | Modo control del Anexo B (2,2 FTE clave, sin hitos de IA aplicada) en vez de cubrirlo con tiempo; decisión del board al aprobar el paquete completo | Sin contractor contratado al cierre de los meses 1-3: la decisión del mes 3 libera el modo control ([Anexo E](05-business-case.md)) |
 | Adopción declarada ≠ uso real (seats comprados, uso detectado) | Media | Medio | Medir uso real semanal por área, no seats; el tablero mensual del Council lo muestra cada mes | Métrica de seats sin correlato en uso |
 | Telemetría solo cubre el agente de código | Alta | Medio | Medir chat y Gemini por encuesta o telemetría ampliada, con Arquitectura y Gobierno | Sin medición de staff al cierre de los meses 1-3 |
 | Miedo al reemplazo reduce la adopción y la franqueza | Media | Medio | Comunicación transparente y compromiso sobre el empleo (ver Decisiones) | Caída de uso tras un anuncio o un cambio de estructura |
 | La transición carga de más a junior o a Operaciones y staffing | Media (hipótesis sin contrastar) | Medio | Chequeo de equidad por grupo; staffing no se evalúa por uso; participación en el mapeo | Diferencia entre grupos sin explicación de agenda o contrato en la revisión mensual |
-| El estudio de un rol se lee como paso previo a un recorte | Media | Medio | Postura sobre el empleo comunicada antes; participación del rol; el estudio no decide desvinculaciones | El rol no valida el mapeo al cierre de los meses 4-6 |
+| El estudio de un rol se lee como paso previo a un recorte | Media | Medio | Postura sobre el empleo comunicada antes; participación del rol; el estudio no decide desvinculaciones | El rol no valida el mapeo al cierre de su tramo (el estudio es alcance ampliado y no inicia con el mínimo) |
 | El consumo real a precio de API (~12x lo pagado) sube el costo si cambia el esquema de precios | Media | Alto (no es de personas) | Lo trata Finanzas; este anexo solo informa que más uso empuja ese costo | Ver anexo de Finanzas |
 
 ## Decisiones
@@ -1106,6 +1164,17 @@ amplía, semanas 9-13 son cinco semanas.
   una alternativa, no se inicia esa actividad; se reduce, se resecuencia o se vuelve a
   costear antes de comprometerla.
 
+**Evaluación práctica del básico (propuesta cualitativa, sin validar).** Hoy no
+hay instrumento, evaluador ni reparto de las 6 h definidos. Propuesta de este
+anexo: cada persona resuelve **un caso permitido para su rol** (con datos
+sintéticos o autorizados) y deja **evidencia de la revisión de su resultado**; lo
+evalúa la facilitación técnica ya publicada (16-32 h clave) y lo registra
+Talento (8-16 h distribuidas). No se crean fracciones de horas nuevas ni se
+asume aprobación. Si no entra en la facilitación ni en las 6 h, se recostea con
+Finanzas **antes de iniciar** el básico; sin ella, la completitud queda como
+asistencia y no como uso. **Confirmación humana pendiente:** el responsable
+humano de D y Operaciones confirman instrumento, evaluador y encaje en las horas.
+
 **Éxito.** Básico completado ≥90% al cierre M3 con evaluación práctica por rol;
 diccionario de actividad congelado y cobertura publicada; todas las horas
 conciliadas sin doble asignación. Responsable: a designar.
@@ -1133,7 +1202,7 @@ contribución por trabajo ([fuentes faltantes](../../material/huecos.md)).
 | Nivel intermedio, ~50 personas x 12 h | Meses 1-9 | ~600 | 6,0 - 21,0 | Supuesto |
 | Nivel avanzado, ~10 personas x 480 h x 10-15% (convención de costeo) | Meses 4-6 | 480 - 720 | 4,8 - 25,2 | 10-15% de [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md); resto, supuesto |
 | Champions, 8 personas x 10% x 9 meses | Meses 4-12 | ~1.150 | 11,5 - 40,25 | 10% de [programa](../../material/conceptos/m3u2-programa-champions.md); resto, supuesto |
-| Prueba chica de los meses 1-3: 2 champions de Tecnología al 10% durante 2 meses | Meses 1-3 | 64 | 1,2 - 3,0 | 2 x 10% x 2 x 160 h; el costo es el que fija el Anexo E ("Prueba chica de los meses 1-3 (primeros 100 días)"). El diseño (40-80 h de tech lead) y la lectura (16-24 h de DevOps/QA) los costea el Anexo E como tiempo clave, no entran acá |
+| Prueba chica de los meses 1-3: 2 champions de Tecnología al 10% durante 2 meses | Meses 1-3 | 64 | 1,2 - 3,0 | 2 x 10% x 2 x 160 h; el costo no usa 10-35 USD/h (daría 0,64-2,24) sino la tarifa por rol que fija el Anexo E ("Prueba chica de los meses 1-3 (primeros 100 días)": 0,4 persona-mes a 3,0-7,5k USD, equivale a unos 19-47 USD/h). El diseño (40-80 h de tech lead) y la lectura (16-24 h de DevOps/QA) los costea el Anexo E como tiempo clave, no entran acá |
 | **Subtotal horas de capacitación** | Meses 1-12 | **~2.684 - 2.924** | **~27,4 - 103,1** | Suma |
 | Líder del programa, 20% de una persona, 12 meses | Meses 1-12 | **384 (sobre clave)** | 10,8 - 24,0 | 20% x 12 x 160 h; costo: 20% x 12 x 4.500-10.000 USD por mes ([tech lead](../../context/supuestos/costo-cargado-por-rol.md)). Reasignar no elimina las horas; no integra el subtotal de capacitación |
 | Contractor de IA aplicada, 9 meses, 100%, **solo si la decisión del mes 3 encuentra una señal** | Meses 4-12 | n/a | 40,5 - 99,0 | 9 x 4.500-11.000 USD por mes ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)). Sin señal el renglón sale y queda el cierre que costea el Anexo E (~4k USD en el medio). Reemplaza la fracción de 0,8 FTE de IA aplicada del Anexo B: no se suma con ella |
@@ -1179,12 +1248,15 @@ Finanzas: la facturación en USD no se publica.
   perfil/capacidad demostrados. El programa publicado sirve como referencia de
   alcance y no transfiere automáticamente contractor, prueba ni techos al mínimo.
 - **Frase central:** en el piloto de abril (12 personas que se anotaron solas) el
-  uso fue alto (NPS +42) y la capacitación falló: el primer freno fue el tiempo.
+  uso fue frecuente (92%, NPS +42) y la capacitación falló (solo 2 de 12, 17%,
+  completó los cursos): el primer freno fue el tiempo.
   El plan responde con casos por rol, horas dentro de la jornada y champions con
   tiempo asignado, y mide en los meses 1-3 si pasa lo mismo en toda la organización.
 - **Redacción sugerida para la slide 7:** «En el piloto
-  de abril (n=12, autoseleccionado) el uso fue alto y solo 17% completó los
-  cursos». La slide ya publica esa señal; conservar la cautela: no representa
+  de abril (n=12, autoseleccionado) el uso fue frecuente (92% a tres o más días
+  por semana, NPS +42) y solo 17% (2 de 12) completó los cursos». Propuesta a
+  quien integra las slides: reemplazar «los 12 usaron la herramienta y la
+  valoraron», porque la fuente registra 8% de detractores. La slide ya publica esa señal; conservar la cautela: no representa
   a toda la organización, cuya base se mide en M1-M3.
 - **Cifra para el CFO:** ~2.684-2.924 horas de capacitación, ~41-45 horas por
   persona, a 27,4-103,1k USD al costo cargado; además hay 384 h del líder en el
@@ -1199,7 +1271,7 @@ Finanzas: la facturación en USD no se publica.
   Conservar metas por área y publicar combinado original, habilitados/total y
   cobertura; las prohibiciones condicionan el uso y deben medirse.
 - **Transición responsable (una línea para la slide 7):** «Formar y reasignar
-  antes que desvincular: estudio de un rol crítico, compromiso sobre el empleo
+  antes que desvincular: estudio de un rol crítico (alcance ampliado, no incluido en el mínimo), compromiso sobre el empleo
   y chequeo de equidad por grupo». Sin compensación monetaria nueva en 12 meses.
 - **Qué se mide:** uso real semanal por área, no seats, que alimenta el tablero
   mensual del Council; condiciones de abandono a los meses 6 y 9 explícitas.
