@@ -7,10 +7,13 @@ sources:
   - id: m3u2-slides
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_3_Unidad_10.pdf
     title: M3U2 (el archivo dice Unidad 10), slides
+    pages: slides 7 a 10 y 18 a 19
   - id: m3u2-visual
     resource: UTNBA_CAIO_M3_U2_Resumen_visual.pdf
     title: M3U2, resumen visual (3 páginas, solo imagen)
+    pages: página 2
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:15:00Z }
+status: draft
 ---
 
 # Qué son
@@ -75,10 +78,23 @@ que ningún programa centralizado iguala.[^m3u2-slides]
 Ver [Prompt Challenge](/conceptos/m3u2-prompt-challenge.md), sección del caso
 Logística Sur (empresa ficticia del curso).
 
+# Cautelas
+
+Cotejo del 2026-10-20 contra las slides 7 a 10 y 18 a 19 de M3U2 (el archivo dice
+Unidad 10) y la página 2 del resumen visual: el perfil, los cuatro roles, las cuatro
+fases del resumen (incluido el "10% de la jornada" como ejemplo, no como regla), la
+secuencia de las slides, los tres elementos de diseño y los tres valores de la red
+coinciden con la fuente. Sin correcciones de contenido.
+
+El 10% de la jornada es un ejemplo del resumen visual ("por ejemplo, 10% de la jornada")
+y los "primeros 6 meses" son el horizonte de objetivos de la slide 19. Ninguno es un
+umbral del curso: cualquier valor que use el plan es decisión propia. La fidelidad al
+curso no acredita que Acme Labs tenga o necesite una red de champions.
+
 # Relacionado
 
 - [AI Literacy estratificada](/conceptos/m3u2-ai-literacy-niveles.md)
 - [Frenos a la adopción y estrategias de transición](/conceptos/m3u2-frenos-y-transicion.md)
 
-[^m3u2-slides]: M3U2, slides sobre la red de AI Champions y el diseño del programa.
+[^m3u2-slides]: M3U2, slides 7 a 10 (red de AI Champions: perfil, roles, valor de la red) y 18 a 19 (del Prompt Challenge al programa, diseño del programa).
 [^m3u2-visual]: M3U2, resumen visual, página 2.

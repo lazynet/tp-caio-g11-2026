@@ -7,6 +7,7 @@ sources:
   - id: m3u4
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12.pdf
     title: M3U4 (el archivo dice Unidad 12), slides
+    pages: slides 2 a 5 y 18
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:30:00Z }
 status: draft
 ---
@@ -39,14 +40,22 @@ Fuente: [^m3u4]
 
 Fuente: [^m3u4]
 
-En el esquema de integración, el módulo 1 se resume como visión, KPIs y
-despliegue ético.[^m3u4]
+En el esquema de integración (slide 18), el "Módulo 1 - Estrategia de 12 Meses" se
+resume como visión, KPIs y despliegue ético.[^m3u4] Esa numeración es la del Plan
+Maestro de la slide 2, no la de los módulos de la cursada.
 
 # Cautelas
 
+Cotejo del 2026-10-20 contra las slides 2 a 5 y 18 de M3U4 (el archivo dice Unidad 12): la
+definición, los tres elementos, los cuatro pilares, los tres grupos de KPIs con sus
+ejemplos y el esquema de integración coinciden con la fuente. Corrección: se aclaró que
+el "módulo 1" de la slide 18 es el de la numeración del Plan Maestro; antes se leía como
+módulo de la cursada.
+
 Las slides nombran los grupos de KPIs, pero no dan metas ni umbrales. "Usuarios
-activos" es una métrica de uso; M3U2 advierte medir *value realized* y no
-licencias activas (ver el [programa](/programa.md), tema 9). Las metas del plan son
+activos" es una métrica de uso; el programa del curso lista para M3U2 "medición de
+adopción real: value realized, no licencias activas" (programa, pág. 11, tema 9). Es un
+tema del programa: las slides de M3U2 no lo desarrollan. Las metas del plan son
 supuestos propios.
 
 # Cómo lo usa el plan
@@ -62,4 +71,4 @@ como punto de partida.
 - [AI Portfolio 1.0](/conceptos/m1u2-ai-portfolio-1-0.md)
 - [Costo por outcome](/conceptos/m1u4-costo-por-outcome.md)
 
-[^m3u4]: M3U4, slides del módulo Estrategia Integral de 12 Meses.
+[^m3u4]: M3U4, slides 2 a 5 (visión general, estrategia integral de 12 meses, pilares, KPIs) y 18 (integración de los cuatro módulos).

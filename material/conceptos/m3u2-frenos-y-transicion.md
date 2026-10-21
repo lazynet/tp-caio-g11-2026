@@ -7,10 +7,13 @@ sources:
   - id: m3u2-slides
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_3_Unidad_10.pdf
     title: M3U2 (el archivo dice Unidad 10), slides
+    pages: slides 11 a 14
   - id: m3u2-visual
     resource: UTNBA_CAIO_M3_U2_Resumen_visual.pdf
     title: M3U2, resumen visual (3 páginas, solo imagen)
+    pages: página 3
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:15:00Z }
+status: draft
 ---
 
 # Reacciones esperadas
@@ -71,11 +74,28 @@ reduce resistencia) puede sostenerse como argumento del curso, no como dato.
 El material de la unidad no cubre ADKAR, Kotter ni Lean Change; no se agregan
 acá porque no están en las fuentes de este alcance.
 
+# Cautelas del cotejo
+
+Cotejo del 2026-10-20 contra las slides 11 a 14 de M3U2 (el archivo dice Unidad 10) y la
+página 3 del resumen visual: las ocho reacciones, las cuatro estrategias, el principio de
+confianza y seguridad psicológica, los tres frenos y el ejemplo de atención al cliente
+coinciden con la fuente. La cita del 60% es textual de la slide 14 ("hasta un 60% menos de
+resistencia al cambio") y no trae fuente en la slide ni en el resumen.
+
+La búsqueda web de un estudio primario y el resumen secundario de Deloitte que menciona la
+cautela anterior son de la sesión que escribió la ficha; en este cotejo no se repitió esa
+búsqueda. Se mantiene como "asumido de evidencia previa", y la cifra sigue sin ir a una
+slide. Que la fuente la afirme no la vuelve verdadera.
+
+El cuadro de estrategias mezcla dos fuentes con redacciones distintas (el resumen
+agrega "liderazgo empático y visible" y las slides agregan "demostrar el valor"); la
+tabla ya lo marca fila por fila.
+
 # Relacionado
 
 - [AI Literacy estratificada](/conceptos/m3u2-ai-literacy-niveles.md)
 - [Programa de AI Champions](/conceptos/m3u2-programa-champions.md)
 - [Prompt Challenge](/conceptos/m3u2-prompt-challenge.md)
 
-[^m3u2-slides]: M3U2, slides de psicología de la automatización.
+[^m3u2-slides]: M3U2, slides 11 a 14 (psicología de la automatización: factor humano, reacciones esperadas, estrategias de transición, construir confianza).
 [^m3u2-visual]: M3U2, resumen visual, página 3.
