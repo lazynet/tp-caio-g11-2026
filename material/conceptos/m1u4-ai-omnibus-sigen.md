@@ -140,10 +140,10 @@ Unidad: [M1U4](/unidades/m1u4-rol-gobernanza.md).
   arts. 1 y 2, resoluciones 172/2014 y 87/2022, y la ausencia de "obligatoria".
 * La lectura (p. 19) tiene el calendario del Anexo III (2-dic-2027), del Anexo I
   (2-ago-2028), del art. 50 y las guidelines del 20-jul-2026; coincide con Cooley.
-* Las fechas nuevas ya están cotejadas contra el DOUE; la columna "fecha original"
-  de Cooley, solo en la fila de autoridades públicas, que se corrigió (art. 111.2
-  original, p. 121). Las demás filas de esa columna siguen sin cotejar. El AI Act no
-  se declara aplicable a Acme Labs.
+* Las fechas nuevas están cotejadas contra el DOUE. De la columna "fecha original"
+  de Cooley se cotejó solo la fila de autoridades públicas, que estaba mal y se
+  corrigió con el art. 111.2 original (p. 121). Las demás filas de esa columna siguen
+  sin cotejar. El AI Act no se declara aplicable a Acme Labs.
 * El cotejo del 2026-10-21 llegó en el PR #55 (autor en GitHub: edu2020chaparro-ux;
   herramienta no declarada). La revisión del mismo día (claude-code/claude-opus-5-5)
   lo repitió sobre el PDF/A español del Omnibus bajado de Cellar, el repositorio de la
