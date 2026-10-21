@@ -190,10 +190,18 @@ desde el mes 4 (sin replan) da la misma caja y tiempo 278 (150-406): diferir aho
 desarrollador de los meses 4-6 (~16), habilita el replan (~5) y deja el producto para la lectura del mes 6. El Anexo B absorbe el
 diseño del piloto en las semanas 1-4 de los meses 7-9.
 
-La preparación previa (1,8-6,7k USD de tiempo) es un **costo previo propuesto**: la reconstrucción
-retrospectiva del Anexo D y el día de verificación del historial del Anexo B, antes de la aprobación de hoy. No
-hay registro de que se haya ejecutado. Quién autoriza gastarlo antes del
-presupuesto 2027 está **pendiente**. La suscripción vigente no es incremental:
+**Preparación del paquete completo, alternativa.** Los 1,8-6,7k USD de tiempo
+corresponden a la retrospectiva de D y al día de verificación del historial de B.
+Son un costo previo propuesto, sin ejecución registrada ni autorización acreditada.
+Antes de trabajar en 2026, el Directorio o la autoridad formalmente delegada debe
+autorizar ese alcance y su imputación; Operaciones y managers deben confirmar
+agendas y trabajo desplazado, según los derechos de decisión de
+[C](03-gobierno-seguridad.md). La persona autorizante sigue **pendiente**.
+
+No es la validación inicial del mínimo de 8k USD ni queda financiada por ella.
+Si se propone reutilizar trabajo entre ambos alcances, conciliar entregables,
+horas y costo una sola vez antes de autorizarlo; no sumar ambas preparaciones
+ni dar por ejecutada ninguna. La suscripción vigente no es incremental:
 ya está en el gasto de hoy y el plan no suma seats.
 
 **Contra el techo de caja.** La caja con contingencia, 98-255k USD (114-314 con
@@ -339,7 +347,7 @@ completo sin la preparación previa, con el producto diferido, medios (rango):
 | 3. Complementa (primer tramo completo, contractor y fracción interna) | 166 (92-239) | 290 (157-421) | 455 | 2,3 / — |
 | 4. Sin contractor, con el primer tramo acotado (los hitos de IA aplicada de los meses 1-3 pasan a los meses 4-6) | 83 (44-122) | 274 (149-400) | 357 | **1,6 / 3,3 / 3,0 / 2,9** |
 | 4-a. Sin contractor, con el primer tramo completo (todo interno; comparación) | 86 (45-126) | 290 (157-421) | 375 | 2,3 / 3,3 / 3,0 / 2,9 |
-| 5. Sin contractor, modo control del Anexo B (sin harness, evals, caso de referencia ni prueba de portabilidad) | 83 (44-122); ~75 (39-110) con la suscripción que no permite gateway | 213 (113-313) | 296 (~288 con ese régimen) | 1,6 / 2,2 / 2,2 / 2,1 |
+| 5. Sin contractor, modo control del Anexo B (sin harness, evals, caso de referencia ni prueba de portabilidad) | 83 (44-122), con infraestructura de base mantenida | 213 (113-313) | 296, con ese alcance | 1,6 / 2,2 / 2,2 / 2,1 |
 
 Las filas 2, 3 y 4-a restan el frente producto a lo costeado con producto (la 1
 sale del cuadro de arriba). La 4 y la 5 parten de la 1 y sacan el contractor con
@@ -348,11 +356,19 @@ su contingencia (−94; 54-133); la 4 suma 0,8 FTE de IA aplicada interna en los
 hay quien absorba el 0,2 ([Anexo B](02-arquitectura.md), alternativa sin contractor, con fracción interna). La 5
 mantiene el replan de los meses 4-6 y 1,5 / 1,4 FTE del Anexo B en los meses 7-12 (modo control del Anexo B,
 "Exceso de los meses 4-6 con el producto diferido"); con la suscripción que no permite gateway, la infraestructura de los meses 4-6 baja a
-0,5-1,5 (−8 de caja; los meses 7-12 quedan pendientes de Arquitectura).
+0,5-1,5. La diferencia de caja M4-M6 con contingencia es 3,45-13,225
+(resta de intervalos sin presumir correlación; diferencia de medios 8,3375).
+Los meses 7-12 de ese régimen quedan pendientes de Arquitectura: no se publica
+un costo anual de 75/288 restando solo M4-M6. B mantiene 1,5/1,4 FTE para el
+modo control M7-M12, pero eso no fija por sí solo la caja del régimen que no
+permite gateway.
 
-**La fila 5 es la más barata sin contractor que entra en el sobre, pero compra
-menos:** no hay cobertura de precio ni caso de referencia. La fila 4 ahorra caja,
-el recurso que sí entra, y gasta tiempo clave, el que no.
+**Qué decide este cuadro.** Describe el intercambio entre caja, tiempo y
+entregables del paquete completo; no elige una alternativa equivalente por
+menor total. La fila 5 conserva control, sin cobertura de precio ni caso de
+referencia; la fila 4 agrega capacidad interna y exige aprobar su exceso de
+tiempo clave. Cada una requiere autorización propia. Para el régimen que no
+permite gateway falta completar la caja M7-M12 antes de comparar el año.
 
 #### Dos contingencias del contractor, que no se resuelven igual
 
@@ -653,7 +669,8 @@ del mes 9, 297 / 435 (año 230 / 338 y 310 / 454).
 caja del corte (hasta 38) supera el techo de los meses 1-3 (33) por la reserva de cierre.
 
 Los acumulados se redondean después de sumar componentes: M3 más núcleo
-da 107,4646 de medio y 155,5500 de máximo, que se publican como 107/156.
+da 107,4521 de medio y 155,5250 de máximo, que se publican como 107/156,
+con el Council anual de 2,25-5,625 de [C](03-gobierno-seguridad.md).
 Sumar los renglones ya redondeados (79+29) daría 108 y perdería esa precisión.
 
 **Reserva de cierre vigente, actualizada en cada gate.** El cierre ya está
@@ -819,7 +836,7 @@ conservan su dueño.
 | Familia | Métrica | Cómo se lee en el gate | Dónde se define |
 |---|---|---|---|
 | Impacto financiero | Caja y tiempo ejecutados contra el techo y la reserva de cierre vigente | Exposición presupuestaria máxima propuesta hasta cerrar (79 en M3); sin reserva suficiente no se libera el compromiso nuevo | Este anexo («Pedido inicial: paquete mínimo»); «Cuánto pierdo si corto» corresponde al paquete completo |
-| Impacto financiero | Throughput atribuible por límite inferior (+3% en el mes 6, +8% en el mes 9) | Pasa, espera o corta. Rige si el board amplía al paquete completo; en el mínimo, M3 no atribuye ganancia | [Anexo F](06-roadmap-riesgo.md) y este anexo |
+| Impacto financiero | Throughput atribuible por límite inferior (+3% en el mes 6, +8% en el mes 9) | Rige también la continuidad condicional del mínimo en M6/M9, con calidad resuelta primero y salidas de F; M3 no atribuye ganancia. La espera M9 conserva su ratificación pendiente; ampliar a plataforma requiere una decisión distinta | [Anexo F](06-roadmap-riesgo.md), [umbrales propuestos](../../context/supuestos/umbrales-tecnicos-propuestos.md) y este anexo |
 | Impacto financiero | Costo por PR aceptado | No sube en el mes 9; separa lo que cuesta producir del throughput | Este anexo («Costo por outcome») |
 | Impacto financiero | Múltiplo efectivo del consumo y destino de la capacidad liberada | Más de 6× sin mitigar en un tramo congela la expansión; sin destino en el mes 6 la capacidad no se cuenta como beneficio | Este anexo («Riesgos y mitigación») |
 | Adopción interna | Cohorte activa (mínimo 15) y utilización | Condiciona la lectura del throughput; no se compra «uso» | [Anexo D](04-personas-cultura.md) |
@@ -966,7 +983,7 @@ techo, sin excepciones.
 ### Costos publicados de alcances distintos, pendientes de homogeneizar
 
 No se realizó todavía la comparación corregida a doce meses con igual fecha,
-población, controles aplicables, medición y calidad. La tabla inventaría los
+población, controles aplicables, medición y calidad. La tabla registra los
 alcances publicados; sus netos son ilustrativos, no una elección equivalente.
 Montos económicos en k USD; no son techos anuales aprobados.
 
@@ -984,6 +1001,14 @@ La fila del paquete mínimo no homogeneiza las demás. Los diferenciales
 **394−161=233**, **394−47=347** y **400−199=201** contestan preguntas distintas.
 En M3 se comparan únicamente gastos futuros evitables desde el historial común;
 preparación y M1-M3 ya ejecutados son hundidos, no costo incremental de continuar.
+
+**Decisión que admite cada cuadro.** El mínimo tiene tareas y techos para
+autorizar validación, M1-M3 y luego continuidad o salida por gate. Los cuadros
+de 47/161/199/394/400/471 registran alcances y sensibilidades anteriores;
+no sostienen elegir plataforma, contratar ni descartar otra opción por su neto.
+Para esa decisión falta una estimación común desde el gate de elección, con
+igual población, controles aplicables, calidad, medición, operación y cierre.
+Los costos hundidos no se trasladan al nuevo pedido.
 
 #### Composición de las tres opciones originales
 
@@ -1020,10 +1045,13 @@ para cuantificarlo:
   el caso de referencia, evidencia técnica para un banco y la base del producto.
   Que las evals en CI bajen el retrabajo es una hipótesis sin dato.
 
-**Resultado ilustrativo sobre costos publicados, sin equivalencia demostrada:** aun
-con φ = 0, pierden 161 y 47 contra 332; ni el optimista del paquete (−280) lo
-cambia. El piloto acotado se paga en el año si φ_piloto ≥ ~76% (47 / 62). El diferencial del
-paquete sobre el gobierno mínimo y formación, ~233, lo pagan solo opciones sin valor medido:
+**Sensibilidad algebraica, sin recomendación por ranking.** Los netos publicados
+no demuestran que 47 o 161 compren la misma cobertura que 394. La relación
+47/62 ≈76% solo indica qué fracción de capacidad cubriría aquel costo parcial;
+no prueba repago de un piloto habilitado con todos sus controles. El diferencial
+233 tampoco es todavía el precio incremental de una decisión equivalente.
+Las siguientes cuentas muestran qué habría que medir si se homogeneizaran los
+alcances; no justifican hoy financiar ese diferencial:
 
 - **Precio:** cubrir 233 exige **90,3% ponderado de todo el gasto elegible**
   a 12×: fc×s = 233/(12×21,5) = 0,9031; a 6×, más del 100%.
@@ -1069,8 +1097,11 @@ La restricción de C incluye prohibición o condicionamiento: una prohibición p
 excluye el uso y no libera plataforma. Las cuatro condiciones adicionales de B/C
 son propuesta pendiente de ratificación; no reemplazan la regla vigente. Se conservan relecturas M6/M9 dentro del año.
 
-**La aprobación de hoy por el primer tramo acotado con la prueba chica, y la decisión del mes 3 como bifurcación.** El board aprueba el primer tramo acotado,
-la prueba, el marco de gates y el producto diferido.
+**Escenario del paquete completo, no autorización vigente.** Los dos recorridos
+siguientes reconstruyen su bifurcación histórica. No se recomienda elegir entre
+400 y 199 por su total: compran alcances distintos. Antes de solicitar cualquiera,
+se requiere comparación del gasto futuro evitable desde el mismo gate y nuevo
+costeo; hoy rigen las dos autorizaciones del mínimo.
 
 - **La decisión del mes 3 libera la plataforma de los meses 4-6** (contractor al 100%, gateway, pasarela) solo
   con al menos una señal para evaluar lo que el gobierno mínimo y formación no compra: restricción o licencia
@@ -1565,7 +1596,7 @@ acordaron la consolidación. La consolidación es un ahorro que confirma el due�
 |---|---|---|---|
 | IA aplicada | 0,5 / 0,8 FTE del Anexo B y contractor del Anexo D | 32-79 de tiempo en los meses 4-12 y 4-10 en los meses 1-3 | **Consolidado**: los Anexos B y D acuerdan que el contractor reemplaza; el base ya lo descuenta |
 | Pruebas de bypass y migración | DevOps/QA del Anexo B (2,1-10,7, dentro de su fracción) y prueba de integración del Anexo C (1,1-5,6) | Hasta 1,1-5,6 | Lo resuelven Arquitectura y Gobierno |
-| Red team | Piloto en los meses 7-9 (Arquitectura, 5-15, solo en el tramo del producto) y externo en los meses 10-12 (Gobierno, 10-25) | 5-15 si el producto se libera y un contrato cubre el piloto y la reprueba | Desacuerdo a la vista en la [fuente](../../context/supuestos/precios-externos-sin-cotizar.md); Arquitectura y Gobierno |
+| Red team | Piloto en los meses 7-9 (Arquitectura, 5-15, solo en el tramo del producto) y externo en los meses 10-12 (Gobierno, 10-25) | 5-15 como sensibilidad publicada, sin descuento aplicado | Desacuerdo a la vista en la [fuente](../../context/supuestos/precios-externos-sin-cotizar.md); según C, un único contrato debe cubrir piloto, reprueba y las superficies/controles que pida el cliente. Sin producto no hay solape; no sustituir alcances ni elegir un precio hasta conciliarlos |
 | Gateway y pasarela de salida | Infraestructura (Arquitectura, 14-38) y pasarela, DLP y logs (Gobierno, 4,5-18) | Hasta 4,5-18 si son la misma pieza | Arquitectura |
 | Infraestructura de los meses 7-12 sin piloto | El Anexo B la dimensionaba "con el piloto y su tráfico" (2-6 por mes) | 1,5-6 por tramo de tres meses (3-12 en los meses 7-9 y los meses 10-12 juntos), más 6-24 por año a régimen | **Consolidado**: Arquitectura confirma que sin el producto baja al nivel de los meses 4-6; el incremento pasa al tramo del producto |
 | Seguridad | 20% de un senior de DevOps o seguridad (Gobierno) y DevOps/QA (Arquitectura) | Sin cuantificar | Arquitectura y Gobierno |
@@ -1665,11 +1696,13 @@ salida declarada por adelantado.
   integración; M7-M9 2/11; M10-M12 2/11. No aprobada hoy. Plataforma abierta
   en M3/M6/M9, con nuevo costeo del futuro evitable y cuatro condiciones propuestas,
   pendientes de ratificación. F y slides deben integrar este pedido.
-- **Cifra de alerta del paquete completo, no aplicable al mínimo:** a 12×,
-  el consumo incremental (211-267k USD al año) se comparaba con la caja de ese paquete.
-  Es exposición de la empresa, con o sin plan. El
-  gateway la acota solo si baja el consumo (~12,8% a 12×, ~25,6% a 6×), y eso lo
-  mide la prueba de los meses 4-6.
+- **Exposición al consumo, también con el mínimo:** el incremental modelado a
+  12× es 211-267k USD al año, con o sin plan; no es consumo futuro facturado ni
+  ahorro observado. El mínimo no lo mitiga con gateway. Compararlo con toda la
+  caja anual del paquete completo es solo un benchmark de aquel alcance,
+  no el costo ni un beneficio del mínimo. En una ampliación autorizada, la
+  prueba de plataforma mide si el gateway reduce el gasto elegible; los umbrales
+  ~12,8% a 12× y ~25,6% a 6× no acreditan ahorro por sí solos.
 - **Equilibrio del paquete completo, no aplicable al mínimo:** régimen del año 2
   (no recupera la inversión del año 1,
   no es ROI ni payback): ~17% de throughput atribuible (~23% con producto), contra la
@@ -1705,9 +1738,10 @@ salida declarada por adelantado.
 - Siguen pendientes de confirmación humana los controles exigibles y opcionales,
   los solapes, la autoridad delegada y la estimación de Personas. La viabilidad
   técnica necesita verificador explícito dentro de la bolsa ya costeada o recosteo.
-- El pilar de protección queda nombrado sin respaldo hasta que el responsable del
-  [Anexo C](03-gobierno-seguridad.md) fije qué controles son exigibles y cuáles
-  opcionales.
+- El [Anexo C](03-gobierno-seguridad.md) propone el mapa de motivos, controles
+  exigibles u opciones y alternativas de menor costo. Su confirmación humana
+  sigue pendiente; la alternativa de incidentes/ejercicios no está adoptada ni
+  tiene efecto económico estimado. No descontar costos por esa propuesta.
 - N × costo por desarrollador es una cuenta de planificación, no la nómina de la empresa.
 - La valuación de la capacidad a costo cargado y con la lectura de horas evitadas es un piso
   deliberado. La tarifa no se publica ni se deriva de márgenes internos.
