@@ -6,11 +6,11 @@ title: "Anexo C — Gobierno, seguridad y compliance"
 
 # Anexo C — Gobierno, seguridad y compliance
 
-Slides que sustenta: [Slide 6 — Gobierno y seguridad](../slides.md).
+Slides que sustenta: [Gobierno y seguridad](../slides.md).
 
 ## Objetivo
 
-Sustentar las tres decisiones de gobierno y seguridad que la slide 6 le pide al
+Sustentar las tres decisiones de gobierno y seguridad que la slide «Gobierno y seguridad» le pide al
 Directorio, y el modelo que las sostiene:
 
 1. **Política de IA:** aplicar la que el responsable del caso informó aprobada el
@@ -54,7 +54,7 @@ así que el gobierno se construye antes del primer caso, no después del primer 
 | Datos disponibles para IA | Internos; los datos productivos de clientes no | [Supuesto](../../context/supuestos/disponibilidad-de-datos.md) |
 | Inversión incremental del plan | 1%-3% de la facturación anual, más 10%-15% del tiempo de personas clave | [Supuesto](../../context/supuestos/capacidad-de-inversion.md) |
 | Costo cargado por rol | Tech lead 4.500-10.000 USD/mes; senior DevOps 3.000-7.500; analista funcional 2.000-5.500; staff 1.500-5.000. Rangos amplios, no calibrados contra la nómina | [Supuesto](../../context/supuestos/costo-cargado-por-rol.md) |
-| Costo horario por rol | Tech lead 28-63 USD/h; senior DevOps 19-47; analista funcional 13-34; staff 9-31. Es el costo mensual dividido 160 h; cada actividad usa el rol que la hace, sin promedios de la empresa | Supuesto, derivado del costo cargado por rol |
+| Costo horario por rol | Tech lead 28,125-62,5 USD/h; senior DevOps 18,75-46,875; analista funcional 12,5-34,375; staff 9,375-31,25. Es el costo mensual dividido 160 h; cada actividad usa el rol que la hace, sin promedios de la empresa. Donde el anexo muestra la tasa redondeada a la unidad (por ejemplo, 13-34 USD/h), es solo para leer: las cuentas usan estos valores exactos | Supuesto, derivado del costo cargado por rol |
 | Disponibilidad | Utilización facturable ~83% y bench casi nulo: el tiempo de gobierno compite con horas facturables | [Fuente](../../context/hechos/capacidad-y-utilizacion.md) |
 | Los clientes principales siguen | La facturación está muy concentrada en pocos clientes (rango en la fuente) | [Supuesto](../../context/supuestos/continuidad-de-clientes-principales.md) |
 
@@ -127,13 +127,14 @@ antirrobot y no se cotejó el texto consolidado: la fecha no va a una slide sin 
 
 ## Riesgos y mitigación
 
-Registro de riesgos inicial (probabilidad e impacto cualitativos, criterio del equipo
-hasta tener la línea base de los meses 1-3). El rol dueño de cada riesgo, su prueba y su
-residual están en la tabla siguiente; las personas están a designar.
+Registro de riesgos inicial. Probabilidad e impacto son **inherentes**: se valoran antes
+del control, son cualitativos y siguen el criterio del equipo hasta tener la línea base de
+los meses 1-3. El rol dueño de cada riesgo, su prueba y su **residual** están en la tabla
+siguiente; las personas están a designar. La aceptación siempre se decide sobre el residual.
 
-| Riesgo | Prob. | Impacto | Mitigación (control) | Disparador de abandono o escalamiento |
+| Riesgo | Prob. inherente | Impacto inherente | Mitigación (control) | Disparador de abandono o escalamiento |
 |---|---|---|---|---|
-| **Datos de cliente en un modelo externo.** Datos o código de un cliente pasan por un modelo externo sin cláusula | Media | Alto: incumplimiento contractual y secreto financiero, con clientes muy concentrados | Matriz de restricciones por cliente (meses 1-3), default-deny sobre código de cliente; con señal en el mes 3, pasarela con allowlist (meses 4-6) | Un solo incidente confirmado: el Council suspende el uso de IA sobre ese cliente hasta cerrar el análisis de causa |
+| **Datos de cliente en un modelo externo.** Datos o código de un cliente pasan por un modelo externo sin cláusula | Media | Alto: incumplimiento contractual y secreto financiero, con clientes muy concentrados | Matriz de restricciones por cliente (meses 1-3), default-deny sobre código de cliente; con señal en el mes 3, pasarela con allowlist (meses 4-6) | Un solo incidente confirmado: el responsable de seguridad suspende el uso de IA sobre ese cliente hasta cerrar el análisis de causa (ver "Derechos de decisión"); el Council lo revisa en su revisión mensual |
 | **Inyección indirecta de prompts.** Prompt injection indirecta en un agente de código (repositorios, tickets, comentarios de PR, servidores MCP) | Media | Alto | Mínimo privilegio en credenciales, aprobación humana en el nivel "actúa con aprobación", entorno sin credenciales productivas, validación de salida con código determinístico | Un agente ejecuta una acción fuera de su alcance en pruebas: baja a "prepara, no ejecuta" hasta corregir |
 | **Agencia excesiva.** Un agente con permisos de escritura sobre sistemas productivos | Baja | Muy alto | Tope de autonomía por nivel de riesgo (ver "Escala de autonomía"); "autónomo dentro de límites" solo en sandbox | Cualquier pedido de "autónomo dentro de límites" con acceso a producción pasa a decisión del Council |
 | **Fuga de secretos.** Secretos en prompts o contexto | Media | Medio-alto | Escaneo de secretos antes del envío, lista cerrada de lo que nunca se envía (definida en el antecedente de abril; vigencia en la versión aprobada por contrastar), rotación | **Primer secreto expuesto confirmado**: se revoca y rota, se contiene el canal afectado y el responsable de seguridad decide con evidencia si se reanuda. **Recurrencia** (más de uno por tramo de tres meses): se bloquea el envío automático y se pasa a revisión previa |
@@ -153,6 +154,12 @@ valora después de probar el control, no antes.
 | Baja con impacto hasta Alto, o Media con impacto Medio | Dueño del riesgo | Queda en el registro; el Council lo ve en la revisión mensual |
 | Media con impacto Medio-alto o Alto, o Baja con Muy alto | Council, con informe al CEO | Control compensatorio nombrado y fecha de revisión, como máximo la siguiente decisión de tramo (meses 3, 6, 9 o 12) |
 | Alta con impacto Alto o mayor | Nadie | Se reduce o se suspende el uso; no hay excepción (ver "Catálogo de decisiones del Anexo C") |
+
+**Combinaciones sin fila.** Media / Bajo, Media / Muy alto, Alta / Bajo, Alta / Medio y
+Alta / Medio-alto no están en la tabla. No se aceptan por omisión: cuentan como residual no
+aceptado, el uso afectado no se habilita ni se amplía, y si ya corre rige la suspensión
+preventiva de Seguridad (ver "Derechos de decisión"). Agregar esas filas queda pendiente de decisión
+del responsable humano de este anexo.
 
 ### Prueba, evidencia y residual de cada riesgo
 
@@ -251,7 +258,18 @@ rol está **a designar**; Personas desarrolla los roles y su capacidad.
 **Seguridad precede a valor, gasto y adopción.** El responsable de seguridad puede
 suspender preventivamente el uso o la superficie afectados aunque los indicadores
 económicos y de adopción cumplan. El Council también puede frenar un frente en su revisión
-mensual. La contención no espera la siguiente reunión ni habilita gasto nuevo.
+mensual. La contención no espera la siguiente reunión ni habilita gasto nuevo. Una
+suspensión preventiva solo se levanta por el procedimiento de reanudación que sigue; un
+desacuerdo con ella escala al CEO, última instancia del Council.
+
+**Incidentes antes del plan de M1-M3.** El plan de incidentes es un entregable de los meses
+1-3 (la ruta de incidentes y suspensión de la fila «Política e intake» del insumo del
+paquete mínimo), y el ejercicio de mesa de los meses 4-6 lo prueba ya escrito. Quedan
+pendientes de diseño y decisión humana la definición de incidente de IA, las severidades,
+los plazos de contención y de aviso al cliente y la preservación de evidencia; este anexo
+no les fija valores. Ningún uso del paquete mínimo se habilita sin esa ruta de incidentes y
+suspensión escrita. Mientras tanto rigen la A del responsable de seguridad para contener y
+comunicar, la suspensión preventiva y el aviso al cliente que pida su contrato.
 
 Para reanudar, ingeniería produce la prueba corregida y una persona distinta la verifica;
 la autoridad del residual lo acepta según la tabla de este anexo. La autoridad del gate
@@ -379,8 +397,42 @@ intake (1 a 3) miden riesgo; no son los niveles de autonomía de la escala de m�
 |---|---|---|---|
 | 1. Bajo | Autonomía "sin IA" o "asiste", datos Público o Interno, herramienta ya aprobada | Autoservicio: se registra en el inventario | Inmediato |
 | 2. Medio | Autonomía "prepara, no ejecuta" o "actúa con aprobación" sobre sistemas internos, o datos Confidenciales con herramienta aprobada | Dueño del caso y responsable de seguridad | 5 días hábiles |
-| 3. Alto | Toca código o datos de un cliente, o va dentro del producto que se vende | Council, con verificación de la matriz del cliente. Los datos productivos de un cliente no salen hacia un modelo externo durante el horizonte | Hasta el siguiente Council (30 días como máximo) |
+| 3. Alto | Toca código o datos de un cliente, o va dentro del producto que se vende | Cada decisión con su A de "Derechos de decisión": el uso sobre un cliente, el Responsable comercial del cliente, con la matriz verificada; la salida a producción, el Dueño de producto. El residual lo acepta quien fija el "Criterio de aceptación del riesgo residual" (por ejemplo, el Council en Media / Alto). Los datos productivos de un cliente no salen hacia un modelo externo durante el horizonte | Hasta el siguiente Council (30 días como máximo), si el residual le corresponde al Council |
 | Prohibido en el plan | Decisiones de crédito o scoring sobre personas, datos de categoría especial, autonomía "autónomo dentro de límites" con acceso a producción, datos productivos de clientes hacia un modelo externo | No se aprueba en el horizonte; reabrirlo es una decisión del cierre del mes 12 que rige después (ver "Catálogo de decisiones del Anexo C") | Ver "Escala de autonomía" |
+
+**Cuatro decisiones que no se mezclan.** En un caso de cliente o de producto, usar IA
+sobre un cliente, salir a producción, aceptar el residual y liberar fondos tienen cada una
+su A (ver "Derechos de decisión" y "Criterio de aceptación del riesgo residual"). El Council
+revisa el caso y acepta el residual que le toca; no es una segunda A del uso ni de la
+salida a producción. Los fondos los liberan las autorizaciones iniciales y las decisiones
+de los meses 3, 6, 9 y 12; el gasto fuera del presupuesto, Finanzas.
+
+**Regla transitoria hasta que exista la matriz de un cliente.** Junta lo que el plan ya fija,
+para usos nuevos y existentes:
+
+- Lo que el contrato de un cliente prohíbe queda afuera, sea un uso nuevo o uno que ya
+  existe (slide «Gobierno y seguridad», decisión 3). Si ya corre, lo suspende Seguridad
+  como control incumplido (ver "Derechos de decisión").
+- La restricción de "Derechos de decisión" rige sin cambios: en el horizonte, IA sobre el
+  código o los datos de un cliente solo en lo que el cliente permite en su entorno, y
+  enviarlos a un modelo externo, no antes del cierre del mes 12. Donde la superficie no
+  tiene bloqueo técnico, la cubre un control compensatorio (ver "Tres cosas que no se
+  confunden").
+- **Tensión pendiente:** el intake (fila de prohibidos) y el catálogo nombran solo los
+  *datos productivos* hacia un modelo externo; la restricción de arriba alcanza al código y
+  a los datos. Hasta que el responsable humano de este anexo lo concilie, rige la restricción
+  más estricta y no se habilita ningún alcance nuevo por la redacción más corta.
+- Un uso nuevo o ampliado sobre un cliente no se habilita sin la lectura de su contrato: la
+  matriz frena los casos de cliente hasta completarse, mientras tanto cada caso se valida a
+  mano ([Anexo D](04-personas-cultura.md), "Staffing") con el Responsable comercial del
+  cliente como A, y lo ambiguo queda afuera (*default-deny*).
+- Un uso existente que toque código o datos de un cliente no se acepta automáticamente por
+  ser una herramienta aprobada: entra en la revisión del residual de usos existentes (ver
+  "Calendario del mínimo propuesto"). Este anexo no dispone detenerlo, salvo la suspensión
+  preventiva de Seguridad. Queda pendiente de decisión humana qué rige para ese uso hasta
+  tener la matriz (pausarlo o aceptarlo como residual) y si encaja en la restricción de
+  arriba; si se acepta, lo hace la autoridad que fija el criterio de aceptación (el Council,
+  con informe al CEO, si el residual es Media / Alto).
 
 El plazo de 5 días hábiles es un objetivo del equipo, más rápido que las 2 a 4 semanas
 del antecedente de la política de abril, cuyo plazo vigente está por contrastar, para
@@ -409,9 +461,12 @@ La escala de autonomía es un marco de referencia, no un estándar oficial.
 
 ### Compliance: alcance explícito
 
-- **No se ofrecen decisiones de crédito ni scoring en los 12 meses.** Excluye el caso
-  crediticio del Anexo III y la parte más pesada del
-  régimen del BCRA sobre modelos. Es **reversible**: el cierre del mes 12 decide si se reabre
+- **No se ofrecen decisiones de crédito ni scoring en los 12 meses.** Es una delimitación
+  del plan y un apetito de riesgo propuesto, no una clasificación normativa: vender a bancos
+  y fintechs no vuelve por sí solo de alto riesgo un uso, y la fuente regulatoria de este
+  anexo no acredita un régimen específico del BCRA para crédito o scoring. La exclusión evita
+  cargar con los deberes de proveedor de un caso crediticio del Anexo III si un cliente opera
+  en la UE (disparador, ver más abajo) mientras los controles maduran. Es **reversible**: el cierre del mes 12 decide si se reabre
   para el plan siguiente, si un cliente lo pide y el Council aprueba el costo de proveedor de
   alto riesgo; no se ejecuta dentro del horizonte.
   Excluir el crédito no demuestra por sí solo que no haya otros usos de alto riesgo (empleo,
@@ -444,7 +499,7 @@ excepción puede contradecir una prohibición del horizonte.
 | Decidir cambios de alcance de la política aprobada | Interno | Meses 1-3 | Directorio | Segunda autorización: M1-M3 tras la validación inicial; versión, alcance y aprobación documentada revisados | Compromiso interno enmendable; sin firma con clientes; no es una nueva aprobación de la política existente |
 | Cláusula tipo de IA para contratos | Interno y negociación | Meses 7-9 | Council | Una función de IA con documentación técnica y supervisión humana | Texto listo y negociación no vinculante |
 | Firma de un compromiso contractual de IA con un cliente | Externo | Cierre del mes 12 | Council | Cláusula tipo, matriz del cliente y red team sin críticos | Irreversible: el compromiso queda firmado |
-| Enviar datos productivos de un cliente a un modelo externo | Externo | No antes del cierre del mes 12 | Responsable comercial del cliente, con Council | Cláusula firmada, matriz y controles demostrados | Irreversible |
+| Enviar datos productivos de un cliente a un modelo externo | Externo | No antes del cierre del mes 12 | Responsable comercial del cliente (A del uso); el residual lo acepta el Council según el criterio de aceptación | Cláusula firmada, matriz y controles demostrados | Irreversible |
 | Subir una función de IA del producto al nivel 3 (actúa con aprobación) | Externo | Cierre del mes 12 | Council | Evidencia del piloto y red team externo sin críticos | Rige después del horizonte |
 | Nivel 4 (autónomo dentro de límites) con efectos externos o acceso a producción | Externo | Fuera del horizonte | Council | Decisión del cierre del mes 12 para el plan siguiente | Prohibido hasta entonces |
 | Reabrir crédito o scoring | Producto | Cierre del mes 12 (decisión) | Council con Legal externo | Pedido de un cliente y costo de proveedor de alto riesgo aprobado | Rige después del horizonte |
@@ -822,6 +877,18 @@ condición incumplida.
 - **Con Personas:** la alfabetización en IA es un control débil por sí solo (el piloto
   mostró 17% de cursos completos); se propone medirla por conducta (uso de la pasarela,
   revisión de output) y no por cursos terminados.
+- **Con Personas (medición del uso):** qué se mide del uso de las personas y cuánto se
+  retiene no tiene una A en este anexo. El [Anexo D](04-personas-cultura.md) pone al CAIO
+  como A de las métricas de adopción y deja alcance y retención de la telemetría a Gobierno
+  con Talento. Elegir la A, y si la medición pide revisión laboral y de datos de empleados,
+  queda pendiente de decisión entre los responsables humanos de C y D.
+- **Con el Anexo F (calificación de riesgos):** el riesgo de datos de cliente en un modelo
+  externo es Media / Alto inherente acá y Media / Muy alto en el
+  [Anexo F](06-roadmap-riesgo.md), que no rotula si sus valores son inherentes o
+  residuales; las superficies sin control técnico central (Alta / Alto en F) no son una fila
+  de este registro. Si F los usa como residuales, el gate choca con "Alta con impacto Alto o
+  mayor: nadie lo acepta". La conciliación queda pendiente entre los responsables humanos
+  de C y F, sin elegir valores por consenso.
 - **Con CAIO:** si el board prioriza velocidad, se puede relajar el SLA del Nivel 2, pero
   no la matriz de clientes ni la prohibición de crédito.
 
@@ -920,8 +987,13 @@ total con la franja del 1%-3% de la facturación del [supuesto](../../context/su
 de inversión, en k USD (legal 8k-20k, pasarela 4,5k-18k, red team externo e ISO 11,6k-31k,
 tiempo 27k-72k redondeado). Tres lecturas de gobierno sobre esas cifras:
 
-- **Techo de los meses 1-3.** De este anexo, los meses 1-3 llevan la parte de legal (hasta 10k USD
-  de caja en el pedido de hoy) y el tiempo del líder, de seguridad, del Council y de la matriz.
+- **Techo de los meses 1-3.** Legal aparece en tres autorizaciones distintas. La preparación
+  de 2026 no lleva caja: prepara el alcance y pide cotización. M1-M3 lleva el legal focalizado,
+  2.000-6.000 USD de caja (8-16 h × 250-375 USD/h, fila «Revisión legal focalizada» del
+  insumo del paquete mínimo). El renglón anual de 8.000-20.000 USD es la referencia del
+  paquete completo, que no se autoriza hoy, y el focalizado sustituye su porción inicial sin
+  sumarse dos veces. Además, los meses 1-3 llevan el tiempo del líder, de seguridad, del
+  Council y de la matriz.
 - **Base mínima tras un corte.** Es el núcleo del gobierno mínimo: 25% del líder, 20% de
   seguridad y el Council, que suman ≈ 5.740-13.410 USD por tramo de tres meses (un cuarto de
   los renglones anuales: 5.737,5-13.406,25). Tres tramos dan ≈ 17.200-40.200 USD, que es el
@@ -943,7 +1015,7 @@ tiempo 27k-72k redondeado). Tres lecturas de gobierno sobre esas cifras:
   cortar o escalar; no libera fondos. Las dos autorizaciones iniciales y las decisiones
   de los meses 3, 6, 9 y 12 corresponden al Directorio o autoridad formalmente delegada.
   La revisión mensual no suma costo.
-- **Slide 6 — Gobierno y seguridad (propuesta para el deck):** este anexo exige la prueba antes
+- **Slide «Gobierno y seguridad» (propuesta para el deck):** este anexo exige la prueba antes
   de habilitar o ampliar un uso, y la revisión del residual de los usos existentes; no
   dispone detener el uso actual de las herramientas aprobadas, salvo la suspensión
   preventiva de Seguridad. Un título como «Ningún uso nuevo
