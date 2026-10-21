@@ -87,9 +87,15 @@ Las lecturas del Anexo F ya usan estos umbrales; esta ficha no los cambia ni
 automatiza liberaciones.[^roadmap]
 
 - Mes 3: básico ≥90% con evaluación práctica pasa; ≥50% y <90% se rediseña el
-  formato; <50% se cambia el formato. Afecta la formación de los meses 4-6.
+  formato; <50% se cambia el formato.
 - Mes 6: Tecnología ≥80% mantiene; ≥60% y <80% rediseña la formación; <60% frena
   las horas de formación que no sean rediseño.
+
+**En el mínimo**, esas lecturas llevan a rediseñar y recostear antes de comprometer
+horas nuevas: la continuidad del mínimo no incluye formación general de los meses
+4-12, no se usan sus horas para cubrir una remediación que no se costeó, y no hay
+horas de formación M4-M12 que frenar. **Cortar o suspender horas de formación
+ampliada** aplica solo si ese alcance fue costeado y autorizado aparte.
 
 Los umbrales de 50% (básico) y 60% (Tecnología) son **propuestas del Anexo F y del
 Anexo D**, que se citan entre sí: esa referencia cruzada no los valida. No hay

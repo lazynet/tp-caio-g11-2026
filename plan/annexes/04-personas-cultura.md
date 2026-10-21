@@ -838,10 +838,12 @@ dispara por sí solo.
 |---|---|
 | Programa completo: capacidad clave efectiva en los meses 1-3 <1,6 FTE | No iniciar ese alcance; reducir o diferir y volver a costear. Este umbral no es el piso del mínimo vigente: sus tareas y horas se concilian en E, «Pedido inicial: paquete mínimo» |
 | Programa completo: capacidad clave entre 1,6 y ~1,8 FTE en los meses 1-3 | Retirar la prueba de ese alcance y revisar metas, calendario y costeo; confirmar también las horas distribuidas. No completar horas iniciales con ganancias futuras ni trasladar estos pisos al mínimo de E |
-| Al cierre de los meses 4-6, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en los meses 7-9 las horas de champions y de intermedio que no sean rediseño (~13k USD de tiempo en el medio del programa completo, la cifra del Anexo E; en el mínimo no hay horas de champions ni de intermedio de los meses 7-9 que suspender); rediseñar la formación con casos por rol; revisar causas con los managers. El plan no suma seats: no hay expansión que frenar |
-| Al cierre de los meses 4-6, uso activo en Tecnología ≥60% y <80% | Los meses 7-9 siguen; formación rediseñada con casos por rol; se vuelve a medir al cierre de los meses 7-9 (como en el Anexo F) |
-| Lectura del mes 3: básico completado ≥50% y <90%, con la evaluación práctica por rol y el denominador de la dotación (meta revisada si la base se extendió) | Se rediseña el formato, como en la banda del Anexo F; no se liberan ni se cortan fondos por esta lectura sola |
-| Lectura del mes 3: básico completado <50% | Cambio de formato (de sesión a práctica en equipo) y reasignación de tiempo; no se repite el mismo curso. Se decide en el mes 3, no al cierre de los meses 4-6 |
+| **Mínimo.** Lectura del mes 3: básico completado ≥50% y <90%, con la evaluación práctica por rol y el denominador de la dotación (meta revisada si la base se extendió) | Se rediseña el formato y se recostea **antes de comprometer horas nuevas**. La continuidad del mínimo (128-212 h por tramo) no incluye formación general de los meses 4-12 ni se usa para cubrir esta remediación sin evidencia. No se liberan ni se cortan fondos por esta lectura sola |
+| **Mínimo.** Lectura del mes 3: básico completado <50% | Cambio de formato (de sesión a práctica en equipo) y reasignación de tiempo, sin repetir el mismo curso; se decide en el mes 3. Las horas que exija el nuevo formato se recostean antes de comprometerlas y no existen en el mínimo hasta entonces |
+| **Mínimo.** Al cierre de los meses 4-6, uso activo en Tecnología <60% | Se rediseña la formación y se recostea antes de comprometer horas; se revisan las causas con los managers. No hay horas de formación de los meses 7-9 que suspender. El plan no suma seats: no hay expansión que frenar |
+| **Mínimo.** Al cierre de los meses 4-6, uso activo en Tecnología ≥60% y <80% | Se rediseña la formación con casos por rol y se vuelve a medir al cierre de los meses 7-9 (como en el Anexo F), sin comprometer horas nuevas antes de recostear |
+| **Programa completo, solo si ese alcance fue costeado y autorizado aparte.** Al cierre de los meses 4-6, uso activo en Tecnología <60% pese a tiempo asignado | Suspender en los meses 7-9 las horas de champions y de intermedio que no sean rediseño (~13k USD de tiempo en el medio, la cifra del Anexo E); rediseñar la formación con casos por rol |
+| **Programa completo, solo si ese alcance fue costeado y autorizado aparte.** Lectura del mes 3: básico completado ≥50% y <90% o <50% | Las horas de formación ampliada de los meses 4-6 se rediseñan o se cortan con las bandas de arriba |
 | Asistencia de champions <60% dos meses seguidos | Disolver la red o rediseñar su mandato con sponsor nuevo |
 | Subida de incidentes o retrabajo asociada a uso de IA | Pausar el nivel avanzado hasta revisar compuertas de calidad con Arquitectura |
 | La decisión del mes 3 sin ninguna señal (contractual, precio por consumo o cliente del producto) | Cerrar el contractor (preaviso de un mes, traspaso a la oficina del CAIO) y correr los meses 4-12 como la alternativa de gobierno mínimo y formación del Anexo E, con la prueba extendida a la cohorte; las lecturas de los meses 6 y 9 releen las señales |
@@ -950,6 +952,14 @@ Es un supuesto de planificación: Operaciones y los managers confirman personas,
 agendas y trabajo desplazado antes de iniciar cada actividad. La demanda de
 soporte sigue en 430-690 h; las 30 h de margen no están costeadas para ejecutar.
 
+La reserva es un techo condicionado a las uniones de horas entre actividades que
+B y C todavía no confirmaron (por ejemplo, que configuración, prueba y
+exportaciones de DevOps sean el mismo trabajo): el
+[Anexo E](05-business-case.md) registra ese «Desacuerdo abierto de DevOps» como
+sensibilidad, con una demanda que podría superar el máximo. Este anexo no elige
+qué unión vale. Si las uniones no se confirman, la reserva y los techos se
+revisan y se recostean antes de M1.
+
 La [fuente del mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md#reserva-propuesta-de-capacidad-m1-m3)
 separa demanda, reserva y autorización. Si alguien cumple varios roles y se
 capacita, la matriz semanal suma todas sus cargas sin duplicarlas.
@@ -961,7 +971,7 @@ decidir:
 | Concepto | Qué es | Cifra M1-M3 | Estado |
 |---|---|---|---|
 | Reserva propuesta | Capacidad que se pide apartar, como techo de planificación | Hasta 720 h de soporte clave (1,5 FTE de costeo) + 540-660 h de formación; máximo 1.380 h | Supuesto elegido por Martín para el borrador; no es horas ejecutadas |
-| Demanda costeada | Actividades con rol y costo asignados | 970-1.350 h = 430-690 h de soporte clave + 540-660 h de formación; las 30 h de margen (1.380 − 1.350) no tienen actividad ni rol | Cálculo de Finanzas sobre supuestos, consolidado en E |
+| Demanda costeada | Actividades con rol y costo asignados | 970-1.350 h = 430-690 h de soporte clave + 540-660 h de formación; las 30 h de margen (1.380 − 1.350) no tienen actividad ni rol. Condicionada a las uniones de horas aún sin confirmar (ver E, «Desacuerdo abierto de DevOps») | Cálculo de Finanzas sobre supuestos, consolidado en E |
 | Disponibilidad real | Horas que cada persona puede dar sin desplazar otro trabajo | **Sin dato**: la utilización promedio y el bench no la prueban | La produce la matriz privada en la primera liberación; hoy nadie la confirmó |
 | Decisiones futuras | Lo que aún no se autorizó | Ver la tabla siguiente | Ninguna está aprobada |
 
