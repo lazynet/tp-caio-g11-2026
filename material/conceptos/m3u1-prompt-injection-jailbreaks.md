@@ -12,6 +12,7 @@ sources:
     resource: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
     title: OWASP Top 10 for LLM Applications 2025, LLM01 Prompt Injection
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:09:00Z }
+status: draft
 ---
 
 # Definición
@@ -72,9 +73,25 @@ embebidas) y suma estas defensas, varias ausentes de las slides:[^owasp-llm01]
 - Segregar e identificar el contenido no confiable.
 - Pruebas adversarias y simulaciones de ataque, tratando al modelo como usuario no confiable.
 
-Para el plan: el curso se queda en filtrar, validar y entrenar; la defensa de
-fondo contra agentes es mínimo privilegio y aprobación humana, que conecta con los
-niveles de autonomía de [M1U4](/unidades/m1u4-rol-gobernanza.md).
+Para el plan: en la mitigación de prompt injection (slide 6) el curso se queda en
+filtrar, validar y entrenar; el caso de la slide 18 suma separación de contextos,
+autenticación de API y monitoreo, pero ninguna slide trae mínimo privilegio ni
+aprobación humana. Esa es la defensa de fondo contra agentes según OWASP, y conecta
+con los niveles de autonomía de [M1U4](/unidades/m1u4-rol-gobernanza.md).
+
+# Cautelas
+
+Cotejo del 2026-10-20 contra las slides 3 a 6 de M3U1 (el archivo dice Unidad 9; también
+se leyeron las slides 1, 2 y 15 a 20 para ubicar el contexto y el caso): la definición, la
+frase citada, los tres tipos de jailbreak, los cuatro riesgos y las tres medidas coinciden
+con el texto de las slides. La única corrección es la de la sección "Para el plan": la
+versión anterior decía que el curso se queda en filtrar, validar y entrenar sin
+distinguir la slide 6 del caso de la slide 18.
+
+La sección "Complemento OWASP" se cotejó con la página LLM01:2025 Prompt Injection del
+OWASP GenAI Security Project (WebFetch del 2026-10-20): coinciden la definición, la
+descripción del jailbreak, la distinción directa e indirecta y las siete defensas
+listadas. Es lectura de la página web en esa fecha, no de una versión archivada.
 
 # Relacionado
 

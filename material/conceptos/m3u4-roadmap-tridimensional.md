@@ -7,6 +7,7 @@ sources:
   - id: m3u4
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12.pdf
     title: M3U4 (el archivo dice Unidad 12), slides
+    pages: slides 6 a 11
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:30:00Z }
 status: draft
 ---
@@ -63,6 +64,13 @@ cumplimiento.[^m3u4]
 
 # Cautelas
 
+Cotejo del 2026-10-20 contra las slides 6 a 11 de M3U4 (el archivo dice Unidad 12): las tres
+dimensiones, los cuatro componentes técnicos, el ciclo de MLOps de cuatro momentos, los
+cuatro puntos del roadmap financiero, los cuatro frentes culturales y los tres principios
+éticos coinciden con la fuente. Sin correcciones de contenido. Las cautelas siguientes
+se verificaron contra las mismas slides: no hay agentes, evals, hitos, fechas ni método de
+sensibilidad.
+
 - El roadmap técnico describe **MLOps clásico**. No cubre agentes, evals de LLMs,
   observabilidad ni release gates agénticos; para el plan eso viene de
   [M2U4](/unidades/m2u4-aiops.md) y del [harness](/unidades/memoria-contexto-harness.md).
@@ -86,4 +94,4 @@ riesgo.
 - [Frenos y transición](/conceptos/m3u2-frenos-y-transicion.md)
 - [Tokenomics](/conceptos/m2u4-tokenomics.md)
 
-[^m3u4]: M3U4, slides del módulo Roadmap Tridimensional.
+[^m3u4]: M3U4, slides 6 a 11 (roadmap tridimensional, técnico, MLOps, financiero, cultural, gobernanza ética).

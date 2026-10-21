@@ -7,6 +7,7 @@ sources:
   - id: m3u4
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12.pdf
     title: M3U4 (el archivo dice Unidad 12), slides
+    pages: slides 12 a 14 y 18
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:30:00Z }
 status: draft
 ---
@@ -46,6 +47,12 @@ ejecutiva y la justificación de ROI; las slides no la desarrollan.[^m3u4]
 
 # Cautelas
 
+Cotejo del 2026-10-20 contra las slides 12 a 14 y 18 de M3U4 (el archivo dice Unidad 12):
+la definición, los cuatro objetivos, los tres pasos, la frase sobre presentar el futuro, los
+tres elementos y la alineación de partes interesadas en el esquema coinciden con la
+fuente. Sin correcciones de contenido. La slide 12 dice "ahorros y oportunidades de
+crecimiento" donde la ficha resume "ahorros y crecimiento".
+
 Las slides no dan fórmulas, plantillas ni un ejemplo numérico, y no tratan al CFO
 escéptico: presentan una narrativa de apoyo. Cuantificar el "costo de no actuar" es
 fácil de inflar; en el plan va como supuesto marcado y con rango. Para el método
@@ -65,4 +72,4 @@ costo (datos → narrativa → decisión pedida).
 - [Capstone: panel ejecutivo](/conceptos/m3u4-capstone-panel-ejecutivo.md)
 - [Tokenomics](/conceptos/m2u4-tokenomics.md)
 
-[^m3u4]: M3U4, slides del módulo Financial Storytelling.
+[^m3u4]: M3U4, slides 12 a 14 (Financial Storytelling, de los datos a la decisión ejecutiva, elementos de la narrativa ganadora) y 18 (integración de los cuatro módulos).
