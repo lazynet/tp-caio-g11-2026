@@ -8,7 +8,11 @@ sources:
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12.pdf
     title: M3U4 (el archivo dice Unidad 12), slides, 20 pp.; capstone en pp. 15-20
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-21 }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "M3U4 (archivo Unidad 12), pp. 15-20: competencias, preparación, esquema de integración y cierre; corrección de la atribución del cierre y cautelas sobre ausencia de rúbrica. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Qué es
