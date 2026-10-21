@@ -275,8 +275,8 @@ Son diez slides para ocho personas, así que dos integrantes presentan dos.
 
 - **Adaptación propuesta:** Eduardo presenta el recorrido de cuatro etapas;
   Gabriela conecta operación, producto y alcance financiado. Reutiliza la propuesta
-  anterior sin dar por acordados los mensajes nuevos. Alternativa: Lucho presenta
-  las etapas y Eduardo respalda el método; lo decide el equipo en #21/#27.
+  anterior sin dar por acordados los mensajes nuevos. Una alternativa de reparto
+  queda pendiente de definición por el equipo en #21/#27.
 - **Dependencia:** revisión de mensajes por los responsables y acuerdo o descarte
   de esta estructura en #27; cualquier cambio de orden rehace el reparto por mensaje.
 - **Qué falta para darlo por acordado:** la conformidad de los ocho en #21 y un
