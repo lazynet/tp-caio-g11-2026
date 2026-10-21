@@ -66,8 +66,9 @@ lado.[^okr-organizacion]
 
 # Cautelas
 
-- La mejora técnica y su conversión económica tienen dueños distintos. Mide el
-  Responsable de Tecnología con el protocolo del Anexo B; lee el AI Council en
+- La mejora técnica y su conversión económica tienen dueños distintos. Produce
+  la medición Tecnología con el protocolo del Anexo B y la verifica el
+  verificador senior independiente, fuera de la línea de Tecnología; lee el AI Council en
   los meses 6 y 9 contra los umbrales, calidad primero; convierte el CFO: la
   capacidad liberada cuenta como beneficio solo si en el mes 6 hay un destino
   decidido, y se valoriza a costo cargado, no como caja. El mes 3 no atribuye

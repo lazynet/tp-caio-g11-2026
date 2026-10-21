@@ -142,7 +142,7 @@ incluyen entrevistadores, entrevistados, managers, staff y autoridad que decide:
 |---|---|---|---|
 | TL, coordinación, managers y autoridad de decisión | 16-24 | 28,125-62,5 | 0,45-1,5 |
 | Analista funcional | 20-32 | 12,5-34,375 | 0,25-1,1 |
-| Staff de Operaciones, Talento, Comercial y Finanzas | 16-24 | 9,375-31,25 | 0,15-0,75 |
+| Staff de Operaciones, Personas, Comercial y Finanzas | 16-24 | 9,375-31,25 | 0,15-0,75 |
 | Senior verificador independiente | 8-16 | 18,75-46,875 | 0,15-0,75 |
 | **Total organizativo adicional** | **60-96** | Por rol | **1-4,1; techo 5** |
 
@@ -234,26 +234,68 @@ Cierre interno: 16-24 h de senior para exportar, revocar y archivar, costo
 Seguridad provisional cuesta 0,6375-2,53125 mil. Soporte clave total: 430-686 h,
 8,8875-34,93125 mil, 0,8958-1,4292 FTE. Con formación distribuida 540-660 h,
 M1-M3 totaliza **970-1.346 h / 2,0208-2,8042 FTE**, costo **14,2875-58,03125**.
+Se suma aparte, declarada, la verificación de la lectura del mes 3 por el
+verificador senior independiente: 4-5 h × 18,75-46,875 USD/h = 0,075-0,234375,
+primer uso del margen de 34 h (soporte 434-691 h; total 974-1.351 h; tiempo
+14,3625-58,265625, debajo de 59). La demanda de actividades de R-25 no cambia.[^resoluciones]
 
 Segunda liberación, condicionada y no aprobada ahora: caja 9 + reserva 1 = **10**;
 tiempo M1-M3 59 + reserva de cierre 2 = **61**. Total **71**, disjunto de la
-primera liberación de caja 0 / tiempo 8.
+primera liberación de caja 0 / tiempo 8. Es también 68 operativos (9 + 59) más
+3 de reservas (1 + 2).
+
+Estimado hasta cerrar M3, sin reservas ni núcleo: **18-73** (tiempo
+14,3625-58,265625 + caja 2,3-8,625 + validación previa 1,4875-6,35 =
+18,15-73,240625), contra el techo de 79.
+
+Sensibilidad (detalle en el Anexo E, «Sensibilidad del pedido mínimo»)[^business-case]:
+el techo de 59 tiene 0,734375 de holgura. La rompen, cada una con el resto al
+máximo, una tarifa media de formación de más de 36,1 USD/h, DevOps sin el tope
+de la unión (60,890625) o una apreciación real del peso de más de 1,26%
+(0,734375 / 58,265625); en M7-M9 y M10-M12 el margen es 0,37%. El techo de caja de 9 admite hasta 6,33 de legal con la
+provisión de herramientas entera. Cualquiera obliga a recostear antes de M1.
 
 Límite acumulado propuesto **79 = 8 + 71**, caja **10** / tiempo **69**
 (59 + preparación técnica 3 + validación organizativa 5 + cierre 2). El techo
 anterior era 74; el adicional organizativo agrega 5 sin cambiar caja ni M1-M3.
 
-Núcleo posterior y continuidad no se liberan hoy: el CEO firma cada gate dentro
-de los techos y el núcleo de 108 h en el gate de salida, con verificación del
-CFO (R-03, R-04)[^resoluciones].
+El Directorio fija hoy, al aprobar el plan, 79 hasta cerrar M3 (85 con el
+núcleo), 121 como suma de techos del año (118 sin gastar reservas) y un techo
+por tramo: M4-M6 16 (caja 2 + tiempo 14), M7-M9 13 (2 + 11) y M10-M12 13
+(2 + 11); 79 + 16 + 13 + 13 = 121. Libera hoy solo 8. Núcleo posterior y
+continuidad no se liberan hoy: el CEO firma la segunda liberación y cada gate
+dentro del techo de su tramo, y el núcleo de 108 h en el gate de salida dentro
+de 85, con verificación del CFO; superar el techo de un tramo, o cualquier
+camino con espera que supere 121, vuelve al Directorio (R-03, R-04)[^resoluciones].
 
 ## Continuación condicional y salida
 
 Por trimestre M4-M12, solo mantener controles, registro, prácticas y medición:
-tech lead 36-60 h; DevOps 8-16; QA 32-48; IA 4-8; Seguridad 12-20;
-seniors 16-24; analista 8-16; staff 12-20. Total 128-212 h por trimestre.
-Son supuestos nuevos, no fracciones heredadas de plataforma. Caja 0-1,5 mil
-más 15%; sin nuevo dictamen salvo cambio de alcance, que exige recosteo.
+tech lead / líder interno (oficina del CAIO) 36-60 h; DevOps 8-16; QA 32-48;
+IA 4-8; Seguridad 12-20; seniors 16-24; analista 8-16; staff 12-20; Personas
+4-6 para comunicación del cambio, frenos y agendas. Subtotal de mantenimiento
+132-218 h por trimestre; con el verificador senior independiente, que reproduce
+los indicadores de la lectura del gate (4-5 h), 136-223 h. Son supuestos nuevos, no fracciones heredadas de plataforma. Caja
+0-1,5 mil más 15%, provisión única para herramientas o consulta legal puntual
+(hasta 1,74 mil antes de contingencia: 4,6-7,0 h a 375-250 USD/h, con las
+consultas del Anexo C)[^gobierno]; sin nuevo dictamen salvo cambio de alcance, que
+exige recosteo.
+
+Personas suma 4-6 h × 9,375-31,25 USD/h = 0,0375-0,1875 mil por trimestre y el
+verificador 4-5 h × 18,75-46,875 = 0,075-0,234375. Tiempo por trimestre: M4-M6
+3,3375-13,784375 (techo 14), M7-M9 y M10-M12 2,725-10,959375 (techo 11). Ningún
+techo cambia; el verificador a 6 h no entraría (11,00625 contra 11).
+
+Dónde se costea lo que no tiene fila propia, sin subir techos (detalle y cuentas
+en el Anexo E, «Oficina del CAIO, líder, cambio y legal después de M1»)[^business-case]:
+el CAIO es un rol existente reasignado y su dedicación es la del líder interno
+(48-96 h en M1-M3; dentro de las 36-60 h del tech lead después). Un líder al 20%
+como fila propia (96 h, 2,7-6,0 mil por trimestre) no entra: 13,784375 + 6,0 = 19,78
+contra 14 en M4-M6. De las 36-60 h del tech lead, 14-24 son de la oficina del
+CAIO. La asesoría laboral de R-20 va dentro de las 8-16 h del
+dictamen si la cotización deja 2-4 h; si no, queda fuera de 79 y la decide el
+Directorio (R-20)[^resoluciones]. Herramientas y legal al máximo en un mismo trimestre no entran
+(3,0 × 1,15 = 3,45 contra 2): se recostea o vuelve al Directorio.
 
 Antes de M6 se agrega descubrimiento sobre integración con documentación/soporte
 actuales: tech lead 8-16 h, senior 8-16, analista 16-24, staff Comercial/Producto
@@ -265,6 +307,8 @@ acceso/consentimiento y no publica datos de clientes.
 Tras corte del experimento, núcleo restringido por trimestre: 12 h tech lead,
 12 Seguridad y 12 staff para accesos, incidentes y revisión de permisos;
 36 h a costo 0,675-1,6875 mil, techo 2 mil por trimestre, sin caja nueva.
+Incluye una sesión del AI Council de 2 h por trimestre, no la cadencia mensual:
+30 h de Council (1,40625 mil a máximo) más el núcleo darían 3,09 contra 2.
 No mantiene un piloto activo ni autoriza uso que requiera controles no cubiertos.
 
 Después de M3: 108 h y techo 6 mil de tiempo para M4-M12, en reemplazo de la
@@ -275,22 +319,28 @@ Sin capacidad para el núcleo, excluir/suspender uso hasta que se cubran
 obligaciones; no se abandona una obligación legal.
 
 Proyección anual sin esperas ni reservas gastadas: caja 2,3-13,8 y tiempo con
-preparación técnica y validación organizativa 24,225-98,81875; económico
-26,525-112,61875, **≈70 (27-113)**.
+preparación técnica y validación organizativa 24,6375-100,31875; económico
+26,9375-114,11875, **≈71 (27-114)** (medio 70,53).
 
 Los acumulados incluyen preparación imputada a 2026 más ejecución 2027;
 no representan exclusivamente presupuesto 2027.
 
-Suma de techos por tramo y preparación **118** (caja 15 / tiempo 103); con cierre
-**121**. Es una proyección condicional, no autorización anual.
+Suma de techos por tramo y preparación **118** (caja 15 = 9 + 2 + 2 + 2 / tiempo
+103 = 8 + 59 + 14 + 11 + 11); con cierre **121**. Son techos fijados, no gasto
+liberado ni autorización anual.
 
-### Esperas M6/M9 y pérdidas de salida
+### Espera del mes 9 y pérdidas de salida
 
 La tabla expresa exposición máxima propuesta, separada en caja y tiempo
 valorizado. Sus totales no representan íntegramente desembolso de caja ni
 pérdida económica incremental.
 
-Cada espera de seis semanas exige aprobación propia antes de iniciarse, sin
+Con el gate de valor del Anexo B, el mes 6 no lee valor y no espera por
+medición: decide por adopción, calidad, costo y controles, y corta solo por daño
+de calidad o caída demostrada. Solo el mes 9 puede abrir una espera, si el
+estimado es ≥ +5% sin que el peor caso pase de 0.[^arquitectura]
+
+La espera de seis semanas exige aprobación propia antes de iniciarse, sin
 expansión ni descubrimiento nuevo. Supuesto de carga por tareas, equivalente a
 mitad del mantenimiento trimestral, sin equivalencia calendario automática:
 
@@ -321,25 +371,28 @@ completos; esta distribución de tareas requiere validar la cadencia obligatoria
 |---|---|---|---|
 | Previo a M1 | 0 / 8 → 8 | — | 8, sin inicio M1-M3 |
 | M3 inmediato | 10 / 69 → 79 | 108 / 6 | 85 |
-| M6 inmediato | 12 / 83 → 95 | 72 / 4 | 99 |
-| Espera M6 vencida | 13 / 89 → 102 | 54 / 3 | 105 |
+| Corte en M6 | 12 / 83 → 95 | 72 / 4 | 99 |
 | M9 inmediato | 14 / 94 → 108 | 36 / 2 | 110 |
 | Espera M9 vencida | 15 / 100 → 115 | 18 / 1 | 116 |
 | M12 | 16 / 105 → 121 | — | 121, sin régimen posterior |
 
-Las filas de espera suponen continuidad sin esperas anteriores; si una espera
-M6 pasa y luego se espera en M9, recomponer los subtramos antes de autorizar.
+La espera va dentro del techo de M10-M12. Sus techos 1 / 6 son subtopes de
+2 / 11, y el resto del trimestre se recostea contra lo que la espera calculó o
+ejecutó: 1,30625-5,26875 + 1,41875-5,690625 = 2,725-10,959375 de tiempo y
+0,8625 + 0,8625 = 1,725 de caja. Así ningún camino supera el techo de su tramo
+ni 121: corte en M6, 95 (99); en M9, 108 (110); espera del mes 9 que vence, 115
+(116); que pasa, 121. La espera del mes 6 (102 / 105) ya no existe.
 
 El máximo propuesto de corte inmediato M6 es **95**, incluidos los 5 de
-validación organizativa, sin esperar. Regla del Directorio, igual en M6 y M9: una
-sola espera por gate; el AI Council recomienda abrirla, el CFO verifica y el CEO
-firma el subtramo dentro de los techos (R-27)[^resoluciones]. Sin segunda espera:
+validación organizativa. Regla del Directorio: una sola espera, en el mes 9; el AI Council recomienda abrirla, el CFO verifica y el CEO
+firma el subtramo dentro del techo de su tramo (R-27)[^resoluciones]. Sin segunda espera:
 
 Si no pasa valor/calidad con versión congelada,
 cortar el frente interno y aplicar precedencia de F si otro frente continúa.
 
-Las esperas no están incluidas en la proyección anual sin esperas: una secuencia
-nueva se recompone por subtramos y redondeos. Toda exposición incluye cierre una
+Las esperas no están incluidas en la proyección anual sin esperas. Si el
+recosteo del resto de un tramo no entra en lo que queda de su techo, se reduce
+el alcance o vuelve al Directorio. Toda exposición incluye cierre una
 sola vez y presupone el mínimo sin plataforma ni producto.
 
 # Por qué es razonable
@@ -374,6 +427,16 @@ en privado sin duplicarla.
 La verificación de esta ficha registra la revisión humana de la propuesta de
 diseño. El costeo por sí solo no verifica las fichas referidas ni acredita
 cotizaciones, agendas, ejecución o autorizaciones empresariales.
+
+Cambios posteriores a la verificación registrada, que su alcance no cubre y
+requieren una nueva revisión humana: la demanda M1-M3 baja de 970-1.350 h a
+970-1.346 h por R-25; los techos por tramo 16/13/13 y la regla de esperas dentro
+del techo de su tramo (R-03, R-04, R-27); la fila de Personas de 4-6 h por
+trimestre, con la continuidad en 132-218 h; la provisión de caja única para herramientas o consulta legal
+después de M1; la asesoría laboral de R-20; la cadencia del Council tras un
+corte; el estimado 18-73 hasta M3 y la sensibilidad del techo de 59; el
+verificador senior independiente por lectura y la eliminación de la espera del
+mes 6 por el gate de valor del Anexo B, con la proyección en 26,9375-114,11875.[^resoluciones][^business-case]
 
 [^arquitectura]: Anexo B, actividades técnicas y protocolo de medición como insumos de diseño.
 [^gobierno]: Anexo C, gobierno mínimo, legal y verificación de controles como insumos de diseño.

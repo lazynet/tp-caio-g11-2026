@@ -38,9 +38,11 @@ Equipos propios son los que trabajan en modo producto, donde la organización
 controla las herramientas; el staffing no se cuenta, porque el uso de IA ahí
 depende de cada cliente (ver [ganancia de productividad](/supuestos/ganancia-de-productividad.md)).[^ganancia-productividad]
 
-El mínimo propuesto de 15 es el piso de la cohorte y requiere además un
-semiancho del intervalo de hasta 3 puntos porcentuales.[^umbrales-tecnicos] La
-cohorte la identifica el Responsable de Tecnología en el acta de la validación
+El mínimo propuesto de 15 es el piso de la cohorte para que una lectura decida
+por valor. No garantiza precisión: con 15-20 personas, la lectura del mes 9 solo
+distingue de cero, con buena probabilidad, una mejora cercana al techo del rango
+de la ganancia supuesta; la cuenta de potencia y el gate de valor están en la
+ficha de umbrales técnicos.[^umbrales-tecnicos] La cohorte la identifica el Responsable de Tecnología en el acta de la validación
 inicial; el CFO verifica el costo, y la precisión y el método los ratifica el AI
 Council antes de la segunda liberación (R-14). Sin ratificación no se libera
 M1-M3.[^resoluciones]
@@ -58,9 +60,10 @@ M1-M3.[^resoluciones]
 
 - Un inventario por equipo que dé menos de 15 desarrolladores en equipos propios.
 - Una mezcla de seniority muy distinta de la supuesta.
-- Que la serie de la preparación previa muestre que con 15 personas el semiancho supera 3 puntos:
-  entonces el mínimo no alcanza y el AI Council ratifica un gate reformulado antes de la
-  segunda liberación, previa a M1, o ninguna lectura de M6/M9 decide por valor (R-14).[^resoluciones]
+- Que la serie de la preparación previa muestre que, con la cohorte real, ni con
+  base de 8 semanas la lectura del mes 9 distingue el techo del rango: el AI
+  Council ratifica antes de la segunda liberación, previa a M1, que ninguna lectura
+  decida por valor (R-14).[^resoluciones]
 
 # Cautelas
 
@@ -73,4 +76,4 @@ M1-M3.[^resoluciones]
 [^ganancia-productividad]: Ganancia de productividad con agentes de código, alcance en equipos propios y exclusión de staffing.
 [^costo-rol]: Costo mensual cargado por rol, rangos supuestos sin calibración contra nómina.
 [^resoluciones]: Anexo G, R-14 (el AI Council ratifica estimador, muestra mínima, cohorte elegible y reformulación antes de la segunda liberación) y R-06 (el CFO responde por cada cifra del business case).
-[^umbrales-tecnicos]: Umbrales técnicos propuestos, muestra mínima de 15 personas activas y semiancho máximo de 3 puntos porcentuales, sujetos a validación previa.
+[^umbrales-tecnicos]: Umbrales técnicos propuestos, muestra mínima de 15 personas activas, cuenta de potencia y gate de valor, sujetos a validación previa.

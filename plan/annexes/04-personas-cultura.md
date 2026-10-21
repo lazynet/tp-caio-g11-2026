@@ -177,26 +177,29 @@ programa completo**, sujeto a costeo y autorización adicionales. Los techos de
 continuidad del mínimo del [Anexo E](05-business-case.md) («Continuación condicional
 sin plataforma», no aprobada hoy) no los cubren: ese tramo financia el
 seguimiento y la lectura de la base, el mantenimiento de controles y prácticas y,
-antes del mes 6, el descubrimiento del asistente, con 128-212 h internas por tramo
-M4-M12 más 36-64 h solo en M4-M6; **no incluye nuevas cohortes, avanzado ni
+antes del mes 6, el descubrimiento del asistente, con 132-218 h internas por tramo
+M4-M12 (incluidas 4-6 h de Personas para el cambio) más 36-64 h solo en M4-M6; **no incluye nuevas cohortes, avanzado ni
 formación general adicional** y no compra champions al 10%. Lo que el mínimo
 sí costea en M1-M3 son tareas y horas concretas, detalladas en «Insumo para el
 paquete mínimo»: el básico de 6 h para 60-70 personas (360-420 h), el intermedio
-de la cohorte de 15-20 (180-240 h), y el soporte del líder (48-96 h), la
-facilitación (16-32 h), la actualización semanal de agendas de managers (8-16 h), Talento
-(8-16 h) y QA o datos (8-16 h). Esos roles y esas decisiones del mínimo no
+de la cohorte de 15-20 (180-240 h), y el soporte de la oficina del CAIO (48-96 h),
+la facilitación (16-32 h), la actualización semanal de agendas de managers (8-16 h),
+Personas (8-16 h) y QA o datos (8-16 h), además de las 64 h de seniors que
+sostienen las prácticas de la cohorte, que costea E. Esos roles y esas decisiones del mínimo no
 quedan negados por este rótulo; lo rotulado es lo que excede esas tareas.
 
 | Rol de IA | Quién lo cubre | Vía | Tiempo (supuesto) | Qué cambia |
 |---|---|---|---|---|
-| Lidera el programa de adopción (oficina del CAIO) | Un perfil técnico interno | Reasignar | 20% de una persona, 12 meses | Opera literacy, champions y métricas; no decide políticas |
+| Líder del programa de adopción (programa completo; en el mínimo lo cubre el CAIO, ver «Oficina del CAIO en el paquete mínimo») | Un perfil técnico interno | Reasignar | 20% de una persona, 12 meses | Opera literacy, champions y métricas; no decide políticas |
 | Especialista en IA aplicada (evals, harness, gobierno técnico) | Un perfil externo a prueba | **Tercerizar (contractor)**; alternativas en la decisión sobre IA aplicada y en "Cobertura de IA aplicada" | 0,5 persona en los meses 1-3; 1 persona en los meses 4-12 solo si la decisión del mes 3 encuentra una señal | Absorbe la concentración de capacidades críticas; documenta y transfiere |
 | Champions | Personas de Tecnología, Operaciones y staff | Reasignar | 10% de la jornada, meses 4-12 | Casos prácticos por rol, soporte entre pares, feedback |
 | Desarrolladores | Equipo actual | Capacitar | Nivel intermedio y avanzado | Pasan de escribir a **supervisar y revisar** agentes; el humano sigue siendo responsable final ([política](../../context/hechos/gobierno-y-politica-ia.md)) |
 | QA y automatización | Equipo actual | Capacitar | Nivel avanzado | Pasan a diseñar evals y compuertas de calidad |
 | Analistas funcionales | Equipo actual | Capacitar | Nivel intermedio | Especifican casos de uso y definen "correcto" |
-| Delivery manager y personas en staffing | Operaciones | Capacitar | Nivel básico e intermedio | Gestionan qué herramientas permite cada cliente y llevan a la matriz las consultas de uso |
+| Delivery manager (rol de Operaciones) y personas en staffing | Operaciones | Capacitar | Nivel básico e intermedio | Llevan a la matriz las consultas de uso; la habilitación por cliente la decide el Responsable comercial del cliente |
+| Seniors que sostienen las prácticas de la cohorte | Equipo actual de Tecnología | Reasignar | 64 h en M1-M3, en el soporte clave de E | Revisan y sostienen las prácticas de la prueba; no son champions al 10% |
 | Dueño de la política, sponsor, administrador de licencias | Ya existen en Tecnología | Sin cambio | Sin cambio | Los define y sostiene Gobierno; este anexo los toma como dados |
+| Suplente de la suspensión preventiva | Responsable de Tecnología, rol existente | Sin cambio | Solo ante un evento | Suspende para contener si el Responsable de seguridad no está; no levanta la suspensión (ver «Dependencia de personas clave») |
 
 RACI de personas (roles, no personas; una sola A por decisión,
 [RACI](../../material/conceptos/m1u4-raci-ownership.md)):
@@ -205,11 +208,18 @@ RACI de personas (roles, no personas; una sola A por decisión,
 |---|---|---|---|---|
 | Plan de literacy y calendario | CAIO | Líder del programa | Managers de área, Finanzas | Toda la organización |
 | Selección y tiempo de champions | Manager de cada champion | Líder del programa | CAIO | Champions |
-| Definición de los KPI de adopción (qué se reporta) | CAIO | Líder del programa | Tecnología, Talento | Directorio |
-| Contratación o contractor de IA aplicada | Directorio | CAIO | Finanzas, Talento | Managers |
-| Herramientas permitidas por cliente | Área comercial | Delivery manager | Gobierno y seguridad, CAIO | Operaciones |
+| Definición de los KPI de adopción (qué se reporta) | CAIO | Líder del programa | Tecnología, Personas | Directorio |
+| Contratación o contractor de IA aplicada | Directorio | CAIO | Finanzas, Personas | Managers |
+| Herramientas permitidas por cliente | Responsable comercial del cliente (Comercial) | Operaciones (delivery manager) | Gobierno y seguridad | CAIO |
 | Tratamiento y retención de eventos de uso por persona | Responsable de seguridad | Ingeniería | Personas, Legal externo, CAIO | AI Council |
+| Suspensión preventiva de un uso | Responsable de seguridad; suplente para contener: Responsable de Tecnología | Ingeniería y dueño del caso | Dueño del riesgo | AI Council, CEO |
 | Matriz privada de capacidad (estimación y estructura) | Personas | Líder del programa | Operaciones, managers, Finanzas | CAIO |
+
+En el mínimo, el CAIO también es el líder del programa (ver «Oficina del CAIO en
+el paquete mínimo»): en las filas donde ambos aparecen, la A y la R recaen en la
+misma persona, y la verificación sigue en otro rol (CFO, verificador senior
+independiente o Responsable de seguridad, [R-06](07-resoluciones.md#autoridad-y-liberaciones)).
+Ninguna persona vota la aceptación de lo que produjo o verificó.
 
 El anexo publica roles, no nombres: las personas que ocupan cada rol se nombran
 en el acta de la liberación que habilita su entregable, y el CEO las valida en la
@@ -220,16 +230,69 @@ La A de la fila de KPI define **qué se reporta**; no equivale a aprobar el
 tratamiento del dato de origen. Ese tratamiento y su retención los decide el
 **Responsable de seguridad**, con Personas y Legal externo consultados para la
 revisión laboral y de datos personales
-([R-13](07-resoluciones.md#gobierno-y-seguridad)). Hito: tratamiento aprobado y
-comunicado antes de congelar la base (semana 1 de M1). Si no está, esa fuente se
-publica «sin medir» y la lectura usa agregados de las consolas existentes.
+([R-13](07-resoluciones.md#gobierno-y-seguridad)). Hito: en la preparación de 2026,
+antes de extraer cualquier serie (incluida la retrospectiva), el Responsable de
+seguridad fija y comunica la regla por defecto, agregados por área desde las
+consolas existentes, sin consulta externa porque no extrae datos personales y la
+preparación no tiene caja. Cualquier tratamiento por persona espera la revisión
+laboral y de datos de M1, que es la misma consulta que la asesoría laboral de la
+postura sobre el empleo. Sin esa revisión, esa fuente se publica «sin medir» y la
+lectura usa los agregados.
 
 **Matriz privada de capacidad: quién la completa y quién la valida.** El líder
 del programa la completa; Operaciones y los managers de cada persona validan y
-liberan las agendas, con Talento y Finanzas como consultados. Personas es la A de
+liberan las agendas, con Finanzas como consultada. Personas es la A de
 la estimación y de la estructura de la matriz, y el CFO verifica que entra en el
 techo ([R-24](07-resoluciones.md#personas)); la capacidad validada la acepta el
 CEO en la segunda liberación ([R-05](07-resoluciones.md#autoridad-y-liberaciones)).
+
+### Oficina del CAIO en el paquete mínimo
+
+**El CAIO es un rol existente reasignado, no una contratación** ([R-20](07-resoluciones.md#personas)).
+Lo ocupa un perfil técnico senior que ya está en Acme Labs, distinto del
+Responsable de Tecnología, del Responsable de seguridad, del CFO y del CEO,
+porque el CAIO produce los paquetes que ellos verifican o firman
+([R-06](07-resoluciones.md#autoridad-y-liberaciones)); la persona se nombra en el
+acta de la primera liberación. En el mínimo, la misma persona es el CAIO y el
+líder interno de adopción: no hay un líder del programa aparte (ese 20% es del
+programa completo). Se valoriza al costo de tech lead (4.500-10.000 USD por mes,
+[costo por rol](../../context/supuestos/costo-cargado-por-rol.md)); si el costo
+de la persona nombrada supera ese rango, el CFO recostea en la segunda liberación
+dentro de 71k USD ([R-05](07-resoluciones.md#autoridad-y-liberaciones)).
+
+Dedicación por tramo y fila de E que la absorbe (supuesto de Personas; la única
+fila nueva es la de cambio de M4-M12, que E ya suma dentro de los techos):
+
+| Tramo | Tareas | Horas | FTE (h/480) | Fila de E |
+|---|---|---|---|---|
+| Preparación 2026 | CAIO: coordinar la ventana, preparar la decisión y cerrar el acta | Dentro de 16-24 | — | «Liderazgo técnico, coordinación y managers» de la validación organizativa (60-96 h) |
+| M1-M3 | CAIO: diccionario y congelamiento de la base 12-24; seguimiento semanal, 13 × 1-2 h = 13-26; tablero mensual del Council, 3 × 2-4 h = 6-12; coordinación de agendas con managers y facilitación 9-22; paquete del gate del mes 3 8-12 | **48-96** | 0,1-0,2 | «Tech lead / arquitectura / líder / facilitación / managers» (146-272 h) |
+| Cada tramo de M4-M12 | CAIO: tablero mensual, 3 × 2-4 h = 6-12; paquete del gate 8-12 | **14-24** | 0,029-0,05 | «Tech lead / líder interno (oficina del CAIO)» de la continuación (36-60 h por tramo) |
+| Cada tramo de M4-M12 | Personas, gestión del cambio: comunicación de cada gate, seguimiento de frenos y de la postura sobre el empleo, pulso trimestral y canal de consultas | **4-6** | 0,008-0,0125 | Fila propia de Personas en la continuación de E (0,0375-0,1875k USD por tramo, a 9,375-31,25 USD/h) |
+
+Recálculo: 12 + 13 + 6 + 9 + 8 = 48 y 24 + 26 + 12 + 22 + 12 = 96 h; 6 + 8 = 14 y
+12 + 12 = 24 h; 48 / 480 = 0,1 y 96 / 480 = 0,2; 14 / 480 = 0,029 y 24 / 480 = 0,05;
+4 / 480 = 0,008 y 6 / 480 = 0,0125; 4 × 9,375 = 37,5 y 6 × 31,25 = 187,5 USD.
+En M4-M12 la fila de tech lead conserva 22-36 h por tramo para controles y
+prácticas (36 − 14 y 60 − 24, extremos emparejados).
+
+**Si no entra.** Si en el gate del mes 3 Arquitectura o Seguridad muestran que
+los controles necesitan la fila de tech lead entera, primero se reduce la oficina:
+el tablero se arma con el export de QA y el pulso se difiere. Si aun así falta,
+el CAIO propone el recosteo, el CFO lo verifica y el CEO lo firma dentro del techo
+de tiempo del tramo (14k USD en M4-M6 y 11k USD en M7-M9 y M10-M12). La holgura
+entre el máximo calculado de E y ese techo es chica: 0,45k USD en M4-M6 (14 − 13,55)
+y 0,275k USD en los otros dos (11 − 10,725), unas 7 y 4 h al costo alto de tech
+lead (450 / 62,5 = 7,2 y 275 / 62,5 = 4,4). Una fila propia de líder al 20% no
+entra en ningún tramo (E, «Oficina del CAIO, líder, cambio y legal después de
+M1»). Superar el techo del tramo vuelve al Directorio
+([R-04](07-resoluciones.md#autoridad-y-liberaciones)).
+
+**Gestión del cambio en M4-M12.** Dueño: el CAIO (A), con Personas (R) y los
+managers (C). En el mínimo se limita a la fila de Personas de arriba, con el
+chequeo de equidad hecho sobre esos mismos datos agregados. Champions, cohortes
+nuevas y talleres son del programa ampliado: los costea «Insumos para Finanzas» y
+los autoriza el Directorio en el gate del mes 6 ([R-23](07-resoluciones.md#personas)).
 
 ### Perfil AI-ready: qué se desarrolla y qué se busca
 
@@ -281,7 +344,7 @@ manager de Tecnología.
 | 1. Mapeo | Después de la postura comunicada y de la autorización propia; no antes de congelar la base | Inventario de tareas del rol, validado con el delivery manager; parte del "antes" ya propuesto en el flujo de delivery | Líder del programa, con personas del rol |
 | 2. Diagnóstico | Tras el mapeo (tramo a definir) | Cada tarea clasificada como automatizable, aumentada o humana, contrastada con el uso real medido y con los tres modos de la IA | Líder del programa y tech leads; el CAIO valida |
 | 3. Proyección | Tras el diagnóstico (tramo a definir) | Responsabilidades y competencias que emergen (supervisar, revisar, definir "correcto") | Ídem, con Arquitectura y Gobierno |
-| 4. Diseño | Tras la proyección (tramo a definir) | Ruta de desarrollo del rol: contenido del avanzado, casos de los champions y criterio de reasignación | CAIO, con Talento |
+| 4. Diseño | Tras la proyección (tramo a definir) | Ruta de desarrollo del rol: contenido del avanzado, casos de los champions y criterio de reasignación | CAIO, con Personas |
 
 **Gate que alimenta.** Si el estudio se autoriza y llega a tiempo, el diagnóstico
 entra a una decisión posterior como evidencia de qué tareas se aumentan; el diseño
@@ -310,7 +373,7 @@ resultado por rol y agregado, anonimizado.
   estimar sus horas y pedir la autorización a Finanzas y al Directorio.
 - **Riesgo:** que la persona del rol lea el estudio como paso previo a un recorte
   y deje de participar o de ser franca.
-- **Responsable:** CAIO, con Talento. El estudio es alcance ampliado: lo autoriza
+- **Responsable:** CAIO, con Personas. El estudio es alcance ampliado: lo autoriza
   el Directorio con horas propias, después de comunicar la postura sobre el empleo
   ([R-20](07-resoluciones.md#personas)); quien lo ocupa se nombra en esa acta.
 - **Criterio de éxito:** inventario validado por al menos dos personas del rol y
@@ -323,7 +386,7 @@ resultado por rol y agregado, anonimizado.
 
 Separar sobre clave y distribuido **no crea tiempo**. La utilización promedio y
 el bench no demuestran disponibilidad por rol. Antes de comprometer el tramo,
-Operaciones y cada manager validan las mismas agendas con Talento y Finanzas;
+Operaciones y cada manager validan las mismas agendas con Personas y Finanzas;
 las personas se nombran en el acta de cada liberación ([R-06](07-resoluciones.md#autoridad-y-liberaciones)). No se financian las horas
 iniciales con productividad futura ni se da por liberado tiempo porque tenga costo.
 
@@ -334,12 +397,12 @@ hoy y gates económicos":
 
 | Tramo | Sobre clave interno | Sobre distribuido interno | Total interno | Externo y límite |
 |---|---|---|---|---|
-| Meses 1-3, con prueba chica | ~1,8 FTE, redondeo publicado | 654 h / 480 = 1,3625 FTE | **~3,16 FTE**; aproximado por el redondeo clave | Contractor 0,5 FTE adicional, si se aprueba la excepción |
+| Meses 1-3 | Sin piso publicado: los pisos de 1,6 y ~1,8 FTE quedaron retirados y el sobre clave se calcula por separado si ese alcance se autoriza ([sobre de capacidad](../../context/supuestos/sobre-de-capacidad-separado.md)) | 654 h / 480 = 1,3625 FTE | Sin total hasta calcular el clave | Contractor 0,5 FTE adicional, si se aprueba la excepción |
 | Meses 4-6, con replan y señal | 1.068 h / 480 = 2,225 FTE | 1.208 h / 480 = 2,5167 FTE | **~4,74 FTE** (2.276 h) | Contractor 1 FTE adicional; contra 2,25 FTE clave quedan **12 h** (1.080 − 1.068) |
 
 Los totales no prueban que las agendas entren. El avanzado puede usar 480-720 h
 en vez del medio 600; ausencias, simultaneidad y personas con más de un rol pueden
-cambiar el encaje. El piso clave no sustituye la validación del total interno.
+cambiar el encaje. La cuenta clave no sustituye la validación del total interno.
 
 **Matriz semanal a completar en privado**, una fila por persona, rol y semana,
 con identificador privado para conciliar a quienes cubren varias funciones.
@@ -579,7 +642,7 @@ población son supuestos; el nivel básico es el piso para todos.
 | Básico | Toda la organización, ~65 | Uso seguro, clasificación de datos, qué se puede enviar, verificar el output, reportar incidentes | Sesiones breves y guía de una página; **casos de su rol** | 6 | ~390 |
 | Intermedio | Operaciones y Tecnología usuarias frecuentes, ~50 | Pedir bien (ejemplos, contraargumentos), identificar casos de uso, supervisar | Talleres con casos reales del rol y práctica entre pares | 12 | ~600 |
 | Avanzado | Especialistas que diseñan e implementan, ~10 | Agentes, evals, harness, gobernanza técnica | Proyecto aplicado con tiempo asignado | 10-15% del tiempo semanal durante un tramo de tres meses | 480-720 |
-| Directivo | Primera línea y Directorio | Decidir inversión, riesgo, regulación y ROI | Briefings con casos | 3 | Dentro de la oficina del CAIO, sin costo aparte (supuesto) |
+| Directivo (programa ampliado) | Primera línea y Directorio | Decidir inversión, riesgo, regulación y ROI | Briefings con casos | 3 | Sin imputar: se valúa con el padrón de primera línea antes de dictarlo. En el mínimo, la dirección hace el básico de 6 h, dentro de las 360-420 h |
 
 Cálculo del avanzado, con la convención de costeo del plan (480 h por
 persona-tramo, [convenciones](../../context/supuestos/convenciones-de-calculo.md)):
@@ -629,6 +692,9 @@ verificación.
 | Dependencia de un proveedor | El piloto lo advierte y propone consumo multimodelo | Equipos que ya construyeron hábitos | Fuera del alcance de este anexo; lo resuelve Arquitectura |
 | Desconfianza en el output | Pocos piden contraargumentos o advierten alucinaciones | Quien revisa | Nivel intermedio centrado en verificar y supervisar |
 | Incentivo contrario en staffing facturado por hora | Mencionado en las condiciones de invalidez de la ganancia de productividad | Personas y empresa: menos horas es menos facturación | Tensión con Finanzas, ver "Tensiones con otras miradas" |
+| Meta de utilización de los managers | El Directorio usa una meta de utilización facturable mayor a 80% ([OKR](../../context/hechos/okrs-y-objetivos.md)); hoy está en 83-90% | Managers de Operaciones y delivery: cada hora de formación o soporte que liberan baja la utilización de su equipo | La matriz de capacidad marca esas horas como «facturable desplazada» y Finanzas las informa aparte, para que la caída atribuible al plan se vea separada de la gestión del manager; el disparador de «Riesgos» (utilización <80% atribuible al programa) frena antes de comprometer más horas |
+| Carga de revisión | La política deja al humano como responsable final y la revisión la aprueba alguien distinto del autor ([política](../../context/hechos/gobierno-y-politica-ia.md)) | Tech leads y seniors que revisan: más cambios con asistencia de agente para revisar, con su propio trabajo | En el mínimo, 64 h de seniors sostienen las prácticas de la cohorte (E); si el retrabajo o los incidentes suben contra la base, la prueba se suspende («Condiciones de abandono») |
+| Carga de Seguridad | Gobierno y seguridad están en pocas personas ([estructura](../../context/hechos/tamano-y-estructura.md)) | Responsable de seguridad y verificador: 34-54 h de verificación en M1-M3 (E), además de su trabajo | Verificador distinto del productor, suplente nombrado para contener (ver «Dependencia de personas clave») y documentación obligatoria; si no hay verificador, la superficie se excluye ([R-06](07-resoluciones.md#autoridad-y-liberaciones)) |
 
 **Staffing en equipos de clientes que prohíben herramientas externas.** El plan
 no les pide usar lo que el contrato no permite. Tres frentes:
@@ -636,21 +702,38 @@ no les pide usar lo que el contrato no permite. Tres frentes:
 1. **Usos permitidos sin tocar el cliente:** propuestas, documentación
    propia, tickets y correo internos, con las herramientas corporativas y la
    clasificación de datos vigente.
-2. **Literacy igual:** nivel básico e intermedio para todos, porque es
-   formación de la persona y no depende del contrato.
-3. **Matriz de clientes primero:** la completa el Responsable Comercial para los
-   clientes principales al cierre de los meses 1-3 (produce Operaciones,
-   verifica Seguridad). Mientras tanto, todo uso nuevo sobre un cliente sin fila
-   está prohibido por defecto y cada excepción la decide Comercial a propuesta
-   del Delivery manager. Con más de 30% de contratos ambiguos al mes 4 rige
-   *default-deny* con revisión legal ([R-09](07-resoluciones.md#gobierno-y-seguridad)).
-   Las personas en staffing reportan consultas de uso de forma sencilla y sin
-   sanción, igual que los incidentes.
+2. **Literacy igual:** básico para todos en M1-M3, porque es formación de la
+   persona y no depende del contrato. El intermedio de Operaciones y staff es
+   del programa ampliado, que el Directorio autoriza o no en el gate del mes 6
+   ([R-23](07-resoluciones.md#personas)).
+3. **Matriz de clientes primero:** la completa el Responsable comercial del
+   cliente para los clientes principales al cierre de los meses 1-3 (produce
+   Operaciones, verifica Seguridad). Mientras tanto, todo uso nuevo sobre código o
+   datos de un cliente sin fila está prohibido, **sin excepción comercial**. El uso
+   que ya corre sobre código bajo NDA se suspende desde la aprobación del plan; el
+   que corre sobre código sin NDA sigue como residual aceptado por el AI Council
+   hasta el gate del mes 3, con la matriz leída. Con más de 30% de contratos
+   ambiguos al mes 4 rige *default-deny* con revisión legal ([R-08](07-resoluciones.md#gobierno-y-seguridad),
+   [R-09](07-resoluciones.md#gobierno-y-seguridad)). Las personas en staffing
+   reportan consultas de uso de forma sencilla y sin sanción, igual que los incidentes.
 
 **Dependencia de personas clave.** La capacidad en arquitectura, seguridad y
-gobierno está en pocas personas: el contractor de IA aplicada y la documentación
-obligatoria de lo que arma el champion o el líder son la mitigación de
-continuidad.
+gobierno está en pocas personas: en el programa completo, el contractor de IA
+aplicada y la documentación obligatoria de lo que arma el champion o el líder son
+la mitigación de continuidad. En el mínimo, la mitigación son los suplentes y la
+documentación obligatoria. Suplentes (propuesta de Personas, que Gobierno valida
+en el [Anexo C](03-gobierno-seguridad.md)); las personas se nombran en el acta de
+la segunda liberación ([R-06](07-resoluciones.md#autoridad-y-liberaciones)):
+
+| Titular | Suplente | Qué puede hacer el suplente | Qué no puede hacer |
+|---|---|---|---|
+| Responsable de seguridad, en la suspensión preventiva de un uso | Responsable de Tecnología | Suspender para contener, con aviso inmediato al titular y al AI Council | Levantar la suspensión o aceptar un residual: la reanudación sigue el procedimiento del Anexo C y el criterio de [R-10](07-resoluciones.md#gobierno-y-seguridad). El CEO tampoco levanta una suspensión fuera de ese procedimiento |
+| Tech lead de gobierno (política, intake y Council) | Un senior de arquitectura distinto de quien produce los controles | Operar el intake y convocar el Council con el runbook | Verificar los controles que produjo ni votar su aceptación |
+
+Costo: 0 incremental. El suplente actúa ante un evento, sobre el circuito de
+incidentes existente ([R-12](07-resoluciones.md#gobierno-y-seguridad)), y practica
+el runbook en los ejercicios de mesa del Anexo C. Sin los suplentes nombrados en el
+acta no hay segunda liberación, como con el resto de los roles (R-06).
 
 ### Transición responsable: roles, equidad y participación
 
@@ -694,20 +777,21 @@ métrica se reporta con numerador y denominador y **por área, agregada**: ning�
 dato individual ([OKR](../../context/hechos/okrs-y-objetivos.md)). Agregar el
 reporte por área **no vuelve anónimo el dato de origen**: la fuente registra
 eventos por persona. Qué se conserva y cuánto tiempo lo decide el Responsable de
-seguridad, con Personas y Legal externo consultados, antes de congelar la base
-([R-13](07-resoluciones.md#gobierno-y-seguridad)). Por defecto, agregados por
-área desde las consolas existentes y ningún evento por persona fuera de ellas; sin
-esa decisión, la fuente queda «sin medir». La medición se comunica a las personas
+seguridad ([R-13](07-resoluciones.md#gobierno-y-seguridad)): en la preparación de
+2026, antes de extraer cualquier serie, fija la regla por defecto (agregados por
+área desde las consolas existentes y ningún evento por persona fuera de ellas);
+un tratamiento por persona espera la revisión de M1, con Personas y Legal externo
+consultados, y sin ella la fuente queda «sin medir». La medición se comunica a las personas
 antes de empezar a medir.
 
 | Tramo | Hitos | Indicador adelantado (uso real) | Indicador rezagado |
 |---|---|---|---|
-| Preparación previa de 2026, primera liberación propia | Validación inicial del diagnóstico y capacidad; reconstrucción **retrospectiva** con datos existentes y diseño de la encuesta de chat y Gemini. Constancia de versión y alcance de la [política vigente](../../context/hechos/gobierno-y-politica-ia.md), que el Directorio ratifica al aprobar el plan ([R-07](07-resoluciones.md#gobierno-y-seguridad)) | Acta con diagnóstico revisado, agendas M1-M3 conciliadas o faltantes explícitos; serie retrospectiva de uso por área | Serie retrospectiva de throughput, incidentes y retrabajo, con su hueco declarado si no existe |
+| Preparación previa de 2026, primera liberación propia | Regla por defecto de [R-13](07-resoluciones.md#gobierno-y-seguridad) fijada y comunicada antes de extraer cualquier serie; validación inicial del diagnóstico y capacidad; reconstrucción **retrospectiva** con datos existentes y diseño de la encuesta de chat y Gemini. Constancia de versión y alcance de la [política vigente](../../context/hechos/gobierno-y-politica-ia.md), que el Directorio ratifica al aprobar el plan ([R-07](07-resoluciones.md#gobierno-y-seguridad)) | Acta con diagnóstico revisado, agendas M1-M3 conciliadas o faltantes explícitos; serie retrospectiva de uso por área | Serie retrospectiva de throughput, incidentes y retrabajo, con su hueco declarado si no existe |
 | Meses 1-3, semanas 1 a 4 del plan, ampliables a 8 según B | **Congelar la base prospectiva** antes de cualquier capacitación o herramienta nueva para usuarios: encuesta de chat y Gemini, uso semanal por área, throughput, incidentes y retrabajo de los equipos propios | Línea de base por área publicada y congelada; si se extiende, se revisa completitud M3 | Línea de base prospectiva de throughput, incidentes y retrabajo |
-| Meses 1-3, desde semana 5 o 9 según cierre de base | Verificar la aplicación de la política aprobada, la matriz de restricciones y los permisos (con Gobierno); básico para todos; intermedio y prueba con la cohorte del mínimo definido en E. Básico, intermedio y prueba comienzan juntos, solo después de congelar la base | Básico completado: ≥90% de la dotación al cierre de los meses 1-3, a revalidar si la base se extiende. Prueba: uso semanal de la cohorte, retrabajo y PR aceptados, y la dispersión entre personas; se leen en la decisión del mes 3, sin atribuir ganancia | Sin objetivo: se mide la línea de base |
-| Meses 4-6 | Intermedio para Operaciones y staff; arranca el avanzado; champions con tiempo asignado (el contractor está desde el mes 1 si se aprueba; al 100% solo si la decisión del mes 3 encuentra una señal, si no se cierra y la prueba se extiende a la cohorte) | Uso activo semanal de Tecnología ≥80% en M6 (la meta del OKR); Operaciones habilitadas ≥40% en M6, **meta intermedia** hacia ≥60% en M12 | Throughput de equipos propios: sin deterioro de calidad |
-| Meses 7-9 | Casos prácticos por rol publicados por champions; revisión de calidad de prompts | Tecnología ≥80% sostenido; prompts con ejemplos del resultado esperado: de ≤5% a ≥30% (muestra agregada) | Incidentes y retrabajo sin aumento sobre la base |
-| Meses 10-12 | Traspaso del contractor a la oficina del CAIO (si la decisión del mes 3 lo liberó; si no, el traspaso se hizo en el mes de preaviso); evaluación de lo que escala | Tecnología ≥85%; Operaciones habilitadas ≥60%; staff ≥50% (meta sin fuente de medición hoy: la telemetría no mide chat ni Gemini) | Hipótesis, no meta: throughput entre +10% y +25% en equipos propios, según el [supuesto de ganancia](../../context/supuestos/ganancia-de-productividad.md); el caso base puede no alcanzarlo |
+| Meses 1-3, desde semana 5 o 9 según cierre de base | Verificar la aplicación de la política aprobada, la matriz de restricciones y los permisos (con Gobierno); básico para todos; intermedio y prueba con la cohorte del mínimo definido en E. Básico, intermedio y prueba comienzan juntos, solo después de congelar la base | Básico completado: ≥90% de la dotación al cierre de los meses 1-3, a revalidar si la base se extiende. Prueba: uso semanal de la cohorte, retrabajo y PR aceptados, y su dispersión en la unidad de agregación que fije el método de B ([R-14](07-resoluciones.md#arquitectura-y-medición)); se leen en la decisión del mes 3, sin atribuir ganancia | Sin objetivo: se mide la línea de base |
+| Meses 4-6 (continuidad del mínimo, sin cursos nuevos) | Seguimiento del uso semanal por área, pulso trimestral y canal de consultas, a cargo de la oficina del CAIO; en el gate del mes 6 el Directorio autoriza o no el programa ampliado ([R-23](07-resoluciones.md#personas)) | Uso activo semanal de Tecnología ≥80% en M6 (la cifra del OKR, que es combinado, aplicada a Tecnología por decisión del plan). Operaciones: se informan activos habilitados / habilitados y activos / total, **sin meta en M6**, porque su intermedio no está en el mínimo | Throughput de equipos propios: sin deterioro de calidad |
+| Meses 7-9 (programa ampliado, solo si se autoriza en el gate del mes 6) | Intermedio para Operaciones y staff; avanzado; champions con tiempo asignado y casos prácticos por rol; revisión de calidad de prompts. Sin autorización, sigue el seguimiento del mínimo | Tecnología ≥80% sostenido; Operaciones habilitadas ≥40% al cierre (**meta intermedia condicionada** al programa ampliado, informada sin efecto de gate); prompts con ejemplos del resultado esperado: de ≤5% a ≥30% (muestra agregada) | Incidentes y retrabajo sin aumento sobre la base |
+| Meses 10-12 | Evaluación de lo que escala; traspaso de la documentación a la oficina del CAIO (y del contractor, solo si existió por una autorización aparte, [R-28](07-resoluciones.md#finanzas)) | Tecnología ≥85%; Operaciones habilitadas ≥60% (solo con programa ampliado); staff ≥50% (meta sin fuente de medición hoy: la telemetría no mide chat ni Gemini) | Hipótesis, no meta: throughput entre +10% y +25% en equipos propios, según el [supuesto de ganancia](../../context/supuestos/ganancia-de-productividad.md); el caso base puede no alcanzarlo |
 
 "Habilitadas" = personas cuyos clientes y herramientas lo permiten según la
 matriz, como denominador. Se informa también el valor sobre el total, para no
@@ -719,8 +803,8 @@ cruce muestra dónde hay un hueco:
 
 | Frente | Dónde está en este anexo | Hueco |
 |---|---|---|
-| Gestión del cambio | Tabla de frenos, comunicación y postura sobre el empleo | No |
-| Desarrollo de talento | Roles y capacidad, estudio de un rol crítico (alcance ampliado), transición responsable | No |
+| Gestión del cambio | Tabla de frenos, comunicación y postura sobre el empleo; dueño y horas en M4-M12 en «Oficina del CAIO en el paquete mínimo» | No |
+| Desarrollo de talento (frente del curso; en el plan lo lleva Personas) | Roles y capacidad, estudio de un rol crítico (alcance ampliado), transición responsable | No |
 | Alfabetización en IA | Literacy por nivel y por rol, hitos de los meses 1-9 | No |
 | Cultura de innovación | Prueba con la cohorte y condiciones de abandono | **Parcial:** falta registrar qué no funcionó |
 
@@ -755,9 +839,11 @@ permitido del rol, no asistir ([R-21](07-resoluciones.md#personas)).
 Lo que sigue se refiere a las metas de los meses 4-12.
 
 **Alcance de las metas de los meses 4-12.** Los hitos y metas de las filas de los
-meses 4-6, 7-9 y 10-12 (intermedio ampliado, avanzado, champions con tiempo
-asignado, Operaciones ≥40% y ≥60%, prompts ≥30%, staff ≥50% y Tecnología ≥85%)
-son **alcance del programa completo**, sujeto a costeo y autorización adicionales.
+meses 7-9 y 10-12 (intermedio ampliado, avanzado, champions con tiempo
+asignado, Operaciones ≥40% en M9 y ≥60% en M12, prompts ≥30%, staff ≥50% y
+Tecnología ≥85%) son **alcance del programa ampliado**: su costeo y autorización
+los decide el Directorio en el gate del mes 6 ([R-23](07-resoluciones.md#personas)).
+En M4-M6 no hay formación nueva y Operaciones no tiene meta.
 La continuidad del mínimo de E no los cubre y **no se promete que se cumplan con
 sus techos**. En el mínimo se sigue midiendo la base y el uso por área; las metas
 se informan, no se prometen, y su respaldo está en el
@@ -795,28 +881,33 @@ ruido, sin atribuir ganancia. La atribución requiere base prospectiva congelada
 si no resuelve en semana 4, se aplica el criterio de extensión de B y se deja
 constancia para la decisión M3. No se presume que el básico no contamina la base.
 
-Si se amplía la base hasta semana 8, **básico, intermedio y prueba comienzan
-juntos en semana 9**. Se revisan completitud ≥90% en M3, agendas y costeo con
+**Camino esperado: base de 8 semanas** ([R-18](07-resoluciones.md#arquitectura-y-medición)),
+así que **básico, intermedio y prueba comienzan juntos en la semana 9**, con cinco
+semanas hasta el cierre del mes 3; la semana 5 queda como el caso favorable. Efecto:
+el ≥90% del básico se lee como meta revisada, la lectura del mes 3 es reducida y
+declarada, y la formación igual llega antes del gate del mes 6, que decide por
+adopción, costo y controles, no por valor; el valor se lee en el mes 9. Se revisan completitud ≥90% en M3, agendas y costeo con
 B/E/F; no se promete completar el mismo alcance en cinco semanas sin validarlo.
 Si tampoco resuelve al cierre de la extensión, se informa el faltante y no se
 atribuye ganancia ni se sustituye la base por la retrospectiva.
 
 **La formación, ¿llega antes de cada gate?** Verificación de secuencia contra el
 roadmap de arriba. Salvo la fila del mes 3, la tabla describe el **programa
-completo**; en el mínimo el intermedio de M1-M3 es solo la cohorte de 15-20 y no
+ampliado**; en el mínimo el intermedio de M1-M3 es solo la cohorte de 15-20 y no
 hay avanzado:
 
 | Gate | Qué lee | Formación previa | Resultado de la verificación |
 |---|---|---|---|
-| Mes 3 (único del pedido mínimo) | Uso semanal de la cohorte, retrabajo y PR aceptados; completitud del básico ≥90% | Básico, intermedio y prueba empiezan **juntos** después de congelar la base: semana 5 (nueve semanas hasta el cierre) o semana 9 (cinco semanas) | **No llega antes: llega a la par.** La lectura es de una cohorte recién formada y por eso no atribuye ganancia; con base ampliada, la meta de ≥90% se revisa en vez de prometerse |
-| Mes 6 | Tecnología ≥80%; Operaciones habilitadas ≥40% | Básico en M1-M3; intermedio de Operaciones y staff en M4-M6 | Para Operaciones, intermedio y meta caen en el mismo tramo: el margen no está demostrado |
-| Mes 9 | Prompts con ejemplos ≥30%; Tecnología ≥80% sostenido | Casos por rol publicados por champions en M7-M9 | Casos y meta en el mismo tramo: se lee al cierre, sin margen previo |
-| Mes 12 | Tecnología ≥85%; Operaciones habilitadas ≥60%; staff ≥50% | Por cohorte: Tecnología, con intermedio desde M1-M3 y avanzado en M4-M6; Operaciones y staff, con intermedio en M4-M6 | El margen difiere por cohorte y no se cuantifica acá; la secuencia debe ratificarse por ruta |
+| Mes 3 (dentro del techo de 79k USD; los de M6, M9 y M12 son de la continuidad, cada uno dentro del techo de su tramo, [R-04](07-resoluciones.md#autoridad-y-liberaciones)) | Uso semanal de la cohorte, retrabajo y PR aceptados; completitud del básico ≥90% | Básico, intermedio y prueba empiezan **juntos** después de congelar la base: semana 5 (nueve semanas hasta el cierre) o semana 9 (cinco semanas) | **No llega antes: llega a la par.** La lectura es de una cohorte recién formada y por eso no atribuye ganancia; con base ampliada, la meta de ≥90% se revisa en vez de prometerse |
+| Mes 6 (decide por adopción, costo y controles; no lee valor) | Tecnología ≥80%; Operaciones solo informada, sin meta | Básico para todos e intermedio de la cohorte, ambos en M1-M3 (desde la semana 9 en el camino esperado) | **Llega antes:** más de un tramo de margen. Operaciones no se lee contra meta porque su intermedio no está en el mínimo |
+| Mes 9 (solo con programa ampliado) | Prompts con ejemplos ≥30%; Tecnología ≥80% sostenido; Operaciones habilitadas ≥40%, meta intermedia | Intermedio de Operaciones y staff, avanzado y casos por rol de champions, todos en M7-M9 | **Llega a la par:** por eso esas lecturas se informan y no deciden fondos ([R-19](07-resoluciones.md#arquitectura-y-medición)); solo Tecnología tiene formación previa (M1-M3) |
+| Mes 12 (solo con programa ampliado) | Tecnología ≥85%; Operaciones habilitadas ≥60%; staff ≥50% | Tecnología, con básico e intermedio de la cohorte en M1-M3 y avanzado en M7-M9; Operaciones y staff, con intermedio en M7-M9 | **Llega antes:** un tramo de margen para Operaciones y staff; más para la cohorte de Tecnología |
 
-Los gates de M6 a M12 dependen de intermedio ampliado, avanzado y champions, que
-no están en el pedido de hoy: solo corren si las decisiones de los meses 3, 6 y 9
-los autorizan. Las metas no se mueven; la verificación deja a la vista que M3, M6
-y M9 se leen con la formación llegando a la par, no antes.
+Las metas de M9 y M12 dependen de intermedio ampliado, avanzado y champions, que
+no están en el pedido de hoy: solo corren si el Directorio los autoriza en el gate
+del mes 6 ([R-23](07-resoluciones.md#personas)). La verificación deja a la vista que
+M3 y M9 se leen con la formación llegando a la par, y por eso no atribuyen ni
+deciden por adopción; M6 y M12 tienen un tramo de margen.
 
 **Meta de adopción y OKR combinado.** El borrador de OKR pide 80% en
 Operaciones y Tecnología juntas. Con áreas de igual peso, **cumplir exactamente**
@@ -849,10 +940,11 @@ el proxy de código no representa toda la IA. Un uso permitido fuera del grupo
 habilitado por la matriz requiere registro específico y recalcular el ejemplo.
 No se predice el resultado real del OKR a partir de metas. Metas por tramo
 unificadas para todo el plan (incluido el Anexo F): Tecnología ≥80% desde los meses
-4-6 (cifra del OKR) y ≥85% al cierre de los meses 10-12 (meta interna de este
-anexo); Operaciones habilitadas ≥40% en M6 es una meta intermedia hacia ≥60% en
-M12. El 72,5% corresponde a **85%/60% en M12**, con igual peso y toda Operaciones
-habilitada; no corresponde a las metas de M6.
+4-6 (la cifra del OKR combinado, aplicada a Tecnología por decisión del plan) y ≥85%
+al cierre de los meses 10-12 (meta interna); Operaciones habilitadas no tiene meta
+en M6 y, solo si el Directorio autoriza el programa ampliado en el gate del mes 6,
+tiene ≥40% en M9 como meta intermedia informada y ≥60% en M12. El 72,5% corresponde
+a **85%/60% en M12**, con igual peso y toda Operaciones habilitada.
 
 **Criterios de éxito del programa completo (al cierre de los meses 10-12; no los
 cubre el mínimo):** Tecnología ≥85% de uso
@@ -866,9 +958,8 @@ dispara por sí solo.
 
 | Disparador | Acción |
 |---|---|
-| Programa completo: capacidad clave efectiva en los meses 1-3 <1,6 FTE | No iniciar ese alcance; reducir o diferir y volver a costear. Este umbral no es el piso del mínimo vigente: sus tareas y horas se concilian en E, «Pedido inicial: paquete mínimo» |
-| Programa completo: capacidad clave entre 1,6 y ~1,8 FTE en los meses 1-3 | Retirar la prueba de ese alcance y revisar metas, calendario y costeo; confirmar también las horas distribuidas. No completar horas iniciales con ganancias futuras ni trasladar estos pisos al mínimo de E |
-| **Mínimo.** Lectura del mes 3: básico completado ≥50% y <90%, con la evaluación práctica por rol y el denominador de la dotación (meta revisada si la base se extendió) | Se rediseña el formato y se recostea **antes de comprometer horas nuevas**. La continuidad del mínimo (128-212 h por tramo) no incluye formación general de los meses 4-12 ni se usa para cubrir esta remediación sin un recosteo aprobado. El rediseño lo propone el CAIO y lo firma el CEO en el gate del mes 3, con recosteo del CFO antes de comprometer horas ([R-21](07-resoluciones.md#personas)). Si el básico se dictó sin el instrumento aplicado, el ≥90% queda «sin medir» y se aplica esta banda. No se liberan ni se cortan fondos por esta lectura sola |
+| Programa ampliado: el sobre clave calculado para ese alcance no entra en las agendas validadas | No iniciar ese alcance; reducir o diferir y volver a costear. No hay pisos de FTE: los de 1,6 y ~1,8 quedaron retirados y cada alcance se calcula por separado ([sobre de capacidad](../../context/supuestos/sobre-de-capacidad-separado.md)). No completar horas con ganancias futuras |
+| **Mínimo.** Lectura del mes 3: básico completado ≥50% y <90%, con la evaluación práctica por rol y el denominador de la dotación (meta revisada si la base se extendió) | Se rediseña el formato y se recostea **antes de comprometer horas nuevas**. La continuidad del mínimo (132-218 h por tramo) no incluye formación general de los meses 4-12 ni se usa para cubrir esta remediación sin un recosteo aprobado. El rediseño lo propone el CAIO y lo firma el CEO en el gate del mes 3, con recosteo del CFO antes de comprometer horas ([R-21](07-resoluciones.md#personas)). Si el básico se dictó sin el instrumento aplicado, el ≥90% queda «sin medir» y se aplica esta banda. No se liberan ni se cortan fondos por esta lectura sola |
 | **Mínimo.** Lectura del mes 3: básico completado <50% | Cambio de formato (de sesión a práctica en equipo) y reasignación de tiempo, sin repetir el mismo curso; se decide en el mes 3. Las horas que exija el nuevo formato se recostean antes de comprometerlas y no existen en el mínimo hasta entonces |
 | **Mínimo.** Al cierre de los meses 4-6, uso activo en Tecnología <60% | Se rediseña la formación y se recostea antes de comprometer horas; se revisan las causas con los managers. No hay horas de formación de los meses 7-9 que suspender. El plan no suma seats: no hay expansión que frenar |
 | **Mínimo.** Al cierre de los meses 4-6, uso activo en Tecnología ≥60% y <80% | Se rediseña la formación con casos por rol y se vuelve a medir al cierre de los meses 7-9 (como en el Anexo F), sin comprometer horas nuevas antes de recostear |
@@ -884,10 +975,10 @@ dispara por sí solo.
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
-| La capacitación desplaza horas facturables y baja utilización | Alta (utilización 83-90%, sin bench) | Medio | Horas topeadas por tramo de tres meses (ver Insumos para Finanzas); módulos cortos; calendario por equipo | Utilización <80% (meta interna) atribuible al programa |
+| La capacitación desplaza horas facturables y baja utilización | Alta (utilización 83-90%, sin bench) | Medio | Horas topeadas por tramo de tres meses (ver Insumos para Finanzas); módulos cortos; calendario por equipo | Utilización <80% (meta del Directorio, [OKR](../../context/hechos/okrs-y-objetivos.md)) atribuible al programa |
 | Operaciones no puede adoptar por contrato del cliente | Alta | Medio | Matriz de clientes; meta sobre habilitadas; usos permitidos | Matriz sin completar al cierre de los meses 1-3 |
 | Champions sin tiempo ni entregable | Media | Medio | Mandato, sponsor y entregable por tramo | Ver tabla de abandono |
-| Pérdida de una persona clave en arquitectura, seguridad o gobierno | Media | Alto | Contractor a prueba, documentación, transferencia (programa completo). En el mínimo no hay contractor continuo: E solo prevé 4-8 h de IA aplicada por tramo y no hay un reemplazo costeado; la documentación obligatoria tiene dueño y un par, nombrados por rol en el acta de la segunda liberación ([R-06](07-resoluciones.md#autoridad-y-liberaciones)); si excede las tareas del mínimo, el CAIO propone su costeo en el gate del mes 3 y lo firma el CEO dentro de los techos ([R-04](07-resoluciones.md#autoridad-y-liberaciones)) | No hay reemplazo documentado al cierre de los meses 7-9 |
+| Pérdida de una persona clave en arquitectura, seguridad o gobierno | Media | Alto | Contractor a prueba, documentación, transferencia (programa completo). En el mínimo no hay contractor continuo: E solo prevé 4-8 h de IA aplicada por tramo y no hay un reemplazo costeado; la documentación obligatoria tiene dueño y un par, y los suplentes de seguridad y gobierno se nombran por rol en el acta de la segunda liberación ([R-06](07-resoluciones.md#autoridad-y-liberaciones)); si excede las tareas del mínimo, el CAIO propone su costeo en el gate del mes 3 y lo firma el CEO dentro del techo de su tramo ([R-04](07-resoluciones.md#autoridad-y-liberaciones)) | No hay reemplazo documentado al cierre de los meses 7-9 |
 | El 0,2 del contractor no está libre en los meses 4-6 y el replan del Anexo B no se sostiene | Media (supuesto sin confirmar) | Medio: los meses 4-6 vuelven a 2,5 FTE clave | Alcance contractual con evals en CI y prueba de portabilidad antes de la aprobación del paquete completo; excepción de 0,3 FTE propuesta como respaldo, que requiere aprobación antes de activarse | Control de la semana 20 del plan (la séptima de los meses 4-6) sin documentación mínima reproducible, o alcance contractual sin los dos entregables al cierre de los meses 1-3: se solicita la autorización de la excepción de 0,3 FTE; no se activa sola ni está incluida en el mínimo |
 | No hay contractor (no se aprueba o no se contrata a tiempo): la excepción de 0,3 no alcanza | Media (depende del Directorio, decisión sobre IA aplicada) | Alto: falta toda la fracción de 0,8 FTE de IA aplicada; con fracción interna los meses 4-6 pedirían ~3,3 FTE clave | Modo control del Anexo B (2,2 FTE clave, sin hitos de IA aplicada) en vez de cubrirlo con tiempo; decisión del board al aprobar el paquete completo | Sin contractor contratado al cierre de los meses 1-3: la decisión del mes 3 libera el modo control ([Anexo E](05-business-case.md)) |
 | Adopción declarada ≠ uso real (seats comprados, uso detectado) | Media | Medio | Medir uso real semanal por área, no seats; el tablero mensual del Council lo muestra cada mes | Métrica de seats sin correlato en uso |
@@ -903,10 +994,10 @@ dispara por sí solo.
 |---|---|---|---|---|
 | Meta de adopción | Cómo medir la meta de adopción en Operaciones | (1) 80% sobre Operaciones y Tecnología, como el borrador de OKR. (2) 80% en Tecnología y una meta propia sobre personas **habilitadas** en Operaciones. | **La segunda**, informando también la primera con su denominador completo. Ratificada por el Directorio; la brecha contra el OKR es contractual, y en el mes 3, con base y matriz, el Directorio decide si pide revisar el resultado clave ([R-23](07-resoluciones.md#personas)) | Reversible: se cambia al completar la matriz |
 | IA aplicada | Capacidad especializada en IA aplicada | (1) Sin incorporación, solo reasignar con perfil demostrado. (2) Contractor a prueba desde el mes 1 (50% en los meses 1-3, 100% posterior condicional). (3) Lo mismo desde el mes 4. (4) Dos contrataciones en nómina. | **El programa publicado propone el contractor desde el mes 1 como excepción externa**, no como cumplimiento de «no contratar». Consume caja aunque no amplíe nómina; la excepción y el contrato los decide el Directorio. El paquete mínimo se vuelve a costear antes de decidir si requiere esa vía. Sin perfil interno demostrado ni excepción aprobada, no se inician sus hitos | Contrato corto, con cierre y traspaso costeados. Si existe contractor, pero falta el 0,2 del replan, la excepción de 0,3 FTE internos cubre ese exceso acotado. Sin especialista falta el 0,8 completo: la excepción de 0,3 **no lo reemplaza**; aplicar modo control o diferir y volver a costear según B/E |
-| Compromiso sobre el empleo | Qué se dice sobre el empleo | (1) Sin compromiso. (2) Compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. (3) Compromiso con excepciones. | **El compromiso con excepciones**, con el texto de "Postura sobre el empleo". La adopta el Directorio al aprobar el plan, con asesoría laboral sobre el texto, y la comunica el CEO en M1 ([R-20](07-resoluciones.md#personas)). El compromiso sin excepciones baja más el miedo pero ata margen; sin compromiso deja el freno sin respuesta | Los dos compromisos son poco reversibles una vez comunicados |
+| Compromiso sobre el empleo | Qué se dice sobre el empleo | (1) Sin compromiso. (2) Compromiso explícito de que la ganancia por IA no se usa para desvincular durante los 12 meses. (3) Compromiso con excepciones. | **El compromiso con excepciones**, con el texto de "Postura sobre el empleo". La adopta el Directorio al aprobar el plan, con asesoría laboral sobre el texto, y la comunica el CEO en M1 ([R-20](07-resoluciones.md#personas)). Costo incremental 0; la caja de la asesoría laboral, en «Asesoría laboral sobre el texto». El compromiso sin excepciones baja más el miedo pero ata margen; sin compromiso deja el freno sin respuesta | Los dos compromisos son poco reversibles una vez comunicados |
 | Formato de la formación | Formato de la formación | (1) Curso obligatorio genérico. (2) Casos prácticos por rol con champions, en horario laboral. | **Los casos prácticos por rol**, por el pedido del piloto (más de la mitad de 12 autoseleccionados) y porque la falta de tiempo fue el primer freno; el efecto del formato se mide en los meses 4-9 | Reversible |
 | Piso de alfabetización | Art. 4 del AI Act | (1) Esperar a decidir si alcanza a Acme Labs. (2) Adoptarlo como piso, con registro. | **Adoptarlo como piso**, sin citar fechas ni sanciones | Reversible |
-| Compensación | Si el plan cambia cómo se compensa a quienes trabajan con IA en los 12 meses | (1) Sin cambios de compensación; los modelos nuevos quedan fuera de alcance. (2) Reconocimiento **no monetario** a champions y al líder: tiempo protegido (el 10% ya definido), visibilidad ante el Directorio y registro en su desarrollo de carrera. (3) Prima o bono por colaboración humano-IA, uno de los [modelos del curso](../../material/conceptos/m3u3-compensacion-futuro-sintetico.md). (4) Prima por gestión de sistemas complejos para el especialista | **La 1 para lo monetario, más la 2.** La 3 exige evidencia causal del impacto individual, que el plan no tiene, y no hay una partida de compensación nueva en el plan. Límite de medición, aparte: la fuente registra eventos por persona, pero el reporte agrega por área y no evalúa personas. La 4 solo aplica al contractor, que se negocia por contrato. Se revisa con evidencia en la decisión del mes 12 para 2028. Costo de la 2: sin cifra; es tiempo ya computado. Responsable: CAIO, con Talento | Reversible: se agrega después; quitar un incentivo ya comunicado es difícil |
+| Compensación | Si el plan cambia cómo se compensa a quienes trabajan con IA en los 12 meses | (1) Sin cambios de compensación; los modelos nuevos quedan fuera de alcance. (2) Reconocimiento **no monetario** a champions y al líder: tiempo protegido (el 10% ya definido), visibilidad ante el Directorio y registro en su desarrollo de carrera. (3) Prima o bono por colaboración humano-IA, uno de los [modelos del curso](../../material/conceptos/m3u3-compensacion-futuro-sintetico.md). (4) Prima por gestión de sistemas complejos para el especialista | **La 1 para lo monetario, más la 2.** La 3 exige evidencia causal del impacto individual, que el plan no tiene, y no hay una partida de compensación nueva en el plan. Límite de medición, aparte: la fuente registra eventos por persona, pero el reporte agrega por área y no evalúa personas. La 4 solo aplica al contractor, que se negocia por contrato. Se revisa con evidencia en la decisión del mes 12 para 2028. Costo de la 2: sin cifra; es tiempo ya computado. Responsable: CAIO, con Personas | Reversible: se agrega después; quitar un incentivo ya comunicado es difícil |
 
 ### Postura sobre el empleo y métricas de comportamiento
 
@@ -920,10 +1011,27 @@ causales que ya existían sin relación con la IA (desempeño sostenido, causa
 justa, pérdida de un cliente).» Es la postura con excepciones de la decisión sobre
 el empleo. Alternativas: el compromiso sin excepciones (más tranquilizadora, ata
 más el margen); y sin compromiso (no responde el miedo al reemplazo, que es un
-freno típico de adopción). **Costo y riesgo:** el costo es de margen y lo
-cuantifica Finanzas; no está en este anexo. Riesgo: una promesa que no se cumple
-destruye la confianza que se busca; por eso cambiarla exige una nueva resolución
-del Directorio y comunicación del CEO.
+freno típico de adopción). **Costo:** incremental 0, porque el plan no presupuesta
+ahorro de nómina ni contratación ([R-20](07-resoluciones.md#personas)); lo que la
+postura ata es margen futuro, no un gasto del plan.
+
+**Asesoría laboral sobre el texto.** Alcance: el texto de la postura y, en la
+misma consulta, la revisión laboral del tratamiento de eventos de uso por persona
+que pide [R-13](07-resoluciones.md#gobierno-y-seguridad). La preparación de 2026
+no tiene caja ([R-02](07-resoluciones.md#autoridad-y-liberaciones)). Rige, en este
+orden ([E](05-business-case.md), «Oficina del CAIO, líder, cambio y legal después
+de M1»): (a) 2-4 h dentro de las 8-16 h del dictamen legal de M1-M3, si su
+cotización deja ese espacio, sin caja nueva; la verifica el CFO y la firma el CEO
+en la segunda liberación. (b) Si no hay espacio, queda fuera de 79k USD y la
+resuelve el Directorio con la cotización verificada por el CFO, como la
+facilitación externa ([R-22](07-resoluciones.md#personas)): 2-4 h × 250-375 USD/h =
+0,5-1,5k USD, que no entran en la holgura de caja de M1-M3 (0,375k USD). Sin
+asesoría aprobada, el CEO no comunica la
+postura y el estudio de un rol no arranca: es la opción más reversible, porque lo
+costoso de deshacer es la comunicación.
+
+**Riesgo:** una promesa que no se cumple destruye la confianza que se busca; por
+eso cambiarla exige una nueva resolución del Directorio y comunicación del CEO.
 
 **Métricas de comportamiento** (qué hace la gente, no qué declara). Todas por
 área, agregadas, con numerador y denominador y sin dato individual. Línea de base
@@ -938,7 +1046,7 @@ con meta se leen al cierre de cada tramo:
 | Consultas de uso y reportes de incidentes de staffing | Conteo del canal de consultas | Confianza para preguntar: sube al principio, y eso es bueno | Supuesto |
 | Asistencia a módulos y a talleres de champions | Registro de asistencia | Tiempo realmente liberado | Supuesto |
 | Pulso anónimo cada tres meses: miedo a ser reemplazado | Encuesta de tres preguntas, con mínimo de respuestas por grupo | Si el miedo baja con la comunicación | Supuesto; no hay medición propia hoy |
-| Rotación voluntaria de perfiles junior | Dato de Talento, por área | Efecto colateral del miedo | Supuesto; la serie histórica es un faltante |
+| Rotación voluntaria de perfiles junior | Dato de Personas, por área | Efecto colateral del miedo | Supuesto; la serie histórica es un faltante |
 | Horas de formación liberadas, por grupo (junior y resto; Operaciones, staffing y Tecnología) | Registro de asistencia, agregado por grupo con mínimo de personas | Equidad de la transición: nadie queda afuera por agenda | Supuesto |
 
 **No se miden** el uso por persona ni el volumen de prompts como desempeño
@@ -954,6 +1062,15 @@ rezagados) se lee como uso de trámite y dispara la revisión del formato.
   contra de usar IA. Alternativas: no medir productividad en staffing y
   medir solo habilitación; o evaluar un cambio de modelo comercial (precio por
   resultado), que excede este anexo. Se deja visible.
+- **Con Finanzas, sobre la tarifa de champions.** Este anexo valúa las ~1.150 h de
+  champions del programa ampliado a 10-35 USD/h, el piso de la dotación, porque
+  salen de todas las áreas. E valúa las 64 h de seniors de la cohorte a tarifa de
+  rol (3,0-7,5k USD por persona-mes, 18,75-46,875 USD/h) y marca el piso como
+  sesgo de este anexo. Si los champions resultan seniors, la misma cuenta da
+  1.150 × 18,75-46,875 = 21,6-53,9k USD en vez de 11,5-40,25k USD. Alternativas:
+  costear con el padrón real de champions al autorizar el ampliado (recomendada,
+  porque el perfil de champion no es el más técnico), o adoptar ya la tarifa de
+  rol como cota superior. Lo decide el CFO al costear el gate del mes 6.
 - **Con Gobierno.** La matriz de clientes y la verificación de aplicación y
   permisos de la política aprobada son prerrequisitos de la meta de Operaciones y están fuera de este
   anexo. Si no se cierran al fin de los meses 1-3, la decisión sobre la meta de
@@ -1015,14 +1132,14 @@ Se recalcularon los componentes: 430 + 540 = 970 y 686 + 660 = 1.346 h;
 | Decisión | Cuándo | Quién decide | Estado |
 |---|---|---|---|
 | Autorizar la validación inicial: 10 días hábiles, 80-136 h, techo de 8k USD de tiempo, caja 0 | Hoy, para la preparación previa (octubre-diciembre de 2026) | Directorio; produce el CAIO y verifica el CFO | Se resuelve al aprobar el plan ([R-02](07-resoluciones.md#autoridad-y-liberaciones)). Arranca cuando Operaciones y managers confirman agendas e imputación 2026 y Tecnología confirma accesos; sin agendas, la ventana no empieza y M1 no arranca |
-| Techo de autorización acumulado de 79k USD (caja 9 + tiempo 59 + preparación técnica 3 + validación organizativa 5 + reservas 3), sin liberar hoy los 71k USD restantes | Hoy | Directorio fija; el CFO verifica | Se resuelve al aprobar el plan ([R-03](07-resoluciones.md#autoridad-y-liberaciones)). Es un techo, no un gasto esperado; superarlo exige nueva resolución del Directorio |
-| Formar y reasignar, sin contratar; intervención externa de 16-32 h que reemplaza la facilitación solo si falta perfil interno | Hoy (formar y reasignar); segunda liberación (facilitación) | Directorio, con cotización verificada por el CFO, porque su caja queda fuera de 79k USD | [R-20](07-resoluciones.md#personas) y [R-22](07-resoluciones.md#personas). Sin vía interna demostrada ni cotización aprobada, el módulo se difiere, se recostea y la meta del básico del mes 3 se revisa |
+| Techos: 79k USD hasta cerrar M3 (caja 9 + tiempo 59 + preparación técnica 3 + validación organizativa 5 + reservas 3; 85k USD con el núcleo de guardia) y 121k USD como suma de techos del año (118k USD sin gastar reservas), con techos por tramo de +16k USD en M4-M6 y +13k USD en M7-M9 y en M10-M12. Hoy se libera solo 8k USD | Hoy | Directorio fija; el CFO verifica | Se resuelve al aprobar el plan ([R-03](07-resoluciones.md#autoridad-y-liberaciones)). Son techos, no gasto esperado; superar el techo de un tramo, o cualquier camino con espera que supere 121k USD, exige nueva resolución del Directorio |
+| Formar y reasignar, sin ampliar nómina; toda incorporación externa (la facilitación de 16-32 h que reemplaza la interna solo si falta perfil, la asesoría laboral si no entra en las horas del dictamen legal de M1-M3, o el contractor de la rama con plataforma, [R-17](07-resoluciones.md#arquitectura-y-medición)) es una excepción del Directorio | Hoy (formar y reasignar); segunda liberación (facilitación) | Directorio, con cotización verificada por el CFO, porque su caja queda fuera de 79k USD | [R-20](07-resoluciones.md#personas) y [R-22](07-resoluciones.md#personas). Sin vía interna demostrada ni cotización aprobada, el módulo se difiere, se recostea y la meta del básico del mes 3 se revisa |
 | Segunda liberación: hasta 71k USD (caja 10, tiempo 61) para M1-M3 y cierre | Antes de M1, al cierre de la validación | CEO, por delegación del Directorio; verifican el CFO y el Responsable de seguridad; dictamina el AI Council; Operaciones y managers dan conformidad sobre las agendas | [R-04](07-resoluciones.md#autoridad-y-liberaciones) y [R-05](07-resoluciones.md#autoridad-y-liberaciones). Si falta un elemento, no se libera M1-M3: se reduce o resecuencia dentro de 71k USD, o se detiene; excederlo vuelve al Directorio |
-| Continuar, reducir o cortar | Meses 3, 6, 9 y 12 | CEO, por delegación, dentro de los techos; el CAIO produce el paquete, el CFO verifica y el AI Council dictamina | [R-04](07-resoluciones.md#autoridad-y-liberaciones). Lo que supere un techo o amplíe alcance vuelve al Directorio |
+| Continuar, reducir o cortar | Meses 3, 6, 9 y 12 | CEO, por delegación, dentro del techo de cada tramo; el CAIO produce el paquete, el CFO verifica y el AI Council dictamina | [R-04](07-resoluciones.md#autoridad-y-liberaciones). Lo que supere un techo o amplíe alcance vuelve al Directorio |
 | Paquete completo: contractor de IA aplicada, excepción de 0,3 FTE, avanzado, champions al 10% | El gate que proponga ampliar | Directorio, con estimación común previa del CFO | **No se pide hoy** ([R-28](07-resoluciones.md#finanzas)); sin estimación común no hay decisión de ampliación |
-| Postura sobre el empleo | Hoy; comunicación en M1 | Directorio, con asesoría laboral; comunica el CEO | Se resuelve al aprobar el plan ([R-20](07-resoluciones.md#personas)); costosa de deshacer una vez comunicada |
+| Postura sobre el empleo | Hoy; comunicación en M1 | Directorio, con asesoría laboral; comunica el CEO | Se resuelve al aprobar el plan ([R-20](07-resoluciones.md#personas)); costo incremental 0; la caja de la asesoría sigue «Asesoría laboral sobre el texto»; costosa de deshacer una vez comunicada |
 
-Comprobación: 9 + 59 + 3 + 5 + 3 = 79 y 10 + 61 = 71; 8 + 71 = 79.
+Comprobación: 9 + 59 + 3 + 5 + 3 = 79 y 10 + 61 = 71; 8 + 71 = 79; 79 + 16 + 13 + 13 = 121 y 121 − 3 de reservas = 118.
 
 **Formación.** Mantener 6 h por persona del básico: clasificación de datos,
 herramientas y superficies permitidas por cliente, revisión del resultado,
@@ -1037,12 +1154,12 @@ uso sobre ese cliente. Población supuesta: 60-70 personas, referencia ~65
 | Rol / actividad | Horas M1-M3 propuestas | Fuente o supuesto / qué desplaza |
 |---|---|---|
 | Participantes de todas las áreas: básico | 360-420 distribuidas | 60-70 × 6 h, desde tamaño/estructura y el nivel básico de este anexo. Puede desplazar delivery, soporte o trabajo de staff, según agenda y contrato |
-| Líder interno de adopción: agenda, base, diccionario de actividad, seguimiento y cierre | 48-96 clave | Supuesto de Personas: 0,1-0,2 × 480 h; el extremo alto coincide con el líder del programa completo al 20%. Desplaza liderazgo técnico; no es tiempo libre |
+| Oficina del CAIO (el CAIO como líder interno de adopción): agenda, base, diccionario de actividad, seguimiento, tablero y paquete del gate del mes 3 | 48-96 clave | Supuesto de Personas: 0,1-0,2 × 480 h, con la cuenta por tarea de «Oficina del CAIO en el paquete mínimo»; el extremo alto coincide con el líder del programa completo al 20%. Desplaza liderazgo técnico; no es tiempo libre |
 | Facilitación técnica del básico: adaptar casos y dictar sesiones | 16-32 clave | Supuesto de Personas: 8-16 h de preparación + 8-16 h de facilitación de grupos. No incluye evals, harness ni implementación. Desplaza trabajo técnico |
-| Managers / Operaciones: actualizar agendas cada semana y cruzarlas con las restricciones de C | 8-16 clave | Supuesto de Personas agregado, no por manager. Desplaza coordinación de delivery. La validación inicial de agendas M1-M3 se imputa en la primera liberación (60-96 h, fila de liderazgo técnico y managers) y no se repite acá; las 8-16 h quedan como techo y el CFO publica el remanente antes de la segunda liberación ([R-26](07-resoluciones.md#finanzas)). Si el acta de la validación no deja las agendas validadas, esa validación pasa a esta fila y se recostea antes de la segunda liberación, sin sumar las dos |
-| Talento / administración: convocatorias y registro de completitud | 8-16 distribuidas | Supuesto de Personas agregado. Desplaza trabajo de staff |
+| Managers / Operaciones: actualizar agendas cada semana y cruzarlas con las restricciones de C | 8-16 clave | Supuesto de Personas agregado, no por manager. Desplaza coordinación de delivery. La validación inicial de agendas M1-M3 se imputa en la primera liberación (16-24 de las 60-96 h, en la fila de liderazgo técnico y managers) y no se repite acá; las 8-16 h quedan como techo y el CFO publica el remanente antes de la segunda liberación ([R-26](07-resoluciones.md#finanzas)). Si el acta de la validación no deja las agendas validadas, esa validación pasa a esta fila y se recostea antes de la segunda liberación, sin sumar las dos |
+| Personas / administración: convocatorias y registro de completitud | 8-16 clave | Supuesto de Personas agregado. Va en el soporte clave, como la fila «Staff» de E: un solo sobre. Desplaza trabajo de staff |
 | QA / datos: extracción y reproducción del indicador existente | 8-16 clave | Supuesto de Personas, solo sobre fuentes existentes, sin plataforma nueva. Desplaza QA o análisis. Si la fuente no permite medir, declarar «sin medir» y volver a costear la instrumentación |
-| **Subtotal interno de Personas** | **448-596 h** | **80-160 clave + 368-436 distribuidas**, extremos sumados; punto poblacional ~65: 478-566 h |
+| **Subtotal interno de Personas** | **448-596 h** | **88-176 clave + 360-420 distribuidas**, extremos sumados; punto poblacional ~65: 478-566 h |
 
 No es el total del paquete: B/C/E agregan arquitectura, controles, gobierno,
 intermedio y prueba. Finanzas concilia solapes antes de sumar: diccionario,
@@ -1051,8 +1168,14 @@ dos veces por tener dos dueños.
 
 Las 6 h de básico del líder, facilitador o manager están en participantes;
 el soporte es trabajo adicional, con bloques distintos. Si una persona cubre
-varios roles, libera la suma en su agenda semanal. No se heredan los ~1,8 FTE
-ni el contrato 0,5 FTE del programa completo.
+varios roles, libera la suma en su agenda semanal. Los pisos de 1,6 y ~1,8 FTE
+quedaron retirados y no se hereda el contrato de 0,5 FTE del programa completo.
+
+Recálculo del subtotal: clave 48 + 16 + 8 + 8 + 8 = 88 y 96 + 32 + 16 + 16 + 16 =
+176 h; distribuidas 360-420 h; 88 + 360 = 448 y 176 + 420 = 596 h, igual que antes
+de pasar Personas al sobre clave; con ~65 personas, 390 + 88 = 478 y 390 + 176 = 566 h.
+La tabla no incluye las **64 h de seniors que sostienen las prácticas de la cohorte**,
+que E costea en el soporte clave del mínimo a tarifa de rol.
 
 **Preparación.** Las 8-16 h de preparación de facilitación están dentro de su
 fila, no son un adicional. Las 20-40 h técnicas existentes quedan separadas de
@@ -1067,8 +1190,8 @@ ejecución posterior; no se suma el subtotal bruto de Personas a E.
 |---|---:|---|
 | Liderazgo técnico, coordinación y managers | 16-24 | Convocar y coordinar; validar agendas propias y M1-M3, desplazamiento y cobertura; preparar y tomar la decisión y cerrar el acta |
 | Analista funcional | 20-32 | Contrastar diagnóstico y documentación; preparar, conducir y sintetizar 4-6 entrevistas de una hora; conciliar padrón y matriz persona-semana |
-| Staff de Operaciones, Talento, Comercial y Finanzas, incluidos entrevistados | 16-24 | Participar de entrevistas; aportar compromisos y ausencias; relevar restricciones y roles con C; conciliar horas, costos y solapes B/C/D; aportar evidencia al cierre |
-| Verificador senior independiente del productor | 8-16 | Contrastar entregables y conciliación con fuentes; registrar brechas, revisar acta y cierre documental |
+| Staff de Operaciones, Personas, Comercial y Finanzas, incluidos entrevistados | 16-24 | Participar de entrevistas; aportar compromisos y ausencias; relevar restricciones y roles con C; conciliar horas, costos y solapes B/C/D; aportar evidencia al cierre |
+| Verificador senior independiente del productor, fuera de la línea de Tecnología | 8-16 | Contrastar entregables y conciliación con fuentes; registrar brechas, revisar acta y cierre documental |
 | **Total organizativo adicional** | **60-96** | Entrevistados, managers, decisor, preparación, síntesis, verificación y cierre incluidos; no volver a sumar sus horas |
 
 El rol concreto de cada entrevistado se registra en privado y sus horas se
@@ -1188,7 +1311,7 @@ Nada de eso se resta: no se asume ahorro, y el piso de contenidos del básico
 revisión del resultado, consulta e incidente) no baja.
 
 **Qué hay que recostear en cada alternativa:** preparación y facilitación (8-16 h +
-8-16 h), soporte de Talento (8-16 h), evaluación práctica, soporte de pares y los
+8-16 h), soporte de Personas (8-16 h), evaluación práctica, soporte de pares y los
 solapes B/C/D, con la base congelada antes de formar y probar. Si la base se
 amplía, semanas 9-13 son cinco semanas.
 
@@ -1213,7 +1336,7 @@ autorizados, y deja **evidencia de la revisión de su resultado**. Aprueba si us
 una herramienta y una superficie permitidas, no envía datos prohibidos según la
 clasificación, revisa el resultado y sabe dónde consultar o reportar un incidente.
 Evalúa la facilitación técnica durante la práctica de la sesión, dentro de sus
-16-32 h clave; registra Talento, dentro de sus 8-16 h distribuidas; la práctica
+16-32 h clave; registra Personas, dentro de sus 8-16 h de soporte clave; la práctica
 entra en las 6 h por persona. Completar el básico es **aprobar el caso**, no asistir.
 
 El CAIO aprueba el instrumento, y la facilitación confirma el encaje en las horas
@@ -1236,6 +1359,11 @@ y volver a costear con una decisión explícita; no dar la meta por lograda por 
 **Referencia del programa completo.** Las tablas anuales siguientes describen
 ese alcance, no el pedido inicial vigente ni una autorización de contratación.
 El insumo del mínimo está en la sección previa y su consolidación está en E.
+Conservan el calendario publicado (avanzado en M4-M6, champions en M4-M12); con
+[R-23](07-resoluciones.md#personas), lo ampliado arranca recién después del gate
+del mes 6, y si se autoriza el CFO lo recostea con ese calendario. Por ejemplo,
+champions durante 6 meses en vez de 9: 8 × 10% × 6 × 160 = 768 h, 7,68-26,88k USD
+a 10-35 USD/h, en lugar de ~1.150 h y 11,5-40,25k USD.
 
 Costo de horas = horas x 10-35 USD/h (supuesto). Es valuación a costo
 cargado, no ingreso perdido ni caja incremental. Finanzas estima aparte el trabajo,
@@ -1250,7 +1378,7 @@ contribución por trabajo ([fuentes faltantes](../../material/huecos.md)).
 | Nivel intermedio, ~50 personas x 12 h | Meses 1-9 | ~600 | 6,0 - 21,0 | Supuesto |
 | Nivel avanzado, ~10 personas x 480 h x 10-15% (convención de costeo) | Meses 4-6 | 480 - 720 | 4,8 - 25,2 | 10-15% de [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md); resto, supuesto |
 | Champions, 8 personas x 10% x 9 meses | Meses 4-12 | ~1.150 | 11,5 - 40,25 | 10% de [programa](../../material/conceptos/m3u2-programa-champions.md); resto, supuesto |
-| Prueba chica de los meses 1-3: 2 champions de Tecnología al 10% durante 2 meses | Meses 1-3 | 64 | 1,2 - 3,0 | 2 x 10% x 2 x 160 h; el costo no usa 10-35 USD/h (daría 0,64-2,24) sino la tarifa por rol que fija el Anexo E ("Prueba chica de los meses 1-3 (primeros 100 días)": 0,4 persona-mes a 3,0-7,5k USD, equivale a unos 19-47 USD/h). El diseño (40-80 h de tech lead) y la lectura (16-24 h de DevOps/QA) los costea el Anexo E como tiempo clave, no entran acá |
+| Prueba chica de los meses 1-3: 2 seniors de Tecnología al 10% durante 2 meses (los que sostienen las prácticas de la cohorte; no son champions) | Meses 1-3 | 64 | 1,2 - 3,0 | 2 x 10% x 2 x 160 h; el costo no usa 10-35 USD/h (daría 0,64-2,24) sino la tarifa por rol que fija el Anexo E ("Prueba chica de los meses 1-3 (primeros 100 días)": 0,4 persona-mes a 3,0-7,5k USD, equivale a unos 19-47 USD/h). El diseño (40-80 h de tech lead) y la lectura (16-24 h de DevOps/QA) los costea el Anexo E como tiempo clave, no entran acá |
 | **Subtotal horas de capacitación** | Meses 1-12 | **~2.684 - 2.924** | **~27,4 - 103,1** | Suma |
 | Líder del programa, 20% de una persona, 12 meses | Meses 1-12 | **384 (sobre clave)** | 10,8 - 24,0 | 20% x 12 x 160 h; costo: 20% x 12 x 4.500-10.000 USD por mes ([tech lead](../../context/supuestos/costo-cargado-por-rol.md)). Reasignar no elimina las horas; no integra el subtotal de capacitación |
 | Contractor de IA aplicada, 9 meses, 100%, **solo si la decisión del mes 3 encuentra una señal** | Meses 4-12 | n/a | 40,5 - 99,0 | 9 x 4.500-11.000 USD por mes ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)). Sin señal el renglón sale y queda el cierre que costea el Anexo E (~4k USD en el medio). Reemplaza la fracción de 0,8 FTE de IA aplicada del Anexo B: no se suma con ella |
@@ -1273,9 +1401,13 @@ incluida la corrección del solape de Seguridad B/C que concilie Finanzas.
 Las partidas de Personas se detallan en «Insumo para el paquete mínimo» y no se
 suman al consolidado sin descontar solapes y preparación.
 
-Los pisos **1,6/~1,8 FTE clave** y las **590/654 h distribuidas** pertenecen
-al programa completo y **no se confirman hoy**. Sus 64 h de prueba y el líder
-al 20% tampoco se trasladan automáticamente al mínimo.
+Los pisos de **1,6 y ~1,8 FTE clave** quedaron retirados
+([sobre de capacidad](../../context/supuestos/sobre-de-capacidad-separado.md)): cada
+alcance calcula su sobre por separado. Las **590/654 h distribuidas** son del
+programa completo y no se confirman hoy, y el líder al 20% no se traslada al
+mínimo, donde la oficina del CAIO tiene sus propias horas. Las **64 h de la prueba
+sí están en el mínimo**: E las costea como seniors que sostienen las prácticas de la
+cohorte, en el soporte clave.
 
 **Horas y costo del avanzado, conciliados con el Anexo E.** El rango es 480-720 h;
 para capacidad se usa su punto medio, 600 h. El costo es 4,8-25,2k USD y su
@@ -1310,8 +1442,10 @@ Finanzas: la facturación en USD no se publica.
   esas horas. Total de personas del programa publicado ~87,2-248,9k USD
   (con contractor desde el mes 1 y al 100% en los meses 4-12; ~46,7-149,9k USD sin
   señal). No es el presupuesto del nuevo paquete mínimo.
-- **Señal de alerta para «Personas»:** Tecnología ≥80% en M6 y ≥85% en M12;
-  Operaciones habilitadas ≥60% en M12 (≥40% en M6, meta intermedia).
+- **Señal de alerta para «Personas»:** Tecnología ≥80% en M6 y ≥85% en M12.
+  Operaciones habilitadas no tiene meta en M6; ≥60% en M12 (≥40% en M9 como meta
+  intermedia) solo si el Directorio autoriza el programa ampliado en el gate del
+  mes 6. La meta de ≥40% no va en la slide.
   Cumplir exactamente 85%/60% en M12 con igual peso y toda Operaciones habilitada
   da 72,5%, no cumplimiento del OKR 80%.
   Conservar metas por área y publicar combinado original, habilitados/total y
@@ -1343,8 +1477,8 @@ Finanzas: la facturación en USD no se publica.
   sin dato del contractor; el replan de los meses 4-6 depende de ella y no se da
   por confirmado (ver "Holgura de 0,2 FTE del contractor en los meses 4-6 (replan
   del Anexo B)"). La documentación mínima reproducible se imputa por entregable
-  a la fracción que lo produce (0,8 o 0,2); los supuestos de umbrales técnicos todavía dicen
-  que este anexo la cargaba entera al 0,8, y quien los verificó tiene que actualizar esa cautela.
+  a la fracción que lo produce (0,8 o 0,2), como también dicen los supuestos de
+  umbrales técnicos.
 - La matriz privada de capacidad todavía no existe: su estructura y las 16-24 h de
   padrón y matriz están adoptadas ([R-24](07-resoluciones.md#personas)) y son
   válidas si se cumplen las condiciones del día 2.
@@ -1355,6 +1489,9 @@ Finanzas: la facturación en USD no se publica.
   imputada en la primera liberación ([R-26](07-resoluciones.md#finanzas)).
 - Reserva propuesta, demanda costeada, disponibilidad real y decisiones futuras
   son cosas distintas; ninguna agenda está liberada ni ninguna decisión aprobada.
+- La dedicación de la oficina del CAIO por tarea (48-96 h en M1-M3, 14-24 h y
+  4-6 h de cambio por tramo después) es un supuesto de Personas que reparte filas
+  ya costeadas en E; se contrasta con la agenda real del CAIO en la validación.
 - El anexo nombra roles; las personas que los ocupan se nombran en el acta de cada
   liberación ([R-06](07-resoluciones.md#autoridad-y-liberaciones)).
 - El curso describe el estudio de un rol a 18 meses; el plan lo adapta a 12 y es

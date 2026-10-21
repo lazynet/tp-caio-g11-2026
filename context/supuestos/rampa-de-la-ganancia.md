@@ -76,8 +76,9 @@ convertidas.
 - Ese caso se trata como espera y eventual corte según las mediciones y los
   gates, incluida la espera de 6 semanas y el corte si vence sin mejora.[^umbrales-tecnicos]
 - La unidad de throughput y su valuación las define el Anexo E; la rampa se
-  aplica sobre el throughput, no sobre su valuación. Mide el Responsable de
-  Tecnología, lee el AI Council en los meses 6 y 9 y convierte el CFO solo con
+  aplica sobre el throughput, no sobre su valuación. Produce la medición
+  Tecnología, la verifica el verificador senior independiente, fuera de la línea
+  de Tecnología, lee el AI Council en los meses 6 y 9 y convierte el CFO solo con
   destino decidido en el mes 6; sin pasar, espera única o corte (R-19)[^resoluciones].
 
 [^ganancia-productividad]: Ganancia de productividad por IA en ingeniería, rango propuesto como hipótesis y reparto de medición, lectura y conversión.

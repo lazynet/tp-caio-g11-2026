@@ -49,6 +49,11 @@ El núcleo restringido por trimestre propone 12 h de tech lead, 12 h de
 Seguridad y 12 h de staff para accesos, incidentes y revisión de permisos:
 36 h. Con los costos por rol, suma 675-1.687,50 USD de tiempo, con techo
 propuesto de 2.000 USD por trimestre y sin caja nueva.[^minimo][^costo-rol]
+Las 36 h incluyen una sesión del AI Council de 2 h por trimestre con sus cinco
+asientos, no la cadencia mensual: 30 h de Council costarían hasta 1.406,25 USD
+y, sumadas al núcleo, 3.093,75 contra el techo de 2.000. Quién supervisa y
+quién pausa el núcleo lo fija el Anexo C; otra cadencia exige recostear antes
+del gate de salida y, si no entra en el techo, vuelve al Directorio.[^minimo][^gobierno]
 
 Después de M3, tres trimestres suman 108 h y un techo de 6.000 USD de tiempo.
 Lo firma el CEO en el gate de salida, dentro de 85 y con verificación del CFO
