@@ -963,6 +963,11 @@ techo, sin excepciones.
 
 ## Riesgos y mitigación
 
+**Registro del paquete completo: alternativa y antecedente.** Los pisos,
+excepciones, reservas y referencias a «hoy» de esta tabla corresponden a ese
+alcance. Son condiciones propuestas para el paquete completo, no autorizaciones
+del mínimo ni de la validación actual de 8k USD. No acreditan aprobación vigente.
+
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
 | El tiempo reasignado no existe: sale de horas facturables o de entregas a clientes | Alta | Alto | Piso de capacidad por tramo de tres meses confirmado en la aprobación de hoy; sobre por rol aprobado; suplentes ([Anexo D](04-personas-cultura.md)) | Utilización bajo la meta de 80% dos meses seguidos por causa del plan: se recorta el frente que más tiempo consume |
@@ -1082,7 +1087,7 @@ prueba desde la semana 5 con el agente de código actual
 intermedio y prueba arrancan desde semana 5; si se extiende hasta semana 8,
 los tres se desplazan a semana 9 y se revisa completitud M3. Lo que no despeja es la
 atribución: con 15-20 personas y σ sin dato, su efecto no se separa del de la
-formación. Eso la vuelve aprendizaje, no valor, pero no la impide. Va en la aprobación de hoy.
+formación. Eso la vuelve aprendizaje, no valor, pero no la impide. Va en la aprobación del paquete completo (alternativa), no en la autorización de la validación actual de 8k USD.
 
 **Tarifa de las 64 h: una sola, la de rol** (≈ 19-47 USD/h). Son horas de dos
 desarrolladores senior ([costo por rol](../../context/supuestos/costo-cargado-por-rol.md)),
@@ -1657,7 +1662,7 @@ cualquier excepción exige nuevo costeo y nueva decisión.
 | Tensión | Planteada por | Posición de Finanzas | Estado |
 |---|---|---|---|
 | Exceso de ~0,3 FTE clave en los meses 4-6 con el producto diferido | Finanzas | Arquitectura propone el replan del Anexo B (los meses 4-6 en 2,2 FTE clave, −5k USD de tiempo) y la excepción acotada como respaldo. Finanzas toma el replan como base y deja la excepción costeada | **Pendiente del board para el paquete completo (antecedente)**: replan o excepción; no es una decisión de la validación actual de 8k USD |
-| El base presentado como paso asegurado del mes 6 y del mes 9, cuando el Anexo F decide por límite inferior; "~20 personas" sin definir con una cohorte de 15-20 | Finanzas | El año del base es condicional y se lee en tres ramas (−332 / ≈ −275 / ≈ −245); el mínimo pasa a 15 activas, como supuesto | **Propuesta** a Arquitectura (Anexo B, "Muestra insuficiente") y a CAIO (Anexo F y slide 9) |
+| El base presentado como paso asegurado del mes 6 y del mes 9, cuando el Anexo F decide por límite inferior; "~20 personas" sin definir con una cohorte de 15-20 | Finanzas | El año del base es condicional y se lee en tres ramas (−332 / ≈ −275 / ≈ −245); el mínimo pasa a 15 activas, como supuesto | **Propuesta** a Arquitectura (Anexo B, "Muestra insuficiente") y a CAIO (Anexo F y slide «Costo y riesgo») |
 | +20% de throughput con agentes a 12× lo pagado, contra el OKR de gasto de tecnología de menos de 3,5% | Arquitectura | A régimen, la base libera ~130k USD por año, que cubren consumo incremental hasta ~7× la suscripción. La caja del plan suma gasto de tecnología: el OKR es incompatible salvo que baje la nube. Propuesta: medirlo sin la inversión del plan, o por persona activa | **Escalada a CAIO** para reformular el resultado clave |
 | Sobre de capacidad: lectura estricta o separada | Finanzas | La separada es propuesta de Finanzas; con la estricta, los meses 1-3 no entran sin recortar el básico | **Decisión del paquete completo (antecedente)**, no de la validación actual de 8k USD. Para el pedido vigente, F propone decidir la lectura del sobre en la segunda liberación, antes de M1; es una propuesta pendiente de ratificación, no un acuerdo (ver [F, «Decisiones pendientes para el board o el equipo»](06-roadmap-riesgo.md#decisiones-pendientes-para-el-board-o-el-equipo)) |
 | Staffing facturado por hora desincentiva el uso de IA | Personas | Productividad en staffing = 0 en el base. Las horas de capacitación de Operaciones (~400 h) cuestan 4-14k USD a costo; a tarifa de venta valen más, y eso se calcula con los datos internos | **Resuelta** para el costo; el modelo comercial queda **escalado a CAIO** |
