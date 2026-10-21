@@ -22,6 +22,11 @@ Cada sección del plan, con su fuente principal, sus complementos y las fichas
 concretas que conviene citar. Antes de llevar una cifra a una slide, revisá la
 sección `# Cautelas` de la ficha y los [huecos](/huecos.md).
 
+Como complementos en `draft`, [M2U1 Vibe Coding y prototipado ejecutivo](/unidades/m2u1-vibe-coding.md)
+aporta al roadmap técnico y al paso de prototipo a producción;
+[M2U2 Agentes de IA y arquitecturas modernas](/unidades/m2u2-agentes-arquitecturas.md)
+aporta a arquitectura, integración con herramientas y evaluación de agentes.
+
 | Sección | Fuente principal | Complementos | Fichas para citar |
 |---|---|---|---|
 | Diagnóstico / punto de partida | [M1U1](/unidades/m1u1-mentalidad-caio.md): madurez en 5 dimensiones, escala 1-5 | [AIMM](/frameworks/aimm-gartner.md) (draft), [Cisco](/frameworks/cisco-ai-readiness.md), [Microsoft agentic maturity](/conceptos/m1u4-microsoft-agentic-maturity.md) | [Diagnóstico en 5 dimensiones](/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md), [plan de 30 días](/conceptos/m1u1-plan-30-dias.md), [pilares de Cisco](/frameworks/cisco-ai-readiness-pilares.md), [perfiles de Cisco](/frameworks/cisco-ai-readiness-perfiles.md), [niveles AIMM](/frameworks/aimm-niveles.md), [apunte 11/8](/apuntes/2026-08-11-mentalidad-caio.md) |

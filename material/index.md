@@ -21,6 +21,8 @@ okf_version: "0.2"
 * [M1U2 Portfolio y 100 días](/unidades/m1u2-portfolio-100-dias.md) - Priorización del portfolio de IA y ejecución de los primeros 100 días en tres fases
 * [M1U3 Datos y contexto](/unidades/m1u3-datos-contexto.md) - Estrategias de contexto, data contracts y manejo de datos sensibles en inferencia
 * [M1U4 Rol, gobernanza y arquitectura org.](/unidades/m1u4-rol-gobernanza.md) - Decision rights, escala de autonomía, Governance Stack y marco regulatorio del CAIO
+* [M2U1 Vibe Coding y prototipado ejecutivo](/unidades/m2u1-vibe-coding.md) - Programación en lenguaje natural, prompting y transición de un prototipo ejecutivo a una solución en producción.
+* [M2U2 Agentes de IA y arquitecturas modernas](/unidades/m2u2-agentes-arquitecturas.md) - Taxonomías y patrones de agentes, uso de herramientas, recuperación de contexto y evaluación del recorrido hasta el resultado.
 * [M2U3 Fuerza laboral aumentada y sintética](/unidades/m2u3-fuerza-laboral.md) - Cómo conviven personas y agentes, del grafo humano-agente a los sistemas multi-agente
 * [M2U4 AIOps, observabilidad y economía](/unidades/m2u4-aiops.md) - Operación de sistemas de IA en producción, con evals, versionado, release gates y tokenomics
 * [Memoria, contexto y harness](/unidades/memoria-contexto-harness.md) - Data management en soluciones de GenAI, con las 10 fallas de contexto y el modelo Agente = Modelo + Harness

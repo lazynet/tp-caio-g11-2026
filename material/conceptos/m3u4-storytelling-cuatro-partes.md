@@ -5,10 +5,10 @@ description: "Estructura del documento de M3U4 para contar el caso financiero de
 tags: [m3, finanzas, storytelling, defensa]
 sources:
   - id: m3u4-doc
-    resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12.pdf
+    resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12pdf.pdf
     title: "M3U4, documento de lectura (Unidad 12), financial storytelling"
 status: draft
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T17:30:00Z }
+generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
 # Definición
@@ -51,11 +51,12 @@ mismo esquema.
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el texto
-  extraído del documento el 2026-10-21; sin paginación.
+* Ficha en borrador, sin verificación humana. El agente cotejó el PDF localizado el
+  2026-10-21: definición y cuatro partes (p. 4), ejemplo de retail (pp. 6-7) y
+  mini caso de fraude (p. 9). Las páginas cuentan desde la primera página del archivo.
 * Las cifras del ejemplo son didácticas.
 * El ejemplo apoya su narrativa en un piloto con resultados medidos. Si el plan del TIF
   todavía no tiene resultados, la parte de "datos" se arma con supuestos marcados y
   rangos, no con cifras presentadas como hechos.
 
-[^m3u4-doc]: M3U4, documento de lectura (Unidad 12), financial storytelling, ejemplo de narrativa y autoevaluación
+[^m3u4-doc]: M3U4, documento de lectura (Unidad 12), financial storytelling, p. 4; ejemplo de narrativa, pp. 6-7; autoevaluación, p. 9.

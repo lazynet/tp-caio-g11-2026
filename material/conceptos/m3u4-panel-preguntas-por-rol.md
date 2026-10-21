@@ -5,10 +5,10 @@ description: "Qué mira cada rol del panel (CEO, CFO, COO y CTO) en la defensa d
 tags: [m3, defensa, panel, objeciones]
 sources:
   - id: m3u4-doc
-    resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12.pdf
+    resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12pdf.pdf
     title: "M3U4, documento de lectura (Unidad 12), caso práctico / capstone"
 status: draft
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T17:30:00Z }
+generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
 # El panel
@@ -43,12 +43,13 @@ por gates de [kill/scale](/conceptos/m1u2-kill-scale-gates.md). Lectura de esta 
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el texto
-  extraído del documento el 2026-10-21, sección "Caso Práctico / Capstone: Defensa tipo
-  Panel Ejecutivo"; sin paginación.
+* Ficha en borrador, sin verificación humana. El agente cotejó el PDF localizado el
+  2026-10-21, sección "Caso Práctico / Capstone: Defensa tipo Panel Ejecutivo",
+  pp. 7-8: roles, preguntas y respuestas. Las páginas cuentan desde la primera
+  página del archivo.
 * Las respuestas del curso son ejemplos de una cadena de retail. Para el TIF hay que
   reescribirlas con datos del caso; varias suponen pilotos con resultados ya medidos,
   que el plan todavía no tiene.
 * No es una rúbrica: el curso no dice cómo se evalúa cada respuesta.
 
-[^m3u4-doc]: M3U4, documento de lectura (Unidad 12), caso práctico / capstone
+[^m3u4-doc]: M3U4, documento de lectura (Unidad 12), caso práctico / capstone, pp. 7-8.
