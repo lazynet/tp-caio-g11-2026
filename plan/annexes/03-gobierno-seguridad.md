@@ -994,10 +994,17 @@ tiempo 27k-72k redondeado). Tres lecturas de gobierno sobre esas cifras:
   paquete completo, que no se autoriza hoy, y el focalizado sustituye su porción inicial sin
   sumarse dos veces. Además, los meses 1-3 llevan el tiempo del líder, de seguridad, del
   Council y de la matriz.
-- **Base mínima tras un corte.** Es el núcleo del gobierno mínimo: 25% del líder, 20% de
-  seguridad y el Council, que suman ≈ 5.740-13.410 USD por tramo de tres meses (un cuarto de
-  los renglones anuales: 5.737,5-13.406,25). Tres tramos dan ≈ 17.200-40.200 USD, que es el
-  "hasta 40k USD" de tiempo que el Anexo E usa para un corte en la decisión del mes 3. La pasarela se suma solo si ya está instalada ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md)).
+- **Base mínima tras un corte (paquete completo, alternativa; no se traslada al mínimo).**
+  Es el núcleo de gobierno de la referencia anual: 25% del líder, 20% de seguridad y el
+  Council, que suman ≈ 5.740-13.410 USD por tramo de tres meses (un cuarto de los renglones
+  anuales: 5.737,5-13.406,25). Tres tramos dan ≈ 17.200-40.200 USD, que es el "hasta 40k USD"
+  de tiempo que el Anexo E usa, en la tabla de cortes del paquete completo, para un corte en
+  la decisión del mes 3. La pasarela se suma solo si ya está instalada ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md)).
+  El pedido vigente es el paquete mínimo, con otro núcleo: después del mes 3, 108 h
+  (36 por tramo: 12 de tech lead, 12 de seguridad y 12 de staff), caja 0 y tiempo hasta 6k
+  USD, con aprobación explícita en el gate de salida ([Anexo E](05-business-case.md),
+  "Segunda autorización: inicio M1-M3 y reservas de salida"). Son núcleos de alcances
+  distintos: se usa uno u otro según el alcance, nunca la suma.
 - **Controles técnicos y demostración externa, condicionales** (ver "Licencia para vender" y
   "Controles según la decisión del mes 3"). Los renglones de los controles técnicos (pasarela,
   4.500-18.000 USD de caja) y de la demostración externa (11.600-31.000 USD) no se gastan sin señal; el
