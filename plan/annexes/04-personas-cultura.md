@@ -1242,8 +1242,8 @@ al 20% tampoco se trasladan automáticamente al mínimo.
 **Horas y costo del avanzado, conciliados con el Anexo E.** El rango es 480-720 h;
 para capacidad se usa su punto medio, 600 h. El costo es 4,8-25,2k USD y su
 medio es 15k USD, como ya recoge E en "Conciliación de los meses 4-6"; no es
-600 h × 22,5 USD/h (13,5k USD). Son dos convenciones de resumen explícitas, no
-una corrección pendiente ni un costo adicional. Las 480 h por persona-tramo son
+600 h × 22,5 USD/h (13,5k USD). Se mantienen las dos convenciones de resumen
+explícitas, y el costo del avanzado ya está incluido en esos 4,8-25,2k USD. Las 480 h por persona-tramo son
 la base del cálculo de jornada, distintas del piso de horas totales del avanzado.
 No se publica una base de horas totales de la empresa. Si el costo total entra
 dentro del 1% a 3% de la facturación que se asume como capacidad de inversión
