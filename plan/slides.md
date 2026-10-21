@@ -82,9 +82,9 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 <p class="eyebrow">Plan 2027: 12 meses de IA en la operación y en el producto, con los fondos liberados por etapa</p>
 
-<p style="max-width:820px">Hoy la IA se usa, pero nadie midió cuánto valor agrega. Proponemos empezar por lo mínimo que permite medirlo, con controles de seguridad probados y las herramientas que ya pagamos, y ampliar solo con evidencia.</p>
+<p style="max-width:820px">Propósito: mejorar cómo trabajamos y decidir con evidencia dónde evolucionar lo que vendemos. Hoy la IA se usa, pero nadie midió cuánto valor agrega. Proponemos empezar por lo mínimo que permite medirlo, con controles de seguridad probados y las herramientas que ya pagamos, y ampliar solo con evidencia.</p>
 
-<p class="fine">Cifras estimadas, a confirmar con datos internos en una validación de 10 días hábiles que se hace en 2026, antes de que arranque el plan. No presupuestamos repago en el año: pedimos lo que estamos dispuestos a arriesgar para medir, no lo que esperamos ganar.</p>
+<p class="fine">Cifras estimadas, a confirmar con datos internos en una validación de 10 días hábiles que proponemos hacer en 2026, antes de que arranque el plan. No presupuestamos repago en el año: pedimos techos para medir, no lo que esperamos ganar. Montos en k USD (miles de dólares).</p>
 
 ---
 
@@ -114,7 +114,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Autorizar 10 días hábiles para confirmar diagnóstico, cifras y agendas antes de arrancar los meses 1-3 del plan.</span>
+<span class="body">Autorizar 10 días hábiles, hasta 8k USD de tiempo propio y sin caja, para confirmar diagnóstico, cifras y agendas. Si no sostienen el alcance, se reduce o se detiene antes de los meses 1-3.</span>
 <span class="ref">
 
 [Anexo A — Diagnóstico](annexes/01-diagnostico.md)
@@ -126,7 +126,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 <p class="eyebrow">Beneficio</p>
 
-# Lo que compramos es capacidad con calidad, medida
+# Buscamos más capacidad sin perder calidad
 
 <div class="grid g3">
 <div class="card dark">
@@ -152,13 +152,13 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 | | Mes 6 | Mes 9 |
 |---|---|---|
-| <span class="st pasa">Pasa</span> | ≥+3% en el peor caso, sin daño | ≥+8% en el peor caso, sin daño |
-| <span class="st espera">Espera</span> | Estimado >0%, sin pasar | Estimado ≥+5%, sin pasar (a ratificar) |
+| <span class="st pasa">Pasa</span> | Peor caso ≥+3%, calidad sin deterioro | Peor caso ≥+8%, calidad sin deterioro |
+| <span class="st espera">Espera</span> | Estimado >0% sin pasar, o calidad incierta | Estimado ≥+5% sin pasar (a ratificar) |
 | <span class="st corta">Corta</span> | Estimado ≤0%, o daño | Estimado <+5%, o daño |
 
 </div>
 
-<p class="note">Estimado: la mejora medida. Peor caso: el piso de su margen estadístico. Espera: 6 semanas más, sin ampliar; si no pasa, se corta. Daño: más retrabajo o más incidentes. Es exigente a propósito: con la mejora que estimamos para el mes 6 (+3,75%) y el margen máximo que admite el Anexo B (±3 puntos), el peor caso da +0,75% y no pasa.</p>
+<p class="note">Estimado: la mejora medida por persona contra su base. Peor caso: el piso de su intervalo de 90%. Daño: el intervalo confirma más retrabajo o incidentes. Calidad sin deterioro: el aumento posible queda bajo el margen del Anexo B. Con datos insuficientes, también se espera. Espera: 6 semanas más, sin ampliar; si no pasa, se corta. Es exigente: con +3,75% estimado y ±3 puntos de margen, el peor caso da +0,75% y no pasa.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -181,11 +181,11 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 <span class="tag">El paquete mínimo</span>
 <h3>Saber si hay valor, con controles probados</h3>
 <p>Formación básica para todos e intermedia para un grupo de <span style="white-space:nowrap">15-20</span>, controles de seguridad por herramienta, medición contra una base y estudio del asistente para clientes. Con lo que ya pagamos, sin plataforma nueva.</p>
-<p><strong>Lo que se pide hoy no es el año.</strong> Hoy: 8 miles de USD. Techo hasta el mes 3: 79 miles de USD (ver Roadmap).</p>
+<p><strong>Lo que se pide hoy no es el año.</strong> Hoy, 8k USD. Techo propuesto hasta el mes 3: 79k USD (ver Roadmap).</p>
 </div>
 <div class="plain alts">
 
-| Alcance | Costo estimado del año, miles de USD |
+| Alcance | Costo estimado del año, k USD |
 |---|---|
 | Paquete mínimo (recomendado) | ≈70 (27-113) |
 | Piloto con el agente de código actual, sin formación general ni legal | 47 (24-69) |
@@ -197,7 +197,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 </div>
 </div>
 
-<p style="font-size:17px;margin-top:4px">No es una comparación de precios: cada alcance compra cosas distintas. El piloto de 47 es más barato porque deja afuera la formación general y la revisión legal.</p>
+<p style="font-size:17px;margin-top:4px">No es una comparación de precios: cada alcance compra cosas distintas. El piloto de 47k USD es más barato porque deja afuera la formación general y la revisión legal. Plataforma y producto se vuelven a costear antes de decidirlos.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -213,7 +213,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 <p class="eyebrow">Arquitectura</p>
 
-# Arrancamos con lo que ya pagamos y no compramos plataforma sin evidencia
+# Lo que ya pagamos va antes que una plataforma
 
 <p style="font-size:17px">Llamamos <strong>herramienta</strong> a cada lugar donde se usa IA: editor de código, agente de código, chat y suite de oficina. Cada una prueba sus propios controles.</p>
 
@@ -232,7 +232,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 </div>
 <div class="card">
 <h3>¿Plataforma? Solo en un punto de decisión</h3>
-<p>Hoy alcanza con una señal: un contrato, un cambio de precio del proveedor o un cliente interesado. Proponemos exigir además: <strong>1</strong> brecha documentada, <strong>2</strong> alternativas comparables, <strong>3</strong> números que cierren o pérdida aceptada, <strong>4</strong> capacidad demostrada.</p>
+<p>La regla vigente pide una señal: un contrato, un cambio de precio del proveedor o un cliente interesado. Proponemos exigir además: <strong>1</strong> brecha documentada, <strong>2</strong> alternativas comparables, <strong>3</strong> números que cierren o pérdida aceptada, <strong>4</strong> capacidad demostrada.</p>
 </div>
 <div class="card dashed">
 <h3>No se aprueba todavía</h3>
@@ -254,7 +254,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 <p class="eyebrow">Gobierno y seguridad</p>
 
-# Ninguna herramienta se usa sin probar antes sus controles
+# Ningún uso nuevo o ampliado sin probar antes sus controles
 
 <div class="grid g3">
 <div class="kpi"><div class="num">5</div><div class="lbl">miembros en el comité de IA, dentro del comité de tecnología: revisa todos los meses y puede cortar</div></div>
@@ -262,7 +262,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 <div class="kpi"><div class="num">Autonomía 2</div><div class="lbl">tope de la IA en el producto por 12 meses (escala de autonomía 0-4: 0 sin IA, 4 autónoma): prepara, y una persona decide y ejecuta</div></div>
 </div>
 
-<p class="eyebrow" style="margin:18px 0 6px">Sin plataforma central, la política sola no alcanza: así se habilita cada herramienta</p>
+<p class="eyebrow" style="margin:18px 0 6px">Cada control responde a un contrato, un riesgo o una evidencia que falta: así se habilita cada herramienta</p>
 
 <div class="grid g3">
 <div class="card"><h3>1 · Probar</h3><p>Mandamos un secreto falso para ver si se filtra, simulamos un ataque y exigimos revisión humana.</p></div>
@@ -278,7 +278,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 </span></div>
 <div class="grid g3">
 <div><strong>1.</strong> Aplicar la política de IA ya aprobada desde el mes 1. Cambiarla lo decide el Directorio, no este plan.</div>
-<div><strong>2.</strong> Nada de IA en crédito ni en scoring durante 12 meses: como vendemos a bancos y fintechs, son usos de alto riesgo regulatorio. El resto se clasifica caso por caso.</div>
+<div><strong>2.</strong> Ninguna decisión de crédito ni scoring con IA durante 12 meses: como vendemos a bancos y fintechs, son usos de alto riesgo regulatorio. El resto se clasifica caso por caso.</div>
 <div><strong>3.</strong> Ningún uso nuevo sin prueba previa en su herramienta. Si un contrato con un cliente prohíbe un uso, ese uso queda afuera.</div>
 </div>
 </div>
@@ -297,7 +297,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 <div class="kpi"><div class="num">720 h</div><div class="lbl">de personas clave para sostener el plan (1,5 personas a tiempo completo)</div></div>
 <div class="kpi"><div class="num">660 h</div><div class="lbl">de formación, como máximo</div></div>
 </div>
-<p style="font-size:17px">Estimamos usar 970-1.350 h de las 1.380 h reservadas. Operaciones y los managers confirman las agendas, persona por persona, en la validación.</p>
+<p style="font-size:17px">Calculamos una demanda de 970-1.350 h dentro de las 1.380 h reservadas. Operaciones y los managers confirman las agendas, persona por persona, en la validación.</p>
 </div>
 <div class="card dashed" style="margin-top:12px">
 <span class="tag">Propuesta, la decide el Directorio con asesoría laboral</span>
@@ -307,8 +307,8 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 <div>
 
 - **Formación:** básica para todos; intermedia para un grupo de 15-20.
-- **Por qué casos por rol:** en el piloto de abril de 2026 (12 voluntarios) los 12 usaron la herramienta y la valoraron (NPS +42), pero solo 2 de 12 (17%) terminaron los cursos. El freno fue el tiempo: formamos con casos reales, en horario laboral.
-- **Metas de uso:** Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones ≥60% en el 12, entre quienes tengan uso permitido. Juntas no llegan al 80% de uso activo semanal que pide el borrador de objetivos 2027: lo informamos aparte.
+- **Por qué casos por rol:** en el piloto de abril de 2026 (12 voluntarios) los 12 usaron la herramienta y la valoraron (índice de recomendación, NPS, +42), pero solo 2 de 12 (17%) terminaron los cursos. El freno fue el tiempo: formamos con casos reales, en horario laboral.
+- **Metas de uso:** Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones ≥40% en el 6 y ≥60% en el 12, entre quienes tengan uso permitido. Juntas no llegan al 80% de uso activo semanal que pide el borrador de objetivos 2027: lo informamos aparte.
 
 </div>
 </div>
@@ -330,29 +330,29 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 # Primero validar; después, fondos por etapa
 
 <div class="cuenta">
-<div class="cap">Lo que se libera por etapa, en miles de USD</div>
-<div><b>8</b><span>Hoy: validación en 2026, 10 días hábiles. Caja 0 + tiempo 8</span></div>
-<div><b>68</b><span>Con evidencia: meses 1-3. Caja 9 + tiempo 59</span></div>
-<div><b>3</b><span>Con evidencia: reservas para cerrar si cortamos. Caja 1 + tiempo 2</span></div>
-<div class="total"><b>79</b><span>Techo hasta el mes 3. Caja 10 + tiempo 69</span></div>
+<div class="cap">Lo que pedimos liberar por etapa, en k USD</div>
+<div><b>8k</b><span>Hoy: validación en 2026, 10 días hábiles. Caja 0 + tiempo 8</span></div>
+<div><b>68k</b><span>Otra decisión, con evidencia: meses 1-3. Caja 9 + tiempo 59</span></div>
+<div><b>3k</b><span>En esa decisión: reservas para cerrar si cortamos. Caja 1 + tiempo 2</span></div>
+<div class="total"><b>79k</b><span>Techo propuesto hasta el mes 3. Caja 10 + tiempo 69</span></div>
 </div>
 
 <div class="roadmap">
 
 | | Meses 1-3 | Meses 4-6 | Meses 7-9 | Meses 10-12 |
 |---|---|---|---|---|
-| Técnico | Base de medición y controles | Solución y estudio del asistente | Producto solo con un cliente | Evaluación y traspaso |
+| Técnico y gobierno | Base de medición, política y controles | Solución y estudio del asistente | Producto solo con un cliente | Evaluación y traspaso |
 | Cultural | Básico para todos (≥90%) | Referentes; Tecnología ≥80% | Casos por rol | Tecnología ≥85%; Operaciones ≥60% |
-| Techo, miles de USD | **caja 9 · tiempo 59** | caja 2 · tiempo 14 | caja 2 · tiempo 11 | caja 2 · tiempo 11 |
-| Punto de decisión | <span class="st pasa">Pasa</span> base, política y controles probados; gasto dentro del techo | <span class="st pasa">Pasa</span> ≥+3% en el peor caso, sin daño<br><span class="st espera">Espera</span> Estimado >0%, sin pasar | <span class="st pasa">Pasa</span> ≥+8% en el peor caso, sin daño<br><span class="st espera">Espera</span> Estimado ≥+5%, sin pasar (a ratificar) | <span class="st pasa">Pasa</span> al año 2: camino al equilibrio o interés de un cliente |
+| Techo, k USD | **caja 9 · tiempo 59** | caja 2 · tiempo 14 | caja 2 · tiempo 11 | caja 2 · tiempo 11 |
+| Punto de decisión | <span class="st pasa">Pasa</span> base, política y controles probados; gasto dentro del techo | <span class="st pasa">Pasa</span> peor caso ≥+3%, calidad sin deterioro<br><span class="st espera">Espera</span> Estimado >0%, sin pasar | <span class="st pasa">Pasa</span> peor caso ≥+8%, calidad sin deterioro<br><span class="st espera">Espera</span> Estimado ≥+5%, sin pasar (a ratificar) | <span class="st pasa">Pasa</span> al año 2: camino al equilibrio o interés de un cliente |
 
 </div>
 
-<p class="note" style="margin-top:2px">Caja: legal y herramientas. Tiempo: horas de gente de Acme Labs, a su costo. Meses 4-12: no se aprueban hoy. Lo que no pasa ni espera, corta (ver Beneficio).</p>
+<p class="note" style="margin-top:2px">Caja: legal y herramientas. Tiempo: horas de gente de Acme Labs, a su costo. Meses 4-12: no se aprueban hoy. Lo que no pasa ni espera, corta (ver Beneficio). Usar más IA, por sí solo, no prueba valor: la adopción se informa y no libera fondos.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Adoptar estos puntos de decisión como la regla para liberar fondos: hoy, 8 para validar; con evidencia, se liberan hasta 71 más (68 + 3). Techo acumulado: 79.</span>
+<span class="body">Adoptar estos puntos de decisión como regla para liberar fondos: hoy, 8k USD para validar; con evidencia, otra decisión puede liberar hasta 71k USD más (68 + 3). Techo acumulado propuesto: 79k USD.</span>
 <span class="ref">
 
 [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md)
@@ -366,11 +366,11 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 # Cuánto arriesgamos como máximo, y dónde frenamos
 
-<p style="font-size:17px;margin:0 0 8px">Dos cifras distintas: el <strong>techo</strong> es lo máximo autorizado; el <strong>costo estimado</strong> es lo que esperamos gastar. Hoy se liberan 8 miles de USD y se autoriza un techo de 79 hasta el mes 3; el resto, hasta 79, se libera con evidencia (ver Roadmap). Si todo pasa, el año completo tiene un costo estimado de <span style="white-space:nowrap">≈70 (27-113)</span> y un techo de 121.</p>
+<p style="font-size:17px;margin:0 0 8px">Dos cifras distintas: el <strong>techo</strong> es lo máximo que se autorizaría; el <strong>costo estimado</strong> es lo que esperamos gastar. Hoy pedimos 8k USD; otra decisión, con evidencia, puede liberar hasta 71k USD más (ver Roadmap). Si todo pasa, seguimos el año sin plataforma, con costo estimado de <span style="white-space:nowrap">≈70k USD (27-113)</span> y techo de 121k USD: compramos base, medición y controles para decidir el año 2, no ingresos.</p>
 
 <div class="escalera-wrap">
 <div>
-<div class="leyenda"><span><i class="sw-hoy"></i>Se decide hoy</span><span><i class="sw-no"></i>No se decide hoy</span><span><i class="sw-g"></i>Guardia hasta el mes 12</span></div>
+<div class="leyenda"><span><strong>k USD</strong></span><span><i class="sw-hoy"></i>Techo que se pide fijar hoy</span><span><i class="sw-no"></i>No se decide hoy</span><span><i class="sw-g"></i>Guardia hasta el mes 12</span></div>
 <div class="escalera">
 <div class="col"><div class="v"><b>8</b></div><div class="bar"><div class="t" style="height:12px"></div></div><div class="x"><strong>La validación</strong><br>caja 0</div></div>
 <div class="col"><div class="v"><b>79</b> +6 = 85</div><div class="bar"><div class="g" style="height:9px"></div><div class="t" style="height:119px"></div></div><div class="x"><strong>Mes 3</strong><br>caja 10</div></div>
@@ -381,18 +381,18 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 </div>
 <div>
 
-<p class="note" style="margin:0 0 8px"><strong>Si cortamos en cada punto:</strong> techo hasta cerrar + guardia = exposición del año, en miles de USD. Guardia mínima: accesos, incidentes y permisos hasta el mes 12, con caja 0 y 2 de tiempo por trimestre que falte; se aprueba al cortar.</p>
+<p class="note" style="margin:0 0 8px"><strong>Si cortamos en cada punto:</strong> techo hasta cerrar + guardia = exposición del año, en k USD. Guardia mínima: accesos, incidentes y permisos hasta el mes 12, con caja 0 y 2k USD de tiempo por trimestre que falte; se aprueba al cortar.</p>
 
-<p class="note" style="margin:0">Caja que sale de verdad hasta el mes 3: 2,3-8,6 estimado; el resto es tiempo de personas que ya están, sin nómina nueva ni deuda. Sin beneficio presupuestado, el retorno modelado es −100%.</p>
+<p class="note" style="margin:0">Caja que sale de verdad hasta el mes 3: 2,3-8,6k USD estimados; el resto es tiempo de personas que ya están, sin nómina nueva ni deuda. Sin beneficio presupuestado, el retorno modelado es −100%.</p>
 
 </div>
 </div>
 
-<p style="font-size:17px;margin:0 0 10px"><strong>Sin vuelta atrás, no se aprueba nada hoy</strong> (se evalúan en el mes 12 o después): datos de clientes a un modelo · contratos de IA con clientes · IA que ejecuta acciones en el producto, aun con aprobación humana · compromisos de más de 12 meses.</p>
+<p style="font-size:17px;margin:0 0 10px"><strong>Sin vuelta atrás, no se aprueba nada hoy</strong> (se evalúan en el mes 12 o después): datos de clientes a un modelo · contratos de IA con clientes · IA que ejecuta acciones en el producto, aun con aprobación humana · compromisos de más de 12 meses. <strong>No actuar también expone:</strong> el agente de código consume ~12× lo que se paga; con cobro por consumo serían 211-267k USD adicionales al año, con o sin plan. El mínimo no lo cubre.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Aceptar 79 como techo hasta cerrar en el mes 3, liberado en dos etapas; con la guardia mínima, la exposición del año llega a 85. Es un techo de presupuesto, no una pérdida ni una salida de caja.</span>
+<span class="body">Fijar 79k USD como techo hasta cerrar en el mes 3, en dos decisiones (8k + 71k USD); con la guardia, 85k USD en el año. Es un techo, no una pérdida ni una salida de caja.</span>
 <span class="ref">
 
 [Anexo E](annexes/05-business-case.md) · [Anexo F](annexes/06-roadmap-riesgo.md)
@@ -410,9 +410,9 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 # Autorizar la validación inicial
 
-<p style="font-size:22px;line-height:1.4;max-width:1100px;color:#f3efe4">Hoy pedimos 8 (miles de USD): 10 días hábiles de tiempo de personas propias, sin caja, en 2026, antes de que arranque el plan 2027, con cargo al presupuesto 2026 a confirmar junto con las agendas. También pedimos autorizar un techo de 79 hasta el mes 3: con esa evidencia, se liberan hasta 71 más para los meses 1-3 y las reservas. Y adoptar los puntos de decisión de los meses 3, 6, 9 y 12.</p>
+<p style="font-size:22px;line-height:1.4;max-width:1100px;color:#f3efe4">Hoy pedimos al Directorio, o a quien él delegue, 8k USD de tiempo de personas propias, sin caja: 10 días hábiles de validación en 2026, antes del plan 2027, con cargo al presupuesto 2026 a confirmar junto con las agendas. Si la validación no sostiene el alcance, se reduce o se detiene, sin pasar de 8k USD. Si lo sostiene, otra decisión puede liberar hasta 71k USD más para los meses 1-3 y las reservas, dentro de un techo propuesto de 79k USD. Y pedimos adoptar los puntos de decisión de los meses 3, 6, 9 y 12.</p>
 
-<p class="pedido"><b>8</b> hoy &nbsp;→&nbsp; <b>+71</b> con evidencia &nbsp;→&nbsp; <b>79</b> de techo hasta el mes 3 &nbsp;·&nbsp; miles de USD (ver Roadmap)</p>
+<p class="pedido"><b>8k</b> hoy &nbsp;→&nbsp; <b>+71k</b> con otra decisión &nbsp;→&nbsp; <b>79k</b> de techo hasta el mes 3 &nbsp;·&nbsp; USD (ver Roadmap)</p>
 
 <div class="grid g2" style="margin-top:auto;position:relative">
 <div>
@@ -421,7 +421,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 <p class="fine">Quienes producen, verifican y firman cada punto de decisión en Acme Labs se designan como condición de la primera autorización.</p>
 </div>
 <div class="fine" style="max-width:340px">
-<p>79 es un techo, no salida de caja. Plataforma y producto se vuelven a costear antes de decidirlos. Cifras estimadas, a confirmar con fuentes internas.</p>
+<p>79k USD es un techo de autorización, no gasto esperado ni salida de caja. Plataforma y producto se vuelven a costear antes de decidirlos. Cifras estimadas, a confirmar con fuentes internas.</p>
 <p>Hicimos este plan con IA: un asistente por rol, una revisión adversarial simulada y chequeos automáticos de fuentes y de datos privados.</p>
 </div>
 </div>
