@@ -111,11 +111,16 @@ reportó la infracción; intencionalidad o negligencia; medidas de mitigación.
 
 - **Sección 5 del cap. III** (arts. 40-49: normas, evaluación de conformidad,
   registro): el art. 113.c modificado menciona solo las secciones 1, 2 y 3. Qué
-  fecha rige para los arts. 43 y 49 no queda explícito en el artículo; hay que
-  leerlo contra el texto consolidado antes de fijar un hito. No se resolvió.
-- Se leyó el texto del Omnibus en una copia en PDF del DOUE L de 24.7.2026 (la
-  página de EUR-Lex no devolvió el texto al scraper). Cotejar los artículos en
-  el enlace ELI antes de citarlos en una slide.
+  fecha rige para los arts. 43 y 49 no queda explícito en el artículo. El Omnibus
+  sustituye el art. 43.3: los organismos notificados del Anexo I, sección A, piden
+  su designación a más tardar el **2028-01-28** (p. 22). No modifica el art. 49; el
+  registro del art. 49.2 se simplifica suprimiendo los puntos 7 y 9 del Anexo VIII,
+  sección B (p. 36; considerando 22). Qué fecha rige es una lectura a decidir, no
+  un dato del texto.
+- Cotejado el 2026-10-21 contra el texto español del DOUE L de 24.7.2026, bajado
+  de EUR-Lex (CELEX_32026R1744_ES_TXT.pdf, 41 p.): arts. 111 y 113 modificados
+  (p. 35), art. 72.3 (p. 26), considerando (40) (p. 12) y art. 4 del Omnibus,
+  entrada en vigor (p. 41). Coinciden con la tabla.
 - Las fuentes secundarias (estudios jurídicos) coinciden en 2 de diciembre de
   2027 y 2 de agosto de 2028; la primaria lo confirma. Sobre el art. 50.2, un
   resumen secundario lo da como aplicable sin matices; el texto primario fija

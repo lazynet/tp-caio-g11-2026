@@ -59,7 +59,8 @@ así que alcanza a un proveedor argentino con clientes que operan en Europa.[^eu
   en vigor desde el 27 de julio de 2026). Detalle en el
   [calendario](/frameworks/eu-ai-act-calendario-sanciones.md).[^ai-omnibus]
 - **Abierta:** qué fecha rige para la evaluación de conformidad y el registro
-  (arts. 43 y 49) tras el Omnibus. Ver el calendario.
+  (arts. 43 y 49) tras el Omnibus. El texto del DOUE no la fija: el Omnibus
+  sustituye el art. 43.3 y no modifica el art. 49. Ver el calendario.
 - **Abierta:** aplicabilidad concreta a los clientes de Acme Labs (art. 2.1.c)
   y su tamaño como PyME, que condicionan multas y obligaciones. No se resuelve
   con el material de la cursada.

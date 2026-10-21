@@ -12,13 +12,9 @@ sources:
     title: Reg. (UE) 2024/1689 en EUR-Lex (fuente primaria)
   - id: ai-omnibus
     resource: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
-    title: Reg. (UE) 2026/1744, Digital Omnibus on AI, DOUE L de 24.7.2026
+    title: Reg. (UE) 2026/1744, Ómnibus digital sobre IA, DOUE L de 24.7.2026 (texto español, CELEX_32026R1744_ES_TXT.pdf)
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
-status: verified
-verified:
-  by: human:lazynet
-  at: 2026-10-20
-  scope: "Reglamento (UE) 2024/1689, texto español del DOUE (EU AI Act 2024.pdf), arts. 2, 3.3, 3.4, 3.49, 4, 9-21, 25-27, 43, 49, 72 y 73; las modificaciones del Reglamento 2026/1744 no se cotejaron. Cotejo del agente revisado y confirmado por Martín en esta conversación."
+status: draft
 ---
 
 # Alcance territorial (art. 2)
@@ -63,13 +59,20 @@ su nombre tengan "un nivel suficiente de alfabetización en materia de IA", seg�
 experiencia, formación y contexto de uso. Aplica desde el 2 de febrero de
 2025.[^eu-ai-act]
 
-**Texto vigente tras el Omnibus:** pasa a "adoptarán medidas para **apoyar el
-desarrollo**" de esa alfabetización y aclara que no exige garantizar un nivel
-específico a cada individuo. La Comisión y los Estados miembros pasan a apoyar y
-facilitar, con ejemplos prácticos para PyMEs.[^ai-omnibus] El considerando (8)
-dice que una obligación de resultado era una carga para empresas chicas y que la
-alfabetización debería ser prioridad estratégica "independientemente de las
-obligaciones y sanciones".[^ai-omnibus]
+**Texto vigente tras el Omnibus (art. 4.1, p. 16):** "adoptarán medidas para
+**apoyar la promoción** de la alfabetización en materia de IA de su personal y demás
+personas que se encarguen en su nombre del funcionamiento y la utilización de
+sistemas de IA", con los mismos criterios de conocimientos, experiencia, formación y
+contexto de uso. Agrega: "Esta obligación no exige que los proveedores o los
+responsables del despliegue garanticen un nivel específico de alfabetización en
+materia de IA de ninguna persona en particular". La Comisión y los Estados miembros
+apoyan y facilitan, "en particular de las pymes", y la Comisión publica ejemplos
+prácticos (4.2); el Consejo de IA adopta recomendaciones según los marcos europeos
+de competencias (4.3).[^ai-omnibus] La frase "apoyar el desarrollo" es del
+considerando (8), no del artículo. El considerando dice que una obligación
+estricta era una carga, en particular para las pequeñas empresas, y que la
+alfabetización debe ser prioridad estratégica "independientemente de las
+obligaciones reglamentarias y las posibles sanciones" (p. 3).[^ai-omnibus]
 
 Para el plan: es un piso de people plan que ya rige hoy; ver
 [M3U2](/unidades/m3u2-cambio-literacy.md).
@@ -89,10 +92,12 @@ Los exige el proveedor (sección 2 del cap. III):[^eu-ai-act]
 | 15 | Precisión, solidez y ciberseguridad | Niveles declarados en las instrucciones; robustez ante errores; mitigar bucles de retroalimentación; resistencia a envenenamiento de datos y de modelos, ejemplos adversarios y ataques a la confidencialidad | 61 |
 
 El art. 10.5 permitía tratar categorías especiales de datos para detectar
-sesgos bajo seis condiciones; el Omnibus lo reemplaza por un nuevo art. 4a con
-condiciones equivalentes (sólo si es estrictamente necesario, sin alternativa
+sesgos bajo seis condiciones; el Omnibus suprime el 10.5 y lo reemplaza por un
+nuevo **art. 4 bis** (p. 17 y 19) con condiciones equivalentes (sólo si es estrictamente necesario, sin alternativa
 sintética o anonimizada, con seudonimización, acceso controlado, sin
-transferencia a terceros y borrado una vez corregido el sesgo).[^eu-ai-act][^ai-omnibus]
+transferencia a terceros y borrado una vez corregido el sesgo). El 4 bis.2 extiende
+la posibilidad a los desplegadores y a otros sistemas y aclara que "no crea
+obligación alguna" de detectar y corregir sesgos.[^eu-ai-act][^ai-omnibus]
 
 # Obligaciones del proveedor (art. 16 y siguientes)
 
@@ -247,10 +252,11 @@ los puntos 5.b y 5.c del Anexo III: ver
   (a) y (c) del art. 25, "un LLM usado para decidir crédito es alto riesgo") son
   aplicación del repo, y el segundo supuesto vale solo para evaluar la solvencia de
   personas físicas (Anexo III, punto 5.b).
-- Las partes basadas en el Reglamento 2026/1744 (Omnibus), incluidos el art. 4 "vigente",
-  el art. 4a, el plan de vigilancia al 2 de septiembre de 2027 y el refuerzo para PyMEs,
-  no se pudieron cotejar: EUR-Lex devolvió una página vacía. Quedan como "no cotejable:
-  fuente inaccesible" hasta abrir el texto oficial.
+- Las partes basadas en el Reglamento 2026/1744 (Omnibus) se cotejaron el 2026-10-21
+  contra el texto español del DOUE L de 24.7.2026 (PDF de EUR-Lex, 41 p.): art. 4
+  (p. 16), art. 4 bis (p. 17), art. 10.5 suprimido (p. 19), art. 17.2 y 25.2 y 25.4
+  (p. 19-20) y art. 72.3 (p. 26). Coinciden; se corrigió la cita del art. 4 ("apoyar
+  la promoción", no "apoyar el desarrollo") y el nombre del art. 4 bis.
 - Las entidades financieras tienen reglas propias que la ficha no recoge: arts. 17.4,
   18.3, 19.2, 26.5 (párr. 2) y 26.6 (párr. 2) los remiten a su normativa financiera, y el
   art. 72.4 permite integrar la vigilancia poscomercialización del Anexo III punto 5.
@@ -270,4 +276,4 @@ los puntos 5.b y 5.c del Anexo III: ver
 
 [^eu-ai-act]: Reg. (UE) 2024/1689, texto en español del DOUE; páginas del PDF indicadas en el texto.
 [^eu-ai-act-eurlex]: Misma norma en EUR-Lex: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
-[^ai-omnibus]: Reg. (UE) 2026/1744, art. 1 puntos 5, 6, 9, 11, 12 y 30, considerando (8), DOUE L de 24.7.2026.
+[^ai-omnibus]: Reg. (UE) 2026/1744, art. 1 puntos 5, 6, 9, 11, 12 y 30, considerando (8), DOUE L de 24.7.2026; páginas del PDF en español indicadas en el texto.
