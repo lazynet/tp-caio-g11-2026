@@ -2,7 +2,11 @@
 type: Hecho
 title: "Estructura de ingresos por línea de negocio"
 description: "Cerca del 40% de la facturación sale de un producto operado bajo suscripción para un solo cliente y otro tanto de staffing; el margen más alto está en el soporte a la plataforma propia."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con el cierre financiero de agosto de 2026 y los documentos de OKR: mezcla de ingresos, márgenes relativos, recurrencia y productos en inversión. Incluye la confirmación de que el 45% se calcula sobre la facturación recurrente. Confirmado por Martín en esta conversación."
 tags: [caso, finanzas, negocio]
 sources:
   - id: interno-finanzas-2026

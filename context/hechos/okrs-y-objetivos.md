@@ -2,7 +2,11 @@
 type: Hecho
 title: "OKR y objetivos de la organización y de Tecnología"
 description: "Los OKR de la empresa son financieros y comerciales; Tecnología prepara para 2027 objetivos de productos recurrentes, eficiencia con IA y una base técnica segura."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con los OKR organizacionales 2026, el borrador de OKR de Tecnología 2027 y el cierre financiero de agosto de 2026: objetivos, metas, restricciones de adopción de IA y reglas de medición de los resultados clave. Se conserva el carácter de borrador de las metas de 2027 y la falta de línea de base medida en varias de ellas. Confirmado por Martín en esta conversación."
 tags: [caso, estrategia, okr]
 sources:
   - id: interno-okr-2026

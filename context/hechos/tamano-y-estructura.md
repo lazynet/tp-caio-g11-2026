@@ -2,7 +2,11 @@
 type: Hecho
 title: "Tamaño y estructura de la organización"
 description: "Acme Labs tiene entre 60 y 70 personas, con un modelo mixto de nómina y contractors, y cerca del 80% en Operaciones y Tecnología."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con el organigrama y la nómina de septiembre de 2026: rango de dotación y crecimiento, mezcla de nómina y contratistas, estructura directiva, pesos y funciones por área, perfiles y concentración de capacidades críticas. Incluye la cautela de que estos datos dimensionan el plan y no determinan disponibilidad por rol. Confirmado por Martín en esta conversación."
 tags: [caso, personas, estructura]
 sources:
   - id: interno-organigrama-2026

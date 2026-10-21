@@ -2,9 +2,26 @@
 type: Supuesto
 title: "Desarrolladores en equipos propios y su costo"
 description: "El caso de negocio supone entre 15 y 20 desarrolladores en equipos propios (valor de cálculo 17,5) con un costo cargado de USD 2.500-7.000 por mes (valor de cálculo 4.750)."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Supuestos de diseño confirmados por Martín: 15-20 desarrolladores en equipos propios con punto medio 17,5, costo cargado mensual de USD 2.500-7.000 con punto medio 4.750 y mínimo propuesto de 15 personas activas para gates de valor. Se conserva pendiente la validación de cohorte, costos y precisión; N no se deduce del peso de Tecnología ni está calibrado contra la nómina. El mínimo requiere además semiancho de intervalo de hasta 3 puntos porcentuales; si la preparación muestra precisión insuficiente, se reformula el gate antes de la segunda liberación. Confirmado en esta conversación."
 tags: [supuesto, finanzas, productividad]
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-14T20:00:00Z }
+sources:
+  - id: tamano-estructura
+    resource: "context/hechos/tamano-y-estructura.md"
+    title: "Dotación y peso de Tecnología, con límites del dimensionamiento"
+  - id: ganancia-productividad
+    resource: "context/supuestos/ganancia-de-productividad.md"
+    title: "Alcance propuesto de productividad en equipos propios"
+  - id: costo-rol
+    resource: "context/supuestos/costo-cargado-por-rol.md"
+    title: "Rangos supuestos de costo cargado por rol"
+  - id: umbrales-tecnicos
+    resource: "context/supuestos/umbrales-tecnicos-propuestos.md"
+    title: "Muestra y precisión propuestas para los gates de impacto"
+generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
 
@@ -16,19 +33,20 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-14T20:00:00Z }
 
 Equipos propios son los que trabajan en modo producto, donde la organización
 controla las herramientas; el staffing no se cuenta, porque el uso de IA ahí
-depende de cada cliente (ver [ganancia de productividad](/supuestos/ganancia-de-productividad.md)).
+depende de cada cliente (ver [ganancia de productividad](/supuestos/ganancia-de-productividad.md)).[^ganancia-productividad]
 
-El mínimo de 15 reemplaza el "~20" del método de los gates: con una cohorte de
-15-20, un mínimo de 20 dejaría el gate en "muestra insuficiente" casi siempre.
-Es el piso de la cohorte, necesario pero no suficiente: decide el semiancho.
+El mínimo propuesto de 15 es el piso de la cohorte y requiere además un
+semiancho del intervalo de hasta 3 puntos porcentuales. La precisión se valida
+durante la preparación, antes de la segunda liberación.[^umbrales-tecnicos]
 
 # Por qué es razonable
 
 - Tecnología es cerca del 40% de una dotación de 60-70 personas (ver
-  [tamaño y estructura](/hechos/tamano-y-estructura.md)); N descuenta
-  plataforma, seguridad y soporte.
+  [tamaño y estructura](/hechos/tamano-y-estructura.md)).[^tamano-estructura]
+  Esos agregados no determinan N: el rango de 15-20 es una hipótesis que requiere
+  identificar la cohorte y distinguir plataforma, seguridad y soporte.
 - El costo se ubica entre semisenior y senior del
-  [costo por rol](/supuestos/costo-cargado-por-rol.md).
+  [costo por rol](/supuestos/costo-cargado-por-rol.md), como rango de diseño.[^costo-rol]
 
 # Qué lo invalidaría
 
@@ -41,5 +59,10 @@ Es el piso de la cohorte, necesario pero no suficiente: decide el semiancho.
 
 - No está calibrado contra la nómina: N × costo **no** es la nómina de
   Tecnología ni debe usarse como tal.
-- Es el valor vigente en el anexo E
-  al 2026-10-14; si su dueño lo cambia, se actualiza esta ficha primero.
+- Los cambios de cohorte, costo o precisión requieren actualizar esta ficha y
+  recalcular el caso de negocio correspondiente.
+
+[^tamano-estructura]: Tamaño y estructura de la organización, dotación y peso aproximado de Tecnología al corte de septiembre de 2026.
+[^ganancia-productividad]: Ganancia de productividad con agentes de código, alcance en equipos propios y exclusión de staffing.
+[^costo-rol]: Costo mensual cargado por rol, rangos supuestos sin calibración contra nómina.
+[^umbrales-tecnicos]: Umbrales técnicos propuestos, muestra mínima de 15 personas activas y semiancho máximo de 3 puntos porcentuales, sujetos a validación previa.

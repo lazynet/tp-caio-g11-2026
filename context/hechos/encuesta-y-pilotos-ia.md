@@ -2,7 +2,11 @@
 type: Hecho
 title: "Encuesta y pilotos internos de IA"
 description: "El piloto de IA de abril de 2026 superó sus criterios de valor y falló en capacitación: alta frecuencia de uso y NPS de +42, pero la mitad no hizo ningún curso y casi nadie usa ejemplos al pedir."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con la encuesta y autoevaluación del piloto de abril de 2026, el análisis de prompts de abril y el diseño del sistema de propuestas comerciales de septiembre: indicadores, frenos, criterios del piloto, calidad de uso y experiencia de delivery. Se conservan los límites de la muestra autoseleccionada de 12 participantes, del análisis de chat y del resultado de delivery de la primera semana, sin extrapolación. Confirmado por Martín en esta conversación."
 tags: [caso, ia, adopcion, cultura]
 sources:
   - id: interno-encuesta-ia-2026
