@@ -61,8 +61,8 @@ class PlanCheckTests(unittest.TestCase):
         target = self.root / path
         target.parent.mkdir(parents=True, exist_ok=True)
         review = (
-            f"verified: {{by: '{human}', at: 2026-10-11, scope: 'Fuente y supuesto revisados'}}\n"
-            if status == "verified"
+            f"{status}: {{by: '{human}', at: 2026-10-11, scope: 'Fuente y supuesto revisados'}}\n"
+            if status in ("accepted", "verified")
             else ""
         )
         target.write_text(
@@ -415,6 +415,30 @@ class PlanCheckTests(unittest.TestCase):
                 for e in self.result("delivery")["errors"]
             )
         )
+
+    def test_used_accepted_is_valid_draft_but_never_delivery(self):
+        self.write("# Deck\n[Fuente](/context/source.md)")
+        for residual in (
+            "",
+            "verified: {by: 'human:reviewer', at: 2026-10-11, scope: 'Revisión previa'}\n",
+        ):
+            with self.subTest(residual=residual):
+                target = self.concept(status="accepted")
+                if residual:
+                    target.write_text(
+                        target.read_text().replace(
+                            "---\n# Fuente", residual + "---\n# Fuente"
+                        )
+                    )
+                self.assertEqual(self.result()["errors"], [])
+                result = self.result("delivery")
+                self.assertEqual(result["evidence"], ["context/source.md"])
+                self.assertTrue(
+                    any(
+                        "entrega exige status: verified" in e for e in result["errors"]
+                    ),
+                    result["errors"],
+                )
 
     def test_unused_reference_definition_is_navigation(self):
         self.concept()

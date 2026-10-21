@@ -7,7 +7,11 @@ sources:
   - id: m3u3-doc
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_11.pdf
     title: "M3U3, documento de lectura (Unidad 11), compensación en el futuro sintético"
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa."
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T17:30:00Z }
 ---
 
@@ -40,7 +44,7 @@ Aplicación a un caso: [analistas de riesgo de un banco](/casos/m3u3-caso-analis
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el texto
+* Ficha aceptada para el corpus, sin verificación humana del contenido. Cotejo del agente contra el texto
   extraído del documento el 2026-10-21; sin paginación.
 * Son enfoques prospectivos, sin cifras ni evidencia de adopción. Cualquier esquema
   para Acme Labs es supuesto del plan.

@@ -7,7 +7,11 @@ sources:
   - id: m3u3-doc
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_11.pdf
     title: "M3U3, documento de lectura (el archivo dice Unidad 11)"
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa."
 generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
@@ -51,7 +55,7 @@ Labs.
 
 # Cautelas
 
-* Ficha en borrador, sin verificación humana. El agente cotejó las secciones de la
+* Ficha aceptada para el corpus, sin verificación humana del contenido. El agente cotejó las secciones de la
   tabla contra el PDF localizado el 2026-10-21. Las páginas cuentan desde la
   primera página del archivo.
 * "En Argentina, el 37% de las empresas ya utiliza IA en procesos de recursos humanos"

@@ -7,7 +7,11 @@ sources:
   - id: m3u4-doc
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12pdf.pdf
     title: "M3U4, documento de lectura (el archivo dice Unidad 12)"
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa."
 generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
@@ -48,7 +52,7 @@ ficha, no afirmación del curso sobre Acme Labs.
 
 # Cautelas
 
-* Ficha en borrador, sin verificación humana. El agente cotejó las secciones de la
+* Ficha aceptada para el corpus, sin verificación humana del contenido. El agente cotejó las secciones de la
   tabla contra el PDF localizado el 2026-10-21. Las páginas cuentan desde la
   primera página del archivo; el nombre real termina en `..._Unidad_12pdf.pdf`.
 * La autoevaluación dice que lo **más** crucial para la aprobación de un roadmap es "una

@@ -7,7 +7,11 @@ sources:
   - id: m3u4-doc
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12pdf.pdf
     title: "M3U4, documento de lectura (Unidad 12), estrategia integral y análisis en profundidad"
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa."
 generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
@@ -49,7 +53,7 @@ slides sin hitos ni fechas.
 
 # Cautelas
 
-* Ficha en borrador, sin verificación humana. El agente cotejó el PDF localizado el
+* Ficha aceptada para el corpus, sin verificación humana del contenido. El agente cotejó el PDF localizado el
   2026-10-21: las fases trimestrales están en p. 3; el ejemplo de retail y el
   ejercicio, en pp. 5-6. Las páginas cuentan desde la primera página del archivo.
 * El curso presenta las fases como lo que "generalmente" se hace, no como un estándar.
