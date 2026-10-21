@@ -10,6 +10,7 @@ sources:
   - id: m1u4-slides
     resource: Presentacion - Módulo 1 — Unidad 4 — Rol del CAIO, gobernanza y arquitectura organizacional v3.pdf
     title: M1U4, slides v3 (24 slides)
+status: draft
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -56,6 +57,16 @@ Es la pieza central de la sección de Gobierno. Cadencia y registro:
 [inventario y operating rhythm](/conceptos/m1u4-inventario-y-operating-rhythm.md).
 Mandatos: [decision rights](/conceptos/m1u4-decision-rights.md). Unidad:
 [M1U4](/unidades/m1u4-rol-gobernanza.md).
+
+# Cautelas
+
+* Cotejada el 2026-10-20 contra M1U4 lectura, p. 4 (sección 1.3) y slides v3, slide 7:
+  funciones, temas, nombres alternativos, citas y anti-patterns coinciden. Fiel.
+* La slide 7 nombra los anti-patterns con otras palabras y solo tres: "CoE gatekeeper",
+  "Consejo que no decide nada" y "Governance tan lento que los equipos lo rodean". La
+  tabla de arriba sigue la lectura (cuatro).
+* La atribución a Microsoft de las cuatro funciones del CoE y de tres anti-patterns es
+  del curso; no se cotejó Microsoft Learn.
 
 [^m1u4-lectura]: M1U4, lectura, sección 1.3 (p. 4)
 [^m1u4-slides]: M1U4, slide 7

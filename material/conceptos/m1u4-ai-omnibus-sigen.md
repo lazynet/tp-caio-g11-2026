@@ -19,6 +19,7 @@ sources:
   - id: sigen-197
     resource: https://www.argentina.gob.ar/normativa/nacional/norma-426859/texto
     title: Infoleg/argentina.gob.ar, Resolución 197/2026 de la SIGEN
+status: draft
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -33,9 +34,11 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 
 Datos que coinciden entre la lectura y las fuentes secundarias:
 
-- Adoptado el 8 de julio de 2026, publicado en el Official Journal el 24 de julio y en
-  vigor el 27 de julio de 2026 (la lectura dice lo mismo, p. 19 y 25).[^m1u4-lectura][^cooley-omnibus][^ertico-omnibus]
-- Modifica el Reglamento (UE) 2024/1689 y otros dos reglamentos (2018/1139 y 2023/1230).[^abreu-omnibus]
+- Firmado el 8 de julio de 2026 (fecha del reglamento), publicado en el Official Journal
+  el 24 de julio y en vigor el 27 de julio de 2026 (la lectura dice lo mismo, p. 19 y
+  25). Cooley da el 29 de junio como adopción del texto final.[^m1u4-lectura][^cooley-omnibus][^ertico-omnibus]
+- Modifica el Reglamento (UE) 2024/1689. La modificación de otros dos reglamentos
+  (2018/1139 y 2023/1230) no se pudo reconfirmar en Abreu al recotejar el 2026-10-20.[^abreu-omnibus]
 
 Calendario nuevo según Cooley:[^cooley-omnibus]
 
@@ -59,8 +62,7 @@ Otros cambios que no menciona el curso:[^abreu-omnibus][^ertico-omnibus]
 ## Diferencia con el curso: art. 4
 
 La lectura dice que el art. 4, modificado, "exige a providers y deployers tomar
-medidas" de AI literacy (p. 11). Cooley y Abreu describen el cambio en sentido
-contrario: ya no se exige "asegurar" la competencia del personal, y la Comisión y los
+medidas para apoyar el desarrollo" de AI literacy (p. 11). Cooley y Abreu describen el cambio con otro énfasis: ya no se exige "asegurar" la competencia del personal, y la Comisión y los
 Estados miembros "apoyan y facilitan".[^m1u4-lectura][^cooley-omnibus][^abreu-omnibus] La
 ficha [proveedor y desplegador](/frameworks/eu-ai-act-proveedor-desplegador.md) leyó
 una copia del DOUE del Reg. 2026/1744 y confirma el cambio: "adoptarán medidas para
@@ -97,6 +99,23 @@ controles. La lectura la presenta como instrumento del sector público
 (p. 19).[^m1u4-lectura]
 
 Unidad: [M1U4](/unidades/m1u4-rol-gobernanza.md).
+
+# Cautelas
+
+* Cotejada el 2026-10-20 contra M1U4 lectura, p. 11, 19 y 25 (PDF de 25 páginas), y
+  contra Cooley, Abreu, ERTICO y el texto de la Resolución SIGEN 197/2026 en
+  argentina.gob.ar. No se abrió EUR-Lex ni el ELI oficial.
+* Se corrigió la fecha de adopción: el 8 de julio es la fecha del reglamento (firma,
+  según la lectura p. 25 y ERTICO); Cooley da otra para el texto final (29 de junio).
+* Se corrigió la cita del art. 4: la lectura ya dice "para apoyar el desarrollo". El
+  desacuerdo con el curso es de énfasis ("exige" y "obligación"), no una
+  contradicción literal. Cooley y Abreu son descripciones, no el texto del artículo.
+* Cotejados con SIGEN: sanción 16-06-2026, Boletín Oficial 22-06-2026 (n.º 35934),
+  arts. 1 y 2, resoluciones 172/2014 y 87/2022, y la ausencia de "obligatoria".
+* La lectura (p. 19) tiene el calendario del Anexo III (2-dic-2027), del Anexo I
+  (2-ago-2028), del art. 50 y las guidelines del 20-jul-2026; coincide con Cooley.
+* Fidelidad a fuentes secundarias no es verdad regulatoria: ninguna fecha va a una
+  slide sin el ELI oficial. El AI Act no se declara aplicable a Acme Labs.
 
 [^m1u4-lectura]: M1U4, lectura, secciones 4.1, 9.1 y fuentes (p. 11, 19, 25)
 [^cooley-omnibus]: Cooley, Digital AI Omnibus (consultado el 2026-10-12)
