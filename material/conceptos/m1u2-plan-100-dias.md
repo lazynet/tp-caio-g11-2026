@@ -6,7 +6,8 @@ tags: [m1, 100-dias, ejecucion]
 sources:
   - id: m1u2
     resource: Módulo 1 — Unidad 2 — Portfolio, priorización y ejecución de los 100 días.pdf
-    title: "M1U2, pp. 1 y 7"
+    title: "M1U2, pp. 1-2, 7 y 10-11"
+status: draft
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 ---
 # Por qué 100 días
@@ -35,4 +36,10 @@ Diagnóstico días 1-30; filtrado y priorización 31-45; business cases; SLOs y 
 
 [Plan de 30 días](/conceptos/m1u1-plan-30-dias.md) (versión para un área) · [matriz factibilidad-impacto](/conceptos/m1u2-matriz-factibilidad-impacto.md) · unidad [M1U2](/unidades/m1u2-portfolio-100-dias.md).
 
-[^m1u2]: M1U2, pp. 1 y 7
+# Cautelas
+
+- **Cotejada contra el PDF** (2026-10-20): M1U2, pp. 1-2 (por qué 100 días), 7 (Tema 5: fases, objetivos y actividades) y 10-11 (cronograma del caso: días 1-30, 31-45, presentación el día 95). Fases, rangos de días y actividades coinciden con el texto. La cita anterior (pp. 1 y 7) no cubría el texto de la p. 2 ni el cronograma del caso.
+- **Las tres fases con esos rangos son el método del curso**, sin fuente externa; no es un estándar. En el caso, los business cases y los SLOs no tienen días asignados.
+- **Fidelidad al curso no es el cronograma de Acme Labs:** el plan de 12 meses del equipo no hereda estos 100 días por haberlos cotejado.
+
+[^m1u2]: M1U2, pp. 1-2, 7 y 10-11
