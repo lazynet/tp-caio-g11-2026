@@ -13,6 +13,10 @@ okf_version: "0.2"
 
 # Unidades
 
+* [M3U2 Gestión del cambio y AI Literacy, documento de lectura (Unidad 10)](/unidades/m3u2-documento-u10.md) - Documento de lectura de M3U2: cubre lo mismo que el resumen visual de la unidad y agrega un mini caso de resistencia en contabilidad y una respuesta modelo sobre champions en RRHH.
+* [M3U3 Talento, reestructuración y fronteras futuras, documento de lectura (Unidad 11)](/unidades/m3u3-documento-u11.md) - Documento de lectura de M3U3, con hiring para AI-readiness, escenarios de impacto laboral y transición responsable, enfoques de compensación y dos casos resueltos.
+* [M3U4 Cierre y defensa del Plan Maestro, documento de lectura (Unidad 12)](/unidades/m3u4-documento-u12.md) - Documento de lectura de M3U4, con un plan a 12 meses por trimestres, roadmap integrado de ejemplo, financial storytelling en cuatro partes y preguntas del panel ejecutivo por rol.
+
 * [M1U1 Mentalidad CAIO](/unidades/m1u1-mentalidad-caio.md) - Mentalidad y liderazgo del CAIO, con diagnóstico de madurez en 5 dimensiones y plan de 30 días
 * [M1U2 Portfolio y 100 días](/unidades/m1u2-portfolio-100-dias.md) - Priorización del portfolio de IA y ejecución de los primeros 100 días en tres fases
 * [M1U3 Datos y contexto](/unidades/m1u3-datos-contexto.md) - Estrategias de contexto, data contracts y manejo de datos sensibles en inferencia
@@ -127,6 +131,9 @@ okf_version: "0.2"
 
 # Conceptos: M3U3 Talento, reestructuración y fronteras futuras
 
+* [Cuatro enfoques de compensación en el futuro sintético](/conceptos/m3u3-enfoques-compensacion.md) - Pago por habilidades, bonos por colaboración humano-IA, valoración del juicio y la supervisión, e incentivos a la innovación, según el documento de M3U3.
+* [Escenarios de impacto laboral y plan de transición responsable](/conceptos/m3u3-escenarios-impacto-laboral.md) - Los tres escenarios de impacto de la IA en un rol (aumento, redefinición y desplazamiento) y los cinco pasos del plan de transición responsable del documento de M3U3.
+
 * [Compensación en el futuro sintético](/conceptos/m3u3-compensacion-futuro-sintetico.md) - Qué capacidades humanas valorará el mercado, los tres modelos de compensación emergentes que plantea el curso y su principio de transparencia y equidad salarial.
 * [Deep Research de impacto en un rol crítico](/conceptos/m3u3-deep-research-rol-critico.md) - Estudio estructurado en cuatro fases para diseñar la versión futura de un rol crítico, con sus preguntas guía y resultados esperados
 * [Perfil de talento AI-ready](/conceptos/m3u3-perfil-talento-ai-ready.md) - Las cuatro habilidades del profesional AI-ready y los tres pilares de adaptabilidad y aprendizaje continuo que propone el curso para contratar y desarrollar
@@ -134,12 +141,20 @@ okf_version: "0.2"
 
 # Conceptos: M3U4 Cierre: Plan Maestro de IA
 
+* [Panel ejecutivo, preguntas y estrategia de respuesta por rol](/conceptos/m3u4-panel-preguntas-por-rol.md) - Qué mira cada rol del panel (CEO, CFO, COO y CTO) en la defensa del Plan Maestro, la pregunta tipo de cada uno y la estrategia de respuesta que propone el curso.
+* [Plan a 12 meses por trimestres y roadmap integrado](/conceptos/m3u4-plan-trimestral.md) - Las cuatro fases trimestrales que propone el curso para un plan de IA a 12 meses y el ejemplo de roadmap integrado técnico, financiero y cultural de una cadena de retail.
+* [Financial storytelling en cuatro partes: contexto, datos, narrativa y visión](/conceptos/m3u4-storytelling-cuatro-partes.md) - Estructura del documento de M3U4 para contar el caso financiero de un plan de IA ante ejecutivos, con un ejemplo de narrativa para el panel.
+
 * [Capstone: panel ejecutivo](/conceptos/m3u4-capstone-panel-ejecutivo.md) - Qué demuestra la defensa del Plan Maestro ante un panel ejecutivo y cómo prepararse según el curso
 * [Estrategia de IA a 12 meses](/conceptos/m3u4-estrategia-12-meses.md) - Visión y misión, áreas prioritarias, los cuatro pilares de la estrategia y los tres grupos de KPIs que conectan la IA con el negocio
 * [Financial storytelling](/conceptos/m3u4-financial-storytelling.md) - De los datos a la narrativa y a la decisión ejecutiva, con los tres elementos de una narrativa financiera ganadora
 * [Roadmap tridimensional](/conceptos/m3u4-roadmap-tridimensional.md) - Roadmap técnico (con MLOps), financiero (escenarios y financiación) y cultural (cuatro frentes), más la gobernanza ética que los atraviesa
 
 # Casos
+
+* [Caso de resistencia en contabilidad a la conciliación con IA](/casos/m3u2-caso-contabilidad.md) - Mini caso de M3U2: un equipo contable se resiste a una herramienta de conciliación automática de facturas, y la respuesta del curso combina co-creación, upskilling y un piloto supervisado.
+* [Caso analistas de riesgo crediticio de un banco](/casos/m3u3-caso-analistas-riesgo-banco.md) - Caso de la autoevaluación de M3U3: cómo rediseñar la compensación de analistas de riesgo cuando la IA automatiza la evaluación inicial del 90% de las solicitudes.
+* [Caso Deep Research, el Gerente de Marketing](/casos/m3u3-caso-gerente-marketing.md) - Caso resuelto del documento de M3U3 que analiza el impacto de la IA en el rol de Gerente de Marketing y lo redefine como Director de Orquestación de Marketing.
 
 * [Caso Mercurio SA, operating model, readiness, ownership, autonomía y cambio regulatorio](/casos/m1u4-mercurio-sa.md) - Actividad integradora de M1U4 sobre una empresa argentina de ecommerce de 350 empleados sin CAIO, con cinco iniciativas de IA y un giro regulatorio
 * [Caso FinBot, inyección indirecta contra un agente financiero](/casos/m3u1-finbot.md) - Caso del documento de M3U1 en que un red team usa texto oculto en un blog para que un agente que resume documentos agregue una frase dictada, releído en la Clase 9 con la regla de dos de tres
