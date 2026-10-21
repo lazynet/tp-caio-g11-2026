@@ -5,7 +5,9 @@ de toda la organización (producto y operación interna), acordados en comisión
 ([acuerdo de alcance informado por Martín](https://github.com/lazynet/tp-caio-g11-2026/issues/15)).
 Coordina la defensa (storyline, objeciones y quién presenta cada slide) Lucho,
 según el reparto del `README.md`. Quién presenta cada slide y quién responde
-cada objeción **todavía no se acordó** (#21). Cada cifra remonta a un anexo de
+cada objeción **todavía no se acordó** (#21): al final va una propuesta para que el
+equipo la discuta. El pedido es aprobar el plan y sus resoluciones R-01 a R-32
+([Anexo G](../plan/annexes/07-resoluciones.md)). Cada cifra remonta a un anexo de
 `plan/annexes/`. Las 84 fichas de fuente que exigía el chequeo de entrega al
 20/10/2026 están `verified`, con declaración humana de Martín de esa fecha.
 Después se sumó un supuesto de metas culturales, en borrador y sin verificación
@@ -35,7 +37,7 @@ cambiar el orden de los actos.
 |---|---|---|
 | Visión estratégica | Tesis y acto 1: medir el valor antes de ampliar | Síntesis ejecutiva: la tesis y el cierre del deck, dichos en menos de un minuto (propuesta del equipo, no del curso) |
 | Justificación de inversiones | Actos 2 y 3: beneficio medido, exposición presupuestaria por punto de salida, narrativa financiera | Cada cifra con su anexo; ninguna fuera del deck o de un anexo |
-| Gestión de objeciones | [Banco de objeciones](objeciones.md), con respuesta y evidencia por objeción | Mapeo de objeciones probables por tema, con quien responde cada una a designar |
+| Gestión de objeciones | [Banco de objeciones](objeciones.md), con respuesta y evidencia por objeción | Mapeo de objeciones probables por tema, con una propuesta de quién responde cada una al final, no acordada |
 | Comunicación ejecutiva | Una decisión por slide y el cierre con el pedido | Ensayo con tiempos y preguntas bajo presión (propuesta del equipo): todavía no se hizo |
 
 **Bajo presión:** responder con la cifra y el anexo; si no se sabe, decir qué se
@@ -55,10 +57,10 @@ cada gate.
 - La IA ya está adentro: Tecnología usa mucho el agente de código; Operaciones,
   poco, en buena parte porque el cliente fija las herramientas. Hay herramientas
   de harness para el SDLC de uso exclusivamente interno; no se cuentan como IA
-  productiva de la oferta. La política de IA está aprobada según
-  el responsable del caso; su versión, acta y alcance se revisan antes de
-  liberar M1-M3, y el gate del mes 3 comprueba su aplicación y su alcance para
-  el producto; los controles siguen por verificar.
+  productiva de la oferta. La política de IA vigente la ratifica el Directorio
+  al aprobar el plan (R-07); la preparación deja constancia de versión y alcance,
+  y el gate del mes 3 comprueba su aplicación y su alcance para el producto; los
+  controles se prueban por superficie antes de usar.
 - No hay medición del impacto del harness contra una base, según el responsable
   del caso ([uso interno](../context/hechos/uso-ia-interno.md)). El propio
   diagnóstico es una hipótesis: las fuentes mezclan poblaciones y fechas, así que
@@ -83,9 +85,10 @@ cada gate.
   medimos el tiempo a la primera integración exitosa con la documentación y el
   soporte actuales. Sin problema, base y señal comercial escrita, no se construye.
 - Las alternativas publicadas (47, 161, ≈199, 394, ≈400, 471) son costos de
-  alcances distintos, pendientes de homogeneizar. No las comparamos como si
-  fueran equivalentes. El pedido anterior (33 + 6 de caja, 72 + 7 de tiempo)
-  queda como alternativa.
+  alcances distintos: referencia, no comparación de precios (R-28). Ninguna
+  resolución depende de compararlas; si un gate propone ampliar, Finanzas arma
+  antes una estimación común. El pedido anterior (33 + 6 de caja, 72 + 7 de
+  tiempo) queda como antecedente.
 
 **Cierre del acto:** elegimos lo mínimo que compra la medición, no la opción más
 barata por el ROI de un paquete que no medimos.
@@ -93,9 +96,9 @@ barata por el ROI de un paquete que no medimos.
 ## Acto 3: cuánto cuesta y cómo se controla (de Arquitectura a Costo y riesgo)
 
 - **Arquitectura proporcional:** configurar lo que ya pagamos antes de comprar o
-  ensamblar. La plataforma se relee en los meses 3, 6 y 9: la regla vigente pide
-  una señal; la propuesta, pendiente de ratificación, suma cuatro condiciones.
-  Nada pasa al año 2 por defecto ([Anexo B](../plan/annexes/02-arquitectura.md)).
+  ensamblar. La plataforma se relee en los meses 3, 6 y 9 con la regla que
+  ratifica el Directorio: una señal y además cuatro condiciones (R-15). La libera
+  el Directorio. Nada pasa al año 2 por defecto ([Anexo B](../plan/annexes/02-arquitectura.md)).
 - **Seguridad antes de usar:** sin plataforma no alcanza la política; cada
   superficie prueba sus compensatorios, con críticos cerrados y residual
   aceptado. Seguridad puede suspender el uso aunque el gasto o la adopción
@@ -103,13 +106,13 @@ barata por el ROI de un paquete que no medimos.
   ([Anexo C](../plan/annexes/03-gobierno-seguridad.md)).
 - **Personas:** formar, reasignar y decidir una excepción externa solo si falta
   un facilitador. Se propone reservar 720 h clave (1,5 FTE) más 540-660 h de
-  formación: máximo 1.380 h, con demanda estimada de 970-1.350 h si se
-  confirman uniones de horas de B, C y D que sus dueños no ratificaron. La
-  reserva es propuesta, no disponibilidad: Operaciones confirma agendas y
-  trabajo desplazado por persona y semana, o se recostea antes del mes 1. Si se
-  cuenta todo junto o la formación aparte (el sobre de capacidad) lo proponemos
-  decidir al liberar los 71k USD ([Anexo D](../plan/annexes/04-personas-cultura.md),
-  [Anexo F](../plan/annexes/06-roadmap-riesgo.md#decisiones-pendientes-para-el-board-o-el-equipo)).
+  formación: máximo 1.380 h, con demanda estimada de 970-1.346 h y los solapes
+  de horas entre áreas adoptados (R-25, R-26). La reserva no es disponibilidad:
+  Operaciones confirma agendas y trabajo desplazado por persona y semana, o se
+  recostea antes del mes 1 sin subir el techo. La capacidad se lee con sobre
+  separado: soporte clave y formación se confirman por separado en la segunda
+  liberación (R-05) ([Anexo D](../plan/annexes/04-personas-cultura.md),
+  [Anexo F](../plan/annexes/06-roadmap-riesgo.md#resoluciones-del-directorio-y-decisiones-delegadas)).
 - **Roadmap:** diagnóstico, base, política, controles, formación y prueba en los
   meses 1-3, después de diez días hábiles de validación autorizada en 2026;
   en los 4-12, controles, medición y, en los 4-6, el estudio del asistente sin
@@ -120,13 +123,14 @@ barata por el ROI de un paquete que no medimos.
   de los meses 3, 6, 9 y 12.
 - **Primera liberación:** 80-136 h y hasta 8k USD de tiempo, sin caja
   incremental; agendas e imputación 2026 confirmadas antes de empezar. La
-  autoriza el Directorio o una autoridad formalmente delegada. Incluye
+  libera el Directorio al aprobar el plan (R-02). Incluye
   diagnóstico, matriz privada, viabilidad, verificación y cierre documental. Sin
   despliegues ni dictamen externo; el alcance y la cotización legal preparan la
   decisión. Si no sostiene el alcance, se reduce o se detiene con lo trabajado,
   hasta 8k USD.
 - **Exposición presupuestaria máxima autorizada del tramo:** el resto de M1-M3 y
-  las reservas requiere una segunda autorización de hasta 71k USD; el acumulado
+  las reservas requiere la segunda liberación, de hasta 71k USD, que firma el CEO
+  por delegación y solo con las condiciones de R-05; el acumulado
   propuesto es 79k USD (10 de caja y 69 de tiempo), no 79 nuevos. Si se corta
   antes de M1, el límite es 8; si se sale en M3, es 79 hasta cerrar y 85 en el
   año con núcleo aprobado al salir. Son techos de recursos, sin restar beneficio:
@@ -148,8 +152,9 @@ barata por el ROI de un paquete que no medimos.
   régimen del proveedor. El consumo es la única modelada: 211-267k USD
   incrementales al año a 12× si el proveedor cobrara por consumo y el uso de
   septiembre, valorizado a precio de API, se mantuviera. Es un escenario, no
-  consumo facturado ni pronóstico, y es de la empresa con o sin plan; *decisión*, la primera
-  autorización y los criterios de la segunda. La plata es interna, por etapas y
+  consumo facturado ni pronóstico, y es de la empresa con o sin plan; *decisión*,
+  aprobar el plan y sus resoluciones: la primera liberación, los techos y la
+  delegación de la segunda con sus condiciones. La plata es interna, por etapas y
   sin deuda.
 - **Personas, sin eludir el empleo:** formar y reasignar antes que desvincular.
   El estudio de un rol crítico no decide desvinculaciones y no está en el
@@ -158,18 +163,19 @@ barata por el ROI de un paquete que no medimos.
   equidad por grupo y sin compensación monetaria nueva en 12 meses
   ([Anexo D](../plan/annexes/04-personas-cultura.md)).
 
-## Cierre: resolución (Autorizar la validación inicial)
+## Cierre: resolución (Aprobar el plan y sus resoluciones)
 
-**Valor medible; seguridad aceptable; fondos por decisión.** "Les pedimos
-autorizar primero diez días hábiles de validación con agenda propia: hasta 8k USD
-de tiempo y caja incremental 0. Con diagnóstico, capacidad y viabilidad
-revisados, decidan continuar, reducir/resecuenciar o detener. Continuar requiere
-otra decisión de hasta 71k USD adicionales para M1-M3 y reservas, con
-presupuesto 2027 comprobado: acumulado propuesto 79k USD. La aprobación
-económica no habilita prácticas sin controles. En marzo traemos base, política,
-matriz, pruebas y aprendizajes para decidir el siguiente tramo. El año sigue
-condicionado. Y adopten los gates de los meses 3, 6, 9 y 12 como regla para
-liberar fondos."
+**Valor medible; seguridad aceptable; fondos por decisión.** "Les pedimos aprobar
+el plan y, con él, las resoluciones R-01 a R-32 del Anexo G. Hoy liberan diez días
+hábiles de validación con agenda propia: hasta 8k USD de tiempo y caja incremental
+0. Fijan el techo de 79k USD hasta el mes 3. Delegan en el CEO la segunda
+liberación, de hasta 71k USD, solo con diagnóstico, capacidad, método ratificado,
+roles nombrados y presupuesto 2027 comprobado; si falta algo, reduce o detiene.
+También delegan en el CEO la firma de los gates de los meses 3, 6, 9 y 12, siempre
+dentro de los techos: todo lo que supere un techo o amplíe el alcance vuelve a
+este Directorio. La aprobación económica no habilita prácticas sin controles. En
+marzo traemos base, política, matriz, pruebas y aprendizajes. El año sigue
+condicionado."
 
 ## Qué no decir
 
@@ -177,11 +183,12 @@ liberar fondos."
   beneficio de caja 0 e ingreso nuevo 0.
 - "Caja cero": se confunde con desembolso cero. Decir "beneficio de caja
   estimado: 0".
-- Que los 79 se autorizan de una vez, que la preparación está ejecutada o que
-  elegir el supuesto libera agendas: son dos decisiones y falta autorización
-  empresarial. Para la primera, decir "caja incremental 0", junto con sus horas.
+- Que los 79 se liberan de una vez, que la preparación está ejecutada o que
+  aprobar el plan libera agendas: son dos liberaciones, la segunda con
+  condiciones (R-05), y las agendas se confirman antes de empezar. Para la primera, decir "caja incremental 0", junto con sus horas.
 - Que 47/161/394 son alternativas equivalentes: son alcances distintos.
-- Que las cuatro condiciones de plataforma ya rigen: son una propuesta pendiente.
+- Que una señal sola libera plataforma: rige la señal más cuatro condiciones (R-15),
+  y los fondos los libera el Directorio.
 - Que la plataforma pasa al año 2: se relee en los meses 3, 6 y 9.
 - Que el 72,5% es un techo de adopción: es el resultado de cumplir exactamente
   las metas por área.
@@ -214,5 +221,38 @@ liberar fondos."
 - Un VPN: no hay tasa en el caso ni flujos positivos que descontar.
 - Que el reskilling retiene un porcentaje del talento: la cifra del curso no
   tiene fuente.
-- Que el estudio del rol crítico decide recortes o que la postura sobre el
-  empleo ya está aprobada: es propuesta, la decide el Directorio con asesoría laboral.
+- Que el estudio del rol crítico decide recortes, o que la postura sobre el
+  empleo no tiene excepciones: el Directorio la adopta con asesoría laboral (R-20),
+  con las causas previas ajenas a la IA afuera, y es costosa de deshacer una vez
+  comunicada.
+- Que el CEO puede subir un techo: firma dentro de los techos; lo demás vuelve al
+  Directorio (R-04).
+
+## Reparto de presentadores: propuesta del equipo, no acordada
+
+**Propuesta para discutir en #21; no está acordada.** El `README.md` dice que el
+reparto de slides se acuerda en la tarea de defensa. Criterio: cada responsable
+presenta la slide de su anexo y Lucho, que coordina la defensa, abre y cierra.
+Son diez slides para ocho personas, así que dos integrantes presentan dos.
+
+| Slide | Presenta | Responde objeciones | Respaldo en preguntas |
+|---|---|---|---|
+| Portada | Lucho | Storyline | Martín |
+| Problema | Martín (Anexo A) | 19, 25, 45 | Eduardo |
+| Beneficio | Eduardo | 21, 22, 47, 51 | Nico |
+| Alternativas | Gabriela (Anexo E) | 6, 7, 37, 39, 50 | Maxi |
+| Arquitectura | Nico (Anexo B) | 1, 26, 28 | Rafa |
+| Gobierno y seguridad | Rafa (Anexo C) | 11, 12, 13, 20, 23 | Nico |
+| Personas | Pablo (Anexo D) | 8, 9, 14, 15, 40-42, 44 | Gabriela |
+| Roadmap | Maxi (Anexo F) | 21, 24, 27, 43, 46 | Lucho |
+| Costo y riesgo | Gabriela (Anexo E) | 3, 10, 18, 29-36, 38, 49 | Maxi |
+| Cierre | Lucho | "Qué estamos pidiendo hoy" (3, 31) | Martín |
+
+- **Por qué Eduardo en Beneficio:** la slide lee el método de los gates (pasa,
+  espera, corta), que sale del material que él verificó, y deja a Nico libre para
+  Arquitectura. Alternativa: Nico presenta Beneficio y Arquitectura, con Eduardo de
+  respaldo.
+- **Dependencia:** si el equipo adopta otra estructura de diez slides, el reparto se
+  rehace por mensaje, no por número de slide.
+- **Qué falta para darlo por acordado:** la conformidad de los ocho en #21 y un
+  ensayo registrado con fecha, tiempos y correcciones.

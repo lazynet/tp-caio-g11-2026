@@ -2,7 +2,7 @@
 type: Supuesto
 title: "Umbrales técnicos propuestos por la arquitectura"
 description: "Umbrales que propone el anexo de arquitectura sin medición previa: los de la ficha de evaluación del caso de referencia (con el gate de impacto), la política de ruteo y el criterio de la prueba de portabilidad y costo del gateway, el método del intervalo de throughput y el replan de capacidad de los meses 4-6."
-status: verified
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -27,7 +27,10 @@ sources:
   - id: politica
     resource: "context/hechos/gobierno-y-politica-ia.md"
     title: "Política de IA informada por el responsable del caso y sus cautelas"
-generated: { by: codex/gpt-6, at: 2026-10-20 }
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones R-14 (método de medición), R-15 (plataforma) y R-17 (rama con plataforma)"
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21 }
 ---
 # Supuesto
 
@@ -56,9 +59,13 @@ ausencia de daño ni valor económico.
 
 ## Política de ruteo y prueba de portabilidad y costo del gateway
 
-Este bloque corresponde a alternativas con plataforma central, no al paquete
-mínimo de aprendizaje. Son propuestas pendientes de prueba y validación
-contractual; no acredita que el proveedor admita hoy ninguna de las rutas.[^arquitectura]
+Este bloque rige solo si el Directorio libera plataforma bajo la regla de señal
+y cuatro condiciones (R-15); no es parte del paquete mínimo de aprendizaje. Cada
+ruta la habilita el Responsable de Tecnología tras la prueba de portabilidad y
+costo, con el régimen comercial confirmado por escrito con el proveedor y
+verificado por el CFO (R-17); sin esa confirmación, la ruta queda en laboratorio
+con tráfico sintético. No acredita que el proveedor admita hoy ninguna de las
+rutas.[^arquitectura][^resoluciones]
 
 - El agente de código se enruta según su régimen comercial: con la
   suscripción que permite gateway (plana, y enrutar la preserva), sí; con la
@@ -94,8 +101,11 @@ demuestra repago del programa completo ni ahorro observado.[^finanzas]
 
 ## Método del intervalo de throughput (para las lecturas de los meses 6 y 9)
 
-Protocolo propuesto, pendiente de comprobar viabilidad y ratificar antes de la
-segunda liberación, previa a M1. La autoridad que lo ratifica está a designar.
+Protocolo propuesto. Lo produce QA/análisis de datos bajo el Responsable de
+Tecnología, el verificador senior independiente verifica el acta de viabilidad y
+el AI Council ratifica el método antes de la segunda liberación, previa a M1
+(R-14); la autoridad del gate no lo ratifica. Sin ratificación no se libera
+M1-M3.[^resoluciones]
 La base prospectiva se recoge en las semanas 1-4 antes del tratamiento; la
 serie retrospectiva solo estima tendencia y ruido.[^arquitectura]
 
@@ -123,21 +133,24 @@ Una tasa base cero no permite calcular variación relativa. En throughput se
 documenta la exclusión y su efecto sobre N; en calidad se informan conteos y
 diferencias absolutas como descripción, sin declarar no inferioridad ni paso
 por valor. Sin denominador, el indicador es no estimable, no cero. El método
-debe reformularse y ratificarse antes del tratamiento o aplicar las salidas
+debe reformularse y ratificarlo el AI Council antes del tratamiento o aplicar las salidas
 del gate si el problema aparece en una lectura.[^arquitectura]
 
 ## Replan de capacidad de los meses 4-6 con el producto diferido
 
-Alternativa del paquete completo, pendiente de capacidad, contratación y nueva
-autorización con alcance, calendario y costeo. No forma parte del paquete
-mínimo.[^arquitectura][^personas]
+Alternativa del paquete completo: rige solo si el Directorio libera plataforma
+en el mes 3 (o en el 6 o el 9) bajo R-15. Personas confirma el 0,2 del
+contractor en su contrato y la excepción de 0,3 FTE requiere aprobación previa
+del Directorio (R-17). Sin contractor ni perfil interno demostrado al inicio de
+M4, no se inician los hitos de IA aplicada. No forma parte del paquete
+mínimo.[^arquitectura][^personas][^resoluciones]
 
 - Se propone bajar Arquitectura de 0,5 a 0,4 FTE al diferir el diseño del
   producto, y DevOps/QA de 1,0 a 0,8 FTE al trasladar tareas al contractor.
   Una persona al 100% cubriría 0,8 FTE de IA aplicada más 0,2 FTE para esas
   tareas, sujeto a confirmar alcance y disponibilidad.[^arquitectura][^personas]
 - Si existe contractor, pero no dispone de ese 0,2, se propone la excepción
-  acotada de 0,3 FTE internos, con autorización antes de activarla. Sin
+  acotada de 0,3 FTE internos, con aprobación previa del Directorio. Sin
   contractor ni perfil interno demostrado no se inician los hitos de IA
   aplicada: la excepción no reemplaza al especialista. La alternativa con
   fracción interna requiere ~3,3 FTE clave en M4-M6, no la capacidad del
@@ -148,9 +161,9 @@ mínimo.[^arquitectura][^personas]
 La conciliación del anexo E para el replan suma 576 h de Arquitectura y
 DevOps/QA, 216 h de gobierno y seguridad, 96 h del líder y 180 h de Council,
 bypass y red team interno: 1.068 h / 480 = 2,225 FTE clave. Frente al techo
-supuesto de 2,25, quedan 0,025 FTE, equivalentes a 12 h trimestrales. La tabla
-del anexo B declara 0,05 de holgura; esta ficha adopta la cuenta conciliada del
-anexo E y deja explícita esa diferencia, pendiente de alinear el anexo B.[^finanzas][^arquitectura]
+supuesto de 2,25, quedan 0,025 FTE, equivalentes a 12 h trimestrales. El anexo B
+usa la misma cuenta conciliada; el 0,05 que menciona corresponde a la holgura de
+los meses 7-9.[^finanzas][^arquitectura]
 
 La documentación mínima reproducible de los cuatro entregables incluye tupla
 de versión, instrucciones de ejecución, ADR corto y corrida fechada. Se
@@ -163,7 +176,7 @@ presupuestado por fuera de esas fracciones.[^arquitectura]
 Manuales y traspaso se difieren a M7-M12. En la semana 7 del tramo M4-M6 se
 revisan documentación y reproducción de los entregables cerrados; un
 entregable sin documentación reproducible no cuenta para la lectura de M6.
-Si falta capacidad, la excepción requiere aprobación antes de activarse;
+Si falta capacidad, la excepción requiere aprobación previa del Directorio;
 esta revisión humana no la autoriza.[^arquitectura][^personas]
 
 # Por qué es razonable
@@ -210,12 +223,11 @@ esta revisión humana no la autoriza.[^arquitectura][^personas]
 
 # Cautelas
 
-- Los cuatro bloques fueron revisados por Martín como propuestas de diseño,
-  sin medición ni aprobación empresarial. La declaración de verificación no
+- Los cuatro bloques fueron revisados en la verificación humana como propuestas
+  de diseño, sin medición ni aprobación empresarial. La declaración de verificación no
   acredita consenso del equipo ni ejecución de controles o contratos.
-- El anexo D todavía imputa toda la documentación mínima al 0,8; esta ficha
-  adopta la imputación por entregable del anexo B (0,8 o 0,2). Queda pendiente
-  alinear el anexo D, además de la holgura de capacidad del anexo B.
+- El anexo D y el anexo B imputan la documentación mínima por entregable a la
+  fracción que lo produce (0,8 o 0,2).
 - El tamaño del dataset no tiene cálculo de potencia estadística.
 - El caso de referencia es ilustrativo; si el portfolio elige otro caso, los
   umbrales se rehacen.
@@ -226,3 +238,4 @@ esta revisión humana no la autoriza.[^arquitectura][^personas]
 [^roadmap]: Anexo F, lecturas M6 y M9, umbrales de productividad +3% y +8%, precedencia de calidad y salidas de espera o corte.
 [^personas]: Anexo D, contractor como excepción propuesta, disponibilidad y alcance por confirmar; documentación mínima por entregable y manuales y traspaso diferidos.
 [^politica]: Política de IA informada por el responsable del caso; su aprobación y alcance se leen con las cautelas de la ficha, sin acreditar aplicación operativa.
+[^resoluciones]: Anexo G, R-14 (produce QA bajo el Responsable de Tecnología, verifica el verificador senior independiente, ratifica el AI Council antes de la segunda liberación), R-15 (señal más cuatro condiciones; libera el Directorio) y R-17 (replan, excepción de 0,3 FTE y habilitación de rutas).

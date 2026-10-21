@@ -2,7 +2,7 @@
 type: Supuesto
 title: "Ganancia de productividad por IA en ingeniería"
 description: "El caso de negocio supone entre 10% y 25% más de throughput por desarrollador al cabo de 12 meses en los equipos propios, no en los equipos asignados a clientes."
-status: verified
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -18,6 +18,9 @@ sources:
   - id: convenciones-calculo
     resource: "context/supuestos/convenciones-de-calculo.md"
     title: "Base prospectiva, serie retrospectiva y valuación de la capacidad"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -63,11 +66,18 @@ lado.[^okr-organizacion]
 
 # Cautelas
 
-- La mejora técnica y su conversión económica requieren validaciones propias.
-- El rango permanece como hipótesis pendiente de medición, sujeto a revisión
+- La mejora técnica y su conversión económica tienen dueños distintos. Mide el
+  Responsable de Tecnología con el protocolo del Anexo B; lee el AI Council en
+  los meses 6 y 9 contra los umbrales, calidad primero; convierte el CFO: la
+  capacidad liberada cuenta como beneficio solo si en el mes 6 hay un destino
+  decidido, y se valoriza a costo cargado, no como caja. El mes 3 no atribuye
+  ganancia. Sin pasar, rige la espera única o el corte; sin destino en el mes 6,
+  el beneficio es 0 (R-19)[^resoluciones].
+- El rango sigue siendo una hipótesis hasta esa medición, sujeto a revisión
   por inestabilidad de la base, deterioro de calidad o falta de conversión
   económica para el caso de negocio.
 
 [^okr-organizacion]: OKR y objetivos de la organización y de Tecnología, borrador 2027 y meta propuesta de +20% de throughput.
 [^pilotos-ia]: Encuesta y pilotos internos de IA, experiencia de delivery limitada a la primera semana y sin extrapolación.
 [^convenciones-calculo]: Convenciones de cálculo del caso de negocio, base prospectiva, lectura retrospectiva y valuación de la capacidad.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

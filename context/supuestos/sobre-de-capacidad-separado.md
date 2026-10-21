@@ -2,7 +2,7 @@
 type: Supuesto
 title: "Sobre de capacidad separado en tiempo clave y distribuido"
 description: "Propuesta de separar el tiempo clave de 1 a 2,25 FTE y las horas distribuidas en la dotación, con aprobación organizacional y conciliación de la capacidad real por alcance."
-status: verified
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -21,6 +21,9 @@ sources:
   - id: poblaciones-capacitacion
     resource: "context/supuestos/poblaciones-de-capacitacion.md"
     title: "Supuestos de poblaciones y dedicaciones de formación y champions"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -60,8 +63,12 @@ capacitación, como distribuido, aunque participe alguna persona clave.
 
 # Cautelas
 
-- **Es una propuesta de diseño sujeta a aprobación organizacional.** Elegir
-  entre lectura estricta y separada requiere una decisión explícita del board.
+- **Para el paquete mínimo rige la lectura separada**, adoptada por el
+  Directorio: la reserva de soporte clave (hasta 720 h) y la de formación
+  (540-660 h) se confirman por separado en la segunda liberación, antes de M1,
+  que firma el CEO con verificación del CFO. Sin agendas confirmadas, se reduce
+  o resecuencia con recosteo y no se libera M1-M3 (R-05)[^resoluciones]. En otros alcances, la
+  lectura se decide con ese alcance.
 - Leerlo separado no agranda la capacidad real: las horas igual salen de horas
   facturables. Solo hace visible un segundo sobre que hay que aprobar.
 - Cada alcance usa su propio cálculo de horas y requerimientos; no se trasladan
@@ -73,3 +80,4 @@ capacitación, como distribuido, aunque participe alguna persona clave.
 [^personas-clave]: Número de personas clave del sobre de capacidad, extremos de 1 y 2,25 FTE y validación por rol.
 [^capacidad-utilizacion]: Capacidad, utilización y bench, utilización facturable y restricciones del proyecto de adopción.
 [^poblaciones-capacitacion]: Poblaciones y horas de capacitación por nivel, supuestos de diseño de formación y champions.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

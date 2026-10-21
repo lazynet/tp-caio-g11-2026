@@ -2,7 +2,7 @@
 type: Supuesto
 title: "Alternativas de menor alcance y prueba chica de los meses 1-3"
 description: "Composición propuesta de alternativas de gobierno y formación, piloto del agente actual y prueba chica, separadas del paquete mínimo vigente, con protocolo común sin equivalencia demostrada de controles o resultados."
-status: verified
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -33,6 +33,9 @@ sources:
   - id: datos
     resource: "context/supuestos/disponibilidad-de-datos.md"
     title: "Disponibilidad de datos y habilitación de repositorios como supuestos"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -80,6 +83,12 @@ El piloto acotado trabaja solo sobre repositorios que la matriz habilite: sin da
 clientes ([disponibilidad de datos](/supuestos/disponibilidad-de-datos.md)).
 Esa habilitación y los controles deben comprobarse antes de usarlo.[^datos][^gobierno]
 
+Las alternativas ampliadas no se piden: quedan como antecedente. Si una se
+reactivara, decide el Directorio con una estimación común del CFO; antes de
+iniciarla, Personas confirma champions y agendas y el Responsable de seguridad
+habilita repositorios según la matriz. Sin esas dos confirmaciones, no se
+ejecuta (R-28).[^resoluciones]
+
 # Por qué es razonable
 
 - Se propone reutilizar el agente de código informado en uso en Tecnología
@@ -115,9 +124,10 @@ Esa habilitación y los controles deben comprobarse antes de usarlo.[^datos][^go
 
 [^finanzas]: Anexo E, composición de las tres opciones originales, prueba chica y secuencia condicionada a la base; rama sin señal de aproximadamente 199.000 USD, separada del mínimo vigente y sin equivalencia demostrada de alcances.
 [^gobierno]: Anexo C, controles aplicables y compensatorios por superficie; su necesidad y costo deben conciliarse antes de habilitar usos o extender la prueba.
-[^personas]: Anexo D, formación completa y champions de las alternativas de mayor alcance, con disponibilidad pendiente de confirmar.
+[^personas]: Anexo D, formación completa y champions de las alternativas de mayor alcance; si una alternativa se reactivara, Personas confirma champions y agendas antes de iniciarla y, sin esa confirmación, no se ejecuta (R-28).
 [^costo-rol]: Costo cargado por rol, rangos supuestos y convención de 160 h mensuales para costear.
 [^cohorte]: Cohorte supuesta de 15-20 desarrolladores de equipos propios; el punto medio 17,5 es una convención de cálculo, no una cantidad observada.
 [^ganancia]: Ganancia de productividad como hipótesis no medida, sin beneficio atribuible demostrado por el piloto.
 [^uso-ia]: Uso informado de herramientas actuales, con las cautelas de población y capacidad de la ficha.
-[^datos]: Disponibilidad de datos y repositorios como supuesto de habilitación, pendiente de verificar restricciones y controles.
+[^datos]: Disponibilidad de datos y repositorios como supuesto de habilitación; el Responsable de seguridad habilita los repositorios según la matriz de restricciones antes de iniciar y, sin habilitación, no se usan (R-28).
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

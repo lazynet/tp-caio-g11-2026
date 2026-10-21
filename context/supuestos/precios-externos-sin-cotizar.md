@@ -2,7 +2,7 @@
 type: Supuesto
 title: "Precios de servicios externos sin cotización y contingencia"
 description: "Rangos de diseño sin cotización para servicios externos, diferenciados entre el paquete mínimo y las alternativas de mayor alcance, con una reserva propuesta de 15% sobre la caja estimada cuya suficiencia debe comprobarse."
-status: verified
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -21,6 +21,9 @@ sources:
   - id: minimo
     resource: "context/supuestos/paquete-minimo-de-aprendizaje.md"
     title: "Paquete mínimo, legal focalizada y herramientas existentes"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -61,13 +64,17 @@ de la medición de uso se costea como tiempo en el anexo B.[^arquitectura]
 | Arquitectura (anexo B) | 5.000-15.000 | Un ejercicio sobre el piloto, con un tercero chico |
 | Gobierno (anexo C) | 10.000-25.000 | Red team externo de fin de año |
 
-No se elige uno acá: cubren alcances distintos y ninguno tiene cotización.
-Queda pendiente conciliar alcances y costos entre `architect`, `governance` y
-`finance`, sin sumar ni sustituir ambos renglones automáticamente.[^arquitectura][^gobierno]
+Cubren alcances distintos y ninguno tiene cotización. Ninguno entra en el
+paquete mínimo. Si el Directorio libera el producto en el gate del mes 6, un
+único contrato cubre piloto, reprueba y las superficies que pida el cliente: el
+Responsable de seguridad define el alcance con el Responsable de Tecnología y el
+CFO verifica la cotización antes de contratar; sin cotización verificada, el
+piloto no sale a clientes. No se suman ni se sustituyen los dos renglones
+(R-30)[^resoluciones].[^arquitectura][^gobierno]
 
 # Por qué es razonable
 
-Son estimaciones de diseño revisadas por Martín para comparar alternativas.
+Son estimaciones de diseño con revisión humana, para comparar alternativas.
 La amplitud expresa incertidumbre por falta de cotizaciones; no acredita
 precios de mercado ni acuerdo del equipo o aprobación empresarial.
 
@@ -92,3 +99,4 @@ precios de mercado ni acuerdo del equipo o aprobación empresarial.
 [^gobierno]: Anexo C, rangos propuestos de servicios externos y sustitución de la porción inicial de legal por la revisión focalizada.
 [^finanzas]: Anexo E, contingencia propuesta de 15% sobre caja y reglas de límites presupuestarios.
 [^minimo]: Paquete mínimo de aprendizaje, legal focalizada por 2.000-6.000 USD y herramientas por 0-1.500 USD por trimestre, sin nueva plataforma central.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

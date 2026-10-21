@@ -6,8 +6,9 @@ title: "Anexo G. Resoluciones del Directorio"
 
 # Anexo G. Resoluciones del Directorio
 
-Slides que sustenta: el cierre del [deck](../slides.md) y cada slide que cita una
-resolución R-xx. Montos en k USD (1k USD = 1.000 USD) salvo que se indique otra
+Slides que sustenta: el cierre del [deck](../slides.md), "Aprobar el plan y sus
+resoluciones", y cada slide que cita una resolución R-xx en su recuadro de
+resolución. Montos en k USD (1k USD = 1.000 USD) salvo que se indique otra
 unidad. Este anexo no agrega cifras: cada número viene del anexo que se cita al
 final de cada resolución.
 

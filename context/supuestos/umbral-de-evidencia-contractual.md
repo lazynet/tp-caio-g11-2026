@@ -1,8 +1,8 @@
 ---
 type: Supuesto
 title: "Umbral de evidencia contractual para la licencia para vender"
-description: "Criterios propuestos para distinguir restricciones, exigencias comerciales de controles y demanda de funciones de IA, sin autorizar inversión ni uso prohibido y con evidencia contractual real pendiente."
-status: verified
+description: "Umbrales sin calibrar para distinguir restricciones, exigencias comerciales de controles y demanda de funciones de IA, usados por la regla de plataforma que ratifica el Directorio, sin autorizar inversión ni uso prohibido."
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -24,14 +24,26 @@ sources:
   - id: finanzas
     resource: "plan/annexes/05-business-case.md"
     title: "Anexo E, decisiones separadas de inversión y paquete mínimo vigente"
-generated: { by: codex/gpt-6, at: 2026-10-20 }
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, R-15: plataforma con señal más cuatro condiciones, ratificada por el Directorio"
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21 }
 ---
 # Supuesto
 
-Estos criterios son propuestas sin calibrar, pendientes de ratificación y de
-reunir evidencia contractual real durante el primer trimestre. La expresión
-"licencia para vender" es estratégica: no significa licencia regulatoria ni
-venta confirmada. Verificar esta ficha no acredita que exista una señal.[^gobierno]
+Estos umbrales son supuestos sin calibrar. El Directorio, al aprobar el plan,
+ratifica la regla de gate que los usa: liberar plataforma en el mes 3, 6 o 9
+exige una señal más cuatro condiciones, y la prohibición pura excluye el uso sin
+liberar plataforma (R-15 del Anexo G).
+La ratificación es del criterio, no de que exista una señal.[^resoluciones]
+
+Alcance y hito: la evidencia contractual se reúne en M1-M3 y se lee en la
+decisión del mes 3, con relectura en los meses 6 y 9. Autoridad: el AI Council
+declara la señal; el Directorio libera los fondos de plataforma y es quien
+recalibra los umbrales, en un gate, a propuesta del AI Council. Consecuencia: si
+no se alcanza un umbral o falta una condición, no se libera plataforma y sigue el
+mínimo costeado.[^resoluciones] La expresión "licencia para vender" es
+estratégica: no significa licencia regulatoria ni venta confirmada.[^gobierno]
 
 | Señal | Umbral |
 |---|---|
@@ -77,14 +89,15 @@ probabilidad de perder clientes.[^gobierno][^finanzas]
 
 # Qué lo invalidaría
 
-- Que el board fije otro umbral (por ejemplo, un solo cliente cualquiera).
+- Que el Directorio recalibre el umbral en un gate (por ejemplo, a un solo cliente cualquiera).
 - Que la concentración cambie y los cinco primeros dejen de representar la
   mayor parte de la facturación.
 
 # Cautelas
 
-- Los umbrales (uno de dos, dos de cinco, 18 meses) son una propuesta de
-  `governance`, sin calibrar; los decide el equipo con el board.
+- Los umbrales (uno de dos, dos de cinco, 18 meses) siguen sin calibrar; la
+  regla que los usa la ratifica el Directorio y recalibrarlos es decisión suya
+  en un gate, a propuesta del AI Council.[^resoluciones]
 - Se reemplaza la referencia histórica aislada por el texto ordenado BCRA al
   13/02/2026, consultado el 20/10/2026, con secciones 1.1, 4.6 y 10.3.
   Corresponde revisar cambios posteriores antes de entregar.[^bcra-tecnologia]
@@ -98,4 +111,5 @@ probabilidad de perder clientes.[^gobierno][^finanzas]
 [^cartera]: Cartera y concentración, agosto de 2026: más de 90% en los cinco primeros y cerca del 70% en los dos primeros; fotografía de un mes, sin identificar segmentos de cada cliente.
 [^apetito]: Apetito de riesgo de clientes, verificación propuesta de restricciones y matriz, sin presumir disponibilidad de evidencia contractual.
 [^gobierno]: Anexo C, umbrales propuestos de señal, consecuencias documentadas, evidencia privada y exclusión del uso ante prohibición pura; no acredita señales observadas ni ratificación.
+[^resoluciones]: Anexo G, R-15: regla de plataforma con señal y cuatro condiciones, ratificada por el Directorio al aprobar el plan; el Directorio libera fondos y recalibra umbrales a propuesta del AI Council.
 [^finanzas]: Anexo E, señal como entrada para evaluar una respuesta, con inversión y ampliación del mínimo sujetas a alcance, costeo y autorización propios, sin ingresos ni repago demostrados.

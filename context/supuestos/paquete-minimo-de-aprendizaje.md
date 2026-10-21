@@ -2,7 +2,7 @@
 type: Supuesto
 title: "Paquete mínimo de aprendizaje sin plataforma central"
 description: "Finanzas concilia los insumos de B/C/D para medir valor con controles probados y herramientas existentes, con techos por etapa y salida acotada."
-status: verified
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -27,14 +27,17 @@ sources:
   - id: convenciones
     resource: "context/supuestos/convenciones-de-calculo.md"
     title: "Convenciones de calendario, horas de costeo y redondeos"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 
 # Supuesto
 
-Propuesta de Finanzas con validación inicial, elegida y revisada por Martín para
-el plan. El acuerdo del equipo y la autorización de Acme Labs siguen sin
-acreditar; las estimaciones requieren cotización y confirmación de disponibilidad.
+Propuesta de Finanzas con validación inicial, adoptada por el Directorio al
+aprobar el plan (Anexo G)[^resoluciones]. Las estimaciones
+requieren cotización y confirmación de disponibilidad en cada liberación.
 
 El detalle reproducible vive en el Anexo E, «Pedido inicial: paquete mínimo».[^business-case]
 B/C/D son insumos de diseño, no evidencia externa; las fichas referidas conservan
@@ -48,11 +51,12 @@ matriz, inventario, dictamen legal, configuración, pruebas negativas, correcci�
 verificación independiente y aceptación del residual. Sin gateway ni plataforma
 central, producto, avanzado, red de champions al 10% o contractor continuo.
 
-Supuesto explícito de unión de actividades, a validar por sus dueños:[^arquitectura][^gobierno][^personas]
+Unión de actividades adoptada por el Directorio (R-26)[^resoluciones]; la
+confirman Tecnología y Seguridad antes de la segunda liberación:[^arquitectura][^gobierno][^personas]
 
 | Rol / actividad | Horas M1-M3, sin preparación | Derivación y solape tratado |
 |---|---|---|
-| Tech lead / arquitectura / adopción | 146-276 | B 24-40 + C 22-36 (política, legal y Council) + D «Insumo para el paquete mínimo»: 48-96 líder, 16-32 facilitación y 8-16 managers + E anterior 40-80 diseño de prueba; menos preparación 12-24 |
+| Tech lead / arquitectura / adopción | 146-272 | B 24-40 + C 22-32 (política, legal y Council) + D «Insumo para el paquete mínimo»: 48-96 líder, 16-32 facilitación y 8-16 managers + E anterior 40-80 diseño de prueba; menos preparación 12-24 |
 | DevOps productor | 44-72 | Unión de B 32-56 y C 40-64 para configurar/probar, más C 4-8 inventario; se toma 40-64 para la unión, no la suma |
 | QA / datos | 48-72 | B 40-64 contiene D «Insumo para el paquete mínimo»: 8-16 de reproducción; más lectura de prueba E 16-24; menos preparación 8-16 |
 | IA aplicada interna | 8-16 | B, tareas distintas de facilitación y diseño; exige competencia demostrada |
@@ -67,8 +71,9 @@ La unión de DevOps supone que la configuración y la primera corrección de B/C
 son la misma tarea y caben en 40-64 h; la de QA y Seguridad supone reutilización
 del mismo entregable técnico, sin absorber política en Seguridad.
 
-Si no se confirma, recostear antes de iniciar; no declarar estos solapes como
-ahorro acordado. Roles acumulados requieren agenda por persona.
+DevOps 40-64 h es un tope de alcance, no un ahorro: si las exportaciones no
+entran, se reportan como uso estimado; si aun así no entra, el CFO recostea
+antes de M1 dentro de 71 y firma el CEO; superar 71 vuelve al Directorio. Roles acumulados requieren agenda por persona.
 
 Las restas de preparación de TL y QA emparejan extremos del mismo escenario;
 no son restas de intervalos independientes. El remanente por actividad debe
@@ -77,22 +82,23 @@ conciliarse antes de ejecutar; si esa correspondencia no se confirma, recostear.
 ## Reserva propuesta de capacidad M1-M3
 
 Supuesto de planificación para solicitar capacidad; Operaciones y los managers
-deben confirmar personas, agendas y trabajo desplazado antes de cada actividad.
-La elección para el borrador no acredita disponibilidad empresarial.
+confirman personas, agendas y trabajo desplazado antes de cada actividad. Rige
+la lectura separada: la reserva clave y la de formación se confirman por separado
+en la segunda liberación (R-05)[^resoluciones].
 
 | Destino | Reserva propuesta | Derivación |
 |---|---|---|
-| Soporte clave, repartido entre roles | Hasta 720 h / 1,5 FTE de costeo | 1,5 × 480 h; demanda estimada de soporte 430-690 h |
+| Soporte clave, repartido entre roles | Hasta 720 h / 1,5 FTE de costeo | 1,5 × 480 h; demanda estimada de soporte 430-686 h |
 | Formación básica | 360-420 h | 60-70 personas × 6 h |
 | Formación intermedia | 180-240 h | Cohorte de 15-20 personas × 12 h |
 | Máximo combinado | 1.380 h / 2,875 FTE de costeo | 720 + 420 + 240; no incluye preparación previa ni cierre condicional |
 
-El soporte tiene 30 h de margen sobre su demanda máxima estimada (720 − 690).
+El soporte tiene 34 h de margen sobre su demanda máxima estimada (720 − 686).
 Ese margen agregado no cubre automáticamente faltantes de otro rol o semana.
 La formación de quienes también producen o verifican se suma en su agenda.
 
-La demanda costeada sigue en 970-1.350 h; la reserva de capacidad no es ejecución
-ni una reserva financiera adicional. El margen de 30 h no tiene actividad ni
+La demanda costeada es 970-1.346 h; la reserva de capacidad no es ejecución
+ni una reserva financiera adicional. El margen de 34 h no tiene actividad ni
 rol costeado: usarlo exige estimar su costo y autorizarlo antes de comprometerlo.
 
 Se mantienen los techos financieros del mínimo. Si la asignación adicional no
@@ -119,11 +125,16 @@ Primera autorización específica durante octubre-diciembre de 2026, por **10 d�
 hábiles**. Antes de trabajar: imputación del tiempo a presupuesto 2026 aprobada,
 agendas, fuentes y trabajo desplazado confirmados por las autoridades correspondientes.
 
-Sin esas condiciones la ventana no comienza. Los responsables humanos se deben
-designar; los responsables del TP no sustituyen a quienes liberan agendas,
-aceptan riesgo o aprueban presupuesto en Acme Labs.
+Sin esas condiciones la ventana no comienza y M1 no arranca. La aprueba el
+Directorio al aprobar el plan; produce el CAIO y verifica el CFO; el Responsable
+de Tecnología confirma el acceso a las fuentes (R-02)[^resoluciones].
 
-**Validación organizativa adicional**, estimación de Finanzas (agente) de 60-96 h; la estimación humana de Personas (#18, pregunta 3) sigue pendiente. Costo
+**Validación organizativa adicional**, 60-96 h: estimación de Finanzas confirmada
+por Personas como estimación de planificación, con las condiciones de validez del
+Anexo D. El día 2 de la ventana, una prueba de una hora sobre un área confirma el
+export; si la matriz no entra, el día 3 se reduce el detalle a horas clave y
+cohorte o se recostea dentro del techo 5, y si lo excede la ventana se detiene y
+vuelve al Directorio (R-24)[^resoluciones]. Costo
 horario según [costo por rol](/supuestos/costo-cargado-por-rol.md)/160;[^costo-rol] las horas
 incluyen entrevistadores, entrevistados, managers, staff y autoridad que decide:
 
@@ -162,7 +173,7 @@ reducir/resecuenciar o detener; un bloqueo no se presenta como aprobación.
 
 Todo el trabajo organizativo se trata como adicional hasta confirmar equivalencias
 con B/C/D; una equivalencia se descuenta una sola vez de la ejecución posterior.
-No se presume absorbido en 59 mil, 720 h ni las 30 h de margen de M1-M3.
+No se presume absorbido en 59 mil, 720 h ni las 34 h de margen de M1-M3.
 
 La preparación técnica existente se conserva separada: **20-40 h / 0,4875-2,25
 mil; techo 3**, ya extraída de B/D, sin ejecución registrada. Validación y
@@ -186,9 +197,12 @@ verificador o costos fuera de rango exigen reducir/resecuenciar o recostear.
 
 ## Segunda autorización antes de M1
 
+La firma el CEO por delegación del Directorio, con dictamen del AI Council; el
+CFO verifica costo, caja, reservas y presupuesto 2027 (R-05)[^resoluciones].
 Condiciones: diagnóstico y padrón aceptados; matriz de capacidad validada por
-Operaciones/managers; autoridades identificadas; viabilidad técnica/de medición,
-recosteo y presupuesto 2027 aprobados por la autoridad presupuestaria correspondiente.
+Operaciones/managers; productor, verificador y firmante nombrados; viabilidad
+técnica/de medición con método ratificado; recosteo. Sin acta, M1-M3 no arranca;
+un recosteo que supere 71 vuelve al Directorio.
 
 Libera base y controles con herramientas existentes; no habilita prácticas
 automáticamente. Requieren base congelada, dictamen aplicable, controles probados,
@@ -217,9 +231,9 @@ si no se consigue ese contrato, recostear reserva antes de firmar.
 Cierre interno: 16-24 h de senior para exportar, revocar y archivar, costo
 0,3-1,125 mil, reserva de tiempo 2 mil. Reservas solo ante salida, no gasto base.
 
-Seguridad provisional cuesta 0,6375-2,53125 mil. Soporte clave total: 430-690 h,
-8,8875-35,18125 mil, 0,8958-1,4375 FTE. Con formación distribuida 540-660 h,
-M1-M3 totaliza **970-1.350 h / 2,0208-2,8125 FTE**, costo **14,2875-58,28125**.
+Seguridad provisional cuesta 0,6375-2,53125 mil. Soporte clave total: 430-686 h,
+8,8875-34,93125 mil, 0,8958-1,4292 FTE. Con formación distribuida 540-660 h,
+M1-M3 totaliza **970-1.346 h / 2,0208-2,8042 FTE**, costo **14,2875-58,03125**.
 
 Segunda liberación, condicionada y no aprobada ahora: caja 9 + reserva 1 = **10**;
 tiempo M1-M3 59 + reserva de cierre 2 = **61**. Total **71**, disjunto de la
@@ -229,8 +243,9 @@ Límite acumulado propuesto **79 = 8 + 71**, caja **10** / tiempo **69**
 (59 + preparación técnica 3 + validación organizativa 5 + cierre 2). El techo
 anterior era 74; el adicional organizativo agrega 5 sin cambiar caja ni M1-M3.
 
-Núcleo posterior y continuidad no están autorizados. La elección del borrador
-no libera las dos etapas: cada una requiere su autorización empresarial.
+Núcleo posterior y continuidad no se liberan hoy: el CEO firma cada gate dentro
+de los techos y el núcleo de 108 h en el gate de salida, con verificación del
+CFO (R-03, R-04)[^resoluciones].
 
 ## Continuación condicional y salida
 
@@ -260,8 +275,8 @@ Sin capacidad para el núcleo, excluir/suspender uso hasta que se cubran
 obligaciones; no se abandona una obligación legal.
 
 Proyección anual sin esperas ni reservas gastadas: caja 2,3-13,8 y tiempo con
-preparación técnica y validación organizativa 24,225-99,06875; económico
-26,525-112,86875, **≈70 (27-113)**.
+preparación técnica y validación organizativa 24,225-98,81875; económico
+26,525-112,61875, **≈70 (27-113)**.
 
 Los acumulados incluyen preparación imputada a 2026 más ejecución 2027;
 no representan exclusivamente presupuesto 2027.
@@ -316,8 +331,9 @@ Las filas de espera suponen continuidad sin esperas anteriores; si una espera
 M6 pasa y luego se espera en M9, recomponer los subtramos antes de autorizar.
 
 El máximo propuesto de corte inmediato M6 es **95**, incluidos los 5 de
-validación organizativa, sin esperar. Una sola espera por gate; la propuesta
-sigue pendiente de ratificación para M9:
+validación organizativa, sin esperar. Regla del Directorio, igual en M6 y M9: una
+sola espera por gate; el AI Council recomienda abrirla, el CFO verifica y el CEO
+firma el subtramo dentro de los techos (R-27)[^resoluciones]. Sin segunda espera:
 
 Si no pasa valor/calidad con versión congelada,
 cortar el frente interno y aplicar precedencia de F si otro frente continúa.
@@ -340,11 +356,14 @@ cambio contractual o base que no resuelve. Se reduce/resecuencia o recostea.
 
 # Cautelas
 
-Responsables humanos, ratificación empresarial del calendario, solapes y precios:
-pendientes. Primera liberación e imputación 2026 requieren aprobación empresarial
-antes de trabajar; no consta preparación ejecutada ni costo hundido de esa etapa.
-La reserva de capacidad es un supuesto del borrador, pendiente de confirmación
-por persona y semana; no libera por sí sola el hito de validación organizativa.
+Primera liberación: la aprueba el Directorio al aprobar el plan, antes de
+trabajar; no consta preparación ejecutada ni costo hundido de esa etapa
+(R-02)[^resoluciones]. Productor, verificador y firmante se
+separan por rol y las personas se nombran en el acta de cada liberación (R-06)[^resoluciones].
+Los solapes rigen por R-26 y los precios siguen sin cotizar: cada cotización la
+verifica el CFO antes de contratar. La reserva de capacidad se confirma por
+persona y semana en la matriz de la validación; sin esa confirmación no se libera
+M1-M3 y se reduce o resecuencia con recosteo (R-05)[^resoluciones].
 La base puede extenderse hasta semana 8; básico, intermedio y prueba se desplazan
 a semana 9 y se revisa completitud M3. No se promete señal causal M3.
 Beneficio de caja estimado: 0; ingreso nuevo: 0. Capacidad sin cifra hasta medir;
@@ -362,3 +381,4 @@ cotizaciones, agendas, ejecución o autorizaciones empresariales.
 [^business-case]: Anexo E, «Pedido inicial: paquete mínimo», continuidad, esperas y exposiciones de salida.
 [^costo-rol]: Costo mensual cargado por rol, rangos supuestos de planificación sujetos a contraste privado.
 [^convenciones]: Convenciones de calendario y cálculo del plan, 160 h por mes, 480 h por tramo y redondeo de techos.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

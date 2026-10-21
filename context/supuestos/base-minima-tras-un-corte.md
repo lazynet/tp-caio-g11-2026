@@ -1,8 +1,8 @@
 ---
 type: Supuesto
 title: "Base mínima que queda después de un corte"
-description: "Continuidad propuesta tras un corte, diferenciando el núcleo restringido del mínimo, el gobierno del paquete completo y la base del producto activo, con capacidad, controles y autorización pendientes."
-status: verified
+description: "Continuidad tras un corte: núcleo restringido del mínimo que firma el CEO en el gate de salida, superficies que autoriza el Responsable de seguridad y base del producto solo si se libera."
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -32,7 +32,10 @@ sources:
     title: "Uso de IA informado y cautelas de la ficha"
   - id: politica
     resource: "context/hechos/gobierno-y-politica-ia.md"
-    title: "Política de IA informada y aplicación pendiente de comprobar"
+    title: "Política de IA informada; su aplicación se comprueba en la preparación y en el mes 3"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -48,8 +51,9 @@ Seguridad y 12 h de staff para accesos, incidentes y revisión de permisos:
 propuesto de 2.000 USD por trimestre y sin caja nueva.[^minimo][^costo-rol]
 
 Después de M3, tres trimestres suman 108 h y un techo de 6.000 USD de tiempo.
-Requiere autorización explícita en la salida, no está incluido en los
-79.000 USD acumulados hasta cerrar y reemplaza la continuación; no se suma
+Lo firma el CEO en el gate de salida, dentro de 85 y con verificación del CFO
+(R-03)[^resoluciones]; sin esa firma no hay continuidad y el uso no cubierto se suspende. No está
+incluido en los 79.000 USD acumulados hasta cerrar y reemplaza la continuación; no se suma
 además de ella.[^minimo]
 
 Este núcleo no mantiene un piloto activo ni habilita usos cuyos controles no
@@ -128,9 +132,10 @@ continúe.[^arquitectura][^gobierno]
 
 [^minimo]: Paquete mínimo de aprendizaje, núcleo restringido de 36 h por trimestre, costo 675-1.687,50 USD y techo 2.000 USD; tres trimestres tras M3 requieren autorización propia de 6.000 USD fuera de los 79.000 acumulados hasta cerrar, sin piloto activo ni usos con controles no cubiertos.
 [^finanzas]: Anexo E, continuidad tras corte, separación de cierre y base restante y precedencia propuesta en el corte mixto con producto activo.
-[^gobierno]: Anexo C, núcleo de gobierno y controles aplicables por superficie y alcance; requisitos y autorización pendientes de comprobar en cada caso.
-[^arquitectura]: Anexo B, base común mínima propuesta para el producto: infraestructura, contractor al 50%, DevOps/QA 0,5 FTE y Arquitectura 0,1 FTE, sin evidencia de suficiencia de esas fracciones.
+[^gobierno]: Anexo C, núcleo de gobierno y controles aplicables por superficie y alcance; la continuidad de cada superficie la autoriza el Responsable de seguridad en el gate de salida y lo no cubierto se suspende (R-03).
+[^arquitectura]: Anexo B, base común mínima propuesta para el producto: infraestructura, contractor al 50%, DevOps/QA 0,5 FTE y Arquitectura 0,1 FTE; solo aplica si el Directorio libera el producto en el mes 6, y entonces el Responsable de Tecnología dimensiona las fracciones y el CFO las verifica antes de liberar M7-M9 (R-30).
 [^costo-rol]: Costos por rol supuestos: tech lead 4.500-10.000 USD/mes, senior de Seguridad 3.000-7.500 y staff 1.500-5.000; 160 h mensuales para costear las fracciones.
 [^precios]: Precios externos sin cotizar, rangos de diseño que requieren validar alcance y contratación.
 [^uso-ia]: Uso de IA informado en el caso, con sus cautelas; no acredita continuidad futura autorizada.
-[^politica]: Política de IA informada por el responsable del caso, con aplicación operativa y controles pendientes de comprobar.
+[^politica]: Política de IA informada por el responsable del caso; el Directorio la ratifica, la preparación deja constancia de versión y alcance y el mes 3 comprueba su aplicación; lo no comprobado se suspende (R-07).
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

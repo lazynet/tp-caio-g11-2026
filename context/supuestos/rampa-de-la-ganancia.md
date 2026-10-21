@@ -2,7 +2,7 @@
 type: Supuesto
 title: "Rampa de la ganancia de productividad"
 description: "La ganancia de throughput llega por tramos: en el escenario base, 0% del objetivo en los meses 1-3, 25% en los meses 4-6, 60% en los meses 7-9 y 100% en los meses 10-12; en el pesimista 0/10/30/60% y en el optimista 0/40/80/100%."
-status: verified
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -27,6 +27,9 @@ sources:
   - id: umbrales-tecnicos
     resource: "context/supuestos/umbrales-tecnicos-propuestos.md"
     title: "Gates de impacto, espera y condiciones de corte"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -73,11 +76,14 @@ convertidas.
 - Ese caso se trata como espera y eventual corte según las mediciones y los
   gates, incluida la espera de 6 semanas y el corte si vence sin mejora.[^umbrales-tecnicos]
 - La unidad de throughput y su valuación las define el Anexo E; la rampa se
-  aplica sobre el throughput, no sobre su valuación.
+  aplica sobre el throughput, no sobre su valuación. Mide el Responsable de
+  Tecnología, lee el AI Council en los meses 6 y 9 y convierte el CFO solo con
+  destino decidido en el mes 6; sin pasar, espera única o corte (R-19)[^resoluciones].
 
-[^ganancia-productividad]: Ganancia de productividad por IA en ingeniería, rango propuesto y validaciones pendientes.
+[^ganancia-productividad]: Ganancia de productividad por IA en ingeniería, rango propuesto como hipótesis y reparto de medición, lectura y conversión.
 [^uso-ia]: Uso actual de IA en la operación interna, diferencias por área y cautelas de telemetría.
 [^pilotos-ia]: Encuesta y pilotos internos de IA, experiencia de delivery limitada a la primera semana y sin extrapolación.
 [^convenciones-calculo]: Convenciones de calendario y cálculo, línea de base prospectiva y costeo.
 [^escenarios-financieros]: Anexo E, escenarios y sensibilidades del modelo de productividad.
 [^umbrales-tecnicos]: Umbrales técnicos propuestos, gates de impacto y reglas de espera y corte.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

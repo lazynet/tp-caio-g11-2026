@@ -2,7 +2,7 @@
 type: Supuesto
 title: "Estrategia de IA al inicio del plan"
 description: "El escenario del TP parte sin una estrategia de IA formal aprobada, aunque hay iniciativas y objetivos propuestos; el diagnóstico conserva un nivel 2 sujeto a validación."
-status: verified
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -53,9 +53,9 @@ responsable, y contrastar sus objetivos con los criterios del diagnóstico.
 - Es una elección del escenario del TP; no se presenta como evidencia de que
   una organización real carezca de estrategia.
 - La definición del escenario no valida el puntaje ni las fuentes del caso.
-- Las fichas de antecedentes de OKR e IA en producto ya tienen revisión humana
-  declarada; la ficha del método de diagnóstico de la cursada sigue pendiente
-  de revisión humana.
+- Las fichas de antecedentes de OKR e IA en producto y la del método de
+  diagnóstico de la cursada tienen revisión humana declarada (método: M1U1 corta
+  pp. 6-10 y extendida pp. 8-10).
 
 [^escenario-tp-2026-10-20]: Definición del escenario del TP informada por Martín el 20/10/2026: partir sin estrategia de IA previa formal aprobada.
-[^diagnostico-madurez]: `material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md`, escala y criterios de Estrategia y liderazgo; material de la cursada pendiente de revisión humana.
+[^diagnostico-madurez]: `material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md`, escala y criterios de Estrategia y liderazgo; cotejada contra el PDF de la cursada, con revisión humana declarada el 2026-10-20.

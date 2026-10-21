@@ -2,7 +2,7 @@
 type: Supuesto
 title: "Desarrolladores en equipos propios y su costo"
 description: "El caso de negocio supone entre 15 y 20 desarrolladores en equipos propios (valor de cálculo 17,5) con un costo cargado de USD 2.500-7.000 por mes (valor de cálculo 4.750)."
-status: verified
+status: draft
 verified:
   by: human:lazynet
   at: 2026-10-20
@@ -21,7 +21,10 @@ sources:
   - id: umbrales-tecnicos
     resource: "context/supuestos/umbrales-tecnicos-propuestos.md"
     title: "Muestra y precisión propuestas para los gates de impacto"
-generated: { by: codex/gpt-6, at: 2026-10-20 }
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, R-14 (método de medición) y R-06 (quién produce, verifica y firma)"
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21 }
 ---
 # Supuesto
 
@@ -36,8 +39,11 @@ controla las herramientas; el staffing no se cuenta, porque el uso de IA ahí
 depende de cada cliente (ver [ganancia de productividad](/supuestos/ganancia-de-productividad.md)).[^ganancia-productividad]
 
 El mínimo propuesto de 15 es el piso de la cohorte y requiere además un
-semiancho del intervalo de hasta 3 puntos porcentuales. La precisión se valida
-durante la preparación, antes de la segunda liberación.[^umbrales-tecnicos]
+semiancho del intervalo de hasta 3 puntos porcentuales.[^umbrales-tecnicos] La
+cohorte la identifica el Responsable de Tecnología en el acta de la validación
+inicial; el CFO verifica el costo, y la precisión y el método los ratifica el AI
+Council antes de la segunda liberación (R-14). Sin ratificación no se libera
+M1-M3.[^resoluciones]
 
 # Por qué es razonable
 
@@ -53,7 +59,8 @@ durante la preparación, antes de la segunda liberación.[^umbrales-tecnicos]
 - Un inventario por equipo que dé menos de 15 desarrolladores en equipos propios.
 - Una mezcla de seniority muy distinta de la supuesta.
 - Que la serie de la preparación previa muestre que con 15 personas el semiancho supera 3 puntos:
-  entonces el mínimo no alcanza y el gate se reformula antes de la segunda liberación, previa a M1.
+  entonces el mínimo no alcanza y el AI Council ratifica un gate reformulado antes de la
+  segunda liberación, previa a M1, o ninguna lectura de M6/M9 decide por valor (R-14).[^resoluciones]
 
 # Cautelas
 
@@ -65,4 +72,5 @@ durante la preparación, antes de la segunda liberación.[^umbrales-tecnicos]
 [^tamano-estructura]: Tamaño y estructura de la organización, dotación y peso aproximado de Tecnología al corte de septiembre de 2026.
 [^ganancia-productividad]: Ganancia de productividad con agentes de código, alcance en equipos propios y exclusión de staffing.
 [^costo-rol]: Costo mensual cargado por rol, rangos supuestos sin calibración contra nómina.
+[^resoluciones]: Anexo G, R-14 (el AI Council ratifica estimador, muestra mínima, cohorte elegible y reformulación antes de la segunda liberación) y R-06 (el CFO responde por cada cifra del business case).
 [^umbrales-tecnicos]: Umbrales técnicos propuestos, muestra mínima de 15 personas activas y semiancho máximo de 3 puntos porcentuales, sujetos a validación previa.
