@@ -74,7 +74,7 @@ section.closing .cuenta .total b { color: var(--rust); }
 </div>
 </div>
 
-<p style="font-size:17px;margin-top:6px">1 = inicial, 3 = prácticas formales, 5 = transformacional; 2 = hay piezas del 3 sin formalizar ni medir. Los niveles y las cifras salen de fuentes con fechas distintas: son estimaciones que la validación confirma o corrige. Lo que no está en duda es que el valor no se mide.</p>
+<p style="font-size:17px;margin-top:6px">1 = inicial, 3 = operacional, 5 = transformacional; 2 = hay piezas del 3 sin formalizar ni medir. Los niveles y las cifras salen de fuentes con fechas distintas: son estimaciones que la validación confirma o corrige. Lo que no está en duda es que el valor no se mide.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -141,7 +141,7 @@ section.closing .cuenta .total b { color: var(--rust); }
 <span class="tag">El paquete mínimo</span>
 <h3>Saber si hay valor, con controles probados</h3>
 <p>Formación básica para todos e intermedia para un grupo de 15-20, controles de seguridad por herramienta, medición contra una base y estudio del asistente para clientes. Con lo que ya pagamos, sin plataforma nueva.</p>
-<p><strong>Lo que se pide hoy no es el año:</strong> es llegar al mes 3, con un máximo de 79 (slide 8). Si todo pasa, el año costaría ≈70 (27-113), estimado; esa proyección no se aprueba hoy.</p>
+<p><strong>Lo que se pide hoy no es el año:</strong> es llegar al mes 3, con un máximo de 79 (slide 8). Si todo pasa, el año costaría ≈70 (27-113), estimado; esa proyección no se aprueba hoy. Los techos suman más que el gasto esperado, por diseño.</p>
 </div>
 <div class="plain">
 
@@ -348,7 +348,7 @@ section.closing .cuenta .total b { color: var(--rust); }
 
 <p class="note" style="margin-top:2px">Las filas de los meses 6 a 12 no se autorizan hoy. La guardia mínima (accesos, incidentes y permisos) cuesta caja 0 y hasta 6 de tiempo, y se aprueba al cortar. No actuar también cuesta: siguen abiertos el uso de IA sin reglas y los clientes que prohíben modelos externos.</p>
 
-<p style="font-size:17px;margin:0 0 10px"><strong>Sin vuelta atrás, no se aprueba nada hoy</strong> (se evalúan en el mes 12 o después): datos de clientes a un modelo · contratos de IA con clientes · IA que actúa en el producto · compromisos de más de 12 meses.</p>
+<p style="font-size:17px;margin:0 0 10px"><strong>Sin vuelta atrás, no se aprueba nada hoy</strong> (se evalúan en el mes 12 o después): datos de clientes a un modelo · contratos de IA con clientes · IA que ejecuta acciones en el producto, aun con aprobación humana · compromisos de más de 12 meses.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -370,7 +370,7 @@ section.closing .cuenta .total b { color: var(--rust); }
 
 # Autorizar la validación inicial
 
-<p style="font-size:22px;line-height:1.4;max-width:1100px;color:#f3efe4">Hoy pedimos 8 (miles de USD): diez días hábiles de tiempo de personas propias, sin caja, imputados al presupuesto 2026. Con esa evidencia, decidir hasta 71 más para los meses 1-3 y las reservas. Y adoptar los puntos de decisión de los meses 3, 6, 9 y 12.</p>
+<p style="font-size:22px;line-height:1.4;max-width:1100px;color:#f3efe4">Hoy pedimos 8 (miles de USD): diez días hábiles de tiempo de personas propias, sin caja, con cargo al presupuesto 2026 a confirmar junto con las agendas. Con esa evidencia, decidir hasta 71 más para los meses 1-3 y las reservas. Y adoptar los puntos de decisión de los meses 3, 6, 9 y 12.</p>
 
 <div class="cuenta">
 <div><b>8</b>Preparación 2026, 10 días hábiles: caja 0 + tiempo 8</div>
