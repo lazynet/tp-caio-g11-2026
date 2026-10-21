@@ -6,7 +6,7 @@ title: "Anexo D — Personas, cambio y roadmap cultural"
 
 # Anexo D — Personas, cambio y roadmap cultural
 
-Slides que sustenta: [Slide 7 — Personas y cultura](../slides.md).
+Slides que sustenta: [Personas](../slides.md).
 
 Convención de tiempo: el plan tiene una **preparación previa** (octubre-diciembre
 de 2026) y **cuatro tramos de tres meses** (meses 1-3, 4-6, 7-9 y 10-12, de
@@ -1262,25 +1262,23 @@ Finanzas: la facturación en USD no se publica.
   completó los cursos): el primer freno fue el tiempo.
   El plan responde con casos por rol, horas dentro de la jornada y champions con
   tiempo asignado, y mide en los meses 1-3 si pasa lo mismo en toda la organización.
-- **Redacción sugerida para la slide 7:** «En el piloto
+- **Redacción sugerida para «Personas»:** «En el piloto
   de abril (n=12, autoseleccionado) el uso fue frecuente (92% a tres o más días
-  por semana, NPS +42) y solo 17% (2 de 12) completó los cursos». Propuesta a
-  quien integra las slides: reemplazar «los 12 usaron la herramienta y la
-  valoraron», porque la fuente registra 8% de detractores. La slide ya publica esa señal; conservar la cautela: no representa
-  a toda la organización, cuya base se mide en M1-M3.
+  por semana, NPS +42) y solo 17% (2 de 12) completó los cursos». Conservar la
+  cautela: no representa a toda la organización, cuya base se mide en M1-M3.
 - **Cifra para el CFO:** ~2.684-2.924 horas de capacitación, ~41-45 horas por
   persona, a 27,4-103,1k USD al costo cargado; además hay 384 h del líder en el
   sobre clave. Finanzas concilia ingreso y contribución desplazados sin duplicar
   esas horas. Total de personas del programa publicado ~87,2-248,9k USD
   (con contractor desde el mes 1 y al 100% en los meses 4-12; ~46,7-149,9k USD sin
   señal). No es el presupuesto del nuevo paquete mínimo.
-- **Señal de alerta para la slide 7:** Tecnología ≥80% en M6 y ≥85% en M12;
+- **Señal de alerta para «Personas»:** Tecnología ≥80% en M6 y ≥85% en M12;
   Operaciones habilitadas ≥60% en M12 (≥40% en M6, meta intermedia).
   Cumplir exactamente 85%/60% en M12 con igual peso y toda Operaciones habilitada
   da 72,5%, no cumplimiento del OKR 80%.
   Conservar metas por área y publicar combinado original, habilitados/total y
   cobertura; las prohibiciones condicionan el uso y deben medirse.
-- **Transición responsable (una línea para la slide 7):** «Formar y reasignar
+- **Transición responsable (una línea para «Personas»):** «Formar y reasignar
   antes que desvincular: estudio de un rol crítico (alcance ampliado, no incluido en el mínimo), compromiso sobre el empleo
   y chequeo de equidad por grupo». Sin compensación monetaria nueva en 12 meses.
 - **Qué se mide:** uso real semanal por área, no seats, que alimenta el tablero
