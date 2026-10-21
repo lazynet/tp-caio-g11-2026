@@ -23,6 +23,7 @@ CSS = """
                          font-size: 9pt; color: #555; } }
 body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
        font-size: 11pt; line-height: 1.45; color: #1a1a1a; max-width: none; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid; page-break-after: avoid; }
 h1 { font-size: 20pt; border-bottom: 2px solid #333; padding-bottom: 4pt; }
 h2 { font-size: 14pt; margin-top: 18pt; }
 table { border-collapse: collapse; width: 100%; margin: 8pt 0; font-size: 10pt; }

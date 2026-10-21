@@ -1,0 +1,1782 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "path": "context/hechos/estructura-de-ingresos.md",
+      "line": 39,
+      "text": "- **Producto propio A** (medios de pago): en construcción, pendiente de una",
+      "sha256": "be1ae19d0bb0ee0b7f46ac968cde3fda2976872b1a45640931af2a84bba3e324",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Habilitación regulatoria del producto propio pendiente; no constan autoridad y consecuencia para ese objeto. No se presume habilitado.",
+      "basis": {}
+    },
+    {
+      "path": "context/hechos/gobierno-y-politica-ia.md",
+      "line": 4,
+      "text": "description: \"Acme Labs tiene una política de uso aceptable de IA aprobada, según el responsable del caso; la aprobación no acredita la implementación de controles ni actualiza por sí sola los pendientes del registro de abril.\"",
+      "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Antecedente de abril y aprobación informada en octubre, sin inferir cierre del inventario, matriz, onboarding o controles. La cautela limita expresamente lo acreditado; no convierte el registro histórico en estado operativo actual.",
+      "basis": {
+        "record": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 4,
+          "text": "description: \"Acme Labs tiene una política de uso aceptable de IA aprobada, según el responsable del caso; la aprobación no acredita la implementación de controles ni actualiza por sí sola los pendientes del registro de abril.\"",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "context/hechos/gobierno-y-politica-ia.md",
+      "line": 33,
+      "text": "controles, la operación de un AI Council ni el cierre de los pendientes del",
+      "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Antecedente de abril y aprobación informada en octubre, sin inferir cierre del inventario, matriz, onboarding o controles. La cautela limita expresamente lo acreditado; no convierte el registro histórico en estado operativo actual.",
+      "basis": {
+        "record": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 33,
+          "text": "controles, la operación de un AI Council ni el cierre de los pendientes del",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "context/hechos/gobierno-y-politica-ia.md",
+      "line": 67,
+      "text": "# Pendientes históricos declarados en abril de 2026",
+      "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Antecedente de abril y aprobación informada en octubre, sin inferir cierre del inventario, matriz, onboarding o controles. La cautela limita expresamente lo acreditado; no convierte el registro histórico en estado operativo actual.",
+      "basis": {
+        "record": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 67,
+          "text": "# Pendientes históricos declarados en abril de 2026",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "context/hechos/gobierno-y-politica-ia.md",
+      "line": 69,
+      "text": "El registro de abril declaraba los siguientes pendientes. La aprobación fue",
+      "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Antecedente de abril y aprobación informada en octubre, sin inferir cierre del inventario, matriz, onboarding o controles. La cautela limita expresamente lo acreditado; no convierte el registro histórico en estado operativo actual.",
+      "basis": {
+        "record": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 69,
+          "text": "El registro de abril declaraba los siguientes pendientes. La aprobación fue",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "context/hechos/gobierno-y-politica-ia.md",
+      "line": 91,
+      "text": "del producto con datos de categoría especial, están pendientes de definir con",
+      "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Telemetría y excepción de datos especiales como meta 2027: falta autoridad inequívoca de tratamiento, punto de habilitación y consecuencia propios. La A del KPI agregado no cubre datos de origen.",
+      "basis": {}
+    },
+    {
+      "path": "context/hechos/gobierno-y-politica-ia.md",
+      "line": 99,
+      "text": "- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la",
+      "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Antecedente de abril y aprobación informada en octubre, sin inferir cierre del inventario, matriz, onboarding o controles. La cautela limita expresamente lo acreditado; no convierte el registro histórico en estado operativo actual.",
+      "basis": {
+        "record": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 99,
+          "text": "- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "context/hechos/ia-en-producto-y-oferta.md",
+      "line": 55,
+      "text": "- La propuesta al Directorio estaba pendiente de decisión; no hay un estado",
+      "sha256": "0ee17bbb1e68bbeacaffe8d2bd5a142b517efb9b68815bfb9a199d20d6920813",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "La cautela conserva una propuesta anterior sin estado posterior documentado y excluye trasladar sus estimaciones. No se presume decisión actual del Directorio.",
+      "basis": {
+        "record": {
+          "path": "context/hechos/ia-en-producto-y-oferta.md",
+          "line": 55,
+          "text": "- La propuesta al Directorio estaba pendiente de decisión; no hay un estado",
+          "sha256": "0ee17bbb1e68bbeacaffe8d2bd5a142b517efb9b68815bfb9a199d20d6920813"
+        },
+        "limit": {
+          "path": "context/hechos/ia-en-producto-y-oferta.md",
+          "line": 55,
+          "text": "- La propuesta al Directorio estaba pendiente de decisión; no hay un estado\n  posterior documentado.\n- Las estimaciones de precio y margen de esa propuesta son supuestos sin\n  validación de mercado y no se trasladan acá.",
+          "sha256": "0ee17bbb1e68bbeacaffe8d2bd5a142b517efb9b68815bfb9a199d20d6920813"
+        }
+      }
+    },
+    {
+      "path": "context/supuestos/alternativas-de-menor-alcance.md",
+      "line": 118,
+      "text": "[^personas]: Anexo D, formación completa y champions de las alternativas de mayor alcance, con disponibilidad pendiente de confirmar.",
+      "sha256": "6819fb3a2736878aabfa9e075cba83cef04a2d41fe14ad5d17ab195880d712da",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Disponibilidad de champions de alternativas ampliadas sin autoridad y punto de validación propios. La reserva del mínimo no financia ni demuestra esa disponibilidad.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/alternativas-de-menor-alcance.md",
+      "line": 123,
+      "text": "[^datos]: Disponibilidad de datos y repositorios como supuesto de habilitación, pendiente de verificar restricciones y controles.",
+      "sha256": "6819fb3a2736878aabfa9e075cba83cef04a2d41fe14ad5d17ab195880d712da",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Datos/repositorios de alternativas requieren restricciones y controles específicos; la nota no completa autoridad, hito y salida de ese objeto.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/apetito-de-riesgo-de-clientes.md",
+      "line": 9,
+      "text": "  scope: \"Supuesto de diseño confirmado por Martín: restricción por defecto para usar modelos externos sobre código y datos de clientes financieros y mínimos propuestos de habilitación contractual, inventario, ubicación, no entrenamiento y controles. Incluye revisar el supuesto ante contratos permisivos o demanda activa de IA y relevar y completar la matriz con Comercial. Se precisa que la matriz figuraba pendiente en abril y su estado actual sigue por contrastar; la restricción por defecto se conserva como supuesto del plan. Confirmado en esta conversación.\"",
+      "sha256": "5ed92b662e8366cb2ea3f06645648e0b5a2121370c05a223047a579dbd8e4897",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "La marca refiere a la matriz del antecedente de abril cuyo estado actual sigue por contrastar. La restricción por defecto permanece como supuesto; no acredita permiso contractual ni matriz vigente.",
+      "basis": {
+        "record": {
+          "path": "context/supuestos/apetito-de-riesgo-de-clientes.md",
+          "line": 9,
+          "text": "  scope: \"Supuesto de diseño confirmado por Martín: restricción por defecto para usar modelos externos sobre código y datos de clientes financieros y mínimos propuestos de habilitación contractual, inventario, ubicación, no entrenamiento y controles. Incluye revisar el supuesto ante contratos permisivos o demanda activa de IA y relevar y completar la matriz con Comercial. Se precisa que la matriz figuraba pendiente en abril y su estado actual sigue por contrastar; la restricción por defecto se conserva como supuesto del plan. Confirmado en esta conversación.\"",
+          "sha256": "5ed92b662e8366cb2ea3f06645648e0b5a2121370c05a223047a579dbd8e4897"
+        },
+        "limit": {
+          "path": "context/supuestos/apetito-de-riesgo-de-clientes.md",
+          "line": 37,
+          "text": "- El antecedente de política de abril contemplaba validación cliente por cliente\n  y registraba la matriz de restricciones como pendiente. Su estado actual sigue\n  por contrastar (ver [gobierno](/hechos/gobierno-y-politica-ia.md)).[^gobierno-ia]",
+          "sha256": "5ed92b662e8366cb2ea3f06645648e0b5a2121370c05a223047a579dbd8e4897"
+        }
+      }
+    },
+    {
+      "path": "context/supuestos/apetito-de-riesgo-de-clientes.md",
+      "line": 38,
+      "text": "  y registraba la matriz de restricciones como pendiente. Su estado actual sigue",
+      "sha256": "5ed92b662e8366cb2ea3f06645648e0b5a2121370c05a223047a579dbd8e4897",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "La marca refiere a la matriz del antecedente de abril cuyo estado actual sigue por contrastar. La restricción por defecto permanece como supuesto; no acredita permiso contractual ni matriz vigente.",
+      "basis": {
+        "record": {
+          "path": "context/supuestos/apetito-de-riesgo-de-clientes.md",
+          "line": 38,
+          "text": "  y registraba la matriz de restricciones como pendiente. Su estado actual sigue",
+          "sha256": "5ed92b662e8366cb2ea3f06645648e0b5a2121370c05a223047a579dbd8e4897"
+        },
+        "limit": {
+          "path": "context/supuestos/apetito-de-riesgo-de-clientes.md",
+          "line": 37,
+          "text": "- El antecedente de política de abril contemplaba validación cliente por cliente\n  y registraba la matriz de restricciones como pendiente. Su estado actual sigue\n  por contrastar (ver [gobierno](/hechos/gobierno-y-politica-ia.md)).[^gobierno-ia]",
+          "sha256": "5ed92b662e8366cb2ea3f06645648e0b5a2121370c05a223047a579dbd8e4897"
+        }
+      }
+    },
+    {
+      "path": "context/supuestos/apetito-de-riesgo-de-clientes.md",
+      "line": 60,
+      "text": "[^gobierno-ia]: Gobierno y política de IA existentes, antecedente de abril y pendientes históricos por contrastar.",
+      "sha256": "5ed92b662e8366cb2ea3f06645648e0b5a2121370c05a223047a579dbd8e4897",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "La marca refiere a la matriz del antecedente de abril cuyo estado actual sigue por contrastar. La restricción por defecto permanece como supuesto; no acredita permiso contractual ni matriz vigente.",
+      "basis": {
+        "record": {
+          "path": "context/supuestos/apetito-de-riesgo-de-clientes.md",
+          "line": 60,
+          "text": "[^gobierno-ia]: Gobierno y política de IA existentes, antecedente de abril y pendientes históricos por contrastar.",
+          "sha256": "5ed92b662e8366cb2ea3f06645648e0b5a2121370c05a223047a579dbd8e4897"
+        },
+        "limit": {
+          "path": "context/supuestos/apetito-de-riesgo-de-clientes.md",
+          "line": 37,
+          "text": "- El antecedente de política de abril contemplaba validación cliente por cliente\n  y registraba la matriz de restricciones como pendiente. Su estado actual sigue\n  por contrastar (ver [gobierno](/hechos/gobierno-y-politica-ia.md)).[^gobierno-ia]",
+          "sha256": "5ed92b662e8366cb2ea3f06645648e0b5a2121370c05a223047a579dbd8e4897"
+        }
+      }
+    },
+    {
+      "path": "context/supuestos/base-minima-tras-un-corte.md",
+      "line": 4,
+      "text": "description: \"Continuidad propuesta tras un corte, diferenciando el núcleo restringido del mínimo, el gobierno del paquete completo y la base del producto activo, con capacidad, controles y autorización pendientes.\"",
+      "sha256": "d63eb84fb585b77ae39e8f291f49f6c22e572dc784b9fecfcafe0fcf127186d1",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Descripción que reúne núcleo restringido, gobierno completo y producto activo. Los núcleos ya están diferenciados, pero la autorización/controles/capacidad de cada alcance no se dispensan en conjunto.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/base-minima-tras-un-corte.md",
+      "line": 35,
+      "text": "    title: \"Política de IA informada y aplicación pendiente de comprobar\"",
+      "sha256": "d63eb84fb585b77ae39e8f291f49f6c22e572dc784b9fecfcafe0fcf127186d1",
+      "category": "historical_uncertainty",
+      "blocking": true,
+      "reason": "Aplicación operativa y controles por comprobar para continuidad presente, además del antecedente. La cautela histórica de aprobación no cubre ese objeto actual ni completa su habilitación.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/base-minima-tras-un-corte.md",
+      "line": 131,
+      "text": "[^gobierno]: Anexo C, núcleo de gobierno y controles aplicables por superficie y alcance; requisitos y autorización pendientes de comprobar en cada caso.",
+      "sha256": "d63eb84fb585b77ae39e8f291f49f6c22e572dc784b9fecfcafe0fcf127186d1",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Requisitos y autorización de continuidad por superficie/caso: falta respaldo completo del mismo objeto. No se traslada la autorización del núcleo mínimo al producto o gobierno completo.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/base-minima-tras-un-corte.md",
+      "line": 132,
+      "text": "[^arquitectura]: Anexo B, base común mínima propuesta para el producto: infraestructura, contractor al 50%, DevOps/QA 0,5 FTE y Arquitectura 0,1 FTE, sin evidencia de suficiencia de esas fracciones.",
+      "sha256": "d63eb84fb585b77ae39e8f291f49f6c22e572dc784b9fecfcafe0fcf127186d1",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Suficiencia de fracciones de la base del producto no demostrada ni respaldada por condición completa de habilitación. El núcleo de 108 h del mínimo no la acredita.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/base-minima-tras-un-corte.md",
+      "line": 136,
+      "text": "[^politica]: Política de IA informada por el responsable del caso, con aplicación operativa y controles pendientes de comprobar.",
+      "sha256": "d63eb84fb585b77ae39e8f291f49f6c22e572dc784b9fecfcafe0fcf127186d1",
+      "category": "historical_uncertainty",
+      "blocking": true,
+      "reason": "Aplicación operativa y controles por comprobar para continuidad presente, además del antecedente. La cautela histórica de aprobación no cubre ese objeto actual ni completa su habilitación.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/capacidades-ausentes.md",
+      "line": 9,
+      "text": "  scope: \"Hipótesis de planificación confirmadas por Martín: gateway de modelos e inventario formal de arquitectura supuestos ausentes y capacidad legal interna dedicada a IA supuesta insuficiente. Se conserva pendiente el relevamiento técnico y legal; se distinguen el inventario de datos informado y el harness interno cuyo alcance está por relevar. Construcción y contratación dependen de la alternativa elegida y de la brecha confirmada; encontrar capacidades equivalentes obliga a revisar alcance y costos. Confirmado en esta conversación.\"",
+      "sha256": "9b75d7fe53643d43ba14e1d5208886874e82231527ee5eb9aedc3494c7087bc5",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Relevamiento técnico/legal conservado como pendiente en un supuesto. Falta vincular competencia, hito y consecuencia de ambos relevamientos; no se exige que ya estén ejecutados.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/capacidades-ausentes.md",
+      "line": 20,
+      "text": "    title: \"Antecedentes y brechas de gobierno pendientes de contraste\"",
+      "sha256": "9b75d7fe53643d43ba14e1d5208886874e82231527ee5eb9aedc3494c7087bc5",
+      "category": "historical_uncertainty",
+      "blocking": true,
+      "reason": "Título mixto de antecedentes y brechas actuales; la limitación histórica de otra ficha no delimita todo este objeto.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/capacidades-ausentes.md",
+      "line": 43,
+      "text": "  [política de IA](/hechos/gobierno-y-politica-ia.md) deja pendientes que",
+      "sha256": "9b75d7fe53643d43ba14e1d5208886874e82231527ee5eb9aedc3494c7087bc5",
+      "category": "historical_uncertainty",
+      "blocking": true,
+      "reason": "El antecedente motiva revisión legal y relevamiento actuales. No basta la cautela histórica para acreditar autoridad, punto y salida de ese trabajo futuro.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/costo-de-regimen-del-ano-2.md",
+      "line": 9,
+      "text": "  scope: \"Martín confirmó los supuestos y cuentas del año 2 del paquete completo: caja base central 48.000 USD (24.000-72.000), producto adicional 45.000 (18.000-72.000), mantenimiento de 1,5 FTE/2.880 h por 94.500 de tiempo (54.000-135.000); totales económicos centrales 142.500 sin producto y 187.500 con producto, rangos 78.000-207.000 y 96.000-279.000. Confirma cálculo sin redondear y equilibrio de capacidad valorizada de 16,7% y 23,1% de throughput atribuible con cohorte central supuesta. No demuestra ahorro de caja, payback ni recuperación del año 1; no es presupuesto del mínimo ni autorización 2028. Alcance operativo, capacidad y costos pendientes de validar; no acredita cobertura integral del año 2 ni ingresos del producto. Confirmado en esta conversación como supuesto.\"",
+      "sha256": "b5494bd959d638571085209728902aa892bebb6e96ca8a4143cb025be8092ad5",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Régimen del año 2 del paquete completo sin condiciones completas de validación operativa/capacidad/costos. No es presupuesto del mínimo ni autorización 2028.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/costos-de-cierre-por-corte.md",
+      "line": 124,
+      "text": "  Directorio: está pendiente de aprobación.",
+      "sha256": "f406329d4ebd77588e50daef9961823704830975d005d3e6eb28d0debc1e2229",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Reserva de cierre propuesta al Directorio; falta punto de ratificación y salida por rechazo para ese alcance concreto.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/costos-de-cierre-por-corte.md",
+      "line": 130,
+      "text": "[^precios]: Precios externos sin cotizar, rangos de diseño de telemetría, infraestructura y tenant del piloto, pendientes de contratación y cotización.",
+      "sha256": "f406329d4ebd77588e50daef9961823704830975d005d3e6eb28d0debc1e2229",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Cotización/contratación de cierre: la referencia conserva precios supuestos sin completar autoridad, hito y salida. No se afirman precios reales.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/desarrolladores-en-equipos-propios.md",
+      "line": 9,
+      "text": "  scope: \"Supuestos de diseño confirmados por Martín: 15-20 desarrolladores en equipos propios con punto medio 17,5, costo cargado mensual de USD 2.500-7.000 con punto medio 4.750 y mínimo propuesto de 15 personas activas para gates de valor. Se conserva pendiente la validación de cohorte, costos y precisión; N no se deduce del peso de Tecnología ni está calibrado contra la nómina. El mínimo requiere además semiancho de intervalo de hasta 3 puntos porcentuales; si la preparación muestra precisión insuficiente, se reformula el gate antes de la segunda liberación. Confirmado en esta conversación.\"",
+      "sha256": "048a7d36688b45da5642deb3799f180108a76c53f233531910dbd675ad0c7ab1",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Cohorte, costos y precisión por validar; hay preparación y reformulación previstas, pero la competencia que ratifica el método sigue sin precisar. La segunda liberación de fondos no sustituye esa ratificación técnica.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/estrategia-de-ia-de-partida.md",
+      "line": 9,
+      "text": "  scope: \"Supuesto de diseño del escenario confirmado por Martín: partir sin una estrategia de IA formal aprobada, con iniciativas y objetivos propuestos y nivel 2 provisional sujeto a validación. Se conserva el tipo Supuesto, la condición que obliga a revisar brecha y puntaje al incorporar una estrategia previa aprobada y la revisión humana pendiente de la ficha del método de diagnóstico de la cursada. Incluye actualizar la cautela sobre los antecedentes de OKR e IA en producto ya verificados. Confirmado en esta conversación.\"",
+      "sha256": "419a65bd4b0e8c9a6a3bf0862f4769094cd8b24d83ab6b718052b95f3611232c",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "La ficha afirma revisión humana pendiente del método, pero material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md declara verified con alcance humano. Discrepancia editorial a conciliar con su dueño; no se altera la ficha firmada ni se exige una firma ya declarada.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/estrategia-de-ia-de-partida.md",
+      "line": 57,
+      "text": "  declarada; la ficha del método de diagnóstico de la cursada sigue pendiente",
+      "sha256": "419a65bd4b0e8c9a6a3bf0862f4769094cd8b24d83ab6b718052b95f3611232c",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "La ficha afirma revisión humana pendiente del método, pero material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md declara verified con alcance humano. Discrepancia editorial a conciliar con su dueño; no se altera la ficha firmada ni se exige una firma ya declarada.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/estrategia-de-ia-de-partida.md",
+      "line": 61,
+      "text": "[^diagnostico-madurez]: `material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md`, escala y criterios de Estrategia y liderazgo; material de la cursada pendiente de revisión humana.",
+      "sha256": "419a65bd4b0e8c9a6a3bf0862f4769094cd8b24d83ab6b718052b95f3611232c",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "La ficha afirma revisión humana pendiente del método, pero material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md declara verified con alcance humano. Discrepancia editorial a conciliar con su dueño; no se altera la ficha firmada ni se exige una firma ya declarada.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/ganancia-de-productividad.md",
+      "line": 9,
+      "text": "  scope: \"Hipótesis de diseño confirmada por Martín: 10%-25% de mejora de throughput por desarrollador a los 12 meses en equipos propios, excluyendo staffing y sin deterioro de calidad. Incluye base prospectiva congelada en semanas 1-4, comparación trimestral con incidentes y retrabajo, serie retrospectiva del cuarto trimestre de 2026 para tendencia y ruido y resultado del OKR informado aparte. Se corrige el fundamento: la meta propuesta de +20% y el piloto de una semana no acreditan el rango ni un piso conservador. Se conserva la validación pendiente de medición y conversión económica. Confirmado en esta conversación.\"",
+      "sha256": "9f62db9b705305abb761e8c43c68689c435b3ce6054184fd57aa8de26572a299",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Ganancia y conversión económica conservadas como hipótesis. Falta respaldo específico completo de competencia, hito y salida para validar ambos objetos; no se exigen beneficios medidos antes de financiar medición.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/ganancia-de-productividad.md",
+      "line": 67,
+      "text": "- El rango permanece como hipótesis pendiente de medición, sujeto a revisión",
+      "sha256": "9f62db9b705305abb761e8c43c68689c435b3ce6054184fd57aa8de26572a299",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Ganancia y conversión económica conservadas como hipótesis. Falta respaldo específico completo de competencia, hito y salida para validar ambos objetos; no se exigen beneficios medidos antes de financiar medición.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/metas-culturales-propuestas.md",
+      "line": 4,
+      "text": "description: \"El plan propone metas de adopción por tramo, sin respaldo de benchmark: el básico ≥90% en el mes 3 es un criterio del mínimo con instrumento pendiente, y las de Tecnología, Operaciones, prompts y staff de los meses 4-12 son del programa completo, con costeo y autorización adicionales.\"",
+      "sha256": "838bdaf4bbff9595a4c6a786e38d6713bbdef6c182c3e28d0be876a95bde5115",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Instrumento de evaluación práctica del básico aún pendiente y sin confirmación humana. El ≥90% tiene horas en el mínimo; no equivale a completitud por asistencia ni a metas ampliadas verificadas. La nueva ficha cultural permanece draft.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/metas-culturales-propuestas.md",
+      "line": 62,
+      "text": "  siendo una propuesta con el instrumento de evaluación pendiente; no es una meta",
+      "sha256": "838bdaf4bbff9595a4c6a786e38d6713bbdef6c182c3e28d0be876a95bde5115",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Instrumento de evaluación práctica del básico aún pendiente y sin confirmación humana. El ≥90% tiene horas en el mínimo; no equivale a completitud por asistencia ni a metas ampliadas verificadas. La nueva ficha cultural permanece draft.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/metas-culturales-propuestas.md",
+      "line": 113,
+      "text": "- Tratamiento y retención de los eventos de uso por persona, por definir con",
+      "sha256": "838bdaf4bbff9595a4c6a786e38d6713bbdef6c182c3e28d0be876a95bde5115",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Tratamiento/retención de eventos por persona sin A elegida entre Gobierno y Talento ni contrato completo de habilitación. El CAIO decide qué KPI reportar, no el tratamiento del dato de origen; agregar no vuelve anónimos los eventos.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/metas-culturales-propuestas.md",
+      "line": 131,
+      "text": "  pero su instrumento de evaluación sigue pendiente.",
+      "sha256": "838bdaf4bbff9595a4c6a786e38d6713bbdef6c182c3e28d0be876a95bde5115",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Instrumento de evaluación práctica del básico aún pendiente y sin confirmación humana. El ≥90% tiene horas en el mínimo; no equivale a completitud por asistencia ni a metas ampliadas verificadas. La nueva ficha cultural permanece draft.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/paquete-minimo-de-aprendizaje.md",
+      "line": 9,
+      "text": "  scope: \"Ficha completa confirmada por Martín en tres bloques: preparación previa de 80-136 h, caja 0 y techo de tiempo 8 mil USD; ejecución M1-M3 de 970-1.350 h con reserva de capacidad de 1.380 h y segunda autorización propuesta de 71 mil, acumulado 79 mil; continuidad, descubrimiento, esperas y salidas con techos por etapa y proyección condicional de 118 mil, 121 mil con cierre. Incluye escenarios emparejados para descontar preparación, formación a 10-35 USD/h como supuesto agregado a validar, cargas de espera y núcleo parcial sujetas a cadencia, recomposición de secuencias de espera y exposición máxima separada en caja y tiempo. Se conservan pendientes el acuerdo del equipo, cotizaciones, solapes, personas, agendas, ratificaciones y autorizaciones empresariales; no se acredita ejecución, disponibilidad ni beneficios medidos. Confirmado en esta conversación.\"",
+      "sha256": "8c76008a8b584817f82fa8bb7524b406d5a0170499d780bdba6e3be046b60158",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "El alcance firmado conserva acuerdo del equipo, solapes, personas y otras ratificaciones pendientes. Autorizaciones futuras de Acme no resuelven acuerdos ni conciliaciones del TP.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/paquete-minimo-de-aprendizaje.md",
+      "line": 126,
+      "text": "**Validación organizativa adicional**, estimación de Finanzas (agente) de 60-96 h; la estimación humana de Personas (#18, pregunta 3) sigue pendiente. Costo",
+      "sha256": "8c76008a8b584817f82fa8bb7524b406d5a0170499d780bdba6e3be046b60158",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Estimación humana de Personas requerida para conciliar la validación organizativa aún sin producir. La estimación financiera no la reemplaza.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/paquete-minimo-de-aprendizaje.md",
+      "line": 320,
+      "text": "sigue pendiente de ratificación para M9:",
+      "sha256": "8c76008a8b584817f82fa8bb7524b406d5a0170499d780bdba6e3be046b60158",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "La espera M9 sigue como propuesta pendiente de ratificación. F define duración, versión congelada y corte, pero no identifica autoridad que ratifique esa regla. La autoridad de gasto del gate no sustituye la ratificación del método/espera.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/paquete-minimo-de-aprendizaje.md",
+      "line": 344,
+      "text": "pendientes. Primera liberación e imputación 2026 requieren aprobación empresarial",
+      "sha256": "8c76008a8b584817f82fa8bb7524b406d5a0170499d780bdba6e3be046b60158",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "La enumeración incluye responsables humanos, calendario, solapes y precios. La aprobación empresarial de la primera liberación no cubre acuerdos/asignaciones del equipo ni todos esos objetos.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/paquete-minimo-de-aprendizaje.md",
+      "line": 346,
+      "text": "La reserva de capacidad es un supuesto del borrador, pendiente de confirmación",
+      "sha256": "8c76008a8b584817f82fa8bb7524b406d5a0170499d780bdba6e3be046b60158",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Confirmar capacidad por persona/semana es condición antes de M1, no disponibilidad actual. Operaciones/managers confirman agendas; el Directorio/delegado decide el segundo pase con capacidad aceptada. Sin evidencia o agendas se reduce o detiene. La reserva sigue condicionada a uniones B/C no confirmadas y recosteo; los solapes humanos bloquean por separado.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/04-personas-cultura.md",
+          "line": 951,
+          "text": "Es un supuesto de planificación: Operaciones y los managers confirman personas,\nagendas y trabajo desplazado antes de iniciar cada actividad. La demanda de\nsoporte sigue en 430-690 h; las 30 h de margen no están costeadas para ejecutar.\n\nLa reserva es un techo condicionado a las uniones de horas entre actividades que\nB y C todavía no confirmaron (por ejemplo, que configuración, prueba y\nexportaciones de DevOps sean el mismo trabajo): el\n[Anexo E](05-business-case.md) registra ese «Desacuerdo abierto de DevOps» como\nsensibilidad, con una demanda que podría superar el máximo. Este anexo no elige\nqué unión vale. Si las uniones no se confirman, la reserva y los techos se\nrevisan y se recostean antes de M1.",
+          "sha256": "7dac87f03b61a4fdb07b01bf02fc708d601638887a4cc2a0dfb2612b2f5b6c05"
+        },
+        "authority": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 242,
+          "text": "| Liberar M1-M3 tras la validación inicial | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "decision": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 322,
+          "text": "**Segunda autorización, antes de M1.** La misma autoridad decide continuar, reducir o\nresecuenciar, o detener, con diagnóstico revisado, capacidad aceptada, acta de viabilidad\ntécnica y presupuesto 2027 comprobado.",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "consequence": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 340,
+          "text": "Si faltan evidencia, independencia o agendas, o se excede el techo, se reduce o detiene\ny se vuelve al autorizante antes de ampliar el alcance.",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        }
+      }
+    },
+    {
+      "path": "context/supuestos/precios-externos-sin-cotizar.md",
+      "line": 9,
+      "text": "  scope: \"Rangos confirmados por Martín como supuestos de planificación para legal, red team, auditoría, pasarela, infraestructura, consumo del piloto y contingencia de 15%. Incluye distinguir el paquete mínimo de las alternativas de mayor alcance, retirar la atribución a precios de mercado, mantener pendientes de conciliación los alcances de ambos red teams y comprobar la suficiencia de la reserva. Los gastos sin estimar requieren presupuesto y autorización. Confirmado en esta conversación; no acredita cotizaciones, contratación ni aprobación empresarial.\"",
+      "sha256": "d644b450a9a862378152928292c37bc875cc8473a9d966961730e6fd8d8d7447",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Conciliación de alcances/costos de ambos red teams aún explícitamente pendiente entre Arquitectura, Gobierno y Finanzas; no se dispensa como mera cotización futura.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/precios-externos-sin-cotizar.md",
+      "line": 65,
+      "text": "Queda pendiente conciliar alcances y costos entre `architect`, `governance` y",
+      "sha256": "d644b450a9a862378152928292c37bc875cc8473a9d966961730e6fd8d8d7447",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Conciliación de alcances/costos de ambos red teams aún explícitamente pendiente entre Arquitectura, Gobierno y Finanzas; no se dispensa como mera cotización futura.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/rampa-de-la-ganancia.md",
+      "line": 78,
+      "text": "[^ganancia-productividad]: Ganancia de productividad por IA en ingeniería, rango propuesto y validaciones pendientes.",
+      "sha256": "4095c6a17860c2835e3ac96a6daad3ad1bc7ea92205de14efe5bee8e4637ccc0",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Ganancia y conversión económica conservadas como hipótesis. Falta respaldo específico completo de competencia, hito y salida para validar ambos objetos; no se exigen beneficios medidos antes de financiar medición.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/sobre-de-capacidad-separado.md",
+      "line": 9,
+      "text": "  scope: \"Propuesta de diseño confirmada por Martín: separar tiempo clave de 1-2,25 FTE y tiempo distribuido para capacitación, champions y ejercicios de mesa, manteniendo la alternativa estricta. Incluye la clasificación de actividades, las 48 horas-persona anuales propuestas de ejercicios de mesa y la conciliación de las horas reales. Se conserva pendiente la aprobación organizacional; se reemplaza la aprobación de hoy por una propuesta y se retiran las conclusiones generales basadas en 9 horas por persona y pisos de 1,6-1,8 FTE, para calcular cada alcance por separado. Confirmado en esta conversación.\"",
+      "sha256": "7415029267faede68ab806914da7593f117a785309dcc57d50c2c214b76b820c",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "La ficha abarca clasificación clave/distribuida y ejercicios anuales de varios alcances. F fija un hito para elegir la lectura del mínimo antes de M1, pero no ratifica ni completa el contrato organizativo de todo ese marco. Se admite por separado solo la fila vigente y acotada de E.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/umbral-de-evidencia-contractual.md",
+      "line": 4,
+      "text": "description: \"Criterios propuestos para distinguir restricciones, exigencias comerciales de controles y demanda de funciones de IA, sin autorizar inversión ni uso prohibido y con evidencia contractual real pendiente.\"",
+      "sha256": "e2161b73f2da3952e888d222fac0b9c58585a4647e6dcc0868871eddf2616abd",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/umbral-de-evidencia-contractual.md",
+      "line": 9,
+      "text": "  scope: \"Martín confirmó los criterios como propuesta pendiente de ratificación y evidencia real: restricción en al menos uno de los cinco principales; exigencia de controles con consecuencia contractual en uno de los dos principales o dos de los cinco, dentro de 18 meses; y demanda de función como señal distinta. Incluye excluir el uso ante prohibición pura, separar señal de autorización de inversión o ampliación del mínimo, aclarar que licencia para vender no es licencia regulatoria ni venta, no inferir ingresos o repago, limitar concentración a agosto de 2026 y no presumir que todos los clientes sean bancos o PSP. Confirma actualizar BCRA al texto ordenado consultado y publicar solo agregados sin alias ni cláusulas. No acredita contratos revisados, señales observadas ni aprobación empresarial. Confirmado en esta conversación.\"",
+      "sha256": "e2161b73f2da3952e888d222fac0b9c58585a4647e6dcc0868871eddf2616abd",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/umbral-de-evidencia-contractual.md",
+      "line": 31,
+      "text": "Estos criterios son propuestas sin calibrar, pendientes de ratificación y de",
+      "sha256": "e2161b73f2da3952e888d222fac0b9c58585a4647e6dcc0868871eddf2616abd",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/umbrales-tecnicos-propuestos.md",
+      "line": 9,
+      "text": "  scope: \"Martín confirmó en esta conversación los cuatro bloques como propuestas de diseño: evaluación del asistente; ruteo, portabilidad y costo; medición de productividad y calidad; y capacidad M4-M6 del paquete completo. Incluye objetivos sin medir, ceros observados sin garantía de ausencia de riesgo, denominadores previos, costo del gateway calculado sin redondear y sin prometer repago del programa, viabilidad estadística pendiente y calidad con precedencia sobre throughput. Confirma la conciliación de 2,225 FTE y 0,025 FTE de holgura, documentación imputada a cada fracción y excepción de capacidad sujeta a autorización. No acredita resultados, disponibilidad, contratación, validación contractual ni aprobación empresarial; las alternativas ampliadas no se incorporan al paquete mínimo.\"",
+      "sha256": "311fdf4d22545a66d1cdd46f33491e322fc1909edb06dedcd2882784cdc6acbf",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "El alcance firmado conserva conciliaciones B/D que el cuerpo sigue declarando pendientes. La firma del supuesto no subsana contradicciones editoriales.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/umbrales-tecnicos-propuestos.md",
+      "line": 60,
+      "text": "mínimo de aprendizaje. Son propuestas pendientes de prueba y validación",
+      "sha256": "311fdf4d22545a66d1cdd46f33491e322fc1909edb06dedcd2882784cdc6acbf",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Pruebas y permisos de rutas del paquete ampliado sin respaldo completo de autoridad y punto de habilitación por ruta. El mínimo no las compra.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/umbrales-tecnicos-propuestos.md",
+      "line": 97,
+      "text": "Protocolo propuesto, pendiente de comprobar viabilidad y ratificar antes de la",
+      "sha256": "311fdf4d22545a66d1cdd46f33491e322fc1909edb06dedcd2882784cdc6acbf",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Ratificación del protocolo/método antes del tratamiento o segunda liberación, pero no se asigna claramente el rol ratificador. Productor, verificador, autoridad del gate y ratificador son funciones distintas.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/umbrales-tecnicos-propuestos.md",
+      "line": 131,
+      "text": "Alternativa del paquete completo, pendiente de capacidad, contratación y nueva",
+      "sha256": "311fdf4d22545a66d1cdd46f33491e322fc1909edb06dedcd2882784cdc6acbf",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Replan M4-M6 del paquete completo sujeto a capacidad/contratación/nueva autorización; falta contrato completo de decisión y salida de esa alternativa. No es la validación vigente de 8k.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/umbrales-tecnicos-propuestos.md",
+      "line": 153,
+      "text": "anexo E y deja explícita esa diferencia, pendiente de alinear el anexo B.[^finanzas][^arquitectura]",
+      "sha256": "311fdf4d22545a66d1cdd46f33491e322fc1909edb06dedcd2882784cdc6acbf",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "La fuente aún dice que falta alinear la holgura B/E. Debe conciliarse la afirmación editorial con los anexos actuales; no se modifica el supuesto firmado ni se presume una nueva falla aritmética.",
+      "basis": {}
+    },
+    {
+      "path": "context/supuestos/umbrales-tecnicos-propuestos.md",
+      "line": 217,
+      "text": "  adopta la imputación por entregable del anexo B (0,8 o 0,2). Queda pendiente",
+      "sha256": "311fdf4d22545a66d1cdd46f33491e322fc1909edb06dedcd2882784cdc6acbf",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "La fuente conserva diferencias de imputación documental con D/B pendientes de alinear. Conciliación editorial humana, sin sustituirla por rehash.",
+      "basis": {}
+    },
+    {
+      "path": "material/huecos.md",
+      "line": 5,
+      "text": "tags: [pendiente, cursada, cautelas]",
+      "sha256": "93e3c18e88f37dc977198a93f3f90d0add9e0cfc6241f480367a34c587f6fb07",
+      "category": "metadata",
+      "blocking": false,
+      "reason": "Etiqueta YAML tags dentro del frontmatter; no representa un faltante por sí sola. Las verificaciones del cuerpo continúan bloqueando.",
+      "basis": {}
+    },
+    {
+      "path": "material/huecos.md",
+      "line": 65,
+      "text": "# Pendiente de verificar",
+      "sha256": "93e3c18e88f37dc977198a93f3f90d0add9e0cfc6241f480367a34c587f6fb07",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Encabezado de verificaciones aún declaradas faltantes en el corpus. La firma del mapa no verifica automáticamente sus fuentes ni corrige estados.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/01-diagnostico.md",
+      "line": 60,
+      "text": "universal de toda medición: falta evidencia de valor incremental medido contra una base.",
+      "sha256": "a2a30d0115f84c0cd06a30d084c88974265d789e515738015afe94e9ad6d0024",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Ausencia presente de valor incremental medido contra una base: es la premisa para producir medición, con rampa M1-M3 de 0%, no una mejora prometida ni un resultado exigible antes de autorizarla. Las autorizaciones corresponden al Directorio/delegado; antes de M1 se exige viabilidad y, sin evidencia suficiente para el alcance, reducir o detener.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/05-business-case.md",
+          "line": 1145,
+          "text": "- **Eficiencia.** Falta evidencia de valor incremental. Hay uso y hay gasto, y no\n  hay una base contra la cual compararlos. Lo que se compra es la medición, no\n  la mejora: la rampa de los meses 1-3 es 0% y el tramo no promete atribución.",
+          "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f"
+        },
+        "authority": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 241,
+          "text": "| Autorizar la validación inicial en preparación de 2026 | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |\n| Liberar M1-M3 tras la validación inicial | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "decision": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 322,
+          "text": "**Segunda autorización, antes de M1.** La misma autoridad decide continuar, reducir o\nresecuenciar, o detener, con diagnóstico revisado, capacidad aceptada, acta de viabilidad\ntécnica y presupuesto 2027 comprobado.",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "consequence": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 340,
+          "text": "Si faltan evidencia, independencia o agendas, o se excede el techo, se reduce o detiene\ny se vuelve al autorizante antes de ampliar el alcance.",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/01-diagnostico.md",
+      "line": 107,
+      "text": "puntaje, brechas y faltantes explícitos. Las hipótesis pendientes se conservan;",
+      "sha256": "a2a30d0115f84c0cd06a30d084c88974265d789e515738015afe94e9ad6d0024",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "La validación inicial produce diagnóstico y conserva hipótesis explícitas. El Directorio/delegado autoriza preparación; Operaciones/managers confirman agendas e imputación antes de iniciar. Diez días propuestos; una incertidumbre que bloquee el alcance impide liberar la actividad.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/01-diagnostico.md",
+          "line": 104,
+          "text": "Se proponen diez días hábiles, con 4-6 entrevistas de una hora a referentes de\nlas funciones necesarias, contraste documental y una ronda de conciliación.\nEl resultado es un diagnóstico revisado por dimensión, con fuentes, cambios de\npuntaje, brechas y faltantes explícitos. Las hipótesis pendientes se conservan;\nuna incertidumbre que bloquee el alcance impide liberar esa actividad.",
+          "sha256": "a2a30d0115f84c0cd06a30d084c88974265d789e515738015afe94e9ad6d0024"
+        },
+        "authority": {
+          "path": "plan/annexes/01-diagnostico.md",
+          "line": 98,
+          "text": "El [hito inicial](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial)\nresuelve el trabajo que necesita la validación: el Directorio o una autoridad\nformalmente delegada autoriza primero la preparación de 2026. Antes de iniciarla,\nOperaciones y los managers confirman sus agendas, trabajo desplazado e imputación\npresupuestaria. No se exige un diagnóstico ya validado para producir esa evidencia.",
+          "sha256": "a2a30d0115f84c0cd06a30d084c88974265d789e515738015afe94e9ad6d0024"
+        },
+        "decision": {
+          "path": "plan/annexes/01-diagnostico.md",
+          "line": 104,
+          "text": "Se proponen diez días hábiles, con 4-6 entrevistas de una hora a referentes de\nlas funciones necesarias, contraste documental y una ronda de conciliación.\nEl resultado es un diagnóstico revisado por dimensión, con fuentes, cambios de\npuntaje, brechas y faltantes explícitos. Las hipótesis pendientes se conservan;\nuna incertidumbre que bloquee el alcance impide liberar esa actividad.",
+          "sha256": "a2a30d0115f84c0cd06a30d084c88974265d789e515738015afe94e9ad6d0024"
+        },
+        "consequence": {
+          "path": "plan/annexes/01-diagnostico.md",
+          "line": 107,
+          "text": "puntaje, brechas y faltantes explícitos. Las hipótesis pendientes se conservan;\nuna incertidumbre que bloquee el alcance impide liberar esa actividad.",
+          "sha256": "a2a30d0115f84c0cd06a30d084c88974265d789e515738015afe94e9ad6d0024"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 348,
+      "text": "Propuesta pendiente de ejecución y ratificación. Tener PR,",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Ratificación del protocolo/método antes del tratamiento o segunda liberación, pero no se asigna claramente el rol ratificador. Productor, verificador, autoridad del gate y ratificador son funciones distintas.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 375,
+      "text": "roles propuestos, con designación **pendiente**. Cobertura significa",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Roles propuestos por indicador están definidos, pero su designación y la separación respecto del ratificador del método/autoridad del gate siguen sin respaldo completo. No se presume una persona asignada.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 387,
+      "text": "Los registros inmaduros quedan pendientes, nunca como ceros. El acta declara",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Regla de maduración y cobertura de registros, sin autorización presupuestaria implícita. DevOps/QA produce y dirección técnica verifica throughput; QA produce y Seguridad verifica incidentes; QA y dirección técnica, retrabajo. Ventanas fijadas antes del tratamiento; inmaduros nunca son ceros y sin cobertura suficiente no hay pase por valor.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 387,
+          "text": "Los registros inmaduros quedan pendientes, nunca como ceros. El acta declara\nel desfase entre actividad y lectura, su cobertura y cualquier corrección\nversionada por eventos tardíos. Sin cobertura suficiente, no se pasa por valor.",
+          "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624"
+        },
+        "authority": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 381,
+          "text": "| Throughput | PR + CI + registro de reversiones: PR mergeados con calidad aprobada y sin reversión a 14 días | Personas-semana activas de la cohorte elegible; cambio apareado por persona contra su base | Base semanas 1-4 y ventana de gate de al menos 8 semanas, con corte fechado; cada PR madura 14 días | PR con CI y reversiones observables / PR elegibles; DevOps/QA produce, dirección técnica verifica |\n| Incidentes | Tickets e incidentes enlazados a PR: incidentes únicos atribuibles dentro de 30 días, con severidad separada | PR mergeados con CI aprobado y seguimiento completo de 30 días; tasa ×100, sin excluir los PR revertidos | Mismos cortes y estratos que throughput; seguimiento de 30 días | PR con seguimiento y enlace auditable / PR elegibles; QA produce, Seguridad verifica |\n| Retrabajo | PR, reversiones y tickets: PR con reversión o corrección atribuible dentro de 30 días, contados una vez por PR | Mismos PR maduros de calidad; tasa ×100 | Mismos cortes; seguimiento de 30 días | PR con reversiones/tickets observables / PR elegibles; QA produce, dirección técnica verifica |",
+          "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624"
+        },
+        "decision": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 385,
+          "text": "Fijá antes del tratamiento el cierre de cada ventana, dejando 30 días de\nseguimiento antes de la lectura de calidad; throughput exige sus 14 días.",
+          "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624"
+        },
+        "consequence": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 387,
+          "text": "Los registros inmaduros quedan pendientes, nunca como ceros. El acta declara\nel desfase entre actividad y lectura, su cobertura y cualquier corrección\nversionada por eventos tardíos. Sin cobertura suficiente, no se pasa por valor.",
+          "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 432,
+      "text": "Producto y Comercial, con designación pendiente, acuerdan elegibilidad,",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "future_decision",
+      "blocking": false,
+      "reason": "Producto y Comercial acuerdan elegibilidad, éxito y umbral antes de M6; Finanzas elige captura de valor. Es la competencia sobre métricas, no la liberación de construcción. Sin dolor observado, base o señal se difiere; una ruta sin plataforma requiere diseño y costeo propios.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 432,
+          "text": "Producto y Comercial, con designación pendiente, acuerdan elegibilidad,\ncriterio de éxito y umbral antes de M6; Finanzas costea el descubrimiento y\nelige cómo capturar valor. No se presume porcentaje de mejora ni ingreso.",
+          "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624"
+        },
+        "authority": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 432,
+          "text": "Producto y Comercial, con designación pendiente, acuerdan elegibilidad,\ncriterio de éxito y umbral antes de M6; Finanzas costea el descubrimiento y\nelige cómo capturar valor. No se presume porcentaje de mejora ni ingreso.",
+          "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624"
+        },
+        "decision": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 432,
+          "text": "Producto y Comercial, con designación pendiente, acuerdan elegibilidad,\ncriterio de éxito y umbral antes de M6; Finanzas costea el descubrimiento y\nelige cómo capturar valor. No se presume porcentaje de mejora ni ingreso.",
+          "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624"
+        },
+        "consequence": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 436,
+          "text": "Compará mejorar documentación/soporte, configurar un asistente e integrarlo al\nproducto sobre la misma tarea. Sin dolor observado, base o señal suficiente,\ndiferí la construcción. Esta medición no elimina la dependencia de plataforma\ndel itinerario vigente de producto: otra ruta requiere diseño y costeo.",
+          "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 489,
+      "text": "| 9 | Trazas | Ids de documentos y de versión, no el contenido; retención a definir con Gobierno y Talento, pendiente en la política | Auditoría de trazas | Contenido Restringido en una traza: incidente |",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Retención de trazas a definir con Gobierno/Talento, sin autoridad inequívoca de tratamiento ni hito/consecuencia propios. La aprobación de herramienta no la decide.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 609,
+      "text": "presencia de una función. Todos los resultados y costos están pendientes.",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Matriz comparativa futura de herramientas: no se exigen resultados hoy. B enumera roles sin separar selección de herramienta, permiso de datos, aceptación del residual y fondos. C distingue esas competencias; falta respaldo completo para el objeto de cada fila.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 613,
+      "text": "| Datos y repositorios habilitados, secretos excluidos, autonomía y MCP acotados | Terminal/agente de código | Acción permitida; secreto sintético; permiso denegado; inyección indirecta; intento de bypass | Primera exposición, evasión y evidencia incompleta: aceptación o restricción pendiente | Configurar / comprar / ensamblar, por separado | Finanzas: caja, horas de configuración, prueba y operación |",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Matriz comparativa futura de herramientas: no se exigen resultados hoy. B enumera roles sin separar selección de herramienta, permiso de datos, aceptación del residual y fondos. C distingue esas competencias; falta respaldo completo para el objeto de cada fila.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 615,
+      "text": "| Compartición, datos del dominio y auditoría | Correo/documentos/reuniones | Probar permisos, salida de dato sintético y evento auditable en entorno autorizado | Capacidad según edición y equipo, pendiente; aceptación no reemplaza permiso contractual | Las mismas tres | Finanzas: licencias incrementales, administración y revisión |",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Matriz comparativa futura de herramientas: no se exigen resultados hoy. B enumera roles sin separar selección de herramienta, permiso de datos, aceptación del residual y fondos. C distingue esas competencias; falta respaldo completo para el objeto de cada fila.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 627,
+      "text": "ninguna alternativa gana sin evidencia. Las cuatro condiciones —brecha",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 629,
+      "text": "pérdida aceptada, y capacidad demostrada— son una **propuesta pendiente de",
+      "sha256": "436ce4d1cdb1a6da26555b8034dcb72518ae8f48d983e5d764ff0a5a4a8b8624",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 47,
+      "text": "| Política de IA | Aprobada según confirmación del responsable del caso del 20/10/2026; versión, alcance y aprobación documentada por revisar. El borrador v1.0 y sus pendientes de abril son antecedentes históricos, salvo la aprobación informada | [Fuente y cautelas](../../context/hechos/gobierno-y-politica-ia.md) |",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
+      "basis": {
+        "record": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 47,
+          "text": "| Política de IA | Aprobada según confirmación del responsable del caso del 20/10/2026; versión, alcance y aprobación documentada por revisar. El borrador v1.0 y sus pendientes de abril son antecedentes históricos, salvo la aprobación informada | [Fuente y cautelas](../../context/hechos/gobierno-y-politica-ia.md) |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 48,
+      "text": "| Inventario de casos de uso y registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar. La aprobación de la política no los acredita | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
+      "basis": {
+        "record": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 48,
+          "text": "| Inventario de casos de uso y registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar. La aprobación de la política no los acredita | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 51,
+      "text": "| Controles específicos de IA (red teaming, DLP sobre prompts) | Sin evidencia | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "historical_uncertainty",
+      "blocking": true,
+      "reason": "La base dice solamente Sin evidencia de controles, sin acotar período/alcance como las otras filas históricas. La meta futura no delimita por sí sola la observación actual.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 68,
+      "text": "| Inventario de usos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | 100% de las herramientas, servidores MCP, funciones de IA embebidas y casos de producto | Objetivo propuesto por el equipo |",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
+      "basis": {
+        "record": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 68,
+          "text": "| Inventario de usos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | 100% de las herramientas, servidores MCP, funciones de IA embebidas y casos de producto | Objetivo propuesto por el equipo |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 69,
+      "text": "| Matriz de restricciones por cliente | Pendiente en abril; se validaba a mano. Estado actual por contrastar | Cubre los clientes que concentran la mayor parte de la facturación (la fuente da el alcance) | [Antecedente](../../context/hechos/gobierno-y-politica-ia.md) y [alcance](../../context/hechos/cartera-y-concentracion.md) |",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
+      "basis": {
+        "record": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 69,
+          "text": "| Matriz de restricciones por cliente | Pendiente en abril; se validaba a mano. Estado actual por contrastar | Cubre los clientes que concentran la mayor parte de la facturación (la fuente da el alcance) | [Antecedente](../../context/hechos/gobierno-y-politica-ia.md) y [alcance](../../context/hechos/cartera-y-concentracion.md) |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 70,
+      "text": "| Registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | Vivo, revisado cada mes por el Council | Objetivo propuesto por el equipo |",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
+      "basis": {
+        "record": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 70,
+          "text": "| Registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | Vivo, revisado cada mes por el Council | Objetivo propuesto por el equipo |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "limit": {
+          "path": "context/hechos/gobierno-y-politica-ia.md",
+          "line": 96,
+          "text": "- La aprobación informada el 20/10/2026 actualiza el estado de la política, pero\n  no convierte el borrador v1.0 en la versión aprobada ni acredita su fecha,\n  acta o autoridad aprobadora.[^confirmacion-caso-2026-10-20]\n- Los pendientes del 21/04/2026 son históricos y están por contrastar, salvo la\n  aprobación informada; no se infiere que la matriz de restricciones, el\n  onboarding o la revisión anual estén completos.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La evidencia de partida no registra inventario formal de casos de uso ni\n  registro de riesgos de IA. La confirmación no acredita su existencia ni la\n  operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]\n- La verificación de esta ficha se limita a los antecedentes citados y a la\n  aprobación informada por el responsable del caso; no acredita revisión de\n  la documentación de aprobación ni prueba de controles implementados.",
+          "sha256": "e24fadeb484e03cd4bd2b6f133d9cbcd424dd01a52b9993ed2a110a062b91f61"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 71,
+      "text": "| Controles técnicos de IA | Sin evidencia | Con señal en el mes 3: pasarela de salida y DLP, logs de acciones, red team interno; el externo, si se financia la demostración externa. Sin señal: *hooks* y escaneo de secretos en el equipo y red team acotado (ver \"Controles según la decisión del mes 3\") | Objetivo propuesto por el equipo |",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "historical_uncertainty",
+      "blocking": true,
+      "reason": "La base dice solamente Sin evidencia de controles, sin acotar período/alcance como las otras filas históricas. La meta futura no delimita por sí sola la observación actual.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 145,
+      "text": "| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Regla propuesta para afirmaciones comerciales: Seguridad valida; si aparece una afirmación sin evidencia se retira y se corrige el procedimiento. La misma fila contiene objeto, responsable, disparador y consecuencia. No afirma control implementado ni una afirmación real sin revisar.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 145,
+          "text": "| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "authority": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 145,
+          "text": "| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "decision": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 145,
+          "text": "| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "consequence": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 145,
+          "text": "| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 161,
+      "text": "preventiva de Seguridad (ver \"Derechos de decisión\"). Agregar esas filas queda pendiente de decisión",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Combinaciones residuales no representadas requieren agregar filas por decisión humana de Gobierno. La prohibición preventiva/default-deny no equivale a matriz completa ni aceptación.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 268,
+      "text": "pendientes de diseño y decisión humana la definición de incidente de IA, las severidades,",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Definición de incidente, severidades, plazos y evidencia siguen pendientes de diseño/decisión humana. La facultad de Seguridad de contener no ratifica ese diseño.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 330,
+      "text": "pendientes; el Council recomienda y revisa riesgos, sin liberar fondos.",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Designaciones empresariales de productor/verificador/firmante independientes aún sin contrato completo para ese objeto. El Council no libera fondos y el responsable del TP no firma por Acme.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 421,
+      "text": "- **Tensión pendiente:** el intake (fila de prohibidos) y el catálogo nombran solo los",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Tensión explícita entre intake/catálogo limitados a datos productivos y horizonte que también restringe código. Requiere conciliación del responsable de C; no se inventa permiso nuevo.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 432,
+      "text": "  preventiva de Seguridad. Queda pendiente de decisión humana qué rige para ese uso hasta",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "F distingue propuesta del responsable del Anexo C en el TP y decisión empresarial de la autoridad del residual antes de segunda liberación. La propuesta del plan sobre uso existente sigue sin resolver; esa separación no es acuerdo humano ni aceptación actual.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 692,
+      "text": "**Cuatro condiciones adicionales propuestas, pendientes de ratificación por el",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 884,
+      "text": "  queda pendiente de decisión entre los responsables humanos de C y D.",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Responsables humanos de C/D deben elegir A del tratamiento/retención y revisión laboral/datos. El catálogo no sustituye esa decisión por la A de reporte del CAIO.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 890,
+      "text": "  (Alta / Alto en F) no son una fila de este registro. La conciliación queda pendiente entre",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Ambos registros C/F califican riesgo inherente antes del control y aplican al residual el criterio de aceptación de C. Persisten valores inherentes distintos para datos de cliente en modelo externo y una superficie de F no representada en C. La conciliación humana de valores/superficies sigue pendiente; no se asignan valores por consenso ni se acepta un inherente como residual.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 961,
+      "text": "### Referencia anual, pendiente de conciliación con el pedido mínimo",
+      "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "La sección aún declara referencia anual pendiente de conciliación con el mínimo. C ya distingue el núcleo completo hasta 40k del restringido 108 h/6k; ese arreglo de alcance no elimina por sí solo las otras conciliaciones de la referencia anual.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/04-personas-cultura.md",
+      "line": 216,
+      "text": "corresponda, están **por definir con Gobierno y Talento**",
+      "sha256": "7dac87f03b61a4fdb07b01bf02fc708d601638887a4cc2a0dfb2612b2f5b6c05",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Tratamiento/retención de eventos por persona sin A elegida entre Gobierno y Talento ni contrato completo de habilitación. El CAIO decide qué KPI reportar, no el tratamiento del dato de origen; agregar no vuelve anónimos los eventos.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/04-personas-cultura.md",
+      "line": 628,
+      "text": "   completen, cada caso se valida a mano (pendiente declarado de la política).",
+      "sha256": "7dac87f03b61a4fdb07b01bf02fc708d601638887a4cc2a0dfb2612b2f5b6c05",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Validar cada caso a mano antes del uso no completa la matriz. El permiso comercial por cliente no acredita autoridad, hito y salida para terminar la matriz; son objetos distintos.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/04-personas-cultura.md",
+      "line": 680,
+      "text": "define Gobierno con Talento, pendiente declarado; no hay una A elegida en este",
+      "sha256": "7dac87f03b61a4fdb07b01bf02fc708d601638887a4cc2a0dfb2612b2f5b6c05",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Tratamiento/retención de eventos por persona sin A elegida entre Gobierno y Talento ni contrato completo de habilitación. El CAIO decide qué KPI reportar, no el tratamiento del dato de origen; agregar no vuelve anónimos los eventos.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/04-personas-cultura.md",
+      "line": 724,
+      "text": "cuatro semanas es **una propuesta pendiente de aprobación**; no reemplaza la",
+      "sha256": "7dac87f03b61a4fdb07b01bf02fc708d601638887a4cc2a0dfb2612b2f5b6c05",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Ventana móvil de cuatro semanas propuesta, preservando medición semanal. Falta autoridad inequívoca y punto de aprobación de ese cambio; no se impone retrospectivamente.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/04-personas-cultura.md",
+      "line": 729,
+      "text": "lee en M3. Sigue siendo una propuesta, con el instrumento de evaluación pendiente.",
+      "sha256": "7dac87f03b61a4fdb07b01bf02fc708d601638887a4cc2a0dfb2612b2f5b6c05",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Instrumento de evaluación práctica del básico aún pendiente y sin confirmación humana. El ≥90% tiene horas en el mínimo; no equivale a completitud por asistencia ni a metas ampliadas verificadas. La nueva ficha cultural permanece draft.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/04-personas-cultura.md",
+      "line": 841,
+      "text": "| **Mínimo.** Lectura del mes 3: básico completado ≥50% y <90%, con la evaluación práctica por rol y el denominador de la dotación (meta revisada si la base se extendió) | Se rediseña el formato y se recostea **antes de comprometer horas nuevas**. La continuidad del mínimo (128-212 h por tramo) no incluye formación general de los meses 4-12 ni se usa para cubrir esta remediación sin evidencia. No se liberan ni se cortan fondos por esta lectura sola |",
+      "sha256": "7dac87f03b61a4fdb07b01bf02fc708d601638887a4cc2a0dfb2612b2f5b6c05",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "La fila prohíbe cubrir remediación con la continuidad del mínimo y exige recosteo antes de horas nuevas. No identifica de forma completa quién valida ese rediseño/instrumento. Se conserva bloqueo conservador por competencia insuficiente, sin exigir cursos ejecutados hoy ni importar horas ampliadas.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/04-personas-cultura.md",
+      "line": 1029,
+      "text": "**Validación organizativa inicial: estimación de Finanzas (agente); la estimación humana de Personas (#18, pregunta 3) sigue pendiente.** Estimación de",
+      "sha256": "7dac87f03b61a4fdb07b01bf02fc708d601638887a4cc2a0dfb2612b2f5b6c05",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Estimación humana de Personas requerida para conciliar la validación organizativa aún sin producir. La estimación financiera no la reemplaza.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/04-personas-cultura.md",
+      "line": 1185,
+      "text": "asistencia y no como uso. **Confirmación humana pendiente:** el responsable",
+      "sha256": "7dac87f03b61a4fdb07b01bf02fc708d601638887a4cc2a0dfb2612b2f5b6c05",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Confirmación humana del responsable de D y Operaciones sobre instrumento, evaluador y encaje en horas aún pendiente. La propuesta cualitativa del agente no sustituye esa confirmación.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 199,
+      "text": "[C](03-gobierno-seguridad.md). La persona autorizante sigue **pendiente**.",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Preparación alternativa de 1,8-6,7k: E ya nombra Directorio/delegado antes de trabajar en 2026 y agendas de Operaciones/managers; no falta rol presupuestario. Falta consecuencia específica completa del rechazo/faltante para ese alcance. No se toma la ventana de la preparación mínima de 8k como salida equivalente.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 361,
+      "text": "Los meses 7-12 de ese régimen quedan pendientes de Arquitectura: no se publica",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Régimen sin gateway M7-M12 no completado por Arquitectura. No se extrapola el costo M4-M6 ni se declara cobertura anual del mínimo.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 839,
+      "text": "| Impacto financiero | Throughput atribuible por límite inferior (+3% en el mes 6, +8% en el mes 9) | Rige también la continuidad condicional del mínimo en M6/M9, con calidad resuelta primero y salidas de F; M3 no atribuye ganancia. La espera M9 conserva su ratificación pendiente; ampliar a plataforma requiere una decisión distinta | [Anexo F](06-roadmap-riesgo.md), [umbrales propuestos](../../context/supuestos/umbrales-tecnicos-propuestos.md) y este anexo |",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "La fila de impacto financiero conserva expresamente la ratificación pendiente de la espera M9. El respaldo de F no nombra quién ratifica la regla de espera; la liberación de fondos por el Directorio no acredita esa competencia ni vuelve ratificado el impacto financiero.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 988,
+      "text": "### Costos publicados de alcances distintos, pendientes de homogeneizar",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Comparación de costos de alcances distintos aún declarada sin homogeneizar. E V5 rotula las referencias del paquete completo como alternativa/antecedente; no autoriza el mínimo ni elimina la conciliación de comparabilidad.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1103,
+      "text": "son propuesta pendiente de ratificación; no reemplazan la regla vigente. Se conservan relecturas M6/M9 dentro del año.",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1145,
+      "text": "- **Eficiencia.** Falta evidencia de valor incremental. Hay uso y hay gasto, y no",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Ausencia presente de valor incremental medido contra una base: es la premisa para producir medición, con rampa M1-M3 de 0%, no una mejora prometida ni un resultado exigible antes de autorizarla. Las autorizaciones corresponden al Directorio/delegado; antes de M1 se exige viabilidad y, sin evidencia suficiente para el alcance, reducir o detener.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/05-business-case.md",
+          "line": 1145,
+          "text": "- **Eficiencia.** Falta evidencia de valor incremental. Hay uso y hay gasto, y no\n  hay una base contra la cual compararlos. Lo que se compra es la medición, no\n  la mejora: la rampa de los meses 1-3 es 0% y el tramo no promete atribución.",
+          "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f"
+        },
+        "authority": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 241,
+          "text": "| Autorizar la validación inicial en preparación de 2026 | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |\n| Liberar M1-M3 tras la validación inicial | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "decision": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 322,
+          "text": "**Segunda autorización, antes de M1.** La misma autoridad decide continuar, reducir o\nresecuenciar, o detener, con diagnóstico revisado, capacidad aceptada, acta de viabilidad\ntécnica y presupuesto 2027 comprobado.",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "consequence": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 340,
+          "text": "Si faltan evidencia, independencia o agendas, o se excede el techo, se reduce o detiene\ny se vuelve al autorizante antes de ampliar el alcance.",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1174,
+      "text": "cosas siguen pendientes y condicionan su ejecución: **no consta ejecución previa",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Preparación del mínimo sin ejecución previa ni autorización dada. Directorio/delegado autoriza esa preparación; antes de trabajar deben estar imputación 2026, agendas, trabajo desplazado y accesos. Sin ello la ventana no comienza. No cubre la preparación alternativa de 1,8-6,7k ni sustituye el acuerdo del equipo.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/05-business-case.md",
+          "line": 1174,
+          "text": "cosas siguen pendientes y condicionan su ejecución: **no consta ejecución previa\nde la preparación** y **las autoridades que la aprueban están a designar**. La\nliberación del resto del tramo no es automática por aprobar la validación.",
+          "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f"
+        },
+        "authority": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 241,
+          "text": "| Autorizar la validación inicial en preparación de 2026 | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "decision": {
+          "path": "plan/annexes/05-business-case.md",
+          "line": 1251,
+          "text": "Elección de Martin para el borrador; no es consenso del equipo ni autorización\nde Acme Labs. Propuesta de Finanzas: **10 días hábiles** dentro de octubre-diciembre\nde 2026, contados desde una autorización específica.\n\nAntes de trabajar, la autoridad de presupuesto 2026 debe aprobar la imputación\ndel tiempo; Operaciones y los managers deben confirmar agendas, trabajo desplazado\ny acceso a las fuentes. Sin esas condiciones, la ventana no comienza.",
+          "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f"
+        },
+        "consequence": {
+          "path": "plan/annexes/05-business-case.md",
+          "line": 1255,
+          "text": "Antes de trabajar, la autoridad de presupuesto 2026 debe aprobar la imputación\ndel tiempo; Operaciones y los managers deben confirmar agendas, trabajo desplazado\ny acceso a las fuentes. Sin esas condiciones, la ventana no comienza.",
+          "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1228,
+      "text": "Solapes propuestos, pendientes de validar por B/C/D: DevOps B 32-56 y C 40-64",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Uniones de horas B/C/D no ratificadas. D condiciona reserva y techos a confirmación o recosteo antes de M1; sin unión DevOps la sensibilidad excede el techo. No hay disponibilidad ni consenso demostrados.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1334,
+      "text": "El acta debe resolver continuar, reducir/resecuenciar o detener; un pendiente",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Acta del segundo pase antes de M1: Directorio/delegado acepta diagnóstico, capacidad, viabilidad y presupuesto, o reduce/resecuencia o detiene. Un pendiente bloqueante no se vuelve conformidad; la firma del TP no sustituye la empresarial.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/05-business-case.md",
+          "line": 1330,
+          "text": "Antes de M1, la autoridad presupuestaria 2027 debe aceptar el diagnóstico y el\npadrón, la matriz de capacidad validada por Operaciones/managers, las autoridades\ny la viabilidad técnica/de medición, el recosteo y el presupuesto 2027.\n\nEl acta debe resolver continuar, reducir/resecuenciar o detener; un pendiente\nbloqueante no se transforma en conformidad. La firma del responsable del TP no\nsustituye la de las autoridades de Acme Labs.",
+          "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f"
+        },
+        "authority": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 242,
+          "text": "| Liberar M1-M3 tras la validación inicial | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "decision": {
+          "path": "plan/annexes/05-business-case.md",
+          "line": 1330,
+          "text": "Antes de M1, la autoridad presupuestaria 2027 debe aceptar el diagnóstico y el\npadrón, la matriz de capacidad validada por Operaciones/managers, las autoridades\ny la viabilidad técnica/de medición, el recosteo y el presupuesto 2027.\n\nEl acta debe resolver continuar, reducir/resecuenciar o detener; un pendiente\nbloqueante no se transforma en conformidad. La firma del responsable del TP no\nsustituye la de las autoridades de Acme Labs.",
+          "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f"
+        },
+        "consequence": {
+          "path": "plan/annexes/05-business-case.md",
+          "line": 1334,
+          "text": "El acta debe resolver continuar, reducir/resecuenciar o detener; un pendiente\nbloqueante no se transforma en conformidad. La firma del responsable del TP no\nsustituye la de las autoridades de Acme Labs.",
+          "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1515,
+      "text": "**pendientes de ratificación humana**. Ni una señal ni el mero anuncio de precio",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1603,
+      "text": "| Si no se cumple, según el Anexo F | **Ninguna condición del mes 3 corta el plan.** Sin señal: los meses 4-12 como gobierno mínimo y formación con la prueba extendida (≈ 199 en el año); las lecturas de los meses 6 y 9 releen las señales. Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: los meses 4-6 solo con replan de capacidad. Respaldo de aprobación o alcance de la política pendientes de revisión: 6 semanas para completarlos, sin casos nuevos; al vencer sin aprobación documentada o sin cobertura aplicable al producto demostrada, no hay el producto en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en los meses 4-6; sin ella en el mes 9, la demostración externa (11,6-31 de caja) no se financia. Básico <50% al cierre de los meses 4-6: cambio de formato de la capacitación. Con señal y sin contractor: los meses 4-6 en el modo control del Anexo B, sin los hitos de IA aplicada; la caja de los meses 4-6 baja ~27 (contractor con contingencia) |",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Fila del paquete completo, ahora claramente alternativa/antecedente; mezcla base, política, matriz, capacitación y contractor con varias decisiones. Las esperas documentales no dispensan ratificaciones ni dan un contrato único de autoridad para todos los objetos.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1666,
+      "text": "| Exceso de ~0,3 FTE clave en los meses 4-6 con el producto diferido | Finanzas | Arquitectura propone el replan del Anexo B (los meses 4-6 en 2,2 FTE clave, −5k USD de tiempo) y la excepción acotada como respaldo. Finanzas toma el replan como base y deja la excepción costeada | **Pendiente del board para el paquete completo (antecedente)**: replan o excepción; no es una decisión de la validación actual de 8k USD |",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Replan o excepción del paquete completo pendiente del board; la fila lo separa de la validación actual de 8k. Falta hito/salida inequívocos del mismo replan; no se usa segunda liberación del mínimo.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1669,
+      "text": "| Sobre de capacidad: lectura estricta o separada | Finanzas | La separada es propuesta de Finanzas; con la estricta, los meses 1-3 no entran sin recortar el básico | **Decisión del paquete completo (antecedente)**, no de la validación actual de 8k USD. Para el pedido vigente, F propone decidir la lectura del sobre en la segunda liberación, antes de M1; es una propuesta pendiente de ratificación, no un acuerdo (ver [F, «Decisiones pendientes para el board o el equipo»](06-roadmap-riesgo.md#decisiones-pendientes-para-el-board-o-el-equipo)) |",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "La fila mezcla antecedente del paquete completo, propuesta de Finanzas para el TP y decisión futura del board sobre el mínimo. No separa el acuerdo del equipo sobre la propuesta de la autorización empresarial; F no convierte ese acuerdo pendiente en decisión de Acme.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1674,
+      "text": "| El paquete contra alcances más baratos | Finanzas | Comparación publicada pendiente de homogeneizar; una señal no demuestra repago | **Vigente:** pedido inicial mínimo; plataforma se reevalúa M3/M6/M9, con cuatro condiciones adicionales pendientes de ratificación |",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Comparación de costos de alcances distintos aún declarada sin homogeneizar. E V5 rotula las referencias del paquete completo como alternativa/antecedente; no autoriza el mínimo ni elimina la conciliación de comparabilidad.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1752,
+      "text": "  pendientes de ratificación. [F, «Línea de tiempo integrada»](06-roadmap-riesgo.md#línea-de-tiempo-integrada)",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "La integración del pedido en F/slides ya está explícita; ese pendiente editorial se retira del motivo. Sigue pendiente ratificar las cuatro condiciones de plataforma: C menciona Council o Directorio y F Council y Directorio sin competencia ratificadora inequívoca. La autoridad de gasto no sustituye esa ratificación; se conserva bloqueo por ese objeto real.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1769,
+      "text": "  de alcances distintos, pendientes de homogeneizar. Base del paquete −331,9",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Comparación de costos de alcances distintos aún declarada sin homogeneizar. E V5 rotula las referencias del paquete completo como alternativa/antecedente; no autoriza el mínimo ni elimina la conciliación de comparabilidad.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1794,
+      "text": "- Siguen pendientes de confirmación humana los controles exigibles y opcionales,",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Controles exigibles/opcionales, solapes, horas y estimación humana conservan confirmaciones pendientes. El nuevo calendario no demuestra ratificación ni disponibilidad.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/05-business-case.md",
+      "line": 1799,
+      "text": "  sigue pendiente; la alternativa de incidentes/ejercicios no está adoptada ni",
+      "sha256": "7ae9a3afee8d5f4e87d0e86041295ffdeb1a4e2a49a701ebc666b87d1edca49f",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Confirmación humana del instrumento y alternativa incidentes/ejercicios no adoptada ni costeada. No se la importa para completar la propuesta vigente.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 47,
+      "text": "propuestas. Donde dos anexos chocan, el choque va a \"Decisiones pendientes para",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Referencia a decisiones humanas/contradicciones abiertas del plan. El título de la sección no permite dispensar todos sus objetos.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 96,
+      "text": "el tiempo pasa el techo de 59 (ver \"Decisiones pendientes\"). La reserva de 1.380 h",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Sin las uniones de horas propuestas el máximo de tiempo supera 59. Reserva condicionada y recosteo futuro no son ratificación humana actual de los solapes.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 129,
+      "text": "residual según el Anexo C (ver \"Decisiones pendientes\"). Si falta",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "La referencia reúne lectura del sobre, contribución desplazada y propuesta del TP/decisión empresarial sobre uso existente. V5 separa las competencias, pero la propuesta del responsable de C sigue sin resolver; no se admite el conjunto con una autoridad de fondos.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 136,
+      "text": "Propuesta elegida por Martín para el borrador, pendiente de acuerdo del equipo y",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Acuerdo del equipo del TP aún pendiente además de autorización empresarial. El Directorio de Acme no puede resolver el acuerdo interno del equipo.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 177,
+      "text": "pruebas y compensatorios en M4-M6 y deja adelantarlos a M1-M3 como opción pendiente",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "execution_condition",
+      "blocking": true,
+      "reason": "Gobierno con Finanzas propone adelantar controles, pero no se identifica una A inequívoca con competencia para el cambio M4-M6 a M1-M3. Autorizar presupuesto no prueba esa competencia; sin prueba no se usa.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 213,
+      "text": "abierta en \"Decisiones pendientes para el board o el equipo\".",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "El alcance ampliado conserva elección abierta en la sección de decisiones. No se traslada la decisión de capacidad del mínimo al paquete completo ni se presupone autorización de controles/horas.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 389,
+      "text": "| Mes 3 | Política aplicada, con el respaldo de aprobación revisado antes de M1 y su alcance aplicable al producto | Aprobación documentada y cobertura aplicable al producto | Respaldo o alcance pendientes: 6 semanas; sin casos nuevos | Sin respaldo o cobertura demostrados al vencer: sin frente producto en el año | Producto |",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Gate de política con autoridad del Directorio para ratificar política y cambios, según C243. La fila exige revisar respaldo antes de M1 y cobertura aplicable al producto en M3: seis semanas sin casos nuevos y, si no se demuestra respaldo/cobertura al vencer, sin frente producto. No acredita aprobación documentada ni controles por la aprobación informada.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 389,
+          "text": "| Mes 3 | Política aplicada, con el respaldo de aprobación revisado antes de M1 y su alcance aplicable al producto | Aprobación documentada y cobertura aplicable al producto | Respaldo o alcance pendientes: 6 semanas; sin casos nuevos | Sin respaldo o cobertura demostrados al vencer: sin frente producto en el año | Producto |",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        },
+        "authority": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 243,
+          "text": "| Política de IA y sus cambios | Directorio (ratifica) | Responsable de seguridad | Council, CEO | Toda la organización |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "decision": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 389,
+          "text": "| Mes 3 | Política aplicada, con el respaldo de aprobación revisado antes de M1 y su alcance aplicable al producto | Aprobación documentada y cobertura aplicable al producto | Respaldo o alcance pendientes: 6 semanas; sin casos nuevos | Sin respaldo o cobertura demostrados al vencer: sin frente producto en el año | Producto |",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        },
+        "consequence": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 389,
+          "text": "| Mes 3 | Política aplicada, con el respaldo de aprobación revisado antes de M1 y su alcance aplicable al producto | Aprobación documentada y cobertura aplicable al producto | Respaldo o alcance pendientes: 6 semanas; sin casos nuevos | Sin respaldo o cobertura demostrados al vencer: sin frente producto en el año | Producto |",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 394,
+      "text": "| Mes 3 | Opción de plataforma: señal (ver definición abajo). Regla vigente: la señal libera evaluar la plataforma. Propuesta pendiente de ratificación: además, brecha documentada, alternativas comparables, economía incremental o pérdida de aprendizaje aceptada, y capacidad demostrada | Con regla vigente: señal. Con la propuesta ratificada: señal más las cuatro condiciones, con reserva y contrato para el compromiso nuevo | — | Sin señal: continuar el mínimo costeado y releer M6/M9. Si se ratificaron las cuatro condiciones, la falta de cualquiera impide liberar plataforma. Si no se ratificaron, elevar decisión bajo la regla vigente y volver a costear. No pasa al año 2 por defecto | Plataforma, a costear |",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 398,
+      "text": "| Mes 6 | Producto: problema observado, base de tiempo a primera integración exitosa y métrica principal acordadas antes de liberar; comparación con documentación/soporte; señal comercial escrita (ver \"Hipótesis de producto\") | El board decide volver a costear y liberar construcción | — | Sin evidencia: diferir. Sin plataforma ni ruta técnica alternativa diseñada y costeada, no se promete M7-M9 | Producto, a costear |",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "future_decision",
+      "blocking": false,
+      "reason": "La propia fila contiene objeto, board, hito M6 y consecuencia: volver a costear/liberar construcción con problema, base y señal; sin evidencia se difiere. Sin plataforma ni ruta alternativa diseñada/costeada no se promete M7-M9.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 398,
+          "text": "| Mes 6 | Producto: problema observado, base de tiempo a primera integración exitosa y métrica principal acordadas antes de liberar; comparación con documentación/soporte; señal comercial escrita (ver \"Hipótesis de producto\") | El board decide volver a costear y liberar construcción | — | Sin evidencia: diferir. Sin plataforma ni ruta técnica alternativa diseñada y costeada, no se promete M7-M9 | Producto, a costear |",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        },
+        "authority": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 398,
+          "text": "| Mes 6 | Producto: problema observado, base de tiempo a primera integración exitosa y métrica principal acordadas antes de liberar; comparación con documentación/soporte; señal comercial escrita (ver \"Hipótesis de producto\") | El board decide volver a costear y liberar construcción | — | Sin evidencia: diferir. Sin plataforma ni ruta técnica alternativa diseñada y costeada, no se promete M7-M9 | Producto, a costear |",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        },
+        "decision": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 398,
+          "text": "| Mes 6 | Producto: problema observado, base de tiempo a primera integración exitosa y métrica principal acordadas antes de liberar; comparación con documentación/soporte; señal comercial escrita (ver \"Hipótesis de producto\") | El board decide volver a costear y liberar construcción | — | Sin evidencia: diferir. Sin plataforma ni ruta técnica alternativa diseñada y costeada, no se promete M7-M9 | Producto, a costear |",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        },
+        "consequence": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 398,
+          "text": "| Mes 6 | Producto: problema observado, base de tiempo a primera integración exitosa y métrica principal acordadas antes de liberar; comparación con documentación/soporte; señal comercial escrita (ver \"Hipótesis de producto\") | El board decide volver a costear y liberar construcción | — | Sin evidencia: diferir. Sin plataforma ni ruta técnica alternativa diseñada y costeada, no se promete M7-M9 | Producto, a costear |",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 467,
+      "text": "**Referencia del paquete completo (alcances distintos, pendientes de homogeneizar).**",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Comparación de costos de alcances distintos aún declarada sin homogeneizar. E V5 rotula las referencias del paquete completo como alternativa/antecedente; no autoriza el mínimo ni elimina la conciliación de comparabilidad.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 470,
+      "text": "pendientes de homogeneizar\"). En ese paquete, ni el optimista recuperaba su costo",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Comparación de costos de alcances distintos aún declarada sin homogeneizar. E V5 rotula las referencias del paquete completo como alternativa/antecedente; no autoriza el mínimo ni elimina la conciliación de comparabilidad.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 500,
+      "text": "no son una fila de C. La conciliación queda pendiente entre los responsables humanos de",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "required_gap",
+      "blocking": true,
+      "reason": "Ambos registros C/F califican riesgo inherente antes del control y aplican al residual el criterio de aceptación de C. Persisten valores inherentes distintos para datos de cliente en modelo externo y una superficie de F no representada en C. La conciliación humana de valores/superficies sigue pendiente; no se asignan valores por consenso ni se acepta un inherente como residual.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 512,
+      "text": "| Una señal libera plataforma sin necesidad incremental | Media | Alto | Propuesta de cuatro condiciones, pendiente de ratificación | Disparador propuesto, aplicable solo tras ratificación: sin brecha documentada, no se libera plataforma. Antes de ratificarlo rige la regla de señal, con costeo previo y aceptación explícita del aprendizaje por el Directorio |",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 515,
+      "text": "| Declarar controles o certificaciones que no existen | Baja | Muy alto | Toda afirmación comercial la valida seguridad | Una afirmación sin evidencia |",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Regla propuesta para afirmaciones comerciales: Seguridad valida; si aparece una afirmación sin evidencia se retira y se corrige el procedimiento. La misma fila contiene objeto, responsable, disparador y consecuencia. No afirma control implementado ni una afirmación real sin revisar.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 145,
+          "text": "| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "authority": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 145,
+          "text": "| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "decision": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 145,
+          "text": "| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "consequence": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 145,
+          "text": "| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 524,
+      "text": "| Pedido inicial | Validación previa con techo 0 / 8; M1-M3 sin plataforma sujeto a segunda liberación de hasta 71 | Pedido completo 33+6 de caja y 72+7 de tiempo con la prueba chica y contractor (Anexo E, alternativa) | Falta evidencia de capacidad y valor incremental; techo acumulado 79 hasta cerrar en M3, sin afirmar repago | Reversible en cada gate |",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Premisa del pedido inicial: faltan capacidad y valor incremental demostrados, por eso se financia validación y medición, sin prometer repago. Antes de M1 se exige matriz con horas liberadas, viabilidad, solapes confirmados o recosteo y demás condiciones; Directorio/delegado decide el segundo pase. Si falta algo se reduce o difiere y recostea. No convierte disponibilidad, acuerdos ni beneficios en hechos.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 524,
+          "text": "| Pedido inicial | Validación previa con techo 0 / 8; M1-M3 sin plataforma sujeto a segunda liberación de hasta 71 | Pedido completo 33+6 de caja y 72+7 de tiempo con la prueba chica y contractor (Anexo E, alternativa) | Falta evidencia de capacidad y valor incremental; techo acumulado 79 hasta cerrar en M3, sin afirmar repago | Reversible en cada gate |",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        },
+        "authority": {
+          "path": "plan/annexes/03-gobierno-seguridad.md",
+          "line": 242,
+          "text": "| Liberar M1-M3 tras la validación inicial | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |",
+          "sha256": "d0ca2e873e64d946c1c8d9c5dc50d87bf69bb32f1863147e4b80b26e7efcd7c9"
+        },
+        "decision": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 117,
+          "text": "**Antes de liberar M1-M3**, el board recibe: diagnóstico revisado con brechas y\nfaltantes explícitos; alcance y techos definidos; horas por rol\nliberadas en la matriz privada, con trabajo desplazado y recuperación; vía de IA\naplicada interna demostrada (8-16 h) y perfil de facilitación (16-32 h) o la\nexcepción externa decidida; acta de viabilidad del protocolo y decisión de\ncalendario; versión, acta, alcance y aprobación documentada de la política\nrevisados ([Anexo C](03-gobierno-seguridad.md)); controles aplicables probados\nantes de usar cada superficie; las\nuniones de horas de B, C y D confirmadas o el tramo recosteado; la lectura del sobre\nde capacidad (estricta o separada) para decidir, y la contribución desplazada que\nestime la matriz, informada sin umbral propio, y qué rige para el uso que ya corre sobre clientes\nhasta tener su matriz: la propuesta del plan y la decisión de la autoridad del\nresidual según el Anexo C (ver \"Decisiones pendientes\"). Si falta\nalgo, se reduce o difiere y se vuelve a costear; el presupuesto no libera tiempo por sí solo.\nLa autorización económica permite producir base y controles; cada superficie\nrequiere dictamen, restricciones y pruebas aplicables antes de habilitar usos.",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        },
+        "consequence": {
+          "path": "plan/annexes/06-roadmap-riesgo.md",
+          "line": 129,
+          "text": "residual según el Anexo C (ver \"Decisiones pendientes\"). Si falta\nalgo, se reduce o difiere y se vuelve a costear; el presupuesto no libera tiempo por sí solo.\nLa autorización económica permite producir base y controles; cada superficie\nrequiere dictamen, restricciones y pruebas aplicables antes de habilitar usos.",
+          "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 525,
+      "text": "| Opción de plataforma | Regla vigente: señal en los meses 3, 6 o 9 (bifurcación por señal); propuesta pendiente de ratificación: señal más cuatro condiciones | Pasar toda la plataforma al año 2; o liberarla con cualquier señal sin comparar alternativas | Una señal no demuestra necesidad de esa implementación ni repago; diferir al año 2 exige una decisión adicional justificada | Reversible: se relee en los meses 6 y 9 |",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Cuatro criterios de plataforma/contrato propuestos, sin ratificación acreditada. C dice Council o Directorio y F Council y Directorio sin distinguir inequívocamente quién ratifica cada criterio. Recomendar riesgo, autorizar fondos y ratificar criterios son competencias distintas; falta conciliarlas con hito y regla aplicable. No se exige nombre personal ni evidencia futura ya producida.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 547,
+      "text": "| Captura de valor | Elegir antes de financiar si se captura eficiencia, ingreso por función o retención, y cómo. No convertir mejora de servicio en ingreso ni sumar toda la facturación protegida | Pendiente de Producto, Comercial y Finanzas |",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Producto, Comercial y Finanzas deben elegir mecanismo de captura antes de financiar. El gate de construcción M6 no da consecuencia explícita para la falta de esa elección particular.",
+      "basis": {}
+    },
+    {
+      "path": "plan/annexes/06-roadmap-riesgo.md",
+      "line": 594,
+      "text": "### Decisiones pendientes para el board o el equipo",
+      "sha256": "378cab175d3eeac314d1aedff0de826b4ded66e59ebd55f8476d0f2142cc3eff",
+      "category": "future_decision",
+      "blocking": true,
+      "reason": "Sección que reúne decisiones distintas, incluyendo acuerdos del TP y compromiso laboral sin costo cuantificado. No todas tienen competencia, hito y consecuencia completos; ninguna dispensa por encabezado.",
+      "basis": {}
+    }
+  ]
+}

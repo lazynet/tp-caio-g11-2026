@@ -6,9 +6,9 @@ title: "Anexo A — Diagnóstico y punto de partida"
 
 # Anexo A — Diagnóstico y punto de partida
 
-Slide que sustenta: [Slide 2 — Problema y diagnóstico por conciliar](../slides.md).
-El diagnóstico también ordena el beneficio que se mide en la
-[Slide 3 — Beneficio principal y captura](../slides.md).
+Slide que sustenta: [Problema](../slides.md). El diagnóstico también ordena el
+beneficio que se mide en la slide [Beneficio](../slides.md). Montos en k USD
+(1k USD = 1.000 USD).
 
 > **Cifras estimadas, todavía sin validar contra fuentes internas.** Se validan
 > antes de liberar la ejecución de M1-M3. La validación tiene una autorización propia.
@@ -107,13 +107,27 @@ El resultado es un diagnóstico revisado por dimensión, con fuentes, cambios de
 puntaje, brechas y faltantes explícitos. Las hipótesis pendientes se conservan;
 una incertidumbre que bloquee el alcance impide liberar esa actividad.
 
-La validación organizativa suma 60-96 h internas nuevas; junto con las 20-40 h
-técnicas existentes, la primera liberación totaliza 80-136 h y un techo de 8 mil
-USD de tiempo, sin caja incremental. Incluye participantes, verificación y cierre
-documental. Son supuestos para el borrador, elegidos por Martín; falta el acuerdo
-del equipo y la autorización empresarial. El [Anexo E](05-business-case.md)
-costea las tareas y el [Anexo F](06-roadmap-riesgo.md) define el segundo pase:
-continuar, reducir/resecuenciar o detener antes de ejecutar M1-M3.
+Son dos preparaciones distintas. La **técnica**, ya costeada, suma 20-40 h:
+12-24 h de viabilidad, extracción e historial del [Anexo B](02-arquitectura.md)
+y 8-16 h de preparación de facilitación del [Anexo D](04-personas-cultura.md);
+techo 3k USD. La **organizativa** es nueva: 60-96 h de entrevistas, padrón y
+matriz, restricciones, conciliación económica y verificación; techo 5k USD.
+Juntas, la primera liberación totaliza 80-136 h y un techo de 8k USD de tiempo,
+sin caja incremental, con el cierre documental incluido
+([Anexo E](05-business-case.md), "Primera autorización").
+
+Los solapes de horas entre B, C y D que el costeo supone (DevOps, QA, seniors y
+Seguridad) los propone Finanzas y siguen sin ratificar por los responsables de
+esos anexos; la validación los confirma o los rechaza y, si no se sostienen, se
+vuelve a costear antes de M1. Son supuestos para el borrador, elegidos por
+Martín; falta el acuerdo del equipo y la autorización empresarial.
+
+**Quién decide y cómo se sale.** El Directorio o una autoridad formalmente
+delegada autoriza la validación y, al cerrarla, decide en un acta continuar con
+el alcance validado, reducir/resecuenciar o detener. Si se detiene, la exposición
+es el tiempo efectivamente trabajado, hasta 8k USD, y caja 0; la segunda
+liberación de hasta 71k USD no es automática ([Anexo F](06-roadmap-riesgo.md),
+"Validación inicial y dos liberaciones").
 
 ### Hechos de contexto que condicionan el plan
 

@@ -1,6 +1,7 @@
 """Chequeo estructural del deck; no certifica madurez ni evidencia de negocio."""
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -22,6 +23,162 @@ ANNEX_SECTIONS = (
     "Riesgos y mitigación",
     "Decisiones",
 )
+PENDING = re.compile(
+    r"\b(TODO|TBD|FIXME|(?i:pendiente\w*|por definir|falta evidencia|sin evidencia|esqueleto))\b"
+)
+FINDING_CATEGORIES = {
+    "required_gap": set(),
+    # decision cita el momento/hito de resolución, también si no hay fecha calendario.
+    # La competencia de authority y el sentido de las citas requieren revisión editorial.
+    "future_decision": {"scope", "authority", "decision", "consequence"},
+    "execution_condition": {"scope", "authority", "decision", "consequence"},
+    "historical_uncertainty": {"record", "limit"},
+    "metadata": set(),
+}
+
+
+def unique_json(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"Clave JSON duplicada: {key}")
+        result[key] = value
+    return result
+
+
+def finding_catalog(root, documents):
+    # La clasificación es una revisión editorial versionada, no un juicio de IA.
+    path = root / "scripts/delivery-findings.json"
+    if not path.exists():
+        return {}, []
+    try:
+        data = json.loads(
+            path.read_text(encoding="utf-8"), object_pairs_hook=unique_json
+        )
+        if (
+            not isinstance(data, dict)
+            or set(data) != {"version", "entries"}
+            or type(data["version"]) is not int
+            or data["version"] != 1
+            or not isinstance(data["entries"], list)
+        ):
+            raise ValueError("Se exige version: 1 y entries: lista")
+        entries = {}
+
+        def location(item, keys):
+            if not isinstance(item, dict) or set(item) != keys:
+                raise ValueError("Campos de entrada/cita desconocidos o incompletos")
+            name, number, text = item["path"], item["line"], item["text"]
+            if (
+                not isinstance(name, str)
+                or not name
+                or "\\" in name
+                or Path(name).is_absolute()
+                or ".." in Path(name).parts
+                or any(part.casefold() == "private" for part in Path(name).parts)
+                or Path(name).as_posix() != name
+                or type(number) is not int
+                or number < 1
+                or not isinstance(text, str)
+                or not text.strip()
+                or not isinstance(item["sha256"], str)
+                or not re.fullmatch(r"[0-9a-f]{64}", item["sha256"])
+            ):
+                raise ValueError("Ubicación o texto inválidos")
+            return name, number
+
+        def exact(citation):
+            name, number = location(citation, {"path", "line", "text", "sha256"})
+            content = documents.get(root / name)
+            if content is None:
+                raise ValueError(f"Cita fuera del alcance exigido: {name}")
+            if (
+                hashlib.sha256(content.encode("utf-8")).hexdigest()
+                != citation["sha256"]
+            ):
+                raise ValueError(f"Documento modificado desde la clasificación: {name}")
+            lines = content.splitlines()
+            if (
+                "\n".join(
+                    lines[number - 1 : number - 1 + len(citation["text"].split("\n"))]
+                )
+                != citation["text"]
+            ):
+                raise ValueError(f"Cita modificada o desplazada: {name}:{number}")
+
+        for entry in data["entries"]:
+            key = location(
+                entry,
+                {
+                    "path",
+                    "line",
+                    "text",
+                    "sha256",
+                    "category",
+                    "blocking",
+                    "reason",
+                    "basis",
+                },
+            )
+            category = entry["category"]
+            if (
+                not isinstance(category, str)
+                or category not in FINDING_CATEGORIES
+                or type(entry["blocking"]) is not bool
+                or not isinstance(entry["reason"], str)
+                or not entry["reason"].strip()
+                or not isinstance(entry["basis"], dict)
+                or "\n" in entry["text"]
+            ):
+                raise ValueError(f"Clasificación inválida: {key}")
+            if key in entries:
+                raise ValueError(f"Detección duplicada: {key}")
+            entries[key] = entry
+            expected = set() if entry["blocking"] else FINDING_CATEGORIES[category]
+            if set(entry["basis"]) != expected:
+                raise ValueError(f"Respaldo incompleto o desconocido: {key}")
+            for citation in entry["basis"].values():
+                location(citation, {"path", "line", "text", "sha256"})
+            if root / key[0] not in documents:
+                continue
+            exact({k: entry[k] for k in ("path", "line", "text", "sha256")})
+            if not PENDING.search(visible(entry["text"])):
+                raise ValueError(f"Entrada sin detección vigente: {key}")
+            for citation in entry["basis"].values():
+                exact(citation)
+            if not entry["blocking"]:
+                if category == "required_gap" or re.search(
+                    r"\b(TODO|TBD|FIXME)\b", entry["text"]
+                ):
+                    raise ValueError(f"Faltante no dispensable: {key}")
+                if category == "metadata":
+                    content = documents[root / key[0]]
+                    metadata, _ = split_frontmatter(content, ())
+                    if (
+                        not 1 < key[1] < frontmatter_lines(content)
+                        or not re.fullmatch(r"tags:\s*\[[^\]\n]+\]\s*", entry["text"])
+                        or not isinstance(metadata.get("tags"), list)
+                    ):
+                        raise ValueError(f"No es una etiqueta de metadatos: {key}")
+        return entries, []
+    except (OSError, UnicodeError, ValueError, TypeError) as exc:
+        return {}, [f"Catálogo de entrega inválido: {exc}"]
+
+
+def assess_finding(name, number, raw_line, catalog):
+    entry = catalog.get((name, number))
+    if entry is not None and entry["text"] == raw_line:
+        return dict(entry)
+    return {
+        "path": name,
+        "line": number,
+        "text": raw_line,
+        "category": "unclassified",
+        "blocking": True,
+        "reason": "Detección nueva o sin clasificación exacta; requiere revisión.",
+        "basis": {},
+    }
+
 
 # El PDF es un informe para el directorio: no muestra quién iteró, cómo trabajó el
 # equipo ni los códigos internos de la cursada.
@@ -222,6 +379,8 @@ def links(text, include_definitions=True):
 
 def resolve_link(origin, destination, root):
     parsed = urlsplit(destination)
+    if parsed.scheme == "file":
+        raise ValueError(f"Referencia file:// no admitida: {destination}")
     if parsed.scheme or parsed.netloc:
         return None
     path = unquote(parsed.path)
@@ -240,6 +399,8 @@ def resolve_link(origin, destination, root):
     target = target.resolve()
     if not target.is_relative_to(root):
         raise ValueError(f"Referencia fuera del repo: {destination}")
+    if any(part.casefold() == "private" for part in target.relative_to(root).parts):
+        raise ValueError(f"Referencia privada no admitida: {destination}")
     if not target.is_file():
         raise ValueError(f"Referencia local rota: {destination}")
     if parsed.fragment:
@@ -289,12 +450,19 @@ def check_annex(path, root, mode):
 
 def check(root, deck, mode):
     root, deck = root.resolve(), deck.resolve()
-    errors, pending, references = [], [], set()
+    errors, warnings, pending, findings, references = [], [], [], [], set()
     try:
         text = deck.read_text(encoding="utf-8")
         metadata, body = split_frontmatter(text)
     except (OSError, ValueError) as exc:
-        return {"slides": 0, "errors": [str(exc)], "pending": [], "references": []}
+        return {
+            "slides": 0,
+            "errors": [str(exc)],
+            "warnings": [],
+            "pending": [],
+            "findings": [],
+            "references": [],
+        }
     if metadata.get("owner") != "caio":
         errors.append("El owner del deck debe ser caio")
     if metadata.get("marp") is not True:
@@ -362,16 +530,29 @@ def check(root, deck, mode):
                 evidence.add(target)
             elif kind is None:
                 queue.append(target)
+    catalog, catalog_errors = finding_catalog(
+        root, {path: documents.get(path, "") for path in delivered | evidence}
+    )
+    if mode == "delivery":
+        errors.extend(catalog_errors)
+    else:
+        warnings.extend(catalog_errors)
     for origin in sorted(delivered | evidence):
+        raw_lines = documents.get(origin, "").splitlines()
         for line_number, line in enumerate(
             visible(documents.get(origin, "")).splitlines(), 1
         ):
-            if re.search(
-                r"\b(TODO|TBD|FIXME|(?i:pendiente\w*|por definir|falta evidencia|sin evidencia|esqueleto))\b",
-                line,
-            ):
+            if PENDING.search(line):
                 pending.append(
                     f"{origin.relative_to(root)}:{line_number}: {line.strip()}"
+                )
+                findings.append(
+                    assess_finding(
+                        str(origin.relative_to(root)),
+                        line_number,
+                        raw_lines[line_number - 1],
+                        catalog,
+                    )
                 )
     for annex in annex_files(root):
         errors.extend(check_annex(annex, root, mode))
@@ -379,14 +560,20 @@ def check(root, deck, mode):
             errors.append(
                 f"Entrega rechazada: anexo no referenciado desde el deck: {annex.relative_to(root)}"
             )
-    if mode == "delivery" and pending:
-        errors.extend(f"Entrega rechazada por pendiente: {item}" for item in pending)
+    if mode == "delivery":
+        errors.extend(
+            f"Entrega rechazada por pendiente: {item} ({finding['reason']})"
+            for item, finding in zip(pending, findings)
+            if finding["blocking"]
+        )
     if mode == "delivery":
         errors.extend(validate_evidence(root, evidence))
     return {
         "slides": count,
         "errors": errors,
+        "warnings": warnings,
         "pending": pending,
+        "findings": findings,
         "references": sorted(references),
         "evidence": sorted(str(path.relative_to(root)) for path in evidence),
     }
@@ -414,8 +601,19 @@ def main():
         print(json.dumps(result, ensure_ascii=False, indent=2))
     else:
         print(
-            f"plan-check ({args.mode}): {result['slides']} slides; {len(result['pending'])} pendientes; {len(result['references'])} referencias locales"
+            f"plan-check ({args.mode}): {result['slides']} slides; {len(result['pending'])} detecciones; {len(result['references'])} referencias locales"
         )
+        for finding in result["findings"]:
+            disposition = (
+                ("BLOQUEO" if args.mode == "delivery" else "PENDIENTE DE ENTREGA")
+                if finding["blocking"]
+                else "INFORMATIVO"
+            )
+            print(
+                f"{disposition} [{finding['category']}]: {finding['path']}:{finding['line']}: {finding['reason']}"
+            )
+        for warning in result["warnings"]:
+            print(f"ADVERTENCIA: {warning}; clasificaciones no vigentes")
         for error in result["errors"]:
             print(f"ERROR: {error}")
         if not result["errors"]:

@@ -6,9 +6,9 @@ title: "Anexo B — Arquitectura y roadmap técnico"
 
 # Anexo B — Arquitectura y roadmap técnico
 
-Slides que sustenta: [Slide 3 — Beneficio](../slides.md) y
-[Slide 5 — Arquitectura objetivo](../slides.md). Los hitos técnicos alimentan
-además [Slide 8 — Roadmap técnico, financiero y cultural](../slides.md).
+Slides que sustenta: [Beneficio](../slides.md) y
+[Arquitectura](../slides.md). Los hitos técnicos alimentan
+además [Roadmap técnico, financiero y cultural](../slides.md).
 
 ## Objetivo
 
@@ -24,12 +24,17 @@ bancos y fintechs y la IA en su operación interna, es la **dirección de
 diseño**: los meses 4-12 no se autorizan hoy, se liberan decisión por decisión (ver
 «Pedido vigente (parte técnica)»). Hoy no hay IA en producción dentro de lo que se vende
 ([fuente](../../context/hechos/ia-en-producto-y-oferta.md)), así que el primer
-tramo configura herramientas existentes y mide. El frente producto es un tramo condicional: en el
-escenario base está diferido, y entra en los meses 7-9 solo si la lectura del mes 6 trae
-una señal de cliente ([Anexo E](05-business-case.md)).
+tramo configura herramientas existentes y mide. El frente producto pertenece
+a la alternativa ampliada: su secuencia de los meses 7-9 exige plataforma
+liberada en el mes 3, señal de cliente en el mes 6 y otra decisión y costeo.
+El mínimo y su continuación no financian construir producto
+([Anexo E](05-business-case.md), «Continuación condicional»). Sin plataforma,
+la señal no basta para prometer ese piloto: rige la ruta diferida de
+«Bifurcación en el mes 3: con señal y sin señal», sin fecha garantizada.
 
-El responsable de cada hito está **a designar**. Las cifras económicas del anexo son insumos para Finanzas, no el
-business case.
+El responsable empresarial de cada hito está **a designar**. Las cifras
+económicas del anexo son insumos para Finanzas; el [Anexo E](05-business-case.md)
+consolida el business case y los límites de autorización.
 
 La primera autorización no libera M1-M3: habilita una validación acotada con
 agenda e imputación 2026 confirmadas. La segunda libera el paquete mínimo de los
@@ -55,12 +60,34 @@ exige nuevo alcance, calendario y costeo.
 | Precio y proveedor | El costo unitario no sube, pero la suscripción plana puede migrar a consumo; migrar de proveedor cuesta poco **si** el harness es neutral al modelo | [Supuesto](../../context/supuestos/precio-y-dependencia-de-modelos.md) |
 | Ganancia de productividad | +10% a +25% de throughput en equipos propios (el borrador de OKR 2027 fija +20%) | [Supuesto](../../context/supuestos/ganancia-de-productividad.md), [OKR](../../context/hechos/okrs-y-objetivos.md) |
 | Inversión incremental | 1%-3% de la facturación anual, sin contrataciones masivas | [Supuesto](../../context/supuestos/capacidad-de-inversion.md) |
-| Costo cargado por rol | Rangos USD/mes, amplios y no calibrados contra la nómina: tech lead o arquitecto 4.500-10.000, IA aplicada 4.500-11.000, senior/DevOps/QA 3.000-7.500 | [Supuesto](../../context/supuestos/costo-cargado-por-rol.md) |
+| Costo cargado por rol | Rangos mensuales amplios y no calibrados contra la nómina: tech lead o arquitecto 4,5-10k USD, IA aplicada 4,5-11k USD, senior/DevOps/QA 3-7,5k USD | [Supuesto](../../context/supuestos/costo-cargado-por-rol.md) |
 | Seats y adopción | Aun si se alcanzara el 80% combinado del OKR (el plan no lo alcanza, [Anexo D](04-personas-cultura.md)): 0,8 × 0,8 × (60-70) ≈ 38-45 personas activas, ya cubiertas por 40-45 seats | Cálculo propio sobre las fuentes de tamaño y de OKR: la adopción es de activación, no de más seats |
 | No existe hoy un gateway de modelos ni un inventario formal de arquitectura | — | [Supuesto](../../context/supuestos/capacidades-ausentes.md): no consta en [stack](../../context/hechos/stack-y-plataforma.md); lo invalida cualquier inventario que lo contradiga |
 | Umbrales técnicos (evals y gate de impacto, política de ruteo, portabilidad y costo del gateway, intervalo de throughput, replan de los meses 4-6) | Propuestos por este anexo, sin medición previa | [Supuesto](../../context/supuestos/umbrales-tecnicos-propuestos.md) |
 
 ## Evidencia
+
+### Cómo leer el alcance y los términos
+
+El **mínimo vigente** configura herramientas existentes, prueba sus controles y
+mide prácticas. La **plataforma objetivo** y el **producto** son alternativas
+condicionales: sus tablas no prueban disponibilidad ni autorizan su ejecución.
+
+FTE expresa dedicación equivalente de una persona a tiempo completo; para el
+costeo se usan 160 h por mes y 480 h por trimestre
+([convenciones](../../context/supuestos/convenciones-de-calculo.md)). No acredita una agenda liberada.
+
+El gateway es la pasarela de llamadas a modelos. El harness reúne reglas,
+contexto, herramientas y controles de ejecución; SDLC es el ciclo de desarrollo
+de software. MCP es el protocolo de conexión con herramientas; CI, integración continua.
+
+Las evals son pruebas de evaluación; retrieval recupera documentos y RAG usa
+esa recuperación para responder con contexto. Working set es el contexto de
+trabajo acotado; tenant, el entorno aislado de un cliente o del uso interno.
+
+PII son datos personales identificables; DLP, controles contra pérdida de datos;
+SSO, inicio de sesión único. ADR registra decisiones de arquitectura; SLO fija
+objetivos de servicio; p95 es el percentil 95 y TCO, el costo total de propiedad.
 
 ### Arquitectura de referencia (Agente = Modelo + Harness)
 
@@ -170,8 +197,8 @@ bajo riesgo). El bloqueo de secretos, de datos Restringidos y de datos de client
 sin cláusula **sigue bloqueando** aunque se baje la fricción.
 
 **Presupuesto de migración.** Llevar las superficies enrutables al gateway y
-correr las pruebas: 15-30 días-persona de DevOps/QA entre los meses 1 y 6 (supuesto), unos USD 2,1-10,7 mil de tiempo a los rangos de [costo por
-rol](../../context/supuestos/costo-cargado-por-rol.md) (USD 3.000-7.500 por mes,
+correr las pruebas: 15-30 días-persona de DevOps/QA entre los meses 1 y 6 (supuesto), unos 2,1-10,7k USD de tiempo a los rangos de [costo por
+rol](../../context/supuestos/costo-cargado-por-rol.md) (3-7,5k USD por mes,
 21 días hábiles por mes). Va dentro de la fracción de DevOps/QA de abajo; si la
 excede, se reduce el alcance a las superficies enrutables.
 
@@ -181,7 +208,9 @@ Hoy la "cobertura de precio" es una hipótesis. El [Anexo E](05-business-case.md
 ("Gateway: suscripción contra consumo") muestra que el gateway solo se paga por
 precio si el proveedor cobra por consumo y el ruteo baja ese consumo en una
 fracción *s* que supere un umbral. Con los valores vigentes del Anexo E (infraestructura
-a régimen sin piloto), es ~38% a 4×, ~25% a 6× y ~13% a 12×. La prueba mide
+a régimen sin piloto), es 38,4% a 4×, 25,6% a 6× y 12,8% a 12×. La decisión usa
+la fórmula sin redondear: 33k USD / (6 × 21,5k USD) = 25,581395…% en el ejemplo central.
+Esto cubre solo la infraestructura modelada del gateway, no el programa completo. La prueba mide
 lo que el Anexo E declara hueco. Hasta tener el resultado, el plan no afirma cobertura de
 precio.
 
@@ -189,11 +218,12 @@ precio.
 [Anexo E](05-business-case.md) ("Base del cálculo: el gasto elegible"), con su
 símbolo. *fc* y *s* se miden sobre la misma población: el **gasto elegible**, que
 hoy es el consumo del agente de código a precio de lista (40-45 seats, con base en
-su suscripción de 19-24 mil por año en el Anexo E). *fc* es la fracción del **costo** de ese
+su suscripción de 19-24k USD por año en el Anexo E). *fc* es la fracción del **costo** de ese
 gasto que pasa por el gateway, no de eventos. Chat, IDE y Workspace quedan fuera del
 gasto elegible y su exposición se informa aparte. Así, el ahorro es k × gasto
 elegible × *fc* × *s*, comparable con el costo del gateway del Anexo E, y el criterio es
-*fc* × *s* ≥ el umbral del Anexo E. Con *fc* ≤ 0,9, pasar a 6× pide *s* ≥ ~28%. La
+*fc* × *s* ≥ el umbral del Anexo E. Si *fc* = 0,9, pasar a 6× pide *s* ≥ 28,423772…%;
+con menor *fc*, la reducción necesaria aumenta. El 90% de eventos no impone una cota al costo enrutable. La
 fracción de eventos (cuatro superficies, o solo el agente según el denominador del
 Anexo C) es métrica de
 cobertura de controles y no se multiplica por *s*.
@@ -208,13 +238,16 @@ cobertura de controles y no se multiplica por *s*.
 | Superficies fuera del gasto elegible | Chat, Workspace e IDE: no entran en *fc* ni en *s* | Exposición de precio sin cobertura, declarada aparte |
 
 **Criterio de aceptación** (umbrales propuestos, [fuente](../../context/supuestos/umbrales-tecnicos-propuestos.md)):
-la cobertura de precio se afirma solo si se cumplen las cuatro condiciones.
+la cobertura potencial ante pago por consumo se afirma solo si se cumplen las
+condiciones de la prueba. No se atribuye ahorro observado a una suscripción plana.
 
-1. *fc* × *s* ≥ el umbral del Anexo E para k = 6× (~25%), con *fc* sobre el gasto
+1. *fc* × *s* ≥ el umbral sin redondear del Anexo E para k = 6× (25,581395…% en el ejemplo central), con *fc* sobre el gasto
    elegible; es el múltiplo que dispara el gate
    de FinOps en el [Anexo F](06-roadmap-riesgo.md).
 2. La tasa de éxito con ruteo no cae más de 5 puntos contra el modelo actual.
-3. Enrutar preserva la suscripción plana, o el proveedor ya cobra por consumo.
+3. El régimen comercial queda documentado: el ruteo se activa solo si preserva
+   la suscripción plana o el proveedor ya cobra por consumo. En el primer caso
+   aporta control y telemetría, sin ahorro de precio; en el segundo se evalúa ahorro.
 4. Migrar de proveedor cuesta ≤ 20 días-persona.
 
 Si falla cualquiera, el gateway se justifica por control y telemetría de los
@@ -226,16 +259,24 @@ se informa siempre aparte.
 | Quién | El contractor de IA aplicada arma el lote y corre las configuraciones; DevOps/QA instrumenta el gateway; FinOps calcula *s* y la exposición. Aprueba la dirección técnica con Finanzas. Responsables: **a designar** |
 | Cuándo | Meses 4-6, semanas 6-11 del tramo, con el gateway en laboratorio; el resultado entra en el paquete de la lectura del mes 6 |
 | Costo | Tiempo dentro de las fracciones de los meses 4-6. El consumo por API de la reejecución tiene un tope que fija FinOps dentro del renglón de infraestructura de los meses 4-6: no suma caja ni tiene precio propio |
-| Qué decisión habilita (lectura del mes 6) | Pasa: el gateway queda como cobertura de precio. Con la suscripción que no permite gateway, el ruteo del agente queda ensayado y listo, sin activarse mientras la suscripción sea plana; con pago por consumo se activa. El Anexo E puede valuar la palanca con *fc* × *s* medidos. No pasa: la palanca "cobertura de precio" sale del deck y de la defensa; la infraestructura queda en el mínimo de control. En ningún caso el gate de cobertura obliga a enrutar el agente con la suscripción que no permite gateway (Anexo E, segundo esquema) |
+| Qué decisión habilita (lectura del mes 6) | Pasa: queda documentada la cobertura potencial ante consumo, con *fc* × *s* medidos; Finanzas recalcula con el régimen y costo vigentes. La suscripción plana no genera ahorro por ruteo. Si no permite gateway, el ruteo queda ensayado sin activarse; con pago por consumo puede activarse. No pasa: la palanca de precio sale del deck y de la defensa; cualquier infraestructura de control requiere justificar alcance y costo. El gate nunca obliga a romper la suscripción plana (Anexo E, segundo esquema) |
 | Abandono | Sin lote reproducible o sin respuesta del proveedor al cierre de los meses 4-6: no se afirma cobertura de precio en la lectura del mes 6 |
 
 ### Métricas técnicas (las sostiene este anexo; Finanzas las consume)
 
+**Alcance de la tabla.** El piloto de producto, el caso de referencia interno,
+la cobertura de precio y los proveedores detrás del gateway son objetivos de
+la **alternativa con plataforma liberada**, no resultados financiados por el mínimo.
+
+Requieren las decisiones y capacidades de la ruta «Bifurcación en el mes 3»;
+el producto exige además señal y otra decisión y costeo. Las demás filas son
+indicadores y metas de referencia, no mejoras demostradas ni garantizadas por el mínimo.
+
 | Métrica | Hoy | Esperado a 12 meses | Fuente |
 |---|---|---|---|
-| Funcionalidades de IA en producción en lo vendido | 0 | Si la lectura del mes 6 libera el producto: 1 piloto acotado evaluado con gate scale/kill (meses 7-12). Si no: 0, por diseño | [Fuente](../../context/hechos/ia-en-producto-y-oferta.md) |
+| Funcionalidades de IA en producción en lo vendido | 0 | Alternativa ampliada: con plataforma liberada en el mes 3, señal en el mes 6 y otra decisión y costeo: 1 piloto acotado evaluado con gate scale/kill (meses 7-12). Si no: 0, por diseño | [Fuente](../../context/hechos/ia-en-producto-y-oferta.md); ruta «Bifurcación en el mes 3» |
 | Caso de referencia interno en uso | 0 | En nivel 2 (prepara, no ejecuta) para Tecnología y Operaciones, con su protocolo de evaluación aprobado | Este anexo |
-| Cobertura de precio del gateway (*fc* × *s*) | Sin medir | Medida en la lectura del mes 6 contra el umbral del Anexo E a 6× | Prueba de portabilidad y costo |
+| Cobertura de precio del gateway (*fc* × *s*) | Sin medir | Medida en la lectura del mes 6 contra el umbral del Anexo E a 6×, solo si la decisión del mes 3 libera la plataforma; sin ella, se difiere y no se afirma la palanca | Prueba de portabilidad y costo; «Insumos para el deck», mensaje al CFO |
 | Cobertura de la telemetría de IA | Solo agente de código | Chat, terminal y Workspace, por persona activa y por resultado | [Fuente](../../context/hechos/uso-ia-interno.md) |
 | Personas con IA activa por semana | ~1 de 3 (org), ~7 de 10 (Tecnología), ~1 de 10 (Operaciones) | Tecnología ≥ 80% desde los meses 4-6 y ≥ 85% en los meses 10-12; Operaciones habilitadas, aparte. El 80% combinado del OKR no se alcanza: se informa su valor real ([Anexo D](04-personas-cultura.md), decisión sobre la meta de adopción y el OKR combinado) | [OKR borrador](../../context/hechos/okrs-y-objetivos.md), [Anexo D](04-personas-cultura.md) |
 | Throughput por desarrollador (PR aceptados por persona activa, ver definición) | Base prospectiva congelada en las semanas 1-4 del plan; serie retrospectiva de la preparación previa solo para tendencia y ruido | +10% a +25% en equipos propios, leído como tendencia con intervalo | [Supuesto](../../context/supuestos/ganancia-de-productividad.md) |
@@ -267,13 +308,13 @@ ruido. El responsable de ratificarlo antes de la segunda liberación está **a d
 | Base | La prospectiva congelada en las semanas 1-4 del plan, de la misma cohorte, fechada y sin edición. La serie retrospectiva de la preparación previa estima ruido y tendencia; no es base de atribución (ver "Respaldo") |
 | Estimador | Cambio relativo apareado: PR aceptados por semana de cada persona activa en la ventana del gate contra su propia base congelada, agregado con los pesos de estrato (tipo y tamaño) fijados en la base. Donde exista un grupo que todavía no adopta, se resta su cambio (diferencia en diferencias); si no, se resta la tendencia estimada con la serie de la preparación previa |
 | Intervalo | *Bootstrap* percentil remuestreando personas (no PR), 2.000 réplicas, confianza 90% bilateral. Pasa si el límite inferior ≥ el umbral de la banda; un intervalo que cruza el umbral es "espera", como dice el Anexo F |
-| Precisión mínima | Semiancho ≤ 3 puntos porcentuales: con más, el intervalo no separa las bandas de +3%, +5% y +8% |
-| Muestra mínima | **15 personas activas** (el piso del supuesto de 15-20), y "activa" es tener base congelada propia y PR en al menos 6 de las 8 semanas de la ventana. Lo que discrimina es el semiancho, no N: con 15-20 personas el piso se cumple si no hay bajas |
+| Precisión mínima | Semiancho ≤ 3 puntos porcentuales: requisito propuesto que no garantiza discriminar bandas ni pasar productividad; decide el límite inferior real |
+| Muestra mínima | **15 personas activas** (el piso del supuesto de 15-20), y "activa" es tener base congelada propia de tasa positiva y PR en al menos 6 de las 8 semanas de la ventana. Tener 15-20 integrantes no demuestra que todos sean elegibles ni precisión suficiente |
 | Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: cuenta como "espera" y la ventana se extiende 6 semanas; la extensión suma semanas por persona, no personas, así que solo baja el ruido de cada una. Vencida, rige la regla del Anexo F. Con N < 15, esperar no lo arregla: no se decide por valor y aplica "Viabilidad" |
 | Calidad | El mismo estimador e intervalo sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, por separado, con un margen de no inferioridad δ = +10% relativo (**supuesto sin dato**; se recalibra con la tasa de la preparación previa y se fija antes de la segunda liberación). Tres casos ordenados. **Primero, daño** (algún límite inferior > 0): la ganancia no cuenta y el gate corta aunque el throughput pase o el límite superior sea ≤ δ. **Luego, incierto** (sin daño, algún intervalo incluye 0 y su límite superior > δ): no se demuestra no deterioro; cuenta como espera (6 semanas, una vez) y, vencida, como no pasa. **Solo sin daño ni incertidumbre, no deterioro demostrado** (ambos límites superiores ≤ δ): el gate decide por throughput. Tasas base cero: aplica la regla específica de abajo. Con pocos eventos el intervalo puede impedir probar no inferioridad; el acta de viabilidad lo declara antes de ratificar el método |
 | Respaldo | Cambio de base solo por un criterio mecánico que usa datos de la base, antes de cualquier tratamiento y ciego al resultado. En la semana 4 se mide el ruido placebo: semiancho del cambio entre las semanas 1-2 y 3-4, con el mismo estimador e intervalo, proyectado a la ventana del gate con el factor que la preparación previa calibre antes de la segunda liberación. Si el proyectado > 3 puntos con N ≥ 15, la base "no resuelve". Lo aplica la oficina del CAIO, sin discreción, y deja constancia (fecha, N, semiancho placebo, factor, versión) que ve el Directorio en la decisión del mes 3. **La retrospectiva no sirve para atribuir**: mezcla tendencia, estacionalidad (los meses 1-3 caen en enero-marzo; supuesto), adopción previa y cambios de equipo, y no baja la dispersión entre personas, que es la que domina. Si se usa, es una lectura contra tendencia, sin atribución: no libera capital (las lecturas de los meses 6 y 9 no pasan por throughput) y solo puede producir espera o corte. Alternativa con su costo, a decidir por Personas y CAIO: prolongar la base prospectiva a la semana 8 y desplazar 4 semanas la formación básica, la prueba y la formación intermedia, antes de iniciar cualquier tratamiento |
 | Congelamiento | Versión, δ, factor y umbral se fechan antes de la segunda liberación y no se editan desde que se congela la base. Un cambio posterior es un desvío: se registra con fecha y motivo, rige desde la ventana siguiente y la ventana en curso se lee con la versión vigente al abrirse |
-| Viabilidad | Durante la primera autorización, con la serie de la preparación previa, se estima σ (dispersión entre personas del cambio relativo) y el semiancho esperado con la cohorte real, también para calidad; se verifica antes de la segunda liberación. Condición, sin dato observado: con semiancho ≈ 1,645 σ / √n, el caso base (+3,75% en los meses 4-6, +9% en los meses 7-9) pasa la lectura del mes 6 con semiancho ≤ 0,75 (σ ≤ 1,8 con n = 15; ≤ 2,0 con n = 20; equivale a n ≥ 4,8 σ²) y la lectura del mes 9 con ≤ 1 (σ ≤ 2,4; ≤ 2,7; n ≥ 2,7 σ²). Con el máximo permitido (3), los límites son 0,75 y 6, y ninguno pasa: la precisión mínima separa las bandas, pero no alcanza para que el caso base pase. Si el σ de la preparación previa supera esos valores, el caso base espera en la lectura del mes 6 y corta; el Anexo F lo sabe antes de la segunda liberación y reformula (por ejemplo, decidir solo en la lectura del mes 9 si σ ≤ 2,4 / 2,7) o presenta el caso base como espera-y-corte. Con N < 15 no se decide por valor |
+| Viabilidad | Durante la primera autorización se estima σ (dispersión entre personas del cambio relativo) y la precisión esperable con la cohorte real, también para calidad; se verifica antes de la segunda liberación. Aproximación de planificación, sin dato observado: semiancho ≈ 1,645 σ / √n. Para estimados de +3,75% en M6 y +9% en M9 se requieren semianchos simétricos ≤0,75 pp y ≤1 pp, respectivamente. Esto equivale aproximadamente a σ ≤1,8 / 2,0 pp con n=15 / 20 para M6, y ≤2,4 / 2,7 pp para M9; n ≥4,8 σ² y n ≥2,7 σ², con σ expresada en pp. Con semiancho 3 pp los límites serían 0,75% y 6%: ninguno pasa. Ni N≥15 ni semiancho ≤3 pp garantizan discriminar bandas o superar el gate; decide el límite inferior real del bootstrap, con calidad resuelta primero. Si la precisión esperada no sostiene el método, F debe reformularlo antes de la segunda liberación o presentar el caso como espera y corte, sin prometer que más semanas lo resuelvan. Con N<15 no se decide por valor |
 
 **Precedencia de calidad.** Evaluá incidentes y retrabajo por separado: si
 cualquiera tiene límite inferior > 0, hay daño y el gate corta, incluso si su
@@ -314,6 +355,12 @@ reproduzca la extracción y las acciones del gate con el mismo corte.
 - Guardá consulta o script versionado, permisos de lectura, fecha de corte,
   zona horaria, filtros, versión y huella del extracto. Los datos identificables
   quedan en el entorno autorizado; al board llega evidencia anonimizada.
+- Distinguí el conector de solo lectura en origen de la persistencia de los
+  registros extraídos: guardar extractos es una escritura. Antes de persistir,
+  Gobierno debe validar clasificación, ubicación, permisos y retención de esos
+  registros según el [Anexo C](03-gobierno-seguridad.md) y la
+  [elegibilidad de las fuentes](../../context/supuestos/disponibilidad-de-datos.md).
+  Esa validación y la disponibilidad del almacenamiento no se presumen resueltas.
 - Documentá el diccionario y las claves PR→commit→CI→reversión→ticket→incidente,
   incluidos enlaces faltantes, duplicados, correcciones y reglas de atribución.
   Ausencia de enlace no equivale a ausencia de incidente o retrabajo.
@@ -377,7 +424,7 @@ desde que el usuario dispone de acceso y prerrequisitos acordados hasta que
 completa el flujo de prueba y pasa la aceptación de integración definida antes
 de observarlo. Fuente: marcas del sandbox/CI y bitácora de la sesión. Registrá
 tiempo transcurrido y tiempo de trabajo por separado, población y ventana;
-reportá dispersión, integraciones completadas y pendientes, sin borrar fallas.
+reportá dispersión, integraciones completadas y abiertas, sin borrar fallas.
 
 **Secundaria propuesta:** consultas de soporte por integración (tickets y
 consultas de la misma tarea / intentos de integración elegibles), con ventana
@@ -402,8 +449,8 @@ del itinerario vigente de producto: otra ruta requiere diseño y costeo.
   ([fuente](../../material/conceptos/harness-diez-fallas-contexto.md)), sobre todo
   tool-output bloat, retrieval noise e inyección indirecta en agentes con herramientas.
 - **Hueco declarado:** el material de referencia sobre evals no da metodología ni umbrales de release gate
-  ([fuente](../../material/conceptos/m2u4-evals.md)). Este anexo los **propone** en la
-  protocolo de evaluación de abajo, marcados como propuestos; se recalibran con la
+  ([fuente](../../material/conceptos/m2u4-evals.md)). Este anexo los **propone** en
+  el protocolo de evaluación de abajo; se recalibran con la
   primera medición de los meses 4-6, y hasta entonces ningún número de calidad va a una slide.
 - **Ahorro de inferencia:** se usan los mecanismos (ruteo por modelo, caché de
   prefijo estable) **sin porcentaje**: el "60-80%" que circula en el material de referencia no tiene fuente primaria
@@ -457,8 +504,9 @@ models:
       text: {type: string, minLength: 50}
 ```
 
-El enum de `level` no admite Restringido: el contrato hace cumplir la política,
-no solo la describe.
+El enum de `level` excluye Restringido. El YAML ilustra el esquema propuesto,
+no un control implementado: un validador debe rechazar cargas incompatibles.
+Clasificación, permisos, higiene y aislamiento requieren sus pruebas separadas.
 
 **Protocolo de evaluación del caso.** Los umbrales son
 **propuestos**, no medidos ([fuente](../../context/supuestos/umbrales-tecnicos-propuestos.md)):
@@ -480,11 +528,20 @@ se recalibran con la primera corrida de los meses 4-6 y cualquier cambio queda v
 
 Si la lectura del mes 6 libera el producto, el piloto de producto usa el mismo protocolo con dos cambios: solo
 datos sintéticos y un tenant por cliente. Las evals del caso interno no
-certifican el piloto: solo prueban que el método funciona.
+certifican el piloto: permiten ensayar el método, cuya suficiencia debe
+comprobarse también para el producto.
 
 ## Riesgos y mitigación
 
 Probabilidad e impacto son juicio cualitativo (alta/media/baja), no medición.
+
+**Alcance de las mitigaciones.** Las que dependen de gateway, harness central,
+caso de referencia, piloto o contractor corresponden a la **alternativa ampliada**,
+sujeta a liberación de plataforma y, para producto, otra decisión y costeo.
+
+El mínimo no compra esas capacidades. Para los usos existentes exige los
+controles aplicables y compensatorios probados de C descritos en «Paquete
+técnico mínimo»; la ruta sin plataforma se detalla en «Bifurcación en el mes 3».
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
@@ -498,17 +555,18 @@ Probabilidad e impacto son juicio cualitativo (alta/media/baja), no medición.
 | Con el producto diferido, el piloto arranca en los meses 7-9 sin preparación específica en los meses 4-6 | Alta, si la lectura del mes 6 libera el producto | Medio | La base de los meses 4-6 (gateway, harness v1, suite de evals, aislamiento) es reutilizable; lo propio del caso (dataset sintético, integración, diseño) se hace en las primeras 3-4 semanas de los meses 7-9. Las 6 semanas del SLO se cuentan desde que el piloto opera, así que el cierre del mes 12 decide con menos evidencia | El piloto no opera a la semana 6 de los meses 7-9: el cierre del mes 12 decide sin SLO medido, y el producto se corta o se pasa al año 2 |
 | El contractor concentra evals, harness y la prueba de portabilidad | Media | Alto | Documentación mínima reproducible dentro de cada entregable (abajo), manuales y traspaso en los meses 7-12 ([Anexo D](04-personas-cultura.md)), suite y lote versionados en el repo | Un entregable de los meses 4-6 sin documentación mínima reproducible: no cuenta para la lectura del mes 6. Control en la semana 7 del tramo (abajo) |
 
-**Documentación mínima reproducible (la que exige la lectura del mes 6).** Es parte de cada
-entregable de los meses 4-6, no del 0,2 de documentación y traspaso del Anexo D. Se distingue de
-los manuales de operación y del traspaso, que siguen en el 0,2 y se corren a los
-meses 7-12.
+**Documentación mínima reproducible (la que exige la lectura del mes 6).** Es
+parte del esfuerzo de producir cada entregable: se imputa al 0,8 o al 0,2 que
+lo produce, según el replan. Manuales de operación y traspaso se difieren a
+los meses 7-12; no consumen otra vez las horas documentales de M4-M6
+([supuesto conciliado](../../context/supuestos/umbrales-tecnicos-propuestos.md)).
 
 | Elemento | Qué es | Horas (supuesto) | Quién, dentro de qué fracción |
 |---|---|---|---|
 | Alcance | Harness v1, suite de evals con dataset v1, evals en CI y lote de la prueba de portabilidad y costo: cuatro entregables | — | — |
-| Contenido por entregable | (1) tupla de versión registrada (ver "Versionado"); (2) instrucciones de ejecución desde el repo; (3) ADR corto por decisión de diseño; (4) resultado de una corrida, con fecha | 1-2 días-persona por entregable: 4-8 en los meses 4-6, ~8-16% de los ~50 días de la fracción de 0,8 | El contractor, dentro de la fracción con que produce el entregable (el 0,8; el 0,2 del replan para evals en CI y el lote): no suma |
+| Contenido por entregable | (1) tupla de versión registrada (ver "Versionado"); (2) instrucciones de ejecución desde el repo; (3) ADR corto por decisión de diseño; (4) resultado de una corrida, con fecha | 1-2 días-persona por entregable: 4-8 en los meses 4-6; la carga se distribuye según quién produce cada uno | El contractor, dentro de la fracción con que produce el entregable (el 0,8; el 0,2 del replan para evals en CI y el lote): no suma |
 | Prueba de reproducción | Otra persona corre cada entregable desde el repo y obtiene el mismo resultado | 0,5-1 día-persona por entregable: 2-4 en los meses 4-6 | DevOps/QA, dentro de su 0,8 del replan (no suma) |
-| Control anticipado | Semana 7 del tramo de los meses 4-6: los entregables cerrados hasta ahí tienen su documentación mínima y pasaron la reproducción | — | La dirección técnica; si falla, se activa la excepción de 0,3 FTE ahí, no al cierre de los meses 4-6 |
+| Control anticipado | Semana 7 del tramo de los meses 4-6: los entregables cerrados hasta ahí tienen su documentación mínima y pasaron la reproducción | — | La dirección técnica; si falta capacidad, solicita autorización de la excepción de 0,3 FTE antes de activarla. Un entregable sin reproducción no cuenta en M6 |
 
 ## Decisiones
 
@@ -595,11 +653,13 @@ meses ningún dato productivo de cliente va a un modelo**.
 
 ### Dependencia del proveedor y estrategia de salida
 
-Se mide la dependencia con lo que hay: ~90% de los eventos del agente de código
-sale de una sola herramienta, 58% del piloto chocó con el límite del plan y parte
-de los participantes pidió consumo multimodelo
-([fuente](../../context/hechos/encuesta-y-pilotos-ia.md)). Recomendación: **neutralidad
-al modelo** (supuesto vigente) comprobada con un ensayo, no declarada.
+La telemetría ubica ~90% de los eventos en la terminal (Claude Code)
+([fuente](../../context/hechos/uso-ia-interno.md)). Como señal
+acotada, el 58% de la muestra autoseleccionada de 12 participantes del piloto
+de abril de 2026 chocó con el límite del plan, y parte pidió consumo multimodelo
+([fuente](../../context/hechos/encuesta-y-pilotos-ia.md)). Esa encuesta no representa
+a toda la organización. Recomendación: **neutralidad al modelo** (supuesto
+vigente) comprobada con un ensayo, no declarada.
 
 1. Contrato de agente, skills y hooks sin funciones exclusivas de un proveedor.
 2. Gateway con al menos dos proveedores operativos.
@@ -650,8 +710,8 @@ portabilidad y FinOps.
 
 | Salida | Qué cambia | FTE clave de los meses 4-6 | Costo | Qué arriesga |
 |---|---|---|---|---|
-| **Replan del Anexo B (recomendada)** | Arquitecto 0,5 → 0,4: el 0,1 era el diseño del piloto de producto, que con el producto diferido pasa a los meses 7-9. DevOps/QA 1,0 → 0,8: el pipeline de evals en CI y la reejecución de la prueba de portabilidad pasan al contractor, que tiene 0,2 FTE pagados y sin asignar (cubre la fracción de 0,8 con una persona al 100%, Anexo D) | 2,2: entra, con 0,05 de holgura | Baja el tiempo de los meses 4-6 en ~5 mil (3,2-7,5) y no suma caja | Más concentración en el contractor (ver Riesgos). El piloto, si la lectura del mes 6 lo libera, arranca sin diseño previo. Las condiciones de la lectura del mes 6 no se tocan: bypass, gateway y FinOps quedan en DevOps/QA |
-| Excepción acotada del paquete completo | El board debería aprobar 0,3 FTE clave por encima del sobre en los meses 4-6, en una decisión nueva | 2,5 | Sin costo adicional al paquete completo: ya está en su cuadro del Anexo E. Salen ~3-7 mil de horas facturables | Rompe el sobre que ese paquete pide confirmar. Cubre solo la falta del 0,2 adicional; sin contractor no alcanza (ver la tabla de contingencias abajo y [Anexo E](05-business-case.md), "Dos contingencias del contractor") |
+| **Replan del Anexo B (recomendada)** | Arquitecto 0,5 → 0,4: el 0,1 era el diseño del piloto de producto, que con el producto diferido pasa a los meses 7-9. DevOps/QA 1,0 → 0,8: el pipeline de evals en CI y la reejecución de la prueba de portabilidad pasan al contractor; se propone asignarles 0,2 FTE además del 0,8 de IA aplicada, sujeto a contrato y disponibilidad (Anexo D) | 2,225 contra el techo supuesto de 2,25: margen aritmético de 0,025 FTE / 12 h, sin capacidad demostrada | Baja el tiempo de los meses 4-6 en ~5k USD (3,2-7,5k USD) y no suma caja | Más concentración en el contractor (ver Riesgos). El piloto, si la lectura del mes 6 lo libera, arranca sin diseño previo. Las condiciones de la lectura del mes 6 no se tocan: bypass, gateway y FinOps quedan en DevOps/QA |
+| Excepción acotada del paquete completo | El board debería aprobar 0,3 FTE clave por encima del sobre en los meses 4-6, en una decisión nueva | ~2,5 | Tiempo valorizado de ~3-7k USD ya contemplado en el paquete completo; el trabajo facturable desplazado se confirma por agenda y contrato | Rompe el sobre que ese paquete pide confirmar. Cubre solo la falta del 0,2 adicional; sin contractor no alcanza (ver la tabla de contingencias abajo y [Anexo E](05-business-case.md), "Dos contingencias del contractor") |
 | Descartada: correr hitos de los meses 4-6 a los meses 7-9 | Portabilidad o FinOps pasan a los meses 7-9 | 2,2 | — | La lectura del mes 6 queda sin dos de sus condiciones, y los meses 7-9 no tienen holgura (0,05) |
 
 **Recomendación para el paquete completo:** el replan, sujeto a una decisión
@@ -659,10 +719,15 @@ nueva con alcance, calendario y costeo. Este anexo no da el exceso por resuelto 
 decisión. La excepción acotada cubre **una sola** contingencia, y no hay que confundirla
 con la otra:
 
+La cuenta conciliada del [Anexo E](05-business-case.md), «Conciliación de los
+meses 4-6», suma 576 + 216 + 96 + 180 = **1.068 h**; divididas por 480 dan
+**2,225 FTE**, no 2,2 exactos. El techo equivale a 1.080 h: quedan **12 h**.
+El redondeo de presentación no demuestra capacidad por rol o semana.
+
 | Contingencia | Qué falta | Meses 4-6, solo este anexo | Respuesta de este anexo |
 |---|---|---|---|
 | Sin el 0,2 | El contractor existe, pero su 0,2 no está libre (alcance no acordado, o documentación atrasada, [Anexo D](04-personas-cultura.md)) | 1,5 FTE (sin replan) | La excepción acotada: los 0,3 llevan los meses 4-6 a 2,5 y lo cubren |
-| Sin contractor | Toda la IA aplicada de los meses 4-12 (0,8 FTE), no solo el 0,2 | 2,3 FTE con la fracción interna (la alternativa sin contractor); 1,2 en modo control | La excepción de 0,3 **no alcanza** para la alternativa sin contractor. La contratación es condición de inicio de los hitos de IA aplicada: sin contractor ni rol interno demostrado, no inician el harness v1, la suite de evals en CI ni la prueba de portabilidad y costo. Los meses 4-6 corren en **modo control** (gateway en laboratorio, bypass por superficie, FinOps) con 1,2 FTE de este anexo: arquitecto 0,4 y DevOps/QA 0,8, porque el 0,2 de evals en CI y reejecución de la prueba tampoco corre. La lectura del mes 6 decide sin cobertura de precio (la palanca sale del deck) y sin caso de referencia en sombra, que pasa a los meses 7-9 si en esa lectura se aprueba la vía. Infraestructura de los meses 4-6: con la suscripción que permite gateway y con el pago por consumo el agente es el tráfico del gateway y el renglón se mantiene; con la suscripción que no lo permite el gateway solo ensaya el ruteo con tráfico sintético y el renglón baja al nivel del escenario recomendado de los meses 1-3 (500-1.500 en el tramo, supuesto) |
+| Sin contractor | Toda la IA aplicada de los meses 4-12 (0,8 FTE), no solo el 0,2 | 2,3 FTE con la fracción interna (la alternativa sin contractor); 1,2 en modo control | La excepción de 0,3 **no alcanza** para la alternativa sin contractor. La contratación es condición de inicio de los hitos de IA aplicada: sin contractor ni rol interno demostrado, no inician el harness v1, la suite de evals en CI ni la prueba de portabilidad y costo. El **modo control** (gateway en laboratorio, bypass por superficie, FinOps) requiere autorización propia de alcance, capacidad y presupuesto: 1,2 FTE de B, arquitecto 0,4 y DevOps/QA 0,8. No incluye el 0,2 de evals en CI y reejecución ni las otras funciones del programa. La lectura del mes 6 decide sin cobertura de precio y sin caso de referencia en sombra. Su reprogramación requiere aprobación. Con suscripción que permite gateway o pago por consumo se mantiene el renglón de infraestructura; si la suscripción no permite gateway, solo se ensaya tráfico sintético y se propone 0,5-1,5k USD en el tramo, sujeto a recosteo |
 
 Con la fracción interna de la alternativa sin contractor, el plan completo pediría ~3,3 / 3,0 / 2,9 FTE clave
 en los meses 4-6 / 7-9 / 10-12 ([Anexo E](05-business-case.md), "Dos contingencias del contractor");
@@ -719,8 +784,11 @@ Sin capacidad técnica o permiso contractual, restringí o suspendé el uso
 afectado; una encuesta no lo convierte en control probado.
 
 Exportá uso de las consolas existentes, PR/CI/reversiones/tickets/incidentes a
-extractos y scripts versionados de lectura, en almacenamiento existente con
-acceso limitado, sin guardar prompts ni secretos. Conciliá uso por superficie,
+extractos y scripts versionados. El acceso al origen es de solo lectura;
+persistir los extractos requiere la validación previa de Gobierno sobre
+clasificación, ubicación, permisos y retención indicada en el acta de viabilidad.
+Verificá almacenamiento autorizado con acceso limitado, sin guardar prompts
+ni secretos; no se presume disponible. Conciliá uso por superficie,
 seats y personas activas con resultados; si no hay exportación, reportá uso
 estimado aparte. Eso permite un tablero periódico sin servicio central nuevo.
 
@@ -743,13 +811,28 @@ previa, como supuesto de planificación de este anexo, no capacidad confirmada:
 | DevOps / administración de herramientas | 32-56 | Configuración de las cuatro superficies, exportaciones y pruebas; acceso administrativo y funciones del plan disponibles |
 | QA / análisis de datos | 40-64 | Extracción, diccionario/enlaces, base, maduración y lectura reproducible; incluye 8-16 h previas; fuentes exportables sin saneamiento masivo |
 | IA aplicada | 8-16 | Revisar contrato/skills y ensayos del agente; capacidad demostrada interna o servicio acotado, sin suponer contractor dedicado |
-| Seguridad, aporte técnico compartido con C | 24-40 | Clasificación, pruebas negativas/bypass, red team acotado y residual; no incluye política, legal ni operación completa de gobierno |
+| Seguridad, aporte técnico compartido con C | 24-40 | Revisión de clasificación y verificación independiente de pruebas negativas/bypass, red team acotado y residual; persona distinta de DevOps/QA productor. No incluye política, legal ni operación completa de gobierno; reutilización sujeta a confirmar alcance |
 | Senior / champion de la cohorte, compartido con D | 16-24 | Validar tareas, revisión humana y registro de prácticas; no incluye formación general ni todas las horas de los participantes |
 
 Total técnico: **144-240 h**; de ellas, **104-176 h** son los cuatro primeros
 roles y **40-64 h** son aportes compartidos con C/D. Finanzas, Gobierno y
 Personas concilian actividades antes de sumar: una hora compartida se cuenta
 una sola vez. No se suman estas horas a las fracciones del paquete completo.
+
+**Conciliación del mínimo aún abierta.** Configuración, prueba y primera
+corrección de DevOps coinciden con C; las exportaciones están en la fila de B,
+sin desglose horario. No se demuestra que quepan en la unión de 40-64 h de E.
+
+Arquitectura debe desagregar esa estimación y conciliarla con Gobierno y Finanzas.
+Sin confirmación, no se descuenta el solape como ahorro y se recostea antes de iniciar.
+
+La revisión senior de 16-24 h puede estar dentro de las 64 h de soporte de
+prueba de E solo si son las mismas personas y tareas, con agenda que incluya
+la validación anterior al congelamiento. No se presume limitada a semanas 5-13.
+
+La extracción y reproducción de 8-16 h de D pueden reutilizar QA de B si
+comparten indicador, corte, fuentes y entregable. La reproducción requiere
+otro operador; compartir presupuesto no permite verificar el trabajo propio.
 
 Supuestos: una cohorte propia de 15-20 personas, cuatro superficies existentes,
 una ronda de configuración y corrección de hallazgos, fuentes accesibles y
@@ -773,23 +856,32 @@ inicial de [la fuente del mínimo](../../context/supuestos/paquete-minimo-de-apr
 Martin eligió esta propuesta para el borrador; no acredita consenso del equipo,
 autorización empresarial ni disponibilidad confirmada.
 
-La preparación técnica conserva **20-40 h**: tech lead **4-8 h** de viabilidad
-de B, tech lead **8-16 h** de preparación/facilitación de D y QA **8-16 h** de B.
+La preparación existente de B/D conserva **20-40 h**: tech lead **4-8 h** de viabilidad
+de B, tech lead **8-16 h** de preparación de facilitación de D y QA **8-16 h** de B.
+El trabajo estrictamente técnico de B suma **12-24 h**; las otras **8-16 h**
+preparan la formación. Las horas de managers no están en esas filas de B.
 Son horas ya incluidas en B/D y extraídas de M1-M3 en E, no un adicional.
 La validación organizativa agrega **60-96 h** separadas. En conjunto, la primera
-liberación propone **80-136 h**, techo de **8 mil USD de tiempo** y **caja 0**.
+liberación propone **80-136 h**, techo de **8k USD de tiempo** y **caja 0**.
 
 Esa ventana de **10 días hábiles** comienza después de la autorización específica
 y de confirmar agenda, fuentes, trabajo desplazado e imputación 2026.
-El trabajo técnico se limita a lectura y reproducción sobre datos corporativos
-autorizados; no incluye instrumentación nueva, despliegues, herramientas ni
-contratos nuevos. No consta ejecución previa.
+El trabajo técnico lee las fuentes corporativas autorizadas sin modificarlas
+y reproduce los indicadores. La persistencia de registros extraídos es una
+escritura separada, sujeta a la validación previa de Gobierno descrita en el
+acta de viabilidad; sin ella no se persisten extractos. No incluye instrumentación
+nueva, despliegues, herramientas ni contratos nuevos. No consta ejecución previa.
+
+El acta técnica necesita productor, verificador y autoridad distintos, según F.
+La fila de D de 8-16 h de verificador independiente podría cubrir su revisión,
+pero ese alcance requiere confirmación de Personas y Finanzas. Si no lo cubre,
+se costea aparte antes de iniciar; no se da por incluido en las 12-24 h productoras de B.
 
 Antes de M1, la segunda autorización exige diagnóstico, matriz de capacidad,
 roles empresariales, viabilidad de medición, recosteo y presupuesto 2027
-aprobados según E y [Anexo F](06-roadmap-riesgo.md). Libera hasta **71 mil USD**
-restantes: límite acumulado **79 mil**, de los cuales **10 mil son caja** y
-**69 mil son tiempo**. No habilita prácticas automáticamente: cada uso requiere
+aprobados según E y [Anexo F](06-roadmap-riesgo.md). Libera hasta **71k USD**
+restantes: límite acumulado **79k USD**, de los cuales **10k USD son caja** y
+**69k USD son tiempo**. No habilita prácticas automáticamente: cada uso requiere
 dictamen y restricciones aplicables, controles probados, verificación
 independiente y aceptación del residual, además de base congelada.
 
@@ -801,9 +893,9 @@ Sus FTE, caja, entregables y condiciones no son el pedido vigente del mínimo.
 
 | Elemento | Qué se pedía en el paquete completo |
 |---|---|
-| Qué se autoriza | Los hitos de los meses 1-3, en su versión acotada (el escenario recomendado, abajo), más la prueba chica de los meses 1-3 ([Anexo E](05-business-case.md)). Los meses 4-6 no se autorizan: la decisión del mes 3 los libera, con o sin señal ("Bifurcación en el mes 3") |
-| Capacidad máxima de este anexo | 0,6 FTE clave con el contractor desde el mes 1 (0,9 con el rol interno), más 16-24 h de lectura de DevOps/QA de la prueba chica. El sobre del plan completo y su piso (1,6 FTE clave; techo de tiempo 62, o 72 con la prueba) los cierra el [Anexo E](05-business-case.md) |
-| Caja de este anexo | Infraestructura de telemetría y registro, USD 500-1.500 en el tramo de tres meses; el tope total de los meses 1-3 lo fija el Anexo E |
+| Qué se proponía autorizar | Los hitos de los meses 1-3, en su versión acotada (el escenario recomendado, abajo), más la prueba chica de los meses 1-3 ([Anexo E](05-business-case.md)). La plataforma de los meses 4-6 solo se libera con señal y decisión propia ("Bifurcación en el mes 3") |
+| Capacidad máxima de este anexo | 0,6 FTE clave con el contractor desde el mes 1 (0,9 con el rol interno), más 16-24 h de lectura de DevOps/QA de la prueba chica. El sobre del plan completo y su piso (1,6 FTE clave; techo de tiempo 62k USD, o 72k USD con la prueba) los cierra el [Anexo E](05-business-case.md) |
+| Caja de este anexo | Infraestructura de telemetría y registro, 0,5-1,5k USD en el tramo de tres meses; el tope total de los meses 1-3 lo fija el Anexo E |
 | Entregables | Revisión y ampliación del inventario de datos existente, línea base congelada, matriz superficie→control→telemetría, telemetría unificada, matriz de restricciones por cliente |
 | Decisiones delegadas | Elegir herramientas y proveedores detrás del gateway (reversible), a la dirección técnica |
 | Condiciones de aprobación del paquete completo | Vía de IA aplicada aprobada (contractor desde el mes 1, o rol interno demostrado); disponibilidad de historial de PR, integración continua y tickets para la línea base; salida para el exceso de los meses 4-6 (replan del Anexo B o excepción) |
@@ -815,7 +907,7 @@ revisión del inventario de datos existente, línea base, matriz de superficies 
 [Anexo F](06-roadmap-riesgo.md) ya ubica el gateway en los meses 4-6. Con la misma provisión
 de IA aplicada (los otros anexos suman 1,0 FTE clave en los meses 1-3, [Anexo E](05-business-case.md)),
 el conservador pide +0,2 FTE clave con el contractor desde el mes 1 (0,8 contra 0,6) y +0,4 con el rol
-interno (1,3 contra 0,9), más 1-3 mil de caja de infraestructura. Con el
+interno (1,3 contra 0,9), más 1-3k USD de caja de infraestructura. Con el
 contractor y en la lectura separada del Anexo E, el conservador entra en el máximo de 2,25; en la
 lectura estricta no entra ninguno (3,0 contra 2,8 del primer tramo acotado). Lo descartan la
 atribución (base congelada en las semanas 1-4 y rampa 0% en los meses 1-3) y que el gateway
@@ -829,7 +921,7 @@ del Anexo E y los gates del Anexo F:
 
 | Cuándo | Qué | Costo |
 |---|---|---|
-| Tras la primera autorización específica, preparación de octubre-diciembre de 2026, dentro de la ventana propuesta de 10 días hábiles | Verificar historial utilizable de PR, integración continua, incidentes y tickets de los últimos dos trimestres; producir el acta de viabilidad y el protocolo retrospectivo reproducible, con **serie retrospectiva** para estimar tendencia y ruido. Lectura sobre datos corporativos autorizados, sin instrumentación nueva. Verificar resultados antes de la segunda liberación; agenda e imputación 2026 confirmadas antes de trabajar | Las 20-40 h técnicas existentes de B/D, sin duplicación; junto con 60-96 h organizativas nuevas, techo conjunto de 8 mil USD de tiempo y caja 0, consolidado en E |
+| Tras la primera autorización específica, preparación de octubre-diciembre de 2026, dentro de la ventana propuesta de 10 días hábiles | Verificar historial utilizable de PR, integración continua, incidentes y tickets de los últimos dos trimestres; producir el acta de viabilidad y el protocolo retrospectivo reproducible, con **serie retrospectiva** para estimar tendencia y ruido. Lectura sobre datos corporativos autorizados, sin instrumentación nueva. Verificar resultados antes de la segunda liberación; agenda e imputación 2026 confirmadas antes de trabajar | Preparación existente de B/D de 20-40 h (12-24 técnicas y 8-16 de facilitación), sin duplicación; junto con 60-96 h organizativas nuevas, techo conjunto de 8k USD de tiempo y caja 0, consolidado en E |
 | Semanas 1-4 del plan, después de la segunda autorización | **Base prospectiva congelada**, con la unidad de la sección "Throughput", antes de cualquier formación, prueba de prácticas o herramienta nueva; controles obligatorios previos documentados como punto de partida. Si la base se extiende a semana 8, también se desplazan básico, prueba e intermedio | Incluida en QA / análisis de datos del mínimo de arriba, consolidado en E, sección «Pedido inicial: paquete mínimo»; los 3-5 días-persona de DevOps/QA eran referencia del paquete completo |
 | Semanas 5-13 del plan | Matriz de superficies y telemetría unificada; medición contra la base, con control concurrente donde exista. **La ganancia no se atribuye antes de los meses 4-6** (la rampa base es 0% en los meses 1-3) | Dentro del esfuerzo de los meses 1-3 |
 
@@ -837,6 +929,14 @@ La serie retrospectiva y la base prospectiva no se mezclan: la primera estima
 ruido, la segunda es el punto de partida. El respaldo es el del protocolo
 ("Respaldo"): la retrospectiva nunca atribuye ganancia. Si el historial no
 alcanza, la ganancia tampoco se atribuye (ver el hito de línea base).
+
+**Riesgo de calendario si la base llega a semana 8.** Quedan cinco semanas
+(9-13) para formación y prueba. Los PR necesitan 14 días de maduración y las
+tasas de calidad, 30: la lectura de M3 tendrá menos actividad madura que con inicio en semana 5.
+
+No se presenta esa lectura como evidencia equivalente ni como ganancia
+atribuida. CAIO, Personas y Finanzas deben ratificar el calendario de lectura,
+la completitud esperable y cualquier desplazamiento con su costo; no se adelanta tratamiento dentro de la base.
 
 La columna "Frente" usa los nombres del [Anexo E](05-business-case.md): **Base**
 común, frente **Interno** y frente **Producto** (solo si la lectura del mes 6 lo libera).
@@ -847,10 +947,10 @@ señal** (señal en el mes 3); la rama sin señal está en "Bifurcación en el m
 |---|---|---|---|---|
 | Meses 1-3 | Base | Revisar cobertura y vigencia del inventario de datos existente y ampliarlo para las fuentes elegibles | Toda fuente elegible del caso de referencia tiene dueño, calidad y nivel revisados; brechas y requisitos para futuros contratos de datos documentados | Sin dueño para una fuente: queda fuera de los casos |
 | Meses 1-3 | Interno | Base prospectiva de throughput, incidentes y retrabajo congelada en las semanas 1-4 (serie retrospectiva de la preparación previa para estimar ruido) | Unidad, cohorte y fórmula de la sección "Throughput"; numerador y denominador; versión congelada con fecha | Sin historial utilizable de al menos dos trimestres: la ganancia no se atribuye y se elimina el resultado clave (regla del OKR) |
-| Meses 1-3 | Base | Matriz superficie→control→telemetría y denominador de la cobertura | Las cuatro superficies con ruta, control y telemetría declarados; denominador armado con datos de administración | Una superficie sin telemetría posible: se declara no medible y la meta de cobertura no la incluye |
+| Meses 1-3 | Base | Matriz superficie→control→telemetría y denominador de la cobertura | Las cuatro superficies con ruta, control y telemetría declarados; denominador armado con datos de administración | Sin telemetría posible, se declara no medible; no se elimina del denominador de cobertura de control ni se declara cubierta sin prueba |
 | Meses 1-3 | Interno | Telemetría unificada de chat, terminal y Workspace | Uso por persona activa y por resultado | Sin exportación del proveedor: encuesta cada tres meses, marcada como estimada |
 | Meses 1-3 | Producto | Matriz de restricciones contractuales por cliente (con comercial y Gobierno) | Cobertura de los clientes que concentran la facturación | Sin matriz, no hay piloto de producto |
-| Meses 4-6 | Base | Gateway en laboratorio con 2 proveedores y registro de costo | Tráfico del caso de referencia registrado por llamada, nivel y centro de costo | Más de un tramo sin operar: se compra una solución |
+| Meses 4-6 | Base | Gateway en laboratorio con 2 proveedores y registro de costo | Tráfico del caso de referencia registrado por llamada, nivel y centro de costo | Más de un tramo sin operar: se reevalúan configurar, comprar o ensamblar con la matriz de decisión de M3; no habilita una compra automática |
 | Meses 4-6 | Base | Prueba de integración y de bypass por superficie | Cobertura de control = 100% de las superficies aprobadas; casos propios 100% por gateway; agente de código ≥ 90% por gateway solo con la suscripción que permite gateway y con el pago por consumo (ver "Política de ruteo"); con la suscripción que no lo permite, ruteo ensayado y no activado | Superficie con bypass sin control compensatorio: queda declarada no cubierta y se lleva al Council |
 | Meses 4-6 | Base | Harness v1 sobre el caso de referencia: working set con presupuesto, memoria externa, gate humano, ledger | Pasa los gates de rendimiento y seguridad del protocolo de evaluación | Dos fallas de contexto críticas sin mitigar: se reduce el alcance |
 | Meses 4-6 | Base | Suite de evals en CI con el dataset v1 y trazas | Cada release corre la suite; la tupla de versión queda registrada | Sin dataset utilizable: el caso queda en nivel 0 (sin IA) |
@@ -868,8 +968,9 @@ señal** (señal en el mes 3); la rama sin señal está en "Bifurcación en el m
 
 ### Bifurcación en el mes 3: con señal y sin señal
 
-**Problema.** El año completo de plataforma (394 de costo económico,
-[Anexo E](05-business-case.md)) se compromete antes de saber si algo la paga.
+**Problema del alcance ampliado.** Comprometer el año completo de plataforma
+(394k USD de costo económico, [Anexo E](05-business-case.md)) expondría recursos
+antes de demostrar su justificación. Ese año no forma parte del pedido vigente.
 **Regla del plan:** la decisión del mes 3 libera la plataforma de los meses 4-6 (contractor al
 100%, gateway, pasarela) solo con al menos una señal: contractual (el umbral del
 Anexo C), un anuncio del proveedor de pasar a precio por consumo, o una señal de cliente
@@ -882,7 +983,7 @@ y la escala al Directorio, pero no libera la plataforma: eso queda en la decisi�
 
 | Hito de los meses 4-12 | Con señal | Sin señal |
 |---|---|---|
-| Costo del año (Anexo E) | 394 (213-575) | ≈ 199: preparación previa y meses 1-3 del paquete 69, prueba chica 6, meses 4-12 de la opción de gobierno mínimo ~114, cierre del contractor 4, compensatorios del Anexo C ~6 |
+| Costo del año, k USD (Anexo E; comparación del paquete completo) | 394 (213-575) | ≈ 199: preparación previa y meses 1-3 del paquete 69, prueba chica 6, meses 4-12 de la opción de gobierno mínimo ~114, cierre del contractor 4, compensatorios del Anexo C ~6 |
 | Contractor | Al 100% en los meses 4-12; sin contractor rige el modo control ("Exceso de los meses 4-6 con el producto diferido") | No se contrata; el contractor desde el mes 1 cierra |
 | Gateway en laboratorio, bypass por superficie y FinOps con escenario de consumo (meses 4-6) | Meses 4-6 | **Se difiere.** FinOps queda en costo por persona activa desde la telemetría del proveedor, sin costo por consulta ni por resultado (supuesto) |
 | Harness v1, suite de evals en CI y dataset v1 (meses 4-6) | Meses 4-6 | **Se difiere** |
@@ -928,7 +1029,8 @@ y la escala al Directorio, pero no libera la plataforma: eso queda en la decisi�
 cambio de precio o una demanda contractual). *Recomendación:* la bifurcación.
 *Dependencias:* Finanzas (Anexo E) y Gobierno (Anexo C) fijan el umbral y el modo de
 leer cada señal; este anexo aporta la telemetría. *Costo:* el del Anexo E; la
-diferencia entre ramas, ≈ 400 − 199 ≈ 201, es lo que no se gasta sin señal.
+diferencia aritmética entre ramas publicadas, 394 − 199 ≈ **195k USD**, es
+recurso valorizado que no se comprometería sin señal, no ahorro de caja demostrado.
 *Riesgo (para Gobierno):* en la rama sin señal no hay bloqueo ni registro
 central en el gateway; inyección indirecta y fuga de secretos requieren los
 compensatorios probados del Anexo C y residual aceptado, sin garantía de bloqueo
@@ -941,9 +1043,10 @@ revoca la aceptación según el Anexo C y suspende la extensión.
 
 ## Insumos para Finanzas
 
-Todo es **supuesto** salvo donde se indica fuente. USD, rangos. El
-esfuerzo es mayormente reasignación (costo de oportunidad contra horas
-facturables), no caja incremental. Las tablas siguientes describen el paquete
+Todo es **supuesto** salvo donde se indica fuente. Rangos en **k USD** en las
+tablas económicas. El esfuerzo es mayormente tiempo reasignado a costo cargado;
+su contribución comercial desplazada no está medida y no se suma automáticamente.
+Las tablas siguientes describen el paquete
 completo: primer tramo acotado, contractor desde el mes 1 que reemplaza la
 fracción de IA aplicada y producto diferido, con el conservador como comparación.
 El pedido vigente se consolida en el [Anexo E](05-business-case.md), sección
@@ -951,14 +1054,14 @@ El pedido vigente se consolida en el [Anexo E](05-business-case.md), sección
 
 ### Escenario conservador, como comparación (contractor que complementa y producto desde el mes 4)
 
-| Concepto | Tramo | Rango | Fuente o supuesto |
+| Concepto | Tramo | Rango, k USD | Fuente o supuesto |
 |---|---|---|---|
-| Esfuerzo técnico: 1,3 FTE equivalentes | Meses 1-3 | 15.300-36.750 | 0,3 arquitecto, 0,5 IA aplicada y 0,5 DevOps/QA por 3 meses, a los rangos de [costo por rol](../../context/supuestos/costo-cargado-por-rol.md); las fracciones son supuesto |
-| Esfuerzo técnico: 3,3 FTE equivalentes | Meses 4-6 | 35.550-86.400 | 0,5 arquitecto, 0,8 IA aplicada, 1,0 DevOps/QA y 1,0 desarrollador senior |
-| Esfuerzo técnico: 3,8 FTE equivalentes | Meses 7-9 | 40.050-97.650 | 0,5 arquitecto, 0,8 IA aplicada, 1,0 DevOps/QA y 1,5 desarrolladores senior |
-| Esfuerzo técnico: 3,2 FTE equivalentes | Meses 10-12 | 34.200-83.400 | 0,4 arquitecto, 0,8 IA aplicada, 1,0 DevOps/QA y 1,0 desarrollador senior |
+| Esfuerzo técnico: 1,3 FTE equivalentes | Meses 1-3 | 15,3-36,75 | 0,3 arquitecto, 0,5 IA aplicada y 0,5 DevOps/QA por 3 meses, a los rangos de [costo por rol](../../context/supuestos/costo-cargado-por-rol.md); las fracciones son supuesto |
+| Esfuerzo técnico: 3,3 FTE equivalentes | Meses 4-6 | 35,55-86,4 | 0,5 arquitecto, 0,8 IA aplicada, 1,0 DevOps/QA y 1,0 desarrollador senior |
+| Esfuerzo técnico: 3,8 FTE equivalentes | Meses 7-9 | 40,05-97,65 | 0,5 arquitecto, 0,8 IA aplicada, 1,0 DevOps/QA y 1,5 desarrolladores senior |
+| Esfuerzo técnico: 3,2 FTE equivalentes | Meses 10-12 | 34,2-83,4 | 0,4 arquitecto, 0,8 IA aplicada, 1,0 DevOps/QA y 1,0 desarrollador senior |
 
-Suma del esfuerzo técnico: USD 125.100-304.200 en los cuatro tramos.
+Suma del esfuerzo técnico: 125,1-304,2k USD en los cuatro tramos.
 
 ### Escenario recomendado (contractor desde el mes 1 que reemplaza, producto diferido)
 
@@ -966,17 +1069,17 @@ Los desarrolladores senior son el **frente producto**: construyen e integran el
 piloto. Con el producto diferido, no hay desarrollador en los meses 4-6, y los de los
 meses 7-12 forman parte del tramo condicional que se libera en la lectura del mes 6. Así se confirma la lectura del Anexo E.
 
-| Concepto | Frente | Tramo | Rango | Fuente o supuesto |
+| Concepto | Frente | Tramo | Rango, k USD | Fuente o supuesto |
 |---|---|---|---|---|
-| Esfuerzo técnico: 0,6 FTE | Base | Meses 1-3 | 6.750-15.750 | 0,3 arquitecto y 0,3 DevOps/QA; la IA aplicada la cubre el contractor desde el mes 1 del [Anexo D](04-personas-cultura.md). Con el rol interno en lugar del contractor: 0,9 FTE, 10.800-25.650 |
-| Esfuerzo técnico: 1,2 FTE, con el replan de los meses 4-6 | Base | Meses 4-6 | 12.600-30.000 | 0,4 arquitecto y 0,8 DevOps/QA (ver "Exceso de los meses 4-6 con el producto diferido"). Sin replan: 1,5 FTE, 15.750-37.500 |
-| Esfuerzo técnico: 1,5 FTE | Base | Meses 7-9 | 15.750-37.500 | 0,5 arquitecto y 1,0 DevOps/QA |
-| Esfuerzo técnico: 1,4 FTE | Base | Meses 10-12 | 14.400-34.500 | 0,4 arquitecto y 1,0 DevOps/QA |
-| Desarrolladores senior del piloto: 1,5 FTE | Producto | Meses 7-9 | 13.500-33.750 | Solo si la lectura del mes 6 libera el producto |
-| Desarrollador senior del piloto: 1,0 FTE | Producto | Meses 10-12 | 9.000-22.500 | Solo si la lectura del mes 6 libera el producto |
+| Esfuerzo técnico: 0,6 FTE | Base | Meses 1-3 | 6,75-15,75 | 0,3 arquitecto y 0,3 DevOps/QA; la IA aplicada la cubre el contractor desde el mes 1 del [Anexo D](04-personas-cultura.md). Con el rol interno en lugar del contractor: 0,9 FTE, 10,8-25,65k USD |
+| Esfuerzo técnico: 1,2 FTE, con el replan de los meses 4-6 | Base | Meses 4-6 | 12,6-30 | 0,4 arquitecto y 0,8 DevOps/QA (ver "Exceso de los meses 4-6 con el producto diferido"). Sin replan: 1,5 FTE, 15,75-37,5k USD |
+| Esfuerzo técnico: 1,5 FTE | Base | Meses 7-9 | 15,75-37,5 | 0,5 arquitecto y 1,0 DevOps/QA |
+| Esfuerzo técnico: 1,4 FTE | Base | Meses 10-12 | 14,4-34,5 | 0,4 arquitecto y 1,0 DevOps/QA |
+| Desarrolladores senior del piloto: 1,5 FTE | Producto | Meses 7-9 | 13,5-33,75 | Solo si la lectura del mes 6 libera el producto |
+| Desarrollador senior del piloto: 1,0 FTE | Producto | Meses 10-12 | 9-22,5 | Solo si la lectura del mes 6 libera el producto |
 
-Suma de la base: USD 49.500-117.750 con el replan (52.650-125.250 sin él). Tramo
-del producto: 22.500-56.250. A los rangos de [costo por
+Suma de la base: 49,5-117,75k USD con el replan (52,65-125,25k USD sin él). Tramo
+del producto: 22,5-56,25k USD. A los rangos de [costo por
 rol](../../context/supuestos/costo-cargado-por-rol.md), con 3 meses por
 tramo. El contractor (caja, Anexo D) no se repite acá. Sin contractor
 (la alternativa sin contractor, con fracción interna), la base suma 0,8 FTE de IA aplicada interna por tramo en
@@ -984,36 +1087,36 @@ los meses 4-12 y no hay replan de los meses 4-6.
 
 ### Caja y otros costos
 
-| Concepto | Tramo | Rango | Fuente o supuesto |
+| Concepto | Tramo | Rango, k USD | Fuente o supuesto |
 |---|---|---|---|
-| Suscripciones de IA (base) | Cada tramo | 5.800-9.450 | 60-70 seats × USD 40-45 × 3 meses. La fuente no aclara si el promedio ponderado cubre a la vez Claude y Copilot: el piso resta 20% por si Copilot cuesta menos (supuesto); sin seats nuevos. No es incremental. Cálculo sobre [la fuente](../../context/hechos/costos-tecnologia-e-ia.md) |
-| Escenario de consumo a precio API (estrés) | Cada tramo | hasta ≈ 58.000-73.000 | 12× la suscripción del agente de código (40-45 seats × USD 40-45 × 3 meses). Es cota superior: el 12× es una estimación de telemetría, no una factura, y vale solo para el agente de código. Se sigue en el reporte mensual con el escenario de consumo, que alimenta el tablero mensual del Council |
-| Infraestructura nueva (gateway, retrieval, trazas, evals en CI) | Meses 1-3 | Escenario recomendado: 500-1.500 **en el tramo de tres meses**. Escenario conservador: 500-1.500 **por mes** (1.500-4.500 en el tramo) | [Supuesto](../../context/supuestos/precios-externos-sin-cotizar.md): el recomendado solo tiene telemetría y registro; el conservador, gateway en laboratorio. Lo invalida una cotización o un precio de servicios gestionados |
-| Ídem | Meses 4-6 | 4.500-12.000 | USD 1,5-4 mil por mes. Incluye, con tope de FinOps, el consumo de la prueba de portabilidad y costo y el del caso de referencia |
-| Ídem, base sin piloto | Meses 7-12 | 4.500-12.000 cada tramo | Sin piloto, la infraestructura queda en el nivel de los meses 4-6 (USD 1,5-4 mil por mes), como registra la [fuente de precios](../../context/supuestos/precios-externos-sin-cotizar.md). El consumo del caso de referencia entra dentro de este tope; si no entra, el caso se limita a una cohorte |
-| Ídem, incremento del piloto | Meses 7-12 | 1.500-6.000 cada tramo (producto) | Tenant del piloto y su tráfico: lleva el renglón a 6.000-18.000 por tramo, el valor con piloto de la [fuente](../../context/supuestos/precios-externos-sin-cotizar.md) |
-| Consumo de modelos del piloto de producto (evals y tráfico) | Meses 7-12 | 3.000-12.000 cada tramo (producto) | Supuesto: USD 1-4 mil por mes; sin base de volumen hasta el piloto |
-| Red team del piloto | Meses 7-9 | 5.000-15.000 (producto) | Supuesto: un ejercicio con un tercero chico; lo invalida una cotización; coordinar con Gobierno |
+| Suscripciones de IA (base) | Cada tramo | ≈ 5,8-9,45 | 60-70 seats × USD 40-45 × 3 meses. La fuente no aclara si el promedio ponderado cubre a la vez Claude y Copilot: el piso resta 20% por si Copilot cuesta menos (supuesto); sin seats nuevos. No es incremental. Cálculo sobre [la fuente](../../context/hechos/costos-tecnologia-e-ia.md) |
+| Escenario de consumo a precio API (estrés) | Cada tramo | hasta ≈ 58-73 | 12× la suscripción del agente de código (40-45 seats × USD 40-45 × 3 meses). Es cota superior: el 12× es una estimación de telemetría, no una factura, y vale solo para el agente de código. Se sigue en el reporte mensual con el escenario de consumo, que alimenta el tablero mensual del Council |
+| Infraestructura nueva (gateway, retrieval, trazas, evals en CI) | Meses 1-3 | Escenario recomendado: 0,5-1,5 **en el tramo de tres meses**. Escenario conservador: 0,5-1,5 **por mes** (1,5-4,5 en el tramo) | [Supuesto](../../context/supuestos/precios-externos-sin-cotizar.md): el recomendado solo tiene telemetría y registro; el conservador, gateway en laboratorio. Lo invalida una cotización o un precio de servicios gestionados |
+| Ídem | Meses 4-6 | 4,5-12 | 1,5-4k USD por mes. Incluye, con tope de FinOps, el consumo de la prueba de portabilidad y costo y el del caso de referencia |
+| Ídem, base sin piloto | Meses 7-12 | 4,5-12 cada tramo | Sin piloto, la infraestructura queda en el nivel de los meses 4-6 (1,5-4k USD por mes), como registra la [fuente de precios](../../context/supuestos/precios-externos-sin-cotizar.md). El consumo del caso de referencia entra dentro de este tope; si no entra, el caso se limita a una cohorte |
+| Ídem, incremento del piloto | Meses 7-12 | 1,5-6 cada tramo (producto) | Tenant del piloto y su tráfico: lleva el renglón a 6-18k USD por tramo, el valor con piloto de la [fuente](../../context/supuestos/precios-externos-sin-cotizar.md) |
+| Consumo de modelos del piloto de producto (evals y tráfico) | Meses 7-12 | 3-12 cada tramo (producto) | Supuesto: 1-4k USD por mes; sin base de volumen hasta el piloto |
+| Red team del piloto | Meses 7-9 | 5-15 (producto) | Supuesto: un ejercicio con un tercero chico; lo invalida una cotización; coordinar con Gobierno |
 | Prueba de portabilidad y costo del gateway | Meses 4-6 | Sin renglón propio | El tiempo va dentro de DevOps/QA y del contractor; el consumo por API, dentro del renglón de infraestructura de los meses 4-6, con tope de FinOps |
-| Migración de superficies y pruebas de bypass | Meses 1-6 | 2.100-10.700 de tiempo | 15-30 días-persona de DevOps/QA a USD 3.000-7.500 por mes y 21 días hábiles; **ya incluido** en las fracciones de DevOps/QA, no suma |
-| Instrumentación de uso en chat y Workspace (la dependencia que marca el Anexo D) | Meses 1-6 | 1.400-7.100 de tiempo | 10-20 días-persona de DevOps al mismo costo diario; ya incluido en DevOps/QA, no suma. Sin cotización de proveedores |
+| Migración de superficies y pruebas de bypass | Meses 1-6 | ≈ 2,1-10,7 de tiempo | 15-30 días-persona de DevOps/QA a 3-7,5k USD por mes y 21 días hábiles; **ya incluido** en las fracciones de DevOps/QA, no suma |
+| Instrumentación de uso en chat y Workspace (la dependencia que marca el Anexo D) | Meses 1-6 | ≈ 1,4-7,1 de tiempo | 10-20 días-persona de DevOps al mismo costo diario; ya incluido en DevOps/QA, no suma. Sin cotización de proveedores |
 | Certificaciones del programa de partners | — | No estimado | Faltante: no hay costo publicado |
 
 **Régimen del año 2.** Si la infraestructura de los meses 10-12 sin piloto queda en el nivel
-de los meses 4-6, a régimen cuesta 18.000-48.000 por año en lugar de 24.000-72.000. Los
-6.000-24.000 de diferencia son del producto. El [costo de
+de los meses 4-6, a régimen cuesta 18-48k USD por año en lugar de 24-72k USD. Los
+6-24k USD de diferencia son del producto. El [costo de
 régimen](../../context/supuestos/costo-de-regimen-del-ano-2.md) ya usa el valor sin
 piloto para la base común.
 
-**Base común mínima para el producto (corte mixto en la lectura del mes 9).** Este anexo confirma, con una
+**Base común mínima para el producto (corte mixto en la lectura del mes 9).** Este anexo propone, con una
 corrección, el supuesto del Anexo E ([base
 mínima](../../context/supuestos/base-minima-tras-un-corte.md)):
 
-- **Confirma:** infraestructura de base al nivel de los meses 4-6 (gateway, trazas y evals en
-  CI, 4.500-12.000 en los meses 10-12, cota superior porque ya no corre el caso de referencia),
+- **Conserva como supuesto:** infraestructura de base al nivel de los meses 4-6 (gateway, trazas y evals en
+  CI, 4,5-12k USD en los meses 10-12, cota superior porque ya no corre el caso de referencia),
   la pasarela, el contractor al 50% para las evals y el harness del piloto (sin
   dato que lo respalde) y 0,5 FTE de DevOps/QA para operar el gateway y las evals.
-- **Corrige:** suma **0,1 FTE de arquitecto** en los meses 10-12 (1.350-3.000 de tiempo, a
+- **Corrige:** suma **0,1 FTE de arquitecto** en los meses 10-12 (1,35-3k USD de tiempo, a
   los rangos de este anexo). El piloto sigue con el gate scale/kill y el paquete
   de cumplimiento de los meses 10-12 (aislamiento por tenant, ubicación de datos, ADR), que
   tocan puertas de un solo sentido; sin arquitecto no hay quién firme esa
@@ -1069,9 +1172,10 @@ montos de facturación.
 - Las fracciones de esfuerzo y los rangos de infraestructura son supuestos.
   Los umbrales del protocolo de evaluación, el criterio de la prueba de
   portabilidad y costo y el replan de los meses 4-6 están en una
-  [fuente](../../context/supuestos/umbrales-tecnicos-propuestos.md) todavía sin validar, igual
-  que la política de ruteo, el gate de impacto y el método del intervalo de
-  throughput. El régimen comercial del agente de código depende de una respuesta
+  [fuente](../../context/supuestos/umbrales-tecnicos-propuestos.md) revisada como propuesta de diseño,
+  sin medición ni aprobación empresarial; ese alcance también aplica a la
+  política de ruteo, el gate de impacto y el método del intervalo de throughput.
+  El régimen comercial del agente de código depende de una respuesta
   escrita del proveedor que todavía no existe.
 - El caso de referencia es el del frente interno y prueba el método que
   reutiliza el piloto de producto; la hipótesis de producto la eligió el

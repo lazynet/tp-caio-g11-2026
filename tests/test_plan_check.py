@@ -1,3 +1,4 @@
+import hashlib
 import importlib.util
 import json
 import subprocess
@@ -71,6 +72,316 @@ class PlanCheckTests(unittest.TestCase):
             encoding="utf-8",
         )
         return target
+
+    def catalog(self, target, line, category, basis=None, blocking=False):
+        relative = str(target.relative_to(self.root))
+        entry = {
+            "path": relative,
+            "line": line,
+            "text": target.read_text().splitlines()[line - 1],
+            "sha256": hashlib.sha256(target.read_bytes()).hexdigest(),
+            "category": category,
+            "blocking": blocking,
+            "reason": "Clasificación específica del ejemplo independiente.",
+            "basis": basis or {},
+        }
+        path = self.root / "scripts/delivery-findings.json"
+        path.parent.mkdir(exist_ok=True)
+        path.write_text(json.dumps({"version": 1, "entries": [entry]}))
+        return path
+
+    def citation(self, target, first, last=None):
+        return {
+            "path": str(target.relative_to(self.root)),
+            "line": first,
+            "sha256": hashlib.sha256(target.read_bytes()).hexdigest(),
+            "text": "\n".join(
+                target.read_text().splitlines()[first - 1 : last or first]
+            ),
+        }
+
+    def future(self):
+        target = self.annex(
+            body=(
+                "Pendiente: elegir proveedor para el piloto.\n"
+                "Decide el Directorio.\n"
+                "Se decide antes de abrir el piloto en M4.\n"
+                "Sin decisión, el piloto queda suspendido."
+            )
+        )
+        self.write("# Deck\n[Anexo](annexes/finance.md)")
+        basis = dict(
+            zip(
+                ("scope", "authority", "decision", "consequence"),
+                (self.citation(target, n) for n in range(7, 11)),
+            )
+        )
+        path = self.catalog(target, 7, "future_decision", basis)
+        return target, path
+
+    def test_catalog_future_is_reported_without_blocking(self):
+        self.future()
+        result = self.result("delivery")
+        self.assertEqual(result["errors"], [])
+        self.assertEqual(len(result["pending"]), 1)
+        self.assertFalse(result["findings"][0]["blocking"])
+        self.assertEqual(result["findings"][0]["category"], "future_decision")
+
+    def test_stale_catalog_warns_in_draft_and_rejects_delivery(self):
+        target, _ = self.future()
+        target.write_text(target.read_text() + "\n")
+        draft = self.result("draft")
+        self.assertEqual(draft["errors"], [])
+        self.assertTrue(any("Documento modificado" in w for w in draft["warnings"]))
+        self.assertEqual(draft["findings"][0]["category"], "unclassified")
+        self.assertTrue(self.result("delivery")["errors"])
+        command = [
+            checker.sys.executable,
+            str(REPO / "scripts/plan-check.py"),
+            "--root",
+            str(self.root),
+            "--mode",
+            "draft",
+        ]
+        result = subprocess.run(command, capture_output=True, text=True, check=False)
+        self.assertEqual(result.returncode, 0, result.stdout)
+        self.assertIn("ADVERTENCIA: Catálogo de entrega inválido", result.stdout)
+        self.assertIn("PENDIENTE DE ENTREGA", result.stdout)
+        self.assertNotIn("BLOQUEO [", result.stdout)
+        target.write_text(target.read_text() + "\n[Roto](missing.md)\n")
+        draft = self.result("draft")
+        self.assertTrue(
+            any("Referencia local rota" in error for error in draft["errors"])
+        )
+        self.assertTrue(draft["warnings"])
+
+    def test_catalog_decision_can_cite_a_gate_without_calendar_date(self):
+        target, _ = self.future()
+        target.write_text(
+            target.read_text().replace(
+                "Se decide antes de abrir el piloto en M4.",
+                "Se decide antes de habilitar el piloto.",
+            )
+        )
+        self.catalog(
+            target,
+            7,
+            "future_decision",
+            dict(
+                zip(
+                    ("scope", "authority", "decision", "consequence"),
+                    (self.citation(target, n) for n in range(7, 11)),
+                )
+            ),
+        )
+        self.assertEqual(self.result("delivery")["errors"], [])
+
+    def test_one_operational_rule_can_supply_all_four_fields(self):
+        rule = (
+            "Regla propuesta: Seguridad valida cada afirmación antes de publicarla; "
+            "si aparece una afirmación sin evidencia, la retira y corrige el procedimiento."
+        )
+        target = self.annex(body=rule)
+        self.write("# Deck\n[Anexo](annexes/finance.md)")
+        self.catalog(
+            target,
+            7,
+            "execution_condition",
+            {
+                field: self.citation(target, 7)
+                for field in ("scope", "authority", "decision", "consequence")
+            },
+        )
+        self.assertEqual(self.result("delivery")["errors"], [])
+
+    def test_catalog_multiline_citation_keeps_trailing_blank(self):
+        target, path = self.future()
+        data = json.loads(path.read_text())
+        data["entries"][0]["basis"]["scope"] = self.citation(target, 7, 12)
+        path.write_text(json.dumps(data))
+        self.assertEqual(self.result("delivery")["errors"], [])
+
+    def test_catalog_execution_condition_is_reported(self):
+        target = self.annex(
+            body=(
+                "Control pendiente de prueba para el chat.\n"
+                "Seguridad autoriza su uso.\n"
+                "La prueba se exige antes de habilitar cada caso.\n"
+                "Sin prueba no se habilita ese caso."
+            )
+        )
+        self.write("# Deck\n[Anexo](annexes/finance.md)")
+        self.catalog(
+            target,
+            7,
+            "execution_condition",
+            dict(
+                zip(
+                    ("scope", "authority", "decision", "consequence"),
+                    (self.citation(target, n) for n in range(7, 11)),
+                )
+            ),
+        )
+        result = self.result("delivery")
+        self.assertEqual(result["errors"], [])
+        self.assertFalse(result["findings"][0]["blocking"])
+        self.assertEqual(result["findings"][0]["category"], "execution_condition")
+
+    def test_catalog_history_has_explicit_temporal_limit(self):
+        target = self.concept(
+            status="verified",
+            body=(
+                "# Fuente\nEn abril de 2025, la matriz estaba pendiente.\n"
+                "No describe el estado actual ni habilita usos."
+            ),
+        )
+        self.write("# Deck\n[Fuente](/context/source.md)")
+        self.catalog(
+            target,
+            10,
+            "historical_uncertainty",
+            {
+                "record": self.citation(target, 10),
+                "limit": self.citation(target, 11),
+            },
+        )
+        self.assertEqual(self.result("delivery")["errors"], [])
+
+    def test_catalog_exact_metadata_and_fake_metadata(self):
+        target = self.concept(status="verified")
+        target.write_text(
+            target.read_text().replace(
+                "description: Supuesto de prueba.",
+                "description: Supuesto de prueba.\ntags: [pendiente, ejemplo]",
+            )
+        )
+        self.write("# Deck\n[Fuente](/context/source.md)")
+        self.catalog(target, 5, "metadata")
+        self.assertEqual(self.result("delivery")["errors"], [])
+        target = self.concept(
+            status="verified", body="# Fuente\ntags: [pendiente, ejemplo]"
+        )
+        self.catalog(target, 10, "metadata")
+        self.assertTrue(self.result("delivery")["errors"])
+
+    def test_catalog_new_detection_and_real_pending_remain_blocking(self):
+        target, _ = self.future()
+        target.write_text(target.read_text() + "\nPendiente: revisar presupuesto.\n")
+        result = self.result("delivery")
+        self.assertTrue(result["errors"])
+        self.assertEqual(result["findings"][-1]["category"], "unclassified")
+        self.assertTrue(result["findings"][-1]["blocking"])
+        target = self.concept(
+            status="verified", body="# Fuente\nPendiente: revisión de la fuente."
+        )
+        self.write("# Deck\n[Fuente](/context/source.md)")
+        self.catalog(target, 10, "required_gap", blocking=True)
+        self.assertTrue(self.result("delivery")["errors"])
+
+    def test_catalog_requires_all_four_future_fields(self):
+        for field in ("scope", "authority", "decision", "consequence"):
+            with self.subTest(field=field):
+                _, path = self.future()
+                data = json.loads(path.read_text())
+                del data["entries"][0]["basis"][field]
+                path.write_text(json.dumps(data))
+                self.assertTrue(self.result("delivery")["errors"])
+
+    def test_catalog_fails_closed_on_changed_text_location_or_support(self):
+        for mutation in ("text", "location", "support", "remove"):
+            with self.subTest(mutation=mutation):
+                target, _ = self.future()
+                text = target.read_text()
+                text = {
+                    "text": text.replace("elegir proveedor", "revisar evidencia"),
+                    "location": text.replace("# Anexo\n", "# Anexo\n\n"),
+                    "support": text.replace("Directorio", "equipo sin autoridad"),
+                    "remove": text.replace("Pendiente:", "Propuesta:"),
+                }[mutation]
+                target.write_text(text)
+                self.assertTrue(self.result("delivery")["errors"])
+
+    def test_catalog_rejects_unknown_duplicate_and_invalid_entries(self):
+        for mutation in ("category", "key", "duplicate", "version", "type", "json"):
+            with self.subTest(mutation=mutation):
+                _, path = self.future()
+                data = json.loads(path.read_text())
+                entry = data["entries"][0]
+                if mutation == "category":
+                    entry["category"] = "approved"
+                elif mutation == "key":
+                    entry["bypass"] = True
+                elif mutation == "duplicate":
+                    data["entries"].append(entry.copy())
+                elif mutation == "version":
+                    data["version"] = 2
+                elif mutation == "type":
+                    entry["blocking"] = "false"
+                path.write_text("{broken" if mutation == "json" else json.dumps(data))
+                self.assertTrue(self.result("delivery")["errors"])
+
+    def test_catalog_never_admits_placeholders_or_required_gap(self):
+        for marker in ("TODO", "TBD", "FIXME"):
+            with self.subTest(marker=marker):
+                target, path = self.future()
+                target.write_text(target.read_text().replace("Pendiente", marker))
+                data = json.loads(path.read_text())
+                entry = data["entries"][0]
+                entry["text"] = target.read_text().splitlines()[6]
+                entry["sha256"] = hashlib.sha256(target.read_bytes()).hexdigest()
+                entry["basis"] = dict(
+                    zip(
+                        ("scope", "authority", "decision", "consequence"),
+                        (self.citation(target, n) for n in range(7, 11)),
+                    )
+                )
+                path.write_text(json.dumps(data))
+                self.assertTrue(self.result("delivery")["errors"])
+        target, path = self.future()
+        data = json.loads(path.read_text())
+        data["entries"][0]["category"] = "required_gap"
+        data["entries"][0]["basis"] = {}
+        path.write_text(json.dumps(data))
+        self.assertTrue(self.result("delivery")["errors"])
+
+    def test_catalog_does_not_override_other_validations(self):
+        self.future()
+        self.concept(status="draft")
+        private = self.root / "private/data.md"
+        private.parent.mkdir()
+        private.write_text("Texto sintético de prueba.")
+        self.write(
+            "# Deck\n[Anexo](annexes/finance.md)\n[Fuente](/context/source.md)\n"
+            "[Roto](missing.md)\n[Privado](/private/data.md)",
+            metadata="owner: caio\nstatus: draft\nmarp: true",
+        )
+        errors = self.result("delivery")["errors"]
+        for fragment in ("deck declarado draft", "status: verified", "rota", "privad"):
+            self.assertTrue(any(fragment in error for error in errors), errors)
+
+    def test_private_links_including_file_uri_are_rejected(self):
+        target = self.root / "private/data.md"
+        target.parent.mkdir()
+        target.write_text("Texto sintético.")
+        for link in (
+            "/private/data.md",
+            "../private/data.md",
+            "/%70rivate/data.md",
+            target.as_uri(),
+        ):
+            with self.subTest(link=link):
+                self.write(f"# Deck\n[Fuente]({link})")
+                self.assertTrue(self.result("delivery")["errors"])
+
+    def test_private_directory_case_aliases_are_rejected(self):
+        target = self.root / "Private/data.md"
+        target.parent.mkdir()
+        target.write_text("Texto sintético.")
+        self.write("# Deck\n[Fuente](/Private/data.md)")
+        self.assertTrue(self.result("delivery")["errors"])
+        if (self.root / "private/data.md").is_file():
+            self.write("# Deck\n[Fuente](/PRIVATE/data.md)")
+            self.assertTrue(self.result("delivery")["errors"])
 
     def test_used_draft_rejected_and_human_verified_accepted(self):
         self.concept()

@@ -6,11 +6,12 @@ title: "Anexo F — Roadmap ajustado por riesgo"
 
 # Anexo F — Roadmap ajustado por riesgo
 
-Slides que sustenta (numeradas por página del deck, portada incluida):
-[Slide 3 — Beneficio](../slides.md),
-[Slide 8 — Roadmap técnico, financiero y cultural](../slides.md),
-[Slide 9 — Costo y riesgo](../slides.md) y
-[Slide 10 — Autorizar la validación inicial](../slides.md).
+Slides que sustenta, por el nombre de su encabezado:
+[Beneficio](../slides.md),
+[Roadmap técnico, financiero y cultural](../slides.md),
+[Costo y riesgo](../slides.md) y el cierre,
+[Autorizar la validación inicial](../slides.md). Montos en k USD
+(1k USD = 1.000 USD) salvo que se indique otra unidad.
 
 > **Cifras estimadas, todavía sin validar contra fuentes internas;** se validan
 > antes de liberar la ejecución de M1-M3; la validación tiene autorización propia.
@@ -43,7 +44,8 @@ La narrativa del cierre es **valor medible; seguridad aceptable; fondos por
 decisión**. Las cifras vienen del anexo que se cita. Lo que este anexo agrega son
 decisiones del CAIO (bandas fuera de lo económico, plazos de corrección, el
 calendario, la hipótesis de producto y el catálogo de decisiones), marcadas como
-propuestas. Donde dos anexos chocan, queda como decisión pendiente. Responsable
+propuestas. Donde dos anexos chocan, el choque va a "Decisiones pendientes para
+el board o el equipo", con alternativas, propuesta y quién decide. Responsable
 de cada gate y de cada decisión: a designar, con productor de evidencia,
 verificador y autoridad firmante diferenciados ([Anexo C](03-gobierno-seguridad.md),
 "Derechos de decisión").
@@ -65,8 +67,8 @@ verificador y autoridad firmante diferenciados ([Anexo C](03-gobierno-seguridad.
 
 ### El pedido de hoy: validar antes de liberar M1-M3
 
-El pedido completo está en la [Slide 10](../slides.md); la [Slide 9](../slides.md)
-muestra su exposición presupuestaria máxima autorizada. Cifras en miles de USD, techos propuestos por Finanzas
+El pedido completo está en el cierre del deck; la slide [Costo y riesgo](../slides.md)
+muestra su exposición presupuestaria máxima autorizada. Cifras en k USD, techos propuestos por Finanzas
 (Anexo E, "Pedido inicial: paquete mínimo"). La slide redondea los FTE; acá van
 los rangos exactos.
 
@@ -89,7 +91,10 @@ Es un supuesto; Operaciones y los managers confirman agendas por persona y seman
 La preparación previa y el cierre condicional tienen sus propias horas y
 autorizaciones, fuera de ese sobre de M1-M3.
 
-La demanda costeada sigue en 970-1.350 h. Las 30 h de margen sobre el máximo
+La demanda costeada sigue en 970-1.350 h **si se confirman las uniones de horas de B, C
+y D que propone Finanzas**; sus dueños todavía no las ratificaron, y sin la de DevOps
+el tiempo pasa el techo de 59 (ver "Decisiones pendientes"). La reserva de 1.380 h
+es una propuesta, no disponibilidad demostrada. Las 30 h de margen sobre el máximo
 clave requieren costeo y autorización antes de usarse; no sustituyen el hito
 de validación organizativa ([fuente](../../context/supuestos/paquete-minimo-de-aprendizaje.md#reserva-propuesta-de-capacidad-m1-m3)).
 
@@ -99,9 +104,14 @@ La exposición presupuestaria máxima autorizada del tramo, acumulada hasta
 cerrar en M3, es **79 = caja 10 + tiempo 69**
 (59 de M1-M3 + 3 de técnica + 5 de organización + 2 de cierre), sin deducir
 beneficios; **85 en el año** si se aprueba el núcleo al salir. Son límites de
-autorización, no pérdida económica incremental ni salida de caja. El tiempo no es nueva nómina ni
+autorización de recursos, no pérdida económica incremental ni salida de caja, y no
+cuantifican la contribución comercial desplazada, que sigue sin medir
+([Anexo E](05-business-case.md#conclusión-económica)). El tiempo no es nueva nómina ni
 pago externo. Fuera del pedido: los meses 4-12, la plataforma, el producto, el
 modelo propio, compromisos a más de 12 meses y todo compromiso con clientes.
+También queda fuera la excepción externa de facilitación (16-32 h): si se
+activa, el Directorio la aprueba aparte del techo, con cotización, y suma su
+caja a los 79 ([Anexo D](04-personas-cultura.md)).
 El techo de caja se confirma contra el presupuesto 2027 en privado.
 
 **Antes de liberar M1-M3**, el board recibe: diagnóstico revisado con brechas y
@@ -109,7 +119,14 @@ faltantes explícitos; alcance y techos definidos; horas por rol
 liberadas en la matriz privada, con trabajo desplazado y recuperación; vía de IA
 aplicada interna demostrada (8-16 h) y perfil de facilitación (16-32 h) o la
 excepción externa decidida; acta de viabilidad del protocolo y decisión de
-calendario; controles aplicables probados antes de usar cada superficie. Si falta
+calendario; versión, acta, alcance y aprobación documentada de la política
+revisados ([Anexo C](03-gobierno-seguridad.md)); controles aplicables probados
+antes de usar cada superficie; las
+uniones de horas de B, C y D confirmadas o el tramo recosteado; la lectura del sobre
+de capacidad (estricta o separada) para decidir, y la contribución desplazada que
+estime la matriz, informada sin umbral propio, y qué rige para el uso que ya corre sobre clientes
+hasta tener su matriz: la propuesta del plan y la decisión de la autoridad del
+residual según el Anexo C (ver "Decisiones pendientes"). Si falta
 algo, se reduce o difiere y se vuelve a costear; el presupuesto no libera tiempo por sí solo.
 La autorización económica permite producir base y controles; cada superficie
 requiere dictamen, restricciones y pruebas aplicables antes de habilitar usos.
@@ -181,6 +198,20 @@ asistencia. La retrospectiva nunca atribuye ganancia ni libera capital
 coinciden en mover los tres si se extiende; cuándo extender sigue abierto (F,
 "Base que no resuelve" en Decisiones). Requiere ratificación.
 
+**Qué cuesta extender la base.** Quedan cinco semanas (9-13) para formación y
+prueba, en lugar de nueve (5-13), y la evidencia madura tarde: un PR se lee a
+los 14 días y la calidad a los 30 ([Anexo B](02-arquitectura.md), "Calendario de
+prerrequisitos"). La prueba de prácticas queda con unas 3 semanas de PR maduros
+al cierre del mes 3, contra unas 7 en el calendario base; es una cuenta de
+calendario, no una medición. La facilitación se concentra y el básico tiene
+menos tiempo para llegar al 90%. Hay dos salidas: aceptar la compresión y
+declarar reducida la lectura del mes 3, sin atribuir ganancia; o correr la
+lectura de la prueba hasta 4 semanas después del mes 3, con impacto en el
+arranque de M4. Adelantar el básico queda descartado, porque ninguna
+intervención entra en la base. B pide que CAIO, Personas y Finanzas ratifiquen
+el calendario de lectura y el costo de cualquier desplazamiento. La elección queda
+abierta en "Decisiones pendientes para el board o el equipo".
+
 ### Primeros 100 días: por qué no hay quick win de negocio en los meses 1-3
 
 El método del plan de 100 días pide 2-3 quick wins con valor medido entre los días
@@ -232,16 +263,23 @@ de hitos. Es la misma reunión en la que el Council revisa el registro de riesgo
 ### Línea de tiempo integrada
 
 **Dos liberaciones iniciales y luego gates en los meses 3, 6, 9 y 12. Cada mes:
-revisión del Council con poder de corte, sin liberar fondos.** Techos en miles de USD, caja / tiempo
-([Anexo E](05-business-case.md)). Los meses 4-12 **no se aprueban hoy**.
+revisión del Council con poder de corte, sin liberar fondos.** Techos en k USD, caja / tiempo
+([Anexo E](05-business-case.md)). Los meses 4-12 **no se aprueban hoy**. Sus techos
+pagan controles, seguimiento, lectura y el descubrimiento del asistente; no compran
+construcción de producto, plataforma, cohortes nuevas, avanzado ni champions al 10%
+([Anexo E](05-business-case.md), "Pedido inicial"). Las metas culturales de los meses
+4-12 son propuesta del Anexo D sobre un
+[supuesto de metas culturales](../../context/supuestos/metas-culturales-propuestas.md)
+en borrador: se informan y no se compran con estos techos. Los hitos ampliados exigen
+nueva autorización y no pasan al año 2 por defecto.
 
 | Tramo | Técnico y datos | Gobierno y seguridad | Cultural | Financiero: techo caja / tiempo |
 |---|---|---|---|---|
 | Preparación previa, con autorización propia | Acta de viabilidad; protocolo congelado | Estado de política y restricciones; roles y cotización legal | Diagnóstico y matriz privada; agenda 2026 propia | **0 / 8**, primera liberación |
-| Meses 1-3: diagnóstico, base, política, formación y prueba | Configuración de herramientas existentes; extracción y base; prueba de prácticas | Política/intake, matriz, inventario, legal focalizado; controles probados por superficie | Básico para todos; intermedio de la cohorte; mapeo de tareas de un rol crítico (propuesta del Anexo D) | **9 / 59**, más reserva de caja 1 y de cierre 2 |
-| Meses 4-6: solución según evidencia | Mantener controles y medición; descubrimiento del asistente (tiempo a primera integración exitosa); opción de plataforma si se cumplen regla y condiciones | Pruebas y residuales con vencimiento; lectura de señal contractual | Seguimiento de adopción con denominadores; champions con tiempo asignado; diagnóstico y proyección del rol | 2 / 14, condicional |
-| Meses 7-9: aplicación y producto condicional | Continuidad; producto solo con base y señal del mes 6 y ruta técnica costeada | Amenazas de la función, si existe; cláusula tipo sin firma | Casos por rol dentro de horas aprobadas; diseño de la ruta de desarrollo del rol | 2 / 11, condicional |
-| Meses 10-12: evaluación y traspaso | Lectura contra la base; traspaso y salida documentada | Revisión de residuales; irreversibles para después | Tecnología ≥85%; Operaciones habilitadas ≥60% | 2 / 11, condicional |
+| Meses 1-3: diagnóstico, base, política, formación y prueba | Configuración de herramientas existentes; extracción y base; prueba de prácticas | Política/intake, matriz, inventario, legal focalizado; controles probados por superficie | Básico para todos; intermedio de la cohorte | **9 / 59**, más reserva de caja 1 y de cierre 2 |
+| Meses 4-6: continuidad y descubrimiento | Mantener controles y medición; descubrimiento del asistente (tiempo a primera integración exitosa), sin construir; plataforma solo con decisión y costeo propios, si se cumplen regla y condiciones | Pruebas y residuales con vencimiento; lectura de señal contractual | Seguimiento de adopción con denominadores. Champions, avanzado, cohortes nuevas y estudio del rol: programa ampliado, con costeo y autorización propios | 2 / 14, condicional |
+| Meses 7-9: continuidad; producto solo con otra decisión | Controles y medición. Producto: decisión y costeo propios, con base y señal del mes 6 y ruta técnica previa; sin plataforma no hay piloto en estos meses ([Anexo B](02-arquitectura.md)). Sin fecha prometida | Amenazas de la función, si existe; cláusula tipo sin firma | Seguimiento de adopción. Casos por rol y ruta del rol: programa ampliado | 2 / 11, condicional; no incluye producto |
+| Meses 10-12: evaluación y traspaso | Lectura contra la base; traspaso y salida documentada | Revisión de residuales; irreversibles para después | Metas propuestas informadas (Tecnología ≥85%; Operaciones habilitadas ≥60%), sin formación nueva en el techo | 2 / 11, condicional |
 
 **Tres dimensiones que dependen entre sí.** El [roadmap tridimensional](../../material/conceptos/m3u4-roadmap-tridimensional.md)
 pide que lo técnico, lo financiero y lo cultural avancen en paralelo porque se
@@ -251,12 +289,12 @@ fechas o fondos son estas:
 
 | Si se atrasa o falla | Qué arrastra | Regla |
 |---|---|---|
-| Base congelada (técnico) | Básico, intermedio, prueba y mapeo del rol (cultural); la lectura de throughput que libera fondos (financiero) | Formación y prueba arrancan después de congelar; extensión a la semana 8 desplaza las tres juntas |
+| Base congelada (técnico) | Básico, intermedio y prueba (cultural); la lectura de throughput que libera fondos (financiero) | Formación y prueba arrancan después de congelar; extensión a la semana 8 desplaza las tres juntas |
 | Política y matriz (gobierno) | Repositorios habilitados para la prueba; frente producto | Sin matriz no hay prueba en ese repositorio; la aprobación de la política no habilita por sí sola el producto: su alcance aplicable y los controles deben verificarse |
 | Cohorte activa y tiempo liberado (cultural) | La lectura del throughput (financiero) | Con menos de 15 personas activas no se decide por valor: cuenta como espera |
 | Agendas y horas por rol (cultural y financiero) | Cualquier actividad del tramo | Sin horas liberadas por rol, la actividad no se inicia |
-| Postura sobre el empleo comunicada (cultural) | Participación franca en el estudio del rol | El estudio no arranca antes de esa comunicación ([Anexo D](04-personas-cultura.md)) |
-| Techo del tramo (financiero) | Alcance técnico y horas de formación del tramo siguiente | Excedido, la continuidad exige costeo nuevo aprobado |
+| Postura sobre el empleo comunicada (cultural) | Participación franca en el estudio del rol | El estudio es alcance ampliado: no arranca antes de esa comunicación ni sin horas y autorización propias ([estudio del rol](04-personas-cultura.md#estudio-de-impacto-sobre-un-rol-crítico-propuesta)) |
+| Techo del tramo (financiero) | Alcance técnico del tramo siguiente; horas de formación, solo si se autorizó el programa ampliado | Excedido, la continuidad exige costeo nuevo aprobado |
 
 Las actas de los meses 3, 6 y 9 dejan además una línea con lo que se probó y no
 funcionó, como práctica de cultura de innovación del [Anexo D](04-personas-cultura.md);
@@ -301,16 +339,23 @@ o la tendencia de la preparación previa. Intervalo *bootstrap* por persona, 2.0
 réplicas, 90% bilateral. **Pasa si el límite inferior es mayor o igual al
 umbral**; el estimado ubica la banda. Con muestra insuficiente (menos de 8
 semanas o semiancho mayor a 3 puntos, con al menos 15 personas activas) no se
-decide por valor: cuenta como espera. **Calidad primero:** daño en retrabajo o
-incidentes corta aunque el throughput pase; calidad incierta cuenta como espera y,
-vencida, como no pasa. Bases cero: tratamiento del Anexo B, sin pseudoconteos ni
+decide por valor: cuenta como espera. **Calidad primero**, con los tres casos
+del Anexo B: **daño** (el intervalo del aumento de retrabajo o incidentes queda
+entero sobre cero) corta aunque el throughput pase; **incierta** (sin daño, pero
+sin probar que no empeora) cuenta como espera y, vencida, como no pasa; solo con
+**no deterioro demostrado** (el aumento posible queda bajo el margen δ de B) el
+gate decide por throughput. En este anexo, "sin deterioro" significa ese tercer
+caso, no solo la ausencia de daño. Bases cero: tratamiento del Anexo B, sin pseudoconteos ni
 datos inventados. Datos faltantes se reportan "sin medir".
 
 **El paso no está asegurado.** Con estimados de +3,75% y +9% y semiancho de 3
 puntos, los límites inferiores son +0,75% y +6%, debajo de +3% y +8%. Pasarían
 solo con semianchos ≤0,75 y ≤1 punto. Es aproximación de planificación: el
 bootstrap real puede ser asimétrico y decide su límite inferior. N≥15 y ocho
-semanas no garantizan pasar.
+semanas no garantizan pasar. Además, con la cohorte y los datos reales la medición
+puede no distinguir la mejora: si la precisión esperada no sostiene el método, se
+reformula antes de la segunda liberación o el caso se presenta como espera y corte,
+sin prometer que más semanas lo resuelvan ([Anexo B](02-arquitectura.md), "Viabilidad").
 
 **Qué familia de indicador lee cada gate.** La
 [estrategia de IA a 12 meses](../../material/conceptos/m3u4-estrategia-12-meses.md)
@@ -325,37 +370,37 @@ liberan ni cortan fondos; si tienen consecuencia, la fija el anexo de su dueño:
 | Gate | Adopción interna | Impacto financiero | Calidad |
 |---|---|---|---|
 | Mes 3 | Básico ≥90%; cohorte activa de al menos 15 | Caja y tiempo dentro del techo; consumo dentro de los techos | Base congelada; controles probados, críticos cerrados |
-| Mes 6 | Tecnología ≥80%; Operaciones habilitadas ≥40% (intermedia) | Límite inferior ≥ +3%; destino de la capacidad liberada | Retrabajo e incidentes sin daño; cobertura de controles |
+| Mes 6 | Tecnología ≥80%; Operaciones habilitadas ≥40% (intermedia) | Límite inferior ≥ +3%; destino de la capacidad liberada | Retrabajo e incidentes sin deterioro; cobertura de controles |
 | Mes 9 | Tecnología ≥80% sostenido; pedidos con ejemplos ≥30% | Límite inferior ≥ +8%; costo por PR aceptado que no sube | Incidentes y retrabajo sin aumento; SLO y cero cruces de tenant si hay producto |
-| Mes 12 | Tecnología ≥85%; Operaciones habilitadas ≥60% | Trayectoria al equilibrio o interés contractual | Residuales revisados |
+| Mes 12 | Metas propuestas: Tecnología ≥85%; Operaciones habilitadas ≥60% | Año 2 decidido y costeado aparte | Residuales revisados |
 
 Adopción no equivale a valor: un uso alto sin mejora de throughput o calidad se
 lee como uso de trámite. Las métricas financieras y su dueño están en el
 [Anexo E](05-business-case.md#métricas-financieras-que-se-leen-en-cada-gate); las de
-adopción y comportamiento, en el [Anexo D](04-personas-cultura.md). En el mes 6, el
-diagnóstico del rol crítico entra como evidencia de qué tareas se aumentan, no
-como condición de pase.
+adopción y comportamiento, en el [Anexo D](04-personas-cultura.md). Si el estudio del rol
+crítico se autoriza aparte, su diagnóstico entra como evidencia de qué tareas se
+aumentan, no como condición de pase.
 
 | Gate | Condición | Pasa | Espera (plazo) | Corta o falta | Fondos que afecta |
 |---|---|---|---|---|---|
 | Primera liberación | Agenda e imputación 2026 confirmadas; alcance, accesos, productor, verificador y firmante definidos | Preparación autorizada por diez días hábiles | Sin capacidad previa, no empezar | No hay trabajo gratuito ni autorización implícita por presupuesto 2027 | Preparación: 0 / 8 |
 | Segunda liberación, antes de M1 | Diagnóstico y capacidad revisados; vía de IA aplicada y facilitación demostradas; acta y protocolo; presupuesto 2027, alcance y techos conciliados | Autorizar base y controles de M1-M3; prácticas condicionadas a habilitación por superficie | Reducir/resecuenciar y recostear antes de ejecutar | Detener: costo trabajado hasta 8; cierre documental incluido | Hasta 71 restantes: M1-M3 9 / 59, reserva 1 de caja y 2 de cierre; acumulado 79 |
 | Mes 3 | Base congelada con fecha, cobertura y faltantes | Congelada | Historial insuficiente: 6 semanas más, sin atribuir | Sin base al vencer: no se decide por valor; se reformula antes de continuar | Continuidad M4-M6 |
-| Mes 3 | Respaldo de aprobación y alcance de la política revisados | Aprobación documentada y cobertura aplicable al producto | Respaldo o alcance pendientes: 6 semanas; sin casos nuevos | Sin respaldo o cobertura demostrados al vencer: sin frente producto en el año | Producto |
+| Mes 3 | Política aplicada, con el respaldo de aprobación revisado antes de M1 y su alcance aplicable al producto | Aprobación documentada y cobertura aplicable al producto | Respaldo o alcance pendientes: 6 semanas; sin casos nuevos | Sin respaldo o cobertura demostrados al vencer: sin frente producto en el año | Producto |
 | Mes 3 | Matriz habilitante de los clientes principales | Completa | Ambiguos: *default-deny* y revisión legal hasta el mes 4 | Más de 30% ambiguo al mes 4: sin piloto con ese cliente | Producto |
-| Mes 3 | Básico ≥90% con evaluación práctica (meta revisada si la base se extendió) | ≥90% | ≥50% y <90%: se rediseña el formato | <50%: cambio de formato, no se repite el curso | Formación M4-M6 |
+| Mes 3 | Básico ≥90% con evaluación práctica (meta revisada si la base se extendió) | ≥90% | ≥50% y <90%: se rediseña el formato | <50%: cambio de formato, no se repite el curso | En el mínimo, ninguno: no hay cursos después del mes 3, y el rediseño se vuelve a costear antes de comprometer horas nuevas. Horas de M4-M6, solo si se autorizó el programa ampliado |
 | Mes 3 | Controles por superficie: críticos cerrados, residual aceptado | Probados | — | Control obligatorio incumplido: se suspende el uso afectado | Uso de esa superficie |
 | Mes 3 | Consumo dentro de los techos | Dentro | — | Excedido: continuidad solo con costeo nuevo aprobado | M4-M6 |
 | Mes 3 | Opción de plataforma: señal (ver definición abajo). Regla vigente: la señal libera evaluar la plataforma. Propuesta pendiente de ratificación: además, brecha documentada, alternativas comparables, economía incremental o pérdida de aprendizaje aceptada, y capacidad demostrada | Con regla vigente: señal. Con la propuesta ratificada: señal más las cuatro condiciones, con reserva y contrato para el compromiso nuevo | — | Sin señal: continuar el mínimo costeado y releer M6/M9. Si se ratificaron las cuatro condiciones, la falta de cualquiera impide liberar plataforma. Si no se ratificaron, elevar decisión bajo la regla vigente y volver a costear. No pasa al año 2 por defecto | Plataforma, a costear |
-| Mes 6 | Throughput, calidad primero | Límite inferior ≥ +3% sin daño | **Suspensión.** Estimado >0% sin pasar, o muestra insuficiente: una espera de 6 semanas con subtramo propio aprobado (64-106 h; techos 1 / 6); si sigue en la banda, corte del frente interno: 102 hasta cerrar, 105 en el año | Estimado ≤0% o daño: corte del frente interno; queda el núcleo | M7-M9 |
-| Mes 6 | Adopción de Tecnología, con cobertura y denominador publicados | ≥80% | **Mantenimiento.** ≥60% y <80%: formación rediseñada | **Suspensión.** <60%: se frenan horas de formación que no sean rediseño. Adopción no equivale a valor | Formación M7-M9 |
+| Mes 6 | Throughput, calidad primero | Límite inferior ≥ +3%, sin deterioro de calidad | **Suspensión.** Estimado >0% sin pasar, calidad incierta o muestra insuficiente: una espera de 6 semanas con subtramo propio aprobado (64-106 h; techos 1 / 6); si sigue en la banda, corte del frente interno: 102 hasta cerrar, 105 en el año | Estimado ≤0% o daño: corte del frente interno; queda el núcleo | M7-M9 |
+| Mes 6 | Adopción de Tecnología, con cobertura y denominador publicados | ≥80% | **Mantenimiento.** ≥60% y <80%: la formación se rediseña y se vuelve a costear antes de comprometer horas nuevas | **Suspensión**, solo si se autorizó el programa ampliado: <60%, se frenan sus horas de formación que no sean rediseño. En el mínimo: rediseño y recosteo, sin horas que frenar. Adopción no equivale a valor | En el mínimo, ninguno. Horas de formación M7-M9 del programa ampliado, si se autorizó |
 | Mes 6 | Controles: cobertura por superficie probada; críticos cerrados; residual aceptado. Si hay gateway y se declara cobertura de precio: *fc* × *s* contra el umbral, calidad y portabilidad del Anexo B | Cumplidos | Superficie no cubierta: se declara y escala al Council | Sin prueba económica, se retira el beneficio de precio; conservar un gateway exige justificar control frente a la alternativa menor | Uso y plataforma |
 | Mes 6 | Producto: problema observado, base de tiempo a primera integración exitosa y métrica principal acordadas antes de liberar; comparación con documentación/soporte; señal comercial escrita (ver "Hipótesis de producto") | El board decide volver a costear y liberar construcción | — | Sin evidencia: diferir. Sin plataforma ni ruta técnica alternativa diseñada y costeada, no se promete M7-M9 | Producto, a costear |
-| Mes 9 | Throughput, calidad primero | Límite inferior ≥ +8% | **Mantenimiento.** Estimado ≥ +5% sin pasar. Propuesta a ratificar: una sola espera de 6 semanas, sin expansión, con subtramo propio aprobado (techos 1 / 6); al vencer, si no pasa valor/calidad con la versión congelada, corte del frente interno: 115 hasta cerrar, 116 en el año | Estimado < +5%: corte del frente interno; precedencia si otro frente sigue | M10-M12 |
+| Mes 9 | Throughput, calidad primero | Límite inferior ≥ +8%, sin deterioro de calidad | **Mantenimiento.** Estimado ≥ +5% sin pasar. Propuesta a ratificar: una sola espera de 6 semanas, sin expansión, con subtramo propio aprobado (techos 1 / 6); al vencer, si no pasa valor/calidad con la versión congelada, corte del frente interno: 115 hasta cerrar, 116 en el año | Estimado < +5%: corte del frente interno; precedencia si otro frente sigue | M10-M12 |
 | Mes 9 | Producto, si existe: SLO acordado, cero cruces de tenant, críticos cerrados | Cumplidos | SLO incumplido: vuelve a "asiste" y se revisa | Una filtración: se cancela la función | Producto |
 | Mes 9 | Señal tardía de plataforma | Se evalúa con calendario y costo nuevos | — | No se usa la promesa del itinerario original | Plataforma |
-| Mes 12 | Tecnología ≥85%; Operaciones habilitadas ≥60%; ambos denominadores y el combinado original informados | Cumplidos | Se informa contra el OKR | — | Año 2 |
-| Mes 12 | Trayectoria al equilibrio o interés contractual (Anexo E) | Una de las dos | — | Sin fundamento: no se financia régimen completo | Año 2 |
+| Mes 12 | Metas propuestas (Tecnología ≥85%; Operaciones habilitadas ≥60%); ambos denominadores y el combinado original informados | Se informan | Se informa contra el OKR | — | Ninguno: se informan |
+| Mes 12 | Año 2: interés contractual en el producto, o lecturas de valor que pasaron en los meses 6 y 9 (propuesta del CAIO) | El board decide y costea el año 2 aparte | — | Sin ninguna: no se financia el año 2; no pasa por defecto | Año 2, a costear |
 
 **Una sola definición de señal (texto del [Anexo C](03-gobierno-seguridad.md),
 "Licencia para vender").** Restricción incluye prohibición o condicionamiento,
@@ -390,10 +435,11 @@ fecha de revisión. Seguridad antes que dependencias y caja.
 
 Para el paquete mínimo, el [Anexo E](05-business-case.md) no presupuesta
 beneficios: **beneficio de caja estimado: 0; ingreso nuevo: 0**; capacidad sin
-cifra hasta medir. Por eso los escenarios se expresan como pérdida máxima por
-punto de salida, no como ROI. Al cortar en M3 coincide con la exposición
-presupuestaria máxima autorizada del tramo (79); los demás puntos no están autorizados hoy. El ROI económico modelado sin beneficios es −100%;
-no es un resultado observado.
+cifra hasta medir. Por eso los escenarios se expresan como exposición
+presupuestaria máxima por punto de salida, no como ROI. Al cortar en M3 coincide con la exposición
+presupuestaria máxima autorizada del tramo (79); los demás puntos no están autorizados hoy. El ROI económico modelado sin beneficios es −100% por
+construcción (beneficio presupuestado 0): no es un resultado observado y no mide
+pérdida económica observada ni caja.
 
 | Escenario | Qué pasa | Hasta cerrar, caja / tiempo → económico | Máximo del año |
 |---|---|---|---|
@@ -403,11 +449,20 @@ no es un resultado observado.
 | Pesimista con la regla | Espera en el mes 6, vence y corta | 13 / 89 → **102** | **105** |
 | Corte en el mes 9 | Estimado < +5% | 14 / 94 → **108** | **110** |
 | Espera en el mes 9 (propuesta a ratificar) | Vence sin pasar y corta | 15 / 100 → **115** | **116** |
-| Continuidad todo el año sin plataforma | Pasan los gates | 16 / 105 → **121** como límite | Proyección ≈70 (27-113); no autorizado hoy |
+| Éxito: continuidad todo el año sin plataforma | Pasan los gates | 15 / 103 → **118** sin gastar reservas; 16 / 105 → **121** con cierre | Proyección ≈70 (27-113); no autorizado hoy |
 | Con señal y, si se ratifican, las cuatro condiciones | Respuesta mínima de plataforma | A costear antes de liberar | Sin cifra: no se hereda 394/≈400 |
 
 Las salidas son límites por suma de techos, sin restar beneficio. La diferencia
 entre cortar a tiempo y seguir sin frenar es lo que compran los gates.
+
+**Qué hay en la mano si sale bien.** Si pasan los gates, el mínimo sigue todo el
+año sin plataforma, con costo económico proyectado ≈70 (27-113) y techos de 118
+sin gastar reservas, 121 con cierre ([Anexo E](05-business-case.md), "Insumos para el deck"). Al mes 12 el
+board tiene base congelada, lecturas de throughput y calidad con su intervalo en
+los meses 6 y 9, controles probados por superficie con residual aceptado,
+adopción por área con su denominador y la decisión del año 2 tomada con esa
+evidencia. No es ingreso ni caja: el plan no presupuesta beneficios, y una
+mejora medida se convierte en plata solo si se vende o evita una contratación.
 
 **Referencia del paquete completo (alcances distintos, pendientes de homogeneizar).**
 47/161/≈199/394/≈400/471 son costos publicados de alcances distintos
@@ -424,21 +479,28 @@ en que aparece el disparador; lo que requiera fondos nuevos espera al gate.
 
 | Disparador | Contingencia | Fuente |
 |---|---|---|
-| El proveedor pasa a cobrar por consumo | Se registra como señal; con plataforma liberada, gateway con ruteo, caché y topes; a más de 6× efectivo sin mitigar, se congela la expansión. A 12×, el incremental anual es de 211-267 mil: exposición de la empresa, con o sin plan | [Anexo E](05-business-case.md), [Anexo B](02-arquitectura.md) |
+| El proveedor pasa a cobrar por consumo | Se registra como señal; con plataforma liberada, se prueba si ruteo, caché y topes bajan el gasto elegible, lo que depende del régimen del proveedor; a más de 6× efectivo sin mitigar, se congela la expansión. A 12×, 211-267k USD al año es un escenario: el consumo de septiembre valorizado a precio de API, si se mantiene y se cobra; no es consumo facturado ni pronóstico. Exposición de la empresa, con o sin plan | [Anexo E](05-business-case.md), [Anexo B](02-arquitectura.md) |
 | Falta perfil interno de facilitación del básico | Comparar liberar un facilitador interno contra una intervención externa acotada de 16-32 h que **reemplace** esa fila, sin sumar ambas; precio, caja y preaviso requieren cotización y la excepción la decide el Directorio. Sin vía demostrada, diferir el módulo y volver a costear | [Anexo D](04-personas-cultura.md) |
 | Falta perfil de IA aplicada (8-16 h) o verificador independiente | No iniciar el hito afectado; reducir o volver a costear. Un 0,3 interno no reemplaza a un especialista | [Anexo E](05-business-case.md), [Anexo D](04-personas-cultura.md) |
 | Pérdida parcial del cliente principal | Se congelan los gates de los meses 4-12 hasta revisar el techo | [Anexo E](05-business-case.md) |
-| Incidente de datos de un cliente | Se suspende la IA sobre ese cliente y se reporta el mismo día | [Anexo C](03-gobierno-seguridad.md) |
+| Incidente de datos de un cliente | Seguridad suspende la IA sobre ese cliente y avisa según lo que pida su contrato; plazos y severidades los fija el plan de incidentes de M1-M3, y C todavía no les da valores | [Anexo C](03-gobierno-seguridad.md), "Incidentes antes del plan de M1-M3" |
 | Primer secreto expuesto | Revocar y rotar, contener el canal y decidir la reanudación con evidencia; la recurrencia escala a bloqueo | [Anexo C](03-gobierno-seguridad.md) |
 | Se va una persona clave sin suplente | Se congelan altas de casos de riesgo alto y se baja el alcance del tramo siguiente | [Anexo C](03-gobierno-seguridad.md) |
-| El rol no valida el mapeo al cierre de los meses 4-6, o se lee como paso previo a un recorte | Se vuelve al flujo de delivery como único insumo del rol; la postura sobre el empleo se comunica antes de retomar | [Anexo D](04-personas-cultura.md) |
+| Si el estudio del rol se autoriza aparte: el rol no valida el mapeo al cierre de su tramo, o se lee como paso previo a un recorte | Se vuelve al flujo de delivery como único insumo del rol; la postura sobre el empleo se comunica antes de retomar | [Anexo D](04-personas-cultura.md) |
 | Diferencia entre grupos en horas de formación liberadas o en rotación, que la agenda o el contrato no explican | Se corrige la agenda antes de seguir con el formato | [Anexo D](04-personas-cultura.md) |
 | La utilización cae bajo 80% dos meses por el plan | Se recorta el frente que más tiempo consume | [Anexo D](04-personas-cultura.md) |
 | Cortar en un gate o en una revisión mensual | Cierre con las reservas vigentes: 1 de caja y 2 de tiempo (16-24 h senior), recalculadas en cada gate antes de asumir obligaciones nuevas; si un contrato exige más preaviso, ampliarlas antes de comprometer | [Anexo E](05-business-case.md) |
 
 ## Riesgos y mitigación
 
-| Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
+Probabilidad e impacto son **inherentes**, antes del control, como en el registro del
+[Anexo C](03-gobierno-seguridad.md); la aceptación se decide sobre el residual, con su
+criterio. Dos valores no coinciden con C: datos de un cliente en un modelo externo es
+Media / Alto en C y Media / Muy alto acá, y las superficies sin control técnico central
+no son una fila de C. La conciliación queda pendiente entre los responsables humanos de
+C y F; no se eligen valores acá.
+
+| Riesgo | Prob. inherente | Impacto inherente | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
 | El tiempo reasignado no existe: el mínimo pide 2,0-2,8 FTE internos en M1-M3 con utilización 83%-90% | Alta | Alto | Matriz privada por persona y semana con trabajo desplazado y recuperación, antes de iniciar ([Anexo D](04-personas-cultura.md)) | Horas por rol no liberadas: no iniciar la actividad afectada |
 | El diagnóstico mezcla poblaciones y fechas | Alta | Medio | Conciliar corte, nómina, contratistas, personas/FTE y horas por rol ([Anexo A](01-diagnostico.md)) | Sin conciliación no se derivan horas de los agregados |
@@ -464,9 +526,9 @@ en que aparece el disparador; lo que requiera fondos nuevos espera al gate.
 | Base que no resuelve | Extender a la semana 8 solo si el criterio de la semana 4 lo dispara, y desplazar juntos básico, intermedio y prueba a la semana 9 | Retrospectiva sin atribuir; o extender siempre | No atrasa la formación cuando la base resuelve y protege la base cuando no | Reversible antes de la aprobación |
 | Medición del asistente | Base de tiempo a primera integración exitosa antes del mes 6, con descubrimiento costeado en M4-M6 | Medir recién en los meses 7-9, después de liberar | Sin base no hay criterio para financiar construcción | Reversible |
 | Espera del mes 6 | Vence a las 6 semanas, con subtramo costeado y aprobado aparte: si sigue en la banda, corta el frente interno (102 hasta cerrar) | Sin salida hasta el mes 9 | Una espera sin regla de salida es gasto sin techo | Reversible |
-| Meta de adopción | Metas por área (Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones habilitadas ≥60% en el 12, con ≥40% en el 6 como meta intermedia), con combinado original, habilitados/total y cobertura publicados | Mantener el 80% combinado como meta única | Cumplir exactamente 85%/60% con toda Operaciones habilitada da 72,5%: es el resultado de esas metas, no un techo; las metas pueden superarse ([Anexo D](04-personas-cultura.md)) | Reversible, con el OKR 2027 |
-| Equilibrio en las slides | No va a las slides del mínimo: sin beneficio presupuestado no hay equilibrio que mostrar | ~17% de throughput atribuible del paquete completo como titular | Mostrarlo sugeriría un retorno que el mínimo no modela | Reversible |
-| Narrativa financiera | Datos → narrativa → decisión sin ROI positivo: el año compra información; el costo de no actuar se presenta como exposición abierta, sin monto ([Anexo E](05-business-case.md#costo-de-no-actuar)) | Narrativa de retorno con ROI, payback y VPN, como propone el [financial storytelling](../../material/conceptos/m3u4-financial-storytelling.md) | El mínimo presupuesta beneficio de caja 0; un ROI positivo o un costo de no actuar con monto exigirían inventar probabilidades o tasa | Reversible: se cambia cuando haya flujos positivos |
+| Meta de adopción | Metas por área, propuestas (Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones habilitadas ≥60% en el 12, con ≥40% en el 6 como meta intermedia), con combinado original, habilitados/total y cobertura publicados. Las que necesitan formación nueva después del mes 3 dependen del programa ampliado ([Anexo D](04-personas-cultura.md); [supuesto de metas culturales](../../context/supuestos/metas-culturales-propuestas.md), en borrador) | Mantener el 80% combinado como meta única | Cumplir exactamente 85%/60% con toda Operaciones habilitada da 72,5%: es el resultado de esas metas, no un techo; las metas pueden superarse ([Anexo D](04-personas-cultura.md)) | Reversible, con el OKR 2027 |
+| Equilibrio en las slides y en los gates | No va a las slides ni al gate del mes 12 del mínimo: el ~17% es del paquete completo y no aplica al mínimo ([Anexo E](05-business-case.md), "Insumos para el deck"), y sin beneficio presupuestado no hay equilibrio que mostrar | ~17% de throughput atribuible del paquete completo como titular | Mostrarlo sugeriría un retorno que el mínimo no modela | Reversible |
+| Narrativa financiera | Datos → narrativa → decisión sin ROI positivo: el año compra información; el costo de no actuar se presenta como exposición abierta, sin monetizar daños ni probabilidades. La única exposición modelada es la de consumo, 211-267k USD incrementales al año a 12×: un escenario sobre el consumo de septiembre a precio de API, no consumo facturado ni pronóstico; es de la empresa con o sin plan, y el mínimo no la cubre ([Anexo E](05-business-case.md#costo-de-no-actuar)) | Narrativa de retorno con ROI, payback y VPN, como propone el [financial storytelling](../../material/conceptos/m3u4-financial-storytelling.md) | El mínimo presupuesta beneficio de caja 0; un ROI positivo o un monto de daños evitados por no actuar exigirían inventar probabilidades o tasa. Eso no alcanza a la exposición de consumo, que sí está modelada | Reversible: se cambia cuando haya flujos positivos |
 
 ### Hipótesis de producto (RICE ajustado por riesgo)
 
@@ -515,9 +577,10 @@ productivo de cliente va a un modelo.
 | Continuidad sin plataforma por tramo | Interno | Meses 3, 6 y 9 | Directorio | Gates de este anexo | 2/14, 2/11, 2/11 | Reversible en cada gate |
 | Liberar plataforma | Interno | Meses 3, 6 o 9 | Directorio | Regla vigente o ratificada | A costear | Reversible hasta contratos largos |
 | Liberar construcción del producto | Interno | Mes 6 | Directorio | Base, comparación y señal comercial | A costear | Reversible en el mes 9 |
-| Sin crédito ni scoring; clasificación caso por caso | Producto | Hoy | Directorio | — | Alcance del año | Reversible al cierre |
-| Aplicar la política de IA aprobada y decidir sus cambios | Interno | Meses 1-3 | Directorio | Versión, alcance y respaldo de aprobación revisados | Compromiso interno enmendable | Reversible con costo de credibilidad |
+| Sin crédito ni scoring; clasificación caso por caso | Producto | Hoy | Directorio | Delimitación y apetito propuestos, no clasificación normativa ([Anexo C](03-gobierno-seguridad.md)) | Alcance del año | Reversible al cierre |
+| Aplicar la política de IA, aprobada según el responsable del caso, y decidir sus cambios | Interno | Meses 1-3 | Directorio | Versión, alcance y respaldo de aprobación revisados | Compromiso interno enmendable | Reversible con costo de credibilidad |
 | Postura sobre el empleo | Interno | Hoy o meses 1-3 | Directorio, con asesoría laboral | — | Texto comunicado | Poco reversible una vez comunicada |
+| Estudio de un rol crítico (alcance ampliado) | Interno | Después de comunicar la postura | Directorio | Postura aprobada y comunicada; horas estimadas | Horas y autorización propias, fuera del techo del mínimo; hoy sin estimación ([estudio del rol](04-personas-cultura.md#estudio-de-impacto-sobre-un-rol-crítico-propuesta)) | Reversible |
 | Cláusula tipo de IA | Interno | Meses 7-9 | Council | Una función con clasificación de riesgo | Texto listo | Reversible |
 | Firmar un compromiso contractual de IA con un cliente | Externo | Mes 12 | Council | Cláusula, matriz, red team sin críticos | Rige después del horizonte | **Irreversible** |
 | Enviar datos productivos de un cliente a un modelo | Externo | Prohibido en el horizonte | Responsable comercial con el Council | Cláusula firmada, controles demostrados | Rige después del horizonte | **Irreversible** |
@@ -532,7 +595,13 @@ toman ahí rigen para el plan siguiente.
 
 | Tema | Tensión | Alternativas | Propuesta del CAIO | Decide |
 |---|---|---|---|---|
+| Uso existente sobre clientes, hasta tener su matriz | El [Anexo C](03-gobierno-seguridad.md), "Regla transitoria hasta que exista la matriz de un cliente", no dispone detenerlo, salvo la suspensión preventiva de Seguridad, y no lo acepta automáticamente | Las que plantea el Anexo C: pausarlo; o aceptarlo como residual. Si se acepta, lo hace la autoridad del criterio de aceptación del Anexo C | Sin propuesta del CAIO. Antes de la segunda liberación hay dos pasos distintos: qué propone el plan lo define, en el equipo del TP, el responsable del Anexo C; la decisión de ejecutar en Acme Labs (pausar o aceptar) la toma la autoridad del riesgo residual según el criterio de aceptación del Anexo C, y Seguridad conserva la suspensión preventiva. No crea permiso ni autoridad nuevos | Propuesta: responsable del Anexo C en el equipo del TP. Ejecución: autoridad del residual según el criterio del Anexo C |
 | Capacidad del mínimo | 2,0-2,8 FTE internos M1-M3 sin horas libres demostradas | Liberar por persona con trabajo desplazado; reducir alcance; resecuenciar | Matriz privada antes de iniciar; sin ella no se inicia | Managers, Operaciones y Finanzas |
+| Solapes de horas del mínimo | Finanzas une horas de B, C y D (DevOps, Seguridad, QA, seniors) que sus dueños no ratificaron; sin la unión de DevOps, el máximo de tiempo M1-M3 pasa a 60,9 y supera el techo de 59 ([Anexo E](05-business-case.md), "Pedido inicial") | Ratificar las uniones; o recostear el tramo con las horas sumadas | Confirmarlas o recostear en la validación, antes de la segunda liberación; no comprometer M1-M3 con el techo excedido | Responsables de B, C y D, con Finanzas |
+| Lectura del sobre de capacidad | Estricta (todo contra 1-2,25 FTE) o separada; el supuesto del sobre pide decisión explícita del board, y el Anexo E la ubica "en la aprobación de hoy" dentro de tensiones que rotula como antecedentes | Decidirla hoy; o al liberar los 71, con las agendas de la validación | Decidirla en la segunda liberación, con las agendas; sin esa decisión no se libera M1-M3 ([sobre separado](../../context/supuestos/sobre-de-capacidad-separado.md)) | Board, con Finanzas |
+| Contribución comercial desplazada | El techo no la cuantifica y hoy está sin medir ([Anexo E](05-business-case.md#conclusión-económica)) | Cota en índice; o umbral como condición de la segunda liberación; o informarla sin umbral | Informarla al decidir los 71, estimada por la matriz de la validación; un umbral, si se quiere, lo propone Finanzas | Finanzas y board |
+| Programa cultural ampliado (meses 4-12) | Champions, avanzado, cohortes nuevas y metas de Operaciones no están en los techos del mínimo | Costearlo y autorizarlo aparte; o informar las metas sin comprarlas | Informarlas como propuesta hasta que haya costeo y autorización | Directorio, con Personas y Finanzas |
+| Lectura del mes 3 si la base se extiende | Cinco semanas de prueba y unas 3 de PR maduros (ver "Qué cuesta extender la base") | Lectura reducida y declarada; o correr la lectura hasta 4 semanas, con impacto en M4 | Lectura reducida y declarada, sin atribuir ganancia, porque no mueve fondos en M3; correrla solo si el board lo pide, con su costo | CAIO, Personas y Finanzas; responsable de F |
 | Cuatro condiciones de plataforma | Regla vigente (señal) contra propuesta de B/C | Ratificar; o conservar la vigente como apuesta de aprendizaje explícita | Ratificarlas, con pérdida de aprendizaje declarada | Council y Directorio |
 | Calendario de controles | C conserva M4-M6; el mínimo los costea en M1-M3 | Adelantar con validación de horas; o no iniciar usos nuevos hasta M4 | Adelantar solo lo validado; sin prueba no se usa | Gobierno con Finanzas |
 | Meta de adopción | 80% combinado contra metas por área | Mantener el combinado; o metas por área con combinado informado | Metas por área; definición de "activo" y ventana antes de medir | Directorio, con el OKR 2027 |
