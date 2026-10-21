@@ -279,7 +279,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 <div class="grid g3">
 <div><strong>1.</strong> Aplicar desde el mes 1 la política de IA, aprobada según el responsable del caso. Su versión, acta y alcance se revisan antes de liberar los meses 1-3; el mes 3 comprueba que se aplique. Cambiarla lo decide el Directorio.</div>
 <div><strong>2.</strong> Ninguna decisión de crédito ni scoring con IA durante 12 meses: es un límite que proponemos mientras maduran los controles, no una clasificación normativa. El resto se clasifica caso por caso.</div>
-<div><strong>3.</strong> Ningún uso nuevo sin prueba previa en su herramienta. Si un contrato con un cliente prohíbe un uso, ese uso queda afuera.</div>
+<div><strong>3.</strong> Ningún uso nuevo sin prueba previa en su herramienta. Si un contrato con un cliente prohíbe un uso, ese uso queda afuera. Qué rige para el uso que ya corre sobre clientes, hasta leer sus contratos, queda por decidir antes de liberar los meses 1-3 (Anexo C).</div>
 </div>
 </div>
 
@@ -348,7 +348,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 </div>
 
-<p class="note" style="margin-top:2px">Caja: legal y herramientas. Tiempo: horas de gente de Acme Labs, a su costo. Meses 4-12: no se aprueban hoy; pagan controles, medición y el estudio del asistente, no producto, plataforma, referentes ni cursos nuevos, que necesitan otra decisión. Lo que no pasa ni espera, corta (ver Beneficio). Usar más IA no prueba valor: la adopción no libera fondos, pero si es baja frena o rediseña la formación del tramo.</p>
+<p class="note" style="margin-top:2px">Caja: legal y herramientas. Tiempo: horas de gente de Acme Labs, a su costo. Meses 4-12: no se aprueban hoy; pagan controles, medición y el estudio del asistente, no producto, plataforma, referentes ni cursos nuevos, que necesitan otra decisión. Lo que no pasa ni espera, corta (ver Beneficio). Usar más IA no prueba valor: la adopción no libera fondos. Si es baja, la formación se rediseña y se vuelve a costear antes de comprometer horas nuevas.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
