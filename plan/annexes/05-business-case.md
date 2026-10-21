@@ -1,6 +1,6 @@
 ---
 owner: finance
-status: draft
+status: ready
 title: "Anexo E — Business case y escenarios"
 ---
 

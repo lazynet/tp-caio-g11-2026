@@ -1,6 +1,6 @@
 ---
 owner: architect
-status: draft
+status: ready
 title: "Anexo B — Arquitectura y roadmap técnico"
 ---
 

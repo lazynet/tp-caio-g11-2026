@@ -1,6 +1,6 @@
 ---
 owner: caio
-status: draft
+status: ready
 marp: true
 theme: acme
 paginate: true

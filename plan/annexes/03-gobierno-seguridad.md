@@ -1,6 +1,6 @@
 ---
 owner: governance
-status: draft
+status: ready
 title: "Anexo C — Gobierno, seguridad y compliance"
 ---
 

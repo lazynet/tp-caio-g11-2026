@@ -1,6 +1,6 @@
 ---
 owner: caio
-status: draft
+status: ready
 title: "Anexo F — Roadmap ajustado por riesgo"
 ---
 

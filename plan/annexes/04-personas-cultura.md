@@ -1,6 +1,6 @@
 ---
 owner: people
-status: draft
+status: ready
 title: "Anexo D — Personas, cambio y roadmap cultural"
 ---
 
