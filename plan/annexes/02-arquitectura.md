@@ -424,7 +424,7 @@ desde que el usuario dispone de acceso y prerrequisitos acordados hasta que
 completa el flujo de prueba y pasa la aceptación de integración definida antes
 de observarlo. Fuente: marcas del sandbox/CI y bitácora de la sesión. Registrá
 tiempo transcurrido y tiempo de trabajo por separado, población y ventana;
-reportá dispersión, integraciones completadas y pendientes, sin borrar fallas.
+reportá dispersión, integraciones completadas y abiertas, sin borrar fallas.
 
 **Secundaria propuesta:** consultas de soporte por integración (tickets y
 consultas de la misma tarea / intentos de integración elegibles), con ventana
