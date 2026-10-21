@@ -5,10 +5,10 @@ description: "Las cuatro fases trimestrales que propone el curso para un plan de
 tags: [m3, plan-maestro, roadmap, fases]
 sources:
   - id: m3u4-doc
-    resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12.pdf
+    resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12pdf.pdf
     title: "M3U4, documento de lectura (Unidad 12), estrategia integral y análisis en profundidad"
 status: draft
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T17:30:00Z }
+generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
 # Cuatro fases trimestrales
@@ -49,8 +49,9 @@ slides sin hitos ni fechas.
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el texto
-  extraído del documento el 2026-10-21; sin paginación.
+* Ficha en borrador, sin verificación humana. El agente cotejó el PDF localizado el
+  2026-10-21: las fases trimestrales están en p. 3; el ejemplo de retail y el
+  ejercicio, en pp. 5-6. Las páginas cuentan desde la primera página del archivo.
 * El curso presenta las fases como lo que "generalmente" se hace, no como un estándar.
   El plan del TIF usa otro esquema (gates por tramo con una decisión en el mes 3); es una
   diferencia que el equipo puede justificar.
@@ -59,4 +60,4 @@ slides sin hitos ni fechas.
 * El "Centro de Excelencia" del T4 se relaciona con
   [Council vs CoE](/conceptos/m1u4-council-vs-coe.md).
 
-[^m3u4-doc]: M3U4, documento de lectura (Unidad 12), estrategia integral a 12 meses y análisis en profundidad
+[^m3u4-doc]: M3U4, documento de lectura (Unidad 12), estrategia integral a 12 meses, p. 3; análisis en profundidad, pp. 5-6.

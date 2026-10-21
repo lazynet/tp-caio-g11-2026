@@ -472,10 +472,15 @@ Los PR [#50](https://github.com/lazynet/tp-caio-g11-2026/pull/50) y
 [#53](https://github.com/lazynet/tp-caio-g11-2026/pull/53) incorporaron 18 fichas de
 material como borradores: su incorporación no declara verificación humana.
 
+Martín dio por cerrada la recopilación de material de #22 el 21/10/2026:
+las presentaciones disponibles son oficiales y suficientes. Se incorporaron
+M2U1/M2U2 y se acepta que el prompt base del Corrector IA no esté disponible.
+
 Para habilitar la entrega falta:
 
-- **Material faltante:** EUR-Lex 2026/1744 y M3U4, que bloquean `material/huecos.md`.
-  Se sigue en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
+- **Cotejos regulatorios externos:** verificar o corregir las afirmaciones
+  normativas usadas en los anexos, que conservan el bloqueo de `material/huecos.md`.
+  Se sigue en [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56).
 - **Defensa:** acordar quién presenta cada slide (hay una propuesta en
   `defense/storyline.md`) y hacer el ensayo, en [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21).
 - **Propuesta de Lucho:** rebasarla sobre el deck nuevo antes de evaluarla, en

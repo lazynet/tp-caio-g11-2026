@@ -8,7 +8,7 @@ sources:
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_10.pdf
     title: "M3U2, documento de lectura (el archivo dice Unidad 10)"
 status: draft
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T17:30:00Z }
+generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
 # Qué es
@@ -23,9 +23,9 @@ automatización y el caso Logística Sur con el programa Pioneros IA.[^m3u2-doc]
 
 | Aporte | Dónde |
 |---|---|
-| [Mini caso de resistencia en contabilidad](/casos/m3u2-caso-contabilidad.md), con tres acciones de respuesta | Autoevaluación |
-| Respuesta modelo con tres funciones de un AI Champion en RRHH: catalizador de casos de uso, punto de apoyo y formación, y puente con el equipo de IA | Autoevaluación |
-| Recursos de los champions: además de tiempo asignado (10% de la jornada), "un presupuesto para pequeñas iniciativas" y, como incentivo, bonificaciones o premios | Red de AI Champions |
+| [Mini caso de resistencia en contabilidad](/casos/m3u2-caso-contabilidad.md), con tres acciones de respuesta | Autoevaluación, pp. 9-10 |
+| Respuesta modelo con tres funciones de un AI Champion en RRHH: catalizador de casos de uso, punto de apoyo y formación, y puente con el equipo de IA | Autoevaluación, p. 9 |
+| Recursos de los champions: además de tiempo asignado (10% de la jornada), "un presupuesto para pequeñas iniciativas" y, como incentivo, bonificaciones o premios | Red de AI Champions, p. 5 |
 
 Fuente: [^m3u2-doc]
 
@@ -41,8 +41,9 @@ sobre Acme Labs.
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el texto
-  extraído del documento el 2026-10-21; sin paginación, se citan secciones.
+* Ficha en borrador, sin verificación humana. El agente cotejó el PDF localizado el
+  2026-10-21: literacy estratificada (pp. 3-4), champions (p. 5) y autoevaluación
+  (pp. 9-10). Las páginas cuentan desde la primera página del archivo.
 * "Investigaciones demuestran que las empresas con programas de embajadores de IA
   reportan tasas de adopción significativamente más altas" no trae fuente. No va en una
   slide como dato.
@@ -50,4 +51,4 @@ sobre Acme Labs.
   no desarrolla ADKAR ni otro modelo de Prosci. El hueco de ADKAR, Kotter y Lean Change
   sigue abierto.
 
-[^m3u2-doc]: M3U2, documento de lectura (Unidad 10)
+[^m3u2-doc]: M3U2, documento de lectura (Unidad 10), pp. 3-5 y 9-10; referencias, p. 10.
