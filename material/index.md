@@ -21,6 +21,8 @@ okf_version: "0.2"
 * [M2U4 AIOps, observabilidad y economía](/unidades/m2u4-aiops.md) - Operación de sistemas de IA en producción, con evals, versionado, release gates y tokenomics
 * [Memoria, contexto y harness](/unidades/memoria-contexto-harness.md) - Data management en soluciones de GenAI, con las 10 fallas de contexto y el modelo Agente = Modelo + Harness
 * [M3U1 Seguridad, riesgos y resiliencia](/unidades/m3u1-seguridad.md) - Ataques a sistemas de IA y cómo defenderse, de prompt injection a red teaming
+* [M3U1 Seguridad, documento de lectura (Unidad 9)](/unidades/m3u1-documento-u9.md) - Documento de lectura de 9 páginas de M3U1, con inyección directa e indirecta, tácticas avanzadas, un marco de DLP con gateway y sandboxing, y el caso FinBot
+* [M3U1 Clase 9, Hoy atacamos (presentación de la sesión)](/unidades/m3u1-clase-9.md) - Presentación de 15 láminas de la clase de seguridad, con la regla de dos de tres, tres fugas de datos, secretos, red teaming medido, marcos de referencia y un scorecard para el directorio
 * [M3U2 Cambio y AI Literacy](/unidades/m3u2-cambio-literacy.md) - Gestión del cambio y alfabetización en IA por rol, con programa de champions
 * [M3U3 Talento, reestructuración y fronteras futuras](/unidades/m3u3-talento.md) - Perfil de talento AI-ready, transición responsable, compensación en el futuro sintético y un Deep Research sobre un rol crítico
 * [M3U4 Cierre: Plan Maestro de IA](/unidades/m3u4-plan-maestro.md) - Estrategia de 12 meses, roadmap técnico-financiero-cultural, financial storytelling y capstone de panel ejecutivo
@@ -108,9 +110,13 @@ okf_version: "0.2"
 
 * [Capas de seguridad en IA](/conceptos/m3u1-capas-seguridad.md) - Síntesis de la unidad en tres capas, prevención, detección y respuesta, con las técnicas de cada una
 * [DLP en sistemas de IA](/conceptos/m3u1-dlp-datos-en-riesgo.md) - Qué datos hay que proteger en un sistema de IA y las cuatro estrategias de prevención de fuga de datos
+* [Tres fugas de datos y destino permitido por tipo de dato](/conceptos/m3u1-fugas-y-destinos-de-datos.md) - Las vías por las que se escapan datos en sistemas de IA, del usuario, del modelo y operativa, y a qué destino puede ir cada tipo de dato según la Clase 9
+* [Marcos de seguridad de IA, para qué sirve cada uno](/conceptos/m3u1-marcos-seguridad.md) - Cuándo usar OWASP Top 10 LLM, OWASP Top 10 agéntico, MITRE ATLAS y NIST AI RMF con AI 600-1, según la Clase 9
 * [Pipeline de datos seguro](/conceptos/m3u1-pipeline-datos-seguro.md) - Las tres etapas de un pipeline que evita exponer datos sensibles en su recorrido por el sistema de IA
 * [Red teaming corporativo en IA](/conceptos/m3u1-proceso-red-teaming.md) - Qué es el red teaming aplicado a IA, para qué sirve, sus cuatro pasos y las metodologías de ataque
 * [Prompt injection y jailbreaks](/conceptos/m3u1-prompt-injection-jailbreaks.md) - Qué es la inyección de prompts, cómo se clasifican los jailbreaks, qué riesgos generan y cómo se mitigan
+* [Regla de dos de tres para agentes](/conceptos/m3u1-regla-dos-de-tres.md) - Regla de diseño de la Clase 9: sin supervisión humana, un agente puede leer contenido no confiable, acceder a datos sensibles o actuar hacia afuera, pero como máximo dos de las tres
+* [Scorecard de seguridad de IA para el directorio](/conceptos/m3u1-scorecard-seguridad-directorio.md) - Los diez controles con madurez de 0 a 3 y los tres indicadores que, según la Clase 9, el CAIO le lleva al directorio
 
 # Conceptos: M3U2 Cambio y AI Literacy
 
@@ -136,6 +142,7 @@ okf_version: "0.2"
 # Casos
 
 * [Caso Mercurio SA, operating model, readiness, ownership, autonomía y cambio regulatorio](/casos/m1u4-mercurio-sa.md) - Actividad integradora de M1U4 sobre una empresa argentina de ecommerce de 350 empleados sin CAIO, con cinco iniciativas de IA y un giro regulatorio
+* [Caso FinBot, inyección indirecta contra un agente financiero](/casos/m3u1-finbot.md) - Caso del documento de M3U1 en que un red team usa texto oculto en un blog para que un agente que resume documentos agregue una frase dictada, releído en la Clase 9 con la regla de dos de tres
 * [Red team contra un agente de IA corporativo](/casos/m3u1-red-team-agente.md) - Ejercicio de la unidad en que un red team compromete un agente con acceso a bases internas, con hallazgos y recomendaciones
 
 # Framework: EU AI Act
