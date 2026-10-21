@@ -1528,7 +1528,9 @@ la prueba según F; no declarar valor ni ampliar con datos insuficientes.
 
 Todo «hoy», «recomendado» o «aprueba» dentro de esta sección y su tabla se refiere
 al pedido completo. No constituye el pedido vigente ni libera caja o tiempo del
-paquete mínimo. Los gates técnicos vigentes siguen en F, pendiente de integración.
+paquete mínimo. El pedido vigente y sus gates están en
+[F, «Gates por condición (pasa, espera, corta)»](06-roadmap-riesgo.md#gates-por-condición-pasa-espera-corta).
+Los importes y compromisos de esta alternativa no se trasladan al mínimo.
 
 **Pedido de hoy, único.** Elige la vía del contractor desde el mes 1 y autoriza solo
 su tramo de los meses 1-3 (hasta 16,5 de caja, dentro del techo de 33); los tramos de los meses 4-12
@@ -1747,7 +1749,9 @@ salida declarada por adelantado.
 - **Continuidad por gate:** M4-M6 2/14 de caja/tiempo, con descubrimiento de
   integración; M7-M9 2/11; M10-M12 2/11. No aprobada hoy. Plataforma abierta
   en M3/M6/M9, con nuevo costeo del futuro evitable y cuatro condiciones propuestas,
-  pendientes de ratificación. F y slides deben integrar este pedido.
+  pendientes de ratificación. [F, «Línea de tiempo integrada»](06-roadmap-riesgo.md#línea-de-tiempo-integrada)
+  y las slides [«Roadmap técnico, financiero y cultural» y «Costo y riesgo»](../slides.md)
+  presentan este pedido mínimo y sus liberaciones condicionadas.
 - **Exposición al consumo, también con el mínimo:** el incremental modelado a
   12× es 211-267k USD al año, con o sin plan; no es consumo futuro facturado ni
   ahorro observado. El mínimo no lo mitiga con gateway. Compararlo con toda la
