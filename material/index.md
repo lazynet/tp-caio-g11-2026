@@ -121,7 +121,7 @@ okf_version: "0.2"
 
 # Conceptos: M3U3 Talento, reestructuración y fronteras futuras
 
-* [Compensación en el futuro sintético](/conceptos/m3u3-compensacion-futuro-sintetico.md) - Qué capacidades humanas valorará el mercado y los cuatro modelos de compensación emergentes que plantea el curso
+* [Compensación en el futuro sintético](/conceptos/m3u3-compensacion-futuro-sintetico.md) - Qué capacidades humanas valorará el mercado, los tres modelos de compensación emergentes que plantea el curso y su principio de transparencia y equidad salarial.
 * [Deep Research de impacto en un rol crítico](/conceptos/m3u3-deep-research-rol-critico.md) - Estudio estructurado en cuatro fases para diseñar la versión futura de un rol crítico, con sus preguntas guía y resultados esperados
 * [Perfil de talento AI-ready](/conceptos/m3u3-perfil-talento-ai-ready.md) - Las cuatro habilidades del profesional AI-ready y los tres pilares de adaptabilidad y aprendizaje continuo que propone el curso para contratar y desarrollar
 * [Transición responsable del talento](/conceptos/m3u3-transicion-responsable.md) - Cuatro estrategias de transición, reskilling vs. upskilling e imperativo ético (transparencia, equidad, participación), con la cautela sobre el 70% de retención
