@@ -10,7 +10,11 @@ sources:
   - id: m1u2
     resource: Módulo 1 — Unidad 2 — Portfolio, priorización y ejecución de los 100 días.pdf
     title: "M1U2, pp. 2, 5-6 y 10"
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U2 pp. 2, 5-6 y 10 y FINMA 08/2024 (2.2 y 2.7) cotejadas; ejes de decisión y clasificación AI Act del ejemplo son atribución del curso; ejemplos ilustrativos. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 ---
 # Las tres opciones

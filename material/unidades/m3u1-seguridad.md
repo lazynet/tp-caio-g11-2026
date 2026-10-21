@@ -12,7 +12,11 @@ sources:
     resource: https://genai.owasp.org/llm-top-10/
     title: OWASP Top 10 for LLM Applications 2025
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:20:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U1 (archivo Unidad 9), 20 slides, estructura, cita y síntesis en tres capas; IDs OWASP LLM01/02/06/07 contra el Top 10 2025 leído el 2026-10-20. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Contenido

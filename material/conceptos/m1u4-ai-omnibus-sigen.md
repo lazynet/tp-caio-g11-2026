@@ -19,7 +19,11 @@ sources:
   - id: sigen-197
     resource: https://www.argentina.gob.ar/normativa/nacional/norma-426859/texto
     title: Infoleg/argentina.gob.ar, Resolución 197/2026 de la SIGEN
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 11, 19 y 25 más Cooley, Abreu, ERTICO y la Resolución SIGEN 197/2026 (texto en argentina.gob.ar): fechas y alcance contrastados con fuentes secundarias; EUR-Lex y anexo de SIGEN sin leer. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 

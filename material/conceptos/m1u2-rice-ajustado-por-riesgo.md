@@ -10,7 +10,11 @@ sources:
   - id: rice-productplan
     resource: https://productplan.com/glossary/rice-scoring-model
     title: "ProductPlan, RICE scoring model"
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U2 pp. 2, 4-5 y 8 cotejadas contra el PDF y origen de RICE cotejado con ProductPlan (secundaria); la fórmula de ajuste por riesgo no existe en el curso. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 ---
 # Fórmula

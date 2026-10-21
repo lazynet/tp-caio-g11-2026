@@ -16,7 +16,11 @@ sources:
   - id: abreu-omnibus
     resource: https://abreuadvogados.com/en/conhecimento/publications/digital-omnibus-regulation-on-ai-the-key-amendments-to-the-ai-act/
     title: Abreu Advogados, Digital Omnibus Regulation on AI, the key amendments to the AI Act
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 10-11 y slide 14 de las slides v3: champions, condiciones de funcionamiento y AI literacy; art. 4 contrastado solo con Cooley y Abreu. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 

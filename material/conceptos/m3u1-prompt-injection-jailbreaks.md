@@ -12,7 +12,11 @@ sources:
     resource: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
     title: OWASP Top 10 for LLM Applications 2025, LLM01 Prompt Injection
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:09:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U1 (archivo Unidad 9) slides 3-6 y OWASP LLM01:2025 Prompt Injection leída el 2026-10-20; fidelidad al curso, no eficacia de las defensas. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Definición

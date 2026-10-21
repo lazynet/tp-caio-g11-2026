@@ -17,7 +17,11 @@ sources:
     resource: https://aclanthology.org/2025.emnlp-main.1742/
     title: Kurfali y Östling. Conflicting Needles in a Haystack, EMNLP 2025
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Memoria-Contexto-Harness.pdf, p. 3-13 (diez fallas y labs) y las tres fuentes externas (Chroma 2025, Liu et al. 2023, Kurfali y Östling EMNLP 2025) abiertas el 2026-10-20. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Idea central

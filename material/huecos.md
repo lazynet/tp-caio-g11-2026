@@ -3,7 +3,11 @@ type: Hueco
 title: Huecos del material
 description: Qué falta en el material de la cursada, qué quedó sin verificar y qué cifras no pueden ir a una slide.
 tags: [pendiente, cursada, cautelas]
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Estado del corpus al 2026-10-20 tras el cotejo de las 44 fichas exigidas por la entrega; describe faltantes y cautelas, no acredita su contenido. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
 ---
 

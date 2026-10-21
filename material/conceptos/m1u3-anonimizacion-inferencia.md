@@ -7,7 +7,11 @@ sources:
   - id: m1u3
     resource: Modulo 1 Unidad 3.pdf
     title: M1U3, documento de 13 páginas
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U3 (PDF de 13 páginas), p. 2, 6 y 12: PII, estrategias de entrenamiento e inferencia, patrón de enmascarar y revertir; herramientas como atribución del curso sin cotejo. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 

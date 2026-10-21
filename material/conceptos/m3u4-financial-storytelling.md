@@ -9,7 +9,11 @@ sources:
     title: M3U4 (el archivo dice Unidad 12), slides
     pages: slides 12 a 14 y 18
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:30:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U4 (archivo Unidad 12) slides 12-14 y 18; sin fórmulas ni ejemplo numérico en la fuente. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Definición

@@ -8,7 +8,11 @@ sources:
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_2_Unidad_7.pdf
     title: M2U3 (el archivo dice Unidad 7), 20 slides
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M2U3 (archivo 'Unidad 7'), slides 13-18: definición de nodos y arcos, cuatro objetivos, beneficios y cita de cierre; la sección 'Cómo lo usa el plan' queda fuera, es lectura del repo. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Qué es

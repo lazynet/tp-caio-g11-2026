@@ -19,7 +19,11 @@ sources:
   - id: cooley-omnibus
     resource: https://cdp.cooley.com/digital-ai-omnibus-delays-key-deadlines-introduces-new-rules/
     title: Cooley, Digital AI Omnibus delays key deadlines and introduces new rules
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 18-20 y 23, slide 22, página de NIST AI RMF: función de los tres marcos y contenido del curso; ISO y EUR-Lex sin recotejar. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 

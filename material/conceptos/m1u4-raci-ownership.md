@@ -10,7 +10,11 @@ sources:
   - id: m1u4-slides
     resource: Presentacion - Módulo 1 — Unidad 4 — Rol del CAIO, gobernanza y arquitectura organizacional v3.pdf
     title: M1U4, slides v3 (24 slides)
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 8-10 y slides 11-13: cinco roles de ownership, RACI con una sola A, ejemplo del copiloto comercial y ejercicio de refunds. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 

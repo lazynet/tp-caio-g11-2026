@@ -13,7 +13,11 @@ sources:
     title: M3U2, resumen visual (3 páginas, solo imagen)
     pages: página 3
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:15:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U2 (archivo Unidad 10) slides 11-14 y resumen visual pág. 3; la cifra del 60% es afirmación del curso sin fuente primaria. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Reacciones esperadas

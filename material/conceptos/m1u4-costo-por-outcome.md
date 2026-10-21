@@ -7,7 +7,11 @@ sources:
   - id: m1u4-lectura
     resource: Lectura - Módulo 1 — Unidad 4 — Rol del CAIO, gobernanza y arquitectura organizacional.pdf
     title: M1U4, lectura de 25 páginas
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 12-13: costo por outcome aceptado, cinco ejemplos y cadena cost, adoption, outcome, value. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 

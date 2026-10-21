@@ -9,7 +9,11 @@ sources:
     title: M3U3 (el archivo dice Unidad 11), slides
     pages: slides 11 a 14 (la 11 es la portada del capítulo)
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:30:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U3 (archivo Unidad 11) slides 11-14: tres modelos de compensación y el principio de transparencia y equidad salarial; son modelos prospectivos sin cifras. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Qué valorará el mercado

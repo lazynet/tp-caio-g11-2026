@@ -7,7 +7,11 @@ sources:
   - id: m1u1-extendida
     resource: Módulo 1 — Unidad 1 — Mentalidad CAIO y liderazgo en la era IA.pdf
     title: "M1U1 extendida, pp. 2-4, 8 y 10"
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U1 extendida pp. 2-4, 8 y 10 cotejadas contra el PDF; las relaciones con otros conceptos son lectura del bundle. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 ---
 # Definición

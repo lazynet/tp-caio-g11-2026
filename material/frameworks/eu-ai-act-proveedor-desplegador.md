@@ -14,7 +14,11 @@ sources:
     resource: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
     title: Reg. (UE) 2026/1744, Digital Omnibus on AI, DOUE L de 24.7.2026
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Reglamento (UE) 2024/1689, texto español del DOUE (EU AI Act 2024.pdf), arts. 2, 3.3, 3.4, 3.49, 4, 9-21, 25-27, 43, 49, 72 y 73; las modificaciones del Reglamento 2026/1744 no se cotejaron. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Alcance territorial (art. 2)

@@ -13,7 +13,11 @@ sources:
     title: M3U2, resumen visual (3 páginas, solo imagen)
     pages: página 2
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:15:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U2 (archivo Unidad 10) slides 7-10 y 18-19 y resumen visual pág. 2; fidelidad al curso, no la necesidad de una red de champions en Acme Labs. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Qué son

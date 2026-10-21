@@ -9,7 +9,11 @@ sources:
     title: M3U3 (el archivo dice Unidad 11), slides
     pages: slides 3 a 5
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:30:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U3 (archivo Unidad 11) slides 3-5: cuatro habilidades y tres pilares de adaptabilidad; marco sin niveles ni métricas. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Definición

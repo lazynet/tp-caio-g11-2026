@@ -8,7 +8,11 @@ sources:
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_2_Unidad_8.pdf
     title: M2U4 (el archivo dice Unidad 8), 20 slides
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M2U4 (archivo 'Unidad 8'), slides 7-10: versionado, qué se versiona (según slide 8) y los cuatro tipos de release gates. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Versionado

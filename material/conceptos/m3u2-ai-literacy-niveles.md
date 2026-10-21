@@ -13,7 +13,11 @@ sources:
     title: M3U2, resumen visual (3 páginas, solo imagen)
     pages: página 1
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:15:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U2 (archivo Unidad 10) slides 3-6 y resumen visual pág. 1; fidelidad al curso, no el nivel de literacy de ninguna organización. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Definición

@@ -8,7 +8,11 @@ sources:
     resource: BAIC - Guia GenAi.pdf
     title: BAIC, Guía GenAI, p. 16
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "BAIC, Guía GenAI, p. 16 (pasos 3 y 4): tres perfiles y las dos opciones de selección de tecnología; se omiten presupuesto, licencias y criterios de selección. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 Parte de [BAIC, Guía GenAI](/frameworks/baic-guia-genai.md); corresponde a los pasos 3 y 4 de la [metodología](/frameworks/baic-metodologia-7-pasos.md).

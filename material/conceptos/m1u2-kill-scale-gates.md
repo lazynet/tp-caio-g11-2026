@@ -10,7 +10,11 @@ sources:
   - id: m1u2
     resource: Módulo 1 — Unidad 2 — Portfolio, priorización y ejecución de los 100 días.pdf
     title: "M1U2, pp. 2, 8 y 11"
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U2 pp. 2, 8 y 11 y FINMA 08/2024 cotejadas; el ritmo trimestral es práctica del curso, el inventario del AI Act es afirmación del curso sin cotejar; umbrales ilustrativos. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 ---
 # Definición

@@ -9,7 +9,11 @@ sources:
     title: Notas de la clase del 2026-09-29
     author: human:lazynet
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:10:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Nota de clase del 2026-09-29 en LazyMind (resumen automático, sin transcripción): la ficha reproduce sus ideas; las cifras quedan declaradas sin fuente primaria. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Unidad que respalda

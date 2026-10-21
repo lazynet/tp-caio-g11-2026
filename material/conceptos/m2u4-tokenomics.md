@@ -14,7 +14,11 @@ sources:
     resource: https://platform.claude.com/docs/en/build-with-claude/prompt-caching
     title: Anthropic, documentación de prompt caching (consultada 2026-10-11)
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M2U4 (archivo 'Unidad 8'), slides 11-15, más el resumen de FrugalGPT y los multiplicadores de prompt caching de Anthropic consultados el 2026-10-20; el rango 60-80% se declara sin fuente. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Qué es un token

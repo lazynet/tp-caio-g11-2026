@@ -8,7 +8,11 @@ sources:
     resource: Memoria-Contexto-Harness.pdf
     title: Data Management en Soluciones de Gen IA, 16 páginas
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Memoria-Contexto-Harness.pdf, p. 16 (los cinco elementos de diseño); la tabla de relación con las fallas queda fuera, es lectura del repo. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Los cinco elementos (p. 16)
