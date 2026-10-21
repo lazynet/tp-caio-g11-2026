@@ -9,10 +9,10 @@ cada objeción **todavía no se acordó** (#21): al final va una propuesta para 
 equipo la discuta. El pedido es aprobar el plan y sus resoluciones R-01 a R-32
 ([Anexo G](../plan/annexes/07-resoluciones.md)). Cada cifra remonta a un anexo de
 `plan/annexes/`. Las 84 fichas de fuente que exigía el chequeo de entrega al
-20/10/2026 están `verified`, con declaración humana de Martín de esa fecha.
-Después se sumó un supuesto de metas culturales, en borrador y sin verificación
-humana, que citan los Anexos D y F; cuántas fichas exige hoy la entrega se dice
-cuando el chequeo vuelva a ser válido. La declaración del 20/10 acredita el
+20/10/2026 quedaron `verified`, con declaración humana de Martín de esa fecha. Al
+aplicar las resoluciones del Directorio se editaron supuestos: al 21/10, `context/`
+tiene 26 fichas `verified` y 15 supuestos en borrador que alimentan cifras del deck,
+y vuelven a `verified` solo con una declaración humana nueva. La declaración del 20/10 acredita el
 cotejo de cada ficha con la fuente declarada, no la validación de los supuestos
 con datos internos de Acme Labs, ni el acuerdo del equipo, ni una aprobación
 empresarial. La anonimización todavía necesita la revisión de un humano
@@ -74,13 +74,13 @@ cada gate.
 - El beneficio principal es capacidad con calidad: PR aceptados contra una base
   congelada, con retrabajo e incidentes primero. **Beneficio de caja estimado: 0;
   ingreso nuevo: 0** en el modelo ([Anexo E](../plan/annexes/05-business-case.md)).
-- El paso no está asegurado: con el caso base y un semiancho de 3 puntos, el
-  límite inferior queda debajo de los umbrales. Pasa solo con calidad sin
-  deterioro demostrado; una calidad incierta espera y un daño corta. Y con la
-  cohorte y los datos reales la medición puede no distinguir la mejora: la
-  validación lo estima y, si no alcanza, el método se reformula antes de la
-  segunda liberación o el caso se presenta como espera y corte. Por eso medimos
-  primero ([Anexo F](../plan/annexes/06-roadmap-riesgo.md); [Anexo B](../plan/annexes/02-arquitectura.md), "Viabilidad").
+- El paso no está asegurado: con 15-20 personas, la medición solo distingue con
+  buena probabilidad una mejora cercana al +25%. Por eso el mes 6 no lee valor
+  (sigue por adopción, costo y controles, y corta por daño o caída demostrada) y
+  el mes 9 pide solo que la mejora se distinga de cero, sin daño de calidad. Si
+  no se distingue, el beneficio acreditado es 0 y no se amplía: el año compra
+  aprendizaje con techo, no una promesa de retorno
+  ([Anexo F](../plan/annexes/06-roadmap-riesgo.md#gates-por-condición-pasa-espera-corta); [Anexo B](../plan/annexes/02-arquitectura.md), «Gate de valor»).
 - El asistente de integración es una hipótesis de producto: antes del mes 6
   medimos el tiempo a la primera integración exitosa con la documentación y el
   soporte actuales. Sin problema, base y señal comercial escrita, no se construye.
@@ -135,12 +135,15 @@ barata por el ROI de un paquete que no medimos.
   antes de M1, el límite es 8; si se sale en M3, es 79 hasta cerrar y 85 en el
   año con núcleo aprobado al salir. Son techos de recursos, sin restar beneficio:
   no es pérdida económica incremental ni salida de caja, y no incluyen la
-  contribución del trabajo facturable que puedan desplazar, que sigue sin medir. Esperar seis semanas en M6 y
-  cortar tiene techo 102; cortar sin esperar, 95.
+  contribución del trabajo facturable que puedan desplazar, que sigue sin medir.
+  Después, el Directorio fija hoy techos por tramo de 16k, 13k y 13k USD (121k en
+  el año) y no los libera: el CEO firma cada gate dentro del techo de su tramo.
+  Cortar en el mes 6 tiene techo 95; en el 9, 108; esperar seis semanas en el
+  mes 9 y cortar, 115. Ningún camino supera 121.
 - **Si sale bien:** pasan los gates y el mínimo sigue todo el año sin
-  plataforma, con costo proyectado ≈70k USD (27-113) y techos de 118k USD sin
-  gastar reservas, 121k USD con cierre. Lo que
-  queda en la mano es base, lecturas de throughput y calidad con su intervalo,
+  plataforma, con costo proyectado ≈71k USD (27-114) dentro de un techo anual de
+  121k USD (118k sin gastar las reservas de cierre). Lo que
+  queda en la mano es base, la lectura de valor del mes 9 con su intervalo,
   controles probados y la decisión del año 2 con evidencia; no un ingreso
   ([Anexo F](../plan/annexes/06-roadmap-riesgo.md#escenarios)).
 - **Narrativa financiera, datos → narrativa → decisión** ([Anexo E](../plan/annexes/05-business-case.md#insumos-para-el-deck)):
@@ -168,12 +171,13 @@ barata por el ROI de un paquete que no medimos.
 **Valor medible; seguridad aceptable; fondos por decisión.** "Les pedimos aprobar
 el plan y, con él, las resoluciones R-01 a R-32 del Anexo G. Hoy liberan diez días
 hábiles de validación con agenda propia: hasta 8k USD de tiempo y caja incremental
-0. Fijan el techo de 79k USD hasta el mes 3. Delegan en el CEO la segunda
+0. Fijan los techos: 79k USD hasta el mes 3 y 121k en el año, con 16k, 13k y 13k
+por tramo. Delegan en el CEO la segunda
 liberación, de hasta 71k USD, solo con diagnóstico, capacidad, método ratificado,
 roles nombrados y presupuesto 2027 comprobado; si falta algo, reduce o detiene.
 También delegan en el CEO la firma de los gates de los meses 3, 6, 9 y 12, siempre
-dentro de los techos: todo lo que supere un techo o amplíe el alcance vuelve a
-este Directorio. La aprobación económica no habilita prácticas sin controles. En
+dentro del techo de cada tramo: todo lo que supere el techo de un tramo o amplíe
+el alcance vuelve a este Directorio. La aprobación económica no habilita prácticas sin controles. En
 marzo traemos base, política, matriz, pruebas y aprendizajes. El año sigue
 condicionado."
 
@@ -192,7 +196,9 @@ condicionado."
 - Que la plataforma pasa al año 2: se relee en los meses 3, 6 y 9.
 - Que el 72,5% es un techo de adopción: es el resultado de cumplir exactamente
   las metas por área.
-- Que el escenario base pasa las lecturas de los meses 6 y 9.
+- Que el escenario base pasa la lectura del mes 9, o que el mes 6 lee valor: el
+  mes 6 decide por adopción, costo y controles.
+- Que se mide a cada persona: los indicadores son totales por área y semana (R-13).
 - Que hay horas libres porque la utilización promedio lo sugiere.
 - Que los secretos están bloqueados en toda superficie: hay compensatorios
   probados y residual aceptado, no bloqueo universal.
@@ -225,8 +231,11 @@ condicionado."
   empleo no tiene excepciones: el Directorio la adopta con asesoría laboral (R-20),
   con las causas previas ajenas a la IA afuera, y es costosa de deshacer una vez
   comunicada.
-- Que el CEO puede subir un techo: firma dentro de los techos; lo demás vuelve al
-  Directorio (R-04).
+- Que el CEO puede subir un techo o compensar entre tramos: firma dentro del techo
+  de cada tramo (79k hasta el mes 3; 16k, 13k y 13k después); lo demás vuelve al
+  Directorio (R-03, R-04).
+- Que "no contratamos" sin matiz: el plan no amplía la nómina, y toda incorporación
+  externa es excepción del Directorio con caja propia (R-20).
 
 ## Reparto de presentadores: propuesta del equipo, no acordada
 

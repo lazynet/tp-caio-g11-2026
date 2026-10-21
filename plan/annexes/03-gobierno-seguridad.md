@@ -156,7 +156,7 @@ lo mantiene el Responsable de seguridad y el AI Council lo revisa cada mes.
 | **Fuga de secretos.** Secretos en prompts o contexto | Media | Medio-alto | Escaneo de secretos antes del envío, lista cerrada de lo que nunca se envía (definida en el antecedente de abril; vigencia en la versión aprobada por contrastar), rotación | **Primer secreto expuesto confirmado**: se revoca y rota, se contiene el canal afectado y el responsable de seguridad decide con evidencia si se reanuda. **Recurrencia** (más de uno por tramo de tres meses): se bloquea el envío automático y se pasa a revisión previa |
 | **IA embebida sin aprobar.** IA embebida en software de terceros activada sin aprobación (por ejemplo, funciones nuevas en la suite ofimática) | Alta | Medio | Inventario que incluye IA embebida; revisión de cambios de proveedor cada mes | Función de IA activa con datos Restringidos: se desactiva y se registra como incidente |
 | **Un gobierno que frena.** Cuello de botella: el gobierno frena la entrega y la adopción migra por fuera | Media | Alto | Intake en niveles, objetivo de 5 días hábiles para riesgo medio (cambio de política, R-07), autoservicio para riesgo bajo | Más del 20% de las solicitudes supera el SLA dos meses seguidos: se simplifica el proceso, no se agrega personal |
-| **Capacidad concentrada.** Gobierno y seguridad dependen de pocas personas | Alta | Alto | Dos suplentes con runbooks, nombrados en el acta de la segunda liberación (uno es el Responsable de Tecnología, suplente de la suspensión); documentación de decisiones en el inventario | Una persona clave se va y no hay suplente entrenado: congelar altas de casos de riesgo alto |
+| **Capacidad concentrada.** Gobierno y seguridad dependen de pocas personas | Alta | Alto | Dos suplentes con runbooks, nombrados en el acta de la segunda liberación: el Responsable de Tecnología, suplente de la suspensión solo para contener, y un senior de arquitectura distinto de quien produce los controles, suplente del tech lead de gobierno para operar el intake y convocar el Council, sin verificar ni votar controles que produjo ([Anexo D](04-personas-cultura.md)); documentación de decisiones en el inventario | Una persona clave se va y no hay suplente entrenado: congelar altas de casos de riesgo alto |
 | **Depender de un proveedor.** Dependencia de un solo proveedor de modelos y cambio de precio o límites | Media | Medio | Diseño neutral al modelo; ver [supuesto](../../context/supuestos/precio-y-dependencia-de-modelos.md) | Aumento de precio o recorte de límites que rompa el presupuesto: revisar proveedor en el Council |
 | **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin validación del Responsable de seguridad aparece en una propuesta: se retira, se escala al AI Council (R-11) y se corrige el procedimiento |
 
@@ -279,7 +279,7 @@ función es habilitar; no aprueba nada que el Council no le delegó.
 | Salida a producción de una función de IA en el producto | Dueño de producto | Ingeniería | Seguridad, Operaciones | Council |
 | Excepción a una política de riesgo alto | Council | Responsable de seguridad | Dueño del caso | CEO |
 | Incidente de IA (contención y comunicación al cliente) | Responsable de seguridad | Ingeniería | Comercial, Legal externo | CEO, Council |
-| Suspensión preventiva de un uso por control incumplido, incidente o residual no aceptado | Responsable de seguridad; suplente para contener: Responsable de Tecnología | Ingeniería y dueño del caso | Dueño del riesgo | Council y CEO |
+| Suspensión preventiva de un uso por control incumplido, incidente o residual no aceptado | Responsable de seguridad; suplente para contener: Responsable de Tecnología, que no reanuda ni acepta residuales | Ingeniería y dueño del caso | Dueño del riesgo | Council y CEO; el titular, de inmediato, si actuó el suplente |
 | Tope de costo de IA por PR o por consumo (parámetro de control) | CFO | Tecnología | Council | CEO |
 | Gasto de IA fuera del presupuesto | CEO dentro del techo del tramo; Directorio por encima (R-04) | Tecnología | CFO (verifica), Council | Directorio |
 
@@ -1156,7 +1156,7 @@ tiempo 27k-72k redondeado). Tres lecturas de gobierno sobre esas cifras:
 
 - **Techo de los meses 1-3.** Legal aparece en tres lugares distintos. La preparación
   de 2026 no lleva caja: prepara el alcance y pide cotización. M1-M3 lleva el legal focalizado,
-  2.000-6.000 USD de caja (8-16 h × 250-375 USD/h, fila «Revisión legal focalizada» del
+  2.000-6.000 USD de caja (8-16 h × 250-375 USD/h, [supuesto sin cotización](../../context/supuestos/precios-externos-sin-cotizar.md), fila «Revisión legal focalizada» del
   insumo del paquete mínimo). El renglón anual de 8.000-20.000 USD es la referencia del
   paquete completo, que no se autoriza hoy, y el focalizado sustituye su porción inicial sin
   sumarse dos veces. Además, los meses 1-3 llevan el tiempo del líder, de seguridad, del
@@ -1173,12 +1173,15 @@ tiempo 27k-72k redondeado). Tres lecturas de gobierno sobre esas cifras:
   ([R-03](07-resoluciones.md#autoridad-y-liberaciones); [Anexo E](05-business-case.md),
   "Segunda autorización: inicio M1-M3 y reservas de salida"). Son núcleos de alcances
   distintos: se usa uno u otro según el alcance, nunca la suma.
-  **Quién supervisa y quién pausa tras el corte.** El Council no sesiona: sus 30 h por tramo
-  (5 asientos × 6 h) no caben en las 36 h del núcleo. Supervisa el Responsable de Tecnología,
-  con las 12 h de tech lead; pausa el Responsable de seguridad, con sus 12 h, y el Responsable
-  de Tecnología lo suple solo para contener. El CEO recibe un informe por tramo. Ningún
-  residual que le toque al Council se acepta ni se habilita un uso nuevo: el uso que lo
-  necesite se suspende, y reabrirlo es una decisión del Directorio. Costo en velocidad: el
+  **Quién supervisa y quién pausa tras el corte.** El Council sesiona una vez por tramo, 2 h
+  con sus cinco asientos (10 h dentro de las 36 h del núcleo); la cadencia mensual, 30 h por
+  tramo (5 asientos × 6 h), no cabe ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md)).
+  Entre sesiones supervisa el Responsable de Tecnología, con las horas de tech lead; pausa el
+  Responsable de seguridad, con las suyas, y el Responsable de Tecnología lo suple solo para
+  contener. En la sesión del tramo, el Council revisa las suspensiones y puede aceptar el
+  residual de un uso ya habilitado según R-10; no habilita un uso nuevo: reabrirlo es una
+  decisión del Directorio. El CEO recibe un informe por tramo. Otra cadencia exige que el CFO
+  recostee antes del gate de salida y, si no entra en el techo, vuelve al Directorio. Costo en velocidad: el
   que ya trae el corte; es la opción más reversible porque no compromete horas fuera del núcleo.
 - **Controles técnicos y demostración externa, condicionales** (ver "Licencia para vender" y
   "Controles según la decisión del mes 3"). Los renglones de los controles técnicos (pasarela,
@@ -1191,8 +1194,9 @@ tiempo 27k-72k redondeado). Tres lecturas de gobierno sobre esas cifras:
 El dictamen focalizado de M1 (2.000-6.000 USD) es la única caja legal dentro de 79k USD.
 Después de M1, la caja de cada tramo M4-M12 tiene techo de 2k USD y hoy es provisión de
 herramientas (0-1,725k USD calculados en el [Anexo E](05-business-case.md)); si esa provisión
-no se usa, el techo alcanza para 5,3-8 h de asesor (2.000 / 375 a 2.000 / 250). Las horas son
-supuestos de planificación, sin cotización, a la tarifa del dictamen de M1.
+no se usa, el techo neto de la contingencia del 15% (2.000 / 1,15 ≈ 1.739 USD) alcanza para
+4,6-7,0 h de asesor (1.739 / 375 a 1.739 / 250). Las horas son supuestos de planificación,
+sin cotización, a la tarifa del dictamen de M1 ([supuesto sin cotización](../../context/supuestos/precios-externos-sin-cotizar.md)).
 
 | Tramo | Consulta | Disparador | Horas (supuesto) | Caja (USD) |
 |---|---|---|---|---|

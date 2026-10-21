@@ -1549,8 +1549,7 @@ Proyección de continuar el mínimo todo el año, sin esperas: **≈71 (27-114)
 económicos**, rango calculado **26,9375-114,11875**: caja 2,3-13,8 y tiempo
 con preparación técnica y validación organizativa 24,6375-100,31875
 (14,3625 + 1,4875 + 3,3375 + 2 × 2,725 = 24,6375; 58,265625 + 6,35 + 13,784375 +
-2 × 10,959375 = 100,31875). Medio 70,53, que redondea a 71. Antes de sumar el
-verificador y la fila de Personas era ≈70 (27-113).
+2 × 10,959375 = 100,31875). Medio 70,53, que redondea a 71; incluye el verificador y la fila de Personas.
 
 **Techos por tramo ([R-03 y R-04](07-resoluciones.md#autoridad-y-liberaciones)).**
 El Directorio los fija hoy al aprobar el plan, sin liberarlos; el CEO firma cada
@@ -1611,8 +1610,8 @@ por separado abajo, con aprobación explícita antes de iniciarla:
 Estas exposiciones son límites propuestos, no costos ejecutados. La continuidad
 y el núcleo se reemplazan en los tramos restantes; no se suman ambas ramas.
 El núcleo restante requiere aprobación explícita en cada gate de salida.
-La fila «Espera M6 vencida» (102 / 105) de versiones anteriores deja de existir:
-el mes 6 ya no espera por medición, porque seis semanas más no compran precisión
+No hay espera en el mes 6:
+ese gate no espera por medición, porque seis semanas más no compran precisión
 ([Anexo B](02-arquitectura.md), «Gate de valor»).
 
 **Antecedente del mínimo, sin validación organizativa:** 89 era el máximo de
@@ -1952,7 +1951,7 @@ salida declarada por adelantado.
   mes 9 (el mes 6 ya no espera por medición); al vencer y cortar: 115/116. Sustituye continuidad y núcleo del período, sin
   duplicarlos, y va dentro del techo de su tramo: ningún camino con espera supera
   121; si uno lo hiciera, o superara el techo de un tramo, vuelve al Directorio.
-- **Proyección anual sin esperas:** ≈71 (27-114), antes ≈70 (27-113): suma el verificador y la fila de Personas; techos sin gastar reservas
+- **Proyección anual sin esperas:** ≈71 (27-114), con el verificador y la fila de Personas; techos sin gastar reservas
   118 (15 caja / 103 tiempo), con cierre 121. No es autorización anual.
 - **Continuidad por gate:** M4-M6 2/14 de caja/tiempo (techo del tramo 16), con
   descubrimiento de integración; M7-M9 2/11 (13); M10-M12 2/11 (13). Los techos

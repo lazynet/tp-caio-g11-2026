@@ -163,7 +163,9 @@ Siguiendo el método de diagnóstico de madurez (paso 6: dos o tres brechas crí
    fuentes elegibles, verificar su acceso e integración y producir la línea de
    base de productividad, incidentes y costo. Sin línea de base no hay gates
    ([Anexo B](02-arquitectura.md)).
-3. **Adopción y valor:** medir capacidad con calidad contra la base y, en el
+3. **Adopción y valor:** medir capacidad con calidad contra la base, sabiendo que
+   con una cohorte de 15-20 personas solo se distinguen mejoras grandes: el valor
+   se lee en el mes 9 ([R-19](07-resoluciones.md#arquitectura-y-medición)); en el
    producto, observar el problema del asistente de integración (tiempo a la
    primera integración exitosa) antes del mes 6. Sin problema, base y señal
    comercial escrita, no se construye ([Anexo F](06-roadmap-riesgo.md)).
