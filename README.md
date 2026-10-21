@@ -169,6 +169,7 @@ y la defensa de su sección. El reparto acordado está en la tabla siguiente.
 | Personas y cultura | Pablo | [Anexo D](plan/annexes/04-personas-cultura.md) | [#18](https://github.com/lazynet/tp-caio-g11-2026/issues/18) |
 | Business case | Gabriela | [Anexo E](plan/annexes/05-business-case.md) | [#19](https://github.com/lazynet/tp-caio-g11-2026/issues/19) |
 | Roadmap y riesgo | Maxi | [Anexo F](plan/annexes/06-roadmap-riesgo.md) | [#20](https://github.com/lazynet/tp-caio-g11-2026/issues/20) |
+| Resoluciones del Directorio | Martín | [Anexo G](plan/annexes/07-resoluciones.md) | [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52) |
 | Defensa: storyline, objeciones y quién presenta cada slide | Lucho | [Defensa](defense/) | [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21) |
 | Verificar el material de la cursada | Eduardo | [Índice del material](material/index.md) | [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22) |
 
@@ -454,12 +455,26 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 ## Pendientes del equipo
 
 Ya están acordados el caso Acme Labs, el alcance de toda la organización, los
-ocho responsables y el formato de entrega. Falta verificar las fuentes y resolver
-las revisiones de cada sección antes del peer review.
+ocho responsables y el formato de entrega.
 
-La revisión del diagnóstico se sigue en [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15).
-La verificación de datos del caso se coordina con los responsables de A–F;
-la del material y sus faltantes, incluido M3U4, en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
+Las decisiones que estaban abiertas en las revisiones de sección (#11–#14 y
+#16–#20) las tomó Martín como responsable del caso, el 21/10, para llegar al peer
+review. El Directorio las sintetiza en el [Anexo G](plan/annexes/07-resoluciones.md)
+(R-01 a R-32) y entran con [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52).
+No son ratificaciones de cada responsable: si no estás de acuerdo con una,
+objetala en el PR o en su issue.
+
+Para habilitar la entrega falta:
+
+- **Re-verificar 15 supuestos** de `context/supuestos/` que cambiaron y quedaron
+  en `draft`. La verificación es una declaración humana; después de editarlos,
+  corré `python3 scripts/rebase-findings.py .` y recién ahí el gate de entrega.
+- **Material faltante:** EUR-Lex 2026/1744 y M3U4, que bloquean `material/huecos.md`.
+  Se sigue en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
+- **Defensa:** acordar quién presenta cada slide (hay una propuesta en
+  `defense/storyline.md`) y hacer el ensayo, en [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21).
+- **Propuesta de Lucho:** rebasarla sobre el deck nuevo antes de evaluarla, en
+  [#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27).
 
 ## Backlog y seguimiento
 
@@ -473,18 +488,15 @@ de pendientes en otro archivo.
 - [Cargar un issue con los formularios del equipo](https://github.com/lazynet/tp-caio-g11-2026/issues/new/choose).
 
 Las ocho tareas de revisión están en [Responsables del equipo](#responsables-del-equipo).
-Los comentarios de Gabriela se siguen por separado para discutir cada propuesta:
+Los comentarios de Gabriela se discutieron en issues propios y quedaron resueltos
+en el Anexo G:
 
-| Issue | Qué hay que resolver | Coordina |
+| Issue | Qué se resolvió | Resolución |
 |---|---|---|
-| [#11](https://github.com/lazynet/tp-caio-g11-2026/issues/11) | Explicitar el valor estratégico de gobierno, seguridad y medición | Gabriela |
-| [#12](https://github.com/lazynet/tp-caio-g11-2026/issues/12) | Diseñar una exploración comercial gradual antes de decidir un MVP | Gabriela |
-| [#13](https://github.com/lazynet/tp-caio-g11-2026/issues/13) | Validar capacidad real y ajustar presupuesto y formación | Gabriela |
-| [#14](https://github.com/lazynet/tp-caio-g11-2026/issues/14) | Definir una validación inicial antes de liberar el esfuerzo completo | Gabriela |
-
-Orden propuesto: resolver capacidad y validación inicial (#13 y #14), trabajar
-el relato estratégico (#11) en paralelo y encajar la exploración comercial (#12)
-en el esfuerzo acordado. Es una propuesta de secuencia, no una aprobación de cambios.
+| [#11](https://github.com/lazynet/tp-caio-g11-2026/issues/11) | Valor estratégico de gobierno, seguridad y medición | R-11, R-12 |
+| [#12](https://github.com/lazynet/tp-caio-g11-2026/issues/12) | Exploración comercial como opción no costeada | R-30, R-31 |
+| [#13](https://github.com/lazynet/tp-caio-g11-2026/issues/13) | Capacidad, formación y horas de M1-M3 | R-21, R-24, R-25, R-26 |
+| [#14](https://github.com/lazynet/tp-caio-g11-2026/issues/14) | Validación inicial antes de liberar el esfuerzo completo | R-02, R-05, R-24 |
 
 ### Estados
 
