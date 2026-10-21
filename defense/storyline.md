@@ -6,8 +6,11 @@ de toda la organización (producto y operación interna), acordados en comisión
 Coordina la defensa (storyline, objeciones y quién presenta cada slide) Lucho,
 según el reparto del `README.md`. Quién presenta cada slide y quién responde
 cada objeción **todavía no se acordó** (#21). Cada cifra remonta a un anexo de
-`plan/annexes/`. Las 84 fichas de fuente que exige el chequeo de entrega están
-`verified`, con declaración humana de Martín del 20/10/2026: eso acredita el
+`plan/annexes/`. Las 84 fichas de fuente que exigía el chequeo de entrega al
+20/10/2026 están `verified`, con declaración humana de Martín de esa fecha.
+Después se sumó un supuesto de metas culturales, en borrador y sin verificación
+humana, que citan los Anexos D y F; cuántas fichas exige hoy la entrega se dice
+cuando el chequeo vuelva a ser válido. La declaración del 20/10 acredita el
 cotejo de cada ficha con la fuente declarada, no la validación de los supuestos
 con datos internos de Acme Labs, ni el acuerdo del equipo, ni una aprobación
 empresarial. La anonimización todavía necesita la revisión de un humano

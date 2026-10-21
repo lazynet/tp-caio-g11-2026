@@ -124,9 +124,9 @@ revisados ([Anexo C](03-gobierno-seguridad.md)); controles aplicables probados
 antes de usar cada superficie; las
 uniones de horas de B, C y D confirmadas o el tramo recosteado; la lectura del sobre
 de capacidad (estricta o separada) para decidir, y la contribución desplazada que
-estime la matriz, informada sin umbral propio, y la decisión humana sobre qué rige
-para el uso que ya corre sobre clientes hasta tener su matriz (ver "Decisiones
-pendientes"). Si falta
+estime la matriz, informada sin umbral propio, y qué rige para el uso que ya corre sobre clientes
+hasta tener su matriz: la propuesta del plan y la decisión de la autoridad del
+residual según el Anexo C (ver "Decisiones pendientes"). Si falta
 algo, se reduce o difiere y se vuelve a costear; el presupuesto no libera tiempo por sí solo.
 La autorización económica permite producir base y controles; cada superficie
 requiere dictamen, restricciones y pruebas aplicables antes de habilitar usos.
@@ -595,7 +595,7 @@ toman ahí rigen para el plan siguiente.
 
 | Tema | Tensión | Alternativas | Propuesta del CAIO | Decide |
 |---|---|---|---|---|
-| Uso existente sobre clientes, hasta tener su matriz | El [Anexo C](03-gobierno-seguridad.md), "Regla transitoria hasta que exista la matriz de un cliente", no dispone detenerlo, salvo la suspensión preventiva de Seguridad, y no lo acepta automáticamente | Las que plantea el Anexo C: pausarlo; o aceptarlo como residual. Si se acepta, lo hace la autoridad del criterio de aceptación del Anexo C | Sin propuesta del CAIO: es decisión de los responsables humanos de C, antes de la segunda liberación. No crea permiso ni autoridad nuevos | Responsables humanos de C; aceptación según el criterio del Anexo C |
+| Uso existente sobre clientes, hasta tener su matriz | El [Anexo C](03-gobierno-seguridad.md), "Regla transitoria hasta que exista la matriz de un cliente", no dispone detenerlo, salvo la suspensión preventiva de Seguridad, y no lo acepta automáticamente | Las que plantea el Anexo C: pausarlo; o aceptarlo como residual. Si se acepta, lo hace la autoridad del criterio de aceptación del Anexo C | Sin propuesta del CAIO. Antes de la segunda liberación hay dos pasos distintos: qué propone el plan lo define, en el equipo del TP, el responsable del Anexo C; la decisión de ejecutar en Acme Labs (pausar o aceptar) la toma la autoridad del riesgo residual según el criterio de aceptación del Anexo C, y Seguridad conserva la suspensión preventiva. No crea permiso ni autoridad nuevos | Propuesta: responsable del Anexo C en el equipo del TP. Ejecución: autoridad del residual según el criterio del Anexo C |
 | Capacidad del mínimo | 2,0-2,8 FTE internos M1-M3 sin horas libres demostradas | Liberar por persona con trabajo desplazado; reducir alcance; resecuenciar | Matriz privada antes de iniciar; sin ella no se inicia | Managers, Operaciones y Finanzas |
 | Solapes de horas del mínimo | Finanzas une horas de B, C y D (DevOps, Seguridad, QA, seniors) que sus dueños no ratificaron; sin la unión de DevOps, el máximo de tiempo M1-M3 pasa a 60,9 y supera el techo de 59 ([Anexo E](05-business-case.md), "Pedido inicial") | Ratificar las uniones; o recostear el tramo con las horas sumadas | Confirmarlas o recostear en la validación, antes de la segunda liberación; no comprometer M1-M3 con el techo excedido | Responsables de B, C y D, con Finanzas |
 | Lectura del sobre de capacidad | Estricta (todo contra 1-2,25 FTE) o separada; el supuesto del sobre pide decisión explícita del board, y el Anexo E la ubica "en la aprobación de hoy" dentro de tensiones que rotula como antecedentes | Decidirla hoy; o al liberar los 71, con las agendas de la validación | Decidirla en la segunda liberación, con las agendas; sin esa decisión no se libera M1-M3 ([sobre separado](../../context/supuestos/sobre-de-capacidad-separado.md)) | Board, con Finanzas |
