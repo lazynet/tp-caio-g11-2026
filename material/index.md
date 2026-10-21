@@ -13,14 +13,22 @@ okf_version: "0.2"
 
 # Unidades
 
+* [M3U2 Gestión del cambio y AI Literacy, documento de lectura (Unidad 10)](/unidades/m3u2-documento-u10.md) - Documento de lectura de M3U2: cubre lo mismo que el resumen visual de la unidad y agrega un mini caso de resistencia en contabilidad y una respuesta modelo sobre champions en RRHH.
+* [M3U3 Talento, reestructuración y fronteras futuras, documento de lectura (Unidad 11)](/unidades/m3u3-documento-u11.md) - Documento de lectura de M3U3, con hiring para AI-readiness, escenarios de impacto laboral y transición responsable, enfoques de compensación y dos casos resueltos.
+* [M3U4 Cierre y defensa del Plan Maestro, documento de lectura (Unidad 12)](/unidades/m3u4-documento-u12.md) - Documento de lectura de M3U4, con un plan a 12 meses por trimestres, roadmap integrado de ejemplo, financial storytelling en cuatro partes y preguntas del panel ejecutivo por rol.
+
 * [M1U1 Mentalidad CAIO](/unidades/m1u1-mentalidad-caio.md) - Mentalidad y liderazgo del CAIO, con diagnóstico de madurez en 5 dimensiones y plan de 30 días
 * [M1U2 Portfolio y 100 días](/unidades/m1u2-portfolio-100-dias.md) - Priorización del portfolio de IA y ejecución de los primeros 100 días en tres fases
 * [M1U3 Datos y contexto](/unidades/m1u3-datos-contexto.md) - Estrategias de contexto, data contracts y manejo de datos sensibles en inferencia
 * [M1U4 Rol, gobernanza y arquitectura org.](/unidades/m1u4-rol-gobernanza.md) - Decision rights, escala de autonomía, Governance Stack y marco regulatorio del CAIO
+* [M2U1 Vibe Coding y prototipado ejecutivo](/unidades/m2u1-vibe-coding.md) - Programación en lenguaje natural, prompting y transición de un prototipo ejecutivo a una solución en producción.
+* [M2U2 Agentes de IA y arquitecturas modernas](/unidades/m2u2-agentes-arquitecturas.md) - Taxonomías y patrones de agentes, uso de herramientas, recuperación de contexto y evaluación del recorrido hasta el resultado.
 * [M2U3 Fuerza laboral aumentada y sintética](/unidades/m2u3-fuerza-laboral.md) - Cómo conviven personas y agentes, del grafo humano-agente a los sistemas multi-agente
 * [M2U4 AIOps, observabilidad y economía](/unidades/m2u4-aiops.md) - Operación de sistemas de IA en producción, con evals, versionado, release gates y tokenomics
 * [Memoria, contexto y harness](/unidades/memoria-contexto-harness.md) - Data management en soluciones de GenAI, con las 10 fallas de contexto y el modelo Agente = Modelo + Harness
 * [M3U1 Seguridad, riesgos y resiliencia](/unidades/m3u1-seguridad.md) - Ataques a sistemas de IA y cómo defenderse, de prompt injection a red teaming
+* [M3U1 Seguridad, documento de lectura (Unidad 9)](/unidades/m3u1-documento-u9.md) - Documento de lectura de 9 páginas de M3U1, con inyección directa e indirecta, tácticas avanzadas, un marco de DLP con gateway y sandboxing, y el caso FinBot
+* [M3U1 Clase 9, Hoy atacamos (presentación de la sesión)](/unidades/m3u1-clase-9.md) - Presentación de 15 láminas de la clase de seguridad, con la regla de dos de tres, tres fugas de datos, secretos, red teaming medido, marcos de referencia y un scorecard para el directorio
 * [M3U2 Cambio y AI Literacy](/unidades/m3u2-cambio-literacy.md) - Gestión del cambio y alfabetización en IA por rol, con programa de champions
 * [M3U3 Talento, reestructuración y fronteras futuras](/unidades/m3u3-talento.md) - Perfil de talento AI-ready, transición responsable, compensación en el futuro sintético y un Deep Research sobre un rol crítico
 * [M3U4 Cierre: Plan Maestro de IA](/unidades/m3u4-plan-maestro.md) - Estrategia de 12 meses, roadmap técnico-financiero-cultural, financial storytelling y capstone de panel ejecutivo
@@ -108,9 +116,13 @@ okf_version: "0.2"
 
 * [Capas de seguridad en IA](/conceptos/m3u1-capas-seguridad.md) - Síntesis de la unidad en tres capas, prevención, detección y respuesta, con las técnicas de cada una
 * [DLP en sistemas de IA](/conceptos/m3u1-dlp-datos-en-riesgo.md) - Qué datos hay que proteger en un sistema de IA y las cuatro estrategias de prevención de fuga de datos
+* [Tres fugas de datos y destino permitido por tipo de dato](/conceptos/m3u1-fugas-y-destinos-de-datos.md) - Las vías por las que se escapan datos en sistemas de IA, del usuario, del modelo y operativa, y a qué destino puede ir cada tipo de dato según la Clase 9
+* [Marcos de seguridad de IA, para qué sirve cada uno](/conceptos/m3u1-marcos-seguridad.md) - Cuándo usar OWASP Top 10 LLM, OWASP Top 10 agéntico, MITRE ATLAS y NIST AI RMF con AI 600-1, según la Clase 9
 * [Pipeline de datos seguro](/conceptos/m3u1-pipeline-datos-seguro.md) - Las tres etapas de un pipeline que evita exponer datos sensibles en su recorrido por el sistema de IA
 * [Red teaming corporativo en IA](/conceptos/m3u1-proceso-red-teaming.md) - Qué es el red teaming aplicado a IA, para qué sirve, sus cuatro pasos y las metodologías de ataque
 * [Prompt injection y jailbreaks](/conceptos/m3u1-prompt-injection-jailbreaks.md) - Qué es la inyección de prompts, cómo se clasifican los jailbreaks, qué riesgos generan y cómo se mitigan
+* [Regla de dos de tres para agentes](/conceptos/m3u1-regla-dos-de-tres.md) - Regla de diseño de la Clase 9: sin supervisión humana, un agente puede leer contenido no confiable, acceder a datos sensibles o actuar hacia afuera, pero como máximo dos de las tres
+* [Scorecard de seguridad de IA para el directorio](/conceptos/m3u1-scorecard-seguridad-directorio.md) - Los diez controles con madurez de 0 a 3 y los tres indicadores que, según la Clase 9, el CAIO le lleva al directorio
 
 # Conceptos: M3U2 Cambio y AI Literacy
 
@@ -121,12 +133,19 @@ okf_version: "0.2"
 
 # Conceptos: M3U3 Talento, reestructuración y fronteras futuras
 
+* [Cuatro enfoques de compensación en el futuro sintético](/conceptos/m3u3-enfoques-compensacion.md) - Pago por habilidades, bonos por colaboración humano-IA, valoración del juicio y la supervisión, e incentivos a la innovación, según el documento de M3U3.
+* [Escenarios de impacto laboral y plan de transición responsable](/conceptos/m3u3-escenarios-impacto-laboral.md) - Los tres escenarios de impacto de la IA en un rol (aumento, redefinición y desplazamiento) y los cinco pasos del plan de transición responsable del documento de M3U3.
+
 * [Compensación en el futuro sintético](/conceptos/m3u3-compensacion-futuro-sintetico.md) - Qué capacidades humanas valorará el mercado, los tres modelos de compensación emergentes que plantea el curso y su principio de transparencia y equidad salarial.
 * [Deep Research de impacto en un rol crítico](/conceptos/m3u3-deep-research-rol-critico.md) - Estudio estructurado en cuatro fases para diseñar la versión futura de un rol crítico, con sus preguntas guía y resultados esperados
 * [Perfil de talento AI-ready](/conceptos/m3u3-perfil-talento-ai-ready.md) - Las cuatro habilidades del profesional AI-ready y los tres pilares de adaptabilidad y aprendizaje continuo que propone el curso para contratar y desarrollar
 * [Transición responsable del talento](/conceptos/m3u3-transicion-responsable.md) - Cuatro estrategias de transición, reskilling vs. upskilling e imperativo ético (transparencia, equidad, participación), con la cautela sobre el 70% de retención
 
 # Conceptos: M3U4 Cierre: Plan Maestro de IA
+
+* [Panel ejecutivo, preguntas y estrategia de respuesta por rol](/conceptos/m3u4-panel-preguntas-por-rol.md) - Qué mira cada rol del panel (CEO, CFO, COO y CTO) en la defensa del Plan Maestro, la pregunta tipo de cada uno y la estrategia de respuesta que propone el curso.
+* [Plan a 12 meses por trimestres y roadmap integrado](/conceptos/m3u4-plan-trimestral.md) - Las cuatro fases trimestrales que propone el curso para un plan de IA a 12 meses y el ejemplo de roadmap integrado técnico, financiero y cultural de una cadena de retail.
+* [Financial storytelling en cuatro partes: contexto, datos, narrativa y visión](/conceptos/m3u4-storytelling-cuatro-partes.md) - Estructura del documento de M3U4 para contar el caso financiero de un plan de IA ante ejecutivos, con un ejemplo de narrativa para el panel.
 
 * [Capstone: panel ejecutivo](/conceptos/m3u4-capstone-panel-ejecutivo.md) - Qué demuestra la defensa del Plan Maestro ante un panel ejecutivo y cómo prepararse según el curso
 * [Estrategia de IA a 12 meses](/conceptos/m3u4-estrategia-12-meses.md) - Visión y misión, áreas prioritarias, los cuatro pilares de la estrategia y los tres grupos de KPIs que conectan la IA con el negocio
@@ -135,7 +154,12 @@ okf_version: "0.2"
 
 # Casos
 
+* [Caso de resistencia en contabilidad a la conciliación con IA](/casos/m3u2-caso-contabilidad.md) - Mini caso de M3U2: un equipo contable se resiste a una herramienta de conciliación automática de facturas, y la respuesta del curso combina co-creación, upskilling y un piloto supervisado.
+* [Caso analistas de riesgo crediticio de un banco](/casos/m3u3-caso-analistas-riesgo-banco.md) - Caso de la autoevaluación de M3U3: cómo rediseñar la compensación de analistas de riesgo cuando la IA automatiza la evaluación inicial del 90% de las solicitudes.
+* [Caso Deep Research, el Gerente de Marketing](/casos/m3u3-caso-gerente-marketing.md) - Caso resuelto del documento de M3U3 que analiza el impacto de la IA en el rol de Gerente de Marketing y lo redefine como Director de Orquestación de Marketing.
+
 * [Caso Mercurio SA, operating model, readiness, ownership, autonomía y cambio regulatorio](/casos/m1u4-mercurio-sa.md) - Actividad integradora de M1U4 sobre una empresa argentina de ecommerce de 350 empleados sin CAIO, con cinco iniciativas de IA y un giro regulatorio
+* [Caso FinBot, inyección indirecta contra un agente financiero](/casos/m3u1-finbot.md) - Caso del documento de M3U1 en que un red team usa texto oculto en un blog para que un agente que resume documentos agregue una frase dictada, releído en la Clase 9 con la regla de dos de tres
 * [Red team contra un agente de IA corporativo](/casos/m3u1-red-team-agente.md) - Ejercicio de la unidad en que un red team compromete un agente con acceso a bases internas, con hallazgos y recomendaciones
 
 # Framework: EU AI Act

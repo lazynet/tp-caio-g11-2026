@@ -169,6 +169,7 @@ y la defensa de su sección. El reparto acordado está en la tabla siguiente.
 | Personas y cultura | Pablo | [Anexo D](plan/annexes/04-personas-cultura.md) | [#18](https://github.com/lazynet/tp-caio-g11-2026/issues/18) |
 | Business case | Gabriela | [Anexo E](plan/annexes/05-business-case.md) | [#19](https://github.com/lazynet/tp-caio-g11-2026/issues/19) |
 | Roadmap y riesgo | Maxi | [Anexo F](plan/annexes/06-roadmap-riesgo.md) | [#20](https://github.com/lazynet/tp-caio-g11-2026/issues/20) |
+| Resoluciones del Directorio | Martín | [Anexo G](plan/annexes/07-resoluciones.md) | [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52) |
 | Defensa: storyline, objeciones y quién presenta cada slide | Lucho | [Defensa](defense/) | [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21) |
 | Verificar el material de la cursada | Eduardo | [Índice del material](material/index.md) | [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22) |
 
@@ -429,6 +430,10 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 
 - **Borrador** acepta fichas `draft` con faltantes identificados. Toda ficha
   nueva declara `status`; una sin `status` se lee como `draft`.
+- **Aceptación documental** (`status: accepted`) declara que una persona acepta
+  incorporar la ficha al corpus. Requiere `accepted: { by, at, scope }`, con
+  `by: human:<usuario-github>`, fecha ISO y alcance explícito. No acredita cotejo
+  primario, verificación del contenido ni vigencia normativa; conserva las cautelas.
 - **Entrega** (`--delivery`, con `--path` para las fichas que usa la entrega;
   `--mode delivery` para el deck) exige `status: verified` con el bloque
   `verified:` de una persona y un deck sin pendientes. `--path` acepta solo
@@ -454,12 +459,40 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 ## Pendientes del equipo
 
 Ya están acordados el caso Acme Labs, el alcance de toda la organización, los
-ocho responsables y el formato de entrega. Falta verificar las fuentes y resolver
-las revisiones de cada sección antes del peer review.
+ocho responsables y el formato de entrega.
 
-La revisión del diagnóstico se sigue en [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15).
-La verificación de datos del caso se coordina con los responsables de A–F;
-la del material y sus faltantes, incluido M3U4, en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
+Las decisiones que estaban abiertas en las revisiones de sección (#11–#14 y
+#16–#20) las tomó Martín como responsable del caso, el 21/10, para llegar al peer
+review. El Directorio las sintetiza en el [Anexo G](plan/annexes/07-resoluciones.md)
+(R-01 a R-32), integradas con [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52).
+Los nueve issues asociados quedaron cerrados.
+No son ratificaciones de cada responsable: si no estás de acuerdo con una,
+objetala en el PR o en su issue.
+
+Los 15 supuestos modificados quedaron revalidados por instrucción expresa de
+Martín el 21/10/2026, con alcance actualizado y conservando su tipo `Supuesto`.
+Se corrió `scripts/rebase-findings.py`; el catálogo quedó reanclado.
+Los PR [#50](https://github.com/lazynet/tp-caio-g11-2026/pull/50),
+[#53](https://github.com/lazynet/tp-caio-g11-2026/pull/53) y
+[#57](https://github.com/lazynet/tp-caio-g11-2026/pull/57) incorporaron 20 fichas de
+material, incluidas M2U1/M2U2. Por instrucción expresa de Martín del 21/10/2026,
+quedaron en `accepted`, con su aceptación documental declarada y sus cautelas
+vigentes. Su aceptación no acredita verificación humana del contenido ni
+reemplaza los cotejos externos de #56.
+
+Martín dio por cerrada la recopilación de material de #22 el 21/10/2026:
+las presentaciones disponibles son oficiales y suficientes. Se incorporaron
+M2U1/M2U2 y se acepta que el prompt base del Corrector IA no esté disponible.
+
+Para habilitar la entrega falta:
+
+- **Cotejos regulatorios externos:** verificar o corregir las afirmaciones
+  normativas usadas en los anexos, que conservan el bloqueo de `material/huecos.md`.
+  Se sigue en [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56).
+- **Defensa:** acordar quién presenta cada slide (hay una propuesta en
+  `defense/storyline.md`) y hacer el ensayo, en [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21).
+- **Propuesta de Lucho:** rebasarla sobre el deck nuevo antes de evaluarla, en
+  [#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27).
 
 ## Backlog y seguimiento
 
@@ -473,18 +506,15 @@ de pendientes en otro archivo.
 - [Cargar un issue con los formularios del equipo](https://github.com/lazynet/tp-caio-g11-2026/issues/new/choose).
 
 Las ocho tareas de revisión están en [Responsables del equipo](#responsables-del-equipo).
-Los comentarios de Gabriela se siguen por separado para discutir cada propuesta:
+Los comentarios de Gabriela se discutieron en issues propios y quedaron resueltos
+en el Anexo G:
 
-| Issue | Qué hay que resolver | Coordina |
+| Issue | Qué se resolvió | Resolución |
 |---|---|---|
-| [#11](https://github.com/lazynet/tp-caio-g11-2026/issues/11) | Explicitar el valor estratégico de gobierno, seguridad y medición | Gabriela |
-| [#12](https://github.com/lazynet/tp-caio-g11-2026/issues/12) | Diseñar una exploración comercial gradual antes de decidir un MVP | Gabriela |
-| [#13](https://github.com/lazynet/tp-caio-g11-2026/issues/13) | Validar capacidad real y ajustar presupuesto y formación | Gabriela |
-| [#14](https://github.com/lazynet/tp-caio-g11-2026/issues/14) | Definir una validación inicial antes de liberar el esfuerzo completo | Gabriela |
-
-Orden propuesto: resolver capacidad y validación inicial (#13 y #14), trabajar
-el relato estratégico (#11) en paralelo y encajar la exploración comercial (#12)
-en el esfuerzo acordado. Es una propuesta de secuencia, no una aprobación de cambios.
+| [#11](https://github.com/lazynet/tp-caio-g11-2026/issues/11) | Valor estratégico de gobierno, seguridad y medición | R-11, R-12 |
+| [#12](https://github.com/lazynet/tp-caio-g11-2026/issues/12) | Exploración comercial como opción no costeada | R-30, R-31 |
+| [#13](https://github.com/lazynet/tp-caio-g11-2026/issues/13) | Capacidad, formación y horas de M1-M3 | R-21, R-24, R-25, R-26 |
+| [#14](https://github.com/lazynet/tp-caio-g11-2026/issues/14) | Validación inicial antes de liberar el esfuerzo completo | R-02, R-05, R-24 |
 
 ### Estados
 

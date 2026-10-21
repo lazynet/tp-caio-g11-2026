@@ -1,12 +1,12 @@
 ---
 type: Supuesto
 title: "Umbral de evidencia contractual para la licencia para vender"
-description: "Criterios propuestos para distinguir restricciones, exigencias comerciales de controles y demanda de funciones de IA, sin autorizar inversión ni uso prohibido y con evidencia contractual real pendiente."
+description: "Umbrales sin calibrar para distinguir restricciones, exigencias comerciales de controles y demanda de funciones de IA, usados por la regla de plataforma que ratifica el Directorio, sin autorizar inversión ni uso prohibido."
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó los criterios como propuesta pendiente de ratificación y evidencia real: restricción en al menos uno de los cinco principales; exigencia de controles con consecuencia contractual en uno de los dos principales o dos de los cinco, dentro de 18 meses; y demanda de función como señal distinta. Incluye excluir el uso ante prohibición pura, separar señal de autorización de inversión o ampliación del mínimo, aclarar que licencia para vender no es licencia regulatoria ni venta, no inferir ingresos o repago, limitar concentración a agosto de 2026 y no presumir que todos los clientes sean bancos o PSP. Confirma actualizar BCRA al texto ordenado consultado y publicar solo agregados sin alias ni cláusulas. No acredita contratos revisados, señales observadas ni aprobación empresarial. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Regla de plataforma de R-15: señal contractual y cuatro condiciones, ratificadas por el Directorio al aprobar el plan. Se conserva como diseño sin calibrar la restricción en uno de cinco clientes principales y la exigencia de controles en uno de dos o dos de cinco dentro de 18 meses, separadas de demanda de funciones. El Directorio libera fondos y recalibra a propuesta del AI Council; una prohibición contractual no habilita el uso. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, compliance, clientes, gobierno]
 sources:
   - id: bcra-tecnologia
@@ -24,14 +24,26 @@ sources:
   - id: finanzas
     resource: "plan/annexes/05-business-case.md"
     title: "Anexo E, decisiones separadas de inversión y paquete mínimo vigente"
-generated: { by: codex/gpt-6, at: 2026-10-20 }
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, R-15: plataforma con señal más cuatro condiciones, ratificada por el Directorio"
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21 }
 ---
 # Supuesto
 
-Estos criterios son propuestas sin calibrar, pendientes de ratificación y de
-reunir evidencia contractual real durante el primer trimestre. La expresión
-"licencia para vender" es estratégica: no significa licencia regulatoria ni
-venta confirmada. Verificar esta ficha no acredita que exista una señal.[^gobierno]
+Estos umbrales son supuestos sin calibrar. El Directorio, al aprobar el plan,
+ratifica la regla de gate que los usa: liberar plataforma en el mes 3, 6 o 9
+exige una señal más cuatro condiciones, y la prohibición pura excluye el uso sin
+liberar plataforma (R-15 del Anexo G).
+La ratificación es del criterio, no de que exista una señal.[^resoluciones]
+
+Alcance y hito: la evidencia contractual se reúne en M1-M3 y se lee en la
+decisión del mes 3, con relectura en los meses 6 y 9. Autoridad: el AI Council
+declara la señal; el Directorio libera los fondos de plataforma y es quien
+recalibra los umbrales, en un gate, a propuesta del AI Council. Consecuencia: si
+no se alcanza un umbral o falta una condición, no se libera plataforma y sigue el
+mínimo costeado.[^resoluciones] La expresión "licencia para vender" es
+estratégica: no significa licencia regulatoria ni venta confirmada.[^gobierno]
 
 | Señal | Umbral |
 |---|---|
@@ -77,14 +89,15 @@ probabilidad de perder clientes.[^gobierno][^finanzas]
 
 # Qué lo invalidaría
 
-- Que el board fije otro umbral (por ejemplo, un solo cliente cualquiera).
+- Que el Directorio recalibre el umbral en un gate (por ejemplo, a un solo cliente cualquiera).
 - Que la concentración cambie y los cinco primeros dejen de representar la
   mayor parte de la facturación.
 
 # Cautelas
 
-- Los umbrales (uno de dos, dos de cinco, 18 meses) son una propuesta de
-  `governance`, sin calibrar; los decide el equipo con el board.
+- Los umbrales (uno de dos, dos de cinco, 18 meses) siguen sin calibrar; la
+  regla que los usa la ratifica el Directorio y recalibrarlos es decisión suya
+  en un gate, a propuesta del AI Council.[^resoluciones]
 - Se reemplaza la referencia histórica aislada por el texto ordenado BCRA al
   13/02/2026, consultado el 20/10/2026, con secciones 1.1, 4.6 y 10.3.
   Corresponde revisar cambios posteriores antes de entregar.[^bcra-tecnologia]
@@ -98,4 +111,5 @@ probabilidad de perder clientes.[^gobierno][^finanzas]
 [^cartera]: Cartera y concentración, agosto de 2026: más de 90% en los cinco primeros y cerca del 70% en los dos primeros; fotografía de un mes, sin identificar segmentos de cada cliente.
 [^apetito]: Apetito de riesgo de clientes, verificación propuesta de restricciones y matriz, sin presumir disponibilidad de evidencia contractual.
 [^gobierno]: Anexo C, umbrales propuestos de señal, consecuencias documentadas, evidencia privada y exclusión del uso ante prohibición pura; no acredita señales observadas ni ratificación.
+[^resoluciones]: Anexo G, R-15: regla de plataforma con señal y cuatro condiciones, ratificada por el Directorio al aprobar el plan; el Directorio libera fondos y recalibra umbrales a propuesta del AI Council.
 [^finanzas]: Anexo E, señal como entrada para evaluar una respuesta, con inversión y ampliación del mínimo sujetas a alcance, costeo y autorización propios, sin ingresos ni repago demostrados.

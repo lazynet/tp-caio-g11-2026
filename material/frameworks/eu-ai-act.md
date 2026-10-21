@@ -13,8 +13,8 @@ sources:
     title: Reg. (UE) 2024/1689 en EUR-Lex (fuente primaria)
   - id: ai-omnibus
     resource: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
-    title: Reg. (UE) 2026/1744, Digital Omnibus on AI, DOUE L de 24.7.2026
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
+    title: Reg. (UE) 2026/1744, Ómnibus digital sobre IA, DOUE L de 24.7.2026
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T20:13:00Z }
 ---
 
 # Qué es
@@ -58,12 +58,21 @@ así que alcanza a un proveedor argentino con clientes que operan en Europa.[^eu
   existe y es el Reg. (UE) 2026/1744 (8 de julio de 2026, DOUE L de 24.7.2026,
   en vigor desde el 27 de julio de 2026). Detalle en el
   [calendario](/frameworks/eu-ai-act-calendario-sanciones.md).[^ai-omnibus]
-- **Abierta:** qué fecha rige para la evaluación de conformidad y el registro
-  (arts. 43 y 49) tras el Omnibus. Ver el calendario.
+- **Abierta:** cómo opera la fecha de la evaluación de conformidad y el registro
+  (arts. 43 y 49) tras el Omnibus. Por la letra del art. 113, la sección 5 del
+  cap. III (arts. 40-49) queda en la fecha general, el 2 de agosto de 2026: ninguna
+  excepción del párrafo tercero la nombra, y el Omnibus solo difiere las secciones 1,
+  2 y 3. Cómo opera esa fecha mientras esas secciones están diferidas es una lectura
+  a decidir. El Omnibus sustituye el art. 43.3 y no modifica el art. 49. Ver el
+  calendario.[^eu-ai-act][^ai-omnibus]
 - **Abierta:** aplicabilidad concreta a los clientes de Acme Labs (art. 2.1.c)
   y su tamaño como PyME, que condicionan multas y obligaciones. No se resuelve
   con el material de la cursada.
+- La cautela de los arts. 43 y 49 llegó en el PR #55 (autor en GitHub:
+  edu2020chaparro-ux; herramienta no declarada). La revisión del 2026-10-21
+  (claude-code/claude-opus-5-5) la precisó con el art. 113 de 2024 (p. 123) y del
+  Omnibus (p. 35).
 
 [^eu-ai-act]: Reg. (UE) 2024/1689, texto en español del DOUE.
 [^eu-ai-act-eurlex]: Reg. (UE) 2024/1689 en EUR-Lex: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
-[^ai-omnibus]: Reg. (UE) 2026/1744 (Digital Omnibus on AI), DOUE L de 24.7.2026: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
+[^ai-omnibus]: Reg. (UE) 2026/1744 (Ómnibus digital sobre IA), DOUE L de 24.7.2026: https://eur-lex.europa.eu/eli/reg/2026/1744/oj

@@ -5,8 +5,8 @@ description: "Costos y reservas de salida propuestos, diferenciados entre el mí
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó la composición de salida y sus correcciones: paquete completo con un mes supuesto de preaviso y cierre de infraestructura, rangos de caja 2.417-6.000, 6.000-15.000 y 6.500-17.000 USD y reservas propuestas de 6.000, 15.000 y 17.000 USD según alcance; mínimo con herramientas hasta 500 USD, reserva de caja 1.000 USD y cierre interno 16-24 h senior por 300-1.125 USD, reserva de tiempo 2.000 USD. El preaviso es condición a negociar, legal y red team solo cierran sin costo adicional si sus contratos lo permiten, y la reserva se aprueba antes de ampliar compromisos. Incluye separar continuidad del corte parcial, exposición económica de pérdida de caja y evitar sumar dos veces un cierre ya incluido. Confirmado en esta conversación como supuesto, sin acreditar contratos, ejecución ni aprobación empresarial."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Reservas de salida por alcance: mínimo con caja de hasta 500 USD y reserva de 1.000, cierre interno de 16-24 h y reserva de tiempo de 2.000; paquete completo con preaviso y rangos de cierre supuestos, sujetos a negociación. R-03 separa la continuidad del corte y exige recostear compromisos que excedan la reserva antes de firmar. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, riesgo]
 sources:
   - id: finanzas
@@ -24,6 +24,9 @@ sources:
   - id: convenciones
     resource: "context/supuestos/convenciones-de-calculo.md"
     title: "Convenciones de preparación, caja, tiempo y autorizaciones"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -120,13 +123,16 @@ No se suman de nuevo reservas ya incluidas en los techos del mínimo.[^finanzas]
   contratación del plan, además de un supuesto de costo.
 - Los montos de exposición acumulada por gate están en el Anexo E; esta ficha
   concilia composición de salida y reservas propuestas.
-- La reserva es una regla de autorización propuesta, no una decisión del
-  Directorio: está pendiente de aprobación.
+- El Directorio aprueba la reserva del mínimo (caja 1 / tiempo 2) dentro de la
+  segunda liberación; el CFO la recalcula en cada gate antes de asumir
+  obligaciones nuevas y, sin reserva suficiente, el gate no libera el compromiso
+  nuevo (R-03)[^resoluciones].
 - La verificación registra revisión humana de los supuestos, sin acreditar
   contratos, facturas, ejecución ni aprobación del gasto.
 
 [^finanzas]: Anexo E, "Cuánto pierdo si corto", reservas de cierre del paquete completo, corte mixto y "Pedido inicial: paquete mínimo"; las reservas son propuestas de autorización y el cierre ya incluido no se vuelve a sumar.
 [^minimo]: Paquete mínimo de aprendizaje, sin contractor ni plataforma central; cierre interno de 16-24 h senior y reservas de salida de 1.000 USD de caja y 2.000 USD de tiempo.
-[^precios]: Precios externos sin cotizar, rangos de diseño de telemetría, infraestructura y tenant del piloto, pendientes de contratación y cotización.
+[^precios]: Precios externos sin cotizar, rangos de diseño de telemetría, infraestructura y tenant del piloto; se cotizan solo si un gate libera plataforma o producto, y el CFO verifica la cotización antes de contratar.
 [^costo-rol]: Rangos supuestos de IA aplicada de 4.500-11.000 USD/mes y senior DevOps/QA de 3.000-7.500 USD/mes, con 160 h mensuales para costear.
 [^convenciones]: Convenciones de cálculo y separación de caja y tiempo, preparación previa y liberaciones sujetas a autorización.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

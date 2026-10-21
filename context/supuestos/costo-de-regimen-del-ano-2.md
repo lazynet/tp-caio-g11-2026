@@ -5,8 +5,8 @@ description: "Escenario ilustrativo del paquete completo para el año 2: caja ba
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó los supuestos y cuentas del año 2 del paquete completo: caja base central 48.000 USD (24.000-72.000), producto adicional 45.000 (18.000-72.000), mantenimiento de 1,5 FTE/2.880 h por 94.500 de tiempo (54.000-135.000); totales económicos centrales 142.500 sin producto y 187.500 con producto, rangos 78.000-207.000 y 96.000-279.000. Confirma cálculo sin redondear y equilibrio de capacidad valorizada de 16,7% y 23,1% de throughput atribuible con cohorte central supuesta. No demuestra ahorro de caja, payback ni recuperación del año 1; no es presupuesto del mínimo ni autorización 2028. Alcance operativo, capacidad y costos pendientes de validar; no acredita cobertura integral del año 2 ni ingresos del producto. Confirmado en esta conversación como supuesto."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Escenario ilustrativo del paquete completo para el año 2: caja base 48 mil USD, producto adicional 45 mil y mantenimiento de 1,5 FTE por 94,5 mil de tiempo; totales centrales 142,5 mil sin producto y 187,5 mil con producto. R-28 y R-32 separan ese escenario del mínimo y exigen presupuesto y autorización propios para 2028. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas]
 sources:
   - id: finanzas
@@ -27,6 +27,9 @@ sources:
   - id: rampa
     resource: "context/supuestos/rampa-de-la-ganancia.md"
     title: "Conversión de throughput a tiempo liberado a output fijo"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -96,6 +99,11 @@ Se separan los costos del producto sin presumir ingresos que los paguen.[^finanz
   antes de presupuestar; no acredita cobertura integral de las obligaciones.
 - El incremento del piloto corresponde al frente producto, separado de la
   infraestructura base; no se incorpora al mínimo por verificar esta ficha.
+- El año 2 no se financia por defecto: el mínimo termina en M12 sin régimen
+  posterior y el paquete completo no se pide. Un régimen 2028 lo decide y lo
+  costea el Directorio en el cierre del mes 12, con dictamen del AI Council y
+  cifras verificadas por el CFO; sin esa resolución no se ejecuta
+  (R-28, R-32)[^resoluciones].
 - La declaración humana revisa los supuestos y las cuentas, sin acreditar
   beneficios, disponibilidad, contratación ni autorización empresarial.
 
@@ -105,3 +113,4 @@ Se separan los costos del producto sin presumir ingresos que los paguen.[^finanz
 [^costo-rol]: Costo senior supuesto de 3.000-7.500 USD/mes por FTE, con 160 h mensuales para costear tiempo.
 [^cohorte]: Desarrolladores en equipos propios, supuestos de 15-20 personas y costo de 2.500-7.000 USD/mes, centros 17,5 y 4.750.
 [^rampa]: Rampa de la ganancia, conversión a output fijo: un aumento de throughput `g` libera la fracción `g / (1 + g)` del tiempo; el anexo E usa esa conversión para el equilibrio económico, sin demostrar ahorro de caja.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

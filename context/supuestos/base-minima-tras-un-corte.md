@@ -1,12 +1,12 @@
 ---
 type: Supuesto
 title: "Base mínima que queda después de un corte"
-description: "Continuidad propuesta tras un corte, diferenciando el núcleo restringido del mínimo, el gobierno del paquete completo y la base del producto activo, con capacidad, controles y autorización pendientes."
+description: "Continuidad tras un corte: núcleo restringido del mínimo que firma el CEO en el gate de salida, superficies que autoriza el Responsable de seguridad y base del producto solo si se libera."
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó los tres escenarios y sus aclaraciones: mínimo con 12 h trimestrales de tech lead, 12 h de Seguridad y 12 h de staff, total 36 h por 675-1.687,50 USD de tiempo y techo 2.000 USD por trimestre sin caja nueva; después de M3, 108 h y techo 6.000 USD sujetos a autorización propia, fuera de los 79.000 acumulados hasta cerrar y en reemplazo de la continuación. El paquete completo conserva gobierno y pasarela si está instalada y es necesaria; producto activo propone contractor al 50%, DevOps/QA 0,5 FTE y Arquitectura 0,1 FTE como hipótesis no medidas. Incluye demostración externa solo con alcance y presupuesto aprobados, no habilitar pilotos con el núcleo restringido y excluir o suspender usos si no se sostienen obligaciones y controles. Confirmado en esta conversación como supuesto, sin acreditar disponibilidad, continuidad autorizada ni aprobación empresarial."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Núcleo restringido de 36 h por trimestre y techo de 2 mil USD de tiempo; después de M3, 108 h y hasta 6 mil adicionales a los 79 mil, dentro del techo de 85 mil. R-03 exige firma del CEO en el gate de salida y autorización de superficies por Seguridad. R-30 condiciona la base del producto a su liberación y dimensionamiento. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, gobierno, riesgo]
 sources:
   - id: minimo
@@ -32,7 +32,10 @@ sources:
     title: "Uso de IA informado y cautelas de la ficha"
   - id: politica
     resource: "context/hechos/gobierno-y-politica-ia.md"
-    title: "Política de IA informada y aplicación pendiente de comprobar"
+    title: "Política de IA informada; su aplicación se comprueba en la preparación y en el mes 3"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -46,10 +49,16 @@ El núcleo restringido por trimestre propone 12 h de tech lead, 12 h de
 Seguridad y 12 h de staff para accesos, incidentes y revisión de permisos:
 36 h. Con los costos por rol, suma 675-1.687,50 USD de tiempo, con techo
 propuesto de 2.000 USD por trimestre y sin caja nueva.[^minimo][^costo-rol]
+Las 36 h incluyen una sesión del AI Council de 2 h por trimestre con sus cinco
+asientos, no la cadencia mensual: 30 h de Council costarían hasta 1.406,25 USD
+y, sumadas al núcleo, 3.093,75 contra el techo de 2.000. Quién supervisa y
+quién pausa el núcleo lo fija el Anexo C; otra cadencia exige recostear antes
+del gate de salida y, si no entra en el techo, vuelve al Directorio.[^minimo][^gobierno]
 
 Después de M3, tres trimestres suman 108 h y un techo de 6.000 USD de tiempo.
-Requiere autorización explícita en la salida, no está incluido en los
-79.000 USD acumulados hasta cerrar y reemplaza la continuación; no se suma
+Lo firma el CEO en el gate de salida, dentro de 85 y con verificación del CFO
+(R-03)[^resoluciones]; sin esa firma no hay continuidad y el uso no cubierto se suspende. No está
+incluido en los 79.000 USD acumulados hasta cerrar y reemplaza la continuación; no se suma
 además de ella.[^minimo]
 
 Este núcleo no mantiene un piloto activo ni habilita usos cuyos controles no
@@ -128,9 +137,10 @@ continúe.[^arquitectura][^gobierno]
 
 [^minimo]: Paquete mínimo de aprendizaje, núcleo restringido de 36 h por trimestre, costo 675-1.687,50 USD y techo 2.000 USD; tres trimestres tras M3 requieren autorización propia de 6.000 USD fuera de los 79.000 acumulados hasta cerrar, sin piloto activo ni usos con controles no cubiertos.
 [^finanzas]: Anexo E, continuidad tras corte, separación de cierre y base restante y precedencia propuesta en el corte mixto con producto activo.
-[^gobierno]: Anexo C, núcleo de gobierno y controles aplicables por superficie y alcance; requisitos y autorización pendientes de comprobar en cada caso.
-[^arquitectura]: Anexo B, base común mínima propuesta para el producto: infraestructura, contractor al 50%, DevOps/QA 0,5 FTE y Arquitectura 0,1 FTE, sin evidencia de suficiencia de esas fracciones.
+[^gobierno]: Anexo C, núcleo de gobierno y controles aplicables por superficie y alcance; la continuidad de cada superficie la autoriza el Responsable de seguridad en el gate de salida y lo no cubierto se suspende (R-03).
+[^arquitectura]: Anexo B, base común mínima propuesta para el producto: infraestructura, contractor al 50%, DevOps/QA 0,5 FTE y Arquitectura 0,1 FTE; solo aplica si el Directorio libera el producto en el mes 6, y entonces el Responsable de Tecnología dimensiona las fracciones y el CFO las verifica antes de liberar M7-M9 (R-30).
 [^costo-rol]: Costos por rol supuestos: tech lead 4.500-10.000 USD/mes, senior de Seguridad 3.000-7.500 y staff 1.500-5.000; 160 h mensuales para costear las fracciones.
 [^precios]: Precios externos sin cotizar, rangos de diseño que requieren validar alcance y contratación.
 [^uso-ia]: Uso de IA informado en el caso, con sus cautelas; no acredita continuidad futura autorizada.
-[^politica]: Política de IA informada por el responsable del caso, con aplicación operativa y controles pendientes de comprobar.
+[^politica]: Política de IA informada por el responsable del caso; el Directorio la ratifica, la preparación deja constancia de versión y alcance y el mes 3 comprueba su aplicación; lo no comprobado se suspende (R-07).
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

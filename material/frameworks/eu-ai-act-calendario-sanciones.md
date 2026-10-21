@@ -12,8 +12,8 @@ sources:
     title: Reg. (UE) 2024/1689 en EUR-Lex (fuente primaria)
   - id: ai-omnibus
     resource: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
-    title: Reg. (UE) 2026/1744, Digital Omnibus on AI, DOUE L de 24.7.2026 (arts. 1.38 a 1.40, art. 4, considerando 40)
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
+    title: Reg. (UE) 2026/1744, Ómnibus digital sobre IA, DOUE L de 24.7.2026 (arts. 1.30 y 1.38 a 1.40, art. 4, considerando 40)
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T20:13:00Z }
 ---
 
 # Resolución de la cautela del Omnibus
@@ -21,9 +21,9 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
 [M1U4](/unidades/m1u4-rol-gobernanza.md) citaba el "AI Omnibus (Reg. UE
 2026/1744)" sin fuente. **Confirmado con la fuente primaria:** es el
 *Reglamento (UE) 2026/1744 del Parlamento Europeo y del Consejo, de 8 de julio de
-2026, que modifica los Reglamentos (UE) 2024/1689, (UE) 2018/1139 y (UE)
-2023/1230 en lo relativo a la simplificación de la aplicación de normas
-armonizadas sobre inteligencia artificial (Digital Omnibus on AI)*, publicado en
+2026, por el que se modifican los Reglamentos (UE) 2024/1689, (UE) 2018/1139 y (UE)
+2023/1230 en lo que respecta a la simplificación de la aplicación de normas
+armonizadas en materia de inteligencia artificial (Ómnibus digital sobre IA)*, publicado en
 el DOUE L de 24.7.2026 y en vigor el tercer día siguiente a su publicación, es
 decir, el 27 de julio de 2026.[^ai-omnibus]
 
@@ -49,7 +49,7 @@ Texto original (art. 113, p. 123) y texto vigente con el Omnibus:[^eu-ai-act][^a
 | 2026-12-02 | Nuevas prohibiciones 5.1 (ba) y (bb) y 5.1a y 5.1b; plazo de los sistemas generativos ya en el mercado para cumplir el marcado del art. 50.2 | Omnibus, art. 113.a y art. 111.4 |
 | 2027-08-02 | GPAI introducidos antes del 2.8.2025 deben cumplir | Art. 111.3 |
 | **2027-12-02** | **Cap. III secciones 1, 2 y 3 (alto riesgo, requisitos y obligaciones) para Anexo III**, incluye scoring (5.b) y seguros (5.c) | Omnibus, art. 113.c.i |
-| 2027-09-02 | Guía y plantilla del plan de vigilancia poscomercialización (art. 72.3) | Omnibus |
+| 2027-09-02 | Orientaciones de la Comisión, con un modelo, sobre el plan de vigilancia poscomercialización (art. 72.3; el texto de 2024 pedía un acto de ejecución para el 2.2.2026) | Omnibus, art. 1 punto 30 |
 | **2028-08-02** | Cap. III secciones 1, 2 y 3 para alto riesgo por Anexo I (art. 6.1, productos regulados) | Omnibus, art. 113.c.ii |
 | 2030-08-02 | Sistemas de alto riesgo de autoridades públicas ya en el mercado | Art. 111.2 |
 
@@ -110,12 +110,30 @@ reportó la infracción; intencionalidad o negligencia; medidas de mitigación.
 # Cautelas
 
 - **Sección 5 del cap. III** (arts. 40-49: normas, evaluación de conformidad,
-  registro): el art. 113.c modificado menciona solo las secciones 1, 2 y 3. Qué
-  fecha rige para los arts. 43 y 49 no queda explícito en el artículo; hay que
-  leerlo contra el texto consolidado antes de fijar un hito. No se resolvió.
-- Se leyó el texto del Omnibus en una copia en PDF del DOUE L de 24.7.2026 (la
-  página de EUR-Lex no devolvió el texto al scraper). Cotejar los artículos en
-  el enlace ELI antes de citarlos en una slide.
+  certificados, registro; p. 76-81 del texto de 2024): la regla literal del art.
+  113 la deja en la fecha general. El párrafo segundo dice "Será aplicable a partir
+  del 2 de agosto de 2026" (p. 123), y el Omnibus no lo toca: solo modifica el
+  párrafo tercero (art. 1 punto 40, p. 35). Ninguna letra de ese párrafo nombra la
+  sección 5, ni en el original (la b) nombra la sección 4) ni en el modificado (la
+  c) nombra las secciones 1, 2 y 3). El considerando (40) llama al 2 de agosto de
+  2026 la "fecha general de aplicación" (p. 12).[^eu-ai-act][^ai-omnibus]
+- Lo que sigue abierto es cómo opera esa fecha para la evaluación de conformidad y
+  el registro (arts. 43 y 49) mientras los requisitos de las secciones 1 a 3 están
+  diferidos. Es una lectura a decidir, no una conclusión sobre Acme Labs. El
+  Omnibus sustituye el art. 43.3: los organismos notificados del Anexo I, sección
+  A, piden su designación a más tardar el **2028-01-28** (p. 22). No modifica el
+  art. 49; el registro del art. 49.2 se simplifica suprimiendo los puntos 7 y 9 del
+  Anexo VIII, sección B (p. 36; considerando 22).
+- Cotejado el 2026-10-21 contra el texto español del DOUE L de 24.7.2026, bajado
+  de EUR-Lex (CELEX_32026R1744_ES_TXT.pdf, 41 p.): arts. 111 y 113 modificados
+  (p. 35), art. 72.3 (p. 26), considerando (40) (p. 12) y art. 4 del Omnibus,
+  entrada en vigor (p. 41). Coinciden con la tabla.
+- Ese cotejo llegó en el PR #55 (autor en GitHub: edu2020chaparro-ux; herramienta no
+  declarada). La revisión del 2026-10-21 (claude-code/claude-opus-5-5) lo repitió
+  sobre el PDF/A español del Omnibus bajado de Cellar, el repositorio de la Oficina de
+  Publicaciones (41 p.), y sobre el Reg. 2024/1689 en español (art. 113, p. 123;
+  art. 72.3, p. 101). Precisó la sección 5 y el art. 72.3, y alineó el título con
+  el oficial (p. 1).
 - Las fuentes secundarias (estudios jurídicos) coinciden en 2 de diciembre de
   2027 y 2 de agosto de 2028; la primaria lo confirma. Sobre el art. 50.2, un
   resumen secundario lo da como aplicable sin matices; el texto primario fija
@@ -132,4 +150,4 @@ reportó la infracción; intencionalidad o negligencia; medidas de mitigación.
 
 [^eu-ai-act]: Reg. (UE) 2024/1689, texto en español del DOUE; páginas del PDF indicadas en el texto.
 [^eu-ai-act-eurlex]: Misma norma en EUR-Lex: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
-[^ai-omnibus]: Reg. (UE) 2026/1744, DOUE L de 24.7.2026: art. 1 puntos 38 a 40, art. 4 y considerando (40).
+[^ai-omnibus]: Reg. (UE) 2026/1744, DOUE L de 24.7.2026: art. 1 puntos 30 y 38 a 40, art. 4 y considerando (40).
