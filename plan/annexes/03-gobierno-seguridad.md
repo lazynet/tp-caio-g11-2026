@@ -882,13 +882,13 @@ condición incumplida.
   como A de las métricas de adopción y deja alcance y retención de la telemetría a Gobierno
   con Talento. Elegir la A, y si la medición pide revisión laboral y de datos de empleados,
   queda pendiente de decisión entre los responsables humanos de C y D.
-- **Con el Anexo F (calificación de riesgos):** el riesgo de datos de cliente en un modelo
-  externo es Media / Alto inherente acá y Media / Muy alto en el
-  [Anexo F](06-roadmap-riesgo.md), que no rotula si sus valores son inherentes o
-  residuales; las superficies sin control técnico central (Alta / Alto en F) no son una fila
-  de este registro. Si F los usa como residuales, el gate choca con "Alta con impacto Alto o
-  mayor: nadie lo acepta". La conciliación queda pendiente entre los responsables humanos
-  de C y F, sin elegir valores por consenso.
+- **Con el Anexo F (calificación de riesgos):** los dos registros califican el riesgo
+  inherente, antes del control, y en ambos la aceptación se decide sobre el residual con el
+  "Criterio de aceptación del riesgo residual" de este anexo. Dos valores inherentes no
+  coinciden: datos de cliente en un modelo externo es Media / Alto acá y Media / Muy alto
+  en el [Anexo F](06-roadmap-riesgo.md), y las superficies sin control técnico central
+  (Alta / Alto en F) no son una fila de este registro. La conciliación queda pendiente entre
+  los responsables humanos de C y F, sin elegir valores por consenso.
 - **Con CAIO:** si el board prioriza velocidad, se puede relajar el SLA del Nivel 2, pero
   no la matriz de clientes ni la prohibición de crédito.
 
