@@ -6,7 +6,8 @@ tags: [m1, kill-fast, portfolio]
 sources:
   - id: m1u1-extendida
     resource: Módulo 1 — Unidad 1 — Mentalidad CAIO y liderazgo en la era IA.pdf
-    title: "M1U1 extendida, pp. 2-3 y 8-10"
+    title: "M1U1 extendida, pp. 2-4, 8 y 10"
+status: draft
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 ---
 # Definición
@@ -31,9 +32,16 @@ En el caso de RRHH: si en 15 días el chatbot no resuelve correctamente más del
 
 # Relación con otros conceptos
 
-- Es la versión "personal / de experimento" de los [kill/scale gates](/conceptos/m1u2-kill-scale-gates.md) del portfolio.
+- Relación propia del bundle, no del curso: se lo lee como la versión "personal / de experimento" de los [kill/scale gates](/conceptos/m1u2-kill-scale-gates.md) del portfolio.
 - Forma parte del [plan de 30 días](/conceptos/m1u1-plan-30-dias.md) (se define en los días 11-20).
-- Contrapeso: el anti-pattern del [líder ansioso de ROI](/conceptos/m1u1-anti-patterns-lider.md) mata experimentos antes de que maduren; kill-fast exige criterios *predefinidos*, no impaciencia.
+- Contrapeso (lectura del bundle, no afirmación del curso): el anti-pattern del [líder ansioso de ROI](/conceptos/m1u1-anti-patterns-lider.md) mata experimentos antes de que maduren; kill-fast exige criterios *predefinidos*, no impaciencia.
 - Unidad: [M1U1](/unidades/m1u1-mentalidad-caio.md).
 
-[^m1u1-extendida]: M1U1 extendida, pp. 2-3 y 8-10
+# Cautelas
+
+- **Cotejada contra el PDF** (2026-10-20): M1U1 extendida, pp. 2-4, 8 y 10. Definición y cita, p. 2; GPT-4, p. 3; "primera formulación", razones políticas/de ego/de inercia y regla "qué señal, en qué plazo", p. 4; bloque de días 11-20 con el mecanismo de kill-fast, p. 8; ejemplo del chatbot de RRHH (15 días, 60%), p. 10.
+- **Cita corregida:** la cita anterior (pp. 2-3 y 8-10) omitía la p. 4, donde están el porqué y la regla operativa, y apuntaba al ejemplo en una página de más.
+- **Las relaciones con los kill/scale gates y con el anti-pattern del líder ansioso de ROI son lectura del bundle:** el curso no las enuncia. Los 15 días y el 60% son parámetros ilustrativos del caso, no un umbral recomendado.
+- El mismo PDF dice que el AI Act está "en vigor desde julio de 2024" (p. 2); es incorrecto, ver [cautelas regulatorias](/conceptos/m1u2-cautelas-citas-regulatorias.md). No afecta a esta ficha.
+
+[^m1u1-extendida]: M1U1 extendida, pp. 2-4, 8 y 10
