@@ -2,7 +2,11 @@
 type: Hecho
 title: "Situación económica 2026"
 description: "La facturación creció cerca de 35% entre enero y agosto de 2026, con margen EBITDA de 21-30% mensual."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con el cierre financiero de agosto de 2026: evolución de la facturación mensual entre enero y agosto, rango del margen EBITDA mensual y lectura de la concentración de clientes y la inversión en productos propios. Confirmado por Martín en esta conversación."
 tags: [caso, finanzas]
 sources:
   - id: interno-finanzas-2026

@@ -2,7 +2,11 @@
 type: Hecho
 title: "IA en el producto y en la oferta a clientes"
 description: "No se documenta IA en producción en la oferta a clientes; las herramientas de harness para el SDLC confirmadas corresponden al uso interno."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con el sitio institucional, las propuestas al Directorio de marzo y abril de 2026, el diseño del sistema de propuestas comerciales de septiembre y la ficha de uso interno de IA: oferta documentada, carácter interno del harness, programa de partners y alternativas comerciales en evaluación. Se conserva la ausencia de una decisión posterior documentada y de validación de mercado de las estimaciones comerciales; se actualiza la referencia a la ficha de uso interno ya verificada, sin atribuir una revisión documental del harness. Confirmado por Martín en esta conversación."
 tags: [caso, ia, producto, oferta]
 sources:
   - id: harness-interno
@@ -54,6 +58,6 @@ ni se comercializan a clientes. No se cuentan como IA en el producto vendido.[^h
   validación de mercado y no se trasladan acá.
 
 [^web-empresa]: Sitio web de Acme Labs, accedido el 2026-10-13
-[^harness-interno]: Uso actual de IA en la operación interna, confirmación anonimizada del responsable del caso del 20/10/2026; ficha en borrador, sin revisión documental del harness.
+[^harness-interno]: Uso actual de IA en la operación interna, confirmación anonimizada del responsable del caso del 20/10/2026; ficha verificada por el responsable del caso, sin revisión documental del harness.
 [^interno-directorio-2026]: Propuestas al Directorio sobre IA, marzo y abril de 2026 (privado, anonimizado)
 [^interno-propuestas-2026]: Diseño del sistema de propuestas comerciales, septiembre de 2026 (privado, anonimizado)

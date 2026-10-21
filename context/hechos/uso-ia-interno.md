@@ -2,7 +2,11 @@
 type: Hecho
 title: "Uso actual de IA en la operación interna"
 description: "Acme Labs usa herramientas de IA corporativas y un harness del SDLC exclusivamente interno; no tiene mediciones contra una línea de base para evaluar el impacto de ese harness, según el responsable del caso."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa revisada sobre la confirmación del responsable del caso del 20/10/2026 y cotejada con los reportes de adopción y licencias, la telemetría, el borrador de política de abril y los documentos de OKR: harness interno sin medición comparativa de impacto, herramientas, evolución de seats, adopción por área y meta semanal propuesta. Se conservan la ausencia de revisión documental o técnica del harness, los límites de la telemetría, las diferencias de seats entre fuentes y el carácter de borrador de la política citada y los OKR 2027. Confirmado por Martín en esta conversación."
 tags: [caso, ia, adopcion]
 sources:
   - id: confirmacion-caso-2026-10-20

@@ -2,7 +2,11 @@
 type: Hecho
 title: "Stack y plataforma de delivery"
 description: "Acme Labs desarrolla sobre Node/TypeScript, Java y Python, despliega en AWS con Kubernetes y GitOps, y gestiona el trabajo en GitHub y en la suite de Atlassian."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con los estándares de ingeniería, los documentos de OKR, el diseño del sistema de propuestas comerciales de septiembre de 2026 y los reportes de costos de febrero a septiembre de 2026: lenguajes, prácticas de desarrollo, plataforma, herramientas y estado de la base técnica. Incluye las cautelas sobre las herramientas de staffing y la ausencia de un inventario formal de arquitectura. Confirmado por Martín en esta conversación."
 tags: [caso, arquitectura, plataforma]
 sources:
   - id: interno-estandares-ingenieria-2026

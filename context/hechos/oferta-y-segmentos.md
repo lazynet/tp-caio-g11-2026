@@ -2,7 +2,11 @@
 type: Hecho
 title: "Qué hace Acme Labs y para quién"
 description: "Acme Labs vende una plataforma de funcionalidades financieras y equipos de desarrollo a bancos, fintechs y grandes empresas, con oficinas en dos países de Latinoamérica."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con el sitio institucional y el cierre financiero de agosto de 2026: oferta pública, presencia y líneas de negocio internas. Confirmado por Martín en esta conversación."
 tags: [caso, negocio, oferta]
 sources:
   - id: web-empresa

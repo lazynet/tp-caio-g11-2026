@@ -1,21 +1,39 @@
 ---
 type: Supuesto
 title: "Sobre de capacidad separado en tiempo clave y distribuido"
-description: "Propuesta de Finanzas, todavía no aprobada: el tiempo de las personas clave se mide contra el sobre de 1 a 2,25 FTE, y las horas repartidas en toda la dotación forman un segundo sobre que el board aprueba hoy."
-status: draft
+description: "Propuesta de separar el tiempo clave de 1 a 2,25 FTE y las horas distribuidas en la dotación, con aprobación organizacional y conciliación de la capacidad real por alcance."
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Propuesta de diseño confirmada por Martín: separar tiempo clave de 1-2,25 FTE y tiempo distribuido para capacitación, champions y ejercicios de mesa, manteniendo la alternativa estricta. Incluye la clasificación de actividades, las 48 horas-persona anuales propuestas de ejercicios de mesa y la conciliación de las horas reales. Se conserva pendiente la aprobación organizacional; se reemplaza la aprobación de hoy por una propuesta y se retiran las conclusiones generales basadas en 9 horas por persona y pisos de 1,6-1,8 FTE, para calcular cada alcance por separado. Confirmado en esta conversación."
 tags: [supuesto, finanzas, capacidad, propuesta]
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-14T22:00:00Z }
+sources:
+  - id: capacidad-inversion
+    resource: "context/supuestos/capacidad-de-inversion.md"
+    title: "Sobre de caja y tiempo propuesto, sujeto a validación"
+  - id: personas-clave
+    resource: "context/supuestos/personas-clave-del-sobre.md"
+    title: "Conversión del grupo propuesto a 1-2,25 FTE y límites por alcance"
+  - id: capacidad-utilizacion
+    resource: "context/hechos/capacidad-y-utilizacion.md"
+    title: "Utilización facturable y competencia por horas del equipo"
+  - id: poblaciones-capacitacion
+    resource: "context/supuestos/poblaciones-de-capacitacion.md"
+    title: "Supuestos de poblaciones y dedicaciones de formación y champions"
+generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
 
 El sobre de la [capacidad de inversión](/supuestos/capacidad-de-inversion.md)
 (10-15% del tiempo de 10-15 personas clave, de 1 a 2,25 FTE; el número de personas es
-un [supuesto aparte](/supuestos/personas-clave-del-sobre.md)) se lee **separado**:
+un [supuesto aparte](/supuestos/personas-clave-del-sobre.md)) se propone leer
+**separado**:[^capacidad-inversion][^personas-clave]
 
 | Sobre | Qué cuenta | Quién lo aprueba |
 |---|---|---|
-| Tiempo clave | Fracciones de arquitectura, IA aplicada, plataforma, gobierno y liderazgo del programa | Ya está en el supuesto de capacidad |
-| Tiempo distribuido | Horas de capacitación básica, intermedia y avanzada, de champions y de los ejercicios de mesa de incidentes (2 × 8 personas × 3 h al año), repartidas en la dotación (ver [poblaciones](/supuestos/poblaciones-de-capacitacion.md)) | El board, como sobre propio, en la aprobación de hoy |
+| Tiempo clave | Fracciones de arquitectura, IA aplicada, plataforma, gobierno y liderazgo del programa | La organización, previa validación de las dedicaciones por rol |
+| Tiempo distribuido | Horas de capacitación básica, intermedia y avanzada, de champions y de los ejercicios de mesa de incidentes (2 × 8 personas × 3 h = 48 horas-persona al año), repartidas en la dotación (ver [poblaciones](/supuestos/poblaciones-de-capacitacion.md))[^poblaciones-capacitacion] | El board, mediante autorización explícita del sobre distribuido |
 
 La alternativa es la lectura **estricta**: todo cuenta contra 1-2,25 FTE.
 
@@ -27,23 +45,31 @@ capacitación, como distribuido, aunque participe alguna persona clave.
 
 - El supuesto de capacidad habla de un grupo acotado de personas clave y no
   dice nada de las horas repartidas en toda la dotación.
-- Las horas distribuidas son pocas por persona (del orden de 9 h en los meses 1-3) y no
-  salen del mismo grupo que sostiene la plataforma.
+- Distinguir actividades clave y distribuidas permite dimensionar cada bolsa
+  por alcance y contrastarlas con las agendas reales, incluidas las personas
+  que participan en ambas.
 
 # Qué lo invalidaría
 
-- Que el board no apruebe el sobre distribuido en la aprobación de hoy: rige la lectura estricta,
-  y con ella ninguna versión de los meses 1-3 que cumpla la meta de capacitación básica entra.
+- Que el board no apruebe el sobre distribuido: rige la lectura estricta y se
+  recalcula la viabilidad del alcance seleccionado.
 - Que las horas distribuidas bajen la utilización facturable por debajo de la
-  meta (ver [capacidad y utilización](/hechos/capacidad-y-utilizacion.md)).
-- Que el sobre clave disponible esté en el extremo inferior del rango (1 FTE): el
-  plan necesita un piso de ~1,8 FTE clave en los meses 1-3 con la prueba chica (1,6 sin ella):
-  bajo 1,6 ninguna versión de los meses 1-3 entra.
+  meta (ver [capacidad y utilización](/hechos/capacidad-y-utilizacion.md)).[^capacidad-utilizacion]
+- Que las dedicaciones liberables por rol sean insuficientes para el alcance
+  seleccionado, considerando las horas de ambas bolsas.
 
 # Cautelas
 
-- **Es una propuesta de `finance`, no un hecho ni una decisión tomada.** Elegir
-  entre lectura estricta y separada es una decisión del board en la aprobación de hoy.
+- **Es una propuesta de diseño sujeta a aprobación organizacional.** Elegir
+  entre lectura estricta y separada requiere una decisión explícita del board.
 - Leerlo separado no agranda la capacidad real: las horas igual salen de horas
   facturables. Solo hace visible un segundo sobre que hay que aprobar.
-- Valores vigentes en el Anexo E al 2026-10-14.
+- Cada alcance usa su propio cálculo de horas y requerimientos; no se trasladan
+  las horas por persona ni los pisos de capacidad de otras alternativas.
+- La conciliación por persona y semana debe evitar contar las mismas horas en
+  ambas bolsas y confirmar el trabajo que se desplaza.
+
+[^capacidad-inversion]: Capacidad de inversión para el plan de IA, sobre de caja y tiempo sujeto a validación presupuestaria y de capacidad.
+[^personas-clave]: Número de personas clave del sobre de capacidad, extremos de 1 y 2,25 FTE y validación por rol.
+[^capacidad-utilizacion]: Capacidad, utilización y bench, utilización facturable y restricciones del proyecto de adopción.
+[^poblaciones-capacitacion]: Poblaciones y horas de capacitación por nivel, supuestos de diseño de formación y champions.

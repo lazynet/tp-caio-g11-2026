@@ -2,7 +2,11 @@
 type: Hecho
 title: "Costos de tecnología e IA"
 description: "El gasto de tecnología se duplicó entre febrero y septiembre de 2026 y pasó de cerca de 2% a 4% de la facturación; la nube es la mayor parte, y el consumo real de IA equivale a unas doce veces lo que se paga por suscripción."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con los reportes de costos de febrero a septiembre de 2026, el cierre financiero de agosto, la telemetría de septiembre y octubre y los reportes de adopción de abril a octubre: evolución y composición del gasto, centros de costo, suscripciones, costo por seat, consumo valorizado a precio de API y presupuesto. Incluye la corrección de la cautela para distinguir los cortes de cada fuente. Confirmado por Martín en esta conversación."
 tags: [caso, finanzas, ia, finops]
 sources:
   - id: interno-costos-tech-2026
@@ -53,8 +57,11 @@ la infraestructura compartida y el proyecto de adopción de IA.[^interno-costos-
 
 - El peso de la IA dentro del gasto de tecnología no se publica: combinado con
   otros datos permitiría reconstruir cifras internas.
-- Las cifras financieras surgen de un único corte interno (cierre de agosto de
-  2026); el plan no usa otros cortes.
+- Los ratios sobre facturación usan el cierre financiero de agosto de 2026;
+  los costos de tecnología, los reportes de febrero a septiembre; la telemetría
+  de agentes de código, los reportes de septiembre y octubre; y la adopción y
+  las licencias, los reportes de abril a octubre. Los cortes se distinguen por
+  fuente y no se tratan como una única foto temporal.
 - El valor a precio de API es una estimación de la telemetría, no una factura.
 - El promedio de USD 40-45 por seat corresponde a los seats de Claude. El costo
   por seat de Copilot no está desglosado en la fuente: un cálculo que lo

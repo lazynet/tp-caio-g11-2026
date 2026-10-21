@@ -2,19 +2,43 @@
 type: Supuesto
 title: "Paquete mínimo de aprendizaje sin plataforma central"
 description: "Finanzas concilia los insumos de B/C/D para medir valor con controles probados y herramientas existentes, con techos por etapa y salida acotada."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa confirmada por Martín en tres bloques: preparación previa de 80-136 h, caja 0 y techo de tiempo 8 mil USD; ejecución M1-M3 de 970-1.350 h con reserva de capacidad de 1.380 h y segunda autorización propuesta de 71 mil, acumulado 79 mil; continuidad, descubrimiento, esperas y salidas con techos por etapa y proyección condicional de 118 mil, 121 mil con cierre. Incluye escenarios emparejados para descontar preparación, formación a 10-35 USD/h como supuesto agregado a validar, cargas de espera y núcleo parcial sujetas a cadencia, recomposición de secuencias de espera y exposición máxima separada en caja y tiempo. Se conservan pendientes el acuerdo del equipo, cotizaciones, solapes, personas, agendas, ratificaciones y autorizaciones empresariales; no se acredita ejecución, disponibilidad ni beneficios medidos. Confirmado en esta conversación."
 tags: [supuesto, finanzas, capacidad, controles]
-generated: { by: codex/gpt-6, at: 2026-10-20T15:45:52Z }
+sources:
+  - id: arquitectura
+    resource: "plan/annexes/02-arquitectura.md"
+    title: "Anexo B, actividades técnicas, controles y protocolo de medición"
+  - id: gobierno
+    resource: "plan/annexes/03-gobierno-seguridad.md"
+    title: "Anexo C, gobierno mínimo, legal y verificación de controles"
+  - id: personas
+    resource: "plan/annexes/04-personas-cultura.md"
+    title: "Anexo D, insumo para el paquete mínimo y actividades de formación"
+  - id: business-case
+    resource: "plan/annexes/05-business-case.md"
+    title: "Anexo E, pedido inicial, continuidad y exposiciones de salida del mínimo"
+  - id: costo-rol
+    resource: "context/supuestos/costo-cargado-por-rol.md"
+    title: "Rangos de planificación de costo cargado mensual por rol"
+  - id: convenciones
+    resource: "context/supuestos/convenciones-de-calculo.md"
+    title: "Convenciones de calendario, horas de costeo y redondeos"
+generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 
 # Supuesto
 
-Propuesta de Finanzas de ronda 11, ampliada con validación inicial. Martin eligió
-esta propuesta para el borrador; no acredita consenso del equipo ni autorización
-de Acme Labs. No es cotización ni prueba de disponibilidad.
+Propuesta de Finanzas con validación inicial, elegida y revisada por Martín para
+el plan. El acuerdo del equipo y la autorización de Acme Labs siguen sin
+acreditar; las estimaciones requieren cotización y confirmación de disponibilidad.
 
-El detalle reproducible vive en el anexo E, «Pedido inicial: paquete mínimo»;
-B/C/D son insumos de diseño, no evidencia externa. Los supuestos siguen draft.
+El detalle reproducible vive en el Anexo E, «Pedido inicial: paquete mínimo».[^business-case]
+B/C/D son insumos de diseño, no evidencia externa; las fichas referidas conservan
+su propio estado de revisión y sus cautelas.[^arquitectura][^gobierno][^personas]
 
 ## Alcance y conciliación M1-M3
 
@@ -24,7 +48,7 @@ matriz, inventario, dictamen legal, configuración, pruebas negativas, correcci�
 verificación independiente y aceptación del residual. Sin gateway ni plataforma
 central, producto, avanzado, red de champions al 10% o contractor continuo.
 
-Supuesto explícito de unión de actividades, a validar por sus dueños:
+Supuesto explícito de unión de actividades, a validar por sus dueños:[^arquitectura][^gobierno][^personas]
 
 | Rol / actividad | Horas M1-M3, sin preparación | Derivación y solape tratado |
 |---|---|---|
@@ -45,6 +69,10 @@ del mismo entregable técnico, sin absorber política en Seguridad.
 
 Si no se confirma, recostear antes de iniciar; no declarar estos solapes como
 ahorro acordado. Roles acumulados requieren agenda por persona.
+
+Las restas de preparación de TL y QA emparejan extremos del mismo escenario;
+no son restas de intervalos independientes. El remanente por actividad debe
+conciliarse antes de ejecutar; si esa correspondencia no se confirma, recostear.
 
 ## Reserva propuesta de capacidad M1-M3
 
@@ -96,7 +124,7 @@ designar; los responsables del TP no sustituyen a quienes liberan agendas,
 aceptan riesgo o aprueban presupuesto en Acme Labs.
 
 **Validación organizativa adicional**, estimación de Finanzas (agente) de 60-96 h; la estimación humana de Personas (#18, pregunta 3) sigue pendiente. Costo
-horario según [costo por rol](/supuestos/costo-cargado-por-rol.md)/160; las horas
+horario según [costo por rol](/supuestos/costo-cargado-por-rol.md)/160;[^costo-rol] las horas
 incluyen entrevistadores, entrevistados, managers, staff y autoridad que decide:
 
 | Rol | Horas | USD/h | Tiempo, miles de USD |
@@ -168,10 +196,13 @@ verificación independiente y aceptación del residual.
 
 ## Costos y límites
 
-Costo horario = rango mensual del [rol](/supuestos/costo-cargado-por-rol.md)/160;
-formación distribuida a 10-35 USD/h, piso ya usado en D, no tarifa de venta.
-Persona-tramo de 480 h y techos hacia arriba según
-[convenciones](/supuestos/convenciones-de-calculo.md).
+El soporte se costea con el rango mensual del
+[rol](/supuestos/costo-cargado-por-rol.md)/160.[^costo-rol] Persona-tramo de 480 h
+y techos hacia arriba según [convenciones](/supuestos/convenciones-de-calculo.md).[^convenciones]
+
+La formación distribuida se valora a 10-35 USD/h como supuesto agregado propio,
+sujeto a validar la mezcla de participantes. No deriva automáticamente de las
+bandas por rol, algunas de las cuales superan 35 USD/h; si no alcanza, recostear.
 
 Legal focalizado C: 8-16 h externas × 250-375 USD/h = 2-6 mil USD; reemplaza
 la porción inicial de asesoría anterior. Herramientas/exportación: provisión
@@ -240,9 +271,13 @@ Suma de techos por tramo y preparación **118** (caja 15 / tiempo 103); con cier
 
 ### Esperas M6/M9 y pérdidas de salida
 
+La tabla expresa exposición máxima propuesta, separada en caja y tiempo
+valorizado. Sus totales no representan íntegramente desembolso de caja ni
+pérdida económica incremental.
+
 Cada espera de seis semanas exige aprobación propia antes de iniciarse, sin
 expansión ni descubrimiento nuevo. Supuesto de carga por tareas, equivalente a
-mitad del mantenimiento trimestral, no conversión de semanas a meses:
+mitad del mantenimiento trimestral, sin equivalencia calendario automática:
 
 | Rol | Horas por espera | Tarea |
 |---|---|---|
@@ -267,7 +302,7 @@ Tras espera y corte, núcleo parcial TL 6 + Seguridad 6 + staff 6 = 18 h, costo
 0,3375-0,84375, techo 1 y caja 0. Se agrega solo el núcleo de tramos posteriores
 completos; esta distribución de tareas requiere validar la cadencia obligatoria.
 
-| Salida | Pérdida acumulada hasta cerrar, caja / tiempo → total | Núcleo restante, h / techo | Máximo anual con núcleo aprobado al salir |
+| Salida | Exposición máxima acumulada hasta cerrar, caja / tiempo → total | Núcleo restante, h / techo | Máximo anual con núcleo aprobado al salir |
 |---|---|---|---|
 | Previo a M1 | 0 / 8 → 8 | — | 8, sin inicio M1-M3 |
 | M3 inmediato | 10 / 69 → 79 | 108 / 6 | 85 |
@@ -280,16 +315,15 @@ completos; esta distribución de tareas requiere validar la cadencia obligatoria
 Las filas de espera suponen continuidad sin esperas anteriores; si una espera
 M6 pasa y luego se espera en M9, recomponer los subtramos antes de autorizar.
 
-Antecedente del mínimo sin validación organizativa: 89 era el máximo de corte
-inmediato M6 antes de corregir Seguridad; luego fue 90. Hoy es **95**, con 5
-adicionales de validación, sin esperar. Una sola espera por gate; propuesta
-pendiente de ratificación para M9:
+El máximo propuesto de corte inmediato M6 es **95**, incluidos los 5 de
+validación organizativa, sin esperar. Una sola espera por gate; la propuesta
+sigue pendiente de ratificación para M9:
 
 Si no pasa valor/calidad con versión congelada,
 cortar el frente interno y aplicar precedencia de F si otro frente continúa.
 
 Las esperas no están incluidas en la proyección anual sin esperas: una secuencia
-nueva se recompone por subtramos y redondeos. Toda pérdida incluye cierre una
+nueva se recompone por subtramos y redondeos. Toda exposición incluye cierre una
 sola vez y presupone el mínimo sin plataforma ni producto.
 
 # Por qué es razonable
@@ -316,4 +350,15 @@ a semana 9 y se revisa completitud M3. No se promete señal causal M3.
 Beneficio de caja estimado: 0; ingreso nuevo: 0. Capacidad sin cifra hasta medir;
 ni horas futuras financian agendas iniciales ni una hora se cuenta como ahorro
 y venta a la vez. El costo cargado no prueba contribución perdida: conciliar
-en privado sin duplicarla. Ningún supuesto pasa a verified por este costeo.
+en privado sin duplicarla.
+
+La verificación de esta ficha registra la revisión humana de la propuesta de
+diseño. El costeo por sí solo no verifica las fichas referidas ni acredita
+cotizaciones, agendas, ejecución o autorizaciones empresariales.
+
+[^arquitectura]: Anexo B, actividades técnicas y protocolo de medición como insumos de diseño.
+[^gobierno]: Anexo C, gobierno mínimo, legal y verificación de controles como insumos de diseño.
+[^personas]: Anexo D, «Insumo para el paquete mínimo», formación y soporte de adopción.
+[^business-case]: Anexo E, «Pedido inicial: paquete mínimo», continuidad, esperas y exposiciones de salida.
+[^costo-rol]: Costo mensual cargado por rol, rangos supuestos de planificación sujetos a contraste privado.
+[^convenciones]: Convenciones de calendario y cálculo del plan, 160 h por mes, 480 h por tramo y redondeo de techos.

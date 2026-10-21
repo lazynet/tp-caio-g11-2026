@@ -1,16 +1,30 @@
 ---
 type: Supuesto
 title: "Número de personas clave del sobre de capacidad"
-description: "El sobre de 1 a 2,25 FTE de tiempo clave supone un grupo de 10 a 15 personas clave de arquitectura, IA aplicada, plataforma, gobierno y liderazgo del programa; el número no tiene fuente y lo confirma el board en la aprobación de hoy."
-status: draft
+description: "El sobre de 1 a 2,25 FTE de tiempo clave supone 10 a 15 personas de arquitectura, IA aplicada, plataforma, gobierno y liderazgo; su disponibilidad real requiere validación por rol y dedicación."
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Supuesto de diseño confirmado por Martín: 10-15 personas clave con dedicación de 10%-15%, equivalentes a extremos de 1 y 2,25 FTE, sujetos a disponibilidad real por rol. Incluye actualizar la referencia a capacidad de inversión, retirar la inferencia incorrecta de que menos de diez personas impide alcanzar 1 FTE y limitar los pisos de 1,6-1,8 FTE a las alternativas del paquete completo, sin trasladarlos al alcance mínimo. La separación del tiempo distribuido se revisa en su propia ficha. Confirmado en esta conversación."
 tags: [supuesto, finanzas, capacidad]
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-14T22:00:00Z }
+sources:
+  - id: capacidad-inversion
+    resource: "context/supuestos/capacidad-de-inversion.md"
+    title: "Sobre propuesto de caja y tiempo clave, sujeto a validación"
+  - id: tamano-estructura
+    resource: "context/hechos/tamano-y-estructura.md"
+    title: "Dotación y roles de la organización al corte de septiembre de 2026"
+  - id: capacidad-paquete-completo
+    resource: "plan/annexes/05-business-case.md"
+    title: "Anexo E, capacidad del paquete completo y advertencia de no trasladar sus pisos al mínimo"
+generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
 
-El [supuesto de capacidad](/supuestos/capacidad-de-inversion.md) habla de un
-"grupo acotado" de personas clave y no fija cuántas son. Para convertir el 10%-15%
-de su tiempo en FTE, el Anexo E supone que son **entre 10 y 15 personas**:
+El [supuesto de capacidad](/supuestos/capacidad-de-inversion.md) propone un
+grupo de **10 a 15 personas clave** con dedicación de 10%-15% de su tiempo.
+Esta ficha explicita su conversión a FTE:[^capacidad-inversion]
 
 | Extremo | Cuenta | FTE clave |
 |---|---|---|
@@ -19,38 +33,46 @@ de su tiempo en FTE, el Anexo E supone que son **entre 10 y 15 personas**:
 
 El grupo son los roles que sostienen la base común y el programa: arquitectura,
 plataforma y DevOps, IA aplicada, gobierno y seguridad, y liderazgo del programa.
-Los participantes de la capacitación y de los ejercicios de mesa no se cuentan
-acá: van en el [sobre distribuido](/supuestos/sobre-de-capacidad-separado.md).
+La propuesta de separar las horas de capacitación y de ejercicios de mesa se
+revisa en la ficha de [sobres separados](/supuestos/sobre-de-capacidad-separado.md).
 
 # Por qué es razonable
 
 - Es un grupo acotado dentro de una dotación de 60 a 70 personas (ver
   [tamaño y estructura](/hechos/tamano-y-estructura.md)), sin contratación
-  masiva.
-- Los Anexos B, C y D piden fracciones de roles que caben en un grupo de ese
-  tamaño (arquitectura, DevOps y seguridad, IA aplicada, liderazgo).
+  masiva.[^tamano-estructura]
+- La estimación permite expresar el sobre en FTE; su disponibilidad requiere
+  contrastar las dedicaciones efectivamente liberables por rol.
 
-**El rango es un supuesto del equipo, sin fuente.** No sale de la nómina ni del
-organigrama: lo elige Finanzas para poder expresar el sobre en FTE.
+**El rango es un supuesto de diseño.** La cantidad de personas y su dedicación
+se contrastan con la nómina y la asignación de trabajo antes de liberar horas.
 
 # Qué lo invalidaría
 
-- Que las personas disponibles sean menos de 12 al 15% o menos de 15 al 12%: el
-  piso de ~1,8 FTE clave de los meses 1-3 con la prueba chica no se alcanza. Con menos de 11
-  al 15%, el piso de 1,6 (sin la prueba) tampoco, y ninguna versión de los meses 1-3 entra.
-- Que las personas con los roles necesarios sean menos de 10: el extremo inferior
-  de 1,0 FTE ya no es alcanzable.
+- Que la suma de dedicaciones efectivamente liberadas por rol no cubra el
+  requerimiento del alcance seleccionado.
 - Que el presupuesto 2027 o la carga de proyectos de clientes reduzcan el
   porcentaje liberable por debajo del 10%.
 
 # Cómo verificarlo
 
 Quien tiene acceso a la nómina y a la asignación 2027 cuenta, en `private/`, las
-personas con esos roles y su porcentaje liberable, y confirma en la aprobación de hoy el número y
-el piso, sin publicar el dato.
+personas con esos roles y su porcentaje liberable. Antes de liberar el trabajo,
+se confirman el número y el piso requerido por el alcance seleccionado, sin
+publicar el dato.
 
 # Cautelas
 
-- Es un supuesto de `finance`, no un hecho ni una decisión del board.
+- El rango requiere validación y aprobación de capacidad por parte de la
+  organización.
+- Los pisos de 1,6-1,8 FTE citados en las alternativas del paquete completo se
+  conservan como referencias de ese alcance; no se trasladan al mínimo, como
+  advierte el Anexo E.[^capacidad-paquete-completo]
+- Menos de diez personas puede superar 1 FTE según su dedicación: por ejemplo,
+  9 personas al 15% equivalen a 1,35 FTE. La disponibilidad se evalúa por rol.
 - Un número de personas más alto no crea horas por sí solo: lo que cuenta es el
   tiempo realmente liberado y el trabajo que se desplaza.
+
+[^capacidad-inversion]: Capacidad de inversión para el plan de IA, supuesto de 10%-15% del tiempo de 10-15 personas clave.
+[^tamano-estructura]: Tamaño y estructura de la organización, dotación de septiembre de 2026 y límites del dimensionamiento.
+[^capacidad-paquete-completo]: Anexo E, sección "Capacidad del paquete completo: piso clave y total interno"; advierte no trasladar los pisos al mínimo.

@@ -2,7 +2,11 @@
 type: Hecho
 title: "Inventario y distribución de datos"
 description: "El responsable del caso informa que existe un inventario de datos con responsables, clasificación y calidad documentada, y que las fuentes están distribuidas entre distintos sistemas."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa revisada sobre la confirmación del responsable del caso del 20/10/2026: existencia informada de un inventario con responsables, clasificación y calidad documentada, y distribución de las fuentes entre sistemas. Se conserva la ausencia de inspección documental en esta sesión y la validación futura de vigencia, cobertura, utilidad para IA, accesos, integración y controles. Confirmado por Martín en esta conversación."
 tags: [caso, datos, diagnostico]
 sources:
   - id: confirmacion-caso-2026-10-20

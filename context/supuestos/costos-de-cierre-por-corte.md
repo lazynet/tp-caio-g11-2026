@@ -1,53 +1,113 @@
 ---
 type: Supuesto
 title: "Costos de cierre al cortar el plan en un gate"
-description: "Si el plan se corta en un gate, el cierre suma un mes de dedicación del contractor por preaviso y un mes de infraestructura de laboratorio, legal y red team no comprometen gasto más allá del gate vigente, y la reserva que lo cubre se amplía en cada gate que sube ese compromiso."
-status: draft
+description: "Costos y reservas de salida propuestos, diferenciados entre el mínimo vigente y el paquete completo, sujetos a condiciones contractuales y autorización antes de asumir compromisos."
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Martín confirmó la composición de salida y sus correcciones: paquete completo con un mes supuesto de preaviso y cierre de infraestructura, rangos de caja 2.417-6.000, 6.000-15.000 y 6.500-17.000 USD y reservas propuestas de 6.000, 15.000 y 17.000 USD según alcance; mínimo con herramientas hasta 500 USD, reserva de caja 1.000 USD y cierre interno 16-24 h senior por 300-1.125 USD, reserva de tiempo 2.000 USD. El preaviso es condición a negociar, legal y red team solo cierran sin costo adicional si sus contratos lo permiten, y la reserva se aprueba antes de ampliar compromisos. Incluye separar continuidad del corte parcial, exposición económica de pérdida de caja y evitar sumar dos veces un cierre ya incluido. Confirmado en esta conversación como supuesto, sin acreditar contratos, ejecución ni aprobación empresarial."
 tags: [supuesto, finanzas, riesgo]
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-14T22:00:00Z }
+sources:
+  - id: finanzas
+    resource: "plan/annexes/05-business-case.md"
+    title: "Anexo E, reservas del paquete completo y salida del mínimo"
+  - id: minimo
+    resource: "context/supuestos/paquete-minimo-de-aprendizaje.md"
+    title: "Paquete mínimo vigente, reservas de caja y tiempo para cierre"
+  - id: precios
+    resource: "context/supuestos/precios-externos-sin-cotizar.md"
+    title: "Rangos de diseño de infraestructura y servicios externos sin cotización"
+  - id: costo-rol
+    resource: "context/supuestos/costo-cargado-por-rol.md"
+    title: "Costo cargado supuesto por rol y convención de 160 h mensuales"
+  - id: convenciones
+    resource: "context/supuestos/convenciones-de-calculo.md"
+    title: "Convenciones de preparación, caja, tiempo y autorizaciones"
+generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
 
+La composición original corresponde al paquete completo con contractor y
+plataforma, no al mínimo vigente. Ambas salidas se separan abajo; son
+supuestos de planificación sujetos a contratos, costos y autorización.[^finanzas][^minimo]
+
 | Componente | Costo de cierre supuesto |
 |---|---|
-| Contractor de IA aplicada | Un mes de preaviso a su dedicación vigente |
-| Infraestructura de laboratorio | Un mes hasta darla de baja |
-| Asesoría legal y red team | Cero más allá del gate: se contratan por etapa |
-| Suscripciones existentes | Fuera del cierre: existen con o sin plan |
+| Contractor de IA aplicada | Un mes de preaviso a la dedicación que se cancela, como condición a negociar |
+| Infraestructura de laboratorio | Un mes supuesto hasta darla de baja; validar condiciones de facturación y baja |
+| Asesoría legal y red team | Cero adicional más allá del gate solo si los contratos por etapa no dejan compromisos ni penalidades |
+| Suscripciones existentes | Fuera del cierre incremental del modelo, bajo el supuesto de que continúan con o sin plan |
 
-La pérdida al cortar en un gate es lo ejecutado hasta ese gate, más la preparación previa, más este
-cierre (ver [convenciones](/supuestos/convenciones-de-calculo.md)).
+La exposición económica acumulada hasta cerrar suma lo que se haya ejecutado
+hasta el gate, la preparación previa y el cierre. Se presentan caja y tiempo
+por separado; su suma no equivale íntegramente a pérdida de caja ni acredita
+una pérdida contable (ver [convenciones](/supuestos/convenciones-de-calculo.md)).[^convenciones]
 
 ## Composición por gate
 
-El cierre depende de la dedicación que el gate anterior liberó:
+El cierre del paquete completo depende de la dedicación que se hubiera
+autorizado y contratado en el gate anterior.[^finanzas]
 
 | Corte en | Contractor | Laboratorio | Otros |
 |---|---|---|---|
 | Mes 3 | Un mes al 50% (dedicación de los meses 1-3) | Un mes del nivel de los meses 1-3 (solo telemetría) | — |
-| Mes 3 sin señal (el contractor cierra; el gobierno mínimo y formación sigue) | Un mes al 50%, ya dentro de la reserva de la aprobación de hoy | Telemetría, menos de 1 | Sin compromiso nuevo: la reserva no se amplía (supuesto: el gobierno mínimo y formación no firma contratos con preaviso) |
+| Mes 3 sin señal (el contractor cierra; gobierno y formación continúan) | Un mes al 50%, dentro de la reserva propuesta del primer tramo | La telemetría que continúa no se cuenta como baja; su eventual cierre se estima por debajo de 1.000 USD | No ampliar reserva solo si no se asumen nuevos compromisos de salida; verificarlo antes de continuar |
 | Mes 6 o 9, sin producto | Un mes al 100% | Un mes del nivel de los meses 4-6 | — |
 | Mes 6 o 9, con el producto liberado | Un mes al 100% | Un mes del nivel de los meses 4-6 | Un mes del tenant del piloto |
 | Corte parcial que conserva el producto | Un mes de la dedicación que se deja | — (se conserva) | — |
 
+### Rangos de caja y reservas propuestas del paquete completo
+
+| Corte | Composición calculada (USD) | Rango de cierre (USD) | Reserva propuesta (USD) |
+|---|---|---|---|
+| M3, contractor al 50% | 50% × 4.500-11.000 más un tercio de 500-1.500 de telemetría trimestral | 2.417-6.000, redondeado al USD | 6.000 |
+| Posterior, contractor al 100%, sin producto | 4.500-11.000 más 1.500-4.000 de infraestructura | 6.000-15.000 | 15.000 |
+| Posterior, con tenant del piloto | Cierre anterior más 500-2.000 del tenant | 6.500-17.000 | 17.000 |
+
+Los rangos combinan costos supuestos por rol e infraestructura sin cotizar.
+En M3, el equivalente mensual de telemetría es una convención de cálculo, no
+una condición de facturación acreditada.[^costo-rol][^precios][^finanzas]
+
+En un corte parcial se costea solo la dedicación que se cancela. La parte de
+contractor e infraestructura que continúe con el producto es continuidad,
+presupuestada aparte, no costo de darla de baja.[^finanzas]
+
+## Salida del mínimo vigente
+
+Sin contractor ni plataforma central, se proponen estas reservas:[^minimo]
+
+| Componente | Cierre estimado | Reserva propuesta |
+|---|---|---|
+| Herramientas | Hasta un mes, máximo supuesto 500 USD (1.500 trimestrales / 3) | Caja: 1.000 USD |
+| Cierre interno senior | 16-24 h para exportar, revocar y archivar: 16 × 3.000 / 160 a 24 × 7.500 / 160 = 300-1.125 USD | Tiempo: 2.000 USD |
+
+La legal por hitos solo se considera sin preaviso si el contrato lo permite.
+Si las condiciones exigen más, se amplía la reserva antes de comprometer.
+No se suman de nuevo reservas ya incluidas en los techos del mínimo.[^finanzas][^minimo]
+
 ## Reserva de cierre (propuesta de Finanzas)
 
-- El cierre se cubre con una **reserva** de caja, renglón propio, distinto del
-  techo operativo del tramo y de la base mínima. Solo se usa en un corte.
+- El cierre del paquete completo se cubre con una **reserva** propuesta de
+  caja, renglón propio, distinto del techo operativo y de la continuidad.
+  El mínimo distingue reserva de caja y de tiempo. Solo se usan si ocurre el
+  cierre; la reserva no es gasto ejecutado.[^finanzas][^minimo]
 - La reserva se **actualiza en cada gate** que sube el compromiso (más
   dedicación del contractor, tenant del piloto), en el mismo acto y con la misma
   autoridad que aprueba el gate, y antes de liberar el compromiso nuevo.
 - Si el contrato termina en plazo con el preaviso dado, la reserva no se usa.
+- Las tablas del anexo E que ya incluyen cierre no vuelven a sumarlo. La
+  reserva identifica autorización contingente, no otro costo agregado al
+  mismo cierre.[^finanzas]
 
 # Por qué es razonable
 
-- Un mes de preaviso es una condición habitual de contratación de contractors y
-  se puede pactar al contratar.
-- La infraestructura nueva corre en la nube con pago por uso (ver
-  [stack](/hechos/stack-y-plataforma.md)): no tiene compromiso de largo plazo si
-  no se firma uno.
-- Los servicios externos se presupuestan por ejercicio (ver
-  [precios externos](/supuestos/precios-externos-sin-cotizar.md)).
+- El mes de preaviso es una condición de diseño a negociar; la ficha no
+  acredita que sea habitual ni que esté pactada.
+- La baja de infraestructura en un mes y la contratación de servicios por
+  etapa permiten modelar una salida acotada solo si las condiciones reales
+  lo admiten; no se deducen de usar nube ni de tener un presupuesto por
+  ejercicio.[^precios]
 
 # Qué lo invalidaría
 
@@ -58,6 +118,15 @@ El cierre depende de la dedicación que el gate anterior liberó:
 
 - Vale solo si los contratos se firman con esas condiciones: es una regla de
   contratación del plan, además de un supuesto de costo.
-- Los montos por gate están en el Anexo E; esta ficha fija la composición.
+- Los montos de exposición acumulada por gate están en el Anexo E; esta ficha
+  concilia composición de salida y reservas propuestas.
 - La reserva es una regla de autorización propuesta, no una decisión del
   Directorio: está pendiente de aprobación.
+- La verificación registra revisión humana de los supuestos, sin acreditar
+  contratos, facturas, ejecución ni aprobación del gasto.
+
+[^finanzas]: Anexo E, "Cuánto pierdo si corto", reservas de cierre del paquete completo, corte mixto y "Pedido inicial: paquete mínimo"; las reservas son propuestas de autorización y el cierre ya incluido no se vuelve a sumar.
+[^minimo]: Paquete mínimo de aprendizaje, sin contractor ni plataforma central; cierre interno de 16-24 h senior y reservas de salida de 1.000 USD de caja y 2.000 USD de tiempo.
+[^precios]: Precios externos sin cotizar, rangos de diseño de telemetría, infraestructura y tenant del piloto, pendientes de contratación y cotización.
+[^costo-rol]: Rangos supuestos de IA aplicada de 4.500-11.000 USD/mes y senior DevOps/QA de 3.000-7.500 USD/mes, con 160 h mensuales para costear.
+[^convenciones]: Convenciones de cálculo y separación de caja y tiempo, preparación previa y liberaciones sujetas a autorización.

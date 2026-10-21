@@ -2,7 +2,11 @@
 type: Hecho
 title: "Cartera de clientes y concentración"
 description: "La facturación está muy concentrada: el cliente principal pesa entre 40% y 50%, los dos primeros cerca del 70% y los cinco primeros más del 90%, contra una meta interna de menos del 30% por cliente."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con el cierre financiero de agosto de 2026, el estado comercial de abril de 2026 y el sitio institucional: segmentos, cantidad aproximada de clientes, concentración, meta interna y tipos de negocio de los clientes A y B. Confirmado por Martín en esta conversación."
 tags: [caso, clientes, riesgo]
 sources:
   - id: interno-finanzas-2026

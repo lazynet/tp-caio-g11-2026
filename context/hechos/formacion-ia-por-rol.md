@@ -2,7 +2,11 @@
 type: Hecho
 title: "Formación en IA por rol al inicio del plan"
 description: "El responsable del caso informa que no hay un programa de formación en IA por rol con seguimiento de finalización; los cursos del piloto previo no equivalen a ese programa."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa revisada sobre la confirmación del responsable del caso del 20/10/2026 y la ficha de encuesta y pilotos de IA: ausencia informada de un programa por rol con seguimiento de finalización y distinción respecto de cursos y experiencias previas. Se conservan la ausencia de revisión documental de las actividades formativas en esta sesión, las validaciones iniciales propuestas y los límites para inferir competencias, resistencia cultural o puntajes de madurez. Confirmado por Martín en esta conversación."
 tags: [caso, personas, formacion, diagnostico]
 sources:
   - id: confirmacion-caso-2026-10-20

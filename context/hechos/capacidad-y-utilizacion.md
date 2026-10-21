@@ -2,7 +2,11 @@
 type: Hecho
 title: "Capacidad, utilización y bench"
 description: "La utilización facturable ronda el 83% con bench casi nulo: no hay capacidad ociosa, así que cualquier iniciativa de IA compite con horas facturables."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa cotejada con el cierre financiero de agosto de 2026, las propuestas al Directorio de marzo y abril y los documentos de OKR: utilización facturable y meta, bench, proporción de horas internas y externas, dedicación semanal a certificación y restricción de contratación del proyecto de adopción de IA. Incluye la cautela sobre el promedio de toda la empresa sin corte por proyecto. Confirmado por Martín en esta conversación."
 tags: [caso, personas, finanzas]
 sources:
   - id: interno-finanzas-2026

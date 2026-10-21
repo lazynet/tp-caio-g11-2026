@@ -2,7 +2,11 @@
 type: Hecho
 title: "Gobierno y política de IA existentes"
 description: "Acme Labs tiene una política de uso aceptable de IA aprobada, según el responsable del caso; la aprobación no acredita la implementación de controles ni actualiza por sí sola los pendientes del registro de abril."
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Ficha completa revisada sobre la confirmación del responsable del caso del 20/10/2026 y los antecedentes citados de política, estándares de ingeniería y OKR: aprobación informada, definiciones del borrador de abril y gobierno técnico de agentes. Se conserva la falta de contraste documental de la versión aprobada, fecha, acta y autoridad, su correspondencia con el borrador, y la implementación de controles, matriz contractual, onboarding, revisión anual, inventarios, registro de riesgos y operación del Council. Confirmado por Martín en esta conversación."
 tags: [caso, gobierno, ia, politicas]
 sources:
   - id: confirmacion-caso-2026-10-20
@@ -98,7 +102,8 @@ Talento como meta de 2027.[^interno-okr-2026]
 - La evidencia de partida no registra inventario formal de casos de uso ni
   registro de riesgos de IA. La confirmación no acredita su existencia ni la
   operación del Council; su estado actual sigue por contrastar.[^interno-politica-ia-2026][^confirmacion-caso-2026-10-20]
-- La ficha conserva `status: draft`: no hay revisión humana declarada contra
+- La verificación de esta ficha se limita a los antecedentes citados y a la
+  aprobación informada por el responsable del caso; no acredita revisión de
   la documentación de aprobación ni prueba de controles implementados.
 
 [^confirmacion-caso-2026-10-20]: Confirmación del responsable del caso, 20/10/2026 (anonimizada), «Aprobación de la política de uso de IA». Aprobación informada; documentación y controles no revisados.
