@@ -53,7 +53,9 @@ cada gate.
   poco, en buena parte porque el cliente fija las herramientas. Hay herramientas
   de harness para el SDLC de uso exclusivamente interno; no se cuentan como IA
   productiva de la oferta. La política de IA está aprobada según
-  el responsable del caso; su aplicación y los controles siguen por verificar.
+  el responsable del caso; su versión, acta y alcance se revisan antes de
+  liberar M1-M3, y el gate del mes 3 comprueba su aplicación y su alcance para
+  el producto; los controles siguen por verificar.
 - No hay medición del impacto del harness contra una base, según el responsable
   del caso ([uso interno](../context/hechos/uso-ia-interno.md)). El propio
   diagnóstico es una hipótesis: las fuentes mezclan poblaciones y fechas, así que
@@ -69,8 +71,11 @@ cada gate.
   ingreso nuevo: 0** en el modelo ([Anexo E](../plan/annexes/05-business-case.md)).
 - El paso no está asegurado: con el caso base y un semiancho de 3 puntos, el
   límite inferior queda debajo de los umbrales. Pasa solo con calidad sin
-  deterioro demostrado; una calidad incierta espera y un daño corta. Por eso
-  medimos primero ([Anexo F](../plan/annexes/06-roadmap-riesgo.md)).
+  deterioro demostrado; una calidad incierta espera y un daño corta. Y con la
+  cohorte y los datos reales la medición puede no distinguir la mejora: la
+  validación lo estima y, si no alcanza, el método se reformula antes de la
+  segunda liberación o el caso se presenta como espera y corte. Por eso medimos
+  primero ([Anexo F](../plan/annexes/06-roadmap-riesgo.md); [Anexo B](../plan/annexes/02-arquitectura.md), "Viabilidad").
 - El asistente de integración es una hipótesis de producto: antes del mes 6
   medimos el tiempo a la primera integración exitosa con la documentación y el
   soporte actuales. Sin problema, base y señal comercial escrita, no se construye.
@@ -95,13 +100,19 @@ barata por el ROI de un paquete que no medimos.
   ([Anexo C](../plan/annexes/03-gobierno-seguridad.md)).
 - **Personas:** formar, reasignar y decidir una excepción externa solo si falta
   un facilitador. Se propone reservar 720 h clave (1,5 FTE) más 540-660 h de
-  formación: máximo 1.380 h, con demanda costeada de 970-1.350 h. Son supuestos;
-  Operaciones confirma agendas y trabajo desplazado por persona y semana
-  ([Anexo D](../plan/annexes/04-personas-cultura.md)).
+  formación: máximo 1.380 h, con demanda estimada de 970-1.350 h si se
+  confirman uniones de horas de B, C y D que sus dueños no ratificaron. La
+  reserva es propuesta, no disponibilidad: Operaciones confirma agendas y
+  trabajo desplazado por persona y semana, o se recostea antes del mes 1. Si se
+  cuenta todo junto o la formación aparte (el sobre de capacidad) lo proponemos
+  decidir al liberar los 71k USD ([Anexo D](../plan/annexes/04-personas-cultura.md),
+  [Anexo F](../plan/annexes/06-roadmap-riesgo.md#decisiones-pendientes-para-el-board-o-el-equipo)).
 - **Roadmap:** diagnóstico, base, política, controles, formación y prueba en los
   meses 1-3, después de diez días hábiles de validación autorizada en 2026;
-  solución según evidencia en los 4-6; aplicación y producto
-  condicional en los 7-9; evaluación y traspaso en los 10-12. El Council revisa
+  en los 4-12, controles, medición y, en los 4-6, el estudio del asistente sin
+  construirlo; evaluación y traspaso en los 10-12. Producto, plataforma,
+  referentes y cursos nuevos no entran en esos techos: necesitan otra decisión y
+  costeo, sin fecha prometida, y no pasan al año 2 por defecto. El Council revisa
   cada mes y puede cortar; a las dos liberaciones iniciales les siguen los gates
   de los meses 3, 6, 9 y 12.
 - **Primera liberación:** 80-136 h y hasta 8k USD de tiempo, sin caja
@@ -115,11 +126,13 @@ barata por el ROI de un paquete que no medimos.
   las reservas requiere una segunda autorización de hasta 71k USD; el acumulado
   propuesto es 79k USD (10 de caja y 69 de tiempo), no 79 nuevos. Si se corta
   antes de M1, el límite es 8; si se sale en M3, es 79 hasta cerrar y 85 en el
-  año con núcleo aprobado al salir. Son techos, sin restar beneficio: no es
-  pérdida económica incremental ni salida de caja. Esperar seis semanas en M6 y
+  año con núcleo aprobado al salir. Son techos de recursos, sin restar beneficio:
+  no es pérdida económica incremental ni salida de caja, y no incluyen la
+  contribución del trabajo facturable que puedan desplazar, que sigue sin medir. Esperar seis semanas en M6 y
   cortar tiene techo 102; cortar sin esperar, 95.
 - **Si sale bien:** pasan los gates y el mínimo sigue todo el año sin
-  plataforma, con costo proyectado ≈70k USD (27-113) y techo de 121k USD. Lo que
+  plataforma, con costo proyectado ≈70k USD (27-113) y techos de 118k USD sin
+  gastar reservas, 121k USD con cierre. Lo que
   queda en la mano es base, lecturas de throughput y calidad con su intervalo,
   controles probados y la decisión del año 2 con evidencia; no un ingreso
   ([Anexo F](../plan/annexes/06-roadmap-riesgo.md#escenarios)).
@@ -128,12 +141,17 @@ barata por el ROI de un paquete que no medimos.
   retorno prometido se compra información, y si el board dice que no siguen
   abiertas tres exposiciones, sin monetizar daños ni probabilidades: clientes que
   prohíben modelos externos y uso sin regla, que el mínimo cubre, y consumo de
-  modelos, que no cubre. El consumo es la única modelada: 211-267k USD
-  incrementales al año a 12× si el proveedor cobra por consumo, con o sin plan; *decisión*, la primera
+  modelos, que el mínimo no cubre; si una plataforma lo cubriría depende del
+  régimen del proveedor. El consumo es la única modelada: 211-267k USD
+  incrementales al año a 12× si el proveedor cobrara por consumo y el uso de
+  septiembre, valorizado a precio de API, se mantuviera. Es un escenario, no
+  consumo facturado ni pronóstico, y es de la empresa con o sin plan; *decisión*, la primera
   autorización y los criterios de la segunda. La plata es interna, por etapas y
   sin deuda.
-- **Personas, sin eludir el empleo:** formar y reasignar antes que desvincular,
-  con un estudio de un rol crítico que no decide desvinculaciones, chequeo de
+- **Personas, sin eludir el empleo:** formar y reasignar antes que desvincular.
+  El estudio de un rol crítico no decide desvinculaciones y no está en el
+  mínimo: es alcance ampliado, con postura comunicada, horas y autorización
+  propias. Además, chequeo de
   equidad por grupo y sin compensación monetaria nueva en 12 meses
   ([Anexo D](../plan/annexes/04-personas-cultura.md)).
 
@@ -174,8 +192,20 @@ liberar fondos."
 - Que la defensa está ensayada, mientras no haya un ensayo registrado.
 - Un monto de daño evitado o de pérdida esperada por no actuar: no hay
   probabilidad ni pérdida estimada. Sí se puede citar la exposición modelada a
-  consumo (211-267k USD incrementales al año a 12×), aclarando que es de la empresa con o sin
-  plan y que el mínimo no la cubre.
+  consumo (211-267k USD incrementales al año a 12×), aclarando que es un
+  escenario a precio de API, no consumo facturado ni pronóstico, que es de la
+  empresa con o sin plan y que el mínimo no la cubre.
+- Que la falta de pasarela causa el consumo o que tenerla lo cubre: depende del
+  régimen del proveedor y del ahorro medido.
+- Que el mínimo compra producto, plataforma, referentes, cohortes nuevas o el
+  estudio del rol, o que llega al "equilibrio": ese umbral es del paquete
+  completo.
+- Que los 79k USD son "lo que se puede perder": son un techo de recursos y no
+  incluyen la contribución del trabajo facturable que puedan desplazar.
+- Que los 12 voluntarios del piloto valoraron la herramienta: hubo 8% de
+  detractores. Decir 92% de uso 3 o más días por semana y NPS +42.
+- Que crédito y scoring son de alto riesgo regulatorio por vender a bancos: es
+  un límite que nos ponemos, no una clasificación normativa.
 - Que las cuatro competencias del capstone son la rúbrica del curso: la fuente
   dice "demostrar", no "evaluar", y no da rúbrica ni criterios.
 - Un VPN: no hay tasa en el caso ni flujos positivos que descontar.
