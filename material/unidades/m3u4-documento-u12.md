@@ -5,7 +5,7 @@ description: "Documento de lectura de M3U4, con un plan a 12 meses por trimestre
 tags: [m3, plan-maestro, defensa, lectura]
 sources:
   - id: m3u4-doc
-    resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12.pdf
+    resource: "Alias propuesto para Drive, pendiente de localizar: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_12.pdf"
     title: "M3U4, documento de lectura (el archivo dice Unidad 12)"
 status: draft
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T17:30:00Z }
@@ -51,8 +51,9 @@ ficha, no afirmación del curso sobre Acme Labs.
 * Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el texto
   extraído del documento el 2026-10-21; el texto no trae paginación, así que se citan
   secciones y no páginas. La verificación humana debería sumar las páginas.
-* El archivo subido al proyecto se llamaba `..._Unidad_12pdf.pdf`; la ficha cita el nombre
-  corregido, que es el que tiene que tener en el Drive.
+* El nombre original informado termina en `..._Unidad_12pdf.pdf`. El nombre
+  normalizado de `sources.resource` es un alias propuesto para Drive; esta
+  revisión no localizó el PDF ni confirmó su nombre en esa carpeta.
 * La autoevaluación dice que lo **más** crucial para la aprobación de un roadmap es "una
   clara alineación de las iniciativas de IA con los objetivos estratégicos del negocio y
   un caso de negocio con un ROI sólido". Es el criterio del curso; el plan del TIF tiene

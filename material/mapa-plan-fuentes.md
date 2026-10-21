@@ -3,8 +3,20 @@ type: Mapa
 title: Sección del plan → fuentes
 description: Qué unidad de la cursada, framework, ficha de concepto o apunte de clase respalda cada sección del Plan Maestro.
 tags: [plan, trazabilidad]
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
+generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
+
+## Lecturas de las unidades 10, 11 y 12
+
+Estas fichas nuevas siguen en `draft`: amplían la navegación del corpus y no
+reemplazan las fuentes verificadas de la entrega. Sus PDFs y la verificación
+humana se siguen en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
+
+| Sección del plan | Lecturas complementarias |
+|---|---|
+| Personas y cambio | [Documento U10](/unidades/m3u2-documento-u10.md), [caso contabilidad](/casos/m3u2-caso-contabilidad.md), [Documento U11](/unidades/m3u3-documento-u11.md), [escenarios laborales](/conceptos/m3u3-escenarios-impacto-laboral.md), [compensación](/conceptos/m3u3-enfoques-compensacion.md), [caso marketing](/casos/m3u3-caso-gerente-marketing.md), [caso analistas de riesgo](/casos/m3u3-caso-analistas-riesgo-banco.md) |
+| Roadmap | [Documento U12](/unidades/m3u4-documento-u12.md), [plan trimestral](/conceptos/m3u4-plan-trimestral.md) |
+| Finanzas y defensa | [Storytelling en cuatro partes](/conceptos/m3u4-storytelling-cuatro-partes.md), [preguntas del panel por rol](/conceptos/m3u4-panel-preguntas-por-rol.md) |
 
 Cada sección del plan, con su fuente principal, sus complementos y las fichas
 concretas que conviene citar. Antes de llevar una cifra a una slide, revisá la

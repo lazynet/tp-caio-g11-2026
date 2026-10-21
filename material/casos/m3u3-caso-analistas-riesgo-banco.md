@@ -40,7 +40,8 @@ supervisión humana y compensación, no como iniciativa del plan. Lectura de est
 
 * Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el texto
   extraído del documento el 2026-10-21; sin paginación.
-* Es una respuesta modelo de autoevaluación, sin cifras ni evidencia. El scoring
+* Es una respuesta modelo de autoevaluación, con una cifra didáctica y sin evidencia
+  de resultados. El scoring
   crediticio es de alto riesgo bajo el Anexo III del AI Act (ver
   [Anexo III](/frameworks/eu-ai-act-anexo-iii.md)); el curso no lo menciona en este caso.
 
