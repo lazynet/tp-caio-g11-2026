@@ -7,7 +7,7 @@ title: "Anexo B — Arquitectura y roadmap técnico"
 # Anexo B — Arquitectura y roadmap técnico
 
 Slides que sustenta: [Beneficio](../slides.md) y
-[Arquitectura objetivo](../slides.md). Los hitos técnicos alimentan
+[Arquitectura](../slides.md). Los hitos técnicos alimentan
 además [Roadmap técnico, financiero y cultural](../slides.md).
 
 ## Objetivo
@@ -343,6 +343,12 @@ reproduzca la extracción y las acciones del gate con el mismo corte.
 - Guardá consulta o script versionado, permisos de lectura, fecha de corte,
   zona horaria, filtros, versión y huella del extracto. Los datos identificables
   quedan en el entorno autorizado; al board llega evidencia anonimizada.
+- Distinguí el conector de solo lectura en origen de la persistencia de los
+  registros extraídos: guardar extractos es una escritura. Antes de persistir,
+  Gobierno debe validar clasificación, ubicación, permisos y retención de esos
+  registros según el [Anexo C](03-gobierno-seguridad.md) y la
+  [elegibilidad de las fuentes](../../context/supuestos/disponibilidad-de-datos.md).
+  Esa validación y la disponibilidad del almacenamiento no se presumen resueltas.
 - Documentá el diccionario y las claves PR→commit→CI→reversión→ticket→incidente,
   incluidos enlaces faltantes, duplicados, correcciones y reglas de atribución.
   Ausencia de enlace no equivale a ausencia de incidente o retrabajo.
@@ -627,11 +633,13 @@ meses ningún dato productivo de cliente va a un modelo**.
 
 ### Dependencia del proveedor y estrategia de salida
 
-Se mide la dependencia con lo que hay: ~90% de los eventos del agente de código
-sale de una sola herramienta, 58% del piloto chocó con el límite del plan y parte
-de los participantes pidió consumo multimodelo
-([fuente](../../context/hechos/encuesta-y-pilotos-ia.md)). Recomendación: **neutralidad
-al modelo** (supuesto vigente) comprobada con un ensayo, no declarada.
+La telemetría ubica ~90% de los eventos en la terminal (Claude Code)
+([fuente](../../context/hechos/uso-ia-interno.md)). Como señal
+acotada, el 58% de la muestra autoseleccionada de 12 participantes del piloto
+de abril de 2026 chocó con el límite del plan, y parte pidió consumo multimodelo
+([fuente](../../context/hechos/encuesta-y-pilotos-ia.md)). Esa encuesta no representa
+a toda la organización. Recomendación: **neutralidad al modelo** (supuesto
+vigente) comprobada con un ensayo, no declarada.
 
 1. Contrato de agente, skills y hooks sin funciones exclusivas de un proveedor.
 2. Gateway con al menos dos proveedores operativos.
@@ -756,8 +764,11 @@ Sin capacidad técnica o permiso contractual, restringí o suspendé el uso
 afectado; una encuesta no lo convierte en control probado.
 
 Exportá uso de las consolas existentes, PR/CI/reversiones/tickets/incidentes a
-extractos y scripts versionados de lectura, en almacenamiento existente con
-acceso limitado, sin guardar prompts ni secretos. Conciliá uso por superficie,
+extractos y scripts versionados. El acceso al origen es de solo lectura;
+persistir los extractos requiere la validación previa de Gobierno sobre
+clasificación, ubicación, permisos y retención indicada en el acta de viabilidad.
+Verificá almacenamiento autorizado con acceso limitado, sin guardar prompts
+ni secretos; no se presume disponible. Conciliá uso por superficie,
 seats y personas activas con resultados; si no hay exportación, reportá uso
 estimado aparte. Eso permite un tablero periódico sin servicio central nuevo.
 
@@ -835,9 +846,11 @@ liberación propone **80-136 h**, techo de **8k USD de tiempo** y **caja 0**.
 
 Esa ventana de **10 días hábiles** comienza después de la autorización específica
 y de confirmar agenda, fuentes, trabajo desplazado e imputación 2026.
-El trabajo técnico se limita a lectura y reproducción sobre datos corporativos
-autorizados; no incluye instrumentación nueva, despliegues, herramientas ni
-contratos nuevos. No consta ejecución previa.
+El trabajo técnico lee las fuentes corporativas autorizadas sin modificarlas
+y reproduce los indicadores. La persistencia de registros extraídos es una
+escritura separada, sujeta a la validación previa de Gobierno descrita en el
+acta de viabilidad; sin ella no se persisten extractos. No incluye instrumentación
+nueva, despliegues, herramientas ni contratos nuevos. No consta ejecución previa.
 
 El acta técnica necesita productor, verificador y autoridad distintos, según F.
 La fila de D de 8-16 h de verificador independiente podría cubrir su revisión,
@@ -917,7 +930,7 @@ señal** (señal en el mes 3); la rama sin señal está en "Bifurcación en el m
 | Meses 1-3 | Base | Matriz superficie→control→telemetría y denominador de la cobertura | Las cuatro superficies con ruta, control y telemetría declarados; denominador armado con datos de administración | Sin telemetría posible, se declara no medible; no se elimina del denominador de cobertura de control ni se declara cubierta sin prueba |
 | Meses 1-3 | Interno | Telemetría unificada de chat, terminal y Workspace | Uso por persona activa y por resultado | Sin exportación del proveedor: encuesta cada tres meses, marcada como estimada |
 | Meses 1-3 | Producto | Matriz de restricciones contractuales por cliente (con comercial y Gobierno) | Cobertura de los clientes que concentran la facturación | Sin matriz, no hay piloto de producto |
-| Meses 4-6 | Base | Gateway en laboratorio con 2 proveedores y registro de costo | Tráfico del caso de referencia registrado por llamada, nivel y centro de costo | Más de un tramo sin operar: se compra una solución |
+| Meses 4-6 | Base | Gateway en laboratorio con 2 proveedores y registro de costo | Tráfico del caso de referencia registrado por llamada, nivel y centro de costo | Más de un tramo sin operar: se reevalúan configurar, comprar o ensamblar con la matriz de decisión de M3; no habilita una compra automática |
 | Meses 4-6 | Base | Prueba de integración y de bypass por superficie | Cobertura de control = 100% de las superficies aprobadas; casos propios 100% por gateway; agente de código ≥ 90% por gateway solo con la suscripción que permite gateway y con el pago por consumo (ver "Política de ruteo"); con la suscripción que no lo permite, ruteo ensayado y no activado | Superficie con bypass sin control compensatorio: queda declarada no cubierta y se lleva al Council |
 | Meses 4-6 | Base | Harness v1 sobre el caso de referencia: working set con presupuesto, memoria externa, gate humano, ledger | Pasa los gates de rendimiento y seguridad del protocolo de evaluación | Dos fallas de contexto críticas sin mitigar: se reduce el alcance |
 | Meses 4-6 | Base | Suite de evals en CI con el dataset v1 y trazas | Cada release corre la suite; la tupla de versión queda registrada | Sin dataset utilizable: el caso queda en nivel 0 (sin IA) |
