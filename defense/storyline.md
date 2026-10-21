@@ -8,18 +8,18 @@ según el reparto del `README.md`. Quién presenta cada slide y quién responde
 cada objeción **todavía no se acordó** (#21): al final va una propuesta para que el
 equipo la discuta. El pedido es aprobar el plan y sus resoluciones R-01 a R-32
 ([Anexo G](../plan/annexes/07-resoluciones.md)). Cada cifra remonta a un anexo de
-`plan/annexes/`. Las 84 fichas de fuente que exigía el chequeo de entrega al
-20/10/2026 quedaron `verified`, con declaración humana de Martín de esa fecha. Al
-aplicar las resoluciones del Directorio se editaron supuestos: al 21/10, `context/`
-tiene 26 fichas `verified` y 15 supuestos en borrador que alimentan cifras del deck,
-y vuelven a `verified` solo con una declaración humana nueva. La declaración del 20/10 acredita el
-cotejo de cada ficha con la fuente declarada, no la validación de los supuestos
-con datos internos de Acme Labs, ni el acuerdo del equipo, ni una aprobación
-empresarial. La anonimización todavía necesita la revisión de un humano
+`plan/annexes/`. Esta propuesta alinea el relato de #51 con main
+`ec1dc41901b9bc3ad4b7b23c5450a1100f560fc7`, sin cambiar A–G.
+Los supuestos modificados por G fueron revalidados por instrucción de Martín
+el 21/10, según README; conservan su tipo `Supuesto`.
+Las cuatro fichas de #55 siguen `draft`, sin declaración humana nueva;
+#56 conserva el bloqueo regulatorio de entrega. Una revisión de fuentes no
+valida los supuestos con datos internos ni acredita acuerdo del equipo o
+aprobación empresarial. La anonimización todavía necesita la revisión de un humano
 autorizado. **No hubo ensayo todavía**: cuando lo haya, se registra con fecha,
-tiempos, roles y feedback. El arco sigue la revisión del 2026-10-15
-(`reviews/2026-10-15-comentarios-equipo.md`): problema → beneficio →
-alternativas → costo → resolución. Montos en k USD (miles de dólares).
+tiempos, roles y feedback. El arco propuesto conserva el propósito empresarial:
+oportunidad → cuatro etapas → iniciativas → ejecución → recursos → resolución.
+El deck es la única fuente; este texto prepara su defensa. Montos en k USD.
 
 ## Qué tiene que demostrar la defensa
 
@@ -35,7 +35,7 @@ cambiar el orden de los actos.
 
 | Competencia | Dónde se demuestra | Cómo se prepara |
 |---|---|---|
-| Visión estratégica | Tesis y acto 1: medir el valor antes de ampliar | Síntesis ejecutiva: la tesis y el cierre del deck, dichos en menos de un minuto (propuesta del equipo, no del curso) |
+| Visión estratégica | Tesis y acto 1: mejorar la entrega y evaluar la oferta, avanzando con evidencia | Síntesis ejecutiva: la tesis y el cierre del deck, dichos en menos de un minuto (propuesta del equipo, no del curso) |
 | Justificación de inversiones | Actos 2 y 3: beneficio medido, exposición presupuestaria por punto de salida, narrativa financiera | Cada cifra con su anexo; ninguna fuera del deck o de un anexo |
 | Gestión de objeciones | [Banco de objeciones](objeciones.md), con respuesta y evidencia por objeción | Mapeo de objeciones probables por tema, con una propuesta de quién responde cada una al final, no acordada |
 | Comunicación ejecutiva | Una decisión por slide y el cierre con el pedido | Ensayo con tiempos y preguntas bajo presión (propuesta del equipo): todavía no se hizo |
@@ -45,12 +45,11 @@ mide y en qué gate; no estimar en vivo ni cambiar el pedido en la sala.
 
 ## Tesis en una oración
 
-Acme Labs ya usa IA sin saber cuánto vale: proponemos medir el valor antes de
-ampliar la inversión, con un paquete mínimo sobre las herramientas que ya paga,
-controles probados antes de usar y fondos que se liberan solo por decisión en
-cada gate.
+Proponemos incorporar IA para mejorar las entregas de Acme Labs y evaluar nuevas
+funcionalidades para clientes: preparar, validar, aplicar y consolidar, con las
+herramientas actuales, controles probados y recursos liberados según evidencia.
 
-## Acto 1: el problema (portada y Problema)
+## Acto 1: propósito y oportunidad (portada y Oportunidad de negocio)
 
 - La empresa es rentable y crece, pero concentrada: el cliente principal pesa
   40%-50% de la facturación ([Anexo A](../plan/annexes/01-diagnostico.md)).
@@ -67,12 +66,20 @@ cada gate.
   financiamos primero una validación acotada para conciliar corte, nómina,
   contratistas, personas y horas por rol antes de liberar M1-M3.
 
-**Cierre del acto:** el riesgo no es invertir poco; es ampliar sin saber qué compra.
+**Cierre del acto:** mejorar la entrega y evolucionar la oferta exige comprobar
+capacidad, calidad y restricciones antes de ampliar.
 
-## Acto 2: qué beneficio buscamos y qué alternativas hay (Beneficio y Alternativas)
+## Acto 2: cuatro etapas e iniciativas (Propuesta e Iniciativas y prioridad)
+
+- **Preparar → Validar → Aplicar → Consolidar:** primero base, controles,
+  formación y prueba; después validación interna y estudio acotado de producto;
+  aplicación con evidencia y evaluación de continuidad al cierre. La validación
+  inicial de 2026 tiene liberación propia; construir producto exige otra decisión
+  y costeo (B, E, F y G, R-02/R-30/R-31).
 
 - El beneficio principal es capacidad con calidad: PR aceptados contra una base
-  congelada, con retrabajo e incidentes primero. **Beneficio de caja estimado: 0;
+  congelada, en agregados por área y semana, con retrabajo e incidentes primero.
+  **Beneficio de caja estimado: 0;
   ingreso nuevo: 0** en el modelo ([Anexo E](../plan/annexes/05-business-case.md)).
 - El paso no está asegurado: con 15-20 personas, la medición solo distingue con
   buena probabilidad una mejora cercana al +25%. Por eso el mes 6 no lee valor
@@ -90,10 +97,10 @@ cada gate.
   antes una estimación común. El pedido anterior (33 + 6 de caja, 72 + 7 de
   tiempo) queda como antecedente.
 
-**Cierre del acto:** elegimos lo mínimo que compra la medición, no la opción más
-barata por el ROI de un paquete que no medimos.
+**Cierre del acto:** operación primero y asistente como hipótesis; el mínimo
+financia la evidencia para decidir qué continuar o ampliar.
 
-## Acto 3: cuánto cuesta y cómo se controla (de Arquitectura a Costo y riesgo)
+## Acto 3: ejecución, recursos y control (Arquitectura, Personas, Gobierno y Roadmap)
 
 - **Arquitectura proporcional:** configurar lo que ya pagamos antes de comprar o
   ensamblar. La plataforma se relee en los meses 3, 6 y 9 con la regla que
@@ -104,15 +111,21 @@ barata por el ROI de un paquete que no medimos.
   aceptado. Seguridad puede suspender el uso aunque el gasto o la adopción
   cumplan, y quien produce la evidencia no es quien la verifica ni quien firma
   ([Anexo C](../plan/annexes/03-gobierno-seguridad.md)).
+  R-08 excluye código y datos de clientes de modelos externos, salvo en su entorno
+  y con permiso escrito. R-09 suspende código bajo NDA desde la aprobación; solo
+  código sin NDA ya en uso admite residual del comité hasta M3, no datos.
 - **Personas:** formar, reasignar y decidir una excepción externa solo si falta
   un facilitador. Se propone reservar 720 h clave (1,5 FTE) más 540-660 h de
-  formación: máximo 1.380 h, con demanda estimada de 970-1.346 h y los solapes
+  formación: máximo 1.380 h, con demanda de actividades de 970-1.346 h; con
+  verificación M3, 974-1.351 h. Se adoptan los solapes
   de horas entre áreas adoptados (R-25, R-26). La reserva no es disponibilidad:
   Operaciones confirma agendas y trabajo desplazado por persona y semana, o se
   recostea antes del mes 1 sin subir el techo. La capacidad se lee con sobre
   separado: soporte clave y formación se confirman por separado en la segunda
   liberación (R-05) ([Anexo D](../plan/annexes/04-personas-cultura.md),
   [Anexo F](../plan/annexes/06-roadmap-riesgo.md#resoluciones-del-directorio-y-decisiones-delegadas)).
+  Operaciones no tiene meta M6: ≥40% M9 y ≥60% M12 sobre habilitadas, solo si el
+  Directorio autoriza y costea el programa ampliado en M6 (R-23).
 - **Roadmap:** diagnóstico, base, política, controles, formación y prueba en los
   meses 1-3, después de diez días hábiles de validación autorizada en 2026;
   en los 4-12, controles, medición y, en los 4-6, el estudio del asistente sin
@@ -138,8 +151,11 @@ barata por el ROI de un paquete que no medimos.
   contribución del trabajo facturable que puedan desplazar, que sigue sin medir.
   Después, el Directorio fija hoy techos por tramo de 16k, 13k y 13k USD (121k en
   el año) y no los libera: el CEO firma cada gate dentro del techo de su tramo.
-  Cortar en el mes 6 tiene techo 95; en el 9, 108; esperar seis semanas en el
-  mes 9 y cortar, 115. Ningún camino supera 121.
+  Cortes inmediatos M6/M9: 95/108 hasta cerrar y 99/110 anual con guardia.
+  Espera única M9 vencida: 108 + 7 = 115 hasta cerrar; +1 de guardia = 116 anual.
+  El subtramo caja 1/tiempo 6 sustituye continuidad de M10–M12; la reserva de
+  cierre se usa una sola vez. No hay espera por medición M6 (E, R-27).
+  Ningún camino supera 121; superar un tramo vuelve al Directorio.
 - **Si sale bien:** pasan los gates y el mínimo sigue todo el año sin
   plataforma, con costo proyectado ≈71k USD (27-114) dentro de un techo anual de
   121k USD (118k sin gastar las reservas de cierre). Lo que
@@ -247,21 +263,21 @@ Son diez slides para ocho personas, así que dos integrantes presentan dos.
 | Slide | Presenta | Responde objeciones | Respaldo en preguntas |
 |---|---|---|---|
 | Portada | Lucho | Storyline | Martín |
-| Problema | Martín (Anexo A) | 19, 25, 45 | Eduardo |
-| Beneficio | Eduardo | 21, 22, 47, 51 | Nico |
-| Alternativas | Gabriela (Anexo E) | 6, 7, 37, 39, 50 | Maxi |
+| Oportunidad de negocio | Martín (Anexo A) | 19, 25, 45 | Eduardo |
+| Cuatro etapas | Eduardo | 21, 22, 47 | Nico |
+| Iniciativas y prioridad | Gabriela (Anexo E) | 6, 7, 37, 39, 50, 51 | Maxi |
 | Arquitectura | Nico (Anexo B) | 1, 26, 28 | Rafa |
-| Gobierno y seguridad | Rafa (Anexo C) | 11, 12, 13, 20, 23 | Nico |
 | Personas | Pablo (Anexo D) | 8, 9, 14, 15, 40-42, 44 | Gabriela |
+| Gobierno y seguridad | Rafa (Anexo C) | 11, 12, 13, 20, 23 | Nico |
 | Roadmap | Maxi (Anexo F) | 21, 24, 27, 43, 46 | Lucho |
 | Costo y riesgo | Gabriela (Anexo E) | 3, 10, 18, 29-36, 38, 49 | Maxi |
 | Cierre | Lucho | "Qué estamos pidiendo hoy" (3, 31) | Martín |
 
-- **Por qué Eduardo en Beneficio:** la slide lee el método de los gates (pasa,
-  espera, corta), que sale del material que él verificó, y deja a Nico libre para
-  Arquitectura. Alternativa: Nico presenta Beneficio y Arquitectura, con Eduardo de
-  respaldo.
-- **Dependencia:** si el equipo adopta otra estructura de diez slides, el reparto se
-  rehace por mensaje, no por número de slide.
+- **Adaptación propuesta:** Eduardo presenta el recorrido de cuatro etapas;
+  Gabriela conecta operación, producto y alcance financiado. Reutiliza la propuesta
+  anterior sin dar por acordados los mensajes nuevos. Una alternativa de reparto
+  queda pendiente de definición por el equipo en #21/#27.
+- **Dependencia:** revisión de mensajes por los responsables y acuerdo o descarte
+  de esta estructura en #27; cualquier cambio de orden rehace el reparto por mensaje.
 - **Qué falta para darlo por acordado:** la conformidad de los ocho en #21 y un
   ensayo registrado con fecha, tiempos y correcciones.

@@ -7,19 +7,6 @@ paginate: true
 size: 16:9
 lang: es-AR
 ---
-
-<!-- Fuente única del deck. Nunca edites un deck generado: corré scripts/build-deck.sh.
-     Una slide por `---`, con un título `#` cada una. Máximo 10 slides. Arco:
-     problema → beneficio → alternativas → costo → resolución. Borrador del CAIO: toda
-     cifra viene de un anexo y de una fuente. La cuenta del pedido (preparación +
-     meses 1-3 + reservas = 79) vive completa solo en Roadmap; Costo y riesgo (salidas) y el cierre
-     la citan: si cambia, cambian las tres. Las slides se citan por el nombre de su eyebrow
-     ("ver Roadmap"), nunca por número de página. Código de estado: .st pasa (verde),
-     espera (naranja de fondo) y corta (óxido), siempre con la palabra escrita. Escrito para un board que no leyó el caso: sin jerga ni
-     siglas sin explicar. Diseño: plan/theme/acme.css; los ajustes de legibilidad del
-     bloque <style> de abajo valen para todo el deck. Los bloques HTML llevan Markdown
-     adentro, separado por líneas en blanco, y los links siguen en Markdown. -->
-
 <style>
 /* Legibilidad proyectada y contraste WCAG AA, sin tocar el tema. */
 section table th { background: var(--green); }
@@ -70,52 +57,54 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 .pedido b { font-family: "Caprasimo", Georgia, serif; font-weight: 400; font-size: 34px; color: #fff; }
 </style>
 
+<!-- Fuente única del deck. Nunca edites un deck generado: corré scripts/build-deck.sh.
+     Una slide por `---`, con un título `#` cada una. Máximo 10 slides. Arco:
+     propósito → oportunidad → plan → ejecución → recursos → decisión. Borrador del CAIO: toda
+     cifra viene de un anexo y de una fuente. El pedido completo se resume en la
+     slide 10; la 9 muestra su exposición presupuestaria máxima autorizada. Diseño: plan/theme/acme.css; los bloques
+     HTML llevan Markdown adentro, separado por líneas en blanco, y los links siguen en
+     Markdown. -->
+
 <!-- _class: cover -->
 <!-- _paginate: false -->
 
 <div class="sun"></div>
 
-<span class="chip">Grupo 11 · Diplomatura Chief AI Officer (CAIO) · UTN BA</span>
+<span class="chip">Grupo 11 · Diplomatura CAIO · UTN BA</span>
 
-# Medir el valor antes de ampliar la inversión
+# Plan de Inteligencia Artificial 2027
 
-<p class="sub">Plan Maestro del CAIO, el responsable de IA, para <strong>Acme Labs</strong>, software para bancos, fintechs y grandes empresas</p>
+<p class="sub"><strong>Acme Labs</strong></p>
 
-<p class="eyebrow">Plan 2027: 12 meses de IA en la operación y en el producto, con los fondos liberados por etapa</p>
+<p style="font-size:30px;line-height:1.35;max-width:850px">Incorporación progresiva de IA en la operación y en los productos</p>
 
-<p style="max-width:820px">Propósito: mejorar cómo trabajamos y decidir con evidencia dónde evolucionar lo que vendemos. Hoy la IA se usa, pero nadie midió cuánto valor agrega. Proponemos empezar por lo mínimo que permite medirlo, con controles de seguridad probados y las herramientas que ya pagamos, y ampliar solo con evidencia.</p>
+<p style="max-width:820px">Preparar a la organización, probar aplicaciones y avanzar según sus resultados.</p>
 
-<p class="fine">Cifras estimadas, a confirmar con datos internos en una validación de 10 días hábiles que proponemos hacer en 2026, antes de que arranque el plan. No presupuestamos repago en el año: pedimos techos para medir, no lo que esperamos ganar. Lo que se aprueba: el plan y sus resoluciones R-01 a R-32 del Anexo G. Montos en k USD (miles de dólares).</p>
+<p class="fine">Propuesta al Directorio · 12 meses · Cifras estimadas, sujetas a validación</p>
+
+<p class="fine">El pedido: aprobar el plan y sus resoluciones R-01 a R-32 del Anexo G. No presupuestamos repago en el año. Montos en k USD (miles de dólares).</p>
 
 ---
 
-<p class="eyebrow">Problema</p>
+<p class="eyebrow">01 · Oportunidad de negocio</p>
 
-# Usamos IA, pero no sabemos cuánto rinde
+# Mejorar la entrega y evolucionar la oferta
 
-<div class="grid main-side">
-<div class="plain">
+<p style="font-size:26px;line-height:1.4">Acme desarrolla software para bancos y fintechs. Proponemos aplicar IA en dos frentes: <strong>mejorar la capacidad y calidad de sus entregas</strong> y <strong>evaluar nuevas funcionalidades para sus clientes</strong>.</p>
 
-| Madurez por dimensión (escala 1-5) | Nivel estimado | Lo que lo explica |
-|---|---|---|
-| Estrategia | <span class="dots"><span class="on">●●</span><span class="off">○○○</span></span> 2 | Hay iniciativas, sin estrategia formal aprobada |
-| Datos e infraestructura | <span class="dots"><span class="on">●●</span><span class="off">○○○</span></span> 2 | Hay inventario; datos repartidos; integración sin validar |
-| Talento y cultura | <span class="dots"><span class="on">●●</span><span class="off">○○○</span></span> 2 | Uso y cursos sueltos; sin formación por rol con seguimiento |
-| Gobierno | <span class="dots"><span class="on">●●</span><span class="off">○○○</span></span> 2 | Política vigente, que este plan ratifica; falta verificar que se aplique |
-| Adopción y valor | Interno: 2<br>Producto: 1 | IA en el desarrollo interno, no en el producto; nada medido contra una base |
+<div class="plain" style="margin-top:18px">
+
+Ya utiliza IA en desarrollo interno, pero no mide su aporte contra una base. El plan ratifica la política vigente; su aplicación debe verificarse.
+
+<strong>83–90% de las horas ya se facturan:</strong> el plan debe mejorar la entrega sin desplazar trabajo a ciegas. <strong>40–50% de la facturación depende de un cliente:</strong> cuidar sus restricciones es parte de proteger el negocio.
 
 </div>
-<div class="grid" style="gap:10px">
-<div class="card kpi"><div class="num">40-50%</div><div class="lbl">de la facturación viene de un solo cliente: usar IA con sus datos es un riesgo comercial, no solo técnico</div></div>
-<div class="card kpi"><div class="num">83-90%</div><div class="lbl">de las horas ya se facturan: cada hora que el plan use compite con trabajo vendido</div></div>
-</div>
-</div>
 
-<p style="font-size:17px;margin-top:6px">Madurez: 1 = inicial, 3 = operacional, 5 = transformacional; 2 = hay piezas del 3 sin formalizar ni medir. Los niveles y las cifras salen de fuentes con fechas distintas: son estimaciones que la validación confirma o corrige. Lo que no está en duda es que el valor no se mide.</p>
+<p class="note">Rangos anonimizados del diagnóstico, a confirmar en la validación. Competitividad es el objetivo; la mejora y su conversión en ingresos todavía deben demostrarse.</p>
 
 <div class="decision">
-<span class="pill">Resolución R-02</span>
-<span class="body">El Directorio libera hoy 10 días hábiles, hasta 8k USD de tiempo propio y sin caja, para confirmar diagnóstico, cifras y agendas. Si no sostienen el alcance, el CEO reduce o detiene antes de los meses 1-3.</span>
+<span class="pill">Propósito</span>
+<span class="body">Fortalecer la competitividad: mejorar cómo trabajamos y decidir dónde evolucionar lo que vendemos.</span>
 <span class="ref">
 
 [Anexo A — Diagnóstico](annexes/01-diagnostico.md) · [Anexo G](annexes/07-resoluciones.md)
@@ -123,47 +112,58 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 </span>
 </div>
 
+
 ---
 
-<p class="eyebrow">Beneficio</p>
+<p class="eyebrow">02 · Propuesta</p>
 
-# Buscamos más capacidad sin perder calidad
+# Cuatro etapas para incorporar IA
 
-<div class="grid g3">
-<div class="card dark">
-<span class="tag">Beneficio principal</span>
-<h3>Más trabajo entregado, sin perder calidad</h3>
-<p>Cambios de código aceptados por el equipo, en totales por área, contra una base previa. Retrabajo e incidentes, primero.</p>
+<p><strong>Resultado buscado:</strong> demostrar mejoras de capacidad con calidad y decidir qué aplicaciones conviene continuar o ampliar.</p>
+
+<style scoped>
+.phase-flow { display:flex; align-items:stretch; gap:0; margin:24px 0 18px; }
+.phase { flex:1; min-width:0; background:#eadbc6; border-top:7px solid #8b9d6d; border-radius:8px; padding:18px 16px; box-sizing:border-box; }
+.phase:nth-of-type(3) { border-top-color:#738654; }
+.phase:nth-of-type(5) { border-top-color:#56683d; }
+.phase:nth-of-type(7) { border-top-color:#3d472b; }
+.phase-month { font-size:16px; font-weight:700; text-transform:uppercase; color:#56683d; margin:0 0 9px; }
+.phase h3 { font-size:27px; line-height:1.1; margin:0 0 14px; color:#3d472b; }
+.phase p { font-size:20px; line-height:1.38; margin:0; }
+.phase-arrow { align-self:center; width:30px; flex:0 0 30px; text-align:center; font-size:31px; font-weight:700; color:#56683d; }
+</style>
+
+<div class="phase-flow">
+<div class="phase">
+<div class="phase-month">Meses 1–3</div>
+<h3>Preparar</h3>
+<p>Base de comparación, controles, formación y prueba con las herramientas actuales.</p>
 </div>
-<div class="card">
-<span class="tag">En el presupuesto</span>
-<h3>Beneficio de caja: 0, por diseño</h3>
-<p>La capacidad liberada es plata solo si se vende o evita una contratación, y eso se demuestra, no se supone.</p>
+<div class="phase-arrow">→</div>
+<div class="phase">
+<div class="phase-month">Meses 4–6</div>
+<h3>Validar</h3>
+<p>Medir mejoras internas y estudiar una necesidad de cliente. Construir producto requiere otra decisión.</p>
 </div>
-<div class="card dashed">
-<span class="tag">Hipótesis, no beneficio</span>
-<h3>Asistente para integrar clientes</h3>
-<p>Sin un problema medido antes del mes 6 y sin interés escrito de un cliente, no se construye.</p>
+<div class="phase-arrow">→</div>
+<div class="phase">
+<div class="phase-month">Meses 7–9</div>
+<h3>Aplicar</h3>
+<p>Continuar usos con evidencia. Producto solo con necesidad validada, señal comercial, solución costeada y nueva autorización.</p>
 </div>
+<div class="phase-arrow">→</div>
+<div class="phase">
+<div class="phase-month">Meses 10–12</div>
+<h3>Consolidar</h3>
+<p>Evaluar resultados y adopción. Definir qué continúa, se transfiere o se detiene.</p>
 </div>
-
-<p class="eyebrow" style="margin:14px 0 2px">Cómo se lee la mejora medida en los meses 6 y 9</p>
-
-<div class="semaforo">
-
-| | Mes 6 | Mes 9 |
-|---|---|---|
-| <span class="st pasa">Pasa</span> | No lee valor: sigue con adopción, costo y controles, sin daño | Peor caso >0%, sin daño: se acredita el peor caso |
-| <span class="st espera">Espera</span> | — | Estimado ≥+5% sin pasar: 6 semanas más, sin ampliar |
-| <span class="st corta">Corta</span> | Daño, o caída demostrada | Estimado <+5%, o daño |
-
 </div>
 
-<p class="note">Estimado: la mejora del equipo contra su base; peor caso: el piso de su intervalo de 90%; daño: el intervalo confirma más retrabajo o incidentes. Con 15-20 personas solo se distingue con buena probabilidad una mejora cercana al +25%: por eso el mes 6 no decide por valor y el mes 9 pide solo distinguirla de cero. Si no la distingue, el beneficio es 0 y no se amplía; seguir o cortar se decide por adopción, calidad, costo y controles. La guardia de calidad puede cortar por azar: hasta ≈14% por lectura.</p>
+<p class="note"><strong>Antes de iniciar:</strong> diez días hábiles de validación del diagnóstico, las agendas y la viabilidad, con liberación propia en 2026 (R-02). No se presupuestan ahorros de caja ni ingresos nuevos; el producto no está garantizado.</p>
 
 <div class="decision">
-<span class="pill">Resoluciones R-01 · R-14 · R-19</span>
-<span class="body">Medimos capacidad con calidad. Caja e ingreso presupuestados: 0; si la medición no distingue la mejora, el beneficio acreditado también es 0.</span>
+<span class="pill">Criterio</span>
+<span class="body">El paso a cada etapa requiere evidencia, seguridad aceptable y autorización de recursos.</span>
 <span class="ref">
 
 [Anexo B](annexes/02-arquitectura.md) · [Anexo E](annexes/05-business-case.md) · [Anexo G](annexes/07-resoluciones.md)
@@ -171,50 +171,41 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 </span>
 </div>
 
+
 ---
 
-<p class="eyebrow">Alternativas</p>
+<p class="eyebrow">03 · Iniciativas y prioridad</p>
 
-# Empezamos por lo mínimo que permite medir
+# Mejorar la operación y validar una oportunidad de producto
 
-<div class="grid main-side" style="grid-template-columns:1fr 1.15fr">
+<div class="grid g2">
 <div class="card dark">
-<span class="tag">El paquete mínimo</span>
-<h3>Saber si hay valor, con controles probados</h3>
-<p>Formación básica para todos e intermedia para un grupo de <span style="white-space:nowrap">15-20</span>, controles de seguridad por herramienta, medición contra una base y estudio del asistente para clientes. Con lo que ya pagamos, sin plataforma nueva.</p>
-<p><strong>Lo que se pide hoy no es el año.</strong> Hoy se liberan 8k USD. Hasta el mes 3: estimado 18-73k, techo 79k (ver Roadmap).</p>
+<h3>Operación: primera aplicación</h3>
+<p>Formación aplicada, controles y mejores prácticas con las herramientas actuales. Medir cambios de código aceptados por el equipo, en agregados por área y semana contra su base; revisar primero retrabajo e incidentes.</p>
+<p>Capacidad liberada no equivale a caja: solo se convierte en dinero si se vende o evita una contratación y eso se demuestra.</p>
 </div>
-<div class="plain alts">
-
-| Alcance | Costo estimado del año, k USD |
-|---|---|
-| Paquete mínimo (recomendado) | ≈71 (27-114) |
-| Piloto con el agente de código actual, sin formación general ni legal | 47 (24-69) |
-| Gobierno y formación desde el inicio | 161 (82-240) |
-| Paquete completo hasta el mes 3; sin ninguna señal, gobierno y formación después | ≈199 (medio, sin rango propio) |
-| Plataforma, sin producto | 394 (213-575) |
-| Plataforma, con producto | 471 (251-690) |
-
+<div class="card">
+<h3>Oferta: una hipótesis a investigar</h3>
+<p>El asistente de integración ayudaría al cliente a conectar con la plataforma: encontrar funciones, preparar llamadas y entender errores con documentación y datos sintéticos.</p>
+<p>Antes del mes 6: problema medido y un cliente con presupuesto que acepte por escrito evaluar en sandbox y un rango de precio, sin compra comprometida. El mínimo financia el estudio; construir requiere nuevo costeo y autorización.</p>
 </div>
 </div>
 
-<p style="font-size:17px;margin-top:4px">No es una comparación de precios: cada alcance compra cosas distintas. El piloto de 47k USD es más barato porque deja afuera la formación general y la revisión legal. Plataforma y producto se vuelven a costear antes de decidirlos.</p>
+<p class="note">El Anexo F compara además funciones en medios de pago, servicios de agentes de código y continuar solo con eficiencia. Son alternativas de respaldo, no proyectos aprobados ni exploración amplia financiada. El mínimo anual se estima en ≈71 mil USD (27–114); los otros alcances no son precios equivalentes (R-28).</p>
 
-<div class="decision">
-<span class="pill">Resoluciones R-01 · R-28</span>
-<span class="body">Empezar por el paquete mínimo. Ninguna proyección anual queda aprobada como presupuesto.</span>
-<span class="ref">
+<p class="note">M6 no lee valor. M9 pasa con el piso del intervalo de 90% >0 y sin daño: se acredita ese piso. Calidad es guardia de daño. Con menos de 15 personas o medición no viable según B/R-14, ninguna lectura decide por valor: beneficio 0, sin expansión; continuidad por adopción, calidad, costo y controles.</p>
 
-[Anexo E — Business case](annexes/05-business-case.md) · [Anexo G](annexes/07-resoluciones.md)
+<div class="decision"><span class="pill">Prioridad</span><span class="body">Primero capacidad con calidad; producto solo si la necesidad y la viabilidad justifican una decisión propia.</span><span class="ref">
 
-</span>
-</div>
+[Anexo B](annexes/02-arquitectura.md) · [Anexo E](annexes/05-business-case.md) · [Anexo F](annexes/06-roadmap-riesgo.md) · [Anexo G](annexes/07-resoluciones.md)
+
+</span></div>
 
 ---
 
 <p class="eyebrow">Arquitectura</p>
 
-# Lo que ya pagamos va antes que una plataforma
+# Empezar con la tecnología que ya tenemos
 
 <p style="font-size:17px">Llamamos <strong>herramienta</strong> a cada lugar donde se usa IA: editor de código, agente de código, chat y suite de oficina. Cada una prueba sus propios controles.</p>
 
@@ -232,8 +223,8 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 <p>Con las herramientas actuales: configuración, registro de uso, base de medición y prueba de prácticas de trabajo con IA.</p>
 </div>
 <div class="card">
-<h3>¿Plataforma? Solo en un punto de decisión</h3>
-<p>Hace falta una señal (un contrato, un cambio de precio del proveedor o un cliente interesado) y además: <strong>1</strong> brecha documentada, <strong>2</strong> alternativas comparables, <strong>3</strong> números que cierren o pérdida aceptada, <strong>4</strong> capacidad demostrada.</p>
+<h3>Plataforma: condiciones</h3>
+<p>Señal contractual, de precio o producto, más: <strong>1</strong> brecha documentada, <strong>2</strong> alternativas comparables, <strong>3</strong> economía incremental o aprendizaje con pérdida aceptada y límite declarado, <strong>4</strong> capacidad demostrada.</p>
 </div>
 <div class="card dashed">
 <h3>No se aprueba todavía</h3>
@@ -243,7 +234,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 <div class="decision">
 <span class="pill">Resoluciones R-08 · R-11 · R-15 · R-16</span>
-<span class="body">Los meses 1-3 arrancan tras la validación, y cada herramienta en uso prueba ahí sus controles. Plataforma: señal y condiciones 1-4; dictamina el comité de IA y libera el Directorio.</span>
+<span class="body">M1-3 tras la validación, con controles probados por herramienta. Plataforma: señal y condiciones 1-4; dictamina el comité de IA, libera el Directorio.</span>
 <span class="ref">
 
 [Anexo B — Arquitectura](annexes/02-arquitectura.md) · [Anexo G](annexes/07-resoluciones.md)
@@ -253,9 +244,52 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 ---
 
+<p class="eyebrow">Personas</p>
+
+# De uso individual a capacidad de equipo
+
+<div class="grid g2">
+<div>
+<div class="card">
+<p class="eyebrow" style="color:var(--muted)">Tiempo que pedimos reservar en los meses 1-3</p>
+<div class="grid g2" style="margin:6px 0">
+<div class="kpi"><div class="num">720 h</div><div class="lbl">de personas clave para sostener el plan (1,5 personas a tiempo completo)</div></div>
+<div class="kpi"><div class="num">660 h</div><div class="lbl">de formación, como máximo</div></div>
+</div>
+<p style="font-size:17px">Demanda de actividades: 970-1.346 h; con verificación M3: 974-1.351 h (R-25). Solapes adoptados (R-26), sujetos a validación real. La reserva no es disponibilidad: confirmar agendas y recostear antes de la segunda liberación, sin subir el techo.</p>
+</div>
+<div class="card dashed" style="margin-top:12px">
+<span class="tag">Resolución R-20 · costosa de deshacer una vez comunicada</span>
+<p><strong>Empleo:</strong> en 12 meses la mejora por IA no se usa para desvincular; primero se reasigna y se capacita. Quedan afuera causas previas ajenas a la IA.</p>
+</div>
+</div>
+<div>
+
+- **Formación:** básica para todos; intermedia para un grupo de 15-20.
+- **Por qué casos por rol:** en el piloto de abril de 2026 (12 voluntarios), el 92% usó la herramienta 3 o más días por semana y el índice de recomendación (NPS) dio +42, pero solo 2 de 12 (17%) terminaron los cursos. El freno fue el tiempo: formamos con casos reales, en horario laboral.
+- **Metas de uso (R-23):** Tecnología ≥80% en M6 y ≥85% en M12. Operaciones: sin meta M6; ≥40% en M9 y ≥60% en M12 sobre personas habilitadas, solo con programa ampliado costeado y autorizado por el Directorio en M6. El combinado original se informa aparte: no llega al 80% del borrador 2027; en M3 el Directorio decide si revisa ese objetivo.
+
+</div>
+</div>
+
+<div class="decision">
+<span class="pill">Resoluciones R-20 · R-22</span>
+<span class="body">No ampliar nómina; toda incorporación externa es excepción del Directorio, con caja propia. Si no hay perfil interno para el curso básico: una intervención de 16-32 h que reemplaza esas horas, con cotización.</span>
+<span class="ref">
+
+[Anexo D — Personas y cultura](annexes/04-personas-cultura.md) · [Anexo G](annexes/07-resoluciones.md)
+
+</span>
+</div>
+
+
+---
+
 <p class="eyebrow">Gobierno y seguridad</p>
 
-# Ningún uso nuevo o ampliado sin probar antes sus controles
+# Cada uso tiene límites y alguien que responde
+
+<style scoped>.decision.block { margin-top: 16px; }</style>
 
 <div class="grid g3">
 <div class="kpi"><div class="num">5</div><div class="lbl">miembros en el comité de IA, dentro del comité de tecnología: revisa todos los meses y puede cortar</div></div>
@@ -278,57 +312,18 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 </span></div>
 <div class="grid g3">
-<div><strong>1.</strong> Ratificar la política de IA vigente y aplicarla desde el mes 1. Su versión y alcance quedan asentados antes de liberar los meses 1-3; el mes 3 comprueba que se aplique. Cambiarla lo decide el Directorio.</div>
-<div><strong>2.</strong> Ninguna decisión de crédito ni scoring con IA durante 12 meses: es un límite que proponemos mientras maduran los controles, no una clasificación normativa. El resto se clasifica caso por caso.</div>
-<div><strong>3.</strong> Ningún uso nuevo o ampliado sin prueba previa en su herramienta. El código de clientes bajo NDA se suspende desde hoy, y lo que un contrato prohíbe también. El resto del uso que ya corre sigue sin ampliarse, como riesgo que acepta el comité de IA hasta el mes 3.</div>
+<div><strong>1.</strong> Ratificar la política; versión y alcance asentados antes de la segunda liberación, aplicación verificada en M3. Cambios: Directorio. Uso nuevo o ampliado: prueba previa en su herramienta.</div>
+<div><strong>2.</strong> Sin crédito ni scoring con IA por 12 meses: límite del plan mientras maduran los controles. La clasificación normativa se hace caso por caso.</div>
+<div><strong>3.</strong> Al aprobar: suspender código bajo NDA y usos prohibidos por contrato. Solo código sin NDA ya en uso: residual del comité hasta M3, sin ampliar; datos excluidos. Nuevo uso: matriz y permiso escrito. Desde M3 rige R-08.</div>
 </div>
 </div>
 
----
-
-<p class="eyebrow">Personas</p>
-
-# Formar y reasignar, sin ampliar la nómina
-
-<div class="grid g2">
-<div>
-<div class="card">
-<p class="eyebrow" style="color:var(--muted)">Tiempo que pedimos reservar en los meses 1-3</p>
-<div class="grid g2" style="margin:6px 0">
-<div class="kpi"><div class="num">720 h</div><div class="lbl">de personas clave para sostener el plan (1,5 personas a tiempo completo)</div></div>
-<div class="kpi"><div class="num">660 h</div><div class="lbl">de formación, como máximo</div></div>
-</div>
-<p style="font-size:17px">Estimamos 970-1.346 h, con los solapes entre áreas adoptados. La reserva no es disponibilidad: las agendas se confirman persona por persona en la validación; si no alcanzan, se recostea antes del mes 1, sin subir el techo.</p>
-</div>
-<div class="card dashed" style="margin-top:12px">
-<span class="tag">Resolución R-20 · costosa de deshacer una vez comunicada</span>
-<p><strong>Empleo:</strong> en 12 meses la mejora por IA no se usa para desvincular; primero se reasigna y se capacita. Quedan afuera causas previas ajenas a la IA.</p>
-</div>
-</div>
-<div>
-
-- **Formación:** básica para todos; intermedia para un grupo de 15-20.
-- **Por qué casos por rol:** en el piloto de abril de 2026 (12 voluntarios), el 92% usó la herramienta 3 o más días por semana y el índice de recomendación (NPS) dio +42, pero solo 2 de 12 (17%) terminaron los cursos. El freno fue el tiempo: formamos con casos reales, en horario laboral.
-- **Metas de uso, propuestas:** Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones ≥60% en el 12 entre quienes tengan uso permitido, solo si el punto de decisión del mes 6 autoriza el programa ampliado. Juntas no llegan al 80% del borrador de objetivos 2027: la brecha es contractual, y el Directorio decide en el mes 3 si revisa el objetivo.
-
-</div>
-</div>
-
-<div class="decision">
-<span class="pill">Resoluciones R-20 · R-22</span>
-<span class="body">No ampliar nómina; toda incorporación externa es excepción del Directorio, con caja propia. Si no hay perfil interno para el curso básico: una intervención de 16-32 h que reemplaza esas horas, con cotización.</span>
-<span class="ref">
-
-[Anexo D — Personas y cultura](annexes/04-personas-cultura.md) · [Anexo G](annexes/07-resoluciones.md)
-
-</span>
-</div>
 
 ---
 
 <p class="eyebrow">Roadmap técnico, financiero y cultural</p>
 
-# Primero validar; después, fondos por etapa
+# Un recorrido con resultados y recursos por etapa
 
 <div class="cuenta">
 <div class="cap">Lo que pedimos liberar por etapa, en k USD</div>
@@ -349,11 +344,11 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 </div>
 
-<p class="note" style="margin-top:2px">Caja: legal y herramientas. Tiempo: horas de gente de Acme Labs, a su costo. Meses 4-12: controles, medición y estudio del asistente; producto, plataforma o cursos nuevos, otra decisión. Lo que no pasa ni espera, corta (ver Beneficio). La adopción sola no libera fondos.</p>
+<p class="note" style="margin-top:2px">Caja: legal/herramientas; tiempo: personas propias. Producto, plataforma y cursos nuevos: otro costeo y decisión. Espera única M9: 6 semanas sin ampliar, firma el CEO; daño o estimado &lt;+5% sin pasar, o espera vencida sin pasar: corta. Medición no viable: B/R-14 y F. Adopción sola no libera fondos.</p>
 
 <div class="decision">
-<span class="pill">Resoluciones R-03 · R-04 · R-05 · R-27</span>
-<span class="body">Hoy se fijan los techos y se liberan 8k. Con evidencia, el CEO libera hasta 71k más (68 + 3 = 71) y firma cada punto de decisión dentro del techo de cada tramo: 79k, +16k, +13k, +13k (121k). Superar un tramo vuelve al Directorio.</span>
+<span class="pill">R-03 · R-04 · R-05 · R-27</span>
+<span class="body">Hoy: fijar techos y liberar 8k. Bajo R-05, el CEO libera hasta 71k más (68 + 3) y firma gates dentro de cada tramo: 79k, +16k, +13k, +13k = 121k. Superar un tramo vuelve al Directorio.</span>
 <span class="ref">
 
 [Anexo F — Roadmap](annexes/06-roadmap-riesgo.md) · [Anexo G](annexes/07-resoluciones.md)
@@ -361,13 +356,14 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 </span>
 </div>
 
+
 ---
 
 <p class="eyebrow">Costo y riesgo</p>
 
 # Cuánto arriesgamos como máximo, y dónde frenamos
 
-<p style="font-size:17px;margin:0 0 8px">Dos cifras distintas: el <strong>techo</strong> es lo máximo que se autorizaría; el <strong>costo estimado</strong> es lo que esperamos gastar. Hoy pedimos 8k USD; con evidencia, el CEO puede liberar hasta 71k USD más (ver Roadmap). Si todo pasa, seguimos el año sin plataforma, con costo estimado de <span style="white-space:nowrap">≈71k USD (27-114)</span> dentro de un techo anual de 121k (118k sin gastar las reservas de cierre): compramos base, medición y controles para decidir el año 2, no ingresos.</p>
+<p style="font-size:17px;margin:0 0 8px"><strong>Techo:</strong> máximo autorizado. <strong>Costo estimado:</strong> gasto esperado. Hoy se liberan 8k USD; el CEO libera hasta 71k más bajo R-05 (ver Roadmap). Si todo pasa: mínimo sin plataforma, estimado <span style="white-space:nowrap">≈71k USD (27-114)</span>, techo anual 121k (118k sin usar reservas). Financia base, medición y controles para decidir el año 2; ingreso presupuestado 0.</p>
 
 <div class="escalera-wrap">
 <div>
@@ -382,18 +378,20 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 </div>
 <div>
 
-<p class="note" style="margin:0 0 8px"><strong>Si cortamos en cada punto:</strong> techo hasta cerrar + guardia = exposición del año, en k USD. Guardia mínima: accesos, incidentes y permisos hasta el mes 12, con caja 0 y 2k USD de tiempo por trimestre que falte; se aprueba al cortar.</p>
+<p class="note" style="margin:0 0 8px"><strong>Cortes inmediatos M3/M6/M9:</strong> techo hasta cerrar + guardia = exposición anual. Guardia: accesos, incidentes y permisos, caja 0 y tiempo 2k por trimestre restante; se aprueba al cortar.</p>
 
-<p class="note" style="margin:0">Caja que sale de verdad hasta el mes 3: 2,3-8,6k USD estimados; el resto es tiempo de personas que ya están, sin nómina nueva ni deuda, pero puede desplazar trabajo facturable: su contribución está sin medir. Con beneficio 0, el ROI a 12 meses, (capacidad liberada − caja − tiempo) / (caja + tiempo), da −100% por construcción.</p>
+<p class="note" style="margin:0">Caja estimada hasta M3: 2,3-8,6k USD. El resto es tiempo propio, sin nómina nueva ni deuda; puede desplazar trabajo facturable, cuya contribución está sin medir. Con beneficio 0, ROI a 12 meses = (capacidad liberada − caja − tiempo) / (caja + tiempo) = −100%, por construcción.</p>
 
 </div>
 </div>
 
-<p style="font-size:17px;margin:0 0 10px"><strong>Sin vuelta atrás, no se aprueba nada hoy</strong> (se evalúan en el mes 12 o después): código o datos de clientes a un modelo externo · contratos de IA con clientes · IA que ejecuta acciones en el producto, aun con aprobación humana · compromisos de más de 12 meses. <strong>No actuar también expone:</strong> en septiembre el agente de código consumió ~12× lo pagado, a precio de API, no facturado. Si el proveedor cobrara por consumo y el uso siguiera igual, serían 211-267k USD adicionales al año, con o sin plan: un escenario, no un pronóstico. El mínimo no lo cubre, y una pasarela no lo cubriría por sí sola.</p>
+<p class="note" style="margin:0 0 8px"><strong>Espera M9 que vence:</strong> 108 + 7 = 115 hasta cerrar; +1 de guardia = <strong>116 anual</strong>. Subtramo: caja 1 + tiempo 6, sustituye continuidad dentro de M10–M12; reserva de cierre usada una sola vez (R-27).</p>
+
+<p style="font-size:17px;margin:0 0 10px"><strong>Irreversibles, no aprobados (desde M12):</strong> código/datos de clientes a modelos externos; contratos de IA con clientes; IA que ejecuta en producto, aun con aprobación humana; compromisos >12 meses. <strong>No actuar:</strong> septiembre: agente de código ~12× lo pagado a precio API, no facturado. Con cobro por consumo e igual uso: 211-267k USD extra/año, con o sin plan. Escenario, no pronóstico; mínimo y pasarela sola no lo cubren.</p>
 
 <div class="decision">
 <span class="pill">Resolución R-03</span>
-<span class="body">Techos fijados hoy: 79k USD hasta el mes 3 (8k + 71k), 85k con la guardia; 121k en el año (16k, 13k y 13k por tramo). Hasta el mes 3 estimamos 18-73k. Techo de recursos, no gasto ni caja; sin el trabajo facturable desplazado ni una facilitación externa.</span>
+<span class="body">Techos: 79k hasta M3 (8 + 71), 85k con guardia; anual 121k (+16, +13, +13). Estimado hasta M3: 18-73k USD. Excluye contribución facturable desplazada y facilitación externa.</span>
 <span class="ref">
 
 [Anexo E](annexes/05-business-case.md) · [Anexo F](annexes/06-roadmap-riesgo.md) · [Anexo G](annexes/07-resoluciones.md)
@@ -401,13 +399,14 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 </span>
 </div>
 
+
 ---
 
 <!-- _class: closing -->
 
 <style scoped>h1 { font-size: 50px; } .fine, .fine p { color: #dcd8c9; }</style>
 
-<p class="eyebrow">Valor medible · seguridad aceptable · fondos por etapa</p>
+<p class="eyebrow">Mejorar la entrega · evolucionar la oferta · avanzar con evidencia</p>
 
 # Aprobar el plan y sus resoluciones
 
