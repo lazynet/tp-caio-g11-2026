@@ -2,7 +2,11 @@
 type: Unidad
 title: M2U1 Vibe Coding y prototipado ejecutivo
 description: Programación en lenguaje natural, prompting y transición de un prototipo ejecutivo a una solución en producción.
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa."
 tags: [m2, prototipado, arquitectura, roadmap]
 sources:
   - id: m2u1-u5
@@ -34,7 +38,7 @@ los criterios específicos que define el caso (pp. 12-14).[^m2u1-u5]
 
 # Cautelas
 
-- La ficha sigue en `draft`: leer e indexar el PDF no constituye verificación humana.
+- La ficha está en `accepted`: su aceptación documental no constituye verificación humana del contenido del PDF.
 - La presentación se acepta como material oficial de la unidad por decisión de Martin del 21/10/2026; no se exige un documento de lectura adicional para completar su cobertura.
 - Las expresiones sobre lograr prototipos en horas y acelerar el desarrollo son afirmaciones del curso, sin medición aportada del caso del plan. No se usan como estimaciones de ahorro ni de plazo (pp. 12, 19-20).[^m2u1-u5]
 - La propia presentación distingue prototipo de producción; una demo funcional no acredita seguridad ni escalabilidad (pp. 13-14, 20).[^m2u1-u5]

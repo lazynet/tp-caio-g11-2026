@@ -183,7 +183,7 @@ class Checker:
         if not iso_date(block.get("at")):
             self.error(path, f"{key}.at debe ser una fecha ISO")
         if human and not nonempty(block.get("scope")):
-            self.error(path, "verified.scope debe describir fuente y alcance revisados")
+            self.error(path, f"{key}.scope debe describir fuente y alcance revisados")
 
     def sources(self, path, data, body):
         sources = data.get("sources", [])
@@ -292,8 +292,10 @@ class Checker:
         else:
             self.attribution(path, data, "generated")
         status = data.get("status", "draft")
-        if status not in ("draft", "verified"):
-            self.error(path, "status debe ser draft o verified")
+        if status not in ("draft", "accepted", "verified"):
+            self.error(path, "status debe ser draft, accepted o verified")
+        if status == "accepted" or "accepted" in data:
+            self.attribution(path, data, "accepted", human=True)
         if status == "verified" or "verified" in data:
             self.attribution(path, data, "verified", human=True)
         if self.delivery and status != "verified":

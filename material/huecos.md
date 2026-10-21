@@ -7,7 +7,7 @@ status: verified
 verified:
   by: human:lazynet
   at: 2026-10-21
-  scope: "Martín acepta el 21/10/2026 las presentaciones disponibles como material oficial suficiente para cerrar la recopilación de #22, tras aportar M2U1/M2U2 y otros documentos. Declara que el prompt base del Corrector IA no está disponible y no será un requisito. La confirmación cubre este estado del corpus y la decisión de alcance; conserva la revisión anterior como antecedente, sin acreditar contenido de fichas nuevas, vigencia normativa ni cotejo jurídico externo. Los cotejos regulatorios usados por la entrega se siguen en #56."
+  scope: "Martín acepta el 21/10/2026 las presentaciones disponibles como material oficial suficiente para cerrar la recopilación de #22, tras aportar M2U1/M2U2 y otros documentos. Declara que el prompt base del Corrector IA no está disponible y no será un requisito. Por instrucción expresa de la misma sesión, acepta la incorporación al corpus de las 20 fichas nuevas de #50, #53 y #57 con estado accepted. La confirmación cubre este estado del corpus y la decisión de alcance; conserva la revisión anterior como antecedente, sin acreditar contenido de fichas nuevas, vigencia normativa ni cotejo jurídico externo. Los cotejos regulatorios usados por la entrega se siguen en #56."
 generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
@@ -32,8 +32,13 @@ los originales se mantienen en la carpeta de fuentes, fuera del repo:
 | M3U3 / Unidad 11 | Documento de lectura de 10 páginas; [ficha](/unidades/m3u3-documento-u11.md) |
 | M3U4 / Unidad 12 | Documento de lectura de 9 páginas, con nombre real terminado en `Unidad_12pdf.pdf`; [ficha](/unidades/m3u4-documento-u12.md) |
 
-Las fichas nuevas y las derivadas de documentos sin declaración humana propia
-conservan `draft`. La lectura y el cotejo del agente se registran por separado.
+Las 20 fichas nuevas de #50, #53 y #57, incluidas M2U1/M2U2 y las derivadas de
+documentos de U9-U12, están en `accepted` por instrucción expresa de Martín del
+21/10/2026. Cada una declara la aceptación humana y su alcance documental.
+
+La aceptación cubre su incorporación al corpus y conserva las cautelas; no
+acredita verificación humana del contenido. U9 y «Hoy atacamos» conservan sus
+originales no localizados. La lectura y el cotejo del agente son antecedentes.
 Las presentaciones oficiales de U9-U12 ya estaban disponibles. No se exige
 conseguir el documento U9, la presentación adicional «Hoy atacamos» ni un `.md`
 separado de M3-U4 para cerrar esta recopilación.
@@ -136,7 +141,7 @@ entrega hasta verificar su fuente o corregir su uso decisorio.
   digitales.
 * **Seguridad:** la presentación oficial de 20 slides no cita un estándar; la
   ficha de la clase adicional [«Hoy atacamos»](/unidades/m3u1-clase-9.md), en
-  `draft` y con original no localizado, sí atribuye marcos. Antes de usarlos como
+  `accepted` y con original no localizado, sí atribuye marcos. Antes de usarlos como
   respaldo propio se cotejan sus publicaciones, sin generalizar la ausencia a
   todo el curso.
 * **Apuntes:** "PromptFoo" y "millones de tokens" son lecturas supuestas de las notas.

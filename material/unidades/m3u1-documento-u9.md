@@ -7,7 +7,11 @@ sources:
   - id: m3u1-doc
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_9.pdf
     title: "M3U1, documento de lectura (el archivo dice Unidad 9), 9 páginas"
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa. Se acepta la inclusión de esta ficha y sus referencias a U9 o «Hoy atacamos», cuyos originales no fueron localizados; no se afirma su localización ni se verifica su contenido."
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T14:30:00Z }
 ---
 
@@ -50,7 +54,11 @@ ficha, no afirmación del curso sobre Acme Labs.
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el PDF
+* La aceptación cubre la inclusión de la ficha en el corpus. Los originales de U9
+  y «Hoy atacamos» no fueron localizados en la búsqueda local; las referencias a
+  cotejos del agente son antecedentes de elaboración, sin verificación humana.
+
+* Ficha aceptada para el corpus, sin verificación humana del contenido. Cotejo del agente contra el PDF
   de 9 páginas, página por página, el 2026-10-21.
 * Las mitigaciones del documento (afinar el modelo para que sea "más escéptico",
   fine-tuning adversarial, p. 7 y 9) son controles sobre el comportamiento del

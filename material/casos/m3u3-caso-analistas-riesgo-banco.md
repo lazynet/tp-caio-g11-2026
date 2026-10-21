@@ -7,7 +7,11 @@ sources:
   - id: m3u3-doc
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_11.pdf
     title: "M3U3, documento de lectura (Unidad 11), autoevaluación"
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa."
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T17:30:00Z }
 ---
 
@@ -38,7 +42,7 @@ supervisión humana y compensación, no como iniciativa del plan. Lectura de est
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el texto
+* Ficha aceptada para el corpus, sin verificación humana del contenido. Cotejo del agente contra el texto
   extraído del documento el 2026-10-21; sin paginación.
 * Es una respuesta modelo de autoevaluación, con una cifra didáctica y sin evidencia
   de resultados. El scoring

@@ -7,7 +7,11 @@ sources:
   - id: m3u2-doc
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_10.pdf
     title: "M3U2, documento de lectura (el archivo dice Unidad 10)"
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa."
 generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
@@ -41,7 +45,7 @@ sobre Acme Labs.
 
 # Cautelas
 
-* Ficha en borrador, sin verificación humana. El agente cotejó el PDF localizado el
+* Ficha aceptada para el corpus, sin verificación humana del contenido. El agente cotejó el PDF localizado el
   2026-10-21: literacy estratificada (pp. 3-4), champions (p. 5) y autoevaluación
   (pp. 9-10). Las páginas cuentan desde la primera página del archivo.
 * "Investigaciones demuestran que las empresas con programas de embajadores de IA

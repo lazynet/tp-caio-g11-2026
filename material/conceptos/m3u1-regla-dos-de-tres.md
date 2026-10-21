@@ -7,7 +7,11 @@ sources:
   - id: clase9
     resource: "Hoy atacamos · CAIO Clase 9.pdf"
     title: "Hoy atacamos, CAIO Clase 9, láminas 04, 12 y 14"
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa. Se acepta la inclusión de esta ficha y sus referencias a U9 o «Hoy atacamos», cuyos originales no fueron localizados; no se afirma su localización ni se verifica su contenido."
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T14:30:00Z }
 ---
 
@@ -45,7 +49,11 @@ del curso.
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra las
+* La aceptación cubre la inclusión de la ficha en el corpus. Los originales de U9
+  y «Hoy atacamos» no fueron localizados en la búsqueda local; las referencias a
+  cotejos del agente son antecedentes de elaboración, sin verificación humana.
+
+* Ficha aceptada para el corpus, sin verificación humana del contenido. Cotejo del agente contra las
   láminas 04, 12 y 14 (las dos primeras leídas como imagen) el 2026-10-21.
 * Las atribuciones a Simon Willison y a Meta son del curso; no se cotejaron las
   publicaciones originales.

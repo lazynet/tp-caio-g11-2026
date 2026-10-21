@@ -10,7 +10,11 @@ sources:
   - id: m3u1-doc
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_9.pdf
     title: "M3U1, documento de lectura (Unidad 9), pp. 4-6"
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa. Se acepta la inclusión de esta ficha y sus referencias a U9 o «Hoy atacamos», cuyos originales no fueron localizados; no se afirma su localización ni se verifica su contenido."
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T14:30:00Z }
 ---
 
@@ -58,7 +62,11 @@ secretos, el 6.
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra las
+* La aceptación cubre la inclusión de la ficha en el corpus. Los originales de U9
+  y «Hoy atacamos» no fueron localizados en la búsqueda local; las referencias a
+  cotejos del agente son antecedentes de elaboración, sin verificación humana.
+
+* Ficha aceptada para el corpus, sin verificación humana del contenido. Cotejo del agente contra las
   láminas 07 a 09 (07 y 08 leídas como imagen) y las pp. 4-6 del documento, el
   2026-10-21.
 * El caso Samsung (2023) se cita por nombre, sin fuente; no se cotejó.

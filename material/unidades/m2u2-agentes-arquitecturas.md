@@ -2,7 +2,11 @@
 type: Unidad
 title: M2U2 Agentes de IA y arquitecturas modernas
 description: Taxonomías y patrones de agentes, uso de herramientas, recuperación de contexto y evaluación del recorrido hasta el resultado.
-status: draft
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa."
 tags: [m2, agentes, arquitectura, herramientas, evaluacion]
 sources:
   - id: m2u2-presentacion
@@ -39,7 +43,7 @@ además del resultado final. Complementa [Modelo + Harness](/conceptos/harness-a
 
 # Cautelas
 
-- La ficha sigue en `draft`: leer e indexar los PDFs no constituye verificación humana.
+- La ficha está en `accepted`: su aceptación documental no constituye verificación humana del contenido de los PDFs.
 - La presentación se acepta como material oficial de la unidad por decisión de Martin del 21/10/2026; el documento de lectura se conserva como complemento.
 - Son dos taxonomías pedagógicas diferentes; no se presume equivalencia entre sus categorías (presentación p. 3; documento pp. 3-4).[^m2u2-presentacion][^m2u2-u6]
 - El documento usa la sigla MCP tanto para «Multi-Agent Conversation Patterns» como para «Model Context Protocol» (pp. 6-7). La presentación la usa para el protocolo (p. 10). La ficha conserva esa distinción y no usa la primera expansión como definición del protocolo.[^m2u2-u6][^m2u2-presentacion]

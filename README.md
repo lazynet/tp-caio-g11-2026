@@ -430,6 +430,10 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 
 - **Borrador** acepta fichas `draft` con faltantes identificados. Toda ficha
   nueva declara `status`; una sin `status` se lee como `draft`.
+- **Aceptación documental** (`status: accepted`) declara que una persona acepta
+  incorporar la ficha al corpus. Requiere `accepted: { by, at, scope }`, con
+  `by: human:<usuario-github>`, fecha ISO y alcance explícito. No acredita cotejo
+  primario, verificación del contenido ni vigencia normativa; conserva las cautelas.
 - **Entrega** (`--delivery`, con `--path` para las fichas que usa la entrega;
   `--mode delivery` para el deck) exige `status: verified` con el bloque
   `verified:` de una persona y un deck sin pendientes. `--path` acepta solo
@@ -468,9 +472,13 @@ objetala en el PR o en su issue.
 Los 15 supuestos modificados quedaron revalidados por instrucción expresa de
 Martín el 21/10/2026, con alcance actualizado y conservando su tipo `Supuesto`.
 Se corrió `scripts/rebase-findings.py`; el catálogo quedó reanclado.
-Los PR [#50](https://github.com/lazynet/tp-caio-g11-2026/pull/50) y
-[#53](https://github.com/lazynet/tp-caio-g11-2026/pull/53) incorporaron 18 fichas de
-material como borradores: su incorporación no declara verificación humana.
+Los PR [#50](https://github.com/lazynet/tp-caio-g11-2026/pull/50),
+[#53](https://github.com/lazynet/tp-caio-g11-2026/pull/53) y
+[#57](https://github.com/lazynet/tp-caio-g11-2026/pull/57) incorporaron 20 fichas de
+material, incluidas M2U1/M2U2. Por instrucción expresa de Martín del 21/10/2026,
+quedaron en `accepted`, con su aceptación documental declarada y sus cautelas
+vigentes. Su aceptación no acredita verificación humana del contenido ni
+reemplaza los cotejos externos de #56.
 
 Martín dio por cerrada la recopilación de material de #22 el 21/10/2026:
 las presentaciones disponibles son oficiales y suficientes. Se incorporaron
