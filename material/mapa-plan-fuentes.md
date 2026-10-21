@@ -8,9 +8,13 @@ generated: { by: codex/gpt-6, at: 2026-10-21 }
 
 ## Lecturas de las unidades 10, 11 y 12
 
-Estas fichas nuevas siguen en `draft`: amplían la navegación del corpus y no
-reemplazan las fuentes verificadas de la entrega. Sus PDFs y la verificación
-humana se siguen en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
+Estas fichas nuevas están en `accepted` por instrucción expresa de Martín del
+21/10/2026: su incorporación al corpus queda aceptada. Conservan las cautelas y no
+reemplazan las fuentes verificadas de la entrega.
+
+La recopilación de [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22)
+está cerrada. Los cotejos externos pendientes se siguen en
+[#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56).
 
 | Sección del plan | Lecturas complementarias |
 |---|---|
@@ -21,6 +25,11 @@ humana se siguen en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22)
 Cada sección del plan, con su fuente principal, sus complementos y las fichas
 concretas que conviene citar. Antes de llevar una cifra a una slide, revisá la
 sección `# Cautelas` de la ficha y los [huecos](/huecos.md).
+
+Como complementos en `accepted`, [M2U1 Vibe Coding y prototipado ejecutivo](/unidades/m2u1-vibe-coding.md)
+aporta al roadmap técnico y al paso de prototipo a producción;
+[M2U2 Agentes de IA y arquitecturas modernas](/unidades/m2u2-agentes-arquitecturas.md)
+aporta a arquitectura, integración con herramientas y evaluación de agentes.
 
 | Sección | Fuente principal | Complementos | Fichas para citar |
 |---|---|---|---|

@@ -120,12 +120,12 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   una nota al pie cuya etiqueta es el `id`: `[^m1u2]`. Es obligatorio en `Hecho`,
   `Evidencia` y en toda afirmación atribuida a terceros. `Mapa` y `Hueco` pueden
   ir sin fuentes externas porque describen el estado del corpus.
-- **Estado.** `status` es `draft` o `verified`; las fichas nuevas lo explicitan, y
-  una ficha sin `status` se lee como `draft`. Las cautelas van en `# Cautelas`.
-- **Verificación.** `status: verified` solo vale con un bloque
-  `verified: { by: human:<usuario-github>, at: <fecha ISO>, scope: "<fuente y
-  alcance revisados>" }`. Es una declaración humana: un agente nunca escribe
-  `verified` ni pasa una ficha a `verified` por su cuenta.
+- **Estado.** `draft` (default), `accepted` (admitida al corpus) o `verified`.
+  Ficha nueva: `status` explícito; cautelas en `# Cautelas`.
+- **Declaración humana.** `accepted` y `verified` requieren un bloque homónimo
+  `{ by: human:<usuario-github>, at: <fecha ISO>, scope: "<fuente y alcance>" }`.
+  Declaraciones humanas, registradas solo por instrucción expresa.
+  `accepted` admite material; toda cifra entregada exige `verified`.
 - **Revisar no cambia el tipo.** Un `Supuesto` o una propuesta revisados siguen
   siendo supuesto o propuesta; no se convierten en `Hecho`.
 - **Draft y entrega.** Un borrador admite faltantes si están identificados (en

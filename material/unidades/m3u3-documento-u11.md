@@ -7,8 +7,12 @@ sources:
   - id: m3u3-doc
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_3_Unidad_11.pdf
     title: "M3U3, documento de lectura (el archivo dice Unidad 11)"
-status: draft
-generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T17:30:00Z }
+status: accepted
+accepted:
+  by: human:lazynet
+  at: 2026-10-21
+  scope: "Aceptación documental por instrucción expresa de Martín en esta sesión, incorporación al corpus del TP tras aceptar presentaciones oficiales como material suficiente para cerrar #22; no acredita por sí sola cotejo primario ni verificación normativa."
+generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
 # Qué es
@@ -19,14 +23,14 @@ escenarios, ejemplos y casos resueltos que las slides no traen.[^m3u3-doc]
 
 # Contenido
 
-| Sección | Qué trae |
-|---|---|
-| Conceptos fundamentales | AI-readiness como capacidad de talento, cultura y procesos, no solo de infraestructura; reestructuración y desplazamiento responsable; "futuro sintético"; roles críticos |
-| Hiring para AI-readiness | Perfiles híbridos (dominio del negocio más alfabetización en datos e IA), evaluación de habilidades blandas, marca empleadora tecnológica y reclutamiento interno con upskilling. Ejemplo: el rol de "Estratega de Cadena de Suministro Aumentada" en retail |
-| Reestructuración | [Escenarios de impacto y plan de transición](/conceptos/m3u3-escenarios-impacto-laboral.md); ejercicio de una aseguradora que automatiza el 80% de la evaluación inicial de siniestros con 50 personas en el rol |
-| Compensación en el futuro sintético | [Cuatro enfoques](/conceptos/m3u3-enfoques-compensacion.md): "de un modelo basado en el esfuerzo a uno basado en el impacto" |
-| Caso práctico | [Deep research del Gerente de Marketing](/casos/m3u3-caso-gerente-marketing.md) |
-| Autoevaluación | Incluye el [caso de los analistas de riesgo de un banco](/casos/m3u3-caso-analistas-riesgo-banco.md) |
+| Sección | Qué trae | Páginas |
+|---|---|---|
+| Conceptos fundamentales | AI-readiness como capacidad de talento, cultura y procesos, no solo de infraestructura; reestructuración y desplazamiento responsable; "futuro sintético"; roles críticos | 3-4 |
+| Hiring para AI-readiness | Perfiles híbridos (dominio del negocio más alfabetización en datos e IA), evaluación de habilidades blandas, marca empleadora tecnológica y reclutamiento interno con upskilling. Ejemplo: el rol de "Estratega de Cadena de Suministro Aumentada" en retail | 4-5 |
+| Reestructuración | [Escenarios de impacto y plan de transición](/conceptos/m3u3-escenarios-impacto-laboral.md); ejercicio de una aseguradora que automatiza el 80% de la evaluación inicial de siniestros con 50 personas en el rol | 5-6 |
+| Compensación en el futuro sintético | [Cuatro enfoques](/conceptos/m3u3-enfoques-compensacion.md): "de un modelo basado en el esfuerzo a uno basado en el impacto" | 6 |
+| Caso práctico | [Deep research del Gerente de Marketing](/casos/m3u3-caso-gerente-marketing.md) | 7-8 |
+| Autoevaluación | Incluye el [caso de los analistas de riesgo de un banco](/casos/m3u3-caso-analistas-riesgo-banco.md) | 9-10 |
 
 Fuente de la tabla: [^m3u3-doc]
 
@@ -51,13 +55,14 @@ Labs.
 
 # Cautelas
 
-* Ficha nueva, en borrador, sin verificación humana. Cotejo del agente contra el texto
-  extraído del documento el 2026-10-21; sin paginación, se citan secciones.
+* Ficha aceptada para el corpus, sin verificación humana del contenido. El agente cotejó las secciones de la
+  tabla contra el PDF localizado el 2026-10-21. Las páginas cuentan desde la
+  primera página del archivo.
 * "En Argentina, el 37% de las empresas ya utiliza IA en procesos de recursos humanos"
   no trae fuente en el texto. No va en una slide como dato.
-* La mención de una startup local de reclutamiento con agentes (Selenios) es un ejemplo
-  del curso; no se cotejó.
+* La mención de una startup local de reclutamiento con agentes (Selenios, p. 4)
+  es un ejemplo del curso; no se verificó contra una fuente externa.
 * Referencias (Accenture 2016, Corvalán 2019, OIT 2025, PwC 2023, Randstad 2025): solo
   la de Accenture trae URL; no se cotejaron.
 
-[^m3u3-doc]: M3U3, documento de lectura (Unidad 11)
+[^m3u3-doc]: M3U3, documento de lectura (Unidad 11), pp. 3-10; referencias, p. 10.

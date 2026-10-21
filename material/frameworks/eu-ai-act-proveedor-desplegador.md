@@ -13,7 +13,7 @@ sources:
   - id: ai-omnibus
     resource: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
     title: Reg. (UE) 2026/1744, Ómnibus digital sobre IA, DOUE L de 24.7.2026 (texto español, CELEX_32026R1744_ES_TXT.pdf)
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T20:13:00Z }
 status: draft
 ---
 
@@ -158,9 +158,11 @@ registran (49.3).[^eu-ai-act]
 
 Sistema proporcional y documentado que recolecta y analiza datos de desempeño
 durante toda la vida útil, sobre la base de un plan que forma parte de la
-documentación técnica (Anexo IV). El plan modelo de la Comisión estaba previsto
-para el 2 de febrero de 2026; el Omnibus lo corre al **2 de septiembre de
-2027**.[^eu-ai-act][^ai-omnibus]
+documentación técnica (Anexo IV). El texto de 2024 pedía a la Comisión un acto de
+ejecución con el modelo del plan, a más tardar el 2 de febrero de 2026 (p. 101). El
+Omnibus cambia el instrumento y la fecha: la Comisión "adoptará orientaciones —que
+incluirán un modelo— sobre el plan de seguimiento poscomercialización a más tardar
+el **2 de septiembre de 2027**" (art. 1 punto 30, p. 26).[^eu-ai-act][^ai-omnibus]
 
 ## Incidentes graves (art. 73, p. 101-102)
 
@@ -257,6 +259,12 @@ los puntos 5.b y 5.c del Anexo III: ver
   (p. 16), art. 4 bis (p. 17), art. 10.5 suprimido (p. 19), art. 17.2 y 25.2 y 25.4
   (p. 19-20) y art. 72.3 (p. 26). Coinciden; se corrigió la cita del art. 4 ("apoyar
   la promoción", no "apoyar el desarrollo") y el nombre del art. 4 bis.
+- Ese cotejo llegó en el PR #55 (autor en GitHub: edu2020chaparro-ux; herramienta no
+  declarada). La revisión del 2026-10-21 (claude-code/claude-opus-5-5) lo repitió
+  sobre el PDF/A español del Omnibus bajado de Cellar, el repositorio de la Oficina de
+  Publicaciones (41 p.). Las páginas coinciden. Precisó el art. 72.3: el acto de
+  ejecución original (p. 101) pasa a ser orientaciones con un modelo (p. 26). La
+  ficha queda en `draft` hasta una declaración humana nueva.
 - Las entidades financieras tienen reglas propias que la ficha no recoge: arts. 17.4,
   18.3, 19.2, 26.5 (párr. 2) y 26.6 (párr. 2) los remiten a su normativa financiera, y el
   art. 72.4 permite integrar la vigilancia poscomercialización del Anexo III punto 5.

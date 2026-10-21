@@ -430,6 +430,10 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 
 - **Borrador** acepta fichas `draft` con faltantes identificados. Toda ficha
   nueva declara `status`; una sin `status` se lee como `draft`.
+- **Aceptación documental** (`status: accepted`) declara que una persona acepta
+  incorporar la ficha al corpus. Requiere `accepted: { by, at, scope }`, con
+  `by: human:<usuario-github>`, fecha ISO y alcance explícito. No acredita cotejo
+  primario, verificación del contenido ni vigencia normativa; conserva las cautelas.
 - **Entrega** (`--delivery`, con `--path` para las fichas que usa la entrega;
   `--mode delivery` para el deck) exige `status: verified` con el bloque
   `verified:` de una persona y un deck sin pendientes. `--path` acepta solo
@@ -460,17 +464,31 @@ ocho responsables y el formato de entrega.
 Las decisiones que estaban abiertas en las revisiones de sección (#11–#14 y
 #16–#20) las tomó Martín como responsable del caso, el 21/10, para llegar al peer
 review. El Directorio las sintetiza en el [Anexo G](plan/annexes/07-resoluciones.md)
-(R-01 a R-32) y entran con [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52).
+(R-01 a R-32), integradas con [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52).
+Los nueve issues asociados quedaron cerrados.
 No son ratificaciones de cada responsable: si no estás de acuerdo con una,
 objetala en el PR o en su issue.
 
+Los 15 supuestos modificados quedaron revalidados por instrucción expresa de
+Martín el 21/10/2026, con alcance actualizado y conservando su tipo `Supuesto`.
+Se corrió `scripts/rebase-findings.py`; el catálogo quedó reanclado.
+Los PR [#50](https://github.com/lazynet/tp-caio-g11-2026/pull/50),
+[#53](https://github.com/lazynet/tp-caio-g11-2026/pull/53) y
+[#57](https://github.com/lazynet/tp-caio-g11-2026/pull/57) incorporaron 20 fichas de
+material, incluidas M2U1/M2U2. Por instrucción expresa de Martín del 21/10/2026,
+quedaron en `accepted`, con su aceptación documental declarada y sus cautelas
+vigentes. Su aceptación no acredita verificación humana del contenido ni
+reemplaza los cotejos externos de #56.
+
+Martín dio por cerrada la recopilación de material de #22 el 21/10/2026:
+las presentaciones disponibles son oficiales y suficientes. Se incorporaron
+M2U1/M2U2 y se acepta que el prompt base del Corrector IA no esté disponible.
+
 Para habilitar la entrega falta:
 
-- **Re-verificar 15 supuestos** de `context/supuestos/` que cambiaron y quedaron
-  en `draft`. La verificación es una declaración humana; después de editarlos,
-  corré `python3 scripts/rebase-findings.py .` y recién ahí el gate de entrega.
-- **Material faltante:** EUR-Lex 2026/1744 y M3U4, que bloquean `material/huecos.md`.
-  Se sigue en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
+- **Cotejos regulatorios externos:** verificar o corregir las afirmaciones
+  normativas usadas en los anexos, que conservan el bloqueo de `material/huecos.md`.
+  Se sigue en [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56).
 - **Defensa:** acordar quién presenta cada slide (hay una propuesta en
   `defense/storyline.md`) y hacer el ensayo, en [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21).
 - **Propuesta de Lucho:** rebasarla sobre el deck nuevo antes de evaluarla, en

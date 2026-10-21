@@ -212,20 +212,20 @@
       "path": "material/huecos.md",
       "line": 5,
       "text": "tags: [pendiente, cursada, cautelas]",
-      "sha256": "93e3c18e88f37dc977198a93f3f90d0add9e0cfc6241f480367a34c587f6fb07",
+      "sha256": "b99ca5cb1e5cd1d13febd3f69e891bc47c590a3425949dd23d9dce3011b6a7e6",
       "category": "metadata",
       "blocking": false,
-      "reason": "Etiqueta YAML tags dentro del frontmatter; no representa un faltante por sí sola. Las verificaciones del cuerpo continúan bloqueando.",
+      "reason": "Etiqueta YAML tags dentro del frontmatter; no representa un faltante por sí sola. Los cotejos regulatorios externos del cuerpo conservan su bloqueo propio en #56.",
       "basis": {}
     },
     {
       "path": "material/huecos.md",
-      "line": 65,
+      "line": 98,
       "text": "# Pendiente de verificar",
-      "sha256": "93e3c18e88f37dc977198a93f3f90d0add9e0cfc6241f480367a34c587f6fb07",
+      "sha256": "b99ca5cb1e5cd1d13febd3f69e891bc47c590a3425949dd23d9dce3011b6a7e6",
       "category": "required_gap",
       "blocking": true,
-      "reason": "Encabezado de verificaciones aún declaradas faltantes en el corpus. La firma del mapa no verifica automáticamente sus fuentes ni corrige estados.",
+      "reason": "Cotejos regulatorios externos usados por la entrega, separados del cierre de material #22 y seguidos en #56: calendario entregado en C/F, versiones del art. 4 en D y revisión BCRA comprometida antes de entregar. La aceptación de las presentaciones no verifica estas afirmaciones.",
       "basis": {}
     },
     {

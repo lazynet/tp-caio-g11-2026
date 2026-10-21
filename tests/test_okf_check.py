@@ -29,6 +29,9 @@ BODY = "La medida publicada es 12.[^primary]\n\n[^primary]: Informe público.\n"
 VERIFIED = """status: verified
 verified: {by: 'human:reviewer', at: 2026-10-11, scope: 'Informe, medida publicada'}
 """
+ACCEPTED = """status: accepted
+accepted: {by: 'human:reviewer', at: 2026-10-11, scope: 'Material oficial aceptado'}
+"""
 
 
 class CheckerTests(unittest.TestCase):
@@ -108,6 +111,69 @@ class CheckerTests(unittest.TestCase):
             META + VERIFIED.replace("status: verified", "status: draft")
         )
         self.assertTrue(self.check(path, True).errors)
+
+    def test_human_accepted_is_valid_in_draft(self):
+        path = self.concept(META + ACCEPTED)
+        self.assertEqual(self.check(path).errors, [])
+
+    def test_accepted_requires_complete_human_block(self):
+        cases = [
+            ("status: accepted\n", "accepted debe ser un mapping"),
+            ("status: accepted\naccepted: true\n", "accepted debe ser un mapping"),
+            ("status: accepted\naccepted: []\n", "accepted debe ser un mapping"),
+            (ACCEPTED.replace("human:reviewer", "codex/test"), "accepted.by inválido"),
+            (ACCEPTED.replace("by: 'human:reviewer', ", ""), "accepted.by inválido"),
+            (
+                ACCEPTED.replace("at: 2026-10-11, ", ""),
+                "accepted.at debe ser una fecha ISO",
+            ),
+            (
+                ACCEPTED.replace("2026-10-11", "'2026-02-30'"),
+                "accepted.at debe ser una fecha ISO",
+            ),
+            (
+                ACCEPTED.replace("2026-10-11", "true"),
+                "accepted.at debe ser una fecha ISO",
+            ),
+            (
+                ACCEPTED.replace(", scope: 'Material oficial aceptado'", ""),
+                "accepted.scope debe describir",
+            ),
+        ]
+        for scope in ("''", "'   '", "[]", "true", "null", "42"):
+            cases.append(
+                (
+                    ACCEPTED.replace("'Material oficial aceptado'", scope),
+                    "accepted.scope debe describir",
+                )
+            )
+        for extra, expected in cases:
+            with self.subTest(extra=extra):
+                errors = self.check(self.concept(META + extra)).errors
+                self.assertTrue(any(expected in error for error in errors), errors)
+
+    def test_present_accepted_block_is_validated_with_other_status(self):
+        for status in ("draft", "verified"):
+            with self.subTest(status=status):
+                review = VERIFIED.split("\n", 1)[1] if status == "verified" else ""
+                meta = META + f"status: {status}\n" + review + "accepted: {}\n"
+                errors = self.check(self.concept(meta)).errors
+                for field in ("by", "at", "scope"):
+                    self.assertTrue(
+                        any(f"accepted.{field}" in e for e in errors), errors
+                    )
+
+    def test_accepted_does_not_allow_delivery_even_with_verified_block(self):
+        for residual in ("", VERIFIED.split("\n", 1)[1]):
+            with self.subTest(residual=residual):
+                path = self.concept(META + ACCEPTED + residual)
+                self.assertEqual(self.check(path).errors, [])
+                self.assertTrue(
+                    any(
+                        "entrega exige status: verified" in error
+                        for error in self.check(path, True).errors
+                    )
+                )
 
     def test_missing_sources_are_errors_without_documented_gap(self):
         meta = META.split("sources:")[0]
