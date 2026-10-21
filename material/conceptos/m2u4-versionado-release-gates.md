@@ -8,6 +8,7 @@ sources:
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_2_Unidad_8.pdf
     title: M2U4 (el archivo dice Unidad 8), 20 slides
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
+status: draft
 ---
 
 # Versionado
@@ -45,5 +46,13 @@ Juntos, versionado y gates dan un despliegue "controlado, trazable y de alta
 calidad".[^m2u4] Los gates 1 y 2 se alimentan de [evals](/conceptos/m2u4-evals.md); el
 gate humano antes de efectos irreversibles del agente está en el
 [harness](/conceptos/harness-cinco-elementos-diseno.md).
+
+# Cautelas
+
+Cotejada contra las slides 7 a 10. El curso es inconsistente consigo mismo: la slide 7
+dice que el versionado abarca "modelos, datos, configuraciones y experimentos"
+(sin código) y la slide 8 lista cuatro elementos (modelos, datos, código y
+configuración, sin experimentos). La tabla sigue la slide 8. La relación de los gates
+con las evals y con el gate humano del harness es lectura del repo.
 
 [^m2u4]: M2U4 (Unidad 8), slides 7-10 (la lista de gates está en una imagen de la slide 10).

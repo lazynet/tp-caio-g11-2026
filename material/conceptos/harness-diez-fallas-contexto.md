@@ -17,6 +17,7 @@ sources:
     resource: https://aclanthology.org/2025.emnlp-main.1742/
     title: Kurfali y Östling. Conflicting Needles in a Haystack, EMNLP 2025
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
+status: draft
 ---
 
 # Idea central
@@ -111,13 +112,18 @@ Ver [tokenomics](/conceptos/m2u4-tokenomics.md).
 
 # Labs
 
-La p. 13 propone tres labs de chatbot tradicional "fáciles de entender y probar", con
-capturas de pantalla de conversaciones, sin texto explicativo. Los enunciados no se
-pueden extraer del PDF.[^harness]
+La p. 13 propone tres labs de chatbot tradicional ("3 labs faciles de entender y
+probar"), con capturas de pantalla de conversaciones y sin texto explicativo. Las
+capturas se leen apenas en el render: en los tres se le da al chatbot un dato (una
+clave repetida o corregida, un código de proyecto, un "número secreto") y después se
+lo pregunta, dos de ellos con un documento adjunto. El PDF no dice qué falla ilustra cada
+lab ni da enunciados; asociarlos con las fallas 1 a 10 sería inferencia.[^harness]
 
 # Verificación externa
 
-Tres atribuciones del PDF se chequearon contra la fuente primaria:
+Tres atribuciones del PDF se chequearon contra la fuente primaria (re-cotejadas el
+2026-10-20; el informe de Chroma hoy redirige de `research.trychroma.com` a
+`www.trychroma.com/research/context-rot`):
 
 | Atribución del PDF | Resultado |
 |---|---|
@@ -127,6 +133,14 @@ Tres atribuciones del PDF se chequearon contra la fuente primaria:
 
 Las soluciones del PDF (ledger, gates, presupuesto de working set) son el criterio de
 diseño de la cátedra, no resultados de esos papers.
+
+# Cautelas
+
+Cotejada contra el PDF, p. 3-13 (las diez fichas y los labs): los textos de "Qué es",
+"Por qué ocurre" y las tres medidas de cada falla coinciden con las slides. Lo que
+agrega el repo y no está en el PDF: la tabla "En una línea" y el título de cada
+resumen. Las tres fuentes externas se abrieron el 2026-10-20 y confirman autores,
+fecha, sede y la conclusión que la ficha les atribuye.
 
 [^harness]: Data Management en Soluciones de Gen IA (Memoria-Contexto-Harness.pdf), p. 3-13; las páginas figuran entre paréntesis en cada ficha.
 [^chroma-rot]: Chroma, Context Rot: https://research.trychroma.com/context-rot

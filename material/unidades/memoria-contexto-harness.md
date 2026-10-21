@@ -8,6 +8,7 @@ sources:
     resource: Memoria-Contexto-Harness.pdf
     title: Data Management en Soluciones de Gen IA (16 páginas, no indica unidad)
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
+status: draft
 ---
 
 # Contenido
@@ -26,8 +27,9 @@ La solución es el harness." No indica número de unidad.[^harness]
 
 # Ideas clave
 
-- Las fallas no se arreglan con un modelo más grande: se arreglan con presupuesto de
-  working set, memoria versionada, ledger y gates.
+- Cada falla tiene una "solución agéntica" que vive en el harness: presupuesto de
+  working set, memoria versionada, ledger y gates. El deck no compara contra usar un
+  modelo más grande; esa lectura no es del curso.
 - Dato e instrucción comparten canal en la ventana: lo recuperado es dato, nunca una orden.
 - Gate humano antes de un efecto irreversible (enviar, pagar, borrar).[^harness]
 
@@ -36,6 +38,8 @@ La solución es el harness." No indica número de unidad.[^harness]
 Los tamaños de ventana y los nombres de productos son del momento del deck y no se
 verificaron. Los tres papers citados (Chroma 2025, Liu 2023, EMNLP 2025) sí se
 confirmaron; ver [las diez fallas](/conceptos/harness-diez-fallas-contexto.md).
+Cotejada contra las 16 páginas del PDF el 2026-10-20: el mapa de páginas de la tabla,
+la tesis (pie de cada slide) y la ausencia de número de unidad coinciden.
 
 # Respalda
 

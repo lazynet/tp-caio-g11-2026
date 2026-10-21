@@ -8,6 +8,7 @@ sources:
     resource: Memoria-Contexto-Harness.pdf
     title: Data Management en Soluciones de Gen IA, 16 páginas
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
+status: draft
 ---
 
 # Las tres capas (p. 15)
@@ -35,6 +36,9 @@ separarlas:[^harness]
 La atribución a Harrison Chase y la clasificación de productos concretos (Grok Build,
 HarnessAgent, Strands) son del PDF y no se verificaron con la fuente primaria. Los
 productos cambian rápido; para una decisión de build, buy o partner hay que
-reverificar cada uno. Ver [Agente = Modelo + Harness](/conceptos/harness-agente-modelo-mas-harness.md).
+reverificar cada uno. Cotejada contra el PDF, p. 15 (tabla, cita y recuadro "Dónde se
+construye el harness hoy"). Strands figura como framework en la tabla y, en el
+recuadro, como producto que se vende "literal" como "build an agent harness": la
+ambigüedad es del PDF. Ver [Agente = Modelo + Harness](/conceptos/harness-agente-modelo-mas-harness.md).
 
 [^harness]: Data Management en Soluciones de Gen IA (Memoria-Contexto-Harness.pdf), p. 15.
