@@ -248,7 +248,7 @@ section .decision.block .grid { font-size: 17px; }
 </span></div>
 <div class="grid g3">
 <div><strong>1.</strong> Aplicar la política de IA ya aprobada desde el mes 1. Cambiarla lo decide la dirección de Acme Labs, no este plan.</div>
-<div><strong>2.</strong> Nada de IA en crédito ni en scoring durante 12 meses: como vendemos a bancos y fintechs, son los usos de mayor riesgo regulatorio. El resto se clasifica caso por caso.</div>
+<div><strong>2.</strong> Nada de IA en crédito ni en scoring durante 12 meses: como vendemos a bancos y fintechs, son usos de alto riesgo regulatorio. El resto se clasifica caso por caso.</div>
 <div><strong>3.</strong> Ningún uso nuevo sin prueba previa en su herramienta. Si un contrato con un cliente prohíbe un uso, ese uso queda afuera.</div>
 </div>
 </div>
@@ -312,7 +312,7 @@ section .decision.block .grid { font-size: 17px; }
 | Técnico | Base de medición, política y controles; prueba de prácticas | Solución según evidencia; estudio del asistente | Aplicación; producto solo con interés de un cliente | Evaluación y traspaso |
 | Cultural | Básico para todos (≥90%); grupo intermedio | Referentes internos; Tecnología ≥80% | Casos por rol | Tecnología ≥85%; Operaciones ≥60% |
 | Techo, miles de USD | **caja 9 · tiempo 59** | caja 2 · tiempo 14 | caja 2 · tiempo 11 | caja 2 · tiempo 11 |
-| Punto de decisión | <span class="st pasa">Pasa</span> base, política y controles probados; gasto dentro del techo | <span class="st pasa">Pasa</span> ≥ +3% en el peor caso, sin daño<br><span class="st espera">Espera</span> Estimado > 0%, sin pasar | <span class="st pasa">Pasa</span> ≥ +8% en el peor caso, sin daño<br><span class="st espera">Espera</span> Estimado ≥ +5%, sin pasar (a ratificar) | Año 2: camino al equilibrio o interés de un cliente |
+| Punto de decisión | <span class="st pasa">Pasa</span> base, política y controles probados; gasto dentro del techo | <span class="st pasa">Pasa</span> ≥ +3% en el peor caso, sin daño<br><span class="st espera">Espera</span> Estimado > 0%, sin pasar | <span class="st pasa">Pasa</span> ≥ +8% en el peor caso, sin daño<br><span class="st espera">Espera</span> Estimado ≥ +5%, sin pasar (a ratificar) | <span class="st pasa">Pasa</span> al año 2: camino al equilibrio o interés de un cliente |
 
 <p class="note" style="margin-top:2px">Caja: legal y herramientas. Tiempo: horas de gente de Acme Labs, a su costo. Meses 4-12: no se aprueban hoy. Lo que no pasa ni espera, corta (slide 3).</p>
 
