@@ -7,8 +7,13 @@ sources:
   - id: m3u3
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_3_Unidad_11.pdf
     title: M3U3 (el archivo dice Unidad 11), slides
+    pages: slides 3 a 5
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:30:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U3 (archivo Unidad 11) slides 3-5: cuatro habilidades y tres pilares de adaptabilidad; marco sin niveles ni métricas. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Definición
@@ -37,6 +42,13 @@ aprendizaje permanente como ventaja competitiva con tres pilares:[^m3u3]
 - **Mentalidad de crecimiento:** aprender, desaprender y reaprender.
 - **Roles complementarios:** identificar qué funciones humanas amplifican a la IA.
 
+# Cautelas
+
+Cotejo del 2026-10-20 contra las slides 3 a 5 de M3U3 (el archivo dice Unidad 11): la
+definición, las cuatro habilidades y los tres pilares coinciden con la fuente. Sin
+correcciones de contenido. Las slides presentan las cuatro habilidades y los tres
+pilares como listas, sin jerarquía ni orden: la tabla no implica una secuencia.
+
 # Cómo lo usa el plan
 
 Respalda el criterio de contratación del **People plan (Anexo D)**: qué perfil se
@@ -50,4 +62,4 @@ propia y se marcan como tal.
 - [Transición responsable](/conceptos/m3u3-transicion-responsable.md)
 - [M2U3 Fuerza laboral](/unidades/m2u3-fuerza-laboral.md)
 
-[^m3u3]: M3U3, slides sobre Hiring para AI-Readiness y adaptabilidad.
+[^m3u3]: M3U3, slides 3 a 5 (Hiring para AI-Readiness, habilidades clave del profesional AI-ready, adaptabilidad y aprendizaje continuo).

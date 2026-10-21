@@ -8,6 +8,11 @@ sources:
     resource: BAIC - Guia GenAi.pdf
     title: BAIC, Guía GenAI, p. 16
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "BAIC, Guía GenAI, p. 16 (pasos 3 y 4): tres perfiles y las dos opciones de selección de tecnología; se omiten presupuesto, licencias y criterios de selección. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 Parte de [BAIC, Guía GenAI](/frameworks/baic-guia-genai.md); corresponde a los pasos 3 y 4 de la [metodología](/frameworks/baic-metodologia-7-pasos.md).
@@ -24,9 +29,17 @@ Parte de [BAIC, Guía GenAI](/frameworks/baic-guia-genai.md); corresponde a los 
 
 | Opción | Tradeoff según la guía |
 |---|---|
-| Herramientas propietarias | Rapidez, pero recelos de privacidad por los datos utilizados |
+| Herramientas propietarias | Recelos de privacidad por los datos utilizados |
 | Desarrollo propio sobre open source | Mayor control de privacidad y seguridad |
 
 La guía solo plantea estas dos opciones; el tercer camino (partner) del plan es criterio propio, no de BAIC.[^baic]
+
+# Cautelas
+
+Cotejada contra la p. 16 de la guía (pasos 3 y 4). Se corrigió la tabla de selección:
+la versión anterior atribuía "rapidez" a las herramientas propietarias, y la guía no
+lo dice; solo menciona los recelos de privacidad. Los pasos 3 y 4 de la guía
+(p. 16) incluyen además presupuesto de cómputo y licencias, y criterios de selección
+(caso de uso, tipo y calidad de datos, recursos), que esta ficha no recoge.
 
 [^baic]: BAIC, Guía GenAI, p. 16

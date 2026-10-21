@@ -7,8 +7,13 @@ sources:
   - id: m3u3
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_3_Unidad_11.pdf
     title: M3U3 (el archivo dice Unidad 11), slides
+    pages: slides 15 a 19 (la 15 es la portada del capítulo)
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:30:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U3 (archivo Unidad 11) slides 15-19 y programa del curso pág. 12 (plazo de 18 meses); fidelidad al curso. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Definición
@@ -47,8 +52,15 @@ desarrollo personalizado.[^m3u3]
 
 # Cautelas
 
+Cotejo del 2026-10-20 contra las slides 15 a 19 de M3U3 (el archivo dice Unidad 11):
+la definición, la frase sobre no decidir si la IA reemplaza un rol, las cuatro fases, los
+criterios de elección del rol, las cuatro preguntas y los cuatro resultados coinciden con
+la fuente. Sin correcciones de contenido. La ilustración de la slide 16 rotula los
+cuatro pasos con otras palabras (mapear tareas, identificar automatizables, prever
+responsabilidades, diseñar transición); las fases de la slide 17 son las que usa la ficha.
+
 El [programa](/programa.md) describe este caso con un plan de transformación a 18
-meses; las slides no mencionan plazo. El plan del TIF es a 12 meses: el horizonte
+meses (programa del curso, pág. 12, M3U3 tema 9); las slides no mencionan plazo. El plan del TIF es a 12 meses: el horizonte
 hay que adaptarlo y marcarlo como decisión propia.
 
 # Cómo lo usa el plan
@@ -64,4 +76,4 @@ por rol.
 - [Perfil de talento AI-ready](/conceptos/m3u3-perfil-talento-ai-ready.md)
 - [Grafo humano-agente](/conceptos/m2u3-grafo-humano-agente.md)
 
-[^m3u3]: M3U3, slides del caso práctico Deep Research.
+[^m3u3]: M3U3, slides 15 a 19 (caso práctico Deep Research: qué es, fases, aplicación al rol, resultados esperados).

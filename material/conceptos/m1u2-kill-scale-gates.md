@@ -9,7 +9,12 @@ sources:
     title: "FINMA, Guidance 08/2024, Governance and risk management when using artificial intelligence (18-12-2024)"
   - id: m1u2
     resource: Módulo 1 — Unidad 2 — Portfolio, priorización y ejecución de los 100 días.pdf
-    title: "M1U2, pp. 2, 7-8 y 11"
+    title: "M1U2, pp. 2, 8 y 11"
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U2 pp. 2, 8 y 11 y FINMA 08/2024 cotejadas; el ritmo trimestral es práctica del curso, el inventario del AI Act es afirmación del curso sin cotejar; umbrales ilustrativos. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 ---
 # Definición
@@ -45,5 +50,12 @@ Cada trimestre se revisa cada iniciativa contra sus métricas, se aplican los ga
 
 [Kill-fast](/conceptos/m1u1-kill-fast.md) (versión de experimento individual) · [AI Portfolio 1.0](/conceptos/m1u2-ai-portfolio-1-0.md) · [diseño para escalar](/conceptos/m1u2-diseno-para-escalar-slos.md) · unidad [M1U2](/unidades/m1u2-portfolio-100-dias.md). El programa pide un AI Portfolio "con reglas de kill/scale" como artefacto: ver [artefactos](/conceptos/programa-artefactos.md).
 
+# Cautelas
+
+- **Cotejada contra el PDF** (2026-10-20): M1U2, pp. 2 (definición), 8 (Tema 6: condiciones de los gates, proyectos zombis, revisión trimestral) y 11 (Paso 4, ejemplo de clasificación de documentos). Condiciones, umbrales (90%, 80%, 6 y 10 semanas, 100% en la semana 8) coinciden con el texto. La cita anterior incluía la p. 7, que no trata gates (la sección empieza al final de esa página y los gates están en la p. 8).
+- **FINMA cotejada contra el PDF primario** (2026-10-20): el comunicado no fija ninguna frecuencia de revisión, trimestral ni de otro tipo; sí menciona controles regulares y monitoreo continuo (sección 2.4). El ritmo trimestral es práctica del curso.
+- **"Inventario que exige el AI Act":** es la formulación del curso; no se cotejó contra el articulado. Antes de afirmarlo como obligación, ver [AI Act](/frameworks/eu-ai-act.md).
+- **Los umbrales del ejemplo son ilustrativos del curso**, no valores recomendados para ningún caso real.
+
 [^finma-08-2024]: FINMA, Guidance 08/2024, Governance and risk management when using artificial intelligence (18-12-2024)
-[^m1u2]: M1U2, pp. 2, 7-8 y 11
+[^m1u2]: M1U2, pp. 2, 8 y 11

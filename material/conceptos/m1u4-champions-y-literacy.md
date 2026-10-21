@@ -16,6 +16,11 @@ sources:
   - id: abreu-omnibus
     resource: https://abreuadvogados.com/en/conhecimento/publications/digital-omnibus-regulation-on-ai-the-key-amendments-to-the-ai-act/
     title: Abreu Advogados, Digital Omnibus Regulation on AI, the key amendments to the AI Act
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 10-11 y slide 14 de las slides v3: champions, condiciones de funcionamiento y AI literacy; art. 4 contrastado solo con Cooley y Abreu. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -34,7 +39,8 @@ governance. No necesita ser especialista en ML ni reportar al CAIO.[^m1u4-lectur
 
 Experiencia del docente: designó champions, se reunieron, y "algunos no preparan
 material, otros no vienen, cada uno está absorbido por sus prioridades y las
-reuniones fácilmente se convierten en status meetings" (p. 10, slide 14).[^m1u4-lectura][^m1u4-slides]
+reuniones fácilmente se convierten en status meetings" (cita textual de la slide 14;
+la lectura, p. 10, lo cuenta con otras palabras).[^m1u4-lectura][^m1u4-slides]
 Nombrar champions no crea capacidad por sí solo.
 
 Qué hace falta para que funcione:
@@ -73,10 +79,10 @@ licencia" y mide si las personas incorporan IA de manera útil y responsable.
 
 ## Corrección sobre el artículo 4 del AI Act
 
-La lectura afirma que el art. 4, modificado por el Reglamento (UE) 2026/1744, "exige a
-providers y deployers tomar medidas" para desarrollar AI literacy, y la slide 14 lo
-presenta como obligación.[^m1u4-lectura][^m1u4-slides] **Las fuentes secundarias
-consultadas dicen lo contrario en el matiz:** tras el Omnibus, la obligación deja de
+La lectura afirma (p. 11) que el art. 4, modificado por el Reglamento (UE) 2026/1744,
+"exige a providers y deployers tomar medidas para apoyar el desarrollo" de AI
+literacy, y la slide 14 lo presenta como obligación.[^m1u4-lectura][^m1u4-slides] **Las fuentes secundarias
+consultadas lo describen con otro énfasis:** tras el Omnibus, la obligación deja de
 exigir que providers y deployers "aseguren" la competencia del personal; pasa a que la
 Comisión y los Estados miembros "apoyen y faciliten" el desarrollo de AI literacy. El
 artículo se mantiene, pero la carga sobre cada organización baja.[^cooley-omnibus][^abreu-omnibus]
@@ -91,6 +97,18 @@ la AI literacy es una práctica recomendada y está en el texto. Ver
 Respalda el people plan y el roadmap cultural. Ver también
 [M3U2](/unidades/m3u2-cambio-literacy.md). Unidad:
 [M1U4](/unidades/m1u4-rol-gobernanza.md).
+
+# Cautelas
+
+* Cotejada el 2026-10-20 contra M1U4 lectura, p. 10-11 (PDF de 25 páginas) y slides v3,
+  slide 14 (PDF de 24 slides), y contra Cooley y Abreu para el art. 4.
+* Se corrigió la atribución de la cita del docente: es textual de la slide 14; la
+  lectura la parafrasea. Se corrigió la cita del art. 4: la lectura ya dice "para
+  apoyar el desarrollo".
+* La experiencia del docente es anecdótica: no es evidencia sobre Acme Labs. Las citas
+  de Microsoft y OpenAI son de segunda mano, sin cotejar las fuentes primarias.
+* El art. 4 sigue sin cotejarse contra el ELI oficial; ver
+  [AI Omnibus y SIGEN](/conceptos/m1u4-ai-omnibus-sigen.md).
 
 [^m1u4-lectura]: M1U4, lectura, sección 4 (p. 10-11)
 [^m1u4-slides]: M1U4, slide 14

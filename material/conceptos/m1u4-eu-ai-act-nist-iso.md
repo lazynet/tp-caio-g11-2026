@@ -19,6 +19,11 @@ sources:
   - id: cooley-omnibus
     resource: https://cdp.cooley.com/digital-ai-omnibus-delays-key-deadlines-introduces-new-rules/
     title: Cooley, Digital AI Omnibus delays key deadlines and introduces new rules
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 18-20 y 23, slide 22, página de NIST AI RMF: función de los tres marcos y contenido del curso; ISO y EUR-Lex sin recotejar. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -35,7 +40,7 @@ uno.[^m1u4-lectura]
 | ISO/IEC 42001 | Standard de management system (**MANAGEMENT SYSTEM**) | ¿Cómo institucionalizamos procesos repetibles para gestionar IA? |
 
 Fuente: sección 9, p. 18-20; slide 22. Takeaway 13: "se pueden complementar, pero no
-son intercambiables" (p. 22-23).[^m1u4-lectura][^m1u4-slides]
+son intercambiables" (p. 23).[^m1u4-lectura][^m1u4-slides]
 
 # EU AI Act, lo que vale la pena saber como CAIO
 
@@ -112,6 +117,22 @@ Respalda la sección de Compliance. El stack operativo está en el
 [Governance Stack](/conceptos/m1u4-governance-stack.md). Unidad:
 [M1U4](/unidades/m1u4-rol-gobernanza.md). Caso de aplicación:
 [Mercurio SA](/casos/m1u4-mercurio-sa.md), parte 5.
+
+# Cautelas
+
+* Cotejada el 2026-10-20 contra M1U4 lectura, p. 18-20 y 23, y slides v3, slide 22. El
+  contenido de la ficha coincide con el curso; se corrigió la página del takeaway 13
+  (p. 23, no 22-23).
+* NIST: la página oficial confirma voluntario, lanzamiento del 26-ene-2023 y que el AI
+  RMF 1.0 "is being revised". No describe las cuatro funciones; esa parte es solo de la
+  lectura (p. 20).
+* ISO/IEC 42001: la página de ISO devolvió 403 el 2026-10-20. Lo que dice la ficha
+  sobre edición y vigencia queda como cotejo previo, sin recotejar; "vigente a agosto
+  de 2026" es del curso, sin fuente explícita.
+* El calendario del AI Act se cotejó con Cooley, no con EUR-Lex (ver
+  [AI Omnibus y SIGEN](/conceptos/m1u4-ai-omnibus-sigen.md)). El comentario sobre el
+  Anexo III 5.b y clientes bancarios es de la ficha, no del curso, y el AI Act no se
+  declara aplicable a Acme Labs.
 
 [^m1u4-lectura]: M1U4, lectura, sección 9 (p. 18-20)
 [^m1u4-slides]: M1U4, slide 22

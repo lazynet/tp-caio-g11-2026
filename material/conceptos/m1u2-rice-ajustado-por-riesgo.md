@@ -6,10 +6,15 @@ tags: [m1, priorizacion, rice]
 sources:
   - id: m1u2
     resource: Módulo 1 — Unidad 2 — Portfolio, priorización y ejecución de los 100 días.pdf
-    title: "M1U2, pp. 2, 4 y 8-10"
+    title: "M1U2, pp. 2, 4-5 y 8"
   - id: rice-productplan
     resource: https://productplan.com/glossary/rice-scoring-model
     title: "ProductPlan, RICE scoring model"
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U2 pp. 2, 4-5 y 8 cotejadas contra el PDF y origen de RICE cotejado con ProductPlan (secundaria); la fórmula de ajuste por riesgo no existe en el curso. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 ---
 # Fórmula
@@ -47,5 +52,12 @@ Los 20 a 30 candidatos de la ideación se filtran por factibilidad y se puntúan
 
 Relacionado: [matriz factibilidad-impacto](/conceptos/m1u2-matriz-factibilidad-impacto.md) · [pain killer vs vitamina](/conceptos/m1u2-pain-killer-vs-vitamina.md) · unidad [M1U2](/unidades/m1u2-portfolio-100-dias.md).
 
-[^m1u2]: M1U2, pp. 2, 4 y 8-10
+# Cautelas
+
+- **Cotejada contra el PDF** (2026-10-20): M1U2, pp. 2 (definición), 4-5 (título del Tema 2, fórmula, ajustes para IA generativa, factor corrector de riesgo) y 8 (20 a 30 candidatos, filtro de factibilidad, 10 iniciativas). La cita anterior (pp. 2, 4 y 8-10) omitía la p. 5, donde están la fórmula y los ajustes para IA generativa, y la p. 9 no trata RICE. El PDF no menciona a Intercom.
+- **Origen cotejado contra la fuente web** (ProductPlan, 2026-10-20): atribuye RICE a Intercom y da los niveles de impacto 3, 2, 1, 0,5 y 0,25 y de confianza 100%, 80% y 50%, como dice la ficha. Es una fuente secundaria; no se cotejó el material original de Intercom.
+- **Ajuste por riesgo:** el curso lo pide como "factor corrector" sin fórmula. Toda fórmula concreta es propuesta del equipo, no del curso.
+- En el caso del curso se puntúan 16 de 24 candidatos (p. 10), no 20 a 30: esos números son del ejemplo, no una regla.
+
+[^m1u2]: M1U2, pp. 2, 4-5 y 8
 [^rice-productplan]: ProductPlan, RICE scoring model

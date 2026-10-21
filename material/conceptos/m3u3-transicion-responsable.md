@@ -7,8 +7,13 @@ sources:
   - id: m3u3
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_3_Unidad_11.pdf
     title: M3U3 (el archivo dice Unidad 11), slides
+    pages: slides 6 a 10 (la 6 es la portada del capítulo)
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:30:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M3U3 (archivo Unidad 11) slides 6-10; la cifra del 70% de retención es afirmación del curso sin fuente primaria ni base de comparación. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Premisa
@@ -56,9 +61,14 @@ Fuente: [^m3u3]
 
 # Cautelas
 
-Las slides afirman que las empresas que invierten en reskilling "retienen el 70%
-más de su talento" en transformaciones digitales. No cita fuente y la redacción es
-ambigua (¿70% más que qué base?). **No va en una slide del plan**; ver
+Cotejo del 2026-10-20 contra las slides 6 a 10 de M3U3 (el archivo dice Unidad 11): la
+premisa, las cuatro estrategias, el objetivo central, las definiciones de reskilling y
+upskilling (que están en una imagen de la slide 9, leída del render) y los tres principios
+éticos coinciden con la fuente. Sin correcciones de contenido.
+
+La slide 9 dice textualmente que "las empresas que invierten en reskilling retienen el
+70% más de su talento durante transformaciones digitales". No cita fuente y la
+redacción es ambigua (¿70% más que qué base?). **No va en una slide del plan**; ver
 [huecos](/huecos.md).
 
 # Cómo lo usa el plan
@@ -75,4 +85,4 @@ adopción y no de reestructuración.
 - [Deep Research de impacto en un rol](/conceptos/m3u3-deep-research-rol-critico.md)
 - [M2U3 Fuerza laboral](/unidades/m2u3-fuerza-laboral.md)
 
-[^m3u3]: M3U3, slides sobre Reestructuración Responsable.
+[^m3u3]: M3U3, slides 6 a 10 (Reestructuración Responsable: desplazamiento, estrategias de transición, reskilling vs. upskilling, imperativo ético).

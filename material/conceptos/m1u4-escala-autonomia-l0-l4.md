@@ -10,6 +10,11 @@ sources:
   - id: m1u4-slides
     resource: Presentacion - Módulo 1 — Unidad 4 — Rol del CAIO, gobernanza y arquitectura organizacional v3.pdf
     title: M1U4, slides v3 (24 slides)
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 13-14 y slide 17: escala pedagógica L0-L4, definiciones y aclaración de que no es un estándar oficial. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -52,6 +57,17 @@ autonomía: ver el [caso Mercurio SA](/casos/m1u4-mercurio-sa.md).
 
 Respalda arquitectura (hasta dónde llega cada agente) y roadmap ajustado por riesgo.
 Unidad: [M1U4](/unidades/m1u4-rol-gobernanza.md).
+
+# Cautelas
+
+* Cotejada el 2026-10-20 contra M1U4 lectura, p. 13-14 y slides v3, slide 17: niveles,
+  definiciones, la aclaración "no un estándar oficial" y "L4 no es más maduro" coinciden.
+  Fiel.
+* La slide 17 resume distinto: L3 "ejecuta luego de aprobación humana" (la lectura:
+  puede ejecutar y necesita aprobación en ciertos puntos) y L4 se llama "Act within
+  bounds". La tabla sigue la lectura.
+* Es una escala del curso; el uso para clasificar sistemas de Acme Labs es decisión del
+  equipo.
 
 [^m1u4-lectura]: M1U4, lectura, sección 6.1 (p. 13-14)
 [^m1u4-slides]: M1U4, slide 17

@@ -8,6 +8,11 @@ sources:
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_2_Unidad_8.pdf
     title: M2U4 (el archivo dice Unidad 8), 20 slides
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M2U4 (archivo 'Unidad 8'), slides 3 y 17: definición de evals, tres dimensiones y tres métricas del caso; la ausencia de metodología se verificó recorriendo las 20 slides. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Definición
@@ -40,5 +45,11 @@ Se usan junto con la [observabilidad](/conceptos/m2u4-observabilidad.md) en el
 
 No da una metodología de evals (datasets de referencia, LLM-as-judge, umbrales).
 Queda como hueco para el plan.
+
+# Cautelas
+
+Cotejada contra las slides 3 y 17 (y el recorrido completo del deck, que no trae
+metodología de evals). El curso no vincula explícitamente las evals con los release
+gates: ese insumo es lectura del repo.
 
 [^m2u4]: M2U4 (Unidad 8), slides 3 y 17.

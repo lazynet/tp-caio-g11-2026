@@ -7,6 +7,11 @@ sources:
   - id: m1u4-lectura
     resource: Lectura - Módulo 1 — Unidad 4 — Rol del CAIO, gobernanza y arquitectura organizacional.pdf
     title: M1U4, lectura de 25 páginas
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 12-13: costo por outcome aceptado, cinco ejemplos y cadena cost, adoption, outcome, value. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -40,5 +45,12 @@ business case en [M1U2](/unidades/m1u2-portfolio-100-dias.md). La lectura no da
 valores ni benchmarks: cualquier cifra hay que sacarla de datos propios.
 
 Unidad: [M1U4](/unidades/m1u4-rol-gobernanza.md).
+
+# Cautelas
+
+* Cotejada el 2026-10-20 contra M1U4 lectura, p. 12-13 (PDF de 25 páginas): la cita, los
+  cinco ejemplos y la cadena cost, adoption, outcome, value coinciden. Fiel.
+* Es una propuesta de la lectura, no un estándar. Que "costo por outcome" figure en
+  Validation viene de la lista de la p. 12.
 
 [^m1u4-lectura]: M1U4, lectura, sección 5.3 (p. 13)

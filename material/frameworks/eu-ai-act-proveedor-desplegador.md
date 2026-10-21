@@ -14,6 +14,11 @@ sources:
     resource: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
     title: Reg. (UE) 2026/1744, Digital Omnibus on AI, DOUE L de 24.7.2026
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:00:00Z }
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Reglamento (UE) 2024/1689, texto español del DOUE (EU AI Act 2024.pdf), arts. 2, 3.3, 3.4, 3.49, 4, 9-21, 25-27, 43, 49, 72 y 73; las modificaciones del Reglamento 2026/1744 no se cotejaron. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Alcance territorial (art. 2)
@@ -53,8 +58,8 @@ tercero es **proveedor**.[^eu-ai-act][^eu-ai-act-eurlex]
 # Art. 4: alfabetización en IA
 
 **Texto original (p. 51):** proveedores y desplegadores "adoptarán medidas para
-garantizar" que su personal y quienes operan sistemas en su nombre tengan "un
-nivel suficiente de alfabetización en materia de IA", según conocimientos,
+garantizar que, en la mayor medida posible," su personal y quienes operan sistemas en
+su nombre tengan "un nivel suficiente de alfabetización en materia de IA", según conocimientos,
 experiencia, formación y contexto de uso. Aplica desde el 2 de febrero de
 2025.[^eu-ai-act]
 
@@ -215,12 +220,14 @@ de modelos GPAI. Aquí entra el contrato con el proveedor del LLM.[^eu-ai-act]
 | 26.11 | Informar a las personas físicas que están expuestas a un sistema de alto riesgo del Anexo III que toma o ayuda a tomar decisiones sobre ellas |
 | 26.12 | Cooperar con las autoridades |
 
-Además, **FRIA** (art. 27) para desplegadores de 5.b y 5.c: ver
+Además, **FRIA** (art. 27, p. 69) para organismos de Derecho público, entidades
+privadas que prestan servicios públicos (salvo Anexo III punto 2) y desplegadores de
+los puntos 5.b y 5.c del Anexo III: ver
 [Anexo III](/frameworks/eu-ai-act-anexo-iii.md).
 
 # Qué cambia para Acme Labs
 
-| Pregunta | Respuesta del texto |
+| Pregunta | Lectura del repo a partir del texto |
 |---|---|
 | Rol por defecto en software propio para bancos | Proveedor |
 | Rol cuando opera el sistema para sí mismo | Desplegador |
@@ -230,6 +237,24 @@ Además, **FRIA** (art. 27) para desplegadores de 5.b y 5.c: ver
 
 # Cautelas
 
+- Cotejada el 2026-10-20 contra el texto español del Reglamento (UE) 2024/1689 en el
+  PDF del curso, p. 45-46 (arts. 2 y 3), 49 (art. 3.49), 51, 56-61, 62-64, 67-69, 78,
+  81-82 y 101-102: artículos, apartados, plazos (10 años, 6 meses, 15, 2 y 10 días) y
+  las doce obligaciones del art. 16 coinciden. Se corrigieron dos cosas: la cita
+  del art. 4, que omitía "en la mayor medida posible", y el alcance de la FRIA, que
+  omitía a los organismos públicos. Lo que el Reglamento dice del Anexo III y del
+  rol del cliente es texto; las filas sobre Acme Labs (rol por defecto, escenarios
+  (a) y (c) del art. 25, "un LLM usado para decidir crédito es alto riesgo") son
+  aplicación del repo, y el segundo supuesto vale solo para evaluar la solvencia de
+  personas físicas (Anexo III, punto 5.b).
+- Las partes basadas en el Reglamento 2026/1744 (Omnibus), incluidos el art. 4 "vigente",
+  el art. 4a, el plan de vigilancia al 2 de septiembre de 2027 y el refuerzo para PyMEs,
+  no se pudieron cotejar: EUR-Lex devolvió una página vacía. Quedan como "no cotejable:
+  fuente inaccesible" hasta abrir el texto oficial.
+- Las entidades financieras tienen reglas propias que la ficha no recoge: arts. 17.4,
+  18.3, 19.2, 26.5 (párr. 2) y 26.6 (párr. 2) los remiten a su normativa financiera, y el
+  art. 72.4 permite integrar la vigilancia poscomercialización del Anexo III punto 5.
+  Conviene mirarlos antes de afirmar qué obligaciones le caen a un banco.
 - Aplicabilidad real a clientes locales: depende de si el resultado se usa en la
   UE (art. 2.1.c). Falta decidirlo por cliente; no hay dato en el repo.
 - Las normas armonizadas (art. 40) y las especificaciones comunes (art. 41) para

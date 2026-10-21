@@ -6,7 +6,12 @@ tags: [m1, datos, calidad]
 sources:
   - id: m1u3
     resource: Modulo 1 Unidad 3.pdf
-    title: M1U3, documento de 14 páginas
+    title: M1U3, documento de 13 páginas
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U3 (PDF de 13 páginas), p. 2 a 6: prácticas de higiene, estructuración, normalización, escala y auditoría; la cifra del 5% como afirmación del curso sin fuente. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -43,10 +48,19 @@ reproducibilidad (p. 4).[^m1u3]
 La auditoría periódica verifica distribuciones, detecta drift y analiza outliers para
 encontrar sesgos antes de que aparezcan en las salidas. La mitigación de sesgos exige
 revisar la representatividad (categorías demográficas, idiomas, casos de uso) y no
-solo limpiar (p. 5-6).[^m1u3]
+solo limpiar (p. 6).[^m1u3]
 
 Se formaliza con [data contracts](/conceptos/m1u3-data-contracts.md).
 
 Unidad: [M1U3](/unidades/m1u3-datos-contexto.md).
+
+# Cautelas
+
+* Cotejada contra M1U3, p. 2-6 (PDF de 13 páginas). Se corrigió la cita de auditoría y
+  sesgos: es la p. 6, no la 5-6.
+* El "5% de registros con error sistemático genera un sesgo perceptible" (p. 3) es una
+  afirmación del curso, sin fuente. No va en una slide como dato.
+* La agrupación en limpieza, estructuración y normalización sigue el título del Tema 1
+  (p. 3); asignar la estandarización de formatos a "limpieza" es de la ficha.
 
 [^m1u3]: M1U3, Tema 1 (p. 3-4), Tema 3 (p. 5-6) y conceptos clave (p. 2)

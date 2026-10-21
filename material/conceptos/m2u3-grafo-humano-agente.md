@@ -8,6 +8,11 @@ sources:
     resource: Presentacion_Chief_AI_Officer_CAIO_Modulo_2_Unidad_7.pdf
     title: M2U3 (el archivo dice Unidad 7), 20 slides
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M2U3 (archivo 'Unidad 7'), slides 13-18: definición de nodos y arcos, cuatro objetivos, beneficios y cita de cierre; la sección 'Cómo lo usa el plan' queda fuera, es lectura del repo. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Qué es
@@ -19,11 +24,11 @@ accionable del proceso completo".[^m2u3]
 
 # Objetivos del rediseño
 
-| Paso | Qué se hace |
+| Objetivo | Qué se hace |
 |---|---|
 | Mapear participantes | Documentar roles y flujos actuales |
 | Identificar cuellos | Detectar redundancias y puntos críticos |
-| Asignar IA | Priorizar las intervenciones de mayor valor, según los [tres modos](/conceptos/m2u3-tres-modos-ia.md) |
+| Asignar IA | Priorizar las intervenciones de mayor valor |
 | Diseñar el proceso | Crear el flujo optimizado humano-agente |
 
 Para la unidad, esto transforma un proceso opaco en un sistema "transparente,
@@ -40,15 +45,25 @@ evidencia estructural.[^m2u3]
 # Caso práctico de la unidad
 
 El caso práctico es rediseñar un proceso como grafo humano-agente, pasando del
-"proceso tradicional" al "grafo aumentado". La slide de cierre insiste en que el grafo
-"no reemplaza al equipo humano: lo potencia".[^m2u3] El PDF no trae un proceso
-concreto con nodos y arcos en texto; solo el método.
+"proceso tradicional" al "grafo aumentado". La slide 18 ("Del proceso tradicional al grafo aumentado")
+dice que el grafo "no reemplaza al equipo humano — lo potencia, lo libera y le da
+superpoderes operacionales".[^m2u3] El PDF no trae un proceso concreto con nodos y
+arcos en texto; solo ilustraciones genéricas y el método.
 
 # Cómo lo usa el plan
 
-Sirve para el people plan y la arquitectura: antes de proponer un agente, se dibuja
-el grafo del proceso y se marca cada nodo con su modo. Ver también
+Lectura del repo, no del curso: sirve para el people plan y la arquitectura; antes de
+proponer un agente, se dibuja el grafo del proceso y se marca cada nodo con uno de
+los [tres modos](/conceptos/m2u3-tres-modos-ia.md) (la slide 16 los presenta después
+de los objetivos, pero no los cruza con el paso "Asignar IA"). Ver también
 [empleados sintéticos](/conceptos/m2u3-empleados-sinteticos.md) y
 [multi-agente](/conceptos/m2u3-multi-agente.md).
+
+# Cautelas
+
+Cotejada contra el PDF, slides 13 a 18 y la conclusión (slide 20). Los cuatro
+objetivos de la slide 15 se presentan como un diagrama sin numeración: el orden de
+la tabla es el de lectura, no una secuencia que el curso establezca. El PDF no
+define "técnica" ni "framework": habla de "enfoque por grafo".
 
 [^m2u3]: M2U3 (Unidad 7), slides 13-18 (caso práctico y grafo humano-agente).

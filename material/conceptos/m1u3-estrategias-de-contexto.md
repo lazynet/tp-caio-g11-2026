@@ -6,7 +6,12 @@ tags: [m1, datos, arquitectura, rag, fine-tuning]
 sources:
   - id: m1u3
     resource: Modulo 1 Unidad 3.pdf
-    title: M1U3, documento de 14 páginas
+    title: M1U3, documento de 13 páginas
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U3 (PDF de 13 páginas), p. 2, 7 y 8: las cuatro estrategias de contexto con ventajas y límites cualitativos; cifras de ventana como dato del curso 2024-2025. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -36,7 +41,7 @@ Fuente de la tabla: Tema 5, p. 7.[^m1u3]
 - Definición de RAG del glosario: combina recuperación desde una base externa con
   generación, "con información actualizada sin necesidad de reentrenamiento" (p. 2).[^m1u3]
 - La selección de contexto es "el problema central de RAG" y una de las dimensiones
-  del [context engineering](/conceptos/m1u3-context-engineering.md).[^m1u3]
+  (p. 8) del [context engineering](/conceptos/m1u3-context-engineering.md).[^m1u3]
 - Los datos que viajan en el contexto pueden contener PII: ver
   [anonimización en inferencia](/conceptos/m1u3-anonimizacion-inferencia.md).
 - La cifra de ventana (1 M de tokens) es del material de 2024-2025 y envejece rápido:
@@ -44,4 +49,12 @@ Fuente de la tabla: Tema 5, p. 7.[^m1u3]
 
 Unidad: [M1U3](/unidades/m1u3-datos-contexto.md).
 
-[^m1u3]: M1U3, Tema 5 (p. 7) y conceptos clave (p. 2)
+# Cautelas
+
+* Cotejada contra M1U3, p. 2, 7 y 8 (PDF de 13 páginas). Se corrigió la página de la
+  selección de contexto como "problema central de RAG": es la p. 8, no la 7.
+* Los modelos y la ventana de 1 millón de tokens son afirmaciones del curso, sin
+  fuente en la lista de la p. 12. Las ventajas y costos de cada estrategia son
+  cualitativas: el curso no da cifras de costo.
+
+[^m1u3]: M1U3, Tema 5 (p. 7), Tema 6 (p. 8) y conceptos clave (p. 2)

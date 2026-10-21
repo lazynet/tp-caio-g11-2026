@@ -3,6 +3,11 @@ type: Hueco
 title: Huecos del material
 description: Qué falta en el material de la cursada, qué quedó sin verificar y qué cifras no pueden ir a una slide.
 tags: [pendiente, cursada, cautelas]
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Estado del corpus al 2026-10-20 tras el cotejo de las 44 fichas exigidas por la entrega; describe faltantes y cautelas, no acredita su contenido. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
 ---
 
@@ -47,7 +52,8 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
 * **FINMA 08/2024** es suiza y no define ciclos trimestrales de revisión: el ritmo
   trimestral es práctica del curso ([verificación](/conceptos/m1u2-cautelas-citas-regulatorias.md)).
 * **AI Act:** entró en vigor el 2024-08-01, no en julio.
-* **AI Omnibus (Reg. UE 2026/1744):** existe y rige desde el 2026-07-27. Corre el alto
+* **AI Omnibus (Reg. UE 2026/1744):** existe y rige desde el 2026-07-27. El 8 de
+  julio es la fecha del reglamento; Cooley da el 29 de junio para el texto final. Corre el alto
   riesgo del Anexo III al 2027-12-02 y el del Anexo I al 2028-08-02
   ([AI Omnibus y SIGEN](/conceptos/m1u4-ai-omnibus-sigen.md)).
 * **SIGEN 197/2026** existe, pero aplica al Sector Público Nacional: no obliga a
@@ -61,9 +67,16 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
 * **M3U4:** el roadmap técnico habla de MLOps clásico y no de agentes ni LLMOps; no trae metas ni umbrales para los KPIs. **M3U3:** el programa describe el Deep Research con un plan a 18 meses y las slides no dan plazo.
 
 * **EU AI Act tras el Omnibus:** las fechas y el nuevo art. 4 (AI literacy: "apoyar
-  el desarrollo", más liviano que el "exige" del curso) se leyeron de una copia del
-  DOUE y coinciden entre las fichas. Falta cotejarlos contra el ELI oficial de
-  EUR-Lex, junto con las guidelines del 2026-07-20 y la fecha de los arts. 43 y 49.
+  el desarrollo", más liviano que el "exige" del curso) solo se contrastaron con
+  fuentes secundarias (Cooley, Abreu, ERTICO). El cotejo del 2026-10-20 no pudo abrir
+  el Reg. 2026/1744 en EUR-Lex (página vacía): falta cotejarlo contra el ELI oficial,
+  junto con las guidelines del 2026-07-20 y la fecha de los arts. 43 y 49.
+* **EU AI Act, entidades financieras:** la [ficha del framework](/frameworks/eu-ai-act-proveedor-desplegador.md)
+  no releva las reglas específicas (arts. 17.4, 18.3, 19.2, 26.5, 26.6 y 72.4).
+* **ISO/IEC 42001:** la página de ISO devolvió 403 en el cotejo del 2026-10-20; la
+  edición vigente queda como cotejo previo no repetido.
+* **M1U2:** el "inventario que exige el AI Act" y la clasificación de alto riesgo de
+  la detección de anomalías son afirmaciones del curso sin cotejar contra el articulado.
 * **Alcance del AI Act sobre Acme Labs:** decidir con el equipo si alcanza a sus
   clientes (art. 2.1.c).
 * **SIGEN 197/2026:** no se leyó el anexo.
@@ -72,8 +85,16 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
   fórmula del SZUCS.
 * **Microsoft RAI:** sin umbrales cuantitativos ni casos; el deck de taller no se leyó.
 * **Cisco:** falta cotejar con el PDF publicado por Cisco.
-* **M1U3:** cuatro fuentes web sin URL (PIIvot, PrivacyShield, Data Contracts in
-  Action, Clandestinio) no se identificaron.
+* **M1U3:** cuatro fuentes sin URL (PIIvot, PrivacyShield, Clandestinio y Data
+  Contracts in Action) no se identificaron; las tres de Google Cloud sí tienen URL y
+  se cotejaron. El PDF tiene 13 páginas, no 14.
+* **M1U3, caso de tickets sintéticos:** el texto (p. 11) dice 10.000 tickets
+  "balanceados (2.000 por categoría)" y "sin PII"; el gráfico (p. 9) muestra
+  35,1/24,2/17,9/13,6/9,2 % y una reducción de PII del 89 %. No usar "balanceado" ni
+  "sin PII" mientras el PDF se contradiga.
+* **M1U4, madurez agéntica de Microsoft:** la slide 9 usa "Governance & Security 150"
+  y la lectura (p. 7), "Governance en 200". Revisar
+  [la ficha](/conceptos/m1u4-microsoft-agentic-maturity.md), fuera del cotejo del 2026-10-20.
 * **M1U1:** el AI Maturity Model de Gartner y las listas de NovaGob que cita el curso.
 * **M2U4:** no da metodología de evals (datasets, umbrales, LLM-as-judge) ni umbrales
   de release gates. **Harness:** tamaños de ventana, la cita de Harrison Chase y la
@@ -83,6 +104,12 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
 * **Seguridad:** el curso no cita un estándar; se sumó OWASP LLM Top 10. Si el plan
   los necesita, faltan NIST AI RMF (perfil GenAI) y MITRE ATLAS.
 * **Apuntes:** "PromptFoo" y "millones de tokens" son lecturas supuestas de las notas.
+  La nota del 2026-09-29 es un resumen automático con la transcripción vacía: no hay
+  contra qué verificar el resumen mismo.
+* **Fichas enlazadas sin cotejar:** las de M3U1 (`m3u1-dlp-datos-en-riesgo`,
+  `m3u1-pipeline-datos-seguro`, `m3u1-proceso-red-teaming`, `m3u1-capas-seguridad`
+  y el caso `m3u1-red-team-agente`) y `m3u2-prompt-challenge` no entraron en el cotejo del
+  2026-10-20 porque el gate de entrega no las exige.
 
 # Catálogo
 

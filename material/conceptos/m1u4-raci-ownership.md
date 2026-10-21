@@ -10,6 +10,11 @@ sources:
   - id: m1u4-slides
     resource: Presentacion - Módulo 1 — Unidad 4 — Rol del CAIO, gobernanza y arquitectura organizacional v3.pdf
     title: M1U4, slides v3 (24 slides)
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "Lectura M1U4 p. 8-10 y slides 11-13: cinco roles de ownership, RACI con una sola A, ejemplo del copiloto comercial y ejercicio de refunds. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -86,6 +91,16 @@ Respalda el people plan (RACI con una sola A) y el gobierno. Ver
 [decision rights](/conceptos/m1u4-decision-rights.md) y los
 [AI Champions](/conceptos/m1u4-champions-y-literacy.md). Unidad:
 [M1U4](/unidades/m1u4-rol-gobernanza.md).
+
+# Cautelas
+
+* Cotejada el 2026-10-20 contra M1U4 lectura, p. 8-10 y slides v3, slides 11-13: roles,
+  letras RACI, regla de una sola A, ejemplo del copiloto y enunciado del ejercicio 3
+  coinciden. Fiel.
+* "Define qué significa correcto" para el Domain Expert viene de la slide 11, no del
+  texto de la lectura. La respuesta C del ejercicio 3 es una inferencia de la ficha, ya
+  marcada como tal.
+* El RACI del copiloto es un ejemplo del curso, no una plantilla para Acme Labs.
 
 [^m1u4-lectura]: M1U4, lectura, sección 3 y ejercicio 3 (p. 8-10)
 [^m1u4-slides]: M1U4, slides 11, 12 y 13

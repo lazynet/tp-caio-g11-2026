@@ -6,10 +6,15 @@ tags: [m1, diagnostico, madurez]
 sources:
   - id: m1u1-corta
     resource: Documento_Chief_AI_Officer_CAIO_Modulo_1_Unidad_1 (2).pdf
-    title: "M1U1 corta, pp. 6-9"
+    title: "M1U1 corta, pp. 6-10"
   - id: m1u1-extendida
     resource: Módulo 1 — Unidad 1 — Mentalidad CAIO y liderazgo en la era IA.pdf
-    title: "M1U1 extendida, pp. 8-9"
+    title: "M1U1 extendida, pp. 8-10"
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-20
+  scope: "M1U1 corta pp. 6-10 y extendida pp. 8-10 cotejadas contra el PDF; atribuciones a Gartner y NovaGob del curso sin cotejar; no acredita madurez de Acme Labs. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
 ---
 # Para qué sirve
@@ -32,7 +37,7 @@ De 1 (Inicial, ad-hoc) a 5 (Transformacional, optimizado), con el nivel 3 como O
 
 [^m1u1-corta]
 
-Los niveles 2 y 4 no están descritos en el curso; son los intermedios.
+El curso describe solo los niveles 1, 3 y 5. Los niveles 2 y 4 no tienen descriptor en la tabla (el caso resuelto asigna nivel 2 sin definirlo), así que su criterio hay que fijarlo explícitamente al aplicar el marco. Tampoco hay una regla para promediar o combinar las cinco dimensiones en un puntaje organizacional único.
 
 # Pasos para realizar el diagnóstico
 
@@ -47,7 +52,7 @@ No es un evento único: es un proceso continuo que lidera el CAIO.[^m1u1-corta]
 
 # Variante de la versión extendida
 
-La versión extendida estructura el diagnóstico en otras dimensiones, tomadas de listas de verificación de NovaGob (2024) y del AI Maturity Model de Gartner: disponibilidad y calidad de datos, talento interno, procesos con potencial de automatización, infraestructura tecnológica, cultura frente al cambio y cumplimiento normativo. Puede completarse en 2-3 sesiones con los referentes del área, sin semanas de consultoría.[^m1u1-extendida] En el [caso de RRHH](/conceptos/m1u1-caso-diagnostico-rrhh.md) se aplicaron cinco: datos, talento, procesos candidatos, cultura y cumplimiento.
+La versión extendida estructura el diagnóstico en otras dimensiones, tomadas de listas de verificación de NovaGob (2024) y del AI Maturity Model de Gartner: disponibilidad y calidad de datos, talento interno, procesos con potencial de automatización, infraestructura tecnológica, cultura frente al cambio y cumplimiento normativo. Una versión inicial puede completarse en 2-3 sesiones con los referentes del área, sin semanas de consultoría.[^m1u1-extendida] En el [caso de RRHH](/conceptos/m1u1-caso-diagnostico-rrhh.md) se aplicaron cinco: datos, talento, procesos candidatos, cultura y cumplimiento.
 
 La dimensión cultural suele subestimarse: con excelente infraestructura y talento, si la cultura penaliza el error o los mandos medios ven la IA como amenaza, la adopción será superficial. Se evalúa con conversaciones directas entre niveles, mejor que con encuestas formales.[^m1u1-extendida]
 
@@ -69,5 +74,13 @@ La dimensión cultural suele subestimarse: con excelente infraestructura y talen
 
 [Plan de 30 días](/conceptos/m1u1-plan-30-dias.md) · [marcos de madurez del bundle](/frameworks/microsoft-rai-maturity.md), [Cisco AI Readiness](/frameworks/cisco-ai-readiness.md) y [AIMM](/frameworks/aimm-gartner.md) · unidad [M1U1](/unidades/m1u1-mentalidad-caio.md).
 
-[^m1u1-corta]: M1U1 corta, pp. 6-9
-[^m1u1-extendida]: M1U1 extendida, pp. 8-9
+# Cautelas
+
+- **Cotejada contra el PDF** (2026-10-20): M1U1 corta, pp. 6-10 (marco y niveles 1, 3 y 5, p. 6-7; pasos, p. 7; proceso continuo, p. 8; caso de supermercados, p. 9; respuesta del curso, pp. 9-10) y M1U1 extendida, pp. 8-10 (dimensiones alternativas y cultura, pp. 8-9; ejemplo de RRHH con sus cinco dimensiones, p. 10). La tabla y los pasos se leyeron de la capa de texto del PDF.
+- **Cita corregida:** la respuesta completa del caso de supermercados termina en la p. 10; la cita anterior, pp. 6-9, quedaba incompleta.
+- **Marco didáctico, no estándar:** las cinco dimensiones y los niveles 1, 3 y 5 son el marco del curso. Los niveles 2 y 4 no están definidos y el curso no da una regla de promedio; no se debe presentar un puntaje único como resultado del marco.
+- **Variante extendida:** usa otras dimensiones y atribuye su estructura a NovaGob (2024) y al AI Maturity Model de Gartner. Es atribución del curso: no se cotejaron esas fuentes primarias (ver [AIMM](/frameworks/aimm-gartner.md) y [huecos](/huecos.md)).
+- **Fidelidad al curso no es madurez de Acme Labs:** verificar que la ficha refleja el curso no acredita ningún nivel de madurez real de la organización.
+
+[^m1u1-corta]: M1U1 corta, pp. 6-10
+[^m1u1-extendida]: M1U1 extendida, pp. 8-10
