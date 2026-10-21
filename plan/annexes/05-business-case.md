@@ -1575,13 +1575,60 @@ si el resultado es un corte. Cuatro palabras no son sinónimos:
 - **Excepción:** el board aprueba algo fuera del sobre, sin caja (0,3 FTE en los meses 4-6,
   en la aprobación de hoy).
 
-| Decisión | Cuándo | Libera (caja / tiempo, techo) y reserva vigente | Condiciones con efecto económico | Si no se cumple, según el Anexo F | Pérdida si se corta | Reversible |
-|---|---|---|---|---|---|---|
-| Hoy | Aprobación | Meses 1-3: 33 / 72 (con la prueba chica); reserva 6 | Pedido de hoy completo; techo y piso de capacidad confirmados; vía de IA aplicada | No arrancan los meses 1-3; la preparación previa queda hundida (≤ 7). Sin vía de IA aplicada, sus hitos pasan a los meses 4-6 | — | Sí |
-| Mes 3 | Fin de los meses 1-3 | Con señal, meses 4-6 de la plataforma: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15**. Sin señal, meses 4-6 como gobierno mínimo y formación | **Bifurcación:** al menos una señal (umbral contractual, anuncio de precio por consumo o cliente para el producto) libera la plataforma (contractor al 100%, gateway, pasarela). Además: base congelada con la unidad del Anexo B; matriz de los clientes que concentran la facturación; uso de los meses 1-3 dentro del sobre; contractor contratado | **Ninguna condición del mes 3 corta el plan.** Sin señal: los meses 4-12 como gobierno mínimo y formación con la prueba extendida (≈ 199 en el año); las lecturas de los meses 6 y 9 releen las señales. Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: los meses 4-6 solo con replan de capacidad. Respaldo de aprobación o alcance de la política pendientes de revisión: 6 semanas para completarlos, sin casos nuevos; al vencer sin aprobación documentada o sin cobertura aplicable al producto demostrada, no hay el producto en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en los meses 4-6; sin ella en el mes 9, la demostración externa (11,6-31 de caja) no se financia. Básico <50% al cierre de los meses 4-6: cambio de formato de la capacitación. Con señal y sin contractor: los meses 4-6 en el modo control del Anexo B, sin los hitos de IA aplicada; la caja de los meses 4-6 baja ~27 (contractor con contingencia) | Solo si el board decide **no liberar los meses 4-6** (no es una regla de corte): 79, hasta 115 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 156 en el año | Sí |
-| Mes 6 | Fin de los meses 4-6 | Meses 7-9: 59 / 78; el producto, solo con señal de cliente y plataforma liberada en el mes 3: 38 / 34 más; reserva 15 (**17** con el producto) | Throughput: **pasa** con límite inferior ≥ +3%, sin más retrabajo; **espera** con estimado > 0% y límite inferior < +3%, o muestra insuficiente: los meses 7-9 sin escalado y nueva medición a las 6 semanas; **corta** con estimado ≤ 0% o más retrabajo. FinOps con el múltiplo medido; destino de la capacidad decidido | Throughput: **suspensión** (espera) o **corte** del frente interno, que deja la base mínima; la espera vencida corta igual. Cobertura de precio no demostrada: la palanca sale del deck. Más de 6× sin mitigar: se congela la expansión y se topea el consumo. Sin señal de cliente, o sin plataforma del mes 3: el producto se difiere y sus condiciones del mes 9 no aplican | Corte del frente interno: 198 (máximo 291) hasta cerrar; año 224 / 330 | Sí |
-| Mes 9 | Fin de los meses 7-9 | Meses 10-12: 95 / 69; el producto, si sigue: 21 / 23 más; reserva 15 (17 con el producto) | Throughput: **pasa** con límite inferior ≥ +8%; **espera** con estimado ≥ +5% y límite inferior < +8%, o muestra insuficiente: **mantenimiento** (solo base mínima), nueva medición a las 6 semanas; **corta** con estimado < +5%. Costo por PR sin subir. Señal contractual o producto liberado para la demostración externa. SLO del piloto, solo si el producto se liberó | Throughput < +5%: corte del frente interno y de la base común; queda la base mínima. **Si el producto sigue, rige la precedencia** (seguridad, dependencias, caja) y el producto conserva su base común mínima. Sin señal contractual ni el producto: la demostración externa no se financia | Sin el producto: 292 (máximo 427) hasta cerrar; año 305 / 447. Con el producto vivo, corte mixto: año 433 (con el producto sin corte, 471) | Sí |
-| Mes 12 | Fin de los meses 10-12 | Año 2: régimen de ~143 (~188 con el producto), en el presupuesto 2028 | Trayectoria hacia el equilibrio operativo anual de ~17% de throughput **atribuible contra la base de los meses 1-3** (~23% si el producto sigue; menos si la capacidad se vende) **o** interés contractual en el producto; decisiones sobre contractor, on-premise e ISO 42001 | No se financia el régimen. Queda el frente interno con las licencias vigentes y la base mínima, ~53 por año (29-78); el gateway se da de baja salvo que FinOps muestre que acota más de lo que cuesta | — | Contrato a más de 12 meses o hardware: irreversible |
+#### Hoy
+
+| Campo | Contenido |
+|---|---|
+| Cuándo | Aprobación |
+| Libera (caja / tiempo, techo) y reserva vigente | Meses 1-3: 33 / 72 (con la prueba chica); reserva 6 |
+| Condiciones con efecto económico | Pedido de hoy completo; techo y piso de capacidad confirmados; vía de IA aplicada |
+| Si no se cumple, según el Anexo F | No arrancan los meses 1-3; la preparación previa queda hundida (≤ 7). Sin vía de IA aplicada, sus hitos pasan a los meses 4-6 |
+| Pérdida si se corta | — |
+| Reversible | Sí |
+
+#### Mes 3
+
+| Campo | Contenido |
+|---|---|
+| Cuándo | Fin de los meses 1-3 |
+| Libera (caja / tiempo, techo) y reserva vigente | Con señal, meses 4-6 de la plataforma: 71 / 106 (71 / 114 con la excepción); reserva **ampliada a 15**. Sin señal, meses 4-6 como gobierno mínimo y formación |
+| Condiciones con efecto económico | **Bifurcación:** al menos una señal (umbral contractual, anuncio de precio por consumo o cliente para el producto) libera la plataforma (contractor al 100%, gateway, pasarela). Además: base congelada con la unidad del Anexo B; matriz de los clientes que concentran la facturación; uso de los meses 1-3 dentro del sobre; contractor contratado |
+| Si no se cumple, según el Anexo F | **Ninguna condición del mes 3 corta el plan.** Sin señal: los meses 4-12 como gobierno mínimo y formación con la prueba extendida (≈ 199 en el año); las lecturas de los meses 6 y 9 releen las señales. Base insuficiente: 6 semanas más sin atribuir ganancia; sin base al cierre, sale el resultado clave de throughput y el frente interno no escala. Matriz ambigua: *default-deny* y revisión legal hasta el mes 4. Sobre excedido: los meses 4-6 solo con replan de capacidad. Respaldo de aprobación o alcance de la política pendientes de revisión: 6 semanas para completarlos, sin casos nuevos; al vencer sin aprobación documentada o sin cobertura aplicable al producto demostrada, no hay el producto en el año (38 / 34 que no se liberan). Evidencia contractual incompleta: se completa en los meses 4-6; sin ella en el mes 9, la demostración externa (11,6-31 de caja) no se financia. Básico <50% al cierre de los meses 4-6: cambio de formato de la capacitación. Con señal y sin contractor: los meses 4-6 en el modo control del Anexo B, sin los hitos de IA aplicada; la caja de los meses 4-6 baja ~27 (contractor con contingencia) |
+| Pérdida si se corta | Solo si el board decide **no liberar los meses 4-6** (no es una regla de corte): 79, hasta 115 hasta cerrar; con la base mínima (hasta 41 de tiempo), hasta 156 en el año |
+| Reversible | Sí |
+
+#### Mes 6
+
+| Campo | Contenido |
+|---|---|
+| Cuándo | Fin de los meses 4-6 |
+| Libera (caja / tiempo, techo) y reserva vigente | Meses 7-9: 59 / 78; el producto, solo con señal de cliente y plataforma liberada en el mes 3: 38 / 34 más; reserva 15 (**17** con el producto) |
+| Condiciones con efecto económico | Throughput: **pasa** con límite inferior ≥ +3%, sin más retrabajo; **espera** con estimado > 0% y límite inferior < +3%, o muestra insuficiente: los meses 7-9 sin escalado y nueva medición a las 6 semanas; **corta** con estimado ≤ 0% o más retrabajo. FinOps con el múltiplo medido; destino de la capacidad decidido |
+| Si no se cumple, según el Anexo F | Throughput: **suspensión** (espera) o **corte** del frente interno, que deja la base mínima; la espera vencida corta igual. Cobertura de precio no demostrada: la palanca sale del deck. Más de 6× sin mitigar: se congela la expansión y se topea el consumo. Sin señal de cliente, o sin plataforma del mes 3: el producto se difiere y sus condiciones del mes 9 no aplican |
+| Pérdida si se corta | Corte del frente interno: 198 (máximo 291) hasta cerrar; año 224 / 330 |
+| Reversible | Sí |
+
+#### Mes 9
+
+| Campo | Contenido |
+|---|---|
+| Cuándo | Fin de los meses 7-9 |
+| Libera (caja / tiempo, techo) y reserva vigente | Meses 10-12: 95 / 69; el producto, si sigue: 21 / 23 más; reserva 15 (17 con el producto) |
+| Condiciones con efecto económico | Throughput: **pasa** con límite inferior ≥ +8%; **espera** con estimado ≥ +5% y límite inferior < +8%, o muestra insuficiente: **mantenimiento** (solo base mínima), nueva medición a las 6 semanas; **corta** con estimado < +5%. Costo por PR sin subir. Señal contractual o producto liberado para la demostración externa. SLO del piloto, solo si el producto se liberó |
+| Si no se cumple, según el Anexo F | Throughput < +5%: corte del frente interno y de la base común; queda la base mínima. **Si el producto sigue, rige la precedencia** (seguridad, dependencias, caja) y el producto conserva su base común mínima. Sin señal contractual ni el producto: la demostración externa no se financia |
+| Pérdida si se corta | Sin el producto: 292 (máximo 427) hasta cerrar; año 305 / 447. Con el producto vivo, corte mixto: año 433 (con el producto sin corte, 471) |
+| Reversible | Sí |
+
+#### Mes 12
+
+| Campo | Contenido |
+|---|---|
+| Cuándo | Fin de los meses 10-12 |
+| Libera (caja / tiempo, techo) y reserva vigente | Año 2: régimen de ~143 (~188 con el producto), en el presupuesto 2028 |
+| Condiciones con efecto económico | Trayectoria hacia el equilibrio operativo anual de ~17% de throughput **atribuible contra la base de los meses 1-3** (~23% si el producto sigue; menos si la capacidad se vende) **o** interés contractual en el producto; decisiones sobre contractor, on-premise e ISO 42001 |
+| Si no se cumple, según el Anexo F | No se financia el régimen. Queda el frente interno con las licencias vigentes y la base mínima, ~53 por año (29-78); el gateway se da de baja salvo que FinOps muestre que acota más de lo que cuesta |
+| Pérdida si se corta | — |
+| Reversible | Contrato a más de 12 meses o hardware: irreversible |
 
 Irreversibles marcados (de los Anexos [B](02-arquitectura.md) y
 [C](03-gobierno-seguridad.md)): compromisos de volumen a más de 12 meses, capex
