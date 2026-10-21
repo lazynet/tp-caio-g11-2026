@@ -5,8 +5,8 @@ description: "El plan supone brechas de gateway, inventario de arquitectura y ca
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Hipótesis de planificación confirmadas por Martín: gateway de modelos e inventario formal de arquitectura supuestos ausentes y capacidad legal interna dedicada a IA supuesta insuficiente. Se conserva pendiente el relevamiento técnico y legal; se distinguen el inventario de datos informado y el harness interno cuyo alcance está por relevar. Construcción y contratación dependen de la alternativa elegida y de la brecha confirmada; encontrar capacidades equivalentes obliga a revisar alcance y costos. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Brechas de gateway, inventario de arquitectura y capacidad legal como hipótesis de planificación. R-16 asigna el relevamiento técnico a Tecnología dentro de las 24-40 h de Arquitectura antes de M3 y el legal a Seguridad antes de M4; R-15 exige brecha documentada para liberar plataforma. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, arquitectura, gobierno]
 sources:
   - id: stack-plataforma
@@ -17,14 +17,17 @@ sources:
     title: "Estructura y roles documentados de la organización"
   - id: gobierno-ia
     resource: "context/hechos/gobierno-y-politica-ia.md"
-    title: "Antecedentes y brechas de gobierno pendientes de contraste"
+    title: "Política de IA existente y temas que requieren revisión legal"
   - id: uso-ia
     resource: "context/hechos/uso-ia-interno.md"
     title: "Harness interno informado y alcance técnico por relevar"
   - id: inventario-datos
     resource: "context/hechos/inventario-y-distribucion-de-datos.md"
     title: "Existencia informada del inventario de datos, distinto del de arquitectura"
-generated: { by: codex/gpt-6, at: 2026-10-20 }
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, R-15 (condición de brecha documentada) y R-16 (relevamiento técnico y legal)"
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21 }
 ---
 # Supuesto
 
@@ -40,16 +43,25 @@ generated: { by: codex/gpt-6, at: 2026-10-20 }
   plataforma sin documentar un gateway ni un inventario formal de arquitectura.[^stack-plataforma]
 - La ficha de [tamaño y estructura](/hechos/tamano-y-estructura.md) no muestra
   una función legal en la primera línea, y la
-  [política de IA](/hechos/gobierno-y-politica-ia.md) deja pendientes que
-  requieren revisión legal. Esos documentos motivan el relevamiento de
-  capacidad disponible.[^tamano-estructura][^gobierno-ia]
+  [política de IA](/hechos/gobierno-y-politica-ia.md) deja temas que requieren
+  revisión legal. Esos documentos motivan el relevamiento de capacidad
+  disponible.[^tamano-estructura][^gobierno-ia]
 
 # Cómo verificarlo
 
 Relevar componentes, inventarios y asesoría disponibles, y contrastar su alcance
 y capacidad con la alternativa seleccionada. El
-[harness interno](/hechos/uso-ia-interno.md) tiene alcance técnico por relevar y
-puede ofrecer capacidades reutilizables.[^uso-ia]
+[harness interno](/hechos/uso-ia-interno.md) entra en ese relevamiento y puede
+ofrecer capacidades reutilizables.[^uso-ia]
+
+Quién y cuándo (R-16):[^resoluciones]
+
+| Relevamiento | Lo hace | Hito | Si no se hace |
+|---|---|---|---|
+| Técnico: gateway, inventario de arquitectura y alcance del harness interno | El Responsable de Tecnología, dentro de las 24-40 h de Arquitectura ya costeadas | Decisión del mes 3 | No hay brecha documentada y no se cumple la condición 1 para liberar plataforma (R-15); si no cabe en esas horas, se recostea antes de la segunda liberación |
+| Legal: capacidad dedicada a IA | Lo encarga el Responsable de seguridad; una asesoría externa entra solo con cotización verificada por el CFO | Antes de la revisión de contratos ambiguos del mes 4 y de la cláusula tipo de los meses 7-9 | Los contratos ambiguos siguen en *default-deny* |
+
+Si el relevamiento encuentra capacidad equivalente, se reduce alcance y costo.
 
 # Qué lo invalidaría
 
@@ -70,3 +82,4 @@ puede ofrecer capacidades reutilizables.[^uso-ia]
 [^gobierno-ia]: Gobierno y política de IA existentes, antecedentes y estado actual por contrastar.
 [^uso-ia]: Uso actual de IA en la operación interna, harness informado sin revisión documental ni técnica de su alcance.
 [^inventario-datos]: Inventario y distribución de datos, existencia informada y distinción respecto del inventario de arquitectura.
+[^resoluciones]: Anexo G, R-15 (la brecha documentada es condición para liberar plataforma) y R-16 (relevamiento técnico por el Responsable de Tecnología antes del mes 3; legal encargado por el Responsable de seguridad antes del mes 4).

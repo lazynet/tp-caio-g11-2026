@@ -5,8 +5,8 @@ description: "La ganancia de throughput llega por tramos: en el escenario base, 
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Rampas de diseño confirmadas por Martín: base 0/25/60/100%, pesimista 0/10/30/60% y optimista 0/40/80/100% del objetivo de throughput por tramo. Incluye mejora modelada g por rampa y capacidad liberada a producción fija g por rampa dividido por uno más esa mejora; caso pesimista con objetivo 5% y espera o eventual corte según medición y gates. Se precisa que el 0% inicial es una convención de planificación, que la trayectoria temporal sigue siendo un supuesto y que los gates contrastan el modelo con mediciones reales. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Rampas supuestas base 0/25/60/100%, pesimista 0/10/30/60% y optimista 0/40/80/100% del objetivo por tramo. Capacidad liberada a producción fija calculada como mejora dividida por uno más mejora. R-19 y el Anexo B separan el modelo de las lecturas reales: M6 no lee valor; M9 exige límite inferior mayor que cero, sin daño, y conversión económica con destino decidido. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, productividad]
 sources:
   - id: ganancia-productividad
@@ -27,6 +27,9 @@ sources:
   - id: umbrales-tecnicos
     resource: "context/supuestos/umbrales-tecnicos-propuestos.md"
     title: "Gates de impacto, espera y condiciones de corte"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -73,11 +76,15 @@ convertidas.
 - Ese caso se trata como espera y eventual corte según las mediciones y los
   gates, incluida la espera de 6 semanas y el corte si vence sin mejora.[^umbrales-tecnicos]
 - La unidad de throughput y su valuación las define el Anexo E; la rampa se
-  aplica sobre el throughput, no sobre su valuación.
+  aplica sobre el throughput, no sobre su valuación. Produce la medición
+  Tecnología, la verifica el verificador senior independiente, fuera de la línea
+  de Tecnología, lee el AI Council en los meses 6 y 9 y convierte el CFO solo con
+  destino decidido en el mes 6; sin pasar, espera única o corte (R-19)[^resoluciones].
 
-[^ganancia-productividad]: Ganancia de productividad por IA en ingeniería, rango propuesto y validaciones pendientes.
+[^ganancia-productividad]: Ganancia de productividad por IA en ingeniería, rango propuesto como hipótesis y reparto de medición, lectura y conversión.
 [^uso-ia]: Uso actual de IA en la operación interna, diferencias por área y cautelas de telemetría.
 [^pilotos-ia]: Encuesta y pilotos internos de IA, experiencia de delivery limitada a la primera semana y sin extrapolación.
 [^convenciones-calculo]: Convenciones de calendario y cálculo, línea de base prospectiva y costeo.
 [^escenarios-financieros]: Anexo E, escenarios y sensibilidades del modelo de productividad.
 [^umbrales-tecnicos]: Umbrales técnicos propuestos, gates de impacto y reglas de espera y corte.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

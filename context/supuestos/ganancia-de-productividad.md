@@ -5,8 +5,8 @@ description: "El caso de negocio supone entre 10% y 25% más de throughput por d
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Hipótesis de diseño confirmada por Martín: 10%-25% de mejora de throughput por desarrollador a los 12 meses en equipos propios, excluyendo staffing y sin deterioro de calidad. Incluye base prospectiva congelada en semanas 1-4, comparación trimestral con incidentes y retrabajo, serie retrospectiva del cuarto trimestre de 2026 para tendencia y ruido y resultado del OKR informado aparte. Se corrige el fundamento: la meta propuesta de +20% y el piloto de una semana no acreditan el rango ni un piso conservador. Se conserva la validación pendiente de medición y conversión económica. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Hipótesis de mejora de throughput de 10%-25% a doce meses en equipos propios, sin deterioro de calidad. Protocolo agregado por área del Anexo B, producción por Tecnología y verificación senior independiente fuera de su línea; M6 decide por adopción, costo y controles, M9 lee valor con límite inferior mayor que cero. R-19 exige destino económico decidido en M6 para convertir capacidad en beneficio. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, productividad]
 sources:
   - id: okr-organizacion
@@ -18,6 +18,9 @@ sources:
   - id: convenciones-calculo
     resource: "context/supuestos/convenciones-de-calculo.md"
     title: "Base prospectiva, serie retrospectiva y valuación de la capacidad"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -63,11 +66,19 @@ lado.[^okr-organizacion]
 
 # Cautelas
 
-- La mejora técnica y su conversión económica requieren validaciones propias.
-- El rango permanece como hipótesis pendiente de medición, sujeto a revisión
+- La mejora técnica y su conversión económica tienen dueños distintos. Produce
+  la medición Tecnología con el protocolo del Anexo B y la verifica el
+  verificador senior independiente, fuera de la línea de Tecnología; lee el AI Council en
+  los meses 6 y 9 contra los umbrales, calidad primero; convierte el CFO: la
+  capacidad liberada cuenta como beneficio solo si en el mes 6 hay un destino
+  decidido, y se valoriza a costo cargado, no como caja. El mes 3 no atribuye
+  ganancia. Sin pasar, rige la espera única o el corte; sin destino en el mes 6,
+  el beneficio es 0 (R-19)[^resoluciones].
+- El rango sigue siendo una hipótesis hasta esa medición, sujeto a revisión
   por inestabilidad de la base, deterioro de calidad o falta de conversión
   económica para el caso de negocio.
 
 [^okr-organizacion]: OKR y objetivos de la organización y de Tecnología, borrador 2027 y meta propuesta de +20% de throughput.
 [^pilotos-ia]: Encuesta y pilotos internos de IA, experiencia de delivery limitada a la primera semana y sin extrapolación.
 [^convenciones-calculo]: Convenciones de cálculo del caso de negocio, base prospectiva, lectura retrospectiva y valuación de la capacidad.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

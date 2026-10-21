@@ -1,6 +1,6 @@
 ---
 owner: caio
-status: draft
+status: ready
 title: "Anexo A — Diagnóstico y punto de partida"
 ---
 
@@ -11,7 +11,8 @@ beneficio que se mide en la slide [Beneficio](../slides.md). Montos en k USD
 (1k USD = 1.000 USD).
 
 > **Cifras estimadas, todavía sin validar contra fuentes internas.** Se validan
-> antes de liberar la ejecución de M1-M3. La validación tiene una autorización propia.
+> antes de liberar la ejecución de M1-M3, en la validación inicial que el Directorio
+> libera al aprobar el plan ([R-02](07-resoluciones.md#autoridad-y-liberaciones)).
 
 ## Objetivo
 
@@ -30,7 +31,9 @@ no sustituye la trazabilidad.
 **El puntaje es una propuesta del CAIO a validar, no un hecho.** Sale de leer las
 fuentes del caso, todas con cifras estimadas, sin entrevistas ni encuestas
 propias: el paso 2 del método de diagnóstico de madurez (entrevistas y encuestas
-por nivel) no se hizo. Responsable de validar el puntaje: a designar.
+por nivel) no se hizo. El puntaje se valida en la validación inicial: produce el
+CAIO, verifica el verificador senior independiente y el CEO recibe el resultado en
+la segunda liberación ([R-06](07-resoluciones.md#autoridad-y-liberaciones)).
 
 ## Supuestos de partida
 
@@ -52,12 +55,14 @@ por nivel) no se hizo. Responsable de validar el puntaje: a designar.
 | Estrategia y liderazgo | 2 | El escenario parte sin estrategia de IA formal aprobada ([supuesto](../../context/supuestos/estrategia-de-ia-de-partida.md)). Hay iniciativas y objetivos propuestos: propuestas al Directorio y un borrador de OKR 2027 con eficiencia con IA ([OKR](../../context/hechos/okrs-y-objetivos.md), [IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)). El 2 refleja ese avance parcial; no se deriva solo de la ausencia de aprobación | Estrategia de IA aprobada, con dueño y atada a resultados del negocio |
 | Datos e infraestructura | 2 provisional | Hay AWS en varias cuentas, Kubernetes, GitOps y observabilidad ([stack](../../context/hechos/stack-y-plataforma.md)). Existe inventario de datos con responsables, clasificación y calidad documentada; las fuentes están distribuidas entre sistemas ([inventario](../../context/hechos/inventario-y-distribucion-de-datos.md)). Falta contrastar cobertura, accesos, integración y gobierno operativo para los casos de IA | Reutilizar y completar el inventario existente; demostrar acceso común, gobierno y calidad adecuados a las fuentes elegibles |
 | Talento y cultura | 2 provisional | No hay programa de formación en IA por rol con seguimiento de finalización ([formación](../../context/hechos/formacion-ia-por-rol.md)). Hay uso de herramientas y experiencias de aprendizaje: el piloto de abril (n=12, autoseleccionado) incluyó cursos, con 17% de finalización ([piloto](../../context/hechos/encuesta-y-pilotos-ia.md)). La adopción del agente de código difiere entre áreas y está condicionada por los clientes ([uso de IA](../../context/hechos/uso-ia-interno.md)); no prueba por sí sola madurez cultural ni competencias | Programa por rol con seguimiento de finalización y aprendizaje aplicado; suplentes para roles críticos, sujetos al diagnóstico de capacidades |
-| Gobernanza y ética | 2 provisional | Política de uso de IA aprobada según el responsable del caso; faltan revisar la documentación de aprobación y el estado actual de la matriz de clientes, el inventario de casos, el registro de riesgos y la operación del Council ([gobierno](../../context/hechos/gobierno-y-politica-ia.md)). La certificación de seguridad de la organización no demuestra controles específicos de IA ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) | Aplicación de la política y gobierno operativo con inventario de casos, registro de riesgos, matriz y comité funcionando con evidencia |
+| Gobernanza y ética | 2 provisional | Política de uso de IA vigente, aprobada según el responsable del caso; el Directorio la ratifica al aprobar el plan y la preparación deja constancia de versión y alcance ([R-07](07-resoluciones.md#gobierno-y-seguridad)). La validación inicial revisa el estado de la matriz de clientes, el inventario de casos, el registro de riesgos y la operación del Council ([gobierno](../../context/hechos/gobierno-y-politica-ia.md)). La certificación de seguridad de la organización no demuestra controles específicos de IA ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) | Aplicación de la política y gobierno operativo con inventario de casos, registro de riesgos, matriz y comité funcionando con evidencia |
 | Adopción y valor | 1 en producto, 2 en interno, provisionales | No se documenta IA productiva en la oferta; el harness confirmado no se entrega ni comercializa a clientes ([oferta](../../context/hechos/ia-en-producto-y-oferta.md)). Hay herramientas de harness para el SDLC de uso exclusivamente interno, sin mediciones de tiempo, calidad o costo contra una línea de base para evaluar su impacto, según el responsable del caso ([uso interno](../../context/hechos/uso-ia-interno.md)) | Medir valor y calidad contra una base en los procesos internos; para producto, evidencia de una funcionalidad u oferta de IA con valor medido |
 
 No se promedian dimensiones ni frentes: en Adopción y valor se conserva la
 diferencia entre producto e interno. Las fuentes no permiten afirmar ausencia
-universal de toda medición: falta evidencia de valor incremental medido contra una base.
+universal de toda medición. Lo que no hay es valor incremental medido contra una
+base: es la premisa del pedido, que financia producir esa medición con rampa 0% en
+M1-M3 ([R-01](07-resoluciones.md#autoridad-y-liberaciones)).
 
 El harness del SDLC se clasifica en el frente interno. Su existencia no prueba
 por sí sola valor incremental ni eleva el puntaje de producto; otros casos de
@@ -91,21 +96,26 @@ supuesta diferencia con una conversación de dotación no está respaldada por
 ninguna fuente: no se afirma que el rango esté mal ni se explica la diferencia
 como hecho. Sin conciliación no se derivan las horas del
 [Anexo E](05-business-case.md) de los agregados; si cambian los insumos, se
-recalcula. Responsables (Talento, Operaciones, Finanzas, Seguridad): a designar.
+recalcula. La matriz la produce Personas con Operaciones y la verifica el CFO
+([R-24](07-resoluciones.md#personas)); las personas que ocupan cada rol se nombran
+en el acta de la primera liberación ([R-06](07-resoluciones.md#autoridad-y-liberaciones)).
 
 ### Validación inicial con autorización propia
 
 El [hito inicial](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial)
-resuelve el trabajo que necesita la validación: el Directorio o una autoridad
-formalmente delegada autoriza primero la preparación de 2026. Antes de iniciarla,
+resuelve el trabajo que necesita la validación: el Directorio libera la
+preparación de 2026 al aprobar el plan
+([R-02](07-resoluciones.md#autoridad-y-liberaciones)). Antes de iniciarla,
 Operaciones y los managers confirman sus agendas, trabajo desplazado e imputación
 presupuestaria. No se exige un diagnóstico ya validado para producir esa evidencia.
 
 Se proponen diez días hábiles, con 4-6 entrevistas de una hora a referentes de
 las funciones necesarias, contraste documental y una ronda de conciliación.
 El resultado es un diagnóstico revisado por dimensión, con fuentes, cambios de
-puntaje, brechas y faltantes explícitos. Las hipótesis pendientes se conservan;
-una incertidumbre que bloquee el alcance impide liberar esa actividad.
+puntaje, brechas y faltantes explícitos. Las hipótesis abiertas se conservan con
+su fuente; una incertidumbre que bloquee el alcance impide liberar esa actividad en
+la segunda liberación, que firma el CEO y decide reducir o detener
+([R-05](07-resoluciones.md#autoridad-y-liberaciones)).
 
 Son dos preparaciones distintas. La **técnica**, ya costeada, suma 20-40 h:
 12-24 h de viabilidad, extracción e historial del [Anexo B](02-arquitectura.md)
@@ -117,14 +127,16 @@ sin caja incremental, con el cierre documental incluido
 ([Anexo E](05-business-case.md), "Primera autorización").
 
 Los solapes de horas entre B, C y D que el costeo supone (DevOps, QA, seniors y
-Seguridad) los propone Finanzas y siguen sin ratificar por los responsables de
-esos anexos; la validación los confirma o los rechaza y, si no se sostienen, se
-vuelve a costear antes de M1. Son supuestos para el borrador, elegidos por
-Martín; falta el acuerdo del equipo y la autorización empresarial.
+Seguridad) los adopta el Directorio al aprobar el plan
+([R-26](07-resoluciones.md#finanzas)). La validación los comprueba: si las
+exportaciones no caben en el tope de DevOps se reportan como uso estimado, sin
+sumar horas, y si aun así no cabe, el CFO recostea antes de M1 dentro de 71 y firma
+el CEO.
 
-**Quién decide y cómo se sale.** El Directorio o una autoridad formalmente
-delegada autoriza la validación y, al cerrarla, decide en un acta continuar con
-el alcance validado, reducir/resecuenciar o detener. Si se detiene, la exposición
+**Quién decide y cómo se sale.** El Directorio libera la validación al aprobar el
+plan; al cerrarla, el CEO, por delegación del Directorio, decide en un acta
+continuar con el alcance validado, reducir/resecuenciar o detener
+([R-04 y R-05](07-resoluciones.md#autoridad-y-liberaciones)). Si se detiene, la exposición
 es el tiempo efectivamente trabajado, hasta 8k USD, y caja 0; la segunda
 liberación de hasta 71k USD no es automática ([Anexo F](06-roadmap-riesgo.md),
 "Validación inicial y dos liberaciones").
@@ -151,7 +163,9 @@ Siguiendo el método de diagnóstico de madurez (paso 6: dos o tres brechas crí
    fuentes elegibles, verificar su acceso e integración y producir la línea de
    base de productividad, incidentes y costo. Sin línea de base no hay gates
    ([Anexo B](02-arquitectura.md)).
-3. **Adopción y valor:** medir capacidad con calidad contra la base y, en el
+3. **Adopción y valor:** medir capacidad con calidad contra la base, sabiendo que
+   con una cohorte de 15-20 personas solo se distinguen mejoras grandes: el valor
+   se lee en el mes 9 ([R-19](07-resoluciones.md#arquitectura-y-medición)); en el
    producto, observar el problema del asistente de integración (tiempo a la
    primera integración exitosa) antes del mes 6. Sin problema, base y señal
    comercial escrita, no se construye ([Anexo F](06-roadmap-riesgo.md)).
@@ -164,7 +178,7 @@ tiene base sólida sin estrategia y datos confiables.
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
-| El puntaje refleja documentos y no la práctica | Alta | Medio | Contraste documental y 4-6 entrevistas focalizadas en el hito inicial, supuesto de alcance a ratificar | Si la validación mueve dos o más dimensiones, se rehace el orden de prioridades |
+| El puntaje refleja documentos y no la práctica | Alta | Medio | Contraste documental y 4-6 entrevistas focalizadas en la validación inicial, con el alcance de R-02 | Si la validación mueve dos o más dimensiones, se rehace el orden de prioridades |
 | El perímetro de personas mezcla poblaciones y fechas | Alta | Alto para la capacidad | Conciliar corte, nómina, contratistas, personas/FTE y horas por rol dentro de la primera liberación | Sin conciliación no se libera la ejecución de M1-M3 |
 | Las cifras del caso son estimadas y no están validadas contra fuentes internas | Alta | Alto | Validar las fuentes que sostienen cada puntaje | Sin validación, el diagnóstico se presenta como hipótesis y no como hecho |
 | La telemetría solo mide el agente de código y subestima el uso en staff | Alta | Medio | Medir chat y Workspace en los meses 1-3 ([Anexo D](04-personas-cultura.md)) | — |
@@ -181,15 +195,18 @@ tiene base sólida sin estrategia y datos confiables.
   subpuntajes de talento solo de la telemetría de adopción. Reversible.
 - **Financiar la validación antes de liberar M1-M3:** el primer hito confirma o
   corrige los puntajes con evidencia y conserva los faltantes como hipótesis.
-  Quien produce, quien verifica y quien firma: personas distintas, a designar.
+  Quien produce, quien verifica y quien firma: roles distintos, fijados en
+  [R-06](07-resoluciones.md#autoridad-y-liberaciones); las personas se nombran en
+  el acta de la primera liberación.
   Éxito: puntajes revisados con trazabilidad y alcance ejecutable; si una brecha
   bloquea el alcance, se reduce/resecuencia o se detiene, sin liberación automática.
 
 ## Cautelas
 
 - Es un diagnóstico de escritorio, sin entrevistas: se toma como hipótesis.
-- La aprobación de la política fue informada por el responsable del caso;
-  versión, fecha, autoridad y respaldo documental siguen por revisar.
+- La aprobación de la política fue informada por el responsable del caso; el
+  respaldo documental es el acta de aprobación del plan, que la ratifica (R-07), y
+  la preparación deja constancia de versión y alcance.
 - Los niveles 2 y 4 no están descritos en el método; el 2 se usa como intermedio.
 - Las cifras de este anexo son estimadas y se validan contra fuentes internas
   durante la validación autorizada, antes de liberar la ejecución de M1-M3.
