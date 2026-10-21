@@ -8,6 +8,7 @@ sources:
     resource: Memoria-Contexto-Harness.pdf
     title: Data Management en Soluciones de Gen IA, 16 páginas
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
+status: draft
 ---
 
 # Los cinco elementos (p. 16)
@@ -37,5 +38,12 @@ La tabla de relación es una lectura del repo sobre las
 [diez fallas](/conceptos/harness-diez-fallas-contexto.md); el PDF no la presenta así.
 El gate se conecta con los [release gates](/conceptos/m2u4-versionado-release-gates.md)
 y con la escala de autonomía de [M1U4](/unidades/m1u4-rol-gobernanza.md).
+
+# Cautelas
+
+Cotejada contra el PDF, p. 16: el título, la frase "El sistema alrededor del modelo.
+No es el chat." y los cinco elementos con su texto. La tabla de relación con las
+fallas y los vínculos con los release gates y con M1U4 son lectura del repo, no del
+curso. El PDF no numera los elementos como pasos ni los ordena por prioridad.
 
 [^harness]: Data Management en Soluciones de Gen IA (Memoria-Contexto-Harness.pdf), p. 16.

@@ -14,6 +14,7 @@ sources:
     resource: https://platform.claude.com/docs/en/build-with-claude/prompt-caching
     title: Anthropic, documentación de prompt caching (consultada 2026-10-11)
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
+status: draft
 ---
 
 # Qué es un token
@@ -66,6 +67,16 @@ hasta un 60-80% sin pérdida perceptible de calidad", sin fuente.[^m2u4]
 **Cómo usarlo:** el 60-80% sigue sin fuente y no va en una slide. Si el plan necesita
 una cifra, se calcula con la tarifa vigente del proveedor elegido y el patrón de uso
 real, como supuesto marcado, o se cita el mecanismo (caché, ruteo) sin porcentaje.
+
+# Cautelas
+
+Cotejada contra las slides 11 a 15: coinciden la definición de token (¾ de palabra en
+inglés), los dos tipos de token, los tres costos, las tres palancas y la frase del
+60-80%, que en la slide no trae fuente. Las dos fuentes externas se abrieron el
+2026-10-20: el resumen de FrugalGPT dice "up to 98% cost reduction" y la página de
+prompt caching de Anthropic da los multiplicadores citados (lectura 0,1; 0,05 en Opus
+5.5 y Sonnet 5.5; 0,025 en Fable 5.1; escritura de 5 minutos 1,25). Los precios
+cambian: reverificar antes de usarlos.
 
 [^m2u4]: M2U4 (Unidad 8), slides 11-15.
 [^frugalgpt]: Chen, Zaharia y Zou, FrugalGPT, resumen en arXiv: https://arxiv.org/abs/2305.05176

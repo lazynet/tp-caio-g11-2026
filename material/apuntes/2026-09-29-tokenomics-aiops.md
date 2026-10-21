@@ -9,6 +9,7 @@ sources:
     title: Notas de la clase del 2026-09-29
     author: human:lazynet
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:10:00Z }
+status: draft
 ---
 
 # Unidad que respalda
@@ -39,7 +40,7 @@ evaluación).[^apunte-0929]
 - Router con un modelo liviano y uno potente: el costo de un caso bajó de 360 a 7
   dólares.[^apunte-0929]
 - Clasificación de ironía y urgencia en tickets: el modelo clasificó con alta
-  confianza y mejor que el humano.[^apunte-0929]
+  confianza, a diferencia del humano (así lo dice la nota).[^apunte-0929]
 
 # Cautelas
 
@@ -47,6 +48,11 @@ evaluación).[^apunte-0929]
   cerca del 98%. Una de las dos cifras está mal anotada; no usar ninguna en
   slides sin la fuente.
 - "Hasta un 50%" de baja de costos de los modelos nuevos: sin fuente primaria.
+- La nota de LazyMind es un resumen automático (wrapup) de la sesión grabada, con la
+  transcripción vacía; no son apuntes escritos a mano. Cotejada el 2026-10-20: cada
+  idea de la ficha figura en el resumen, pero no hay transcripción contra la cual
+  verificar el resumen mismo. La nota dice "PromptFu"; la ficha lo normaliza a
+  PromptFoo por inferencia. Nombra además el modelo liviano de la demo; la ficha no.
 - "mtoc" en la nota original es casi seguro un error de transcripción de MTok
   (millones de tokens); no se verificó.
 

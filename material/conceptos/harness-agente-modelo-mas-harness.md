@@ -8,6 +8,7 @@ sources:
     resource: Memoria-Contexto-Harness.pdf
     title: Data Management en Soluciones de Gen IA, 16 páginas
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:05:00Z }
+status: draft
 ---
 
 # Definición
@@ -37,5 +38,11 @@ Las [diez fallas de contexto](/conceptos/harness-diez-fallas-contexto.md) se res
 en el harness: presupuesto de working set, ledger, memoria versionada y gates. Para
 dónde se construye hoy, ver [las tres capas](/conceptos/harness-tres-capas.md); para
 los cinco elementos de diseño, [este concepto](/conceptos/harness-cinco-elementos-diseno.md).
+
+# Cautelas
+
+Cotejada contra el PDF, p. 14 (definición, metáfora y siete componentes) y p. 15
+(fórmula Agente = Modelo + Harness). El párrafo "Por qué importa" es una lectura
+del repo que enlaza con las demás fichas; el PDF no lo plantea así.
 
 [^harness]: Data Management en Soluciones de Gen IA (Memoria-Contexto-Harness.pdf), p. 14-15.
