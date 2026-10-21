@@ -6,7 +6,8 @@ tags: [m1, datos, caso, sinteticos]
 sources:
   - id: m1u3
     resource: Modulo 1 Unidad 3.pdf
-    title: M1U3, documento de 14 páginas
+    title: M1U3, documento de 13 páginas
+status: draft
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -45,5 +46,20 @@ Conceptos: [data moat y sintéticos](/conceptos/m1u3-data-moat-datos-sinteticos.
 [higiene de datos](/conceptos/m1u3-higiene-de-datos.md).
 
 Unidad: [M1U3](/unidades/m1u3-datos-contexto.md).
+
+# Cautelas
+
+* Cotejada contra M1U3, p. 8-11 (PDF de 13 páginas): los seis pasos, el YAML, los
+  parámetros y las cifras coinciden con el texto.
+* El gráfico de la p. 9 contradice al texto de la p. 11. El texto dice 10.000 tickets
+  "balanceados (2.000 por categoría)" y "sin PII". El gráfico muestra una distribución
+  de 35,1 / 24,2 / 17,9 / 13,6 / 9,2 % por categoría y una "reducción de 89% en datos
+  PII", no una eliminación total. No usar "balanceado" ni "sin PII" sin resolver esa
+  diferencia.
+* Gretel en BigQuery (octubre de 2024) y BigQuery DataFrames con LLMs (2024) se
+  cotejaron con los blogs de Google Cloud citados en la p. 12: fechas y existencia
+  coinciden (8-oct-2024 y 11-jun-2024). El blog de Gretel menciona privacidad
+  diferencial pero no ε ni garantiza el paso 4 sobre la salida de `ML.GENERATE_TEXT`.
+  Gemini en BigQuery (febrero de 2025) no se cotejó.
 
 [^m1u3]: M1U3, Tema 7 y ejemplo aplicado (p. 8-11)

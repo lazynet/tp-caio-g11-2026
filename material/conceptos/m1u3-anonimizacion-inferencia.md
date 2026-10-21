@@ -6,7 +6,8 @@ tags: [m1, datos, seguridad, privacidad, pii]
 sources:
   - id: m1u3
     resource: Modulo 1 Unidad 3.pdf
-    title: M1U3, documento de 14 páginas
+    title: M1U3, documento de 13 páginas
+status: draft
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -56,5 +57,13 @@ Es el soporte técnico de la sección de seguridad. Complementa el DLP de
 para compartir datos sin PII: [datos sintéticos](/conceptos/m1u3-data-moat-datos-sinteticos.md).
 
 Unidad: [M1U3](/unidades/m1u3-datos-contexto.md).
+
+# Cautelas
+
+* Cotejada contra M1U3, p. 2, 6 y 12 (PDF de 13 páginas): fiel. Las tres herramientas
+  (PIIvot, PrivacyShield, Clandestinio) son atribuciones del curso: la lista de
+  fuentes web (p. 12) deja sus URLs, y la de "Data Contracts in Action", en blanco.
+* La reversión de la anonimización en la respuesta se describe como pasos del patrón y
+  como algo que implementa PrivacyShield; el curso no da criterios de cuándo conviene.
 
 [^m1u3]: M1U3, Tema 4 (p. 6), conceptos clave (p. 2) y fuentes web (p. 12)

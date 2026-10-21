@@ -6,7 +6,8 @@ tags: [m1, datos, calidad, gobierno]
 sources:
   - id: m1u3
     resource: Modulo 1 Unidad 3.pdf
-    title: M1U3, documento de 14 páginas
+    title: M1U3, documento de 13 páginas
+status: draft
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -59,7 +60,7 @@ models:
       prioridad: {type: string, enum: [alta, media, baja]}
 ```
 
-El contrato se usa dos veces: para guiar la generación y para validar el resultado
+El contrato define el esquema del dataset (paso 1) y, al final, valida el resultado
 (tipos, enum de `categoria`, largo de `descripcion`, unicidad de `id`). Ver el
 [caso completo](/conceptos/m1u3-caso-tickets-sinteticos.md).
 
@@ -70,5 +71,13 @@ El contrato se usa dos veces: para guiar la generación y para validar el result
   [requisitos de M1U4](/conceptos/m1u4-demo-a-produccion.md).
 
 Unidad: [M1U3](/unidades/m1u3-datos-contexto.md).
+
+# Cautelas
+
+* Cotejada contra M1U3, p. 2, 5, 6 y 10 (PDF de 13 páginas). Se corrigió una
+  inferencia: el curso no dice que el contrato "guíe" la generación; el prompt incluye
+  el esquema (p. 10) y el contrato se usa para validar (p. 11).
+* Las herramientas (Data Contract CLI, Datahub, Data Mesh Manager) son atribuciones del
+  curso; la fuente "Data Contracts in Action" no trae URL (p. 12).
 
 [^m1u3]: M1U3, Tema 3 (p. 5-6), conceptos clave (p. 2) y ejemplo aplicado (p. 10)

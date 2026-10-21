@@ -10,6 +10,7 @@ sources:
   - id: m1u4-slides
     resource: Presentacion - Módulo 1 — Unidad 4 — Rol del CAIO, gobernanza y arquitectura organizacional v3.pdf
     title: M1U4, slides v3 (24 slides)
+status: draft
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-12T01:00:00Z }
 ---
 
@@ -74,8 +75,9 @@ Sistemas: A resume Zoom calls; B sugiere una respuesta a un cliente; C envía em
 automáticamente; D emite refunds hasta USD 100; E tiene escritura sobre el ERP
 financiero. Se pide dónde aparece el primer salto cualitativo y qué vuelve más
 riesgosos los siguientes, usando las cuatro variables. "No hay frontera universal"
-(p. 15, slide 19).[^m1u4-lectura] Por la escala L0-L4, el salto de L1-L2 (A, B) a L3-L4
-(C en adelante) es donde el agente pasa a actuar.
+(p. 15; la slide 19 solo plantea el ejercicio).[^m1u4-lectura] Lectura de esta ficha,
+no del curso: por la escala L0-L4, A resume (L0) y B sugiere (L1); desde C el agente
+actúa y el salto de governance empieza ahí.
 
 # Relación con el plan
 
@@ -83,6 +85,18 @@ Respalda el risk-adjusted roadmap y la sección de seguridad. Para el control co
 que implementa estos límites ver el [Governance Stack](/conceptos/m1u4-governance-stack.md);
 para el red teaming y DLP, [M3U1](/unidades/m3u1-seguridad.md). Unidad:
 [M1U4](/unidades/m1u4-rol-gobernanza.md).
+
+# Cautelas
+
+* Cotejada el 2026-10-20 contra M1U4 lectura, p. 14-15 y 25, y slides v3, slides 17-19.
+  Cuatro preguntas, blast radius, lista de oversight y comparación de la slide 18
+  coinciden. Se corrigió la cita de "no hay frontera universal": es solo de la lectura,
+  p. 15. La clasificación de A-E en L0-L4 es de esta ficha, no del curso.
+* El 93% de permission prompts y el análisis de "millones de interacciones" son citas
+  del curso a publicaciones de Anthropic (2026) que la p. 25 lista solo por título y
+  fecha, sin URL. Una búsqueda web del 2026-10-20 solo halló cobertura secundaria que
+  repite el 93%; no se abrió el texto de Anthropic. Atribución del curso, sin cotejo
+  primario: no va a una slide como dato.
 
 [^m1u4-lectura]: M1U4, lectura, secciones 6.2 a 6.4 y ejercicio 5 (p. 14-15, 25)
 [^m1u4-slides]: M1U4, slides 17, 18 y 19
