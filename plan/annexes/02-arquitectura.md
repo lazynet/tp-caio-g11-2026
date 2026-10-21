@@ -24,9 +24,13 @@ bancos y fintechs y la IA en su operación interna, es la **dirección de
 diseño**: los meses 4-12 no se autorizan hoy, se liberan decisión por decisión (ver
 «Pedido vigente (parte técnica)»). Hoy no hay IA en producción dentro de lo que se vende
 ([fuente](../../context/hechos/ia-en-producto-y-oferta.md)), así que el primer
-tramo configura herramientas existentes y mide. El frente producto es un tramo condicional: en el
-escenario base está diferido, y entra en los meses 7-9 solo si la lectura del mes 6 trae
-una señal de cliente ([Anexo E](05-business-case.md)).
+tramo configura herramientas existentes y mide. El frente producto pertenece
+a la alternativa ampliada: su secuencia de los meses 7-9 exige plataforma
+liberada en el mes 3, señal de cliente en el mes 6 y otra decisión y costeo.
+El mínimo y su continuación no financian construir producto
+([Anexo E](05-business-case.md), «Continuación condicional»). Sin plataforma,
+la señal no basta para prometer ese piloto: rige la ruta diferida de
+«Bifurcación en el mes 3: con señal y sin señal», sin fecha garantizada.
 
 El responsable empresarial de cada hito está **a designar**. Las cifras
 económicas del anexo son insumos para Finanzas; el [Anexo E](05-business-case.md)
@@ -260,11 +264,19 @@ se informa siempre aparte.
 
 ### Métricas técnicas (las sostiene este anexo; Finanzas las consume)
 
+**Alcance de la tabla.** El piloto de producto, el caso de referencia interno,
+la cobertura de precio y los proveedores detrás del gateway son objetivos de
+la **alternativa con plataforma liberada**, no resultados financiados por el mínimo.
+
+Requieren las decisiones y capacidades de la ruta «Bifurcación en el mes 3»;
+el producto exige además señal y otra decisión y costeo. Las demás filas son
+indicadores y metas de referencia, no mejoras demostradas ni garantizadas por el mínimo.
+
 | Métrica | Hoy | Esperado a 12 meses | Fuente |
 |---|---|---|---|
-| Funcionalidades de IA en producción en lo vendido | 0 | Si la lectura del mes 6 libera el producto: 1 piloto acotado evaluado con gate scale/kill (meses 7-12). Si no: 0, por diseño | [Fuente](../../context/hechos/ia-en-producto-y-oferta.md) |
+| Funcionalidades de IA en producción en lo vendido | 0 | Alternativa ampliada: con plataforma liberada en el mes 3, señal en el mes 6 y otra decisión y costeo: 1 piloto acotado evaluado con gate scale/kill (meses 7-12). Si no: 0, por diseño | [Fuente](../../context/hechos/ia-en-producto-y-oferta.md); ruta «Bifurcación en el mes 3» |
 | Caso de referencia interno en uso | 0 | En nivel 2 (prepara, no ejecuta) para Tecnología y Operaciones, con su protocolo de evaluación aprobado | Este anexo |
-| Cobertura de precio del gateway (*fc* × *s*) | Sin medir | Medida en la lectura del mes 6 contra el umbral del Anexo E a 6× | Prueba de portabilidad y costo |
+| Cobertura de precio del gateway (*fc* × *s*) | Sin medir | Medida en la lectura del mes 6 contra el umbral del Anexo E a 6×, solo si la decisión del mes 3 libera la plataforma; sin ella, se difiere y no se afirma la palanca | Prueba de portabilidad y costo; «Insumos para el deck», mensaje al CFO |
 | Cobertura de la telemetría de IA | Solo agente de código | Chat, terminal y Workspace, por persona activa y por resultado | [Fuente](../../context/hechos/uso-ia-interno.md) |
 | Personas con IA activa por semana | ~1 de 3 (org), ~7 de 10 (Tecnología), ~1 de 10 (Operaciones) | Tecnología ≥ 80% desde los meses 4-6 y ≥ 85% en los meses 10-12; Operaciones habilitadas, aparte. El 80% combinado del OKR no se alcanza: se informa su valor real ([Anexo D](04-personas-cultura.md), decisión sobre la meta de adopción y el OKR combinado) | [OKR borrador](../../context/hechos/okrs-y-objetivos.md), [Anexo D](04-personas-cultura.md) |
 | Throughput por desarrollador (PR aceptados por persona activa, ver definición) | Base prospectiva congelada en las semanas 1-4 del plan; serie retrospectiva de la preparación previa solo para tendencia y ruido | +10% a +25% en equipos propios, leído como tendencia con intervalo | [Supuesto](../../context/supuestos/ganancia-de-productividad.md) |
@@ -522,6 +534,14 @@ comprobarse también para el producto.
 ## Riesgos y mitigación
 
 Probabilidad e impacto son juicio cualitativo (alta/media/baja), no medición.
+
+**Alcance de las mitigaciones.** Las que dependen de gateway, harness central,
+caso de referencia, piloto o contractor corresponden a la **alternativa ampliada**,
+sujeta a liberación de plataforma y, para producto, otra decisión y costeo.
+
+El mínimo no compra esas capacidades. Para los usos existentes exige los
+controles aplicables y compensatorios probados de C descritos en «Paquete
+técnico mínimo»; la ruta sin plataforma se detalla en «Bifurcación en el mes 3».
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
