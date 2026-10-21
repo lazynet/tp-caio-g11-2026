@@ -460,15 +460,20 @@ ocho responsables y el formato de entrega.
 Las decisiones que estaban abiertas en las revisiones de sección (#11–#14 y
 #16–#20) las tomó Martín como responsable del caso, el 21/10, para llegar al peer
 review. El Directorio las sintetiza en el [Anexo G](plan/annexes/07-resoluciones.md)
-(R-01 a R-32) y entran con [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52).
+(R-01 a R-32), integradas con [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52).
+Los nueve issues asociados quedaron cerrados.
 No son ratificaciones de cada responsable: si no estás de acuerdo con una,
 objetala en el PR o en su issue.
 
+Los 15 supuestos modificados quedaron revalidados por instrucción expresa de
+Martín el 21/10/2026, con alcance actualizado y conservando su tipo `Supuesto`.
+Se corrió `scripts/rebase-findings.py`; el catálogo quedó reanclado.
+Los PR [#50](https://github.com/lazynet/tp-caio-g11-2026/pull/50) y
+[#53](https://github.com/lazynet/tp-caio-g11-2026/pull/53) incorporaron 18 fichas de
+material como borradores: su incorporación no declara verificación humana.
+
 Para habilitar la entrega falta:
 
-- **Re-verificar 15 supuestos** de `context/supuestos/` que cambiaron y quedaron
-  en `draft`. La verificación es una declaración humana; después de editarlos,
-  corré `python3 scripts/rebase-findings.py .` y recién ahí el gate de entrega.
 - **Material faltante:** EUR-Lex 2026/1744 y M3U4, que bloquean `material/huecos.md`.
   Se sigue en [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22).
 - **Defensa:** acordar quién presenta cada slide (hay una propuesta en
