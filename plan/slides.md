@@ -309,7 +309,7 @@ section .alts table td, section .alts table td:first-child { padding: 6px 12px; 
 
 - **Formación:** básica para todos; intermedia para un grupo de 15-20.
 - **Por qué casos por rol:** en el piloto de abril de 2026 (12 voluntarios), el 92% usó la herramienta 3 o más días por semana y el índice de recomendación (NPS) dio +42, pero solo 2 de 12 (17%) terminaron los cursos. El freno fue el tiempo: formamos con casos reales, en horario laboral.
-- **Metas de uso, propuestas:** Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones ≥60% en el 12 entre quienes tengan uso permitido, solo si el punto de decisión del mes 6 autoriza el programa ampliado. Juntas no llegan al 80% del borrador de objetivos 2027: lo informamos aparte.
+- **Metas de uso, propuestas:** Tecnología ≥80% en el mes 6 y ≥85% en el 12; Operaciones ≥60% en el 12 entre quienes tengan uso permitido, solo si el punto de decisión del mes 6 autoriza el programa ampliado. Juntas no llegan al 80% del borrador de objetivos 2027: la brecha es contractual, y el Directorio decide en el mes 3 si revisa el objetivo.
 
 </div>
 </div>
