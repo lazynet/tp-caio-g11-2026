@@ -8,6 +8,11 @@ sources:
     resource: Módulo 1 — Unidad 2 — Portfolio, priorización y ejecución de los 100 días.pdf
     title: "M1U2, pp. 2-4"
 generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-11T23:30:00Z }
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-22
+  scope: "M1U2 (PDF), pp. 2-4: proceso, cuadrantes factibilidad-impacto y quick wins, cotejados contra el texto. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 # Proceso
 
