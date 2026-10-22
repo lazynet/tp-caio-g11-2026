@@ -493,6 +493,99 @@
           "sha256": "64e9a2b8cd8af88f76c94facddfb12225c2027a6aa3ec5aa8d2b9e2029fbeb7e"
         }
       }
+    },
+    {
+      "path": "material/apuntes/2026-08-18-portfolio-100-dias.md",
+      "line": 69,
+      "text": "100 días y la matriz son el esqueleto natural del primer tramo del roadmap, y el",
+      "sha256": "9346be8fa54e7b9380ab2cdbe763bd1c3591d946461ebe97820ee209a473b1d9",
+      "category": "historical_uncertainty",
+      "blocking": false,
+      "reason": "El apunte histórico usa esqueleto como metáfora de estructura y declara que es una lectura propia, sin consignas explícitas del TIF. No describe un entregable incompleto ni acredita un resultado del caso; las fuentes conservan su estado documental.",
+      "basis": {
+        "record": {
+          "path": "material/apuntes/2026-08-18-portfolio-100-dias.md",
+          "line": 66,
+          "text": "# Pistas para el TIF y la defensa\n\nEl apunte no registra consignas explícitas del TIF. Lectura nuestra: el plan de\n100 días y la matriz son el esqueleto natural del primer tramo del roadmap, y el\nquick win es el argumento para ganar capital político ante el board.",
+          "sha256": "9346be8fa54e7b9380ab2cdbe763bd1c3591d946461ebe97820ee209a473b1d9"
+        },
+        "limit": {
+          "path": "material/apuntes/2026-08-18-portfolio-100-dias.md",
+          "line": 68,
+          "text": "El apunte no registra consignas explícitas del TIF. Lectura nuestra: el plan de\n100 días y la matriz son el esqueleto natural del primer tramo del roadmap, y el\nquick win es el argumento para ganar capital político ante el board.",
+          "sha256": "9346be8fa54e7b9380ab2cdbe763bd1c3591d946461ebe97820ee209a473b1d9"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/02-arquitectura.md",
+      "line": 1044,
+      "text": "| Usuario y tarea | Un equipo interno con un error pendiente real de su backlog. Su referente define antes el comportamiento esperado; un integrante de la cohorte usa el agente actual para preparar la corrección y las pruebas de regresión, con datos sintéticos o autorizados y sin código de clientes |",
+      "sha256": "40312f251d3bc7d3d4db1b9c49105bd1a40bf697ee5f6d5367fb9e80ebda70d7",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "Pendiente califica el error del backlog que deberá seleccionarse, no un resultado ya prometido. El candidato declara que aún no existe una tarea elegida y solo sustituye actividad costeada si Tecnología verifica elegibilidad y capacidad; sin esas condiciones se retira de M3, sin una compuerta financiera nueva.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 1026,
+          "text": "**Candidato, no aprobado por la empresa ni resultado observado.** Se propone\nconcretar una tarea de la prueba operativa ya costeada; no crear otro proyecto.\nNo consta todavía un error elegible, un usuario que lo priorice ni agenda liberada.",
+          "sha256": "40312f251d3bc7d3d4db1b9c49105bd1a40bf697ee5f6d5367fb9e80ebda70d7"
+        },
+        "authority": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 1052,
+          "text": "**Responsable:** Responsable de Tecnología, con el referente usuario y un revisor\ndistinto del autor; las personas se nombran conforme a R-06. La observación de",
+          "sha256": "40312f251d3bc7d3d4db1b9c49105bd1a40bf697ee5f6d5367fb9e80ebda70d7"
+        },
+        "decision": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 1047,
+          "text": "| Ventana condicionada | Camino con base hasta semana 8: usar la ventana restante de M3, semanas 9-13, después de aprobar la formación aplicable y verificar los controles. No se promete que formación, tarea e integración entren en esa ventana; si no caben, no se anticipa la intervención ni se recorta la formación |",
+          "sha256": "40312f251d3bc7d3d4db1b9c49105bd1a40bf697ee5f6d5367fb9e80ebda70d7"
+        },
+        "consequence": {
+          "path": "plan/annexes/02-arquitectura.md",
+          "line": 1050,
+          "text": "| Corte o diferimiento | Sin tarea útil elegible, formación aprobada, permisos, revisor, agenda o integración viable en esa ventana: retirar el candidato de M3. Sin aceptación o con falla de calidad/seguridad, no integrar y aplicar las reglas vigentes. Puede reevaluarse en M4 solo si se autoriza la continuidad y cabe en su capacidad; no se financia automáticamente |",
+          "sha256": "40312f251d3bc7d3d4db1b9c49105bd1a40bf697ee5f6d5367fb9e80ebda70d7"
+        }
+      }
+    },
+    {
+      "path": "plan/slides.md",
+      "line": 109,
+      "text": "| IA en pagos | Nueva función de producto | Habilitación externa y seguridad pendientes | Postergar |",
+      "sha256": "24ef4a6cc1fb071a1acf34f6481e09a5bd143401e9b881cbc09f7c60a0d9a8f4",
+      "category": "future_decision",
+      "blocking": false,
+      "reason": "La matriz posterga una alternativa de producto fuera del alcance autorizado. Sus habilitaciones no se declaran realizadas ni son un requisito incumplido para ejecutar el mínimo; reactivarla exige decisión y estimación común del Directorio, con agendas y repositorios habilitados.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/07-resoluciones.md",
+          "line": 540,
+          "text": "- **R-28 · Alcances no pedidos.** El paquete completo (33+6 / 72+7), su preparación,\n  la referencia anual del Anexo C y las alternativas de menor alcance ampliadas\n  quedan como antecedente: no se autorizan ni se suman al pedido. Los costos\n  publicados de alcances distintos (47 / 161 / ≈199 / 394 / ≈400 / 471) son\n  referencia, no comparación.",
+          "sha256": "64e9a2b8cd8af88f76c94facddfb12225c2027a6aa3ec5aa8d2b9e2029fbeb7e"
+        },
+        "authority": {
+          "path": "plan/annexes/07-resoluciones.md",
+          "line": 545,
+          "text": "  *Autoridad:* Directorio; si un gate propone ampliar o usar un renglón anual, el\n  CFO presenta antes una estimación común desde ese gate (gasto futuro evitable,\n  sin costos hundidos) y decide el Directorio. *Hito:* el gate que proponga ampliar.",
+          "sha256": "64e9a2b8cd8af88f76c94facddfb12225c2027a6aa3ec5aa8d2b9e2029fbeb7e"
+        },
+        "decision": {
+          "path": "plan/annexes/07-resoluciones.md",
+          "line": 547,
+          "text": "  sin costos hundidos) y decide el Directorio. *Hito:* el gate que proponga ampliar.",
+          "sha256": "64e9a2b8cd8af88f76c94facddfb12225c2027a6aa3ec5aa8d2b9e2029fbeb7e"
+        },
+        "consequence": {
+          "path": "plan/annexes/07-resoluciones.md",
+          "line": 548,
+          "text": "  *Si no se cumple:* sin estimación común no hay decisión de ampliación; una\n  alternativa reactivada no se ejecuta sin champions y agendas confirmados por\n  Personas y repositorios habilitados por el Responsable de seguridad.",
+          "sha256": "64e9a2b8cd8af88f76c94facddfb12225c2027a6aa3ec5aa8d2b9e2029fbeb7e"
+        }
+      }
     }
   ]
 }

@@ -82,7 +82,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 </div>
 </div>
 
-<p class="note">Diagnóstico de escritorio y rangos anonimizados, sujetos a validación. El objetivo es competitividad; la mejora todavía debe demostrarse.</p>
+<p class="note">Diagnóstico de madurez en cinco dimensiones, de escritorio y a validar. La mejora todavía debe demostrarse.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -96,24 +96,26 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 ---
 
-<p class="eyebrow">Propuesta integrada</p>
+<p class="eyebrow">Priorización de iniciativas</p>
 
-# Una prueba acotada antes de ampliar
+# Elegimos impacto viable con riesgo acotado
 
-<p class="lead">El paquete mínimo combina formación aplicada, controles y medición con las herramientas actuales.</p>
+<div class="roadmap">
 
-<div class="steps">
-<div><div class="month">Meses 1–3</div><h3>Preparar</h3><p>Congelar la base, probar controles y formar al equipo.</p></div>
-<div><div class="month">Meses 4–6</div><h3>Validar</h3><p>Seguir el uso y estudiar el problema de integración.</p></div>
-<div><div class="month">Meses 7–9</div><h3>Contrastar</h3><p>Leer valor con calidad y decidir continuidad.</p></div>
-<div><div class="month">Meses 10–12</div><h3>Consolidar</h3><p>Evaluar resultados y decidir el año siguiente.</p></div>
+| Iniciativa | Impacto buscado | Factibilidad y riesgo | Prioridad |
+|---|---|---|---|
+| Prueba operativa | Capacidad con calidad | Herramientas existentes; controles por probar | **Probar** |
+| Asistente de integración | Mejor soporte al cliente | Documentación propia; falta validar problema y señal | **Estudiar**, sin construir |
+| IA en pagos | Nueva función de producto | Habilitación externa y seguridad pendientes | Postergar |
+| Servicio de agentes | Nueva oferta | Faltan certificaciones; compite con entregas | Postergar |
+
 </div>
 
-<p class="note">Antes de M1: validación propia en 2026. La construcción del producto y la plataforma requieren nuevo costeo y otra aprobación del Directorio.</p>
+<p class="note">Matriz factibilidad–impacto y RICE ajustado por riesgo. Puntajes de producto hipotéticos, a validar; operación sin puntaje nuevo.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
-<span class="body">Elegir el mínimo para producir evidencia antes de expandir.</span>
+<span class="body">Elegir el mínimo y un estudio acotado. Construir producto requiere otra decisión.</span>
 <span class="ref">
 
 [Anexo F](annexes/06-roadmap-riesgo.md) · [Anexo G](annexes/07-resoluciones.md)
@@ -129,9 +131,9 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 <div class="grid g2">
 <div class="card dark">
-<h3>Operación: un cambio de código</h3>
-<p><strong>Ejemplo de tarea, a validar:</strong> preparar una corrección y sus pruebas con IA sobre código elegible. Una persona revisa y acepta el cambio.</p>
-<p><strong>Medimos:</strong> cambios aceptados contra la base, en agregados por área y semana, con retrabajo e incidentes como guardia de calidad.</p>
+<h3>Operación: corrección útil</h3>
+<p><strong>Candidato a quick win:</strong> corregir con IA un defecto real de código propio usado. Regresión que falla antes y pasa después, revisión de otra persona, CI y aceptación del usuario.</p>
+<p><strong>Resultado propuesto:</strong> corrección integrada y en uso real dentro de la prueba de M3, tras base, formación y controles. Sin capacidad confirmada, se retira de M3.</p>
 </div>
 <div class="card">
 <h3>Oferta: asistente de integración</h3>
@@ -140,7 +142,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 </div>
 </div>
 
-<p class="note">El mínimo financia la prueba operativa y el estudio de integración. El asistente usa documentación propia y datos sintéticos; construirlo requiere otra autorización. Mejor documentación o soporte pueden reemplazarlo.</p>
+<p class="note">Candidato no aprobado ni observado: sustituye una tarea de la prueba costeada, sin horas nuevas ni productividad o ROI demostrados. El asistente usa documentación propia y datos sintéticos; mejor documentación o soporte pueden reemplazarlo.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -158,7 +160,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 # Empezamos con las herramientas actuales
 
-<p class="lead">Cada lugar donde se usa IA debe demostrar sus controles: editor, agente de código, chat y suite de oficina.</p>
+<p class="lead">Build / buy / agentificar: primero configuramos lo existente y probamos controles por herramienta.</p>
 
 <div class="grid g3">
 <div class="card dark">
@@ -179,7 +181,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 <div class="decision">
 <span class="pill">Decisión reversible</span>
-<span class="body">Configurar lo existente. Plataforma y modelo propio quedan para otra decisión.</span>
+<span class="body">Configurar lo existente. Nueva agentificación, plataforma y modelo propio: otra decisión.</span>
 <span class="ref">
 
 [Anexo B](annexes/02-arquitectura.md) · [Anexo G](annexes/07-resoluciones.md)
@@ -195,7 +197,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 <div class="grid g2">
 <div class="card dark">
-<h3>Aprender en el trabajo</h3>
+<h3>AI literacy por rol</h3>
 <p>Formación básica para toda la organización e intermedia para la cohorte de prueba. Casos por rol, en horario laboral.</p>
 <p><strong>Meta M3:</strong> al menos 90% aprueba el básico con un caso práctico.</p>
 </div>
@@ -241,9 +243,9 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 </div>
 </div>
 
-<p style="font-size:25px;margin-top:24px"><strong>Límite del plan:</strong> sin crédito ni scoring con IA durante 12 meses. En producto, la IA prepara y una persona decide y ejecuta.</p>
+<p style="font-size:25px;margin-top:24px"><strong>Human-in-the-loop:</strong> en producto, tope de autonomía 2: la IA prepara; la persona decide y ejecuta.</p>
 
-<p class="note">Código y datos de clientes: excluidos de modelos externos, salvo en su entorno y con permiso escrito. Al aprobar se suspende código bajo NDA; la transición del uso existente rige completa en el Anexo G.</p>
+<p class="note">Sin crédito ni scoring con IA por 12 meses. Código y datos de clientes: fuera de modelos externos, salvo en su entorno y con permiso escrito. Código bajo NDA: se suspende al aprobar; transición completa en G.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -257,7 +259,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 ---
 
-<p class="eyebrow">Roadmap técnico, financiero y cultural</p>
+<p class="eyebrow">Roadmap integrado · Kill/scale gates</p>
 
 # Cada etapa necesita una nueva firma
 
@@ -267,13 +269,13 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 |---|---|---|---|---|
 | Trabajo | Base, controles y formación | Medición y estudio de integración | Lectura de valor y seguimiento de uso | Evaluación y traspaso |
 | Compuerta | Base y controles probados | Adopción, costo y controles; no lee valor | Piso del intervalo >0 y sin daño | Decidir continuidad y año 2 |
-| Techo, k USD | **79 acumulados**, con preparación y cierre | **+16** | **+13** | **+13** |
+| Techo<br>k USD | **79 acumulados**, con preparación y cierre | **+16** | **+13** | **+13** |
 
 </div>
 
-<p style="font-size:24px;margin-top:20px">El CEO firma los gates dentro de cada tramo. El CFO verifica y el comité de IA dictamina. Seguridad puede suspender en cualquier momento.</p>
+<p style="font-size:24px;margin-top:20px">Kill-fast: sin agenda o viabilidad, se reduce o detiene antes de M1. Kill/scale gates: decidir por etapa; valor en M9.</p>
 
-<p class="note">En M9 se acredita solo el piso del intervalo de 90%. Si la medición no es viable: beneficio 0, sin expansión; continuidad por adopción, calidad, costo y controles. Espera y cortes completos en el Anexo F.</p>
+<p class="note">El CEO firma dentro de cada tramo, el CFO verifica y el comité dictamina. Seguridad puede suspender siempre. M9 acredita el piso del intervalo de 90%; si no es viable medir: beneficio 0, sin expansión. Condiciones completas en F.</p>
 
 <div class="decision">
 <span class="pill">Decisión reversible</span>

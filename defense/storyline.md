@@ -26,8 +26,8 @@ El deck es la única fuente; este texto prepara su defensa. Montos en k USD.
 **Apertura oral breve, todavía sin ensayar:**
 
 > Acme ya usa IA para desarrollar software, pero todavía no mide cuánto mejora
-> sus entregas. Proponemos una prueba con las herramientas actuales, formación
-> aplicada y controles probados. Medimos cambios aceptados con calidad y
+> sus entregas. Priorizamos una prueba con las herramientas actuales, formación
+> aplicada por rol y controles probados. Medimos cambios aceptados con calidad y
 > estudiamos un asistente de integración para clientes, sin construirlo todavía.
 > Hoy pedimos aprobar el plan y sus resoluciones: liberar hasta 8k USD de tiempo,
 > caja 0, para diez días hábiles de validación en 2026. Los 71k adicionales los
@@ -41,9 +41,13 @@ El deck es la única fuente; este texto prepara su defensa. Montos en k USD.
 | 2. Capacidad de ejecutar | 5–7 | Con qué herramientas, tiempo y límites podemos probarla? |
 | 3. Recursos y decisión | 8–10 | Quién libera cada tramo y cuándo conviene detenerse? |
 
-**Ejemplo operativo, no resultado observado:** preparar una corrección y sus
-pruebas con IA sobre código elegible, con revisión y aceptación humanas. Se
-elige y valida la tarea antes de probarla. El asistente de integración es una
+**Candidato operativo, no aprobado ni observado:** resolver un defecto real de
+código propio usado, con regresión que falla antes y pasa después, revisión
+independiente del autor, CI, aceptación del usuario interno, integración y uso
+real comprobados. Sustituye una tarea dentro de la prueba restante de M3, tras
+base, formación y controles y con todas sus horas confirmadas. Si no cabe, se
+retira de M3; M4 solo con continuidad autorizada y capacidad existente. No demuestra
+ganancia de productividad ni retorno. El asistente de integración es una
 hipótesis distinta: documentación propia y datos sintéticos, con base del problema
 y señal comercial antes de decidir su construcción.
 
@@ -105,7 +109,14 @@ recursos liberados por evidencia antes de ampliar.
 **Cierre del acto:** mejorar la entrega y evolucionar la oferta exige comprobar
 capacidad, calidad y restricciones antes de ampliar.
 
-### Etapas e iniciativas que sostienen la propuesta
+### Priorización y etapas que sostienen la propuesta
+
+- **Factibilidad–impacto y RICE ajustado por riesgo:** el mínimo prueba la
+  operación con herramientas existentes. En producto, el estudio del asistente
+  queda antes que pagos y el servicio de agentes por documentación propia y
+  menor dependencia externa. Pagos requiere habilitación y seguridad; agentes,
+  certificaciones y horas que compiten con entregas. Los puntajes son hipótesis
+  del CAIO, no resultados ([Anexo F](../plan/annexes/06-roadmap-riesgo.md#de-los-conceptos-de-la-cursada-a-la-decisión-del-caso)).
 
 - **Preparar → Validar → Contrastar → Consolidar:** primero base, controles,
   formación y prueba; después validación interna y estudio acotado de producto;
@@ -138,11 +149,13 @@ financia la evidencia para decidir qué continuar o ampliar.
 
 ## Respaldo de los actos 2 y 3: ejecución, recursos y control (slides 5–10)
 
-- **Arquitectura proporcional:** configurar lo que ya pagamos antes de comprar o
+- **Build / buy / agentificar:** configurar lo que ya pagamos antes de comprar o
   ensamblar. La plataforma se relee en los meses 3, 6 y 9 con la regla que
   ratifica el Directorio: una señal y además cuatro condiciones (R-15). La libera
   el Directorio. Nada pasa al año 2 por defecto ([Anexo B](../plan/annexes/02-arquitectura.md)).
-- **Seguridad antes de usar:** sin plataforma no alcanza la política; cada
+- **Human-in-the-loop y seguridad antes de usar:** en producto el tope L2
+  permite preparar acciones, pero la persona decide y ejecuta. La escala es
+  pedagógica del curso. Sin plataforma no alcanza la política; cada
   superficie prueba sus compensatorios, con críticos cerrados y residual
   aceptado. Seguridad puede suspender el uso aunque el gasto o la adopción
   cumplan, y quien produce la evidencia no es quien la verifica ni quien firma
@@ -150,7 +163,7 @@ financia la evidencia para decidir qué continuar o ampliar.
   R-08 excluye código y datos de clientes de modelos externos, salvo en su entorno
   y con permiso escrito. R-09 suspende código bajo NDA desde la aprobación; solo
   código sin NDA ya en uso admite residual del comité hasta M3, no datos.
-- **Personas:** formar, reasignar y decidir una excepción externa solo si falta
+- **AI literacy por rol:** formar, reasignar y decidir una excepción externa solo si falta
   un facilitador. Se propone reservar 720 h clave (1,5 FTE) más 540-660 h de
   formación: máximo 1.380 h, con demanda de actividades de 970-1.346 h; con
   verificación M3, 974-1.351 h. Se adoptan los solapes
@@ -170,6 +183,11 @@ financia la evidencia para decidir qué continuar o ampliar.
   costeo, sin fecha prometida, y no pasan al año 2 por defecto. El Council revisa
   cada mes y puede cortar; a las dos liberaciones iniciales les siguen los gates
   de los meses 3, 6, 9 y 12.
+- **Kill-fast y kill/scale gates:** aplicar señales y plazos de inviabilidad
+  temprana evita mantener una prueba inviable. Los gates formales autorizan cada
+  tramo; no se confunde cortar a tiempo con exigir retorno antes de poder
+  medirlo. El valor se lee en M9, con los criterios vigentes, sin modificación
+  por el candidato de corrección puntual.
 - **Primera liberación:** 80-136 h y hasta 8k USD de tiempo, sin caja
   incremental; agendas e imputación 2026 confirmadas antes de empezar. La
   libera el Directorio al aprobar el plan (R-02). Incluye
@@ -300,7 +318,7 @@ Son diez slides para ocho personas, así que dos integrantes presentan dos.
 |---|---|---|---|
 | Portada | Lucho | Storyline | Martín |
 | Problema de negocio | Martín (Anexo A) | 19, 25, 45 | Eduardo |
-| Propuesta integrada | Eduardo | 21, 22, 47 | Nico |
+| Priorización de iniciativas | Eduardo | 21, 22, 47 | Nico |
 | Iniciativas concretas | Gabriela (Anexo E) | 6, 7, 37, 39, 50, 51 | Maxi |
 | Arquitectura | Nico (Anexo B) | 1, 26, 28 | Rafa |
 | Personas | Pablo (Anexo D) | 8, 9, 14, 15, 40-42, 44 | Gabriela |
@@ -309,7 +327,7 @@ Son diez slides para ocho personas, así que dos integrantes presentan dos.
 | Dinero y escenarios | Gabriela (Anexo E) | 3, 10, 18, 29-36, 38, 49 | Maxi |
 | Cierre | Lucho | "Qué estamos pidiendo hoy" (3, 31) | Martín |
 
-- **Adaptación propuesta:** Eduardo presenta el recorrido de cuatro etapas;
+- **Adaptación propuesta:** Eduardo presenta la priorización de iniciativas;
   Gabriela conecta operación, producto y alcance financiado. Reutiliza la propuesta
   anterior sin dar por acordados los mensajes nuevos. Una alternativa de reparto
   queda pendiente de definición por el equipo en #21/#27.

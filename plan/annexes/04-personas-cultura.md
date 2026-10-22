@@ -9,16 +9,17 @@ title: "Anexo D — Personas, cambio y roadmap cultural"
 ::: {.annex-summary}
 ## Síntesis ejecutiva
 
-**Decisión:** formar y reasignar al equipo actual. El freno combina falta de
-tiempo, prácticas por aprender y restricciones de clientes; comprar licencias
-no lo resuelve ([diagnóstico](#evidencia)).
+**Decisión:** formar y reasignar al equipo actual con
+**[AI Literacy por rol](../../material/conceptos/m3u2-ai-literacy-niveles.md)**:
+niveles según las tareas. El cruce entre nivel y rol es diseño del plan,
+basado en la cursada.
 
 | Quién | Qué cambia en el trabajo | Tiempo y evidencia |
 |---|---|---|
-| Desarrollo y análisis | Especificar criterios, supervisar borradores y corregir código generado; la responsabilidad sigue siendo humana | Práctica en la cohorte del mínimo; código y pruebas revisados ([proceso](#antes-y-después-de-un-proceso-del-requerimiento-al-cambio-en-producción)) |
+| Desarrollo y análisis | Intermedio: especificar criterios, supervisar borradores y corregir código generado; la responsabilidad sigue siendo humana | Práctica en la cohorte del mínimo; código y pruebas revisados ([proceso](#antes-y-después-de-un-proceso-del-requerimiento-al-cambio-en-producción)) |
 | QA, seniors y DevOps | Diseñar pruebas y controles; revisar con una persona distinta del autor; liberar y operar con trazabilidad | Agenda de soporte explícita; calidad, retrabajo e incidentes contra la base ([proceso](#antes-y-después-de-un-proceso-del-requerimiento-al-cambio-en-producción)) |
 | Operaciones y staffing | Aprender usos permitidos; consultar restricciones antes de usar código o datos de clientes | Básico en el mínimo; intermedio y metas posteriores sujetos a ampliación y permisos ([roadmap](#roadmap-cultural-por-tramo-y-métricas)) |
-| CAIO, Personas y managers | Coordinar formación aplicada por rol, dentro de la jornada laboral; aprobar requiere resolver y revisar un caso permitido | Registro de evaluación práctica; asistencia y licencias no acreditan aprendizaje ([básico](#insumo-para-el-paquete-mínimo)) |
+| CAIO, Personas y managers | Básico: usar herramientas permitidas y revisar resultados en un caso del rol, dentro de la jornada laboral | Registro de evaluación práctica; asistir no acredita aprendizaje ([básico](#insumo-para-el-paquete-mínimo)) |
 
 **Recorrido y costo.** El mínimo financia básico para todos e intermedio para la cohorte en
 M1-M3, después de congelar la base. M4-M6 sostiene seguimiento, sin cursos

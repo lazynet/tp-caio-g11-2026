@@ -13,6 +13,8 @@ title: "Anexo B — Arquitectura y roadmap técnico"
 **Recomendación:** configurar y medir las herramientas existentes antes de
 decidir si hace falta una plataforma. El harness interno de desarrollo existe;
 su cobertura y sus controles siguen sin verificar.
+Quick win candidato, no aprobado ni observado: corrección real y regresión tras
+formación y controles ([caso propuesto](#candidato-de-quick-win-operativo)).
 
 | Recorrido | Qué se hace ahora | Qué queda condicionado |
 |---|---|---|
@@ -1019,6 +1021,46 @@ el Responsable de Tecnología ([R-06](07-resoluciones.md#autoridad-y-liberacione
 reducí/diferí y volvé a costear; si hacen falta saneamiento, conectores o más rondas,
 el rango deja de ser válido. No se presume que la plataforma resuelva esa falta.
 
+### Candidato de quick win operativo
+
+**Candidato, no aprobado por la empresa ni resultado observado.** Se propone
+concretar una tarea de la prueba operativa ya costeada; no crear otro proyecto.
+No consta todavía un error elegible, un usuario que lo priorice ni agenda liberada.
+
+**Priorización propuesta.** Primero, una corrección pequeña que quite un bloqueo
+real al equipo usuario de una función interna ya utilizada. Se prefiere a una
+demostración aislada porque puede entrar al flujo de trabajo habitual sin
+plataforma ni conectores nuevos. Factibilidad alta solo si hay código propio
+habilitado, error reproducible, pruebas existentes y revisor disponible; impacto
+local visible por validar con ese usuario, sin asignarle un retorno económico.
+
+La cursada aporta dos lecturas: el material ubica los *quick wins tácticos* en
+factibilidad alta e impacto bajo; el apunte usa impacto visible alto y baja
+complejidad. Ambas exigen una intervención útil y acotada; no se fuerza un
+cuadrante único ni se convierte el diagnóstico en un quick win.[^quick-win-ficha][^quick-win-apunte]
+
+| Campo | Propuesta y condición |
+|---|---|
+| Usuario y tarea | Un equipo interno con un error pendiente real de su backlog. Su referente define antes el comportamiento esperado; un integrante de la cohorte usa el agente actual para preparar la corrección y las pruebas de regresión, con datos sintéticos o autorizados y sin código de clientes |
+| Prerrequisitos | Base congelada, superficie habilitada con controles probados y residual aceptado; quien realiza la tarea ya aprobó la formación aplicable y su revisión práctica. Básico, intermedio y prueba pueden empezar juntos según D; eso no autoriza intervenir antes de aprobar lo aplicable |
+| Resultado útil | La función vuelve a cumplir el comportamiento acordado en su flujo real. Otro revisor acepta el cambio, CI pasa y el usuario confirma que resolvió el error; se integra por el proceso habitual de PR. Un borrador o una prueba en sandbox no cuentan como resultado integrado; no se garantiza despliegue |
+| Ventana condicionada | Camino con base hasta semana 8: usar la ventana restante de M3, semanas 9-13, después de aprobar la formación aplicable y verificar los controles. No se promete que formación, tarea e integración entren en esa ventana; si no caben, no se anticipa la intervención ni se recorta la formación |
+| Capacidad y costo | Sustituye una tarea dentro de la prueba, sin sumar horas, licencias ni partidas. Diseño y soporte ya previstos en el mínimo; los 16-24 h de revisión de B están dentro de las 64 h de seniors de E. Tecnología confirma encaje con Personas y Finanzas antes de elegir la tarea; no se presume holgura |
+| Éxito observable | Prueba de regresión que falla con el defecto y pasa con la corrección, revisión independiente, CI aprobado, aceptación del usuario e integración y uso real comprobados. La evidencia queda en los sistemas autorizados; al seguimiento del plan llegan agregados por área y semana, sin métricas individuales |
+| Corte o diferimiento | Sin tarea útil elegible, formación aprobada, permisos, revisor, agenda o integración viable en esa ventana: retirar el candidato de M3. Sin aceptación o con falla de calidad/seguridad, no integrar y aplicar las reglas vigentes. Puede reevaluarse en M4 solo si se autoriza la continuidad y cabe en su capacidad; no se financia automáticamente |
+
+**Responsable:** Responsable de Tecnología, con el referente usuario y un revisor
+distinto del autor; las personas se nombran conforme a R-06. La observación de
+calidad a 30 días sigue el protocolo existente: el resultado local no demuestra
+ausencia de daño, mejora atribuible ni ROI. M6 no lee valor y M9 conserva el
+[gate vigente](#gate-de-valor-fijado-por-este-anexo-el-anexo-f-lo-adopta).
+
+Respaldo de capacidad: [mínimo, actividades ya incluidas](../../context/supuestos/paquete-minimo-de-aprendizaje.md#alcance-y-conciliación-m1-m3)
+y [Anexo E, pedido inicial](05-business-case.md#pedido-inicial-paquete-mínimo).
+
+[^quick-win-ficha]: [Matriz factibilidad-impacto y quick wins](../../material/conceptos/m1u2-matriz-factibilidad-impacto.md).
+[^quick-win-apunte]: [Apunte de clase del 18/08/2026, quick wins y priorización](../../material/apuntes/2026-08-18-portfolio-100-dias.md).
+
 ### Pedido vigente (parte técnica)
 
 El pedido vigente es el mínimo técnico de M1-M3 de arriba, consolidado con C/D
@@ -1111,7 +1153,8 @@ tasas de calidad, 30: la lectura de M3 tendrá menos actividad madura que con in
 En ese caso, la lectura del mes 3 es reducida y declarada (unas 3 semanas de PR
 maduros): informa uso, retrabajo y PR maduros sin atribuir ganancia, y no se
 corre ni atrasa M4. La presenta el CAIO, la verifica el CFO y el CEO firma el
-gate; la lectura de valor queda en el mes 6 ([R-18](07-resoluciones.md#arquitectura-y-medición)). No se adelanta
+gate; la lectura de valor queda en el mes 9 ([R-19](07-resoluciones.md#arquitectura-y-medición)
+y [R-27](07-resoluciones.md#finanzas)). No se adelanta
 tratamiento dentro de la base.
 
 La columna "Frente" usa los nombres del [Anexo E](05-business-case.md): **Base**

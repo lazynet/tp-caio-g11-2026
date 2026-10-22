@@ -1289,6 +1289,14 @@ PR/CI/reversiones/tickets/incidentes, calidad y base congelada; básico para tod
 la organización, intermedio de 15-20 personas y prueba de prácticas sobre el agente.
 Uso, cobertura y faltantes se informan separados de resultados.
 
+El [candidato operativo de B](02-arquitectura.md#candidato-de-quick-win-operativo)
+solo sustituye actividad de la prueba ya costeada: ejecución, revisión, aceptación
+e integración requieren encaje confirmado por persona y semana.
+
+No acredita productividad atribuida, ROI ni caja; sin encaje, se reemplaza o difiere
+con continuidad autorizada. Horas, licencias o responsabilidades adicionales exigen
+recosteo previo: no se presume holgura ([supuesto del mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md#alcance-y-conciliación-m1-m3)).
+
 No incluye gateway, retrieval, harness central, evals en CI de plataforma,
 producto, avanzado ni contractor continuo. Controles equivalentes significa
 mismo requisito y prueba para el mismo uso habilitado; no equivalencia con una

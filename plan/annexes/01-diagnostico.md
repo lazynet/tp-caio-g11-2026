@@ -10,8 +10,9 @@ title: "Anexo A — Diagnóstico y punto de partida"
 ## Síntesis ejecutiva
 
 **La IA ya se usa en la operación, pero su aporte incremental no está medido
-contra una base.** El diagnóstico es una hipótesis de escritorio que debe
-contrastarse antes de liberar la ejecución.
+contra una base.** Aplicamos el [diagnóstico de madurez en cinco dimensiones](../../material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md) para
+priorizar brechas de gobierno, medición y adopción. Es una hipótesis de
+escritorio, a contrastar antes de liberar la ejecución.
 
 | Qué condiciona el plan | Qué hacemos primero |
 |---|---|
