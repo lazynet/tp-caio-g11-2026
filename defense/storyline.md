@@ -8,8 +8,8 @@ según el reparto del `README.md`. Quién presenta cada slide y quién responde
 cada objeción **todavía no se acordó** (#21): al final va una propuesta para que el
 equipo la discuta. El pedido es aprobar el plan y sus resoluciones R-01 a R-32
 ([Anexo G](../plan/annexes/07-resoluciones.md)). Cada cifra remonta a un anexo de
-`plan/annexes/`. Esta propuesta alinea el relato de #51 con main
-`ec1dc41901b9bc3ad4b7b23c5450a1100f560fc7`, sin cambiar A–G.
+`plan/annexes/`. Esta síntesis editorial conserva las decisiones de A–G y
+reorganiza su exposición alrededor de tareas, evidencia y liberaciones.
 Los supuestos modificados por G fueron revalidados por instrucción de Martín
 el 21/10, según README; conservan su tipo `Supuesto`.
 Las cuatro fichas de #55 siguen `draft`, sin declaración humana nueva;
@@ -20,6 +20,42 @@ autorizado. **No hubo ensayo todavía**: cuando lo haya, se registra con fecha,
 tiempos, roles y feedback. El arco propuesto conserva el propósito empresarial:
 oportunidad → cuatro etapas → iniciativas → ejecución → recursos → resolución.
 El deck es la única fuente; este texto prepara su defensa. Montos en k USD.
+
+## Apertura propuesta y relato en tres actos
+
+**Apertura oral breve, todavía sin ensayar:**
+
+> Acme ya usa IA para desarrollar software, pero todavía no mide cuánto mejora
+> sus entregas. Proponemos una prueba con las herramientas actuales, formación
+> aplicada y controles probados. Medimos cambios aceptados con calidad y
+> estudiamos un asistente de integración para clientes, sin construirlo todavía.
+> Hoy pedimos aprobar el plan y sus resoluciones: liberar hasta 8k USD de tiempo,
+> caja 0, para diez días hábiles de validación en 2026. Los 71k adicionales los
+> libera el CEO solo con las condiciones cumplidas. El techo es 79k hasta M3 y
+> 121k anual, por tramos. No presupuestamos repago. Si falta capacidad, falla la
+> seguridad o la evidencia no alcanza, reducimos o cortamos.
+
+| Acto | Slides | Pregunta que resolvemos |
+|---|---|---|
+| 1. Problema y propuesta | 1–4 | Qué tarea queremos mejorar y cómo vamos a demostrar su aporte? |
+| 2. Capacidad de ejecutar | 5–7 | Con qué herramientas, tiempo y límites podemos probarla? |
+| 3. Recursos y decisión | 8–10 | Quién libera cada tramo y cuándo conviene detenerse? |
+
+**Ejemplo operativo, no resultado observado:** preparar una corrección y sus
+pruebas con IA sobre código elegible, con revisión y aceptación humanas. Se
+elige y valida la tarea antes de probarla. El asistente de integración es una
+hipótesis distinta: documentación propia y datos sintéticos, con base del problema
+y señal comercial antes de decidir su construcción.
+
+**Respuesta adversa que no se omite:** el escenario pesimista puede terminar
+antes de M1; si corta en M3, el techo hasta cerrar es 79 y el anual con guardia
+aprobada es 85. El optimista acredita solo capacidad medible sin daño: venderla
+o evitar una contratación requiere evidencia propia. Un cambio de precio del
+proveedor conserva exposición con o sin este plan; el mínimo no la elimina.
+
+**Uso del detalle siguiente:** consultar la regla y el anexo ante una objeción.
+El guion ejecutivo ordena la exposición; las condiciones completas del Anexo G
+siguen rigiendo. Presentadores, respuestas y ensayo quedan pendientes de acuerdo.
 
 ## Qué tiene que demostrar la defensa
 
@@ -45,11 +81,11 @@ mide y en qué gate; no estimar en vivo ni cambiar el pedido en la sala.
 
 ## Tesis en una oración
 
-Proponemos incorporar IA para mejorar las entregas de Acme Labs y evaluar nuevas
-funcionalidades para clientes: preparar, validar, aplicar y consolidar, con las
-herramientas actuales, controles probados y recursos liberados según evidencia.
+Proponemos medir capacidad con calidad en las entregas de Acme Labs y estudiar
+un asistente de integración, con herramientas actuales, controles probados y
+recursos liberados por evidencia antes de ampliar.
 
-## Acto 1: propósito y oportunidad (portada y Oportunidad de negocio)
+## Respaldo del acto 1: problema, propuesta e iniciativas (slides 1–4)
 
 - La empresa es rentable y crece, pero concentrada: el cliente principal pesa
   40%-50% de la facturación ([Anexo A](../plan/annexes/01-diagnostico.md)).
@@ -69,9 +105,9 @@ herramientas actuales, controles probados y recursos liberados según evidencia.
 **Cierre del acto:** mejorar la entrega y evolucionar la oferta exige comprobar
 capacidad, calidad y restricciones antes de ampliar.
 
-## Acto 2: cuatro etapas e iniciativas (Propuesta e Iniciativas y prioridad)
+### Etapas e iniciativas que sostienen la propuesta
 
-- **Preparar → Validar → Aplicar → Consolidar:** primero base, controles,
+- **Preparar → Validar → Contrastar → Consolidar:** primero base, controles,
   formación y prueba; después validación interna y estudio acotado de producto;
   aplicación con evidencia y evaluación de continuidad al cierre. La validación
   inicial de 2026 tiene liberación propia; construir producto exige otra decisión
@@ -100,7 +136,7 @@ capacidad, calidad y restricciones antes de ampliar.
 **Cierre del acto:** operación primero y asistente como hipótesis; el mínimo
 financia la evidencia para decidir qué continuar o ampliar.
 
-## Acto 3: ejecución, recursos y control (Arquitectura, Personas, Gobierno y Roadmap)
+## Respaldo de los actos 2 y 3: ejecución, recursos y control (slides 5–10)
 
 - **Arquitectura proporcional:** configurar lo que ya pagamos antes de comprar o
   ensamblar. La plataforma se relee en los meses 3, 6 y 9 con la regla que
@@ -263,14 +299,14 @@ Son diez slides para ocho personas, así que dos integrantes presentan dos.
 | Slide | Presenta | Responde objeciones | Respaldo en preguntas |
 |---|---|---|---|
 | Portada | Lucho | Storyline | Martín |
-| Oportunidad de negocio | Martín (Anexo A) | 19, 25, 45 | Eduardo |
-| Cuatro etapas | Eduardo | 21, 22, 47 | Nico |
-| Iniciativas y prioridad | Gabriela (Anexo E) | 6, 7, 37, 39, 50, 51 | Maxi |
+| Problema de negocio | Martín (Anexo A) | 19, 25, 45 | Eduardo |
+| Propuesta integrada | Eduardo | 21, 22, 47 | Nico |
+| Iniciativas concretas | Gabriela (Anexo E) | 6, 7, 37, 39, 50, 51 | Maxi |
 | Arquitectura | Nico (Anexo B) | 1, 26, 28 | Rafa |
 | Personas | Pablo (Anexo D) | 8, 9, 14, 15, 40-42, 44 | Gabriela |
 | Gobierno y seguridad | Rafa (Anexo C) | 11, 12, 13, 20, 23 | Nico |
 | Roadmap | Maxi (Anexo F) | 21, 24, 27, 43, 46 | Lucho |
-| Costo y riesgo | Gabriela (Anexo E) | 3, 10, 18, 29-36, 38, 49 | Maxi |
+| Dinero y escenarios | Gabriela (Anexo E) | 3, 10, 18, 29-36, 38, 49 | Maxi |
 | Cierre | Lucho | "Qué estamos pidiendo hoy" (3, 31) | Martín |
 
 - **Adaptación propuesta:** Eduardo presenta el recorrido de cuatro etapas;

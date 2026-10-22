@@ -34,6 +34,14 @@ img { max-width: 100%; }
 a.heading-link { color: inherit; text-decoration: none; }
 a.annex-start { display: block; font-size: 1pt; line-height: 1pt;
                  color: transparent; text-decoration: none; }
+.annex-summary { break-after: page; page-break-after: always;
+                 font-size: 10.5pt; line-height: 1.35; }
+.annex-summary h2 { margin-top: 10pt; color: #3d472b; }
+.annex-summary h3 { font-size: 11pt; margin: 12pt 0 5pt; }
+.annex-summary table { font-size: 9.5pt; line-height: 1.3; }
+.annex-summary th { background: #e1ecc9; }
+.annex-summary strong { color: #3d472b; }
+.annex-summary a { color: #3d472b; }
 """
 
 
@@ -89,8 +97,9 @@ def annex_index_html(root, checker, pdf):
         )
     return (
         "<h1>Índice de anexos</h1>"
-        "<p>La numeración al pie comienza en el primer anexo. "
-        "Seleccioná un título para ir a su inicio.</p>"
+        "<p>Cada anexo abre con una síntesis ejecutiva. El desarrollo y las "
+        "fuentes quedan a continuación. Seleccioná un título para ir a su inicio. "
+        "La numeración al pie comienza en el primer anexo.</p>"
         "<table><thead><tr><th>Anexo</th><th>Página de anexos</th></tr></thead>"
         "<tbody>" + "".join(rows) + "</tbody></table>"
     )

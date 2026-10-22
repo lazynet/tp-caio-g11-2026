@@ -16,6 +16,27 @@ title: Anexo X — Nombre del tema
 
 # Anexo X — Nombre del tema
 
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+<!-- Una página con el título: hasta 300-350 palabras, tablas breves y links al
+     desarrollo o a las fuentes. Mostrá primero la decisión y sus consecuencias;
+     reservá la explicación completa para «Desarrollo y fuentes». -->
+
+| Decisión que sustenta | Recomendación y alternativa |
+|---|---|
+| Qué necesita resolver el board | Qué proponés, contra qué alternativa y por qué |
+
+| Evidencia para decidir | Implicación |
+|---|---|
+| Hecho o supuesto con fuente | Beneficio esperado y límite de lo que se puede afirmar |
+| Dependencias, costo y responsable humano | Qué se necesita antes de avanzar; marcá lo pendiente |
+| Criterio de éxito y riesgo | Cómo se verifica y cuándo se reduce o abandona |
+
+:::
+
+## Desarrollo y fuentes
+
 Slide que sustenta: [Slide N — Título](../slides.md).
 
 ## Objetivo

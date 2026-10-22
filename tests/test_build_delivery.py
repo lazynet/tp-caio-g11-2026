@@ -78,6 +78,37 @@ class BuildDeliveryTests(unittest.TestCase):
         self.assertIn("@bottom-center", builder.CSS)
         self.assertIn('content: "Anexos · página " counter(page)', builder.CSS)
 
+    def test_executive_summary_prints_before_linked_detail(self):
+        from pypdf import PdfReader
+
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            folder = root / "plan/annexes"
+            folder.mkdir(parents=True)
+            (folder / "01-a.md").write_text(
+                "---\nowner: finance\nstatus: draft\ntitle: Anexo A\n---\n"
+                "# Anexo A\n\n::: {.annex-summary}\n\n## Síntesis ejecutiva\n\n"
+                "Resumen visible para decidir.\n\n"
+                "| Decisión | Condición |\n|---|---|\n| Continuar | Evidencia |\n\n"
+                "[Ver respaldo](#desarrollo-y-fuentes).\n\n:::\n\n"
+                "## Desarrollo y fuentes\n\nDetalle que amplía la decisión.\n",
+                encoding="utf-8",
+            )
+            markup = builder.annexes_html(root, builder.load_plan_check(), "main")
+            pdf = root / "annex.pdf"
+            builder.render_annexes(root, markup, pdf)
+            document = PdfReader(pdf)
+            self.assertEqual(len(document.pages), 2)
+            self.assertIn("Resumen visible", document.pages[0].extract_text())
+            self.assertNotIn("Detalle que amplía", document.pages[0].extract_text())
+            self.assertIn("Detalle que amplía", document.pages[1].extract_text())
+            destinations = {
+                name.lstrip("/"): target
+                for name, target in document.named_destinations.items()
+            }
+            target = destinations["annex-0-desarrollo-y-fuentes"]
+            self.assertEqual(document.get_destination_page_number(target), 1)
+
     def test_build_cli_rejects_private_source_before_rendering(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

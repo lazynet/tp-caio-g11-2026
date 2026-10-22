@@ -6,6 +6,41 @@ title: "Anexo A — Diagnóstico y punto de partida"
 
 # Anexo A — Diagnóstico y punto de partida
 
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+**La IA ya se usa en la operación, pero su aporte incremental no está medido
+contra una base.** El diagnóstico es una hipótesis de escritorio que debe
+contrastarse antes de liberar la ejecución.
+
+| Qué condiciona el plan | Qué hacemos primero |
+|---|---|
+| El uso interno y el harness del SDLC ya existen; no prueban mejora ni IA productiva en la oferta | Medir capacidad con calidad, sin atribuir beneficios retrospectivos |
+| La utilización facturable estimada es 83–90%; el promedio no demuestra horas libres por rol | Conciliar personas, FTE, agendas y trabajo desplazado |
+| Hay política e inventario de datos; falta verificar su cobertura y aplicación para los usos elegibles | Probar controles y restricciones por herramienta y cliente |
+| La oportunidad de producto sigue siendo una hipótesis | Estudiar el problema de integración antes de decidir construir |
+
+**Recomendación:** mantener el paquete mínimo y financiar primero diez días
+hábiles de validación en 2026: hasta 8k USD de tiempo propio y caja 0. La segunda
+liberación depende de diagnóstico revisado, agendas conciliadas y las demás
+condiciones del [Anexo G](07-resoluciones.md#autoridad-y-liberaciones).
+
+**Responsabilidad:** Martín coordina la revisión del diagnóstico en el TP.
+En Acme, el CAIO produce, hay verificación independiente según el entregable y
+el CEO decide la continuidad condicionada. Las personas se nombran en las actas.
+
+**Éxito y corte:** diagnóstico trazable y alcance ejecutable. Si faltan capacidad,
+fuentes o viabilidad para una actividad, se reduce, resecuencia o detiene antes
+de M1. La validación no convierte los supuestos en hechos por sí sola.
+
+**Para profundizar:** [puntajes por dimensión](#puntaje-propuesto-por-dimensión),
+[perímetro por conciliar](#perímetro-por-conciliar-antes-de-liberar-m1-m3),
+[validación inicial](#validación-inicial-con-autorización-propia) y
+[cautelas](#cautelas).
+:::
+
+## Desarrollo y fuentes
+
 Slide que sustenta: [Problema](../slides.md). El diagnóstico también ordena el
 beneficio que se mide en la slide [Beneficio](../slides.md). Montos en k USD
 (1k USD = 1.000 USD).

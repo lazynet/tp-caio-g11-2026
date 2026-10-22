@@ -6,6 +6,42 @@ title: "Anexo B — Arquitectura y roadmap técnico"
 
 # Anexo B — Arquitectura y roadmap técnico
 
+::: {.annex-summary}
+
+## Síntesis ejecutiva
+
+**Recomendación:** configurar y medir las herramientas existentes antes de
+decidir si hace falta una plataforma. El harness interno de desarrollo existe;
+su cobertura y sus controles siguen sin verificar.
+
+| Recorrido | Qué se hace ahora | Qué queda condicionado |
+|---|---|---|
+| Código y datos propios → herramientas → modelos | Configurar terminal, chat, IDE y suite; probar permisos, exclusiones, secretos y conexiones aprobadas | Cada superficie se habilita con controles probados y riesgo residual aceptado |
+| Acciones del agente → revisión humana | Acotar autonomía y revisar antes de efectos irreversibles | No se promete solo lectura para el agente de código |
+| Consolas y registros operativos → extractos agregados → indicadores | Leer uso, cambios de código, calidad y reversiones; congelar la base y reproducir la medición | Guardar extractos exige autorización de Seguridad sobre ubicación, acceso y retención |
+| Casos nuevos → harness central → pasarela de modelos | Solo dirección de diseño: contexto acotado, memoria versionada, aislamiento y trazas | Plataforma con decisión y costeo propios; producto requiere además señal de cliente y otra autorización |
+
+**Límites de datos y permisos.** El mínimo usa repositorios propios habilitados.
+Datos/código de clientes quedan fuera; la excepción exige entorno del cliente y
+permiso escrito. Datos Restringidos nunca van a IA externa. La medición usa
+agregados por área y semana, sin eventos individuales, prompts ni secretos.
+
+**Cómo se decide y se corta.** Primero, medición viable y reproducible por otro
+operador; sin datos, capacidad o controles, reducir/diferir y recostear.
+M6 decide continuidad por adopción, calidad, costo y controles: **no lee valor**.
+M9 acredita valor solo con **peor caso mayor que cero y sin daño de calidad**.
+Sin distinción, beneficio acreditado cero y sin expansión por valor; daño activa
+el corte ([gate completo](#gate-de-valor-fijado-por-este-anexo-el-anexo-f-lo-adopta)).
+
+**Responsable y alternativas.** Responsable de Tecnología; configurar, comprar
+o ensamblar se comparan con cobertura y costo equivalentes. Costos y dos
+autorizaciones iniciales: [Anexo E](05-business-case.md#pedido-inicial-paquete-mínimo).
+Reglas de datos y liberación: [resoluciones vigentes](07-resoluciones.md).
+
+:::
+
+## Desarrollo y fuentes
+
 Slides que sustenta: [Beneficio](../slides.md) y
 [Arquitectura](../slides.md). Los hitos técnicos alimentan
 además [Roadmap técnico, financiero y cultural](../slides.md).

@@ -230,18 +230,18 @@
     },
     {
       "path": "plan/annexes/03-gobierno-seguridad.md",
-      "line": 53,
+      "line": 93,
       "text": "| Inventario de casos de uso y registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar. La aprobación de la política no los acredita | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |",
-      "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e",
+      "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6",
       "category": "historical_uncertainty",
       "blocking": false,
       "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
       "basis": {
         "record": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 53,
+          "line": 93,
           "text": "| Inventario de casos de uso y registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar. La aprobación de la política no los acredita | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "limit": {
           "path": "context/hechos/gobierno-y-politica-ia.md",
@@ -253,18 +253,18 @@
     },
     {
       "path": "plan/annexes/03-gobierno-seguridad.md",
-      "line": 73,
+      "line": 113,
       "text": "| Inventario de usos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | 100% de las herramientas, servidores MCP, funciones de IA embebidas y casos de producto | Objetivo propuesto por el equipo |",
-      "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e",
+      "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6",
       "category": "historical_uncertainty",
       "blocking": false,
       "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
       "basis": {
         "record": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 73,
+          "line": 113,
           "text": "| Inventario de usos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | 100% de las herramientas, servidores MCP, funciones de IA embebidas y casos de producto | Objetivo propuesto por el equipo |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "limit": {
           "path": "context/hechos/gobierno-y-politica-ia.md",
@@ -276,18 +276,18 @@
     },
     {
       "path": "plan/annexes/03-gobierno-seguridad.md",
-      "line": 74,
+      "line": 114,
       "text": "| Matriz de restricciones por cliente | Pendiente en abril; se validaba a mano. Estado actual por contrastar | Cubre los clientes que concentran la mayor parte de la facturación (la fuente da el alcance) | [Antecedente](../../context/hechos/gobierno-y-politica-ia.md) y [alcance](../../context/hechos/cartera-y-concentracion.md) |",
-      "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e",
+      "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6",
       "category": "historical_uncertainty",
       "blocking": false,
       "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
       "basis": {
         "record": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 74,
+          "line": 114,
           "text": "| Matriz de restricciones por cliente | Pendiente en abril; se validaba a mano. Estado actual por contrastar | Cubre los clientes que concentran la mayor parte de la facturación (la fuente da el alcance) | [Antecedente](../../context/hechos/gobierno-y-politica-ia.md) y [alcance](../../context/hechos/cartera-y-concentracion.md) |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "limit": {
           "path": "context/hechos/gobierno-y-politica-ia.md",
@@ -299,18 +299,18 @@
     },
     {
       "path": "plan/annexes/03-gobierno-seguridad.md",
-      "line": 75,
+      "line": 115,
       "text": "| Registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | Vivo, revisado cada mes por el Council | Objetivo propuesto por el equipo |",
-      "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e",
+      "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6",
       "category": "historical_uncertainty",
       "blocking": false,
       "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
       "basis": {
         "record": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 75,
+          "line": 115,
           "text": "| Registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | Vivo, revisado cada mes por el Council | Objetivo propuesto por el equipo |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "limit": {
           "path": "context/hechos/gobierno-y-politica-ia.md",
@@ -331,96 +331,96 @@
       "basis": {
         "scope": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 111,
+          "line": 151,
           "text": "Alcance: el plan no presume la habilitación; ninguna función de IA se asienta en ese producto",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "authority": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 113,
+          "line": 153,
           "text": "Autoridad: el Directorio fija la regla al aprobar el plan; Producto verifica la habilitación, con Legal externo.",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "decision": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 114,
+          "line": 154,
           "text": "Hito: la lectura del mes 6, que libera el piloto de producto, o la del mes 9 si se difiere.",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "consequence": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 115,
+          "line": 155,
           "text": "Consecuencia: sin habilitación acreditada en ese hito, el piloto usa otro producto o se difiere,",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         }
       }
     },
     {
       "path": "plan/annexes/03-gobierno-seguridad.md",
-      "line": 52,
+      "line": 92,
       "text": "| Política de IA | Aprobación informada en octubre de 2026; el Directorio la ratifica como política del plan y la preparación 2026 deja constancia de versión y alcance ([R-07](07-resoluciones.md#gobierno-y-seguridad)). El borrador v1.0 y sus pendientes de abril son antecedentes históricos, salvo la aprobación informada | [Fuente y cautelas](../../context/hechos/gobierno-y-politica-ia.md) |",
-      "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e",
+      "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6",
       "category": "historical_uncertainty",
       "blocking": false,
       "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
       "basis": {
         "record": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 52,
+          "line": 92,
           "text": "| Política de IA | Aprobación informada en octubre de 2026; el Directorio la ratifica como política del plan y la preparación 2026 deja constancia de versión y alcance ([R-07](07-resoluciones.md#gobierno-y-seguridad)). El borrador v1.0 y sus pendientes de abril son antecedentes históricos, salvo la aprobación informada | [Fuente y cautelas](../../context/hechos/gobierno-y-politica-ia.md) |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "limit": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 96,
+          "line": 136,
           "text": "de lo que le llega por contrato, según el sujeto y la actividad.\n\n| Norma o marco | Quién está obligado | Cómo llega a Acme Labs | Estado de verificación |\n|---|---|---|---|\n| BCRA, requisitos mínimos de tecnología y seguridad (texto ordenado al 13/02/2026, Com. \"A\" 8401): sección 4.6 (IA propia o de terceros) y sección 10 (terceros) | Entidades financieras y PSP registrados (sección 1.1) | **Heredada**: como proveedor tecnológico, los servicios de IA de Acme Labs entran en la evaluación y las condiciones de tercerización del cliente | Cotejado con el texto ordenado oficial. La 4.6 exige a la entidad documentar objetivos de uso de IA propia o de terceros; definir responsables, modelos, datos, métricas y umbrales; evaluar riesgos; prevenir sesgos, documentar explicabilidad, revisar resultados e informar al cliente. La 10 exige evaluar y formalizar la relación con terceros, y la entidad conserva la responsabilidad. **No respalda** que un cliente le exija a Acme Labs controles concretos ni que le compre IA: eso, si existe, llega por contrato (ver \"Licencia para vender\"). Cambios posteriores, a revisar antes de la entrega |\n| BCRA, proveedores de servicios de pago (texto ordenado al 02/10/2026, Com. \"A\" 8488), secciones 1 y 2 | Quien debe inscribirse como PSP según la función que desempeña, incluidos quienes ofrecen cuentas de pago | **Según la entidad operadora** del producto propio de pagos y su función y registro como PSP. Desarrollar el software no vuelve obligada a Acme Labs por sí solo | Cotejado con el texto ordenado oficial. Los requisitos específicos de habilitación del producto no se verificaron |\n| Ley 21.526, arts. 39-40 (secreto financiero) | Entidades alcanzadas y su personal. El art. 39 protege sus **operaciones pasivas**, con las excepciones legales; el art. 40 regula la información que recibe el BCRA | **Heredada** de los clientes que sean entidades alcanzadas: condiciona qué información de esas operaciones puede salir hacia un modelo. Un PSP no se equipara a un banco | Cotejada con el texto actualizado |\n| Ley 25.326 e información de la AAIP (datos personales y sensibles; el art. 12 restringe transferencias internacionales sin protección adecuada, con excepciones) | Quien trata datos personales | **Propia** cuando Acme Labs trata datos personales: enviar datos a un modelo alojado en el exterior exige evaluar destino, datos y mecanismo aplicable (la AAIP describe cláusulas contractuales modelo y normas corporativas vinculantes) | Cotejada con el texto actualizado y la AAIP. El rol de Acme Labs (responsable o encargado) lo confirma asesoría legal |\n| EU AI Act (Reg. 2024/1689, modificado por el Omnibus 2026/1744) | Proveedores y desplegadores con sistemas o resultados usados en la UE (art. 2.1.c) | **No aplica por defecto**; se activa si un cliente opera en la UE o el resultado se usa allá | Fechas leídas de una copia del DOUE; falta cotejar con EUR-Lex ([fuentes faltantes](../../material/huecos.md)) |\n| NIST AI RMF 1.0 | Nadie (voluntario) | **Voluntaria**: cada riesgo del registro lleva su función (Govern, Map, Measure, Manage) y su evidencia; se declara alineación, no cumplimiento | Confirmado en la página de NIST ([fuente](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md)); el mapeo es por función, las subcategorías (por ejemplo GOVERN 1.6) no se verificaron |\n| ISO/IEC 42001:2023 | Nadie (certificación voluntaria) | **Voluntaria**: se alinea con brecha documentada, no se certifica en el año | Edición 2023 según la [fuente de los tres marcos](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md); la página de ISO no se recotejó ([fuentes faltantes](../../material/huecos.md)). Ver el mapeo en Riesgos y en \"Compliance: alcance explícito\" |\n| Guía SIGEN 197/2026 | Sector público nacional | **No aplica**; solo si un cliente es un organismo público | Existe; el anexo no se leyó |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         }
       }
     },
     {
       "path": "plan/annexes/03-gobierno-seguridad.md",
-      "line": 56,
+      "line": 96,
       "text": "| Controles específicos de IA (red teaming, DLP sobre prompts) | Sin evidencia en el registro de partida (abril de 2026) ni en el alcance de la ISO 27001 vigente; estado actual por contrastar en la preparación 2026 | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |",
-      "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e",
+      "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6",
       "category": "historical_uncertainty",
       "blocking": false,
       "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
       "basis": {
         "record": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 56,
+          "line": 96,
           "text": "| Controles específicos de IA (red teaming, DLP sobre prompts) | Sin evidencia en el registro de partida (abril de 2026) ni en el alcance de la ISO 27001 vigente; estado actual por contrastar en la preparación 2026 | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "limit": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 96,
+          "line": 136,
           "text": "de lo que le llega por contrato, según el sujeto y la actividad.\n\n| Norma o marco | Quién está obligado | Cómo llega a Acme Labs | Estado de verificación |\n|---|---|---|---|\n| BCRA, requisitos mínimos de tecnología y seguridad (texto ordenado al 13/02/2026, Com. \"A\" 8401): sección 4.6 (IA propia o de terceros) y sección 10 (terceros) | Entidades financieras y PSP registrados (sección 1.1) | **Heredada**: como proveedor tecnológico, los servicios de IA de Acme Labs entran en la evaluación y las condiciones de tercerización del cliente | Cotejado con el texto ordenado oficial. La 4.6 exige a la entidad documentar objetivos de uso de IA propia o de terceros; definir responsables, modelos, datos, métricas y umbrales; evaluar riesgos; prevenir sesgos, documentar explicabilidad, revisar resultados e informar al cliente. La 10 exige evaluar y formalizar la relación con terceros, y la entidad conserva la responsabilidad. **No respalda** que un cliente le exija a Acme Labs controles concretos ni que le compre IA: eso, si existe, llega por contrato (ver \"Licencia para vender\"). Cambios posteriores, a revisar antes de la entrega |\n| BCRA, proveedores de servicios de pago (texto ordenado al 02/10/2026, Com. \"A\" 8488), secciones 1 y 2 | Quien debe inscribirse como PSP según la función que desempeña, incluidos quienes ofrecen cuentas de pago | **Según la entidad operadora** del producto propio de pagos y su función y registro como PSP. Desarrollar el software no vuelve obligada a Acme Labs por sí solo | Cotejado con el texto ordenado oficial. Los requisitos específicos de habilitación del producto no se verificaron |\n| Ley 21.526, arts. 39-40 (secreto financiero) | Entidades alcanzadas y su personal. El art. 39 protege sus **operaciones pasivas**, con las excepciones legales; el art. 40 regula la información que recibe el BCRA | **Heredada** de los clientes que sean entidades alcanzadas: condiciona qué información de esas operaciones puede salir hacia un modelo. Un PSP no se equipara a un banco | Cotejada con el texto actualizado |\n| Ley 25.326 e información de la AAIP (datos personales y sensibles; el art. 12 restringe transferencias internacionales sin protección adecuada, con excepciones) | Quien trata datos personales | **Propia** cuando Acme Labs trata datos personales: enviar datos a un modelo alojado en el exterior exige evaluar destino, datos y mecanismo aplicable (la AAIP describe cláusulas contractuales modelo y normas corporativas vinculantes) | Cotejada con el texto actualizado y la AAIP. El rol de Acme Labs (responsable o encargado) lo confirma asesoría legal |\n| EU AI Act (Reg. 2024/1689, modificado por el Omnibus 2026/1744) | Proveedores y desplegadores con sistemas o resultados usados en la UE (art. 2.1.c) | **No aplica por defecto**; se activa si un cliente opera en la UE o el resultado se usa allá | Fechas leídas de una copia del DOUE; falta cotejar con EUR-Lex ([fuentes faltantes](../../material/huecos.md)) |\n| NIST AI RMF 1.0 | Nadie (voluntario) | **Voluntaria**: cada riesgo del registro lleva su función (Govern, Map, Measure, Manage) y su evidencia; se declara alineación, no cumplimiento | Confirmado en la página de NIST ([fuente](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md)); el mapeo es por función, las subcategorías (por ejemplo GOVERN 1.6) no se verificaron |\n| ISO/IEC 42001:2023 | Nadie (certificación voluntaria) | **Voluntaria**: se alinea con brecha documentada, no se certifica en el año | Edición 2023 según la [fuente de los tres marcos](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md); la página de ISO no se recotejó ([fuentes faltantes](../../material/huecos.md)). Ver el mapeo en Riesgos y en \"Compliance: alcance explícito\" |\n| Guía SIGEN 197/2026 | Sector público nacional | **No aplica**; solo si un cliente es un organismo público | Existe; el anexo no se leyó |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         }
       }
     },
     {
       "path": "plan/annexes/03-gobierno-seguridad.md",
-      "line": 76,
+      "line": 116,
       "text": "| Controles técnicos de IA | Sin evidencia en el registro de partida (abril de 2026) ni en el alcance de la ISO 27001 vigente; estado actual por contrastar en la preparación 2026 | Con señal en el mes 3: pasarela de salida y DLP, logs de acciones, red team interno; el externo, si se financia la demostración externa. Sin señal: *hooks* y escaneo de secretos en el equipo y red team acotado (ver \"Controles según la decisión del mes 3\") | Objetivo propuesto por el equipo |",
-      "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e",
+      "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6",
       "category": "historical_uncertainty",
       "blocking": false,
       "reason": "Registro de partida expresamente separado del estado actual por contrastar. La aprobación informada no demuestra inventario, matriz, registro de riesgos ni controles implementados.",
       "basis": {
         "record": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 76,
+          "line": 116,
           "text": "| Controles técnicos de IA | Sin evidencia en el registro de partida (abril de 2026) ni en el alcance de la ISO 27001 vigente; estado actual por contrastar en la preparación 2026 | Con señal en el mes 3: pasarela de salida y DLP, logs de acciones, red team interno; el externo, si se financia la demostración externa. Sin señal: *hooks* y escaneo de secretos en el equipo y red team acotado (ver \"Controles según la decisión del mes 3\") | Objetivo propuesto por el equipo |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "limit": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 96,
+          "line": 136,
           "text": "de lo que le llega por contrato, según el sujeto y la actividad.\n\n| Norma o marco | Quién está obligado | Cómo llega a Acme Labs | Estado de verificación |\n|---|---|---|---|\n| BCRA, requisitos mínimos de tecnología y seguridad (texto ordenado al 13/02/2026, Com. \"A\" 8401): sección 4.6 (IA propia o de terceros) y sección 10 (terceros) | Entidades financieras y PSP registrados (sección 1.1) | **Heredada**: como proveedor tecnológico, los servicios de IA de Acme Labs entran en la evaluación y las condiciones de tercerización del cliente | Cotejado con el texto ordenado oficial. La 4.6 exige a la entidad documentar objetivos de uso de IA propia o de terceros; definir responsables, modelos, datos, métricas y umbrales; evaluar riesgos; prevenir sesgos, documentar explicabilidad, revisar resultados e informar al cliente. La 10 exige evaluar y formalizar la relación con terceros, y la entidad conserva la responsabilidad. **No respalda** que un cliente le exija a Acme Labs controles concretos ni que le compre IA: eso, si existe, llega por contrato (ver \"Licencia para vender\"). Cambios posteriores, a revisar antes de la entrega |\n| BCRA, proveedores de servicios de pago (texto ordenado al 02/10/2026, Com. \"A\" 8488), secciones 1 y 2 | Quien debe inscribirse como PSP según la función que desempeña, incluidos quienes ofrecen cuentas de pago | **Según la entidad operadora** del producto propio de pagos y su función y registro como PSP. Desarrollar el software no vuelve obligada a Acme Labs por sí solo | Cotejado con el texto ordenado oficial. Los requisitos específicos de habilitación del producto no se verificaron |\n| Ley 21.526, arts. 39-40 (secreto financiero) | Entidades alcanzadas y su personal. El art. 39 protege sus **operaciones pasivas**, con las excepciones legales; el art. 40 regula la información que recibe el BCRA | **Heredada** de los clientes que sean entidades alcanzadas: condiciona qué información de esas operaciones puede salir hacia un modelo. Un PSP no se equipara a un banco | Cotejada con el texto actualizado |\n| Ley 25.326 e información de la AAIP (datos personales y sensibles; el art. 12 restringe transferencias internacionales sin protección adecuada, con excepciones) | Quien trata datos personales | **Propia** cuando Acme Labs trata datos personales: enviar datos a un modelo alojado en el exterior exige evaluar destino, datos y mecanismo aplicable (la AAIP describe cláusulas contractuales modelo y normas corporativas vinculantes) | Cotejada con el texto actualizado y la AAIP. El rol de Acme Labs (responsable o encargado) lo confirma asesoría legal |\n| EU AI Act (Reg. 2024/1689, modificado por el Omnibus 2026/1744) | Proveedores y desplegadores con sistemas o resultados usados en la UE (art. 2.1.c) | **No aplica por defecto**; se activa si un cliente opera en la UE o el resultado se usa allá | Fechas leídas de una copia del DOUE; falta cotejar con EUR-Lex ([fuentes faltantes](../../material/huecos.md)) |\n| NIST AI RMF 1.0 | Nadie (voluntario) | **Voluntaria**: cada riesgo del registro lleva su función (Govern, Map, Measure, Manage) y su evidencia; se declara alineación, no cumplimiento | Confirmado en la página de NIST ([fuente](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md)); el mapeo es por función, las subcategorías (por ejemplo GOVERN 1.6) no se verificaron |\n| ISO/IEC 42001:2023 | Nadie (certificación voluntaria) | **Voluntaria**: se alinea con brecha documentada, no se certifica en el año | Edición 2023 según la [fuente de los tres marcos](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md); la página de ISO no se recotejó ([fuentes faltantes](../../material/huecos.md)). Ver el mapeo en Riesgos y en \"Compliance: alcance explícito\" |\n| Guía SIGEN 197/2026 | Sector público nacional | **No aplica**; solo si un cliente es un organismo público | Existe; el anexo no se leyó |",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         }
       }
     },
@@ -435,27 +435,62 @@
       "basis": {
         "scope": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 321,
+          "line": 361,
           "text": "Alcance: tratamiento y retención de los eventos de uso de IA por persona y de las trazas del harness.",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "authority": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 322,
+          "line": 362,
           "text": "Autoridad: el Responsable de seguridad decide; Personas y Legal externo son consultados",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "decision": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 327,
+          "line": 367,
           "text": "Hito: tratamiento aprobado y comunicado en la preparación 2026, antes de extraer cualquier",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
         },
         "consequence": {
           "path": "plan/annexes/03-gobierno-seguridad.md",
-          "line": 330,
+          "line": 370,
           "text": "Consecuencia: sin esa aprobación no se extrae ninguna serie, la fuente se publica \"sin medir\"",
-          "sha256": "f357108ca20c69a85df904eb9f5a367ca254ad8aa2a906ea320bfcaed649503e"
+          "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6"
+        }
+      }
+    },
+    {
+      "path": "plan/annexes/03-gobierno-seguridad.md",
+      "line": 44,
+      "text": "**Costo en velocidad:** probar demora ese alcance; sin evidencia, se excluye. Compensatorios para el mínimo; plataforma sujeta a señal. [Riesgos y cortes](#riesgos-y-mitigación).",
+      "sha256": "b47a5266c50c9cdbbfa419abd5e6a6983c00b0e91b0fa18813338718a83a6ad6",
+      "category": "execution_condition",
+      "blocking": false,
+      "reason": "La síntesis enuncia la condición de uso de R-11: sin prueba y evidencia se excluye la superficie. No declara una prueba ya realizada ni dispensa un requisito pendiente. La plataforma conserva su autorización propia por señal y condiciones de R-15.",
+      "basis": {
+        "scope": {
+          "path": "plan/annexes/07-resoluciones.md",
+          "line": 245,
+          "text": "- **R-11 · Controles: clasificación y calendario.** Adopta la clasificación de\n  controles exigibles y opcionales del Anexo C: los exigibles rigen en las dos\n  ramas, las opciones se liberan solo por la señal del gate que las lee y cada\n  control nombra su motivo y su alternativa de menor costo. Toda superficie que se\n  use en M1-M3 prueba sus controles en M1-M3, dentro del techo de 59; si su prueba\n  no cabe en las horas validadas, esa superficie no se usa hasta M4-M6. Toda\n  afirmación comercial sobre seguridad o IA la valida el Responsable de seguridad\n  antes de salir.",
+          "sha256": "64e9a2b8cd8af88f76c94facddfb12225c2027a6aa3ec5aa8d2b9e2029fbeb7e"
+        },
+        "authority": {
+          "path": "plan/annexes/07-resoluciones.md",
+          "line": 253,
+          "text": "  *Autoridad:* Directorio (regla); el Responsable de seguridad decide por superficie\n  si está probada y el CFO verifica que cabe; pasar un control de exigible a opción\n  lo decide el Directorio en un gate, a propuesta del Responsable de seguridad con\n  el AI Council. *Hito:* hoy; dictamen de Legal externo en M1; matriz del mes 3.",
+          "sha256": "64e9a2b8cd8af88f76c94facddfb12225c2027a6aa3ec5aa8d2b9e2029fbeb7e"
+        },
+        "decision": {
+          "path": "plan/annexes/07-resoluciones.md",
+          "line": 256,
+          "text": "  el AI Council. *Hito:* hoy; dictamen de Legal externo en M1; matriz del mes 3.",
+          "sha256": "64e9a2b8cd8af88f76c94facddfb12225c2027a6aa3ec5aa8d2b9e2029fbeb7e"
+        },
+        "consequence": {
+          "path": "plan/annexes/07-resoluciones.md",
+          "line": 257,
+          "text": "  *Si no se cumple:* sin prueba no hay uso; si el dictamen o la matriz agregan un\n  requisito, el control sube a exigible en el gate siguiente con su costo\n  verificado por el CFO; una afirmación no respaldada se retira y se escala al\n  AI Council. *Tipo:* reversible.",
+          "sha256": "64e9a2b8cd8af88f76c94facddfb12225c2027a6aa3ec5aa8d2b9e2029fbeb7e"
         }
       }
     }

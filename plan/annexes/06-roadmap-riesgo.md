@@ -6,6 +6,46 @@ title: "Anexo F — Roadmap ajustado por riesgo"
 
 # Anexo F — Roadmap ajustado por riesgo
 
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+**Avanzar por etapas permite aprender sin comprometer toda la ejecución hoy.**
+El mínimo integra medición, controles y formación con las herramientas actuales.
+
+| Momento | Resultado exigido y decisión |
+|---|---|
+| Validación previa, 2026 | Diez días hábiles para diagnóstico, agendas y viabilidad. Directorio libera hasta 8k USD de tiempo, caja 0 |
+| Antes de M1 | CEO libera hasta 71k adicionales solo con R-05: capacidad, método, presupuesto y demás condiciones verificadas |
+| M1–M3 | Base congelada, política y controles probados, formación. Techo acumulado hasta cerrar: 79k |
+| M4–M6 | Medición y estudio del asistente de integración. Gate por adopción, costo y controles; no lee valor. Tramo: 16k |
+| M7–M9 | Valor: piso del intervalo de 90% >0, sin daño. Tramo: 13k |
+| M10–M12 | Evaluación, traspaso y decisión propia del año 2. Tramo: 13k |
+
+**Recomendación:** sostener el mínimo. El CEO firma gates dentro de cada tramo,
+el CFO verifica y el comité de IA dictamina. Maxi coordina la revisión del roadmap
+en el TP; los roles de Acme y sus nombres se documentan en las actas.
+
+**Escenarios:** base, continuidad condicionada sin beneficios presupuestados;
+pesimista, reducir o cortar por falta de viabilidad o daño; optimista, mejora
+medible que exige demostrar su conversión económica. Techo anual: 121k USD.
+Si corta en M3, máximo anual 85k con guardia aprobada al salir.
+
+**Corte y contingencia:** seguridad prevalece. M9 permite una única espera de seis
+semanas con estimado ≥+5% sin pasar; sin pasar al vencer, corta. Medición no viable:
+beneficio 0, sin expansión, continuidad por adopción, calidad, costo y controles.
+Plataforma y construcción del producto requieren costeo y decisión propios.
+
+**Reversibilidad:** el mínimo se puede cortar en cada gate. Las puertas
+irreversibles se deciden al cierre de M12 para el plan siguiente.
+
+**Respaldo:** [gates](#gates-por-condición-pasa-espera-corta),
+[escenarios](#escenarios), [contingencias](#contingencias),
+[hipótesis de producto](#hipótesis-de-producto-rice-ajustado-por-riesgo) y
+[catálogo de decisiones](#catálogo-único-de-decisiones).
+:::
+
+## Desarrollo y fuentes
+
 Slides que sustenta, por el nombre de su encabezado:
 [Beneficio](../slides.md),
 [Roadmap técnico, financiero y cultural](../slides.md),

@@ -6,6 +6,46 @@ title: "Anexo C — Gobierno, seguridad y compliance"
 
 # Anexo C — Gobierno, seguridad y compliance
 
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+**Qué habilita:** entregar IA con fuentes, permisos y controles probados. La política informada como aprobada no acredita implementación.
+
+### Autoridad
+
+| Función | Responsable y límite |
+|---|---|
+| Producir | Ingeniería prueba controles; Tecnología produce indicadores; CAIO arma el paquete del gate. |
+| Verificar | Seguridad verifica controles; un senior independiente, indicadores; CFO, cifras, caja y reservas. Nadie verifica lo que produjo. |
+| Dictaminar y aceptar riesgo | Council dictamina; el residual lo acepta su autoridad según la matriz. Productores y verificadores se abstienen. |
+| Firmar fondos | Directorio: primera liberación, ampliaciones y excesos de techo. CEO: segunda liberación y gates dentro de lo delegado. |
+| Suspender | Seguridad puede contener de inmediato; Tecnología la suple solo para contener. El Council también puede frenar un frente. |
+
+Titulares y suplentes, en acta habilitante. [Derechos y reanudación](#derechos-de-decisión-una-sola-a-por-decisión).
+
+### Semáforo de usos
+
+| Estado | Alcance |
+|---|---|
+| **Verde · permitido** | Asistencia con datos Públicos o Internos y herramienta aprobada: registro y controles aplicables probados. |
+| **Ámbar · condicionado** | Confidenciales, agentes internos y producto: aprobación según riesgo y autonomía. Cliente: matriz verificada, entorno del cliente y permiso escrito; código existente sin NDA, transitorio R-09. |
+| **Rojo · prohibido** | Crédito o scoring sobre personas, categoría especial, «autónomo dentro de límites» en producción y salida externa de código o datos de cliente fuera de las excepciones. |
+
+[Alcances y excepciones completos](#intake-y-clasificación-de-riesgo).
+
+### Probar → habilitar → vigilar
+
+| Paso | Condición |
+|---|---|
+| Probar | Evidencia por superficie, verificación independiente y residual aceptado; sin prueba, se excluye ese uso. |
+| Habilitar | Cada dueño aprueba su decisión de uso o producto; liberar fondos es otra decisión. |
+| Vigilar | Revisión mensual del Council. Incidente, control incumplido o residual no aceptado cortan el uso afectado; reanudar exige prueba corregida y aceptación. |
+
+**Costo en velocidad:** probar demora ese alcance; sin evidencia, se excluye. Compensatorios para el mínimo; plataforma sujeta a señal. [Riesgos y cortes](#riesgos-y-mitigación).
+:::
+
+## Desarrollo y fuentes
+
 Slides que sustenta: [Gobierno y seguridad](../slides.md).
 
 ## Objetivo

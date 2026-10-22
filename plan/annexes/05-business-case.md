@@ -6,6 +6,41 @@ title: "Anexo E — Business case y escenarios"
 
 # Anexo E — Business case y escenarios
 
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+**Qué compra la plata:** controles probados sobre usos existentes, medición
+reproducible y evidencia para decidir si ampliar. Herramientas existentes, sin
+plataforma central. Montos en **k USD**, supuestos de planificación sin cotización.
+
+| Autorización | Caja | Tiempo | Total |
+|---|---:|---:|---:|
+| **Hoy** | **0** | **8** | **8** |
+| **M1-M3 condicionada, con reservas** | **10** | **61** | **71** |
+| **Acumulado hasta cerrar M3** | **10** | **69** | **79** |
+
+La validación previa propone 10 días en 2026, con agendas y acceso confirmados
+antes de empezar. La segunda liberación requiere acta de viabilidad, verificación
+del CFO y firma del CEO, según [R-05](07-resoluciones.md#autoridad-y-liberaciones).
+
+Fuente: [pedido mínimo, liberaciones y costeo](#pedido-inicial-paquete-mínimo).
+El tiempo reasignado ocupa capacidad: no es desembolso ni ahorro de caja.
+
+| Lectura para el CFO | Consecuencia económica |
+|---|---|
+| **Costo esperado frente a techo** | Estimado hasta M3 **18-73**. Continuar todo el año: **≈71 (27-114)**, sin esperas ni reservas gastadas. Techo hasta M3 **79**; suma anual de techos **121**, o **118** sin reservas. Tramos posteriores **16 / 13 / 13**. Fijar techos no libera fondos. |
+| **Valor frente a retorno** | Beneficio de caja e ingresos nuevos presupuestados: **0**. Capacidad liberada sin cifra hasta medir y decidir su destino. No se promete repago en **12 meses**. [Alcance económico](#conclusión-económica). |
+| **Escenarios y corte** | Base: continuidad condicionada en cada gate. Adverso: sin viabilidad, no inicia M1 y la exposición queda en hasta **8**; corte M3, hasta **79**, o **85** con núcleo de guardia aprobado. Favorable: acreditar valor solo tras el gate y con destino decidido, sin anticiparlo como caja. |
+
+**Quién controla:** el CFO verifica cifras y reservas; el CEO firma dentro de
+cada techo. Superarlo o ampliar alcance vuelve al Directorio. Horas, tarifas y
+cotizaciones mueven el rango; los [supuestos del mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md)
+requieren contraste antes de comprometer.
+
+:::
+
+## Desarrollo y fuentes
+
 Slides que sustenta: [Alternativas](../slides.md) y
 [Costo y riesgo](../slides.md). Los gates económicos alimentan además
 [Roadmap técnico, financiero y cultural](../slides.md).
