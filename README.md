@@ -466,8 +466,13 @@ Las decisiones que estaban abiertas en las revisiones de sección (#11–#14 y
 review. El Directorio las sintetiza en el [Anexo G](plan/annexes/07-resoluciones.md)
 (R-01 a R-32), integradas con [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52).
 Los nueve issues asociados quedaron cerrados.
-No son ratificaciones de cada responsable: si no estás de acuerdo con una,
-objetala en el PR o en su issue.
+Esas decisiones no equivalen a ratificaciones de cada responsable: si no estás
+de acuerdo con una, objetala en el PR o en su issue.
+
+Nico cerró su [revisión de arquitectura](https://github.com/lazynet/tp-caio-g11-2026/issues/16#issuecomment-6344787291)
+el 22/10, sobre `main` en `2a7d8d6`, con ratificaciones condicionales y propuestas
+de controles. No confirma la titularidad del código ni reemplaza la revisión de
+esta integración, que se hará en el nuevo PR de la rama `docs/sintesis-ejecutiva-plan`.
 
 Los 15 supuestos modificados quedaron revalidados por instrucción expresa de
 Martín el 21/10/2026, con alcance actualizado y conservando su tipo `Supuesto`.
@@ -493,6 +498,10 @@ Para habilitar la entrega falta:
   `defense/storyline.md`) y hacer el ensayo, en [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21).
 - **Propuesta de Lucho:** rebasarla sobre el deck nuevo antes de evaluarla, en
   [#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27).
+- **Destino de la capacidad:** [#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60)
+  sigue abierto. Nico apoya mantener el caso base y estudiar más funcionalidades
+  por período como sensibilidad, sin caja adicional; falta el acuerdo de Gabriela
+  y Martín y revisar la integración en el nuevo PR. La propuesta no cambia gates.
 
 ## Backlog y seguimiento
 

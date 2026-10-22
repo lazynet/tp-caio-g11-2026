@@ -6,6 +6,44 @@ title: "Anexo G. Resoluciones del Directorio"
 
 # Anexo G. Resoluciones del Directorio
 
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+**El Directorio aprueba un paquete con condiciones y delegaciones delimitadas.**
+Las resoluciones R-01 a R-32 del desarrollo conservan su texto y rigen en
+autoridad y condiciones. Esta síntesis facilita su lectura.
+
+| Qué se decide | Límite y autoridad |
+|---|---|
+| Paquete mínimo | Medición, controles y formación; beneficio de caja e ingreso nuevo presupuestados: 0 |
+| Primera liberación | Directorio: hasta 8k USD de tiempo y caja 0, diez días hábiles de validación con cargo a 2026 |
+| Segunda liberación | CEO: hasta 71k adicionales, exclusivamente con todas las condiciones de R-05 |
+| Techos | 79k hasta cerrar M3; después 16k, 13k y 13k por tramo. Total anual 121k; fijarlos no libera fondos |
+| Gates | CEO firma dentro de cada tramo; CFO verifica y comité de IA dictamina. Excesos y ampliaciones vuelven al Directorio |
+| Alcance excluido | Plataforma, construcción del producto y demás ampliaciones requieren otra decisión y costeo |
+
+**Recomendación:** adoptar el paquete completo sin desprender sus condiciones.
+La alternativa de liberar todo hoy anularía el control por evidencia. Martín
+coordina la revisión del registro en el TP; las personas de Acme que ocupan cada
+rol se nombran en las actas, con producción, verificación y firma separadas.
+
+**Éxito y corte:** cada liberación tiene evidencia, autoridad y reserva suficiente.
+Si falta una condición de la segunda liberación, no arranca M1: se reduce,
+resecuencia o detiene. Seguridad puede suspender un uso aunque cumpla gasto
+y adopción. Sin señal comercial escrita y problema medido, no se construye el
+asistente. Las puertas irreversibles quedan para el cierre de M12 y el plan
+siguiente.
+
+**Registro por tema:** [autoridad y liberaciones](#autoridad-y-liberaciones),
+[gobierno y seguridad](#gobierno-y-seguridad),
+[arquitectura y medición](#arquitectura-y-medición), [personas](#personas),
+[finanzas](#finanzas), [roadmap y comercial](#roadmap-y-comercial).
+La [tabla de evidencia](#quién-produce-verifica-y-firma-cada-decisión) identifica
+los roles por entregable.
+:::
+
+## Desarrollo y fuentes
+
 Slides que sustenta: el cierre del [deck](../slides.md), "Aprobar el plan y sus
 resoluciones", y cada slide que cita una resolución R-xx en su recuadro de
 resolución. Montos en k USD (1k USD = 1.000 USD) salvo que se indique otra

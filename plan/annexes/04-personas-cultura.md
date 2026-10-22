@@ -6,6 +6,44 @@ title: "Anexo D — Personas, cambio y roadmap cultural"
 
 # Anexo D — Personas, cambio y roadmap cultural
 
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+**Decisión:** formar y reasignar al equipo actual con
+**[AI Literacy por rol](../../material/conceptos/m3u2-ai-literacy-niveles.md)**:
+niveles según las tareas. El cruce entre nivel y rol es diseño del plan,
+basado en la cursada.
+
+| Quién | Qué cambia en el trabajo | Tiempo y evidencia |
+|---|---|---|
+| Desarrollo y análisis | Intermedio: especificar criterios, supervisar borradores y corregir código generado; la responsabilidad sigue siendo humana | Práctica en la cohorte del mínimo; código y pruebas revisados ([proceso](#antes-y-después-de-un-proceso-del-requerimiento-al-cambio-en-producción)) |
+| QA, seniors y DevOps | Diseñar pruebas y controles; revisar con una persona distinta del autor; liberar y operar con trazabilidad | Agenda de soporte explícita; calidad, retrabajo e incidentes contra la base ([proceso](#antes-y-después-de-un-proceso-del-requerimiento-al-cambio-en-producción)) |
+| Operaciones y staffing | Aprender usos permitidos; consultar restricciones antes de usar código o datos de clientes | Básico en el mínimo; intermedio y metas posteriores sujetos a ampliación y permisos ([roadmap](#roadmap-cultural-por-tramo-y-métricas)) |
+| CAIO, Personas y managers | Básico: usar herramientas permitidas y revisar resultados en un caso del rol, dentro de la jornada laboral | Registro de evaluación práctica; asistir no acredita aprendizaje ([básico](#insumo-para-el-paquete-mínimo)) |
+
+**Recorrido y costo.** El mínimo financia básico para todos e intermedio para la cohorte en
+M1-M3, después de congelar la base. M4-M6 sostiene seguimiento, sin cursos
+nuevos; Operaciones no tiene meta en M6. El Directorio decide en M6 si costea
+y autoriza nuevas cohortes, avanzado y champions del programa ampliado
+([alcances y costos](05-business-case.md#pedido-inicial-paquete-mínimo),
+[R-23](07-resoluciones.md#personas)).
+
+**Capacidad antes de iniciar.** Operaciones y cada manager validan agendas con
+Personas y Finanzas; una reserva presupuestaria no libera horas. Deben constar
+trabajo desplazado y cobertura. Sin agenda, facilitación o verificación,
+se reduce, resecuencia o difiere la actividad antes de comprometerla
+([capacidad](#capacidad-efectiva-dos-bolsas-sobre-las-mismas-personas)).
+
+**Transición y valor.** Durante los 12 meses, la mejora por IA no se usa para
+desvincular; se preservan causales ajenas a IA: desempeño sostenido, causa justa
+y pérdida de cliente. El CEO comunica el compromiso en M1, con revisión laboral
+([R-20](07-resoluciones.md#personas)). El uso semanal por área acompaña tiempo
+de ciclo y calidad: usar más no demuestra valor ni evalúa desempeño individual
+([métricas](#postura-sobre-el-empleo-y-métricas-de-comportamiento)).
+:::
+
+## Desarrollo y fuentes
+
 Slides que sustenta: [Personas](../slides.md).
 
 Convención de tiempo: el plan tiene una **preparación previa** (octubre-diciembre

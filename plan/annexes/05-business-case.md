@@ -6,6 +6,41 @@ title: "Anexo E — Business case y escenarios"
 
 # Anexo E — Business case y escenarios
 
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+**Qué compra la plata:** controles probados sobre usos existentes, medición
+reproducible y evidencia para decidir si ampliar. Herramientas existentes, sin
+plataforma central. Montos en **k USD**, supuestos de planificación sin cotización.
+
+| Autorización | Caja | Tiempo | Total |
+|---|---:|---:|---:|
+| **Hoy** | **0** | **8** | **8** |
+| **M1-M3 condicionada, con reservas** | **10** | **61** | **71** |
+| **Acumulado hasta cerrar M3** | **10** | **69** | **79** |
+
+La validación previa propone 10 días en 2026, con agendas y acceso confirmados
+antes de empezar. La segunda liberación requiere acta de viabilidad, verificación
+del CFO y firma del CEO, según [R-05](07-resoluciones.md#autoridad-y-liberaciones).
+
+Fuente: [pedido mínimo, liberaciones y costeo](#pedido-inicial-paquete-mínimo).
+El tiempo reasignado ocupa capacidad: no es desembolso ni ahorro de caja.
+
+| Lectura para el CFO | Consecuencia económica |
+|---|---|
+| **Costo esperado frente a techo** | Estimado hasta M3 **18-73**. Continuar todo el año: **≈71 (27-114)**, sin esperas ni reservas gastadas. Techo hasta M3 **79**; suma anual de techos **121**, o **118** sin reservas. Tramos posteriores **16 / 13 / 13**. Fijar techos no libera fondos. |
+| **Valor frente a retorno** | Beneficio de caja e ingresos nuevos presupuestados: **0**. Capacidad liberada sin cifra hasta medir y decidir su destino. No se promete repago en **12 meses**. [Alcance económico](#conclusión-económica). |
+| **Escenarios y corte** | Base: continuidad condicionada en cada gate. Adverso: sin viabilidad, no inicia M1 y la exposición queda en hasta **8**; corte M3, hasta **79**, o **85** con núcleo de guardia aprobado. Favorable: acreditar valor solo tras el gate y con destino decidido, sin anticiparlo como caja. |
+
+**Quién controla:** el CFO verifica cifras y reservas; el CEO firma dentro de
+cada techo. Superarlo o ampliar alcance vuelve al Directorio. Horas, tarifas y
+cotizaciones mueven el rango; los [supuestos del mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md)
+requieren contraste antes de comprometer.
+
+:::
+
+## Desarrollo y fuentes
+
 Slides que sustenta: [Alternativas](../slides.md) y
 [Costo y riesgo](../slides.md). Los gates económicos alimentan además
 [Roadmap técnico, financiero y cultural](../slides.md).
@@ -492,6 +527,49 @@ escenarios:
   y no hay registro de ninguno (la restricción es no contratar).
 
 La lectura del mes 6 pide decidir el destino de la capacidad, y desde ahí el puente se mide.
+
+#### Destino operativo de la capacidad: recomendación pendiente
+
+**Recomendación de Finanzas, pendiente de revisión humana en E/F.** Adoptar la
+opción (a) de [#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60), apoyada por
+[Nicolás](https://github.com/lazynet/tp-caio-g11-2026/issues/60#issuecomment-6344265769): conservar el base y beneficio de caja **0**.
+
+Como sensibilidad hipotética para Cliente A, se propone revisar en M6 más
+funcionalidades por período con el mismo equipo y precio; no se afirma una
+condición contractual, no se monetiza ni se suma a las horas evitadas.
+
+La propuesta no acredita por sí sola el destino exigido por
+[R-19](07-resoluciones.md#arquitectura-y-medición), que conserva su alcance:
+sin destino decidido en M6, el beneficio reconocido sigue en 0.
+
+El puente a caja requiere ingreso o costo evitado demostrado y encaje contractual;
+no se presume contratación evitada. Las alternativas se conservan en #60.
+
+**Indicadores propuestos por Nicolás, complementarios y pendientes.**
+No sustituyen el PR aceptado ni el gate de valor de M9 del [Anexo B](02-arquitectura.md);
+describen entrega y calidad, sin atribuir por sí solos un beneficio a IA.
+
+| Indicador propuesto | Fuente propuesta | Lectura |
+|---|---|---|
+| Funcionalidades desplegadas por período | Jira y registros de despliegue | Errores y mantenimiento se informan por separado; no se suman como funcionalidades |
+| Mediana de días desde pedido priorizado hasta producción | Jira y registros de despliegue | Tiempo de entrega observado; no ahorro de horas ni caja |
+| Incidentes productivos y tiempo de resolución de los críticos | Mesa de servicio | Calidad y recuperación observadas; no ingreso protegido cuantificado |
+
+**Dependencias y costo.** Se proponen datos agregados de fuentes existentes si
+están disponibles y autorizadas, con extracción dentro de horas costeadas.
+Su disponibilidad no está demostrada; no se presume conector nuevo ni extracción gratuita.
+
+Si no se pueden extraer así, estos indicadores quedan opcionales y pendientes,
+o se propone recosteo antes de comprometer recursos; no se agrega un bloqueo al
+gate vigente. El CFO conserva la conversión de capacidad y evita el doble conteo.
+
+**Riesgo comercial propuesto.** Nicolás plantea que una renovación podría reducir
+la dotación. Es una hipótesis pendiente de revisión comercial, con probabilidad
+desconocida; no acredita intención del cliente, ingreso perdido ni ahorro de caja.
+
+**Revisión pendiente.** Los responsables humanos de E/F deben revisar esta
+recomendación. El éxito es disponer de evidencia operativa interpretable para el
+destino elegido; sin datos o encaje, se retira esa sensibilidad, sin cambiar el base.
 
 **Cómo se lee la palanca de riesgo sin inventar probabilidades.** El gasto en
 controles se paga si baja la probabilidad de perder el ingreso que protege en al
@@ -1253,6 +1331,14 @@ críticos cerrados y residual aceptado; padrón y extracción reproducible de
 PR/CI/reversiones/tickets/incidentes, calidad y base congelada; básico para toda
 la organización, intermedio de 15-20 personas y prueba de prácticas sobre el agente.
 Uso, cobertura y faltantes se informan separados de resultados.
+
+El [candidato operativo de B](02-arquitectura.md#candidato-de-quick-win-operativo)
+solo sustituye actividad de la prueba ya costeada: ejecución, revisión, aceptación
+e integración requieren encaje confirmado por persona y semana.
+
+No acredita productividad atribuida, ROI ni caja; sin encaje, se reemplaza o difiere
+con continuidad autorizada. Horas, licencias o responsabilidades adicionales exigen
+recosteo previo: no se presume holgura ([supuesto del mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md#alcance-y-conciliación-m1-m3)).
 
 No incluye gateway, retrieval, harness central, evals en CI de plataforma,
 producto, avanzado ni contractor continuo. Controles equivalentes significa

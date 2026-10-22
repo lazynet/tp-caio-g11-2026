@@ -1,8 +1,8 @@
 # Banco de objeciones
 
 Borrador del CAIO. Respuestas cortas para ensayar; el detalle está en el anexo
-citado. **No hubo ensayo todavía.** Alineado con la integración de #51 sobre
-main `ec1dc41901b9bc3ad4b7b23c5450a1100f560fc7` y su orden de mensajes.
+citado. **No hubo ensayo todavía.** Las respuestas siguen las resoluciones
+vigentes y la síntesis editorial del deck.
 Los supuestos modificados por G fueron revalidados por Martín el 21/10, según
 README; no dejan de ser supuestos. Las cuatro fichas de #55 siguen `draft`,
 sin declaración humana nueva, y #56 conserva el bloqueo regulatorio de entrega.
@@ -10,13 +10,36 @@ Una revisión de fuentes no valida supuestos con datos internos ni equivale a
 aprobación empresarial. El pedido vigente es **aprobar el plan y sus resoluciones R-01 a R-32**
 ([Anexo G](../plan/annexes/07-resoluciones.md)): el paquete mínimo de los meses
 1-3, precedido por una validación de diez días. El pedido anterior de 33 + 6 de caja y
-72 + 7 de tiempo queda como alternativa. Las objeciones 1 a 5 son las cinco
+72 + 7 de tiempo queda como antecedente, no como alternativa vigente.
+Las objeciones 1 a 5 son las cinco
 preguntas más difíciles de `reviews/2026-10-15-comentarios-equipo.md`, con
 enlaces a los anexos y sus secciones vigentes; las demás vienen de las
 revisiones del board y docentes del 2026-10-13 al 2026-10-21, actualizadas al
 pedido vigente. Montos en k USD (miles de dólares).
 Coordina la defensa Lucho (`README.md`); quién responde cada objeción **todavía
 no se acordó**; hay una propuesta al final de [la storyline](storyline.md).
+
+## Respuestas para abrir la conversación
+
+Estas respuestas breves siguen el orden del deck. El banco numerado conserva
+el detalle para repreguntas. Son propuestas para ensayar, sin ensayo realizado.
+
+| Pregunta | Respuesta oral breve | Respaldo |
+|---|---|---|
+| Qué problema concreto atacan? | La IA ya se usa, pero falta comparar su aporte con una base. El candidato operativo corrige un defecto real de código propio usado, con regresión, revisión, CI y aceptación del usuario interno. Que funcione esa corrección no demuestra productividad ni ROI | [A](../plan/annexes/01-diagnostico.md), [B](../plan/annexes/02-arquitectura.md) |
+| Compramos otra plataforma? | El mínimo configura herramientas existentes y verifica sus controles. Una plataforma exige señal, brecha, alternativas, economía incremental o aprendizaje con pérdida aceptada y límite declarado, y capacidad demostrada. Decide el Directorio | [B](../plan/annexes/02-arquitectura.md), [G](../plan/annexes/07-resoluciones.md#arquitectura-y-medición) |
+| Qué producto se comprometen a entregar? | Ninguno hoy. Estudiamos si un asistente mejora la integración frente a documentación y soporte. Sin problema medido y señal comercial escrita con presupuesto y rango de precio, no se construye | [F](../plan/annexes/06-roadmap-riesgo.md#hipótesis-de-producto-rice-ajustado-por-riesgo) |
+| Cuánto sale de caja hoy? | Cero. Se liberan hasta 8k USD de tiempo propio para diez días hábiles en 2026. Los 71k adicionales dependen de R-05 y firma del CEO. 79k hasta M3 y 121k anual son techos por tramo, con caja y tiempo separados | [E](../plan/annexes/05-business-case.md), [G](../plan/annexes/07-resoluciones.md#autoridad-y-liberaciones) |
+| Y si no mejora o no hay tiempo? | Sin agendas o viabilidad, se reduce o corta antes de M1. Seguridad puede suspender siempre. M6 decide por adopción, costo y controles; M9 exige mejora distinguible de cero sin daño. Si no puede medirse: beneficio cero y sin expansión | [F](../plan/annexes/06-roadmap-riesgo.md#gates-por-condición-pasa-espera-corta) |
+| Dónde está el retorno? | El presupuesto cuenta beneficio de caja e ingreso nuevo cero. Entregar más funcionalidades por período no demuestra caja: convertir capacidad exige evidencia de ingreso o costo evitado y encaje contractual | [E](../plan/annexes/05-business-case.md), [Propuesta pendiente](../plan/annexes/06-roadmap-riesgo.md#entrega-al-cliente-propuesta-de-sensibilidad-pendiente) |
+| Y si el cliente recorta el equipo al renovar? | Es una hipótesis comercial planteada en la revisión, sin intención confirmada ni probabilidad estimada. No sumamos valor defensivo ni monetizamos la facturación concentrada. Revisar más funcionalidades por período no cambia el caso base ni el gate M9; sigue pendiente de acuerdo humano | [Propuesta pendiente](../plan/annexes/06-roadmap-riesgo.md#entrega-al-cliente-propuesta-de-sensibilidad-pendiente) |
+| Dónde se ve la cursada? | El diagnóstico prioriza brechas; factibilidad, impacto y riesgo ordenan iniciativas; build/buy/agentificar favorece configurar; AI literacy cambia la formación por rol. El tope de autonomía mantiene decisión humana en producto. Kill-fast controla viabilidad; los gates liberan tramos y leen valor en M9 | [Aplicación al caso](../plan/annexes/06-roadmap-riesgo.md#de-los-conceptos-de-la-cursada-a-la-decisión-del-caso) |
+| Tienen un quick win o lo prometen para después? | Proponemos sustituir una tarea de la prueba existente por una corrección integrada y en uso real, después de base, formación y controles. Falta seleccionar defecto, usuario y confirmar todas sus horas. Si no cabe, M3 termina sin ese resultado. No es ganancia de negocio medida ni cambia el gate | [Primeros 100 días](../plan/annexes/06-roadmap-riesgo.md#primeros-100-días-por-qué-no-hay-quick-win-de-negocio-en-los-meses-1-3) |
+
+**Escenario adverso a ensayar:** corte en M3, hasta 79k al cerrar y 85k anual
+con guardia aprobada al salir. Exposición presupuestaria no equivale a pérdida
+incremental ni salida de caja. Un cambio de precio del proveedor no queda
+resuelto por el mínimo ni por una pasarela sola.
 
 ## Las cinco preguntas más difíciles
 

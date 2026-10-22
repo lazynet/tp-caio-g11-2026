@@ -6,6 +6,48 @@ title: "Anexo F — Roadmap ajustado por riesgo"
 
 # Anexo F — Roadmap ajustado por riesgo
 
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+**Kill/scale gates: avanzar por evidencia sin comprometer toda la ejecución hoy.**
+Aplicamos [kill-fast](../../material/conceptos/m1u1-kill-fast.md) a la viabilidad
+temprana; el valor se lee recién en M9. El mínimo integra medición, controles
+y formación.
+
+| Momento | Resultado exigido y decisión |
+|---|---|
+| Validación previa, 2026 | Diez días hábiles para diagnóstico, agendas y viabilidad. Directorio libera hasta 8k USD de tiempo, caja 0 |
+| Antes de M1 | CEO libera hasta 71k adicionales solo con R-05: capacidad, método, presupuesto y demás condiciones verificadas |
+| M1–M3 | Base congelada, política y controles probados, formación. Techo acumulado hasta cerrar: 79k |
+| M4–M6 | Medición y estudio del asistente de integración. Gate por adopción, costo y controles; no lee valor. Tramo: 16k |
+| M7–M9 | Valor: piso del intervalo de 90% >0, sin daño. Tramo: 13k |
+| M10–M12 | Evaluación, traspaso y decisión propia del año 2. Tramo: 13k |
+
+**Recomendación:** sostener el mínimo. El CEO firma gates dentro de cada tramo,
+el CFO verifica y el comité de IA dictamina. Maxi coordina la revisión del roadmap
+en el TP; los roles de Acme y sus nombres se documentan en las actas.
+
+**Escenarios:** base, continuidad condicionada sin beneficios presupuestados;
+pesimista, reducir o cortar por falta de viabilidad o daño; optimista, mejora
+medible que exige demostrar su conversión económica. Techo anual: 121k USD.
+Si corta en M3, máximo anual 85k con guardia aprobada al salir.
+
+**Corte y contingencia:** seguridad prevalece. M9 permite una única espera de seis
+semanas con estimado ≥+5% sin pasar; sin pasar al vencer, corta. Medición no viable:
+beneficio 0, sin expansión, continuidad por adopción, calidad, costo y controles.
+Plataforma y construcción del producto requieren costeo y decisión propios.
+
+**Reversibilidad:** el mínimo se puede cortar en cada gate. Las puertas
+irreversibles se deciden al cierre de M12 para el plan siguiente.
+
+**Respaldo:** [gates](#gates-por-condición-pasa-espera-corta),
+[escenarios](#escenarios), [contingencias](#contingencias),
+[hipótesis de producto](#hipótesis-de-producto-rice-ajustado-por-riesgo) y
+[catálogo de decisiones](#catálogo-único-de-decisiones).
+:::
+
+## Desarrollo y fuentes
+
 Slides que sustenta, por el nombre de su encabezado:
 [Beneficio](../slides.md),
 [Roadmap técnico, financiero y cultural](../slides.md),
@@ -251,9 +293,11 @@ queda descartado, porque ninguna intervención entra en la base.
 El método del plan de 100 días pide 2-3 quick wins con valor medido entre los días
 31 y 70 ([Fuente](../../material/conceptos/m1u2-plan-100-dias.md)). El plan se aparta a
 propósito y reconoce el costo: **posterga a la lectura del mes 9 el primer
-aprendizaje de valor** (el mes 6 no lee valor; [Anexo B](02-arquitectura.md), «Gate de valor»). La rampa base es 0% en los meses 1-3
+aprendizaje de valor del programa** (el mes 6 no lee valor; [Anexo B](02-arquitectura.md), «Gate de valor»). La rampa base es 0% en los meses 1-3
 ([rampa](../../context/supuestos/rampa-de-la-ganancia.md)), así que el mes 3 no
-promete atribución.
+promete atribución. Esto no impide proponer un resultado operativo puntual:
+corregir un defecto real y aceptado por su usuario, sin convertirlo en evidencia
+de productividad ni retorno del programa.
 
 - **Sin plataforma en los meses 1-3.** El paquete mínimo usa las herramientas
   existentes; el gateway no mide valor sin harness ni evals, y la opción de
@@ -265,6 +309,33 @@ promete atribución.
   ganancia. Se suspende si sube el retrabajo, si falla un control o si la matriz
   no habilita repositorios.
 - **Precondiciones.** Sin matriz ni inventario no se sabe qué datos se pueden usar.
+
+#### Candidato a quick win táctico: corrección real con regresión
+
+**Propuesta condicionada, no aprobada por Acme ni observada.** Concreta una tarea
+de la prueba de prácticas ya costeada y sustituye una tarea de esa prueba;
+no amplía alcance, horas, gates ni presupuesto. La viabilidad técnica propuesta está en el
+[Anexo B](02-arquitectura.md). El diagnóstico y la base son habilitadores,
+no se presentan como quick wins.
+
+| Campo | Candidato a validar |
+|---|---|
+| Usuario y problema | Usuario interno de un flujo que ya usa código propio; un defecto real de su backlog con impacto concreto aceptado por ese usuario. Falta seleccionar defecto y usuario |
+| Resultado útil | Corrección con IA integrada por el flujo normal y en uso real comprobado, revisión humana distinta del autor, CI y aceptación del usuario; prueba de regresión que falla antes del arreglo y pasa después. No basta un borrador o una demo en sandbox |
+| Dependencias | Repositorio propio elegible, controles aplicables aprobados, base congelada según el acta; ocho semanas en el camino esperado. Formación aplicable terminada antes de intervenir |
+| Plazo propuesto | Dentro de la ventana restante de la prueba M3 existente, solo después de congelar la base y completar formación y controles aplicables. Sin un plazo nuevo ni una ventana de observación nueva |
+| Éxito puntual | Usuario interno acepta la corrección y se comprueban su integración y uso real. No acredita beneficio, no prueba ausencia de daño ni reemplaza las lecturas del protocolo de calidad |
+| Corte | Sin defecto útil, permisos, agenda o formación completa, no se fuerza. Si falla regresión, CI, revisión o aceptación, no se integra; ante daño o falla de control, se suspende |
+| Capacidad y autoridad | Tecnología propone sustituir una tarea dentro de la prueba existente; la matriz persona/semana confirma ejecución, revisión, aceptación e integración dentro de las horas costeadas. El CEO libera el tramo según R-05; no hay autorización empresarial nueva ni compromiso con clientes |
+| Si no cabe | Retirar de M3 sin sumar horas ni comprimir base o formación. Reevaluar en M4 solo con continuidad autorizada y capacidad existente; si requiere recursos adicionales, recostear antes de liberar. No cumplir este candidato no agrega un corte financiero |
+
+La [matriz factibilidad–impacto](../../material/conceptos/m1u2-matriz-factibilidad-impacto.md)
+permite un quick win táctico de impacto acotado y utilidad visible. No se declara
+alta factibilidad hasta validar agenda, defecto y condiciones. El resultado
+puntual no atribuye una mejora causal a la IA, no acredita productividad ni
+ahorro, y mantiene beneficio presupuestado cero. El programa conserva su primera
+lectura de valor en M9; la calidad y la maduración de PR mantienen sus ventanas
+del protocolo, sin convertirlas en condiciones nuevas de éxito del candidato.
 
 Lo que se entrega al día 90: política ratificada (R-07) con constancia de versión y alcance y aplicación registrada, matriz
 de restricciones, inventario, controles probados por superficie con residual
@@ -519,7 +590,50 @@ Directorio tiene base congelada, la lectura de valor del mes 9 con su intervalo 
 la del 12), la guardia de calidad de cada gate, controles probados por superficie con residual aceptado,
 adopción por área con su denominador y la decisión del año 2 tomada con esa
 evidencia. No es ingreso ni caja: el plan no presupuesta beneficios, y una
-mejora medida se convierte en plata solo si se vende o evita una contratación.
+mejora medida se convierte en plata solo con una vía contractual que lo permita
+y evidencia de ingreso o costo evitado.
+
+<div style="page-break-before: always"></div>
+
+#### Entrega al cliente: propuesta de sensibilidad pendiente
+
+**Propuesta en revisión, no resolución ni consenso del equipo.** El responsable
+del caso recomendó mantener el caso base y Nico apoyó esa opción; sigue pendiente
+el acuerdo humano de los responsables en la conversación de seguimiento.[^destino-capacidad]
+Finanzas recomienda conservar horas evitadas y beneficio de caja e ingreso nuevo
+presupuestados cero, según el
+[detalle económico pendiente](05-business-case.md#destino-operativo-de-la-capacidad-recomendación-pendiente).
+
+Mayor entrega no demuestra caja: su conversión exige evidencia de ingreso o
+costo evitado y encaje contractual. **Más funcionalidades por período** queda
+como sensibilidad de destino posible para
+discutir en M6, sin monetizarla ni sumarla a las horas evitadas. Por sí sola no
+acredita el destino exigido por R-19, que mantiene vender capacidad o evitar una
+contratación: sin ese destino, el beneficio sigue en cero. No presupone venta,
+renegociación ni cambio de precio, y no modifica R-19 ni el gate del Anexo B.
+
+| Seguimiento operativo propuesto | Fuente posible | Qué permite observar |
+|---|---|---|
+| Funcionalidades desplegadas por período, con errores y mantenimiento separados | Registro de trabajo y despliegues | Entrega efectiva, sin equiparar toda corrección a una nueva funcionalidad |
+| Mediana del tiempo entre pedido priorizado y producción | Registro de trabajo y despliegues | Tiempo de entrega desde un punto de inicio definido |
+| Incidentes productivos y tiempo de resolución de los críticos | Mesa de servicio | Calidad y respuesta operativa |
+
+Son las métricas complementarias propuestas por Nico, no un protocolo causal
+aprobado.[^destino-capacidad] No sustituyen los PR aceptados ni el gate M9,
+no atribuyen resultados a la IA y no liberan ni cortan fondos. Solo se recolectan
+en agregados si fuentes, permisos y exportaciones caben en las horas ya
+costeadas; no se presume un conector, una responsabilidad ni capacidad nueva
+gratuita. Si no caben, quedan pendientes o se recostean antes de incorporarlas,
+sin bloquear por esa ausencia el gate vigente.
+
+**Hipótesis comercial, sin probabilidad estimada:** al renovar, un cliente
+podría buscar una dotación menor. Es una posibilidad, sin intención
+confirmada.[^destino-capacidad] La concentración no se
+convierte en importe protegido ni ahorro. El efecto se revisa con evidencia
+contractual y comercial antes de cambiar una sensibilidad; no se incorpora
+valor defensivo, pérdida esperada ni caja al caso base.
+
+[^destino-capacidad]: [Propuesta pública de destino de la capacidad](https://github.com/lazynet/tp-caio-g11-2026/issues/60) y [respuesta de revisión del 22/10/2026](https://github.com/lazynet/tp-caio-g11-2026/issues/60#issuecomment-6344265769). Alcance: propuesta de seguimiento y sensibilidad del caso anonimizado, sin acuerdo empresarial ni verificación de resultados.
 
 **Referencia del paquete completo (alcances distintos, no comparables como precios).**
 47/161/≈199/394/≈400/471 son costos publicados de alcances distintos
@@ -578,6 +692,28 @@ propia. Las demás filas son riesgos de ejecución del roadmap, con juicio del C
 | El gobierno frena la entrega y el uso migra por fuera | Media | Alto | Intake en niveles, con un objetivo de 5 días hábiles para riesgo medio: es un cambio de la política vigente y lo decide el Directorio (R-07) | Más del 20% fuera de ese objetivo dos meses |
 
 ## Decisiones
+
+### De los conceptos de la cursada a la decisión del caso
+
+Estas son aplicaciones del equipo al caso, no resultados ni exigencias
+regulatorias derivadas del material. Cada marco explica una elección concreta.
+
+| Concepto y fuente | Decisión que explica |
+|---|---|
+| [Madurez en cinco dimensiones](../../material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md) | Revisar brechas por dimensión sin promediar niveles ni equiparar uso con valor; diagnóstico provisional en A |
+| [Factibilidad–impacto](../../material/conceptos/m1u2-matriz-factibilidad-impacto.md) y [RICE ajustado por riesgo](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md) | Primero prueba operativa con herramientas actuales; en producto, estudiar integración antes que pagos o servicio de agentes. La tabla RICE siguiente conserva puntajes hipotéticos, a validar; la operación no recibe un puntaje nuevo |
+| [Build / buy / agentificar](../../material/conceptos/m1u2-build-buy-agentificar.md) | Configurar lo existente según costo, tiempo, capacidad y control. La nueva orquestación o plataforma necesita R-15 y otra autorización; no se llama agentificación a cualquier configuración |
+| [AI literacy por nivel y rol](../../material/conceptos/m3u2-ai-literacy-niveles.md) | Básico general e intermedio para la cohorte, con tareas por rol y tiempo protegido. El avanzado queda afuera del mínimo; no se añade formación por nombrar el marco |
+| [Autonomía L0–L4](../../material/conceptos/m1u4-escala-autonomia-l0-l4.md) | En producto, human-in-the-loop y tope L2: prepara, una persona decide y ejecuta. Es escala pedagógica del curso, no certificación; no cambia el uso interno con revisión |
+| [Kill-fast](../../material/conceptos/m1u1-kill-fast.md) y [kill/scale gates](../../material/conceptos/m1u2-kill-scale-gates.md) | Señales y plazo de inviabilidad antes de empezar, con posibilidad de corte temprano. Los gates formales liberan cada tramo; no exigen retorno antes de poder medirlo: M6 sin valor, M9 con valor. Esta distinción es aplicación del equipo, no una equivalencia que el curso imponga |
+
+La priorización cualitativa de la slide 3 resume impacto buscado, factibilidad y
+riesgo. La prueba interna aprovecha herramientas existentes, con elegibilidad y
+controles por verificar. El estudio de integración usa documentación propia y
+datos sintéticos; se posterga construir hasta demostrar problema y señal.
+Pagos queda detrás por habilitación externa y seguridad; el servicio de agentes,
+por certificaciones faltantes y competencia con entregas. No se transforma esta
+lectura en ROI ni se suman alcances no autorizados.
 
 ### Decisiones del CAIO sobre los titulares
 
