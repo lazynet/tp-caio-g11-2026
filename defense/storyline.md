@@ -12,8 +12,9 @@ equipo la discuta. El pedido es aprobar el plan y sus resoluciones R-01 a R-34
 reorganiza su exposición alrededor de tareas, evidencia y liberaciones.
 Los supuestos modificados por G fueron revalidados por instrucción de Martín
 el 21/10, según README; conservan su tipo `Supuesto`.
-Las cuatro fichas de #55 siguen `draft`, sin declaración humana nueva;
-#56 conserva el bloqueo regulatorio de entrega. Una revisión de fuentes no
+Tres de las cuatro fichas de #55 quedaron `verified` el 22/10 con alcance acotado; `eu-ai-act` sigue `draft`.
+#56 quedó resuelto por R-34: BCRA y la aplicabilidad del AI Act son supuestos
+sin uso decisorio. Una revisión de fuentes no
 valida los supuestos con datos internos ni acredita acuerdo del equipo o
 aprobación empresarial. La anonimización todavía necesita la revisión de un humano
 autorizado. **No hubo ensayo todavía**: cuando lo haya, se registra con fecha,
