@@ -132,16 +132,22 @@ anti-patrón del *governance perfecto*, [Council vs CoE](../../material/concepto
 
 En el escenario del plan, Acme Labs actúa como **proveedor tecnológico** de bancos y PSP
 ([fuente](../../context/hechos/regulacion-clientes-financieros.md), cotejada con los
-textos ordenados del BCRA y las leyes actualizadas). Se separa lo que obliga a Acme Labs
-de lo que le llega por contrato, según el sujeto y la actividad.
+textos ordenados del BCRA en las versiones que indica y con las leyes actualizadas). Se separa
+lo que obliga a Acme Labs de lo que le llega por contrato, según el sujeto y la actividad.
+Las filas del BCRA describen lo que dicen esos textos a su fecha; que alcancen a un cliente
+concreto, que sigan vigentes sin cambios y que el cliente las traslade a Acme Labs son
+**supuestos**. Ninguna decisión de este anexo ni del deck depende de ellos: las decisiones
+se apoyan en la evidencia contractual de los meses 1-3 (ver "Licencia para vender"), y el
+alcance jurídico lo revisa el dictamen focalizado de Legal externo de M1 (cautela 4 de
+"Controles por tramo").
 
 | Norma o marco | Quién está obligado | Cómo llega a Acme Labs | Estado de verificación |
 |---|---|---|---|
-| BCRA, requisitos mínimos de tecnología y seguridad (texto ordenado al 13/02/2026, Com. "A" 8401): sección 4.6 (IA propia o de terceros) y sección 10 (terceros) | Entidades financieras y PSP registrados (sección 1.1) | **Heredada**: como proveedor tecnológico, los servicios de IA de Acme Labs entran en la evaluación y las condiciones de tercerización del cliente | Cotejado con el texto ordenado oficial. La 4.6 exige a la entidad documentar objetivos de uso de IA propia o de terceros; definir responsables, modelos, datos, métricas y umbrales; evaluar riesgos; prevenir sesgos, documentar explicabilidad, revisar resultados e informar al cliente. La 10 exige evaluar y formalizar la relación con terceros, y la entidad conserva la responsabilidad. **No respalda** que un cliente le exija a Acme Labs controles concretos ni que le compre IA: eso, si existe, llega por contrato (ver "Licencia para vender"). Cambios posteriores, a revisar antes de la entrega |
-| BCRA, proveedores de servicios de pago (texto ordenado al 02/10/2026, Com. "A" 8488), secciones 1 y 2 | Quien debe inscribirse como PSP según la función que desempeña, incluidos quienes ofrecen cuentas de pago | **Según la entidad operadora** del producto propio de pagos y su función y registro como PSP. Desarrollar el software no vuelve obligada a Acme Labs por sí solo | Cotejado con el texto ordenado oficial. Los requisitos específicos de habilitación del producto no se verificaron |
+| BCRA, requisitos mínimos de tecnología y seguridad (texto ordenado al 13/02/2026, Com. "A" 8401): sección 4.6 (IA propia o de terceros) y sección 10 (terceros) | Entidades financieras y PSP registrados (sección 1.1) | **Heredada**: como proveedor tecnológico, los servicios de IA de Acme Labs entran en la evaluación y las condiciones de tercerización del cliente | Cotejado con el texto ordenado oficial. La 4.6 exige a la entidad documentar objetivos de uso de IA propia o de terceros; definir responsables, modelos, datos, métricas y umbrales; evaluar riesgos; prevenir sesgos, documentar explicabilidad, revisar resultados e informar al cliente. La 10 exige evaluar y formalizar la relación con terceros, y la entidad conserva la responsabilidad. **No respalda** que un cliente le exija a Acme Labs controles concretos ni que le compre IA: eso, si existe, llega por contrato (ver "Licencia para vender"). Vigencia posterior a esa versión y alcance sobre cada cliente: supuesto, sin uso decisorio; los revisa Legal externo en ejecución (M1) |
+| BCRA, proveedores de servicios de pago (texto ordenado al 02/10/2026, Com. "A" 8488), secciones 1 y 2 | Quien debe inscribirse como PSP según la función que desempeña, incluidos quienes ofrecen cuentas de pago | **Según la entidad operadora** del producto propio de pagos y su función y registro como PSP. Desarrollar el software no vuelve obligada a Acme Labs por sí solo | Cotejado con el texto ordenado oficial a esa fecha. Los requisitos específicos de habilitación del producto no se verificaron; no se presumen (R-08, abajo) |
 | Ley 21.526, arts. 39-40 (secreto financiero) | Entidades alcanzadas y su personal. El art. 39 protege sus **operaciones pasivas**, con las excepciones legales; el art. 40 regula la información que recibe el BCRA | **Heredada** de los clientes que sean entidades alcanzadas: condiciona qué información de esas operaciones puede salir hacia un modelo. Un PSP no se equipara a un banco | Cotejada con el texto actualizado |
 | Ley 25.326 e información de la AAIP (datos personales y sensibles; el art. 12 restringe transferencias internacionales sin protección adecuada, con excepciones) | Quien trata datos personales | **Propia** cuando Acme Labs trata datos personales: enviar datos a un modelo alojado en el exterior exige evaluar destino, datos y mecanismo aplicable (la AAIP describe cláusulas contractuales modelo y normas corporativas vinculantes) | Cotejada con el texto actualizado y la AAIP. El rol de Acme Labs (responsable o encargado) lo confirma asesoría legal |
-| EU AI Act (Reg. 2024/1689, modificado por el Omnibus 2026/1744) | Proveedores y desplegadores con sistemas o resultados usados en la UE (art. 2.1.c) | **No aplica por defecto**; se activa si un cliente opera en la UE o el resultado se usa allá | Fechas leídas de una copia del DOUE; falta cotejar con EUR-Lex ([fuentes faltantes](../../material/huecos.md)) |
+| EU AI Act (Reg. 2024/1689, modificado por el Omnibus 2026/1744) | Proveedores y desplegadores con sistemas o resultados usados en la UE (art. 2.1.c) | **No aplica por defecto**; se activa si un cliente opera en la UE o el resultado se usa allá | Fechas cotejadas contra el texto español del DOUE (Reg. 2026/1744, art. 113 modificado) en el [calendario](../../material/frameworks/eu-ai-act-calendario-sanciones.md) y la [fuente del Omnibus](../../material/conceptos/m1u4-ai-omnibus-sigen.md); cotejo confirmado por revisión humana el 22/10/2026. La aplicabilidad al caso (art. 2.1.c) y la lectura operativa de los arts. 43 y 49 quedan como supuesto, sin uso decisorio |
 | NIST AI RMF 1.0 | Nadie (voluntario) | **Voluntaria**: cada riesgo del registro lleva su función (Govern, Map, Measure, Manage) y su evidencia; se declara alineación, no cumplimiento | Confirmado en la página de NIST ([fuente](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md)); el mapeo es por función, las subcategorías (por ejemplo GOVERN 1.6) no se verificaron |
 | ISO/IEC 42001:2023 | Nadie (certificación voluntaria) | **Voluntaria**: se alinea con brecha documentada, no se certifica en el año | Edición 2023 según la [fuente de los tres marcos](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md); la página de ISO no se recotejó ([fuentes faltantes](../../material/huecos.md)). Ver el mapeo en Riesgos y en "Compliance: alcance explícito" |
 | Guía SIGEN 197/2026 | Sector público nacional | **No aplica**; solo si un cliente es un organismo público | Existe; el anexo no se leyó |
@@ -164,19 +170,29 @@ con marca propia un motor de terceros, o cuando oriente un modelo genérico a un
 alto riesgo ([fuente](../../material/frameworks/eu-ai-act-proveedor-desplegador.md)). La
 consecuencia práctica es una **hipótesis**: aun fuera del alcance de la UE, algunos
 clientes podrían pedirle por contrato esa disciplina de proveedor. Hay que separar dos
-cosas que la hipótesis mezcla. Lo que el regulador le exige al **banco** (el texto ordenado de
-tecnología del BCRA lo obliga a gestionar la IA propia o de terceros y a formalizar la
-relación con sus terceros) es un requisito regulatorio del cliente;
+cosas que la hipótesis mezcla. Lo que el regulador le exige al **banco** (según la fuente
+verificada, el texto ordenado de tecnología del BCRA al 13/02/2026 le pide gestionar la IA
+propia o de terceros y formalizar la relación con sus terceros) es un requisito regulatorio
+del cliente;
 que el banco se lo traslade a Acme Labs como condición de compra o de renovación es una
 **exigencia comercial al proveedor**, y eso no está probado. Solo la evidencia
 contractual de los meses 1-3 (ver "Licencia para vender") la confirma o la descarta.
 
-**Calendario.** Según la fuente sobre el Omnibus, el alto riesgo del Anexo III (que incluye el
-scoring crediticio) rige desde el 2027-12-02 ([fuente](../../material/conceptos/m1u4-ai-omnibus-sigen.md)),
-que **cae dentro de la ventana**: los meses 10-12 terminan en diciembre de 2027. El Anexo III enumera otros usos de alto
-riesgo además del crédito, como empleo y educación (misma [fuente](../../material/conceptos/m1u4-ai-omnibus-sigen.md)).
-Ni la fecha ni la lista prueban que aplique a Acme Labs. La fecha sale de fuentes secundarias:
-el texto consolidado de EUR-Lex no se cotejó, así que no va a una slide sin chequearla.
+**Calendario.** Con el Omnibus, las secciones 1 a 3 del capítulo III (alto riesgo: requisitos
+y obligaciones) rigen para los usos del Anexo III desde el 2027-12-02 (art. 113, letra c),
+inciso i), en la redacción del Reg. 2026/1744); antes del Omnibus regían el 2026-08-02. El
+Anexo III incluye la evaluación de solvencia de personas físicas (punto 5.b) y otros usos,
+como empleo y educación. El alto riesgo de productos regulados (Anexo I) pasa al 2028-08-02
+(inciso ii). Fechas cotejadas contra el texto español del DOUE en el
+[calendario](../../material/frameworks/eu-ai-act-calendario-sanciones.md) y la
+[fuente del Omnibus](../../material/conceptos/m1u4-ai-omnibus-sigen.md). El 2027-12-02 **cae
+dentro de la ventana**: los meses 10-12 terminan en diciembre de 2027.
+Ni la fecha ni la lista prueban que aplique a Acme Labs: la aplicabilidad depende del
+art. 2.1.c y se pregunta por cliente (ver "Compliance: alcance explícito"). También queda
+abierta la lectura operativa de la evaluación de conformidad y el registro (arts. 43 y 49),
+que el art. 113 deja en la fecha general mientras difiere los requisitos; es supuesto y no
+sostiene ninguna decisión. El cotejo de las fechas tiene revisión humana del 22/10/2026;
+ni la fecha ni la lista prueban que la norma aplique al caso.
 
 ## Riesgos y mitigación
 
@@ -781,11 +797,16 @@ alternativa de gobierno mínimo y formación del [Anexo E](05-business-case.md),
 1. La función legal es externa y su costo es un supuesto sin cotización.
 2. El rol de Acme Labs frente a la Ley 25.326 (responsable o encargado del tratamiento)
    necesita asesoría.
-3. Los textos ordenados del BCRA de tecnología (13/02/2026) y de PSP (02/10/2026) obligan a la
-   entidad respecto de la IA y de sus terceros (ver la tabla del marco), pero no prueban que un
-   cliente le exija controles de IA a Acme Labs; eso lo prueba, o no, la evidencia contractual
-   (ver "Licencia para vender"). Los cambios posteriores a esas fechas se revisan antes de la entrega.
-4. Legal externo debe confirmar alcance, versión vigente, rol y excepciones de BCRA, AI Act y Ley 25.326; esta lectura no valida ninguna de esas obligaciones.
+3. Según la fuente verificada, los textos ordenados del BCRA de tecnología (13/02/2026) y de PSP
+   (02/10/2026) se dirigen a la entidad respecto de la IA y de sus terceros (ver la tabla del
+   marco). No prueban que un cliente le exija controles de IA a Acme Labs; eso lo prueba, o no,
+   la evidencia contractual (ver "Licencia para vender"). Su vigencia posterior a esas fechas y
+   su alcance sobre cada cliente son supuestos sin uso decisorio: el plan no cuenta con ellos
+   para ninguna decisión ni compromete un recotejo antes de la entrega.
+4. El alcance, la versión vigente, el rol y las excepciones de BCRA, AI Act y Ley 25.326 los
+   revisa Legal externo en el dictamen focalizado de M1 (ver "Insumos para Finanzas"), como
+   actividad de ejecución. Esta lectura no valida ninguna de esas obligaciones; si el dictamen
+   agrega un requisito, el control sube a exigible en el gate siguiente (R-11).
 5. La matriz de restricciones de clientes depende del área comercial y no existe todavía
    ([fuente](../../context/hechos/gobierno-y-politica-ia.md)).
 6. Los residuales del registro son objetivos que se confirman con las pruebas de los meses
@@ -796,8 +817,10 @@ alternativa de gobierno mínimo y formación del [Anexo E](05-business-case.md),
 
 **Problema.** El deck dice que la base compra "licencia para venderles a bancos". Hoy eso
 se apoya en un [supuesto](../../context/supuestos/apetito-de-riesgo-de-clientes.md), no
-en contratos. El BCRA obliga al banco a gestionar la IA de sus terceros y a formalizar esa
-relación; eso no prueba que le exija controles a Acme Labs ni que le compre IA. Pedir controles tampoco es
+en contratos. El texto ordenado del BCRA al 13/02/2026 le pide al banco gestionar la IA de
+sus terceros y formalizar esa relación ([fuente verificada](../../context/hechos/regulacion-clientes-financieros.md));
+eso no prueba que le exija controles a Acme Labs ni que le compre IA, y la decisión del mes 3
+no se apoya en esa norma sino en la evidencia contractual. Pedir controles tampoco es
 pedir IA: son dos señales distintas.
 
 **Tres paquetes, con los renglones de "Insumos para Finanzas".** El paquete se parte según

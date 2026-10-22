@@ -10,7 +10,7 @@ title: "Anexo G. Resoluciones del Directorio"
 ## Síntesis ejecutiva
 
 **El Directorio aprueba un paquete con condiciones y delegaciones delimitadas.**
-Las resoluciones R-01 a R-32 del desarrollo conservan su texto y rigen en
+Las resoluciones R-01 a R-34 del desarrollo conservan su texto y rigen en
 autoridad y condiciones. Esta síntesis facilita su lectura.
 
 | Qué se decide | Límite y autoridad |
@@ -294,6 +294,25 @@ autoridad y condiciones; en cifras rige el anexo dueño de la cifra.
   retención hecha es irreversible para esas personas.
   *Desarrolla:* [Anexo C](03-gobierno-seguridad.md), [Anexo D](04-personas-cultura.md),
   [Anexo B](02-arquitectura.md).
+- **R-34 · Supuestos regulatorios sin uso decisorio.** El plan trata como
+  supuestos la vigencia posterior y el alcance sobre cada cliente de los textos
+  ordenados del BCRA que cita el Anexo C, su traslado a Acme Labs y la
+  aplicabilidad del AI Act al caso (art. 2.1.c). Ninguna liberación, gate ni
+  resolución depende de verificarlos: las decisiones se apoyan en la evidencia
+  contractual de los meses 1-3 (R-09). Las fechas del AI Act cotejadas contra el
+  DOUE se usan como contexto del calendario, no como obligación de Acme Labs. La
+  revisión jurídica es una actividad de ejecución: el dictamen focalizado de Legal
+  externo arranca en M1, dentro del legal focalizado ya costeado en M1-M3. Esta
+  resolución no crea obligaciones jurídicas ni reconoce que una norma aplique.
+  *Autoridad:* AI Council, con Legal externo; el Responsable de seguridad lleva el
+  hallazgo al intake. *Hito:* dictamen focalizado de M1-M3. *Si no se cumple:* sin
+  dictamen, los supuestos siguen sin uso decisorio y los casos que podrían caer en
+  alto riesgo quedan fuera de la liberación hasta tenerlo; si el dictamen muestra
+  que una norma alcanza a un caso, ese caso vuelve al intake y cualquier cambio de
+  alcance o techo vuelve al Directorio. *Tipo:* reversible.
+  *Registro:* decisión del responsable del caso del 2026-10-22
+  ([#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56)).
+  *Desarrolla:* [Anexo C](03-gobierno-seguridad.md), [Anexo F](06-roadmap-riesgo.md).
 
 ### Arquitectura y medición
 
@@ -602,6 +621,26 @@ autoridad y condiciones; en cifras rige el anexo dueño de la cifra.
   se financia por defecto. *Tipo:* **irreversible**.
   *Desarrolla:* [Anexo F](06-roadmap-riesgo.md), [Anexo B](02-arquitectura.md),
   [Anexo C](03-gobierno-seguridad.md).
+- **R-33 · Destino de la capacidad: caso base intacto.** Se conservan en 0 las
+  horas evitadas, el beneficio de caja y el ingreso nuevo presupuestados; no
+  cambia ninguna cifra. Más funcionalidades por período con el mismo equipo y
+  precio queda como sensibilidad de destino a revisar en el mes 6, sin
+  monetizarla ni sumarla a las horas evitadas; por sí sola no acredita el destino
+  de R-19, que conserva su alcance junto con los gates. Tres indicadores
+  (funcionalidades desplegadas por período, mediana de días de pedido priorizado a
+  producción, incidentes productivos y resolución de los críticos) se adoptan como
+  seguimiento complementario, sin atribución causal a la IA ni caja; si no se
+  extraen dentro de horas costeadas, quedan opcionales o se recostean, sin
+  bloquear el gate. Que un cliente reduzca la dotación al renovar es una hipótesis
+  de riesgo comercial, sin probabilidad estimada.
+  *Autoridad:* CFO convierte la capacidad (R-19); el AI Council lee la
+  sensibilidad. *Hito:* gate del mes 6. *Si no se cumple:* sin datos o encaje
+  contractual, la sensibilidad se retira y el caso base no cambia; sin destino
+  decidido, el beneficio sigue en 0. *Tipo:* reversible.
+  *Registro:* decisión del responsable del caso del 2026-10-22
+  ([#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60)).
+  *Desarrolla:* [Anexo E](05-business-case.md#destino-operativo-de-la-capacidad-sensibilidad-adoptada),
+  [Anexo F](06-roadmap-riesgo.md#entrega-al-cliente-sensibilidad-de-destino-adoptada).
 
 ## Evidencia
 
@@ -656,6 +695,8 @@ consumo como parámetro de control.
 | Política de IA | El Directorio la ratifica hoy y la preparación deja constancia de versión y alcance (R-07) | Solo tomar conocimiento: deja la política sin respaldo documental hasta el mes 3 |
 | Lectura del mes 3 con la base de 8 semanas | Reducida y declarada (R-18) | Correrla hasta 4 semanas: atrasa M4 sin mover fondos en el mes 3 |
 | Exploración comercial | Opción no costeada; Producto lidera el descubrimiento (R-31) | Financiarla desde el mes 3: compra ingreso que el modelo no cuenta |
+| Destino de la capacidad | Caso base intacto; más funcionalidades por período como sensibilidad del mes 6, sin monetizar (R-33) | Monetizar la mayor entrega en el caso base: no hay evidencia de ingreso o costo evitado ni encaje contractual |
+| Uso decisorio de BCRA y del AI Act | Supuestos sin uso decisorio; la revisión jurídica es el dictamen focalizado de M1-M3 (R-34) | Condicionar la entrega o una liberación a su verificación previa: traslada a la entrega un dictamen que corresponde a la ejecución |
 
 ## Riesgos y mitigación
 
@@ -663,7 +704,7 @@ Probabilidad e impacto son juicio del CAIO.
 
 | Riesgo | Probabilidad | Impacto | Mitigación | Disparador de abandono |
 |---|---|---|---|---|
-| El Directorio lee "adopta R-01 a R-32" como un cheque en blanco | Media | Alto | Cada resolución lleva autoridad, hito, consecuencia y tipo; los techos son fijos y lo que los supera vuelve al Directorio | Una resolución se ejecuta sin su condición: el CEO suspende el tramo y lo informa al Directorio |
+| El Directorio lee "adopta R-01 a R-34" como un cheque en blanco | Media | Alto | Cada resolución lleva autoridad, hito, consecuencia y tipo; los techos son fijos y lo que los supera vuelve al Directorio | Una resolución se ejecuta sin su condición: el CEO suspende el tramo y lo informa al Directorio |
 | La delegación en el CEO concentra la firma | Baja | Alto | El CFO verifica, el AI Council dictamina, los techos son fijos y la delegación se revoca en cualquier sesión | Un gate firmado por encima de un techo: el Directorio revoca la delegación |
 | Un gate se firma sin verificador independiente | Media | Alto | R-06: sin verificador, la superficie se excluye; el firmante no produce ni verifica | El entregable no se declara probado |
 | Un hecho externo (contrato, habilitación, medición) no llega a su hito | Alta | Medio | Cada resolución que depende de un tercero fija qué rige si en el hito no está: *default-deny*, espera o diferimiento | El frente afectado no se libera |

@@ -34,7 +34,7 @@ Medir es la forma de conducir el plan. El objetivo empresarial es mejorar el tra
 | 7. Gobierno | Roles separados; política ratificada al aprobar el plan; Seguridad puede suspender. | [C](../plan/annexes/03-gobierno-seguridad.md), G R-07–R-09: código bajo NDA suspendido; solo código sin NDA en uso admite residual hasta M3, no datos. |
 | 8. Roadmap | Techos fijados hoy y liberaciones condicionadas; espera única M9. | F, B, D, E y G R-03–R-05/R-27. Sin espera por medición M6. |
 | 9. Recursos y riesgo | Cortes inmediatos y espera M9 vencida; caja, tiempo y techo separados. | E y F; G R-27. La espera sustituye continuidad y usa la reserva de cierre una vez. |
-| 10. Decisión y equipo | Aprobar el plan y R-01 a R-32; fijar techos, liberar validación y delegar bajo condiciones. | E, F y G; equipo según README. |
+| 10. Decisión y equipo | Aprobar el plan y R-01 a R-34; fijar techos, liberar validación y delegar bajo condiciones. | E, F y G; equipo según README. |
 
 ## Qué incorpora de la versión integrada
 

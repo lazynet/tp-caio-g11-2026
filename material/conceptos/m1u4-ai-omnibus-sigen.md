@@ -25,7 +25,11 @@ sources:
   - id: sigen-197
     resource: https://www.argentina.gob.ar/normativa/nacional/norma-426859/texto
     title: Infoleg/argentina.gob.ar, Resolución 197/2026 de la SIGEN
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-22
+  scope: "Art. 113.c y art. 4.1 tras el Reg. 2026/1744 cotejados contra el DOUE español (Cellar, 2026-10-22). No cubre la guía SIGEN ni las fuentes secundarias. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T20:13:00Z }
 ---
 

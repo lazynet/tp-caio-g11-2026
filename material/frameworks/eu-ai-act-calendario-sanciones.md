@@ -14,6 +14,11 @@ sources:
     resource: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
     title: Reg. (UE) 2026/1744, Ómnibus digital sobre IA, DOUE L de 24.7.2026 (arts. 1.30 y 1.38 a 1.40, art. 4, considerando 40)
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T20:13:00Z }
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-22
+  scope: "Fechas del art. 113, letra c (i: 2027-12-02 Anexo III; ii: 2028-08-02 Anexo I) y la fecha previa 2026-08-02 (considerando 40), cotejadas contra el texto español del DOUE del Reg. 2026/1744 obtenido de Cellar el 2026-10-22. No cubre sanciones ni la lectura para el plan. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Resolución de la cautela del Omnibus

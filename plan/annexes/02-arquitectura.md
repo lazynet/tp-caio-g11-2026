@@ -128,7 +128,7 @@ PII son datos personales identificables; DLP, controles contra pérdida de datos
 SSO, inicio de sesión único. ADR registra decisiones de arquitectura; SLO fija
 objetivos de servicio; p95 es el percentil 95 y TCO, el costo total de propiedad.
 
-BCRA es el Banco Central, regulador de los clientes financieros; SGSI, el
+BCRA es el Banco Central, regulador de los clientes financieros (sus textos son referencia de diseño, no una obligación asumida de Acme Labs); SGSI, el
 sistema de gestión de seguridad de la información que ya existe; FinOps, la
 gestión del costo de nube y de modelos por consumo.
 
@@ -178,7 +178,7 @@ gate humano.
 | | IA en el producto vendido | IA en la operación interna |
 |---|---|---|
 | Qué es hoy | Nada en producción; propuesta al Directorio sin decidir; primeros casos saldrían de productos propios | Tres herramientas aprobadas; adopción ~7 de 10 en Tecnología y ~1 de 10 en Operaciones ([fuente](../../context/hechos/uso-ia-interno.md)) |
-| Restricción dura | BCRA: documentar el uso de IA propio y de terceros, explicabilidad y avisar al cliente; secreto financiero; Ley 25.326 (no transferir datos a países sin protección adecuada) ([fuente](../../context/hechos/regulacion-clientes-financieros.md)) | Política de clasificación en cuatro niveles; "Restringido" nunca va a IA externa ([fuente](../../context/hechos/gobierno-y-politica-ia.md)) |
+| Restricción de diseño (adoptada por prudencia, no por obligación jurídica de Acme Labs) | Lo que el texto ordenado del BCRA a su fecha le pide al banco (documentar el uso de IA propio y de terceros, explicabilidad, informar al cliente), más secreto financiero y Ley 25.326 (no transferir datos a países sin protección adecuada): un cliente bancario puede trasladarlo por contrato, así que el diseño lo cumple de antemano. Que alcance a Acme Labs es un supuesto sin uso decisorio; lo revisa Legal externo en M1 ([Anexo C](03-gobierno-seguridad.md); [fuente](../../context/hechos/regulacion-clientes-financieros.md)) | Política de clasificación en cuatro niveles; "Restringido" nunca va a IA externa ([fuente](../../context/hechos/gobierno-y-politica-ia.md)) |
 | Datos | Sintéticos o anonimizados; el producto con datos de categoría especial usa solo sintéticos | Código propio, tickets, documentación, telemetría |
 | Autonomía en los 12 meses | Nivel 1 (asiste) a nivel 2 (prepara, no ejecuta): informar, recomendar, redactar; subir a nivel 3 (actúa con aprobación) **en el producto** se decide en el cierre del mes 12, no antes ([Anexo C](03-gobierno-seguridad.md), "Escala de autonomía: topes para los 12 meses") | Nivel 2 (prepara, no ejecuta) a nivel 3 (actúa con aprobación) con code review obligatorio, como hoy: el tope del mes 12 no rige para este uso interno; nivel 4 (autónomo dentro de límites) solo en sandbox sin credenciales productivas ni código o datos de un cliente |
 | Lock-in a evitar | Que el cliente herede una dependencia de un proveedor de modelos | Que el flujo de ingeniería quede atado a funciones exclusivas de uno |
@@ -849,7 +849,7 @@ del entorno del propio cliente y con su permiso escrito**
 | Decisión | Tipo | Regla, fecha mínima y autoridad |
 |---|---|---|
 | Elegir modelo, vector store, herramienta de evals o prompts | Reversible | Cambiar detrás del gateway, con la suite de evals como árbitro. Decide el Responsable de Tecnología |
-| Texto tipo de cláusula de IA (aviso BCRA, no entrenamiento, ubicación de datos) | Reversible | Aprobación interna en los meses 7-9 por el Responsable de seguridad; sin cliente |
+| Texto tipo de cláusula de IA (aviso al cliente, por lo que el texto BCRA le pide al banco, no entrenamiento, ubicación de datos) | Reversible | Aprobación interna en los meses 7-9 por el Responsable de seguridad; sin cliente |
 | Conversar la cláusula con un cliente | Reversible | Desde los meses 7-9, **sin firma, sin datos y sin compromiso**; lo conduce comercial con Gobierno |
 | Firmar un compromiso contractual de IA con un cliente | **Irreversible** | No antes del cierre del mes 12; decide el Directorio, con dictamen del AI Council ([R-32](07-resoluciones.md#roadmap-y-comercial)) |
 | Enviar código o datos de un cliente a un modelo externo | **Irreversible** | Prohibido durante los 12 meses, salvo dentro del entorno del propio cliente y con su permiso escrito ([R-08](07-resoluciones.md#gobierno-y-seguridad)); pilotos con datos sintéticos o anonimizados. El uso que ya corre sigue [R-09](07-resoluciones.md#gobierno-y-seguridad): sobre código bajo NDA se suspende desde la aprobación (es Restringido); sin NDA, sigue como residual que acepta el AI Council hasta el gate del mes 3, con la matriz leída. Ampliar la regla (año 2) exige cláusula firmada y matriz completa |

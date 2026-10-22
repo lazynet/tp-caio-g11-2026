@@ -14,7 +14,11 @@ sources:
     resource: https://eur-lex.europa.eu/eli/reg/2026/1744/oj
     title: Reg. (UE) 2026/1744, Ómnibus digital sobre IA, DOUE L de 24.7.2026 (texto español, CELEX_32026R1744_ES_TXT.pdf)
 generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21T20:13:00Z }
-status: draft
+status: verified
+verified:
+  by: human:lazynet
+  at: 2026-10-22
+  scope: "Art. 3.3, art. 25.1 y Anexo III (puntos 3, 4 y 5.b) del Reg. 2024/1689, y art. 4.1 y considerando (8) del Reg. 2026/1744, cotejados contra el DOUE español (Cellar, 2026-10-22); el 2026/1744 no modifica 3.3, 25.1 ni el Anexo III. No cubre el resto de los artículos. Cotejo del agente revisado y confirmado por Martín en esta conversación."
 ---
 
 # Alcance territorial (art. 2)

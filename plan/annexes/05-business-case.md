@@ -528,48 +528,51 @@ escenarios:
 
 La lectura del mes 6 pide decidir el destino de la capacidad, y desde ahí el puente se mide.
 
-#### Destino operativo de la capacidad: recomendación pendiente
+#### Destino operativo de la capacidad: sensibilidad adoptada
 
-**Recomendación de Finanzas, pendiente de revisión humana en E/F.** Adoptar la
-opción (a) de [#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60), apoyada por
-[Nicolás](https://github.com/lazynet/tp-caio-g11-2026/issues/60#issuecomment-6344265769): conservar el base y beneficio de caja **0**.
+**Decisión adoptada.** La resolución del Directorio sobre
+[#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60) en el [Anexo G](07-resoluciones.md#roadmap-y-comercial)
+adopta la opción (a), apoyada por
+[Nicolás](https://github.com/lazynet/tp-caio-g11-2026/issues/60#issuecomment-6344265769):
+el caso base queda intacto, con horas evitadas, beneficio de caja e ingreso nuevo en **0**.
+No cambia ninguna cifra del anexo.
 
-Como sensibilidad hipotética para Cliente A, se propone revisar en M6 más
-funcionalidades por período con el mismo equipo y precio; no se afirma una
+Como sensibilidad de destino posible para Cliente A, se adopta revisar en M6 más
+funcionalidades por período con el mismo equipo y precio. Es hipotética: no se afirma una
 condición contractual, no se monetiza ni se suma a las horas evitadas.
 
-La propuesta no acredita por sí sola el destino exigido por
-[R-19](07-resoluciones.md#arquitectura-y-medición), que conserva su alcance:
+La sensibilidad no acredita por sí sola el destino exigido por
+[R-19](07-resoluciones.md#arquitectura-y-medición), que conserva su alcance junto con los gates:
 sin destino decidido en M6, el beneficio reconocido sigue en 0.
 
 El puente a caja requiere ingreso o costo evitado demostrado y encaje contractual;
-no se presume contratación evitada. Las alternativas se conservan en #60.
+no se presume contratación evitada. Las alternativas descartadas quedan en #60.
 
-**Indicadores propuestos por Nicolás, complementarios y pendientes.**
+**Indicadores de Nicolás, adoptados como seguimiento complementario.**
 No sustituyen el PR aceptado ni el gate de valor de M9 del [Anexo B](02-arquitectura.md);
-describen entrega y calidad, sin atribuir por sí solos un beneficio a IA.
+describen entrega y calidad, sin atribución causal a IA y sin caja.
 
-| Indicador propuesto | Fuente propuesta | Lectura |
+| Indicador | Fuente | Lectura |
 |---|---|---|
 | Funcionalidades desplegadas por período | Jira y registros de despliegue | Errores y mantenimiento se informan por separado; no se suman como funcionalidades |
 | Mediana de días desde pedido priorizado hasta producción | Jira y registros de despliegue | Tiempo de entrega observado; no ahorro de horas ni caja |
 | Incidentes productivos y tiempo de resolución de los críticos | Mesa de servicio | Calidad y recuperación observadas; no ingreso protegido cuantificado |
 
-**Dependencias y costo.** Se proponen datos agregados de fuentes existentes si
+**Dependencias y costo.** Se usan datos agregados de fuentes existentes, si
 están disponibles y autorizadas, con extracción dentro de horas costeadas.
 Su disponibilidad no está demostrada; no se presume conector nuevo ni extracción gratuita.
 
-Si no se pueden extraer así, estos indicadores quedan opcionales y pendientes,
-o se propone recosteo antes de comprometer recursos; no se agrega un bloqueo al
-gate vigente. El CFO conserva la conversión de capacidad y evita el doble conteo.
+Si no se pueden extraer así, los indicadores quedan opcionales o se recostean
+antes de comprometer recursos; no bloquean el gate vigente. El CFO conserva la
+conversión de capacidad y evita el doble conteo.
 
-**Riesgo comercial propuesto.** Nicolás plantea que una renovación podría reducir
-la dotación. Es una hipótesis pendiente de revisión comercial, con probabilidad
-desconocida; no acredita intención del cliente, ingreso perdido ni ahorro de caja.
+**Riesgo comercial.** Nicolás plantea que una renovación podría reducir
+la dotación. Se registra como hipótesis de riesgo, sin probabilidad estimada;
+no acredita intención del cliente, ingreso perdido ni ahorro de caja.
 
-**Revisión pendiente.** Los responsables humanos de E/F deben revisar esta
-recomendación. El éxito es disponer de evidencia operativa interpretable para el
-destino elegido; sin datos o encaje, se retira esa sensibilidad, sin cambiar el base.
+**Criterio de éxito y de abandono.** El éxito es disponer en M6 de evidencia operativa
+interpretable para el destino elegido; sin datos o encaje, se retira esa sensibilidad,
+sin cambiar el base.
 
 **Cómo se lee la palanca de riesgo sin inventar probabilidades.** El gasto en
 controles se paga si baja la probabilidad de perder el ingreso que protege en al
@@ -1108,7 +1111,7 @@ del mínimo ni de la validación actual de 8k USD. No acreditan aprobación vige
 | Cambio a pago por consumo | Alta ([Anexo B](02-arquitectura.md)) | Alto | Gateway con ruteo, caché y topes; FinOps mensual desde el mes 4; no enrutar el agente si eso pierde la suscripción plana | Múltiplo efectivo de más de 6× sin mitigar en un tramo de tres meses: se congela la expansión y se topea el consumo |
 | La ganancia no aparece o se paga con retrabajo | Media | Alto | Base congelada; costo por PR aceptado; incidentes y retrabajo junto al throughput | Bandas de los meses 6 y 9 (abajo) |
 | La espera del mes 6 se estira sin decisión | Media | Medio | Regla del Anexo F: la espera vence a las 6 semanas | — |
-| La capacidad liberada no se vuelve caja | Alta | Medio | Destino decidido en el mes 6 (productos propios, producto de un cliente o venta) | Sin destino en el mes 6: la capacidad no se cuenta como beneficio |
+| La capacidad liberada no se vuelve caja. Para Cliente A, causa específica: dotación mínima contractual y precio por volumen, hipótesis sin condición contractual verificada | Alta | Medio | Destino decidido en el mes 6 (productos propios, producto de un cliente o venta) | Sin destino en el mes 6: la capacidad no se cuenta como beneficio |
 | El piloto de producto no tiene comprador | Media | Medio | Producto diferido: el presupuesto base no lo incluye y su tramo se libera solo con señal de cliente, matriz habilitante y plataforma liberada en el mes 3: sin ella no hay base técnica en los meses 7-9 y la señal que llega en el mes 6 no lo arranca antes de los meses 10-12 ([Anexo B](02-arquitectura.md)) | Sin señal en el mes 6, o sin plataforma: el producto no arranca en los meses 7-9 (16-59 de caja y 23-56 de tiempo que no se gastan; el costo desde el mes 10 no está calculado) |
 | El cierre cuesta más que lo previsto, o la reserva vigente no cubre el corte | Baja | Medio | Contratos por etapa, preaviso de un mes, nada a más de 12 meses antes del mes 12; reserva de cierre autorizada en la aprobación de hoy (6) y ampliada en el mes 3 con señal (15; sin señal no hace falta) y en el mes 6 si se libera el producto (17), antes de cada compromiso nuevo | Reserva no ampliada: el gate no libera el compromiso nuevo |
 | Doble conteo de costos entre anexos | Media | Bajo | Tabla de solapes | — |

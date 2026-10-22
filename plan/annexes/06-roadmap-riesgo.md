@@ -595,36 +595,35 @@ y evidencia de ingreso o costo evitado.
 
 <div style="page-break-before: always"></div>
 
-#### Entrega al cliente: propuesta de sensibilidad pendiente
+#### Entrega al cliente: sensibilidad de destino adoptada
 
-**Propuesta en revisión, no resolución ni consenso del equipo.** El responsable
-del caso recomendó mantener el caso base y Nico apoyó esa opción; sigue pendiente
-el acuerdo humano de los responsables en la conversación de seguimiento.[^destino-capacidad]
-Finanzas recomienda conservar horas evitadas y beneficio de caja e ingreso nuevo
-presupuestados cero, según el
-[detalle económico pendiente](05-business-case.md#destino-operativo-de-la-capacidad-recomendación-pendiente).
+**Decisión adoptada ([R-33](07-resoluciones.md#roadmap-y-comercial)).** El
+responsable del caso adoptó la opción que conserva el caso base, con el apoyo de
+Nico.[^destino-capacidad] Horas evitadas, beneficio de caja e ingreso nuevo
+presupuestados quedan en cero y no cambia ninguna cifra, según el
+[detalle económico](05-business-case.md#destino-operativo-de-la-capacidad-sensibilidad-adoptada).
 
 Mayor entrega no demuestra caja: su conversión exige evidencia de ingreso o
-costo evitado y encaje contractual. **Más funcionalidades por período** queda
-como sensibilidad de destino posible para
-discutir en M6, sin monetizarla ni sumarla a las horas evitadas. Por sí sola no
+costo evitado y encaje contractual. **Más funcionalidades por período con el
+mismo equipo y precio** queda adoptada como sensibilidad de destino a revisar en
+M6, sin monetizarla ni sumarla a las horas evitadas. Por sí sola no
 acredita el destino exigido por R-19, que mantiene vender capacidad o evitar una
 contratación: sin ese destino, el beneficio sigue en cero. No presupone venta,
 renegociación ni cambio de precio, y no modifica R-19 ni el gate del Anexo B.
 
-| Seguimiento operativo propuesto | Fuente posible | Qué permite observar |
+| Seguimiento operativo complementario | Fuente posible | Qué permite observar |
 |---|---|---|
 | Funcionalidades desplegadas por período, con errores y mantenimiento separados | Registro de trabajo y despliegues | Entrega efectiva, sin equiparar toda corrección a una nueva funcionalidad |
 | Mediana del tiempo entre pedido priorizado y producción | Registro de trabajo y despliegues | Tiempo de entrega desde un punto de inicio definido |
 | Incidentes productivos y tiempo de resolución de los críticos | Mesa de servicio | Calidad y respuesta operativa |
 
-Son las métricas complementarias propuestas por Nico, no un protocolo causal
-aprobado.[^destino-capacidad] No sustituyen los PR aceptados ni el gate M9,
-no atribuyen resultados a la IA y no liberan ni cortan fondos. Solo se recolectan
-en agregados si fuentes, permisos y exportaciones caben en las horas ya
-costeadas; no se presume un conector, una responsabilidad ni capacidad nueva
-gratuita. Si no caben, quedan pendientes o se recostean antes de incorporarlas,
-sin bloquear por esa ausencia el gate vigente.
+Son las métricas complementarias de Nico, adoptadas como seguimiento y no como
+protocolo causal.[^destino-capacidad] No sustituyen los PR aceptados ni el gate M9,
+no atribuyen resultados a la IA, no generan caja y no liberan ni cortan fondos.
+Solo se recolectan en agregados si fuentes, permisos y exportaciones caben en las
+horas ya costeadas; no se presume un conector, una responsabilidad ni capacidad
+nueva gratuita. Si no caben, quedan opcionales o se recostean antes de
+incorporarlas, sin bloquear por esa ausencia el gate vigente.
 
 **Hipótesis comercial, sin probabilidad estimada:** al renovar, un cliente
 podría buscar una dotación menor. Es una posibilidad, sin intención
@@ -633,7 +632,11 @@ convierte en importe protegido ni ahorro. El efecto se revisa con evidencia
 contractual y comercial antes de cambiar una sensibilidad; no se incorpora
 valor defensivo, pérdida esperada ni caja al caso base.
 
-[^destino-capacidad]: [Propuesta pública de destino de la capacidad](https://github.com/lazynet/tp-caio-g11-2026/issues/60) y [respuesta de revisión del 22/10/2026](https://github.com/lazynet/tp-caio-g11-2026/issues/60#issuecomment-6344265769). Alcance: propuesta de seguimiento y sensibilidad del caso anonimizado, sin acuerdo empresarial ni verificación de resultados.
+**Éxito y abandono.** El éxito es disponer en M6 de evidencia operativa
+interpretable para el destino elegido; sin datos o encaje, se retira la
+sensibilidad, sin cambiar el caso base.
+
+[^destino-capacidad]: [Propuesta pública de destino de la capacidad](https://github.com/lazynet/tp-caio-g11-2026/issues/60) y [respuesta de revisión del 22/10/2026](https://github.com/lazynet/tp-caio-g11-2026/issues/60#issuecomment-6344265769). Alcance: decisión del responsable del caso del 22/10/2026, registrada en R-33, sobre el caso anonimizado; sin acuerdo con un cliente real ni verificación de resultados.
 
 **Referencia del paquete completo (alcances distintos, no comparables como precios).**
 47/161/≈199/394/≈400/471 son costos publicados de alcances distintos
@@ -836,8 +839,11 @@ autoridad, el hito, la consecuencia y el tipo de cada uno están en su resoluci�
   80%) viene del Anexo B y lo ratifica el AI Council (R-14). Las probabilidades de
   pasar, esperar y cortar usan valores ilustrativos (n = 18, 2 PR por persona y
   semana, sin sobredispersión): el acta las recalcula con los reales.
-- La fecha del Anexo III del AI Act viene del Anexo C, sin cotejo del texto
-  consolidado; no va a una slide.
+- La fecha del Anexo III del AI Act (2027-12-02, art. 113, letra c, inciso i, en
+  la redacción del Omnibus) viene del Anexo C, cotejada contra el texto español del
+  DOUE ([calendario](../../material/frameworks/eu-ai-act-calendario-sanciones.md));
+  con revisión humana del cotejo el 22/10/2026. La
+  aplicabilidad del AI Act al caso es un supuesto sin uso decisorio (R-34).
 - La anonimización necesita una revisión autorizada: alias y rangos de
   concentración siguen siendo inferibles para quien conozca la cartera.
 - El cierre de un corte de la revisión mensual a mitad de tramo no está calculado
