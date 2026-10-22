@@ -251,7 +251,7 @@ section.closing h1 {
   max-width: 1080px;
   margin-top: 8px;
 }
-section.closing a { color: #f0a46f; }
+section.cover a, section.closing a { color: #f0a46f; }
 
 /* El tema default pone bordes y fondos en las tablas: se pisan con más especificidad. */
 section table, section table th, section table td, section table tr { border: 0 !important; }
