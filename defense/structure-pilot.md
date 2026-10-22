@@ -13,7 +13,7 @@ Propuesta de Luciano De Corso, responsable de preparación de la defensa, prepar
 
 Integración del PR #51 (`a2d26567972cf3ac0d2638383fb2cbee663d31ba`) con main `ec1dc41901b9bc3ad4b7b23c5450a1100f560fc7`, que ya incorpora #55. Conserva los anexos A–G sin editarlos: G rige en autoridad y condiciones; cada anexo temático sostiene sus cifras. Se recuperan sus resoluciones sin reabrirlas, dentro del relato empresarial de cuatro etapas.
 
-Caso y alcance acordados según README; eso no acredita acuerdo narrativo, autoridades empresariales ni presupuesto aprobado. Las cuatro fichas de #55 siguen `draft`, sin declaración humana nueva; #56 conserva el bloqueo regulatorio. Esta integración técnica no habilita entrega ni cierra #21/#27.
+Caso y alcance acordados según README; eso no acredita acuerdo narrativo, autoridades empresariales ni presupuesto aprobado. Tres de las cuatro fichas de #55 quedaron `verified` el 22/10 con alcance acotado; `eu-ai-act` sigue `draft`; #56 quedó resuelto por R-34. Esta integración técnica no habilita entrega ni cierra #21/#27.
 
 ## Argumento
 

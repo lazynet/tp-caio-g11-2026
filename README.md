@@ -465,6 +465,7 @@ Las decisiones que estaban abiertas en las revisiones de sección (#11–#14 y
 #16–#20) las tomó Martín como responsable del caso, el 21/10, para llegar al peer
 review. El Directorio las sintetiza en el [Anexo G](plan/annexes/07-resoluciones.md)
 (R-01 a R-32), integradas con [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52).
+El 22/10 se sumaron R-33 y R-34 con [#62](https://github.com/lazynet/tp-caio-g11-2026/pull/62).
 Los nueve issues asociados quedaron cerrados.
 Esas decisiones no equivalen a ratificaciones de cada responsable: si no estás
 de acuerdo con una, objetala en el PR o en su issue.
@@ -472,7 +473,7 @@ de acuerdo con una, objetala en el PR o en su issue.
 Nico cerró su [revisión de arquitectura](https://github.com/lazynet/tp-caio-g11-2026/issues/16#issuecomment-6344787291)
 el 22/10, sobre `main` en `2a7d8d6`, con ratificaciones condicionales y propuestas
 de controles. No confirma la titularidad del código ni reemplaza la revisión de
-esta integración, que se hará en el nuevo PR de la rama `docs/sintesis-ejecutiva-plan`.
+la integración, que entró con [#61](https://github.com/lazynet/tp-caio-g11-2026/pull/61).
 
 Los 15 supuestos modificados quedaron revalidados por instrucción expresa de
 Martín el 21/10/2026, con alcance actualizado y conservando su tipo `Supuesto`.
@@ -489,19 +490,22 @@ Martín dio por cerrada la recopilación de material de #22 el 21/10/2026:
 las presentaciones disponibles son oficiales y suficientes. Se incorporaron
 M2U1/M2U2 y se acepta que el prompt base del Corrector IA no esté disponible.
 
+El 22/10/2026 se resolvieron los dos bloqueos que quedaban, integrados con
+[#62](https://github.com/lazynet/tp-caio-g11-2026/pull/62):
+
+- **Cotejos regulatorios externos** ([#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56)):
+  el calendario y el art. 4 del AI Act se cotejaron contra el DOUE; BCRA y la
+  aplicabilidad del AI Act quedan como supuestos sin uso decisorio (R-34).
+- **Destino de la capacidad** ([#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60)):
+  caso base intacto y más funcionalidades por período como sensibilidad del
+  mes 6, sin monetizar (R-33), con el acuerdo de Nico, Gabriela y Martín.
+
 Para habilitar la entrega falta:
 
-- **Cotejos regulatorios externos:** verificar o corregir las afirmaciones
-  normativas usadas en los anexos, que conservan el bloqueo de `material/huecos.md`.
-  Se sigue en [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56).
 - **Defensa:** acordar quién presenta cada slide (hay una propuesta en
   `defense/storyline.md`) y hacer el ensayo, en [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21).
 - **Propuesta de Lucho:** rebasarla sobre el deck nuevo antes de evaluarla, en
   [#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27).
-- **Destino de la capacidad:** [#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60)
-  sigue abierto. Nico apoya mantener el caso base y estudiar más funcionalidades
-  por período como sensibilidad, sin caja adicional; falta el acuerdo de Gabriela
-  y Martín y revisar la integración en el nuevo PR. La propuesta no cambia gates.
 
 ## Backlog y seguimiento
 
