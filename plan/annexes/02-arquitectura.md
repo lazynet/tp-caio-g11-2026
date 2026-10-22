@@ -18,12 +18,12 @@ formación y controles ([caso propuesto](#candidato-de-quick-win-operativo)).
 
 | Recorrido | Qué se hace ahora | Qué queda condicionado |
 |---|---|---|
-| Código y datos propios → herramientas → modelos | Configurar terminal, chat, IDE y suite; probar permisos, exclusiones, secretos y conexiones aprobadas | Cada superficie se habilita con controles probados y riesgo residual aceptado |
+| Código y datos propios → herramientas → modelos | Identidad corporativa, permisos y controles nativos; alertas y topes según plan | Cada superficie se habilita con controles probados y riesgo residual aceptado |
 | Acciones del agente → revisión humana | Acotar autonomía y revisar antes de efectos irreversibles | No se promete solo lectura para el agente de código |
 | Consolas y registros operativos → extractos agregados → indicadores | Leer uso, cambios de código, calidad y reversiones; congelar la base y reproducir la medición | Guardar extractos exige autorización de Seguridad sobre ubicación, acceso y retención |
 | Casos nuevos → harness central → pasarela de modelos | Solo dirección de diseño: contexto acotado, memoria versionada, aislamiento y trazas | Plataforma con decisión y costeo propios; producto requiere además señal de cliente y otra autorización |
 
-**Límites de datos y permisos.** El mínimo usa repositorios propios habilitados.
+**Límites de datos y permisos.** Cohorte y quick win exigen titularidad verificada.
 Datos/código de clientes quedan fuera; la excepción exige entorno del cliente y
 permiso escrito. Datos Restringidos nunca van a IA externa. La medición usa
 agregados por área y semana, sin eventos individuales, prompts ni secretos.
@@ -364,6 +364,26 @@ Finanzas lo convierta en valor con la misma unidad.
 | Calidad | Incidentes y retrabajo por cada 100 PR (reversiones y correcciones dentro de 30 días), con los mismos agregados |
 | Ruido | Lo fija el total de PR de la base y de la ventana, no la cantidad de personas: ver «Cuenta de potencia» |
 
+**Elegibilidad pendiente.** Nico propuso al equipo del Cliente A como núcleo de
+los equipos propios al cerrar su revisión del Anexo B sobre la base `2a7d8d6`.
+Es revisión del borrador, sin aprobación empresarial ni consenso nuevo del equipo.[^revision-nico-b]
+
+La titularidad del código sigue sin confirmar: si es de Acme Labs, puede
+sostenerse esa elegibilidad; si es del cliente, R-08 exige su entorno y permiso escrito.
+Sin esa habilitación, no se presume viable el gate de valor con esa cohorte.
+
+Rige R-14, incluida su muestra mínima y la viabilidad reproducible: sin cumplirla,
+beneficio acreditado cero y continuidad solo por adopción, calidad, costo y
+controles. Tampoco se presume elegible el quick win propuesto más abajo.
+
+**Indicadores complementarios propuestos.** Nico propuso funcionalidades
+desplegadas por tramo (errores y mantenimiento aparte), mediana de días desde
+pedido priorizado hasta producción y tiempo de resolución de incidentes críticos.[^revision-nico-metricas]
+
+No se adoptan series ni umbrales nuevos: Tecnología debe verificar enlaces entre
+tickets, despliegues y mesa de servicio, permisos y encaje en capacidad y costo.
+Sin esa viabilidad, quedan propuestos; no sustituyen el protocolo ni los gates vigentes.
+
 **Protocolo de medición único (lo adopta el [Anexo F](06-roadmap-riesgo.md) en las
 lecturas de los meses 6, 9 y 12; [fuente](../../context/supuestos/umbrales-tecnicos-propuestos.md)).**
 Se produce durante la primera autorización, con la serie de la preparación previa
@@ -626,6 +646,14 @@ producto un asistente de integración en la plataforma propia; este caso interno
 queda como el del frente interno y como prueba del método que ese piloto
 reutiliza. Si el portfolio cambia, se rehace este caso con la misma estructura.
 
+**Selección por utilidad, pendiente.** Antes de liberar el caso, su usuario debe
+priorizar el problema y el resultado útil esperado; reutilizar el método del
+piloto no basta como justificación. Esta prioridad recoge la revisión de Nico.[^revision-nico-b]
+
+El asistente de abajo sigue siendo una hipótesis de aprendizaje, con beneficio
+acreditado cero. Sin necesidad validada y capacidad costeada, se reduce o difiere;
+un reemplazo exige actualizar alcance, protocolo y costeo antes de construir.
+
 **Caso: asistente de conocimiento interno.** Responde preguntas de Tecnología y
 Operaciones sobre la documentación de los productos propios, los runbooks y los
 tickets internos resueltos, siempre con cita a la fuente. Nivel 1 (asiste: informa) a
@@ -742,7 +770,7 @@ plantea propietario frente a open source; el partner es criterio del plan
 | Capacidad | Decisión | Por qué (ejes) | Alternativa descartada | Reversible |
 |---|---|---|---|---|
 | Modelos fundacionales | **Buy** vía API, ≥ 2 proveedores | Tiempo y capacidad: no se entrena | Entrenar o ajustar un modelo propio: sin datos de cliente utilizables | Sí |
-| Gateway, ruteo y registro de costo | **Agentificar**: ensamblar sobre piezas abiertas, como hipótesis de diseño a comparar en M3 | Control de nivel de dato, cliente y costo en llamadas enrutadas; no cubre por sí solo IDE, chat ni suite | Configurar herramientas existentes o comprar plataforma: siguen abiertas hasta probar cobertura y TCO equivalentes | Sí |
+| Gateway, ruteo y registro de costo | **Agentificar**: ensamblar sobre piezas abiertas, como hipótesis de diseño a comparar en M3 | Primero control y portabilidad; costo en llamadas enrutadas. No cubre por sí solo IDE, chat ni suite | Configurar herramientas existentes o comprar plataforma: siguen abiertas hasta probar cobertura y TCO equivalentes | Sí |
 | Agentes de código y asistentes internos | **Buy** la herramienta, **build** el contrato, skills y compuertas | Lo diferencial es el contrato de agente, no el producto | Atar el flujo a funciones exclusivas | Sí |
 | Orquestación para casos del producto | **Agentificar**: framework y runtime abiertos (clasificación a reverificar) | Control y trazabilidad | Caja negra de un proveedor | Parcial |
 | Retrieval y almacén vectorial | **Buy** gestionado sobre la nube existente | Tiempo y capacidad | Operar uno propio | Sí |
@@ -789,7 +817,14 @@ cumple excluyendo el uso, no comprando más tecnología. El gateway no reemplaza
 los controles de IDE, chat ni suite.
 
 **Recomendación técnica:** elegir la respuesta mínima que pase las pruebas;
-una alternativa gana solo con resultado probado. **Regla ratificada por el Directorio al
+una alternativa gana solo con resultado probado. Antes de construir un harness
+propio, verificar capacidades nativas del proveedor y reutilización del harness interno de SDLC.
+
+La revisión de Nico prioriza control y portabilidad para justificar el gateway;
+no acredita ahorro ni elimina la prueba de costo. Rigen la comparación equivalente
+y la autorización condicional, sin proveedor ni desarrollo propio adjudicados.[^revision-nico-b]
+
+**Regla ratificada por el Directorio al
 aprobar el plan ([R-15](07-resoluciones.md#arquitectura-y-medición)):** liberar plataforma en el mes 3, 6 o 9 exige
 una señal y además cuatro condiciones: (1) brecha documentada, (2) alternativas
 comparables, (3) economía incremental o aprendizaje con pérdida aceptada y
@@ -948,6 +983,15 @@ el de las prácticas de uso y revisión del agente existente, no el de plataform
 Configurá permisos, autonomía con aprobación humana, MCP aprobados, escaneo
 local y en repositorio, repositorios/contenido permitido y administración de
 acceso, datos y retención de chat, IDE y suite, según lo que admita cada plan.
+
+Desde M1, proponer acceso con identidad corporativa, SSO cuando el plan aprobado
+lo admita, y alertas y límites nativos de uso en las consolas; su disponibilidad y
+eficacia se prueban por superficie, sin presumir bloqueo total del bypass.[^revision-nico-b]
+
+No implica contratar otro plan ni sumar horas: si no cabe en el sobre vigente o
+exige capacidades nuevas, restringir el uso o recostear antes de la liberación
+conforme a R-11/R-26; la propuesta no habilita otro compromiso.
+
 Probá acción permitida, dato sintético prohibido y bypass en cada superficie
 que se habilite; para el agente, agregá inyección indirecta y revisión de sus
 acciones. Cerrá críticos y registrá aceptación del residual según el Anexo C.
@@ -982,7 +1026,7 @@ previa, como supuesto de planificación de este anexo, no capacidad confirmada:
 |---|---|---|
 | Arquitectura / tech lead | 24-40 | Alcance, fuentes, protocolo, diseño de pruebas, relevamiento técnico de capacidades ([R-16](07-resoluciones.md#arquitectura-y-medición)) y comparación M3; incluye 4-8 h previas de viabilidad |
 | DevOps / administración de herramientas | 32-56 | Configuración de las cuatro superficies, exportaciones y pruebas; acceso administrativo y funciones del plan disponibles |
-| QA / análisis de datos | 40-64 | Extracción, diccionario/enlaces, base, maduración y lectura reproducible; incluye 8-16 h previas; fuentes exportables sin saneamiento masivo |
+| QA / análisis de datos | 40-64 | Extracción, diccionario/enlaces, base, maduración y lectura reproducible; incluye 8-16 h previas; fuentes exportables sin saneamiento |
 | IA aplicada | 8-16 | Revisar contrato/skills y ensayos del agente; capacidad demostrada interna o servicio acotado, sin suponer contractor dedicado |
 | Seguridad, aporte técnico compartido con C | 24-40 | Revisión de clasificación y verificación independiente de pruebas negativas/bypass, red team acotado y residual; persona distinta de DevOps/QA productor. No incluye política, legal ni operación completa de gobierno; reutilización sujeta a confirmar alcance |
 | Senior / champion de la cohorte, compartido con D | 16-24 | Validar tareas, revisión humana y registro de prácticas; no incluye formación general ni todas las horas de los participantes |
@@ -1010,7 +1054,7 @@ compartir presupuesto no permite verificar el trabajo propio.
 
 Supuestos: una cohorte propia de 15-20 personas, cuatro superficies existentes,
 una ronda de configuración y corrección de hallazgos, fuentes accesibles y
-sin conectores nuevos. No incluye formación, horas de prueba de toda la
+sin conectores nuevos ni saneamiento. No incluye formación, horas de prueba de toda la
 cohorte, gobierno/legal, descubrimiento de producto ni operación M4-M12;
 los otros dueños deben agregarlos al paquete completo. Toda caja incremental,
 cambio de plan o nueva licencia queda por cotizar por Finanzas, sin asumir cero.
@@ -1026,6 +1070,10 @@ el rango deja de ser válido. No se presume que la plataforma resuelva esa falta
 **Candidato, no aprobado por la empresa ni resultado observado.** Se propone
 concretar una tarea de la prueba operativa ya costeada; no crear otro proyecto.
 No consta todavía un error elegible, un usuario que lo priorice ni agenda liberada.
+
+La propuesta de cohorte del Cliente A no confirma que haya código propio
+elegible: antes de elegir la tarea, Tecnología verifica titularidad y habilitación.
+El candidato actual no incluye código del cliente ni amplía R-08.
 
 **Priorización propuesta.** Primero, una corrección pequeña que quite un bloqueo
 real al equipo usuario de una función interna ya utilizada. Se prefiere a una
@@ -1415,3 +1463,6 @@ montos de facturación.
   el replan del paquete completo requiere una decisión nueva de alcance,
   calendario y costeo; el mínimo no autoriza esa contratación. Las horas de la
   documentación mínima reproducible son supuesto.
+
+[^revision-nico-b]: [Nico, cierre de revisión técnica del Anexo B, 22/10/2026](https://github.com/lazynet/tp-caio-g11-2026/issues/16#issuecomment-6344787291). Revisión sobre `main` en `2a7d8d6`, sin validación empresarial de datos, capacidades o presupuesto.
+[^revision-nico-metricas]: [Nico, propuesta de indicadores de entrega, 22/10/2026](https://github.com/lazynet/tp-caio-g11-2026/issues/60#issuecomment-6344265769). Propuesta de revisión, sin implementación ni cambio de gates acreditados.

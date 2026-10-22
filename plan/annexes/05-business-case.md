@@ -528,6 +528,49 @@ escenarios:
 
 La lectura del mes 6 pide decidir el destino de la capacidad, y desde ahí el puente se mide.
 
+#### Destino operativo de la capacidad: recomendación pendiente
+
+**Recomendación de Finanzas, pendiente de revisión humana en E/F.** Adoptar la
+opción (a) de [#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60), apoyada por
+[Nicolás](https://github.com/lazynet/tp-caio-g11-2026/issues/60#issuecomment-6344265769): conservar el base y beneficio de caja **0**.
+
+Como sensibilidad hipotética para Cliente A, se propone revisar en M6 más
+funcionalidades por período con el mismo equipo y precio; no se afirma una
+condición contractual, no se monetiza ni se suma a las horas evitadas.
+
+La propuesta no acredita por sí sola el destino exigido por
+[R-19](07-resoluciones.md#arquitectura-y-medición), que conserva su alcance:
+sin destino decidido en M6, el beneficio reconocido sigue en 0.
+
+El puente a caja requiere ingreso o costo evitado demostrado y encaje contractual;
+no se presume contratación evitada. Las alternativas se conservan en #60.
+
+**Indicadores propuestos por Nicolás, complementarios y pendientes.**
+No sustituyen el PR aceptado ni el gate de valor de M9 del [Anexo B](02-arquitectura.md);
+describen entrega y calidad, sin atribuir por sí solos un beneficio a IA.
+
+| Indicador propuesto | Fuente propuesta | Lectura |
+|---|---|---|
+| Funcionalidades desplegadas por período | Jira y registros de despliegue | Errores y mantenimiento se informan por separado; no se suman como funcionalidades |
+| Mediana de días desde pedido priorizado hasta producción | Jira y registros de despliegue | Tiempo de entrega observado; no ahorro de horas ni caja |
+| Incidentes productivos y tiempo de resolución de los críticos | Mesa de servicio | Calidad y recuperación observadas; no ingreso protegido cuantificado |
+
+**Dependencias y costo.** Se proponen datos agregados de fuentes existentes si
+están disponibles y autorizadas, con extracción dentro de horas costeadas.
+Su disponibilidad no está demostrada; no se presume conector nuevo ni extracción gratuita.
+
+Si no se pueden extraer así, estos indicadores quedan opcionales y pendientes,
+o se propone recosteo antes de comprometer recursos; no se agrega un bloqueo al
+gate vigente. El CFO conserva la conversión de capacidad y evita el doble conteo.
+
+**Riesgo comercial propuesto.** Nicolás plantea que una renovación podría reducir
+la dotación. Es una hipótesis pendiente de revisión comercial, con probabilidad
+desconocida; no acredita intención del cliente, ingreso perdido ni ahorro de caja.
+
+**Revisión pendiente.** Los responsables humanos de E/F deben revisar esta
+recomendación. El éxito es disponer de evidencia operativa interpretable para el
+destino elegido; sin datos o encaje, se retira esa sensibilidad, sin cambiar el base.
+
 **Cómo se lee la palanca de riesgo sin inventar probabilidades.** El gasto en
 controles se paga si baja la probabilidad de perder el ingreso que protege en al
 menos Δp = costo de los controles / (peso del ingreso protegido × margen). Como

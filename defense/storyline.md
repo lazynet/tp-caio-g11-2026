@@ -53,13 +53,23 @@ y señal comercial antes de decidir su construcción.
 
 **Respuesta adversa que no se omite:** el escenario pesimista puede terminar
 antes de M1; si corta en M3, el techo hasta cerrar es 79 y el anual con guardia
-aprobada es 85. El optimista acredita solo capacidad medible sin daño: venderla
-o evitar una contratación requiere evidencia propia. Un cambio de precio del
+aprobada es 85. El optimista acredita solo capacidad medible sin daño: convertirla
+en dinero exige que el contrato lo permita y evidencia de ingreso o costo evitado. Un cambio de precio del
 proveedor conserva exposición con o sin este plan; el mínimo no la elimina.
 
 **Uso del detalle siguiente:** consultar la regla y el anexo ante una objeción.
 El guion ejecutivo ordena la exposición; las condiciones completas del Anexo G
 siguen rigiendo. Presentadores, respuestas y ensayo quedan pendientes de acuerdo.
+
+**Matiz para la respuesta económica:** entregar más funcionalidades por período no
+demuestra caja. Convertir capacidad exige evidencia de ingreso o costo evitado
+y encaje contractual. La opción de conservar el caso base y estudiar ese destino en M6
+tiene apoyo de Nico, pero sigue pendiente de acuerdo humano y no acredita por
+sí sola el destino exigido por R-19: sin ese destino, beneficio cero. Los
+indicadores son complementarios y no sustituyen el gate de PR en M9. La posible
+reducción de equipo en una renovación es una hipótesis comercial, sin intención
+confirmada ni importe defensivo atribuido al plan. Fuente y alcance:
+[propuesta en revisión](../plan/annexes/06-roadmap-riesgo.md#entrega-al-cliente-propuesta-de-sensibilidad-pendiente).
 
 ## Qué tiene que demostrar la defensa
 

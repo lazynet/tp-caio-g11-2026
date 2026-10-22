@@ -309,7 +309,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 </div>
 <div class="card dark">
 <h3>Optimista</h3>
-<p>Mejora medible sin daño. Capacidad se vuelve dinero solo si se vende o evita una contratación y se demuestra.</p>
+<p>Mejora medible sin daño. La capacidad genera dinero solo si el contrato lo permite y se demuestra ingreso o costo evitado.</p>
 </div>
 </div>
 

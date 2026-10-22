@@ -590,7 +590,50 @@ Directorio tiene base congelada, la lectura de valor del mes 9 con su intervalo 
 la del 12), la guardia de calidad de cada gate, controles probados por superficie con residual aceptado,
 adopción por área con su denominador y la decisión del año 2 tomada con esa
 evidencia. No es ingreso ni caja: el plan no presupuesta beneficios, y una
-mejora medida se convierte en plata solo si se vende o evita una contratación.
+mejora medida se convierte en plata solo con una vía contractual que lo permita
+y evidencia de ingreso o costo evitado.
+
+<div style="page-break-before: always"></div>
+
+#### Entrega al cliente: propuesta de sensibilidad pendiente
+
+**Propuesta en revisión, no resolución ni consenso del equipo.** El responsable
+del caso recomendó mantener el caso base y Nico apoyó esa opción; sigue pendiente
+el acuerdo humano de los responsables en la conversación de seguimiento.[^destino-capacidad]
+Finanzas recomienda conservar horas evitadas y beneficio de caja e ingreso nuevo
+presupuestados cero, según el
+[detalle económico pendiente](05-business-case.md#destino-operativo-de-la-capacidad-recomendación-pendiente).
+
+Mayor entrega no demuestra caja: su conversión exige evidencia de ingreso o
+costo evitado y encaje contractual. **Más funcionalidades por período** queda
+como sensibilidad de destino posible para
+discutir en M6, sin monetizarla ni sumarla a las horas evitadas. Por sí sola no
+acredita el destino exigido por R-19, que mantiene vender capacidad o evitar una
+contratación: sin ese destino, el beneficio sigue en cero. No presupone venta,
+renegociación ni cambio de precio, y no modifica R-19 ni el gate del Anexo B.
+
+| Seguimiento operativo propuesto | Fuente posible | Qué permite observar |
+|---|---|---|
+| Funcionalidades desplegadas por período, con errores y mantenimiento separados | Registro de trabajo y despliegues | Entrega efectiva, sin equiparar toda corrección a una nueva funcionalidad |
+| Mediana del tiempo entre pedido priorizado y producción | Registro de trabajo y despliegues | Tiempo de entrega desde un punto de inicio definido |
+| Incidentes productivos y tiempo de resolución de los críticos | Mesa de servicio | Calidad y respuesta operativa |
+
+Son las métricas complementarias propuestas por Nico, no un protocolo causal
+aprobado.[^destino-capacidad] No sustituyen los PR aceptados ni el gate M9,
+no atribuyen resultados a la IA y no liberan ni cortan fondos. Solo se recolectan
+en agregados si fuentes, permisos y exportaciones caben en las horas ya
+costeadas; no se presume un conector, una responsabilidad ni capacidad nueva
+gratuita. Si no caben, quedan pendientes o se recostean antes de incorporarlas,
+sin bloquear por esa ausencia el gate vigente.
+
+**Hipótesis comercial, sin probabilidad estimada:** al renovar, un cliente
+podría buscar una dotación menor. Es una posibilidad, sin intención
+confirmada.[^destino-capacidad] La concentración no se
+convierte en importe protegido ni ahorro. El efecto se revisa con evidencia
+contractual y comercial antes de cambiar una sensibilidad; no se incorpora
+valor defensivo, pérdida esperada ni caja al caso base.
+
+[^destino-capacidad]: [Propuesta pública de destino de la capacidad](https://github.com/lazynet/tp-caio-g11-2026/issues/60) y [respuesta de revisión del 22/10/2026](https://github.com/lazynet/tp-caio-g11-2026/issues/60#issuecomment-6344265769). Alcance: propuesta de seguimiento y sensibilidad del caso anonimizado, sin acuerdo empresarial ni verificación de resultados.
 
 **Referencia del paquete completo (alcances distintos, no comparables como precios).**
 47/161/≈199/394/≈400/471 son costos publicados de alcances distintos
