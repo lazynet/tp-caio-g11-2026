@@ -333,7 +333,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 # Aprobar el plan y sus resoluciones
 
-<p style="font-size:26px;line-height:1.4">Adoptar las resoluciones R-01 a R-32 del Anexo G: paquete mínimo, límites, techos y delegación condicionada.</p>
+<p style="font-size:26px;line-height:1.4">Adoptar las resoluciones R-01 a R-34 del Anexo G: paquete mínimo, límites, techos y delegación condicionada.</p>
 
 <div class="money">
 <div><strong>8k USD</strong><p><b>Hoy, tiempo propio y caja 0.</b> Diez días hábiles de validación, con cargo a 2026.</p></div>

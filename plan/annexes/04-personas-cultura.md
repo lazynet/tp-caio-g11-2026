@@ -109,7 +109,7 @@ Personas dentro de esas resoluciones.
 | Jornada | 160 h por mes, 1.920 h por año por persona | Supuesto (convención de cálculo) |
 | Costo horario de capacitación | USD 10 a 35 por hora (1.500 a 5.500 mensuales sobre 160 h, el tramo de staff, desarrolladores semisenior y analistas) | Supuesto, derivado de [Costo cargado por rol](../../context/supuestos/costo-cargado-por-rol.md). **Es costo, no tarifa facturable** |
 | Ganancia de productividad | 10% a 25% de throughput por desarrollador a 12 meses, solo en equipos propios; en staffing no se cuenta | [Ganancia de productividad](../../context/supuestos/ganancia-de-productividad.md) |
-| Alcance del art. 4 del AI Act sobre Acme Labs | Sin decidir (art. 2.1.c); se adopta como piso igual | [Fuentes faltantes](../../material/huecos.md), [art. 4](../../material/frameworks/eu-ai-act-proveedor-desplegador.md) |
+| Alcance del art. 4 del AI Act sobre Acme Labs | Sin decidir (art. 2.1.c); se adopta como piso igual | [Art. 4](../../material/frameworks/eu-ai-act-proveedor-desplegador.md) |
 
 ## Evidencia
 
@@ -699,14 +699,15 @@ corregir las fallas de comunicación que registró la encuesta.
 
 **Art. 4 del AI Act.** Para el plan es un piso del plan de personas, que
 las fuentes de referencia ya dan como vigente. El texto original exige garantizar un
-nivel suficiente de alfabetización; el texto tras el Omnibus pide "apoyar el
-desarrollo" y no exige un nivel por individuo
+nivel suficiente de alfabetización; tras el Reg. 2026/1744 el art. 4.1 pide
+"apoyar la promoción" de la alfabetización y no exige un nivel específico por
+persona ("apoyar el desarrollo" viene del considerando (8), no del artículo)
 ([art. 4](../../material/frameworks/eu-ai-act-proveedor-desplegador.md)).
-**Cautela:** si alcanza a Acme Labs y la versión vigente del art. 4 siguen sin
-verificar contra EUR-Lex ([fuentes faltantes](../../material/huecos.md)). El plan cumple el
-espíritu de ambos textos (formación proporcional al rol, con registro de quién
-completó qué), pero **no cita fechas ni sanciones en slides** hasta cerrar esa
-verificación.
+**Cautela:** lo único abierto es si el art. 4 alcanza a Acme Labs (art. 2.1.c),
+que se trata como supuesto sin uso decisorio. El plan cumple el espíritu de ambos
+textos (formación proporcional al rol, con registro de quién completó qué), pero
+**no cita sanciones en slides**: la revisión humana del cotejo (22/10/2026) cubre el
+art. 4 y las fechas, no el régimen de sanciones.
 
 ## Programa de champions
 

@@ -6,7 +6,7 @@ de toda la organización (producto y operación interna), acordados en comisión
 Coordina la defensa (storyline, objeciones y quién presenta cada slide) Lucho,
 según el reparto del `README.md`. Quién presenta cada slide y quién responde
 cada objeción **todavía no se acordó** (#21): al final va una propuesta para que el
-equipo la discuta. El pedido es aprobar el plan y sus resoluciones R-01 a R-32
+equipo la discuta. El pedido es aprobar el plan y sus resoluciones R-01 a R-34
 ([Anexo G](../plan/annexes/07-resoluciones.md)). Cada cifra remonta a un anexo de
 `plan/annexes/`. Esta síntesis editorial conserva las decisiones de A–G y
 reorganiza su exposición alrededor de tareas, evidencia y liberaciones.
@@ -63,13 +63,13 @@ siguen rigiendo. Presentadores, respuestas y ensayo quedan pendientes de acuerdo
 
 **Matiz para la respuesta económica:** entregar más funcionalidades por período no
 demuestra caja. Convertir capacidad exige evidencia de ingreso o costo evitado
-y encaje contractual. La opción de conservar el caso base y estudiar ese destino en M6
-tiene apoyo de Nico, pero sigue pendiente de acuerdo humano y no acredita por
+y encaje contractual. R-33 conserva el caso base y adopta ese destino como sensibilidad
+a revisar en M6, sin monetizarla; no acredita por
 sí sola el destino exigido por R-19: sin ese destino, beneficio cero. Los
 indicadores son complementarios y no sustituyen el gate de PR en M9. La posible
 reducción de equipo en una renovación es una hipótesis comercial, sin intención
 confirmada ni importe defensivo atribuido al plan. Fuente y alcance:
-[propuesta en revisión](../plan/annexes/06-roadmap-riesgo.md#entrega-al-cliente-propuesta-de-sensibilidad-pendiente).
+[sensibilidad adoptada](../plan/annexes/06-roadmap-riesgo.md#entrega-al-cliente-sensibilidad-de-destino-adoptada).
 
 ## Qué tiene que demostrar la defensa
 
@@ -249,7 +249,7 @@ financia la evidencia para decidir qué continuar o ampliar.
 ## Cierre: resolución (Aprobar el plan y sus resoluciones)
 
 **Valor medible; seguridad aceptable; fondos por decisión.** "Les pedimos aprobar
-el plan y, con él, las resoluciones R-01 a R-32 del Anexo G. Hoy liberan diez días
+el plan y, con él, las resoluciones R-01 a R-34 del Anexo G. Hoy liberan diez días
 hábiles de validación con agenda propia: hasta 8k USD de tiempo y caja incremental
 0. Fijan los techos: 79k USD hasta el mes 3 y 121k en el año, con 16k, 13k y 13k
 por tramo. Delegan en el CEO la segunda

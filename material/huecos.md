@@ -6,8 +6,8 @@ tags: [pendiente, cursada, cautelas]
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-21
-  scope: "Martín acepta el 21/10/2026 las presentaciones disponibles como material oficial suficiente para cerrar la recopilación de #22, tras aportar M2U1/M2U2 y otros documentos. Declara que el prompt base del Corrector IA no está disponible y no será un requisito. Por instrucción expresa de la misma sesión, acepta la incorporación al corpus de las 20 fichas nuevas de #50, #53 y #57 con estado accepted. La confirmación cubre este estado del corpus y la decisión de alcance; conserva la revisión anterior como antecedente, sin acreditar contenido de fichas nuevas, vigencia normativa ni cotejo jurídico externo. Los cotejos regulatorios usados por la entrega se siguen en #56."
+  at: 2026-10-22
+  scope: "Martín acepta el 21/10/2026 las presentaciones disponibles como material oficial suficiente para cerrar la recopilación de #22, tras aportar M2U1/M2U2 y otros documentos. Declara que el prompt base del Corrector IA no está disponible y no será un requisito. Por instrucción expresa de la misma sesión, acepta la incorporación al corpus de las 20 fichas nuevas de #50, #53 y #57 con estado accepted. La confirmación cubre este estado del corpus y la decisión de alcance; conserva la revisión anterior como antecedente, sin acreditar contenido de fichas nuevas, vigencia normativa ni cotejo jurídico externo. Los cotejos regulatorios usados por la entrega se siguen en #56. El 22/10/2026 Martín confirma la sección de cotejos externos de #56: calendario y art. 4 cotejados contra el DOUE; BCRA y aplicabilidad del AI Act como supuestos sin uso decisorio (R-34)."
 generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
@@ -95,28 +95,42 @@ separado de M3-U4 para cerrar esta recopilación.
 * **AIMM:** el PDF es una elaboración independiente, no el informe de Gartner. Queda en
   `draft`.
 
-# Pendiente de verificar
+# Cotejos externos de la entrega (#56)
 
-La aceptación del material no resuelve los cotejos externos. Se separan de #22
-en [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56). El calendario
-normativo y otras afirmaciones usadas por los anexos conservan el bloqueo de
-entrega hasta verificar su fuente o corregir su uso decisorio.
+La aceptación del material no resolvía los cotejos externos; se separaron de #22
+en [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56). Estado al 2026-10-22,
+por decisión de Martín:
+
+* **Calendario y art. 4 del AI Act, cotejados contra el DOUE.** El PR #55 cotejó el
+  texto español del DOUE (Reg. 2026/1744 y 2024/1689); el 2026-10-22 se recotejó contra
+  el texto obtenido de Cellar lo que usa la entrega: art. 113, letra c (2027-12-02 para el
+  Anexo III y 2028-08-02 para el Anexo I), art. 4.1 y considerando (8), art. 3.3, art. 25.1
+  y Anexo III. Martín lo declaró con alcance acotado en el
+  [calendario](/frameworks/eu-ai-act-calendario-sanciones.md), la
+  [ficha del Omnibus](/conceptos/m1u4-ai-omnibus-sigen.md) y la de
+  [proveedor y desplegador](/frameworks/eu-ai-act-proveedor-desplegador.md). Los anexos
+  C, D y F citan esas fichas. El [overview](/frameworks/eu-ai-act.md) y el régimen de
+  sanciones quedan fuera de esa declaración y no se usan en la entrega.
+* **Queda abierto, como supuesto sin uso decisorio:** la aplicabilidad del AI Act a Acme
+  Labs y a cada cliente (art. 2.1.c; el plan lo trata como disparador del intake), la
+  lectura operativa de la fecha de los arts. 43 y 49, las guidelines de transparencia del
+  2026-07-20 y las reglas para entidades financieras (abajo).
+* **BCRA, fuera del uso decisorio (R-34).** No se recoteja el texto ordenado. La ficha
+  `context/hechos/regulacion-clientes-financieros.md` (`verified`) sostiene lo
+  que dicen los textos ordenados a su fecha (13/02/2026 y 02/10/2026); su vigencia
+  posterior, su alcance sobre cada cliente y su traslado a Acme Labs quedan como supuesto
+  en el Anexo C. Ninguna decisión del deck depende de ellos: la revisión jurídica es una
+  actividad de ejecución (dictamen focalizado de Legal externo en M1), no una condición de
+  entrega.
 
 * **M3U4:** el roadmap técnico habla de MLOps clásico y no de agentes ni LLMOps; no trae metas ni umbrales para los KPIs. **M3U3:** el programa describe el Deep Research con un plan a 18 meses y las slides no dan plazo.
 
-* **EU AI Act tras el Omnibus:** las fechas y el nuevo art. 4 (AI literacy: "apoyar
-  el desarrollo", más liviano que el "exige" del curso) solo se contrastaron con
-  fuentes secundarias (Cooley, Abreu, ERTICO). El cotejo del 2026-10-20 no pudo abrir
-  el Reg. 2026/1744 en EUR-Lex (página vacía): falta cotejarlo contra el ELI oficial,
-  junto con las guidelines del 2026-07-20 y la fecha de los arts. 43 y 49.
 * **EU AI Act, entidades financieras:** la [ficha del framework](/frameworks/eu-ai-act-proveedor-desplegador.md)
   no releva las reglas específicas (arts. 17.4, 18.3, 19.2, 26.5, 26.6 y 72.4).
 * **ISO/IEC 42001:** la página de ISO devolvió 403 en el cotejo del 2026-10-20; la
   edición vigente queda como cotejo previo no repetido.
 * **M1U2:** el "inventario que exige el AI Act" y la clasificación de alto riesgo de
   la detección de anomalías son afirmaciones del curso sin cotejar contra el articulado.
-* **Alcance del AI Act sobre Acme Labs:** decidir con el equipo si alcanza a sus
-  clientes (art. 2.1.c).
 * **SIGEN 197/2026:** no se leyó el anexo.
 * **AIMM:** el informe de Gartner es de pago; sin acceso no se puede salir de `draft`.
 * **CAIE:** falta validación externa, el cuestionario del piloto y confirmar la
