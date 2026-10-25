@@ -24,7 +24,7 @@ y formación.
 | M10–M12 | Evaluación, traspaso y decisión propia del año 2. Tramo: 13k |
 
 **Recomendación:** sostener el mínimo. El CEO firma gates dentro de cada tramo,
-el CFO verifica y el comité de IA dictamina. Maxi coordina la revisión del roadmap
+el CFO verifica y el AI Council dictamina. Maxi coordina la revisión del roadmap
 en el TP; los roles de Acme y sus nombres se documentan en las actas.
 
 **Escenarios:** base, continuidad condicionada sin beneficios presupuestados;
@@ -465,10 +465,14 @@ de calidad o caída demostrada del throughput (límite superior menor que 0). El
 **mes 9 lee valor**: pasa si el peor caso es mayor que 0, sin daño, y se acredita ese
 peor caso; espera con estimado ≥ +5% sin pasar; corta con estimado < +5% o daño. El
 **mes 12** es insumo del año 2 con la misma regla. Si la medición no distingue, el
-beneficio acreditado es 0 y no se amplía; seguir o cortar se decide por adopción,
-calidad, costo y controles, dentro del techo de cada tramo. Con menos de 15 personas
-activas, o si ni con base de 8 semanas el mes 9 tendría 80% de potencia para +25%,
-el AI Council ratifica que ninguna lectura decide por valor
+beneficio acreditado es 0 y no se amplía. Con método viable, el mes 9 sigue las
+bandas de [R-27](07-resoluciones.md#finanzas): no hay continuidad sin decisión por
+valor. Esa continuidad, decidida por adopción, calidad, costo y controles dentro del
+techo de cada tramo, queda reservada a la inviabilidad declarada: con menos de 15
+personas activas, si ni con base de 8 semanas el mes 9 tendría 80% de potencia para
++25%, o si la comprobación previa al mes 9 no sostiene los supuestos del error
+estándar (Anexo B, «Cuenta de potencia»), el AI Council ratifica que ninguna lectura
+decide por valor
 ([R-14](07-resoluciones.md#arquitectura-y-medición), [R-19](07-resoluciones.md#arquitectura-y-medición)).
 La guardia tiene un costo declarado: con tres reglas de corte por lectura, la
 probabilidad de cortar por azar sin efecto real es hasta ≈ 14% (≈ 12% con la mejora
@@ -516,7 +520,7 @@ aumentan, no como condición de pase.
 | Mes 6 | Adopción de Tecnología, con cobertura y denominador publicados | ≥80% | **Mantenimiento.** ≥60% y <80%: la formación se rediseña y se vuelve a costear antes de comprometer horas nuevas | **Suspensión**, solo si se autorizó el programa ampliado: <60%, se frenan sus horas de formación que no sean rediseño. En el mínimo: rediseño y recosteo, sin horas que frenar. Adopción no equivale a valor | En el mínimo, ninguno. Horas de formación M7-M9 del programa ampliado, si se autorizó |
 | Mes 6 | Controles: cobertura por superficie probada; críticos cerrados; residual aceptado. Si hay gateway y se declara cobertura de precio: *fc* × *s* contra el umbral, calidad y portabilidad del Anexo B | Cumplidos | Superficie no cubierta: se declara y escala al Council | Sin prueba económica, se retira el beneficio de precio; conservar un gateway exige justificar control frente a la alternativa menor | Uso y plataforma |
 | Mes 6 | Producto: problema observado, base de tiempo a primera integración exitosa y métrica principal acordadas antes de liberar; comparación con documentación/soporte; señal comercial escrita (ver "Hipótesis de producto") | El Directorio decide volver a costear y liberar construcción (R-30) | — | Sin mecanismo de captura, problema medido o señal escrita: sin construcción en el año; la hipótesis se relee en el mes 12. Sin plataforma ni ruta técnica alternativa diseñada y costeada, no se promete M7-M9 | Producto, a costear |
-| Mes 9 | Throughput, calidad primero | Peor caso (límite inferior) > 0%, sin daño: se acredita el peor caso | **Mantenimiento.** Estimado ≥ +5% sin pasar: una sola espera de 6 semanas, sin expansión, con subtramo propio (techos 1 / 6) que firma el CEO dentro del techo de M10-M12 (R-27); al vencer, si no pasa valor/calidad con la versión congelada, corte del frente interno: 115 hasta cerrar, 116 en el año | Estimado < +5%, o daño: corte del frente interno; precedencia si otro frente sigue | M10-M12 |
+| Mes 9 | Throughput, calidad primero | Peor caso (límite inferior) > 0%, sin daño: se acredita el peor caso | **Mantenimiento.** Estimado ≥ +5% sin pasar: una sola espera de 6 semanas, sin expansión, con subtramo propio (techos 1 / 6) que firma el CEO dentro del techo de M10-M12 (R-27); al vencer, si no pasa valor/calidad con la versión congelada, corte del frente interno: 115 hasta cerrar, 116 en el año | Estimado < +5%, o daño: corte del frente interno; precedencia si otro frente sigue. Con método declarado no viable (R-14), no se lee valor: la continuidad se decide por adopción, calidad, costo y controles | M10-M12 |
 | Mes 9 | Producto, si existe: SLO acordado, cero cruces de tenant, críticos cerrados | Cumplidos | SLO incumplido: vuelve a "asiste" y se revisa | Una filtración: se cancela la función | Producto |
 | Mes 9 | Señal tardía de plataforma | Se evalúa con calendario y costo nuevos | — | No se usa la promesa del itinerario original | Plataforma |
 | Mes 12 | Metas propuestas (Tecnología ≥85%; Operaciones habilitadas ≥60%); ambos denominadores y el combinado original informados | Se informan | Se informa contra el OKR | — | Ninguno: se informan |
@@ -685,7 +689,7 @@ propia. Las demás filas son riesgos de ejecución del roadmap, con juicio del C
 | El diagnóstico mezcla poblaciones y fechas | Alta | Medio | Conciliar corte, nómina, contratistas, personas/FTE y horas por rol ([Anexo A](01-diagnostico.md)) | Sin conciliación no se derivan horas de los agregados |
 | La base no resuelve o los datos no son extraíbles | Media | Alto | Acta de viabilidad previa; base de 8 semanas como camino esperado, con básico, intermedio y prueba desde la semana 9 | Sin datos ni precisión no se atribuye ganancia |
 | La productividad no aparece o trae retrabajo | Media | Alto | Guardia de calidad en cada gate; el valor se lee en el mes 9, con una sola espera de 6 semanas | Daño o caída demostrada en el mes 6; estimado < +5% en el mes 9, o peor caso ≤ 0 al vencer la espera |
-| Con 15-20 personas la medición no distingue la mejora | Alta | Medio | Gate de valor del [Anexo B](02-arquitectura.md): el mes 6 no decide por valor y el mes 9 solo exige distinguirla de cero; si no la distingue, beneficio 0 y sin ampliación (R-14, R-19) | Menos de 15 personas activas, o sin potencia ni con base de 8 semanas: ninguna lectura decide por valor |
+| Con 15-20 personas la medición no distingue la mejora | Alta | Medio | Gate de valor del [Anexo B](02-arquitectura.md): el mes 6 no decide por valor y el mes 9 solo exige distinguirla de cero; si no la distingue, beneficio 0 y sin ampliación (R-14, R-19) | Menos de 15 personas activas, sin potencia ni con base de 8 semanas, o supuestos del error estándar no sostenidos: ninguna lectura decide por valor |
 | Código o datos de un cliente llegan a un modelo externo, incluido el uso en superficies sin control técnico central | Media | Alto | Código bajo NDA suspendido desde la aprobación (R-09); matriz, *default-deny*, escaneo local, exclusión de usos prohibidos; compensatorios probados por superficie antes de usar ([Anexo C](03-gobierno-seguridad.md)) | Un incidente confirmado; un control obligatorio incumplido suspende el uso |
 | Cambio a pago por consumo | Alta | Alto | Se registra como señal; con plataforma, FinOps y prueba de costo | Más de 6× efectivo en un tramo |
 | Una señal libera plataforma sin necesidad incremental | Media | Alto | Regla de señal más cuatro condiciones, ratificada por el Directorio (R-15); el AI Council dictamina en cada gate | Sin brecha documentada o sin cualquiera de las otras tres condiciones, no se libera plataforma |
@@ -704,10 +708,10 @@ regulatorias derivadas del material. Cada marco explica una elección concreta.
 | Concepto y fuente | Decisión que explica |
 |---|---|
 | [Madurez en cinco dimensiones](../../material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md) | Revisar brechas por dimensión sin promediar niveles ni equiparar uso con valor; diagnóstico provisional en A |
-| [Factibilidad–impacto](../../material/conceptos/m1u2-matriz-factibilidad-impacto.md) y [RICE ajustado por riesgo](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md) | Primero prueba operativa con herramientas actuales; en producto, estudiar integración antes que pagos o servicio de agentes. La tabla RICE siguiente conserva puntajes hipotéticos, a validar; la operación no recibe un puntaje nuevo |
+| [Factibilidad–impacto](../../material/conceptos/m1u2-matriz-factibilidad-impacto.md) y [RICE ajustado por riesgo](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md) | Primero prueba operativa con herramientas actuales; en producto, estudiar integración antes que pagos o servicio de agentes. La comparación de producto es cualitativa y sin puntajes numéricos, que se asignan con datos en ejecución (R-30); la operación no recibe un puntaje nuevo |
 | [Build / buy / agentificar](../../material/conceptos/m1u2-build-buy-agentificar.md) | Configurar lo existente según costo, tiempo, capacidad y control. La nueva orquestación o plataforma necesita R-15 y otra autorización; no se llama agentificación a cualquier configuración |
 | [AI literacy por nivel y rol](../../material/conceptos/m3u2-ai-literacy-niveles.md) | Básico general e intermedio para la cohorte, con tareas por rol y tiempo protegido. El avanzado queda afuera del mínimo; no se añade formación por nombrar el marco |
-| [Autonomía L0–L4](../../material/conceptos/m1u4-escala-autonomia-l0-l4.md) | En producto, human-in-the-loop y tope L2: prepara, una persona decide y ejecuta. Es escala pedagógica del curso, no certificación; no cambia el uso interno con revisión |
+| [Autonomía L0–L4](../../material/conceptos/m1u4-escala-autonomia-l0-l4.md) | En producto, human-in-the-loop y tope de nivel 2: prepara, una persona decide y ejecuta. Es escala pedagógica del curso, no certificación; no cambia el uso interno con revisión |
 | [Kill-fast](../../material/conceptos/m1u1-kill-fast.md) y [kill/scale gates](../../material/conceptos/m1u2-kill-scale-gates.md) | Señales y plazo de inviabilidad antes de empezar, con posibilidad de corte temprano. Los gates formales liberan cada tramo; no exigen retorno antes de poder medirlo: M6 sin valor, M9 con valor. Esta distinción es aplicación del equipo, no una equivalencia que el curso imponga |
 
 La priorización cualitativa de la slide 3 resume impacto buscado, factibilidad y
@@ -735,8 +739,13 @@ lectura en ROI ni se suman alcances no autorizados.
 
 La tesis "IA que se vende" necesita un caso concreto, pero hoy es **hipótesis,
 no beneficio validado**. El CAIO elige **una** hipótesis y la compara con dos
-alternativas y con no tener frente producto. Los puntajes son **supuestos del
-CAIO, sin medición** ([Fuente: RICE](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md)).
+alternativas y con no tener frente producto. La comparación usa las dimensiones
+del [RICE ajustado por riesgo](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md)
+de la cursada (alcance, impacto, confianza, esfuerzo y riesgo como factor
+corrector) en forma **cualitativa**: la prioridad y sus razones son juicio del CAIO.
+El plan no publica puntajes numéricos: hoy no hay datos del caso que respalden
+asignar valores, y el puntaje se asigna con datos en ejecución
+([R-30](07-resoluciones.md#roadmap-y-comercial)).
 
 **Hipótesis elegida: asistente de integración en la plataforma propia.**
 
@@ -752,16 +761,16 @@ CAIO, sin medición** ([Fuente: RICE](../../material/conceptos/m1u2-rice-ajustad
 | Señal comercial (mes 6) | Un cliente, con un interlocutor que maneja presupuesto, acepta por escrito evaluar el asistente en el sandbox **y** acepta como referencia un rango de precio sujeto a resultados, sin compromiso de compra. Evaluar sin presupuesto ni rango es interés exploratorio: no libera | Resolución R-30; sin señal escrita en el mes 6, la oportunidad se archiva (R-31) |
 | Alternativas a la misma tarea | Mejorar documentación o soporte, configurar un asistente, o integrarlo al producto. Si documentación o soporte resuelven mejor, desplazan al asistente | Se comparan con la misma métrica |
 
-| Opción | Reach | Impact | Confidence | Effort | Riesgo | Puntaje | Por qué |
-|---|---|---|---|---|---|---|---|
-| **1. Asistente de integración en la plataforma propia** | 3 | 1 | 50% | 2,5 | 1 | **0,60** | Línea de soporte de mayor margen relativo ([ingresos](../../context/hechos/estructura-de-ingresos.md)); sin datos de cliente |
-| 2. Función en el producto propio de medios de pago | 1 | 2 | 50% | 3 | 3 | 0,11 | Habilitación externa que puede caer en los meses 4-9 y sin sistema de gestión certificado ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) |
-| 3. Servicio de agentes de código para otras software factories | 2 | 1 | 50% | 4 | 2 | 0,13 | El programa de partners exige certificaciones que no hay y compite con horas facturables ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)) |
-| 4. Solo eficiencia, sin frente producto | — | — | — | 0 | — | No aplica | Hoy es el estado del pedido mínimo; se compara con la opción 1 en el mes 6, con la base en la mano |
+| Opción | Lectura cualitativa (alcance, impacto, confianza, esfuerzo, riesgo) | Prioridad | Por qué |
+|---|---|---|---|
+| **1. Asistente de integración en la plataforma propia** | Alcance mayor entre los clientes que integran; impacto acotado a soporte; confianza baja, sin base; esfuerzo menor que las alternativas; riesgo menor | **Estudiar**, sin construir | Línea de soporte de mayor margen relativo ([ingresos](../../context/hechos/estructura-de-ingresos.md)); sin datos de cliente |
+| 2. Función en el producto propio de medios de pago | Alcance menor; impacto potencial mayor; confianza baja; esfuerzo intermedio; riesgo mayor | Postergar | Habilitación externa que puede caer en los meses 4-9 y sin sistema de gestión certificado ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) |
+| 3. Servicio de agentes de código para otras software factories | Alcance intermedio; impacto acotado; confianza baja; esfuerzo mayor; riesgo intermedio | Postergar | El programa de partners exige certificaciones que no hay y compite con horas facturables ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)) |
+| 4. Solo eficiencia, sin frente producto | No aplica | Estado del pedido | Hoy es el estado del pedido mínimo; se compara con la opción 1 en el mes 6, con la base en la mano |
 
 La señal no prueba disposición a pagar: precio y compra se validan con el piloto
-medido. Los puntajes los valida el AI Council con Producto
-([R-30](07-resoluciones.md#roadmap-y-comercial)).
+medido. El puntaje RICE, si se asigna, lo valida el AI Council con Producto con
+los datos del descubrimiento ([R-30](07-resoluciones.md#roadmap-y-comercial)).
 
 ### Catálogo único de decisiones
 
@@ -834,9 +843,12 @@ autoridad, el hito, la consecuencia y el tipo de cada uno están en su resoluci�
   una validación exhaustiva ni evidencia de disponibilidad.
 - La banda de espera del mes 9, su plazo de 6 semanas y el gate de valor son
   resoluciones (R-19, R-27); se recalibran con la base solo por nueva resolución.
-- Los puntajes RICE son juicio del CAIO; el outcome del asistente no tiene base.
+- La priorización de producto es cualitativa y juicio del CAIO, sin puntajes RICE
+  numéricos; el outcome del asistente no tiene base.
 - El método por conteos (intervalo de 90%, 15 personas activas, potencia del
-  80%) viene del Anexo B y lo ratifica el AI Council (R-14). Las probabilidades de
+  80%) viene del Anexo B y lo ratifica el AI Council (R-14). Su cobertura del 90%
+  presupone semanas independientes tras quitar la tendencia, pesos de estrato fijos
+  y tendencia sin incertidumbre; el acta lo comprueba antes del mes 9. Las probabilidades de
   pasar, esperar y cortar usan valores ilustrativos (n = 18, 2 PR por persona y
   semana, sin sobredispersión): el acta las recalcula con los reales.
 - La fecha del Anexo III del AI Act (2027-12-02, art. 113, letra c, inciso i, en

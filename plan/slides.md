@@ -69,7 +69,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 # La IA ya se usa y falta medir su aporte
 
-<p class="lead">Acme desarrolla software para bancos y fintechs. El uso interno de IA todavía no demuestra cuánto mejora la entrega frente a una base comparable.</p>
+<p class="lead">Acme desarrolla software para bancos y fintechs. El uso interno de IA todavía no demuestra cuánto mejora la entrega frente a una línea de base comparable.</p>
 
 <div class="grid g2">
 <div class="card dark">
@@ -111,7 +111,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 </div>
 
-<p class="note">Matriz factibilidad–impacto y RICE ajustado por riesgo. Puntajes de producto hipotéticos, a validar; operación sin puntaje nuevo.</p>
+<p class="note">Matriz factibilidad–impacto y RICE ajustado por riesgo, aplicados en forma cualitativa: sin puntajes numéricos hasta tener datos.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
@@ -208,7 +208,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 </div>
 </div>
 
-<p style="font-size:25px;margin-top:22px"><strong>Compromiso por 12 meses:</strong> la mejora por IA no se usa para desvincular. Se reasigna y se capacita. Comunicarlo es costoso de deshacer.</p>
+<p style="font-size:25px;margin-top:22px"><strong>Transición laboral responsable, 12 meses:</strong> la mejora por IA no se usa para desvincular. Se reasigna y se capacita. Comunicarlo es costoso de deshacer.</p>
 
 <p class="note">La regla de empleo excluye causas previas ajenas a la IA. El mínimo usa roles existentes; incorporaciones y formación ampliada requieren decisión y caja propias.</p>
 
@@ -243,7 +243,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 </div>
 </div>
 
-<p style="font-size:25px;margin-top:24px"><strong>Human-in-the-loop:</strong> en producto, tope de autonomía 2: la IA prepara; la persona decide y ejecuta.</p>
+<p style="font-size:25px;margin-top:24px"><strong>Humano en el circuito (HITL):</strong> en producto, tope de autonomía 2 (asistencia con ejecución humana): la IA prepara; la persona decide y ejecuta.</p>
 
 <p class="note">Sin crédito ni scoring con IA por 12 meses. Código y datos de clientes: fuera de modelos externos, salvo en su entorno y con permiso escrito. Código bajo NDA: se suspende al aprobar; transición completa en G.</p>
 
@@ -259,7 +259,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 ---
 
-<p class="eyebrow">Roadmap integrado · Kill/scale gates</p>
+<p class="eyebrow">Roadmap ajustado al riesgo · Compuertas kill/scale</p>
 
 # Cada etapa necesita una nueva firma
 
@@ -273,9 +273,9 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 </div>
 
-<p style="font-size:24px;margin-top:20px">Kill-fast: sin agenda o viabilidad, se reduce o detiene antes de M1. Kill/scale gates: decidir por etapa; valor en M9.</p>
+<p style="font-size:24px;margin-top:20px">Kill-fast: sin agenda o viabilidad, se reduce o detiene antes de M1. Compuertas kill/scale: decidir por etapa; valor en M9.</p>
 
-<p class="note">El CEO firma dentro de cada tramo, el CFO verifica y el comité dictamina. Seguridad puede suspender siempre. M9 acredita el piso del intervalo de 90%; si no es viable medir: beneficio 0, sin expansión. Condiciones completas en F.</p>
+<p class="note">El CEO firma dentro de cada tramo, el CFO verifica y el AI Council dictamina. Seguridad puede suspender siempre. M9 acredita el piso del intervalo de 90% si el método es viable y sostiene sus supuestos; si no, beneficio 0, sin expansión. Condiciones completas en F.</p>
 
 <div class="decision">
 <span class="pill">Decisión reversible</span>
@@ -295,7 +295,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 <div class="grid g2" style="margin:10px 0 18px">
 <div class="kpi"><div class="num">79k USD</div><div class="lbl">techo hasta cerrar M3<br><strong>10 caja + 69 tiempo propio</strong></div></div>
-<div class="kpi"><div class="num">121k USD</div><div class="lbl">techo anual, sujeto a gates<br><strong>16 caja + 105 tiempo propio</strong></div></div>
+<div class="kpi"><div class="num">121k USD</div><div class="lbl">techo anual, sujeto a compuertas<br><strong>16 caja + 105 tiempo propio</strong></div></div>
 </div>
 
 <div class="grid g3">
@@ -338,7 +338,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 <div class="money">
 <div><strong>8k USD</strong><p><b>Hoy, tiempo propio y caja 0.</b> Diez días hábiles de validación, con cargo a 2026.</p></div>
 <div><strong>+71k USD</strong><p><b>Segunda liberación.</b> Firma el CEO solo con las condiciones de R-05. No es automática.</p></div>
-<div><strong>121k USD</strong><p><b>Techo anual.</b> 79k hasta M3 y tramos de 16k, 13k y 13k. Cada gate requiere firma.</p></div>
+<div><strong>121k USD</strong><p><b>Techo anual.</b> 79k hasta M3 y tramos de 16k, 13k y 13k. Cada compuerta requiere firma.</p></div>
 </div>
 
 <div class="fine">
