@@ -465,10 +465,14 @@ de calidad o caída demostrada del throughput (límite superior menor que 0). El
 **mes 9 lee valor**: pasa si el peor caso es mayor que 0, sin daño, y se acredita ese
 peor caso; espera con estimado ≥ +5% sin pasar; corta con estimado < +5% o daño. El
 **mes 12** es insumo del año 2 con la misma regla. Si la medición no distingue, el
-beneficio acreditado es 0 y no se amplía; seguir o cortar se decide por adopción,
-calidad, costo y controles, dentro del techo de cada tramo. Con menos de 15 personas
-activas, o si ni con base de 8 semanas el mes 9 tendría 80% de potencia para +25%,
-el AI Council ratifica que ninguna lectura decide por valor
+beneficio acreditado es 0 y no se amplía. Con método viable, el mes 9 sigue las
+bandas de [R-27](07-resoluciones.md#finanzas): no hay continuidad sin decisión por
+valor. Esa continuidad, decidida por adopción, calidad, costo y controles dentro del
+techo de cada tramo, queda reservada a la inviabilidad declarada: con menos de 15
+personas activas, si ni con base de 8 semanas el mes 9 tendría 80% de potencia para
++25%, o si la comprobación previa al mes 9 no sostiene los supuestos del error
+estándar (Anexo B, «Cuenta de potencia»), el AI Council ratifica que ninguna lectura
+decide por valor
 ([R-14](07-resoluciones.md#arquitectura-y-medición), [R-19](07-resoluciones.md#arquitectura-y-medición)).
 La guardia tiene un costo declarado: con tres reglas de corte por lectura, la
 probabilidad de cortar por azar sin efecto real es hasta ≈ 14% (≈ 12% con la mejora
@@ -516,7 +520,7 @@ aumentan, no como condición de pase.
 | Mes 6 | Adopción de Tecnología, con cobertura y denominador publicados | ≥80% | **Mantenimiento.** ≥60% y <80%: la formación se rediseña y se vuelve a costear antes de comprometer horas nuevas | **Suspensión**, solo si se autorizó el programa ampliado: <60%, se frenan sus horas de formación que no sean rediseño. En el mínimo: rediseño y recosteo, sin horas que frenar. Adopción no equivale a valor | En el mínimo, ninguno. Horas de formación M7-M9 del programa ampliado, si se autorizó |
 | Mes 6 | Controles: cobertura por superficie probada; críticos cerrados; residual aceptado. Si hay gateway y se declara cobertura de precio: *fc* × *s* contra el umbral, calidad y portabilidad del Anexo B | Cumplidos | Superficie no cubierta: se declara y escala al Council | Sin prueba económica, se retira el beneficio de precio; conservar un gateway exige justificar control frente a la alternativa menor | Uso y plataforma |
 | Mes 6 | Producto: problema observado, base de tiempo a primera integración exitosa y métrica principal acordadas antes de liberar; comparación con documentación/soporte; señal comercial escrita (ver "Hipótesis de producto") | El Directorio decide volver a costear y liberar construcción (R-30) | — | Sin mecanismo de captura, problema medido o señal escrita: sin construcción en el año; la hipótesis se relee en el mes 12. Sin plataforma ni ruta técnica alternativa diseñada y costeada, no se promete M7-M9 | Producto, a costear |
-| Mes 9 | Throughput, calidad primero | Peor caso (límite inferior) > 0%, sin daño: se acredita el peor caso | **Mantenimiento.** Estimado ≥ +5% sin pasar: una sola espera de 6 semanas, sin expansión, con subtramo propio (techos 1 / 6) que firma el CEO dentro del techo de M10-M12 (R-27); al vencer, si no pasa valor/calidad con la versión congelada, corte del frente interno: 115 hasta cerrar, 116 en el año | Estimado < +5%, o daño: corte del frente interno; precedencia si otro frente sigue | M10-M12 |
+| Mes 9 | Throughput, calidad primero | Peor caso (límite inferior) > 0%, sin daño: se acredita el peor caso | **Mantenimiento.** Estimado ≥ +5% sin pasar: una sola espera de 6 semanas, sin expansión, con subtramo propio (techos 1 / 6) que firma el CEO dentro del techo de M10-M12 (R-27); al vencer, si no pasa valor/calidad con la versión congelada, corte del frente interno: 115 hasta cerrar, 116 en el año | Estimado < +5%, o daño: corte del frente interno; precedencia si otro frente sigue. Con método declarado no viable (R-14), no se lee valor: la continuidad se decide por adopción, calidad, costo y controles | M10-M12 |
 | Mes 9 | Producto, si existe: SLO acordado, cero cruces de tenant, críticos cerrados | Cumplidos | SLO incumplido: vuelve a "asiste" y se revisa | Una filtración: se cancela la función | Producto |
 | Mes 9 | Señal tardía de plataforma | Se evalúa con calendario y costo nuevos | — | No se usa la promesa del itinerario original | Plataforma |
 | Mes 12 | Metas propuestas (Tecnología ≥85%; Operaciones habilitadas ≥60%); ambos denominadores y el combinado original informados | Se informan | Se informa contra el OKR | — | Ninguno: se informan |
@@ -685,7 +689,7 @@ propia. Las demás filas son riesgos de ejecución del roadmap, con juicio del C
 | El diagnóstico mezcla poblaciones y fechas | Alta | Medio | Conciliar corte, nómina, contratistas, personas/FTE y horas por rol ([Anexo A](01-diagnostico.md)) | Sin conciliación no se derivan horas de los agregados |
 | La base no resuelve o los datos no son extraíbles | Media | Alto | Acta de viabilidad previa; base de 8 semanas como camino esperado, con básico, intermedio y prueba desde la semana 9 | Sin datos ni precisión no se atribuye ganancia |
 | La productividad no aparece o trae retrabajo | Media | Alto | Guardia de calidad en cada gate; el valor se lee en el mes 9, con una sola espera de 6 semanas | Daño o caída demostrada en el mes 6; estimado < +5% en el mes 9, o peor caso ≤ 0 al vencer la espera |
-| Con 15-20 personas la medición no distingue la mejora | Alta | Medio | Gate de valor del [Anexo B](02-arquitectura.md): el mes 6 no decide por valor y el mes 9 solo exige distinguirla de cero; si no la distingue, beneficio 0 y sin ampliación (R-14, R-19) | Menos de 15 personas activas, o sin potencia ni con base de 8 semanas: ninguna lectura decide por valor |
+| Con 15-20 personas la medición no distingue la mejora | Alta | Medio | Gate de valor del [Anexo B](02-arquitectura.md): el mes 6 no decide por valor y el mes 9 solo exige distinguirla de cero; si no la distingue, beneficio 0 y sin ampliación (R-14, R-19) | Menos de 15 personas activas, sin potencia ni con base de 8 semanas, o supuestos del error estándar no sostenidos: ninguna lectura decide por valor |
 | Código o datos de un cliente llegan a un modelo externo, incluido el uso en superficies sin control técnico central | Media | Alto | Código bajo NDA suspendido desde la aprobación (R-09); matriz, *default-deny*, escaneo local, exclusión de usos prohibidos; compensatorios probados por superficie antes de usar ([Anexo C](03-gobierno-seguridad.md)) | Un incidente confirmado; un control obligatorio incumplido suspende el uso |
 | Cambio a pago por consumo | Alta | Alto | Se registra como señal; con plataforma, FinOps y prueba de costo | Más de 6× efectivo en un tramo |
 | Una señal libera plataforma sin necesidad incremental | Media | Alto | Regla de señal más cuatro condiciones, ratificada por el Directorio (R-15); el AI Council dictamina en cada gate | Sin brecha documentada o sin cualquiera de las otras tres condiciones, no se libera plataforma |
@@ -842,7 +846,9 @@ autoridad, el hito, la consecuencia y el tipo de cada uno están en su resoluci�
 - La priorización de producto es cualitativa y juicio del CAIO, sin puntajes RICE
   numéricos; el outcome del asistente no tiene base.
 - El método por conteos (intervalo de 90%, 15 personas activas, potencia del
-  80%) viene del Anexo B y lo ratifica el AI Council (R-14). Las probabilidades de
+  80%) viene del Anexo B y lo ratifica el AI Council (R-14). Su cobertura del 90%
+  presupone semanas independientes tras quitar la tendencia, pesos de estrato fijos
+  y tendencia sin incertidumbre; el acta lo comprueba antes del mes 9. Las probabilidades de
   pasar, esperar y cortar usan valores ilustrativos (n = 18, 2 PR por persona y
   semana, sin sobredispersión): el acta las recalcula con los reales.
 - La fecha del Anexo III del AI Act (2027-12-02, art. 113, letra c, inciso i, en

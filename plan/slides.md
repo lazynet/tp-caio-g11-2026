@@ -275,7 +275,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 <p style="font-size:24px;margin-top:20px">Kill-fast: sin agenda o viabilidad, se reduce o detiene antes de M1. Kill/scale gates: decidir por etapa; valor en M9.</p>
 
-<p class="note">El CEO firma dentro de cada tramo, el CFO verifica y el comité dictamina. Seguridad puede suspender siempre. M9 acredita el piso del intervalo de 90%; si no es viable medir: beneficio 0, sin expansión. Condiciones completas en F.</p>
+<p class="note">El CEO firma dentro de cada tramo, el CFO verifica y el comité dictamina. Seguridad puede suspender siempre. M9 acredita el piso del intervalo de 90% si el método es viable y sostiene sus supuestos; si no, beneficio 0, sin expansión. Condiciones completas en F.</p>
 
 <div class="decision">
 <span class="pill">Decisión reversible</span>
