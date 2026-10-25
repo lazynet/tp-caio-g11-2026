@@ -24,7 +24,7 @@ y formación.
 | M10–M12 | Evaluación, traspaso y decisión propia del año 2. Tramo: 13k |
 
 **Recomendación:** sostener el mínimo. El CEO firma gates dentro de cada tramo,
-el CFO verifica y el comité de IA dictamina. Maxi coordina la revisión del roadmap
+el CFO verifica y el AI Council dictamina. Maxi coordina la revisión del roadmap
 en el TP; los roles de Acme y sus nombres se documentan en las actas.
 
 **Escenarios:** base, continuidad condicionada sin beneficios presupuestados;
@@ -711,7 +711,7 @@ regulatorias derivadas del material. Cada marco explica una elección concreta.
 | [Factibilidad–impacto](../../material/conceptos/m1u2-matriz-factibilidad-impacto.md) y [RICE ajustado por riesgo](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md) | Primero prueba operativa con herramientas actuales; en producto, estudiar integración antes que pagos o servicio de agentes. La comparación de producto es cualitativa y sin puntajes numéricos, que se asignan con datos en ejecución (R-30); la operación no recibe un puntaje nuevo |
 | [Build / buy / agentificar](../../material/conceptos/m1u2-build-buy-agentificar.md) | Configurar lo existente según costo, tiempo, capacidad y control. La nueva orquestación o plataforma necesita R-15 y otra autorización; no se llama agentificación a cualquier configuración |
 | [AI literacy por nivel y rol](../../material/conceptos/m3u2-ai-literacy-niveles.md) | Básico general e intermedio para la cohorte, con tareas por rol y tiempo protegido. El avanzado queda afuera del mínimo; no se añade formación por nombrar el marco |
-| [Autonomía L0–L4](../../material/conceptos/m1u4-escala-autonomia-l0-l4.md) | En producto, human-in-the-loop y tope L2: prepara, una persona decide y ejecuta. Es escala pedagógica del curso, no certificación; no cambia el uso interno con revisión |
+| [Autonomía L0–L4](../../material/conceptos/m1u4-escala-autonomia-l0-l4.md) | En producto, human-in-the-loop y tope de nivel 2: prepara, una persona decide y ejecuta. Es escala pedagógica del curso, no certificación; no cambia el uso interno con revisión |
 | [Kill-fast](../../material/conceptos/m1u1-kill-fast.md) y [kill/scale gates](../../material/conceptos/m1u2-kill-scale-gates.md) | Señales y plazo de inviabilidad antes de empezar, con posibilidad de corte temprano. Los gates formales liberan cada tramo; no exigen retorno antes de poder medirlo: M6 sin valor, M9 con valor. Esta distinción es aplicación del equipo, no una equivalencia que el curso imponga |
 
 La priorización cualitativa de la slide 3 resume impacto buscado, factibilidad y

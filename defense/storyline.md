@@ -164,7 +164,7 @@ financia la evidencia para decidir qué continuar o ampliar.
   ensamblar. La plataforma se relee en los meses 3, 6 y 9 con la regla que
   ratifica el Directorio: una señal y además cuatro condiciones (R-15). La libera
   el Directorio. Nada pasa al año 2 por defecto ([Anexo B](../plan/annexes/02-arquitectura.md)).
-- **Human-in-the-loop y seguridad antes de usar:** en producto el tope L2
+- **Human-in-the-loop y seguridad antes de usar:** en producto el tope de nivel 2
   permite preparar acciones, pero la persona decide y ejecuta. La escala es
   pedagógica del curso. Sin plataforma no alcanza la política; cada
   superficie prueba sus compensatorios, con críticos cerrados y residual

@@ -19,7 +19,7 @@ autoridad y condiciones. Esta síntesis facilita su lectura.
 | Primera liberación | Directorio: hasta 8k USD de tiempo y caja 0, diez días hábiles de validación con cargo a 2026 |
 | Segunda liberación | CEO: hasta 71k adicionales, exclusivamente con todas las condiciones de R-05 |
 | Techos | 79k hasta cerrar M3; después 16k, 13k y 13k por tramo. Total anual 121k; fijarlos no libera fondos |
-| Gates | CEO firma dentro de cada tramo; CFO verifica y comité de IA dictamina. Excesos y ampliaciones vuelven al Directorio |
+| Gates | CEO firma dentro de cada tramo; CFO verifica y AI Council dictamina. Excesos y ampliaciones vuelven al Directorio |
 | Alcance excluido | Plataforma, construcción del producto y demás ampliaciones requieren otra decisión y costeo |
 
 **Recomendación:** adoptar el paquete completo sin desprender sus condiciones.
