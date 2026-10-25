@@ -143,7 +143,7 @@ para que el plan entre en el techo, y lo verifica Finanzas con los datos interno
 | Ganancia de throughput (g) | +10% a +25% por desarrollador a 12 meses, solo en equipos propios | [Supuesto](../../context/supuestos/ganancia-de-productividad.md) |
 | Desarrolladores en equipos propios (N) y su costo | 15-20 personas (17,5); USD 2.500-7.000 por mes (4.750). N × costo **no** es la nómina | [Supuesto](../../context/supuestos/desarrolladores-en-equipos-propios.md) |
 | Rampa de la ganancia (meses 1-3 / 4-6 / 7-9 / 10-12) | Fracción del objetivo de throughput que se alcanza: base 0/25/60/100%; pesimista 0/10/30/60%; optimista 0/40/80/100% | [Supuesto](../../context/supuestos/rampa-de-la-ganancia.md) |
-| Línea de base de atribución | Base prospectiva congelada en las semanas 1-4 del plan; la serie retrospectiva de la preparación previa estima ruido. El OKR se informa al lado contra el cuarto trimestre de 2026; no cambia de base: la retrospectiva solo da lectura contra tendencia, sin atribución (Anexo B, "Respaldo") | [Convenciones](../../context/supuestos/convenciones-de-calculo.md), [Anexo F](06-roadmap-riesgo.md) |
+| Línea de base de atribución | Base prospectiva congelada desde la semana 1 del plan: 8 semanas como camino esperado, 4 solo si el acta muestra que alcanzan la potencia ([R-18](07-resoluciones.md#arquitectura-y-medición)); la serie retrospectiva de la preparación previa estima ruido. El OKR se informa al lado contra el cuarto trimestre de 2026; no cambia de base: la retrospectiva solo da lectura contra tendencia, sin atribución (Anexo B, "Respaldo") | [Convenciones](../../context/supuestos/convenciones-de-calculo.md), [Anexo F](06-roadmap-riesgo.md) |
 | Poblaciones de capacitación | Básico ~65 × 6 h; intermedio ~50 × 12 h; avanzado ~10; 8 champions al 10% | [Supuesto](../../context/supuestos/poblaciones-de-capacitacion.md) |
 | Precios externos y contingencia | Rangos sin cotización; 15% de contingencia sobre la caja | [Supuesto](../../context/supuestos/precios-externos-sin-cotizar.md) |
 | Capacidades que hoy no existen | Gateway, inventario de arquitectura, legal dedicado a IA | [Supuesto](../../context/supuestos/capacidades-ausentes.md) |
@@ -464,7 +464,8 @@ caja dentro de los 12 meses.**
 aceptado (mergeado, con las compuertas de calidad aprobadas y sin reversión a 14
 días) por persona activa y por tramo de tres meses, estratificado por tipo y tamaño de
 cambio. La cohorte son los equipos propios. La ganancia se atribuye contra la
-base prospectiva congelada en las semanas 1-4 del plan, con incidentes y retrabajo
+base prospectiva congelada desde la semana 1 del plan (8 semanas como camino
+esperado, 4 solo si alcanzan la potencia; R-18), con incidentes y retrabajo
 al lado; contra la serie de la preparación previa se informa el OKR, sin atribuir; la serie de la preparación previa
 tampoco sustituye a la base si esta resulta ruidosa (Anexo B, "Respaldo").
 
@@ -1054,8 +1055,18 @@ Recostear dentro de 71 lo firma el CEO; superar 71 vuelve al Directorio
 ### Modelo recalculable
 
 El modelo no se publica como script. Con las fuentes de la tabla de supuestos y
-estas fórmulas, un tercero reproduce todas las tablas del anexo. Los valores
+estas fórmulas, un tercero reproduce las tablas del anexo. Los valores
 reales (facturación, tarifa, nómina) se cargan solo en el registro interno de Finanzas.
+
+**Dos modelos, separados.** El **vigente**, el del pedido mínimo, usa las filas de
+costo, FTE, caja, contingencia, beneficio de caja (hoy 0), consumo, costo por PR,
+pérdida al cortar, base del resto del año, reservas y techos, y mide con la fila
+«Medición del mínimo (vigente)»: la misma unidad, calendario y fórmula que el
+[Anexo B](02-arquitectura.md) y el [Anexo G](07-resoluciones.md#arquitectura-y-medición).
+Las filas de throughput por rampa, capacidad liberada, output adicional, ROI con
+capacidad, régimen, equilibrio, puente del OKR, umbral del gateway y el semiancho
+histórico reproducen el paquete completo y las alternativas: son antecedente y no
+deciden el mínimo ([R-28](07-resoluciones.md#finanzas)).
 
 | Magnitud | Fórmula |
 |---|---|
@@ -1073,7 +1084,8 @@ reales (facturación, tarifa, nómina) se cargan solo en el registro interno de 
 | Incremental por consumo | (k − 1) × suscripción del agente de código por tramo de tres meses |
 | Umbral de reducción para el gateway | (*fc* × s)* = costo del gateway / (k × gasto elegible anual); hoy el gasto elegible es la suscripción del agente de código |
 | Puente del equilibrio con el OKR | atribuible = (1 + meta contra el cuarto trimestre de 2026) / (1 + d) − 1 − c; el OKR cubre g* si atribuible ≥ g* (d: mejora del cuarto trimestre de 2026 a la base de los meses 1-3; c: cambio del control en la ventana, en la misma unidad) |
-| Semiancho del intervalo (aproximación) | ≈ 1,645 × σ / √n; un gate pasa si estimado − semiancho ≥ umbral |
+| Medición del mínimo (vigente) | Unidad: PR aceptados por persona-semana activa, totales por área y semana. Base de 8 semanas como camino esperado (4 solo si alcanza la potencia; R-18); ventana del mes 9: semanas maduras de M7-M9. SE del logaritmo de la razón = √(φ × (1/P_b + 1/P_v)); semiancho de 90% = 1,645 × SE; el mes 9 pasa si el límite inferior es mayor que 0, sin daño. Vale bajo los supuestos declarados en el Anexo B («Cuenta de potencia»); si no se sostienen, la lectura es descriptiva y no acredita valor |
+| Semiancho histórico (paquete completo, regla anterior) | ≈ 1,645 × σ / √n; un gate pasaba si estimado − semiancho ≥ umbral. Reemplazado por la fila anterior; no decide ([R-28](07-resoluciones.md#finanzas)) |
 | Costo por PR aceptado | (licencias y consumo de la cohorte + plataforma imputada + horas de revisión × costo/hora) / PR aceptados |
 | Umbral de facturación para un techo p | caja con contingencia / p |
 | Pérdida al cortar en una decisión | caja y tiempo de los tramos ejecutados hasta ella + preparación previa + cierre (un mes de contractor y de laboratorio, sin contingencia) |
@@ -1484,7 +1496,8 @@ pre-M1; el tiempo existente no representa nueva nómina ni caja incremental.
 
 Incluye reconstrucción retrospectiva y preparación sobre fuentes existentes;
 no habilita formación, prácticas, herramientas nuevas, despliegues ni contratos.
-La base prospectiva sigue en semanas 1-4 de M1; no se adelanta a esta ventana.
+La base prospectiva empieza en la semana 1 de M1 (8 semanas como camino esperado,
+4 solo si alcanzan la potencia; R-18); no se adelanta a esta ventana.
 
 Durante la ventana se prepara el alcance y se solicita cotización del dictamen
 legal, sin contratarlo. No se supone cotización gratuita: si el proveedor cobra,
@@ -1672,7 +1685,7 @@ eso cada línea se absorbe en una fila declarada o queda fuera, con la cuenta:
 | Cambio M4-M12 | Fila nueva de Personas, 4-6 h por tramo: comunicación de cada gate, seguimiento de frenos y de la postura sobre el empleo, agendas | 0,0375-0,1875 por tramo; **entra** (ver la tabla de tramos) | Un programa de cambio mayor que este es alcance ampliado: lo decide el Directorio |
 | Verificador de los indicadores en M3, M6, M9 y M12 ([Anexo B](02-arquitectura.md)) | Fila propia: 4-5 h por lectura en M3 (margen de 34 h) y 4-5 h por tramo después, que en M10-M12 cubren también la relectura de la espera del mes 9 | M1-M3 0,075-0,234375; cada tramo 0,075-0,234375; **entra**, con las holguras de arriba | Más horas por lectura no entran en M7-M12 (a 6 h, 11,00625 contra 11): se reduce el alcance de la reproducción o vuelve al Directorio |
 | Aprobación del tratamiento de eventos de uso en la preparación ([R-13](07-resoluciones.md#gobierno-y-seguridad)) | 2-4 h del Responsable de seguridad, como «autoridad de decisión» dentro de las 16-24 h de esa fila de la validación organizativa (actividad «Estado de políticas, restricciones y separación de funciones»). La regla por defecto, agregados por área, no necesita dictamen legal ([Anexo C](03-gobierno-seguridad.md)) | 2-4 h × 18,75-46,875 = 0,0375-0,1875, a una tarifa no mayor que la de TL con que se costea esa fila | Si la fila no las absorbe, entran en la holgura del techo 5 (5 − 4,1 = 0,9: 19 h a 46,875 USD/h); el techo de 8 no cambia |
-| Legal externo M4-M12 ([Anexo C](03-gobierno-seguridad.md), «Legal externo después de M1») | La provisión de caja del tramo (0-1,5 + 15%) es única para herramientas o consulta legal, con las consultas y disparadores del cuadro de C. Si legal es condición para un uso, tiene prioridad sobre herramientas | Techo 2 / 1,15 = 1,74 antes de contingencia: 4,6 h a 375 USD/h o 7,0 h a 250. C publica 5,3-8 h (2.000 / 375 a 2.000 / 250) sin descontar la contingencia de 15%, que rige toda la caja. Herramientas 1,5 + legal 4 h a 375 = 3,0 × 1,15 = 3,45 contra 2: **las dos al máximo no entran** | Lo que no entra se recostea dentro del techo del tramo, o vuelve al Directorio. Quedan fuera la revisión normativa completa y un dictamen nuevo: son alcance ampliado ([R-28](07-resoluciones.md#finanzas)) |
+| Legal externo M4-M12 ([Anexo C](03-gobierno-seguridad.md), «Legal externo después de M1») | La provisión de caja del tramo (0-1,5 + 15%) es única para herramientas o consulta legal, con las consultas y disparadores del cuadro de C. Si legal es condición para un uso, tiene prioridad sobre herramientas | Techo 2 / 1,15 = 1,74 antes de contingencia: 4,6 h a 375 USD/h o 7,0 h a 250. Coincide con C, que publica 2.000 / 1,15 ≈ 1.739 USD, equivalentes a 4,6-7,0 h (1.739 / 375 a 1.739 / 250). Herramientas 1,5 + legal 4 h a 375 = 3,0 × 1,15 = 3,45 contra 2: **las dos al máximo no entran** | Lo que no entra se recostea dentro del techo del tramo, o vuelve al Directorio. Quedan fuera la revisión normativa completa y un dictamen nuevo: son alcance ampliado ([R-28](07-resoluciones.md#finanzas)) |
 | Asesoría laboral sobre la postura de empleo ([R-20](07-resoluciones.md#personas)) | Dos opciones: (a) 2-4 h dentro de las 8-16 h del dictamen legal de M1-M3, si su cotización deja ese espacio (el dictamen queda en 12-14 h como máximo); (b) fuera de 79, aprobada por el Directorio, como la facilitación externa ([R-22](07-resoluciones.md#personas)) | (a) no cambia la caja: el máximo sigue en 16 h × 375 = 6. (b) 2-4 h × 250-375 = 0,5-1,5; con 15%, 0,575-1,725. Sumarla a 8,625 rompe 9: la holgura de caja (0,375) es menos de 1 h a 375 USD/h | Rige (a) si la cotización lo permite, la verifica el CFO y la firma el CEO en la segunda liberación; si no, (b). No va en la primera liberación: su caja es 0. La postura tiene costo incremental 0 ([R-20](07-resoluciones.md#personas)): con (a), la asesoría usa caja ya presupuestada; con (b), es caja aparte que decide el Directorio |
 
 Una ampliación de alcance exige volver a costear antes de comprometer.
