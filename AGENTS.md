@@ -19,7 +19,7 @@ El Trabajo Integrador Final de la *Diplomatura Chief AI Officer (CAIO)* de UTN B
 un **Plan Maestro del CAIO a 12 meses** para una organización, defendido ante un board.
 
 **Estado y responsables:** consultá el estado y el reparto acordado en
-`README.md`; es su única fuente. No conviertas acuerdos pendientes en decisiones.
+`README.md`; es su única fuente. No conviertas pendientes en decisiones.
 
 **Entrega:** un único PDF de menos de 10 MB, con máximo diez slides (portada y
 equipo incluidas) y anexos. Generar el PDF no lo habilita: usá
@@ -55,8 +55,8 @@ markdown y se regenera. Requisitos (Python 3.11+, PyYAML y pypdf en `.venv`,
 | `context/` | Bundle OKF: hechos públicos o anonimizados y supuestos sobre el caso, cada uno con su fuente |
 | `material/` | Bundle OKF: unidades y frameworks de la cursada, y qué sección del plan respalda cada uno |
 | `plan/slides.md` | Las 10 slides, fuente única del deck |
-| `plan/theme/acme.css` | El tema de Marp del deck (diseño portado de Claude Design); `slides.md` usa sus clases en bloques HTML con Markdown adentro |
-| `plan/annexes/` | Un anexo por archivo (`NN-tema.md` desde `_template.md`), referenciado desde las slides |
+| `plan/theme/acme.css` | El tema de Marp del deck (portado de Claude Design); `slides.md` usa sus clases en bloques HTML |
+| `plan/annexes/` | Un anexo por archivo (`NN-tema.md`, desde `_template.md`), enlazado en slides |
 | `defense/` | Storyline, banco de objeciones; `defense/evidence/` es un bundle OKF |
 | `reviews/` | Revisiones del board y del peer review, con fecha |
 | `scripts/build-deck.sh` | Genera el deck y la entrega: `all` (default), `entrega`, `marp`, `pandoc` o `html` |
@@ -167,9 +167,9 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
 - Que slides o PDF no desbordan se afirma tras abrir el render y describir lo
   visto; contar páginas no es revisión visual.
 - Commits: `tipo: descripción corta` en español, sin trailers.
-- Cambios a `main` por PR y con chequeos en verde; por convención del equipo, el
-  code owner revisa. No uses `--admin` ni saltees hooks. No publiques sin
-  autorización del pedido.
+- Cambios a `main` por PR y con chequeos en verde; sin cupo fijo de
+  aprobaciones, el ruleset pide una extra si hay cambios no atribuidos (agentes).
+  No uses `--admin` ni saltees hooks. No publiques sin autorización del pedido.
 
 ## Agentes
 

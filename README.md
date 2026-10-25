@@ -280,8 +280,10 @@ consolidación. Nunca marques toda una fila como probada por haber listado roles
 7. **Cambios a `main` por pull request.** El ruleset «main protegida» no acepta
    push directo ni force-push a `main` y exige que pasen los chequeos
    `leak-check` y `gitleaks`: trabajá en una rama y abrí un PR. El ruleset no
-   exige aprobaciones (0 requeridas); por convención del equipo, Martin revisa
-   cada PR (`.github/CODEOWNERS` se lo solicita). No uses `--admin` ni saltees
+   fija un número de aprobaciones (0 requeridas), pero sí exige una aprobación
+   extra cuando el PR trae cambios no atribuidos (p. ej. hechos por agentes):
+   en la práctica, un PR de agente necesita una aprobación. Martin revisa cada
+   PR (`.github/CODEOWNERS` se lo solicita). No uses `--admin` ni saltees
    hooks. Enlazá el issue que resuelve y su evidencia de cierre. Si no sabés
    cómo, pedíselo a tu agente: *"commiteá esto en una rama nueva y abrí un PR"*.
 
@@ -317,7 +319,8 @@ confidenciales y cualquier cosa en `private/`) con una denylist privada que vive
 fuera del repo y lleva los nombres y los dominios de mail de la organización del
 caso. No uses nunca `git commit --no-verify`. Ninguna capa garantiza que no se
 filtre nada: la defensa principal es no escribir el dato. La protección de
-`main` exige que pasen `leak-check` y `gitleaks`, pero no exige aprobaciones.
+`main` exige que pasen `leak-check` y `gitleaks`; no fija un número de aprobaciones,
+pero pide una extra si el PR trae cambios no atribuidos (p. ej. de agentes).
 Que el secreto `LEAK_DENYLIST` esté configurado en GitHub no está verificado en
 este README.
 
