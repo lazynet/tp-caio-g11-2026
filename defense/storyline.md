@@ -126,8 +126,8 @@ capacidad, calidad y restricciones antes de ampliar.
   operación con herramientas existentes. En producto, el estudio del asistente
   queda antes que pagos y el servicio de agentes por documentación propia y
   menor dependencia externa. Pagos requiere habilitación y seguridad; agentes,
-  certificaciones y horas que compiten con entregas. Los puntajes son hipótesis
-  del CAIO, no resultados ([Anexo F](../plan/annexes/06-roadmap-riesgo.md#de-los-conceptos-de-la-cursada-a-la-decisión-del-caso)).
+  certificaciones y horas que compiten con entregas. La comparación es
+  cualitativa y juicio del CAIO, sin puntajes numéricos ([Anexo F](../plan/annexes/06-roadmap-riesgo.md#de-los-conceptos-de-la-cursada-a-la-decisión-del-caso)).
 
 - **Preparar → Validar → Contrastar → Consolidar:** primero base, controles,
   formación y prueba; después validación interna y estudio acotado de producto;

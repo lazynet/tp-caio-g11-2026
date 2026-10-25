@@ -704,7 +704,7 @@ regulatorias derivadas del material. Cada marco explica una elección concreta.
 | Concepto y fuente | Decisión que explica |
 |---|---|
 | [Madurez en cinco dimensiones](../../material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md) | Revisar brechas por dimensión sin promediar niveles ni equiparar uso con valor; diagnóstico provisional en A |
-| [Factibilidad–impacto](../../material/conceptos/m1u2-matriz-factibilidad-impacto.md) y [RICE ajustado por riesgo](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md) | Primero prueba operativa con herramientas actuales; en producto, estudiar integración antes que pagos o servicio de agentes. La tabla RICE siguiente conserva puntajes hipotéticos, a validar; la operación no recibe un puntaje nuevo |
+| [Factibilidad–impacto](../../material/conceptos/m1u2-matriz-factibilidad-impacto.md) y [RICE ajustado por riesgo](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md) | Primero prueba operativa con herramientas actuales; en producto, estudiar integración antes que pagos o servicio de agentes. La comparación de producto es cualitativa y sin puntajes numéricos, que se asignan con datos en ejecución (R-30); la operación no recibe un puntaje nuevo |
 | [Build / buy / agentificar](../../material/conceptos/m1u2-build-buy-agentificar.md) | Configurar lo existente según costo, tiempo, capacidad y control. La nueva orquestación o plataforma necesita R-15 y otra autorización; no se llama agentificación a cualquier configuración |
 | [AI literacy por nivel y rol](../../material/conceptos/m3u2-ai-literacy-niveles.md) | Básico general e intermedio para la cohorte, con tareas por rol y tiempo protegido. El avanzado queda afuera del mínimo; no se añade formación por nombrar el marco |
 | [Autonomía L0–L4](../../material/conceptos/m1u4-escala-autonomia-l0-l4.md) | En producto, human-in-the-loop y tope L2: prepara, una persona decide y ejecuta. Es escala pedagógica del curso, no certificación; no cambia el uso interno con revisión |
@@ -735,8 +735,13 @@ lectura en ROI ni se suman alcances no autorizados.
 
 La tesis "IA que se vende" necesita un caso concreto, pero hoy es **hipótesis,
 no beneficio validado**. El CAIO elige **una** hipótesis y la compara con dos
-alternativas y con no tener frente producto. Los puntajes son **supuestos del
-CAIO, sin medición** ([Fuente: RICE](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md)).
+alternativas y con no tener frente producto. La comparación usa las dimensiones
+del [RICE ajustado por riesgo](../../material/conceptos/m1u2-rice-ajustado-por-riesgo.md)
+de la cursada (alcance, impacto, confianza, esfuerzo y riesgo como factor
+corrector) en forma **cualitativa**: la prioridad y sus razones son juicio del CAIO.
+El plan no publica puntajes numéricos: hoy no hay datos del caso que respalden
+asignar valores, y el puntaje se asigna con datos en ejecución
+([R-30](07-resoluciones.md#roadmap-y-comercial)).
 
 **Hipótesis elegida: asistente de integración en la plataforma propia.**
 
@@ -752,16 +757,16 @@ CAIO, sin medición** ([Fuente: RICE](../../material/conceptos/m1u2-rice-ajustad
 | Señal comercial (mes 6) | Un cliente, con un interlocutor que maneja presupuesto, acepta por escrito evaluar el asistente en el sandbox **y** acepta como referencia un rango de precio sujeto a resultados, sin compromiso de compra. Evaluar sin presupuesto ni rango es interés exploratorio: no libera | Resolución R-30; sin señal escrita en el mes 6, la oportunidad se archiva (R-31) |
 | Alternativas a la misma tarea | Mejorar documentación o soporte, configurar un asistente, o integrarlo al producto. Si documentación o soporte resuelven mejor, desplazan al asistente | Se comparan con la misma métrica |
 
-| Opción | Reach | Impact | Confidence | Effort | Riesgo | Puntaje | Por qué |
-|---|---|---|---|---|---|---|---|
-| **1. Asistente de integración en la plataforma propia** | 3 | 1 | 50% | 2,5 | 1 | **0,60** | Línea de soporte de mayor margen relativo ([ingresos](../../context/hechos/estructura-de-ingresos.md)); sin datos de cliente |
-| 2. Función en el producto propio de medios de pago | 1 | 2 | 50% | 3 | 3 | 0,11 | Habilitación externa que puede caer en los meses 4-9 y sin sistema de gestión certificado ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) |
-| 3. Servicio de agentes de código para otras software factories | 2 | 1 | 50% | 4 | 2 | 0,13 | El programa de partners exige certificaciones que no hay y compite con horas facturables ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)) |
-| 4. Solo eficiencia, sin frente producto | — | — | — | 0 | — | No aplica | Hoy es el estado del pedido mínimo; se compara con la opción 1 en el mes 6, con la base en la mano |
+| Opción | Lectura cualitativa (alcance, impacto, confianza, esfuerzo, riesgo) | Prioridad | Por qué |
+|---|---|---|---|
+| **1. Asistente de integración en la plataforma propia** | Alcance mayor entre los clientes que integran; impacto acotado a soporte; confianza baja, sin base; esfuerzo menor que las alternativas; riesgo menor | **Estudiar**, sin construir | Línea de soporte de mayor margen relativo ([ingresos](../../context/hechos/estructura-de-ingresos.md)); sin datos de cliente |
+| 2. Función en el producto propio de medios de pago | Alcance menor; impacto potencial mayor; confianza baja; esfuerzo intermedio; riesgo mayor | Postergar | Habilitación externa que puede caer en los meses 4-9 y sin sistema de gestión certificado ([seguridad](../../context/hechos/seguridad-y-certificaciones.md)) |
+| 3. Servicio de agentes de código para otras software factories | Alcance intermedio; impacto acotado; confianza baja; esfuerzo mayor; riesgo intermedio | Postergar | El programa de partners exige certificaciones que no hay y compite con horas facturables ([IA en producto](../../context/hechos/ia-en-producto-y-oferta.md)) |
+| 4. Solo eficiencia, sin frente producto | No aplica | Estado del pedido | Hoy es el estado del pedido mínimo; se compara con la opción 1 en el mes 6, con la base en la mano |
 
 La señal no prueba disposición a pagar: precio y compra se validan con el piloto
-medido. Los puntajes los valida el AI Council con Producto
-([R-30](07-resoluciones.md#roadmap-y-comercial)).
+medido. El puntaje RICE, si se asigna, lo valida el AI Council con Producto con
+los datos del descubrimiento ([R-30](07-resoluciones.md#roadmap-y-comercial)).
 
 ### Catálogo único de decisiones
 
@@ -834,7 +839,8 @@ autoridad, el hito, la consecuencia y el tipo de cada uno están en su resoluci�
   una validación exhaustiva ni evidencia de disponibilidad.
 - La banda de espera del mes 9, su plazo de 6 semanas y el gate de valor son
   resoluciones (R-19, R-27); se recalibran con la base solo por nueva resolución.
-- Los puntajes RICE son juicio del CAIO; el outcome del asistente no tiene base.
+- La priorización de producto es cualitativa y juicio del CAIO, sin puntajes RICE
+  numéricos; el outcome del asistente no tiene base.
 - El método por conteos (intervalo de 90%, 15 personas activas, potencia del
   80%) viene del Anexo B y lo ratifica el AI Council (R-14). Las probabilidades de
   pasar, esperar y cortar usan valores ilustrativos (n = 18, 2 PR por persona y

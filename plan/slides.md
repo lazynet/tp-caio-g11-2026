@@ -111,7 +111,7 @@ Pedido: aprobar el plan y las resoluciones del [Anexo G](annexes/07-resoluciones
 
 </div>
 
-<p class="note">Matriz factibilidad–impacto y RICE ajustado por riesgo. Puntajes de producto hipotéticos, a validar; operación sin puntaje nuevo.</p>
+<p class="note">Matriz factibilidad–impacto y RICE ajustado por riesgo, aplicados en forma cualitativa: sin puntajes numéricos hasta tener datos.</p>
 
 <div class="decision">
 <span class="pill">Decisión</span>
