@@ -105,7 +105,7 @@ Personas dentro de esas resoluciones.
 | Restricción de contratación | No contratar gente nueva y potenciar al equipo con IA. Un contractor también requiere una excepción explícita; no ampliar nómina no elimina su consumo de caja | [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md); encuadre de la excepción: propuesta de este anexo |
 | Tiempo de capacitación aceptado por la propia empresa | 10% a 15% del tiempo semanal durante una certificación | [Capacidad y utilización](../../context/hechos/capacidad-y-utilizacion.md) |
 | Clientes financieros | Por defecto prohíben modelos externos sobre su código y datos; la matriz de restricciones por cliente no existe todavía | [Apetito de riesgo](../../context/supuestos/apetito-de-riesgo-de-clientes.md), [Gobierno y política](../../context/hechos/gobierno-y-politica-ia.md) |
-| Costo cargado por rol | Rangos de mercado en USD por mes, amplios y no calibrados contra la nómina (staff 1.500-5.000; desarrollador semisenior 2.000-5.000; analista 2.000-5.500; tech lead 4.500-10.000; especialista IA 4.500-11.000) | [Costo cargado por rol](../../context/supuestos/costo-cargado-por-rol.md) |
+| Costo cargado por rol | Rangos supuestos de planificación en USD por mes, confirmados por el responsable del caso, sin atribución a precios de mercado; amplios y no calibrados contra la nómina (staff 1.500-5.000; desarrollador semisenior 2.000-5.000; analista 2.000-5.500; tech lead 4.500-10.000; especialista IA 4.500-11.000) | [Costo cargado por rol](../../context/supuestos/costo-cargado-por-rol.md) |
 | Jornada | 160 h por mes, 1.920 h por año por persona | Supuesto (convención de cálculo) |
 | Costo horario de capacitación | USD 10 a 35 por hora (1.500 a 5.500 mensuales sobre 160 h, el tramo de staff, desarrolladores semisenior y analistas) | Supuesto, derivado de [Costo cargado por rol](../../context/supuestos/costo-cargado-por-rol.md). **Es costo, no tarifa facturable** |
 | Ganancia de productividad | 10% a 25% de throughput por desarrollador a 12 meses, solo en equipos propios; en staffing no se cuenta | [Ganancia de productividad](../../context/supuestos/ganancia-de-productividad.md) |
@@ -319,9 +319,13 @@ los controles necesitan la fila de tech lead entera, primero se reduce la oficin
 el tablero se arma con el export de QA y el pulso se difiere. Si aun así falta,
 el CAIO propone el recosteo, el CFO lo verifica y el CEO lo firma dentro del techo
 de tiempo del tramo (14k USD en M4-M6 y 11k USD en M7-M9 y M10-M12). La holgura
-entre el máximo calculado de E y ese techo es chica: 0,45k USD en M4-M6 (14 − 13,55)
-y 0,275k USD en los otros dos (11 − 10,725), unas 7 y 4 h al costo alto de tech
-lead (450 / 62,5 = 7,2 y 275 / 62,5 = 4,4). Una fila propia de líder al 20% no
+entre el máximo calculado de E (que ya incluye al verificador) y ese techo es
+mínima: 0,215625k USD en M4-M6 (14 − 13,784375) y 0,040625k USD en los otros dos
+(11 − 10,959375), unas 3,45 y 0,65 h al costo alto de tech lead (215,625 / 62,5 =
+3,45 y 40,625 / 62,5 = 0,65). Por eso el recosteo no suma horas netas de tech lead
+en el máximo: las horas que necesiten los controles salen de lo que libera reducir
+la oficina u otra actividad del mismo tramo, y si eso no alcanza, el pedido vuelve
+al Directorio. Una fila propia de líder al 20% no
 entra en ningún tramo (E, «Oficina del CAIO, líder, cambio y legal después de
 M1»). Superar el techo del tramo vuelve al Directorio
 ([R-04](07-resoluciones.md#autoridad-y-liberaciones)).
