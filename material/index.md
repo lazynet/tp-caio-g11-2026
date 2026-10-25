@@ -10,6 +10,7 @@ okf_version: "0.2"
 * [Artefactos y objetivos específicos del programa](/conceptos/programa-artefactos.md) - Los nueve objetivos específicos de la diplomatura, leídos como artefactos que el alumno debe producir, y en qué sección del plan encajan
 * [Evaluación y certificación del programa](/conceptos/programa-evaluacion.md) - Requisitos de acreditación, naturaleza de la evaluación final (EFIO), escala de calificaciones y metodología de cursada
 * [Temario completo de la diplomatura](/conceptos/programa-temario.md) - Los 3 módulos, 14 unidades y 100+ temas del programa oficial, con los casos prácticos de cada unidad
+* [Diccionario de Chief AI Officer (CAIO), UTN.BA](/diccionario-caio.md) - Diccionario oficial de la cátedra con módulos, etapas, procesos, decisiones, comparaciones, fórmulas, herramientas y 196 términos, como referencia terminológica del corpus.
 
 # Unidades
 
