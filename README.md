@@ -7,13 +7,15 @@ Repo del Trabajo Integrador Final de la Diplomatura CAIO (UTN BA): un Plan
 Maestro del CAIO a 12 meses, entregado en un único PDF de menos de 10 MB: 10
 slides como máximo (incluyendo portada y equipo) más anexos.
 
-**Estado:** hay un borrador completo y el caso elegido es **Acme Labs**,
+**Estado:** el plan está completo y la entrega final se genera con el gate de
+entrega (`build-deck.sh entrega --delivery`). El caso elegido es **Acme Labs**,
 confirmado por el equipo. El alcance acordado en comisión es la organización
 completa (IA en el producto y en la operación interna).
 
-Acuerdo informado por Martín el 20/10/2026. Seguimiento: [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15).
-Los [responsables](#responsables-del-equipo) están acordados y el seguimiento
-se hace en el [backlog de GitHub Issues](#backlog-y-seguimiento).
+Acuerdo informado por Martín el 20/10/2026 (seguimiento cerrado:
+[#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15)). Los
+[responsables](#responsables-del-equipo) están acordados y el seguimiento se
+hace en el [backlog de GitHub Issues](#backlog-y-seguimiento).
 
 > **El repo es público.** Ningún dato interno de ninguna organización entra acá:
 > ver [Datos privados](#datos-privados) antes de escribir nada.
@@ -151,10 +153,14 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 | `context/` | hechos **públicos** o anonimizados de Acme Labs y supuestos, uno por archivo, con su fuente y estado de revisión | — |
 | `private/` | datos internos reales — **solo local, nunca se versiona** | quien tenga el acceso |
 | `material/` | una ficha por unidad y por framework de la cursada, y qué sección del plan respalda cada uno | — |
-| `defense/` | storyline, objeciones, evidencia | `caio`; `board` aporta desde `reviews/` |
+| `defense/` | storyline y objeciones; `structure-pilot.md` es el piloto de la propuesta de Lucho ([#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27)), no incorporada a la entrega | `caio`; `board` aporta desde `reviews/` |
 | `defense/evidence/` | una ficha por evidencia: qué objeción responde y de dónde sale | `caio` |
-| `reviews/` | revisiones del board y del peer review, con fecha | `board` |
-| `out/` | decks generados y `entrega.pdf` — **no se versiona ni se edita** | el script |
+| `reviews/` | revisiones del board, de los docentes simulados y del setup, con fecha | `board` |
+| `plan/theme/` | `acme.css`, el tema de Marp del deck | `caio` |
+| `scripts/` | build, chequeos (privados, OKF, deck, harness) y setup | — |
+| `tests/` | pruebas de los scripts | — |
+| `.claude/agents/`, `.agents/skills/` | roles y skills (fuente única); `.codex/agents/` se genera | — |
+| `out/` | decks generados y `Grupo11-AcmeLabs-PlanMaestroCAIO.pdf` — **no se versiona ni se edita** | el script |
 
 El agente dueño organiza la edición; el responsable humano coordina la revisión
 y la defensa de su sección. El reparto acordado está en la tabla siguiente.
@@ -177,9 +183,10 @@ Estos responsables son del TP: no reemplazan a las autoridades de Acme Labs
 que deben validar datos, liberar agendas, aceptar riesgos o aprobar presupuesto.
 El reparto de slides se acuerda en la tarea de defensa.
 
-Rafa, Maxi y Eduardo tienen tarea y responsabilidad registradas, pero todavía
-no figuran como asignables en GitHub. Cuando tengan acceso, se completa el
-campo **Assignees** de sus issues; hasta entonces, el responsable figura en el texto.
+Rafa y Maxi no tienen assignee en GitHub
+([#17](https://github.com/lazynet/tp-caio-g11-2026/issues/17),
+[#20](https://github.com/lazynet/tp-caio-g11-2026/issues/20)); su responsable
+figura en el texto.
 
 `context/`, `material/` y `defense/evidence/` siguen el formato abierto
 [OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md):
@@ -216,9 +223,7 @@ Ejemplos:
 Ni el skill ni el agente `board` escriben en `reviews/` si no se lo pedís; ante
 la duda responden en el chat y te ofrecen guardar.
 
-Cada agente devuelve lo mismo, adaptado a su rol: problema, evidencia o
-supuesto, alternativas, recomendación, dependencias, costo, riesgo, responsable
-humano, criterio de éxito y condición de abandono (ver `AGENTS.md`).
+Cada agente sigue el contrato común de salida de `AGENTS.md`, sección "Agentes".
 
 Las definiciones son compartidas. El descubrimiento, las herramientas y los
 permisos dependen del harness. La compatibilidad documentada no equivale a una
@@ -226,9 +231,9 @@ invocación probada con el plan:
 
 | Herramienta | Instrucciones (`AGENTS.md`) | Agentes por rol | Skill `board-review` |
 |---|---|---|---|
-| Claude Code | observado el 2026-10-11; requiere condiciones de carga de abajo | `.claude/agents/`; listados, invocación a probar | `.claude/skills/`; listado, invocación a probar |
-| VS Code + Copilot | configurado en `.vscode/settings.json`; carga a probar | `.claude/agents/` compatible según documentación; invocación a probar | `.agents/skills/` y alias Claude; invocación a probar |
-| Codex | observado: leyó `AGENTS.md` y ejecutó briefs en worktrees | `.codex/agents/*.toml` generado; carga e invocación a probar en el runtime de cada integrante | `.agents/skills/`; listado en esta sesión de Codex, invocación a probar |
+| Claude Code | observado el 2026-10-11; requiere condiciones de carga de abajo | `.claude/agents/`; listados, invocación no probada al 2026-10-25 | `.claude/skills/`; listado, invocación no probada al 2026-10-25 |
+| VS Code + Copilot | configurado en `.vscode/settings.json`; carga no probada al 2026-10-25 | `.claude/agents/` compatible según documentación; invocación no probada al 2026-10-25 | `.agents/skills/` y alias Claude; invocación no probada al 2026-10-25 |
+| Codex | observado: leyó `AGENTS.md` y ejecutó briefs en worktrees | `.codex/agents/*.toml` generado; carga e invocación no probada al 2026-10-25 en el runtime de cada integrante | `.agents/skills/`; listado en esta sesión de Codex, invocación no probada al 2026-10-25 |
 
 Claude Code admite `AGENTS.md` directamente desde la versión 2.1.277, pero su
 carga puede quedar desplazada por un `CLAUDE.md` o `CLAUDE.local.md` en el repo o
@@ -243,7 +248,7 @@ demuestra que no pueda delegar a un rol. Ver [subagentes de Codex](https://learn
 
 Los roles se editan solo en `.claude/agents/`; los skills, en `.agents/skills/`.
 Después de cambiar un rol, corré `python3 scripts/harness-check.py --write` y
-versioná los adaptadores generados. CI rechaza rutas inexistentes, dueños sin
+versioná los adaptadores generados. CI rechaza rutas inexistentes de `plan/` y `defense/` en los roles, dueños sin
 rol y adaptadores desactualizados. `--write` no borra archivos huérfanos.
 
 Si no hay invocación nativa, pedile al agente leer `.claude/agents/<rol>.md` y
@@ -258,24 +263,28 @@ consolidación. Nunca marques toda una fila como probada por haber listado roles
 
 ## Cómo trabajamos
 
-1. **Una sección, un dueño.** Coordiná con el responsable humano y registrá
-   el trabajo en su issue. Cada anexo declara su agente dueño (`owner:`) arriba;
+1. **Una sección, un dueño.** Coordiná con el responsable humano y registrá el
+   trabajo en su issue. Cada anexo declara su agente dueño (`owner:`) arriba;
    las slides las edita solo `caio`, y los demás le proponen cambios.
 2. **Todo número tiene fuente.** Si es un supuesto, se marca como supuesto. Una
    cifra entra a la entrega solo si una persona la verificó contra la fuente.
-3. **Nada interno de ninguna organización en el repo.** Ver [Datos privados](#datos-privados).
+3. **Nada interno de ninguna organización en el repo.** Ver [Datos
+   privados](#datos-privados).
 4. **Revisión a la medida.** Para compartir el borrador de una sección alcanza
    con una revisión focalizada y feedback humano; el `board-review` completo va
    antes del peer review y de la entrega.
 5. **Desacuerdos a la vista.** Si dos miradas chocan, se dejan las alternativas
    con su evidencia; no se inventa consenso.
-6. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se corrige
-   en `plan/slides.md` y se regenera.
-7. **Cambios a `main` por pull request.** GitHub no acepta push directo a
-   `main`: trabajá en una rama y abrí un PR. Cada PR le pide review a Martin
-   automáticamente (`.github/CODEOWNERS`) y no se puede mergear sin su
-   aprobación. Antes de pedirla, esperá que pasen los chequeos de GitHub
-   Actions. Enlazá el issue que resuelve y su evidencia de cierre. Si no sabés
+6. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se
+   corrige en `plan/slides.md` y se regenera.
+7. **Cambios a `main` por pull request.** El ruleset «main protegida» no acepta
+   push directo ni force-push a `main` y exige que pasen los chequeos
+   `leak-check` y `gitleaks`: trabajá en una rama y abrí un PR. El ruleset no
+   fija un número de aprobaciones (0 requeridas), pero sí exige una aprobación
+   extra cuando el PR trae cambios no atribuidos (p. ej. hechos por agentes):
+   en la práctica, un PR de agente necesita una aprobación. Martin revisa cada
+   PR (`.github/CODEOWNERS` se lo solicita). No uses `--admin` ni saltees
+   hooks. Enlazá el issue que resuelve y su evidencia de cierre. Si no sabés
    cómo, pedíselo a tu agente: *"commiteá esto en una rama nueva y abrí un PR"*.
 
 ## Datos privados
@@ -306,13 +315,14 @@ anonimizados y supuestos, nunca el dato real.
 | `leak-guard` en push | lo mismo en modo estricto: falla si falta la denylist. Detecta, no previene: el push ya es público | GitHub Actions |
 
 El chequeo combina patrones fijos (claves privadas, CUIT, archivos marcados
-confidenciales y cualquier cosa en `private/`) con una denylist privada que
-vive fuera del repo y lleva los nombres y los dominios de mail de la
-organización del caso. No uses nunca `git commit --no-verify`.
-Ninguna capa garantiza que no se filtre nada: la defensa principal es no
-escribir el dato. La protección de `main` exige la aprobación de Martin, pero
-no exige que pasen los chequeos. Que el secreto `LEAK_DENYLIST` esté
-configurado en GitHub no está verificado en este README.
+confidenciales y cualquier cosa en `private/`) con una denylist privada que vive
+fuera del repo y lleva los nombres y los dominios de mail de la organización del
+caso. No uses nunca `git commit --no-verify`. Ninguna capa garantiza que no se
+filtre nada: la defensa principal es no escribir el dato. La protección de
+`main` exige que pasen `leak-check` y `gitleaks`; no fija un número de aprobaciones,
+pero pide una extra si el PR trae cambios no atribuidos (p. ej. de agentes).
+Que el secreto `LEAK_DENYLIST` esté configurado en GitHub no está verificado en
+este README.
 
 `scripts/leak-check.sh` usa solo Python estándar y git:
 
@@ -357,9 +367,9 @@ Separa por NUL, así que funciona aunque el nombre tenga espacios o saltos de l�
 ## Generar el deck
 
 ```bash
-./scripts/build-deck.sh          # todos los formatos y la entrega
-./scripts/build-deck.sh entrega  # PDF de borrador: deck + anexos
-./scripts/build-deck.sh entrega --delivery  # exige ready y fuentes verificadas
+./scripts/build-deck.sh          # todos los formatos y el PDF de borrador
+./scripts/build-deck.sh entrega  # PDF de borrador (-borrador.pdf): deck + anexos
+./scripts/build-deck.sh entrega --delivery  # el PDF final; exige ready y fuentes verificadas
 ./scripts/build-deck.sh marp     # solo Marp: html, pdf, pptx
 ./scripts/build-deck.sh pandoc   # solo pandoc: pptx
 ./scripts/build-deck.sh html     # solo el html de Marp, lo más rápido
@@ -375,25 +385,25 @@ duplicadas.
 
 | Salida | Sirve para |
 |---|---|
-| `entrega.pdf` | deck, índice y anexos en un PDF; para entrega, generarlo con `entrega --delivery` y revisar el render |
+| `Grupo11-AcmeLabs-PlanMaestroCAIO.pdf` | deck, índice y anexos en un PDF; es el que se entrega y solo lo escribe `entrega --delivery`; revisá el render |
+| `Grupo11-AcmeLabs-PlanMaestroCAIO-borrador.pdf` | el mismo PDF en modo borrador (`all` y `entrega` sin `--delivery`); nunca pisa el final |
 | `deck-marp.html` / `.pdf` | revisar y presentar; el mejor diseño |
 | `deck-marp.pptx` | entregar si piden pptx (las slides van como imagen) |
 | `deck-pandoc.pptx` | pptx con texto editable, diseño básico |
 
-Estamos probando alternativas: si alguien quiere sumar otro renderer, se agrega
-al script, no se arma a mano.
-
 ### La entrega y los anexos
 
 La consigna pide **un único PDF de menos de 10 MB** con la presentación y los
-anexos. `build-deck.sh entrega --delivery` lo arma en `out/entrega.pdf`: el deck de Marp y
-después cada anexo de `plan/annexes/` en orden de nombre (`01-diagnostico.md`,
-`02-arquitectura.md`...), en A4. Entre el deck y los anexos agrega una página
-de índice con títulos y links internos. Las páginas de anexos se numeran desde
-1 al pie; el índice usa esa numeración. Las filas de tablas se mantienen juntas
-si caben en una página, sin achicar la tipografía. El pie requiere un Chrome
-con soporte de cajas de margen CSS; verificá que aparezca en el PDF generado.
-Si pasa los 10 MB, el script falla y dice el peso.
+anexos. `build-deck.sh entrega --delivery` lo arma en
+`out/Grupo11-AcmeLabs-PlanMaestroCAIO.pdf`, con título "Grupo 11 · Acme Labs —
+Plan Maestro CAIO" en sus metadatos: el deck de Marp y después cada anexo de
+`plan/annexes/` en orden de nombre (`01-diagnostico.md`,
+`02-arquitectura.md`...), en A4. Entre el deck y los anexos agrega una página de
+índice con títulos y links internos. Las páginas de anexos se numeran desde 1 al
+pie; el índice usa esa numeración. Las filas de tablas se mantienen juntas si
+caben en una página, sin achicar la tipografía. El pie requiere un Chrome con
+soporte de cajas de margen CSS; verificá que aparezca en el PDF generado. Si
+pasa los 10 MB, el script falla y dice el peso.
 
 Un anexo no es un depósito de datos crudos: es la **evidencia procesada** que
 deja ver al CFO o al board de dónde salió cada número de una slide. Para
@@ -404,12 +414,12 @@ mitigación, y decisiones. `plan-check` exige esas secciones y el frontmatter
 que una slide lo enlace. Los archivos que empiezan con `_` no se validan ni se
 entregan.
 
-En `entrega.pdf`, los links a slides y anexos incluidos navegan dentro del PDF,
-también hacia sus anclas. Los demás archivos del repo apuntan a GitHub, con
+En el PDF de entrega, los links a slides y anexos incluidos navegan dentro del
+PDF, también hacia sus anclas. Los demás archivos del repo apuntan a GitHub, con
 `CAIO_PUBLIC_REF=main` por defecto. Para fijar una versión auditable, usá un
-commit publicado: `CAIO_PUBLIC_REF=<sha> ./scripts/build-deck.sh entrega --delivery`.
-El build rechaza links a `private/`, destinos internos inexistentes y cualquier
-URI `file://` que sobreviva en el PDF final.
+commit publicado: `CAIO_PUBLIC_REF=<sha> ./scripts/build-deck.sh entrega
+--delivery`. El build rechaza links a `private/`, destinos internos inexistentes
+y cualquier URI `file://` que sobreviva en el PDF final.
 
 ## Validar
 
@@ -432,17 +442,21 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
   nueva declara `status`; una sin `status` se lee como `draft`.
 - **Aceptación documental** (`status: accepted`) declara que una persona acepta
   incorporar la ficha al corpus. Requiere `accepted: { by, at, scope }`, con
-  `by: human:<usuario-github>`, fecha ISO y alcance explícito. No acredita cotejo
-  primario, verificación del contenido ni vigencia normativa; conserva las cautelas.
+  `by: human:<usuario-github>`, fecha ISO y alcance explícito. No acredita
+  cotejo primario, verificación del contenido ni vigencia normativa; conserva
+  las cautelas.
 - **Entrega** (`--delivery`, con `--path` para las fichas que usa la entrega;
   `--mode delivery` para el deck) exige `status: verified` con el bloque
   `verified:` de una persona y un deck sin pendientes. `--path` acepta solo
-  archivos o carpetas de `context/`, `material/` y `defense/evidence/`: pasá
-  las fichas que de verdad cita la entrega. El ejemplo de arriba es una ficha
-  real y hoy falla porque sigue en `draft`.
-- El borrador todavía tiene fichas sin verificación humana. Los chequeos de
-  entrega rechazan las fichas sin revisión declarada y los pendientes del deck;
-  no se resuelve cambiando etiquetas sin revisar las fuentes.
+  archivos o carpetas de `context/`, `material/` y `defense/evidence/`: pasá las
+  fichas que de verdad cita la entrega. El ejemplo de arriba es una ficha real
+  que falla con fichas no verificadas: al 2026-10-25 no declara `status` y se
+  lee como `draft`.
+- Al 2026-10-25 hay 20 fichas `accepted`, 10 `draft` y 74 sin `status`; el gate
+  de entrega (`plan-check.py --mode delivery`) exige que el deck cite fichas
+  `verified`. Los chequeos de entrega rechazan las fichas sin revisión declarada
+  y los pendientes del deck; no se resuelve cambiando etiquetas sin revisar las
+  fuentes.
 - Los chequeos validan estructura y que la revisión humana esté declarada. No
   prueban que una cifra sea cierta ni que el plan esté completo: eso lo revisan
   personas.
@@ -456,56 +470,33 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
 | Votación top 3 | 5/11 → 8/11 |
 | Defensa ante el board (tentativo) | martes 10/11, 18:30 |
 
-## Pendientes del equipo
+## Estado final
 
-Ya están acordados el caso Acme Labs, el alcance de toda la organización, los
-ocho responsables y el formato de entrega.
+El plan está completo y pasa el gate de entrega. Ya están acordados el caso Acme
+Labs, el alcance de toda la organización, los ocho responsables y el formato de
+entrega.
 
-Las decisiones que estaban abiertas en las revisiones de sección (#11–#14 y
-#16–#20) las tomó Martín como responsable del caso, el 21/10, para llegar al peer
-review. El Directorio las sintetiza en el [Anexo G](plan/annexes/07-resoluciones.md)
-(R-01 a R-32), integradas con [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52).
-El 22/10 se sumaron R-33 y R-34 con [#62](https://github.com/lazynet/tp-caio-g11-2026/pull/62).
-Los nueve issues asociados quedaron cerrados.
-Esas decisiones no equivalen a ratificaciones de cada responsable: si no estás
-de acuerdo con una, objetala en el PR o en su issue.
-
-Nico cerró su [revisión de arquitectura](https://github.com/lazynet/tp-caio-g11-2026/issues/16#issuecomment-6344787291)
-el 22/10, sobre `main` en `2a7d8d6`, con ratificaciones condicionales y propuestas
-de controles. No confirma la titularidad del código ni reemplaza la revisión de
-la integración, que entró con [#61](https://github.com/lazynet/tp-caio-g11-2026/pull/61).
-
-Los 15 supuestos modificados quedaron revalidados por instrucción expresa de
-Martín el 21/10/2026, con alcance actualizado y conservando su tipo `Supuesto`.
-Se corrió `scripts/rebase-findings.py`; el catálogo quedó reanclado.
-Los PR [#50](https://github.com/lazynet/tp-caio-g11-2026/pull/50),
-[#53](https://github.com/lazynet/tp-caio-g11-2026/pull/53) y
-[#57](https://github.com/lazynet/tp-caio-g11-2026/pull/57) incorporaron 20 fichas de
-material, incluidas M2U1/M2U2. Por instrucción expresa de Martín del 21/10/2026,
-quedaron en `accepted`, con su aceptación documental declarada y sus cautelas
-vigentes. Su aceptación no acredita verificación humana del contenido ni
-reemplaza los cotejos externos de #56.
-
-Martín dio por cerrada la recopilación de material de #22 el 21/10/2026:
-las presentaciones disponibles son oficiales y suficientes. Se incorporaron
-M2U1/M2U2 y se acepta que el prompt base del Corrector IA no esté disponible.
-
-El 22/10/2026 se resolvieron los dos bloqueos que quedaban, integrados con
-[#62](https://github.com/lazynet/tp-caio-g11-2026/pull/62):
-
-- **Cotejos regulatorios externos** ([#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56)):
-  el calendario y el art. 4 del AI Act se cotejaron contra el DOUE; BCRA y la
-  aplicabilidad del AI Act quedan como supuestos sin uso decisorio (R-34).
-- **Destino de la capacidad** ([#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60)):
-  caso base intacto y más funcionalidades por período como sensibilidad del
-  mes 6, sin monetizar (R-33), con el acuerdo de Nico, Gabriela y Martín.
-
-Para habilitar la entrega falta:
-
-- **Defensa:** acordar quién presenta cada slide (hay una propuesta en
-  `defense/storyline.md`) y hacer el ensayo, en [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21).
-- **Propuesta de Lucho:** rebasarla sobre el deck nuevo antes de evaluarla, en
-  [#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27).
+- **Decisiones de las revisiones de sección** (#11–#14 y #16–#20): las tomó
+  Martín como responsable del caso el 21/10 y el Directorio las sintetiza en el
+  [Anexo G](plan/annexes/07-resoluciones.md) (R-01 a R-34, con
+  [#52](https://github.com/lazynet/tp-caio-g11-2026/pull/52) y
+  [#62](https://github.com/lazynet/tp-caio-g11-2026/pull/62)). No equivalen a
+  ratificaciones de cada responsable: si no estás de acuerdo con una, objetala
+  en el PR o en su issue.
+- **Material de la cursada:** 20 fichas quedaron en `accepted` por instrucción
+  expresa de Martín (21/10/2026). Eso no acredita verificación humana del
+  contenido; los cotejos externos de
+  [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56) se resolvieron
+  con R-34 y el destino de la capacidad
+  ([#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60)), con R-33.
+- **Defensa** ([#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21)):
+  sigue abierta, pero no condiciona la entrega. Falta acordar quién presenta
+  cada slide (hay una propuesta en `defense/storyline.md`) y hacer el ensayo
+  antes de la defensa (ver Fechas).
+- **Propuesta de Lucho**
+  ([#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27)): no se
+  incorporó a la entrega; `defense/structure-pilot.md` es su piloto y queda como
+  referencia.
 
 ## Backlog y seguimiento
 

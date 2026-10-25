@@ -1,8 +1,9 @@
 # AGENTS.md — tp-caio-g11-2026
 
 `AGENTS.md` es el contrato portable para los agentes de IA y la fuente única de
-las reglas del repo. Claude y VS Code consumen los roles compartidos; los
-adaptadores de Codex se generan. Nunca se mantienen copias de las reglas a mano.
+las reglas del repo. Claude y VS Code leen los roles de `.claude/agents/`
+(soporte por runtime en `README.md`); los adaptadores de Codex se
+generan.
 
 ## Idioma
 
@@ -18,11 +19,11 @@ El Trabajo Integrador Final de la *Diplomatura Chief AI Officer (CAIO)* de UTN B
 un **Plan Maestro del CAIO a 12 meses** para una organización, defendido ante un board.
 
 **Estado y responsables:** consultá el estado y el reparto acordado en
-`README.md`; es su única fuente. No conviertas acuerdos pendientes en decisiones.
+`README.md`; es su única fuente. No conviertas pendientes en decisiones.
 
 **Entrega:** un único PDF de menos de 10 MB, con máximo diez slides (portada y
-equipo incluidas) y anexos. Generar el PDF no lo habilita para entrega: usá
-`scripts/build-deck.sh entrega --delivery` para exigir el gate de entrega.
+equipo incluidas) y anexos. Generar el PDF no lo habilita: usá
+`scripts/build-deck.sh entrega --delivery`, que exige el gate de entrega.
 
 El plan tiene que integrar:
 
@@ -40,9 +41,10 @@ lo *sustenta*, en anexos de evidencia procesada (`plan/annexes/_template.md`).
 **Todo se genera.** `plan/slides.md` (markdown compatible con Marp, slides
 separadas por `---` o `***` compactos; links locales en Markdown, no en HTML) es
 la única fuente del deck. `scripts/build-deck.sh` lo renderiza en `out/` (fuera
-de git) y arma `out/entrega.pdf` (deck + anexos), el único entregable. Nada
-generado se edita: se corrige el markdown y se regenera. Requisitos (Python
-3.11+, PyYAML y pypdf en `.venv`, `CAIO_PYTHON`) y chequeos en `README.md`.
+de git) y arma `out/Grupo11-AcmeLabs-PlanMaestroCAIO.pdf` (deck + anexos), el
+único entregable (borrador: `-borrador`). Nada generado se edita: se corrige el
+markdown y se regenera. Requisitos (Python 3.11+, PyYAML y pypdf en `.venv`,
+`CAIO_PYTHON`) y chequeos en `README.md`.
 
 **Fechas:** consultá el cronograma de `README.md`, sección "Fechas".
 
@@ -53,8 +55,8 @@ generado se edita: se corrige el markdown y se regenera. Requisitos (Python
 | `context/` | Bundle OKF: hechos públicos o anonimizados y supuestos sobre el caso, cada uno con su fuente |
 | `material/` | Bundle OKF: unidades y frameworks de la cursada, y qué sección del plan respalda cada uno |
 | `plan/slides.md` | Las 10 slides, fuente única del deck |
-| `plan/theme/acme.css` | El tema de Marp del deck (diseño portado de Claude Design); `slides.md` usa sus clases en bloques HTML con Markdown adentro |
-| `plan/annexes/` | Un anexo por archivo (`NN-tema.md` desde `_template.md`), referenciado desde las slides |
+| `plan/theme/acme.css` | El tema de Marp del deck (portado de Claude Design); `slides.md` usa sus clases en bloques HTML |
+| `plan/annexes/` | Un anexo por archivo (`NN-tema.md`, desde `_template.md`), enlazado en slides |
 | `defense/` | Storyline, banco de objeciones; `defense/evidence/` es un bundle OKF |
 | `reviews/` | Revisiones del board y del peer review, con fecha |
 | `scripts/build-deck.sh` | Genera el deck y la entrega: `all` (default), `entrega`, `marp`, `pandoc` o `html` |
@@ -81,9 +83,9 @@ analice, sea cual sea el caso elegido:
 - **Nunca se versiona** ningún dato interno de una organización: nombres de
   clientes, proyectos internos, personas, montos de contratos, tarifas, P&L,
   headcount, mails o rutas corporativas, credenciales.
-- **El dato real vive solo en `private/`**, que está en `.gitignore` y existe solo
-  en la máquina de quien tiene acceso. Los agentes pueden leerlo para razonar,
-  pero lo que escriben fuera de `private/` sale anonimizado.
+- **El dato real vive solo en `private/`**, que está en `.gitignore` y existe
+  solo en la máquina de quien tiene acceso. Los agentes pueden leerlo para
+  razonar, pero lo que escriben fuera de `private/` sale anonimizado.
 - **Cómo se anonimiza:** clientes como "Cliente A (banco)" o "Cliente B
   (fintech)"; cifras como rangos, ratios o índices (base 100); personas por rol
   ("CFO", "Chief Architect"). Si un dato no se puede anonimizar sin perder
@@ -98,7 +100,7 @@ analice, sea cual sea el caso elegido:
   activa `scripts/setup.sh`) y en GitHub Actions (`leak-guard`). Revisa patrones
   fijos y una denylist privada (`.leak-denylist` local, secreto `LEAK_DENYLIST`
   en GitHub). Cubre solo texto UTF-8: lo que omite deja la revisión PARCIAL y
-  `--strict` la rechaza. Ni COMPLETA ni `--strict` certifican que no haya datos
+  `--strict` la rechaza. Ni COMPLETA ni `--strict` certifican ausencia de datos
   privados. Nunca uses `git commit --no-verify` para saltearlo.
 
 ## Bases de conocimiento (OKF)
@@ -140,16 +142,17 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
 
 ## Reglas
 
-- **La audiencia es toda la cohorte** y cualquiera en internet: aplicá siempre
-  "Datos privados".
-- **Todo número tiene fuente.** Una cifra en una slide se rastrea hasta un anexo,
-  y el anexo dice el supuesto o la fuente. Los supuestos se marcan como tales.
-- **Los totales se recalculan.** Antes de commitear un anexo, recalculá cada total
-  y promedio desde sus componentes y mostrá la comparación.
+- **La audiencia es toda la cohorte** y cualquiera en internet: aplicá "Datos
+  privados".
+- **Todo número tiene fuente.** Una cifra en una slide se rastrea hasta un
+  anexo, y el anexo dice el supuesto o la fuente. Los supuestos se marcan como
+  tales.
+- **Los totales se recalculan.** Antes de commitear un anexo, recalculá cada
+  total y promedio desde sus componentes y mostrá la comparación.
 - **Un editor por archivo.** `caio` es el único que edita `plan/slides.md`. Cada
-  anexo declara su agente dueño en el frontmatter (`owner: finance`) y lo escribe
-  ese dueño; los demás le proponen cambios. Los responsables humanos están en
-  `README.md`; una asignación nueva requiere acuerdo del equipo.
+  anexo declara su agente dueño en el frontmatter (`owner: finance`) y lo
+  escribe ese dueño; los demás le proponen cambios. Los responsables humanos
+  están en `README.md`; una asignación nueva requiere acuerdo del equipo.
 - **Seguimiento.** GitHub Issues es el backlog: registrá el trabajo en el issue
   de su sección y enlazalo desde el PR con evidencia de cierre. Flujo:
   `README.md`, "Backlog y seguimiento".
@@ -157,14 +160,15 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   archivo: coordiná en el issue, con una rama o worktree por tarea. Dos sesiones
   del mismo rol no editan el mismo archivo en paralelo.
 - **Desacuerdos a la vista.** Si dos miradas chocan, se dejan explícitas con
-  alternativas y evidencia; nadie lo resuelve inventando consenso.
+  alternativas y evidencia, sin inventar consenso.
 - **Revisiones proporcionales.** Un borrador alcanza con una revisión focalizada
-  (el agente de esa mirada o `board` sobre la sección) y feedback humano. El skill
-  `board-review` completo se corre antes del peer review y de la entrega.
+  (el agente de esa mirada o `board` sobre la sección) y feedback humano. El
+  skill `board-review` completo se corre antes del peer review y de la entrega.
 - Que slides o PDF no desbordan se afirma tras abrir el render y describir lo
-  visto; conteo de páginas y estructura no son revisión visual.
+  visto; contar páginas no es revisión visual.
 - Commits: `tipo: descripción corta` en español, sin trailers.
-- Cambios a `main` por PR, con chequeos en verde y aprobación del code owner.
+- Cambios a `main` por PR y con chequeos en verde; sin cupo fijo de
+  aprobaciones, el ruleset pide una extra si hay cambios no atribuidos (agentes).
   No uses `--admin` ni saltees hooks. No publiques sin autorización del pedido.
 
 ## Agentes
@@ -187,10 +191,7 @@ dependencias, costo (si corresponde), riesgo, responsable humano (pendiente o
 acordado), criterio de éxito y condición de abandono. Si falta información, el
 agente la marca como faltante o supuesto y sigue; no la inventa.
 
-**Multi harness.** Las instrucciones del rol son compartidas; descubrimiento,
-herramientas y permisos dependen del runtime. Leé la matriz y las condiciones de
-carga en `README.md`, sección "Los agentes". Si no podés invocar un
-rol nativo, leé `.claude/agents/<rol>.md` y adoptalo explícitamente. Su campo
-`tools` no configura permisos fuera de Claude: respetá los límites del texto y
-reportá qué controles puede aplicar el runtime. Listado, carga e invocación de
-punta a punta son evidencias distintas; nunca las des por equivalentes.
+**Multi harness.** El soporte por runtime está en `README.md`, "Los agentes".
+Sin rol nativo, leé `.claude/agents/<rol>.md` y adoptalo; su campo `tools` no
+configura permisos fuera de Claude. Listar, cargar e invocar son evidencias
+distintas.

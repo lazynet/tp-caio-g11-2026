@@ -1,4 +1,7 @@
-"""Arma out/entrega.pdf: el deck de Marp seguido de los anexos, con el tope de 10 MB."""
+"""Arma el PDF de entrega: el deck de Marp seguido de los anexos, con el tope de 10 MB.
+
+Sin --output escribe el borrador; build-deck.sh pasa el nombre final solo con --delivery.
+"""
 
 import argparse
 import html
@@ -16,6 +19,10 @@ from urllib.parse import quote, unquote, urlsplit
 
 # La consigna pide "menor a 10 MB": tomamos la lectura más estricta (10^7 bytes).
 MAX_BYTES = 10_000_000
+FINAL_OUTPUT = Path("out/Grupo11-AcmeLabs-PlanMaestroCAIO.pdf")
+DRAFT_OUTPUT = Path("out/Grupo11-AcmeLabs-PlanMaestroCAIO-borrador.pdf")
+PDF_TITLE = "Grupo 11 · Acme Labs — Plan Maestro CAIO"
+PDF_AUTHOR = "Grupo 11 · Diplomatura CAIO UTN BA"
 PAGE_BREAK = '\n\n<div style="page-break-before: always"></div>\n\n'
 CSS = """
 @page { size: A4; margin: 18mm;
@@ -301,14 +308,18 @@ def check_portable_pdf(pdf):
                 "https://caio.invalid/"
             ):
                 raise ValueError(
-                    "entrega.pdf conserva un enlace file:// o un destino interno sin resolver"
+                    "el PDF conserva un enlace file:// o un destino interno sin resolver"
                 )
+
+
+def set_pdf_metadata(writer):
+    writer.add_metadata({"/Title": PDF_TITLE, "/Author": PDF_AUTHOR})
 
 
 def size_error(size):
     if size >= MAX_BYTES:
         return (
-            f"entrega.pdf pesa {size:,} bytes y la consigna pide menos de "
+            f"el PDF pesa {size:,} bytes y la consigna pide menos de "
             f"{MAX_BYTES:,}: achicá imágenes o anexos"
         )
     return None
@@ -407,7 +418,7 @@ def main():
         "--root", type=Path, default=Path(__file__).resolve().parents[1]
     )
     parser.add_argument("--deck", type=Path, default=Path("out/deck-marp.pdf"))
-    parser.add_argument("--output", type=Path, default=Path("out/entrega.pdf"))
+    parser.add_argument("--output", type=Path, default=DRAFT_OUTPUT)
     args = parser.parse_args()
     root = args.root.resolve()
     deck = args.deck if args.deck.is_absolute() else root / args.deck
@@ -455,6 +466,7 @@ def main():
         check_portable_pdf(writer)
     except ValueError as exc:
         raise SystemExit(str(exc))
+    set_pdf_metadata(writer)
     writer.compress_identical_objects()
     with output.open("wb") as handle:
         writer.write(handle)
