@@ -423,7 +423,7 @@ con 80% de probabilidad (la convención usual de potencia) es (1,645 + 0,842) ×
 la base es el factor que más pesa; si no se sostienen, cómo se agrupa (por persona,
 área o semana) sí cambia la cuenta, y la cobertura nominal del 90% no está
 garantizada: la fórmula puede subestimar o sobrestimar la incertidumbre. Lo que
-la [ficha de umbrales](../../context/supuestos/umbrales-tecnicos-propuestos.md)
+el [supuesto de umbrales técnicos](../../context/supuestos/umbrales-tecnicos-propuestos.md)
 dice sobre la agrupación vale bajo esos supuestos; para el cálculo prevalece este
 anexo.
 
