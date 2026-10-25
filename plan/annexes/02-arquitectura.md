@@ -397,12 +397,12 @@ produce ni la autoridad del gate. Sin método ratificado no se libera M1-M3.
 |---|---|
 | Base | La prospectiva congelada en las semanas 1-4 del plan (u 8, ver «Respaldo»), de la misma cohorte, fechada y sin edición. La serie retrospectiva estima ruido y tendencia; no es base de atribución |
 | Estimador | Razón de tasas: PR aceptados por persona-semana activa en la ventana del gate sobre la misma tasa en la base, con los pesos de estrato de la base y ajustada por la tendencia de la serie retrospectiva. Todo con totales por área y semana |
-| Intervalo | 90% bilateral por conteos, en escala logarítmica, ampliado por la sobredispersión φ (varianza sobre media de los totales semanales de la serie retrospectiva, sin tendencia). φ se fija antes de la segunda liberación. Reemplaza al *bootstrap* por personas, que exigía series por persona |
+| Intervalo | 90% bilateral por conteos, en escala logarítmica, ampliado por la sobredispersión φ (varianza sobre media de los totales semanales sin tendencia). Regla única de φ: el φ retrospectivo se fija antes de la segunda liberación y alimenta la tabla de potencia del acta; el disparador de la semana 4 usa λ y φ observados en la base ([R-18](07-resoluciones.md#arquitectura-y-medición)); el intervalo de cada lectura usa el mayor entre el φ retrospectivo y el observado en la base, fijado al congelar la base. Esas dos actualizaciones son mecánicas y no requieren ratificación; cualquier otro cambio de φ, del estimador o de las ventanas es un desvío (ver «Congelamiento»). Supuestos del error estándar en «Cuenta de potencia». Reemplaza al *bootstrap* por personas, que exigía series por persona |
 | Ventanas | Mes 6: semanas maduras de M4-M6, solo descriptiva. Mes 9: todas las semanas maduras de M7-M9 (al menos 8). Mes 12: las de M10-M12, como insumo del año 2 |
 | Muestra mínima | **15 personas** del padrón con PR en la base, informadas como conteo. Con menos, ninguna lectura decide por valor y el mes 9 decide como el mes 6 |
 | Calidad | **Guardia de daño, no prueba de no deterioro.** La misma razón e intervalo sobre el aumento de incidentes y de retrabajo por cada 100 PR, por separado. Hay **daño** si el límite inferior del aumento es mayor que 0 en cualquiera de los dos: el gate corta aunque el throughput pase. Sin daño, la calidad no bloquea. La no inferioridad con margen δ = +10% no se exige porque esta cohorte no puede demostrarla (cuenta abajo). La guardia detecta solo deterioros grandes: un incidente que activa suspensión en el [Anexo C](03-gobierno-seguridad.md) conserva esa precedencia sin esperar al gate |
 | Respaldo | Criterio mecánico, ciego al resultado. En la semana 4, con λ y φ observados en la base, la oficina del CAIO recalcula la tabla de potencia. Si con base de 4 semanas la lectura del mes 9 no distingue con 80% de potencia una ganancia igual al techo del rango del [supuesto](../../context/supuestos/ganancia-de-productividad.md) (+25%, es decir ln 1,25 ≈ 22,3 pp en la escala de la tabla de potencia) y con base de 8 sí, la base se extiende a la semana 8, y la formación básica, la prueba y la formación intermedia se desplazan juntas a la semana 9; lo verifica Arquitectura ([R-18](07-resoluciones.md#arquitectura-y-medición)). Si no la distingue ni con 8, no se extiende: el acta lo declara y el AI Council decide con la tabla de operación. La retrospectiva no atribuye ganancia: mezcla tendencia, estacionalidad (los meses 1-3 caen en enero-marzo; supuesto), adopción previa y cambios de equipo |
-| Congelamiento | Versión, φ, pesos de estrato, ventanas y umbrales se fechan antes de la segunda liberación y no se editan desde que se congela la base. Un cambio posterior es un desvío: se registra con fecha y motivo, rige desde la ventana siguiente y la ventana en curso se lee con la versión vigente al abrirse |
+| Congelamiento | Versión, φ retrospectivo y regla de φ del intervalo, pesos de estrato, ventanas y umbrales se fechan antes de la segunda liberación y no se editan desde que se congela la base, salvo la aplicación mecánica de la regla de φ de «Intervalo». Un cambio posterior es un desvío: se registra con fecha y motivo, rige desde la ventana siguiente y la ventana en curso se lee con la versión vigente al abrirse |
 
 **Tasas base cero o sin denominador.** Con cero eventos de calidad en la base no
 hay razón calculable: se informan conteos, exposición y diferencia absoluta por
@@ -419,8 +419,25 @@ del logaritmo de la razón es **SE = √(φ × (1/P_b + 1/P_v))**. El semiancho 
 intervalo de 90% es 1,645 × SE. La menor mejora que una lectura distingue de cero
 con 80% de probabilidad (la convención usual de potencia) es (1,645 + 0,842) × SE
 ≈ 2,49 × SE: 1,645 es el cuantil que deja 5% en la cola del límite inferior y
-0,842, el del 80%. Agrupar por persona, por área o por semana no cambia la cuenta:
-el piso lo pone el total de PR, y la base es el factor que más pesa.
+0,842, el del 80%. Bajo los supuestos de abajo, el piso lo pone el total de PR y
+la base es el factor que más pesa; si no se sostienen, cómo se agrupa (por persona,
+área o semana) sí cambia la cuenta, y la fórmula subestima la incertidumbre.
+
+**Supuestos del error estándar, declarados.** La fórmula es una aproximación para
+conteos y presupone: (1) independencia entre semanas una vez quitada la tendencia,
+sin autocorrelación de los totales semanales; (2) φ como sobredispersión marginal
+de esos totales, que no incorpora covarianzas entre semanas; (3) pesos de estrato
+de la base tratados como fijos, sin su variabilidad; y (4) la tendencia de la serie
+retrospectiva tratada como conocida, sin sumar la incertidumbre de su estimación.
+Si alguno falla, el intervalo de 90% es más angosto de lo que corresponde y su
+cobertura no está demostrada. **Comprobación:** el acta de viabilidad fija la
+prueba y su umbral antes de la segunda liberación (como mínimo, la autocorrelación
+de los residuos semanales sin tendencia, y la sensibilidad de la lectura a los
+pesos y a la tendencia) y la corre sobre la serie retrospectiva; antes del gate del
+mes 9, el verificador la repite con la base y las semanas maduras hasta M9. Si los
+supuestos no se sostienen, la lectura del mes 9 es descriptiva: no acredita valor
+con ese intervalo, el beneficio acreditado es 0 y el AI Council lo declara como
+método no viable para valor ([R-14](07-resoluciones.md#arquitectura-y-medición)).
 
 λ y φ no tienen dato. La tabla usa φ = 1 (el piso: la sobredispersión lo agranda)
 y tres ritmos ilustrativos; son parámetros de planificación, y el acta los
@@ -466,10 +483,16 @@ mes 9 son las del [Anexo F](06-roadmap-riesgo.md), por estimado.
 | Mes 9 | Valor, con las semanas maduras de M7-M9 | Peor caso mayor que 0 y sin daño: se acredita el peor caso, y lo convierte el CFO ([R-19](07-resoluciones.md#arquitectura-y-medición)) | Estimado ≥ +5% sin pasar: la espera única de 6 semanas, sin expansión ([R-27](07-resoluciones.md#finanzas)) | Estimado < +5%, o daño |
 | Mes 12 | Insumo del año 2, con las semanas maduras de M10-M12 | Peor caso mayor que 0 y sin daño: evidencia de valor para el año 2 | — | Sin esa evidencia, el año 2 no se financia por valor |
 
-**Si la medición no distingue,** el beneficio acreditado es 0 y ninguna lectura
-sin distinción libera expansión ni año 2 por valor. La continuidad sigue
-decidiéndose por adopción, calidad, costo y controles, dentro del techo de cada
-tramo.
+**Si el método no es viable para valor** (menos de 15 personas activas, o sin 80%
+de potencia para +25% ni con base de 8 semanas, según
+[R-14](07-resoluciones.md#arquitectura-y-medición); o supuestos del error estándar
+no sostenidos, según «Cuenta de potencia»), el beneficio acreditado es 0, ninguna
+lectura libera expansión ni año 2 por valor y la continuidad se decide por
+adopción, calidad, costo y controles, dentro del techo de cada tramo. Esa
+continuidad sin decisión por valor queda reservada a la inviabilidad declarada.
+**Con método viable**, una lectura que no distingue mejora no la habilita: el mes 9
+sigue las bandas de [R-27](07-resoluciones.md#finanzas) (espera con estimado ≥ +5%
+sin pasar; corte con estimado < +5% o daño) y el beneficio acreditado es 0.
 
 **Falsa alarma de la guardia.** Cada regla de corte por daño o por caída es
 unilateral al 5%. En una lectura corren tres (throughput, incidentes y
