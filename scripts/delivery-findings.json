@@ -430,36 +430,36 @@
     },
     {
       "path": "plan/annexes/02-arquitectura.md",
-      "line": 1115,
+      "line": 1116,
       "text": "| Usuario y tarea | Un equipo interno con un error pendiente real de su backlog. Su referente define antes el comportamiento esperado; un integrante de la cohorte usa el agente actual para preparar la corrección y las pruebas de regresión, con datos sintéticos o autorizados y sin código de clientes |",
-      "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f",
+      "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b",
       "category": "execution_condition",
       "blocking": false,
       "reason": "Pendiente califica el error del backlog que deberá seleccionarse, no un resultado ya prometido. El candidato declara que aún no existe una tarea elegida y solo sustituye actividad costeada si Tecnología verifica elegibilidad y capacidad; sin esas condiciones se retira de M3, sin una compuerta financiera nueva.",
       "basis": {
         "scope": {
           "path": "plan/annexes/02-arquitectura.md",
-          "line": 1093,
+          "line": 1094,
           "text": "**Candidato, no aprobado por la empresa ni resultado observado.** Se propone\nconcretar una tarea de la prueba operativa ya costeada; no crear otro proyecto.\nNo consta todavía un error elegible, un usuario que lo priorice ni agenda liberada.",
-          "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f"
+          "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b"
         },
         "authority": {
           "path": "plan/annexes/02-arquitectura.md",
-          "line": 1123,
+          "line": 1124,
           "text": "**Responsable:** Responsable de Tecnología, con el referente usuario y un revisor\ndistinto del autor; las personas se nombran conforme a R-06. La observación de",
-          "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f"
+          "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b"
         },
         "decision": {
           "path": "plan/annexes/02-arquitectura.md",
-          "line": 1118,
+          "line": 1119,
           "text": "| Ventana condicionada | Camino con base hasta semana 8: usar la ventana restante de M3, semanas 9-13, después de aprobar la formación aplicable y verificar los controles. No se promete que formación, tarea e integración entren en esa ventana; si no caben, no se anticipa la intervención ni se recorta la formación |",
-          "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f"
+          "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b"
         },
         "consequence": {
           "path": "plan/annexes/02-arquitectura.md",
-          "line": 1121,
+          "line": 1122,
           "text": "| Corte o diferimiento | Sin tarea útil elegible, formación aprobada, permisos, revisor, agenda o integración viable en esa ventana: retirar el candidato de M3. Sin aceptación o con falla de calidad/seguridad, no integrar y aplicar las reglas vigentes. Puede reevaluarse en M4 solo si se autoriza la continuidad y cabe en su capacidad; no se financia automáticamente |",
-          "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f"
+          "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b"
         }
       }
     },
@@ -502,7 +502,7 @@
       "path": "plan/annexes/02-arquitectura.md",
       "line": 367,
       "text": "**Elegibilidad pendiente.** Nico propuso al equipo del Cliente A como núcleo de",
-      "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f",
+      "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b",
       "category": "execution_condition",
       "blocking": false,
       "reason": "La elegibilidad de una cohorte propuesta se verifica al ejecutar: no se afirma titularidad ni permiso. R-08 impide habilitar usos incompatibles; sin cohorte viable no se acredita valor.",
@@ -511,7 +511,7 @@
           "path": "plan/annexes/02-arquitectura.md",
           "line": 367,
           "text": "**Elegibilidad pendiente.** Nico propuso al equipo del Cliente A como núcleo de\nlos equipos propios al cerrar su revisión del Anexo B sobre la base `2a7d8d6`.\nEs revisión del borrador, sin aprobación empresarial ni consenso nuevo del equipo.[^revision-nico-b]\n\nLa titularidad del código sigue sin confirmar: si es de Acme Labs, puede\nsostenerse esa elegibilidad; si es del cliente, R-08 exige su entorno y permiso escrito.\nSin esa habilitación, no se presume viable el gate de valor con esa cohorte.\n\nRige R-14, incluida su muestra mínima y la viabilidad reproducible: sin cumplirla,\nbeneficio acreditado cero y continuidad solo por adopción, calidad, costo y",
-          "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f"
+          "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b"
         },
         "authority": {
           "path": "plan/annexes/07-resoluciones.md",
@@ -535,18 +535,18 @@
     },
     {
       "path": "plan/annexes/02-arquitectura.md",
-      "line": 672,
+      "line": 673,
       "text": "**Selección por utilidad, pendiente.** Antes de liberar el caso, su usuario debe",
-      "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f",
+      "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b",
       "category": "execution_condition",
       "blocking": false,
       "reason": "La selección útil del caso es una condición previa a su liberación, no un resultado observado. Tecnología verifica necesidad y capacidad; sin ellas se reduce o difiere, sin ampliar presupuesto.",
       "basis": {
         "scope": {
           "path": "plan/annexes/02-arquitectura.md",
-          "line": 672,
+          "line": 673,
           "text": "**Selección por utilidad, pendiente.** Antes de liberar el caso, su usuario debe\npriorizar el problema y el resultado útil esperado; reutilizar el método del\npiloto no basta como justificación. Esta prioridad recoge la revisión de Nico.[^revision-nico-b]",
-          "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f"
+          "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b"
         },
         "authority": {
           "path": "plan/annexes/07-resoluciones.md",
@@ -556,15 +556,15 @@
         },
         "decision": {
           "path": "plan/annexes/02-arquitectura.md",
-          "line": 672,
+          "line": 673,
           "text": "**Selección por utilidad, pendiente.** Antes de liberar el caso, su usuario debe\npriorizar el problema y el resultado útil esperado; reutilizar el método del\npiloto no basta como justificación. Esta prioridad recoge la revisión de Nico.[^revision-nico-b]",
-          "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f"
+          "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b"
         },
         "consequence": {
           "path": "plan/annexes/02-arquitectura.md",
-          "line": 676,
+          "line": 677,
           "text": "El asistente de abajo sigue siendo una hipótesis de aprendizaje, con beneficio\nacreditado cero. Sin necesidad validada y capacidad costeada, se reduce o difiere;\nun reemplazo exige actualizar alcance, protocolo y costeo antes de construir.",
-          "sha256": "18e4c52767c21a583192f5f4c545b6bb786cc888b66203b6bf9a08577c94358f"
+          "sha256": "863fa1fccf56d3a3c688c8b4eecad2e30aa6ea9d1b56f3413ca6baa65c4bf07b"
         }
       }
     },

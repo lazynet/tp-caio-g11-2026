@@ -421,7 +421,8 @@ con 80% de probabilidad (la convención usual de potencia) es (1,645 + 0,842) ×
 ≈ 2,49 × SE: 1,645 es el cuantil que deja 5% en la cola del límite inferior y
 0,842, el del 80%. Bajo los supuestos de abajo, el piso lo pone el total de PR y
 la base es el factor que más pesa; si no se sostienen, cómo se agrupa (por persona,
-área o semana) sí cambia la cuenta, y la fórmula subestima la incertidumbre.
+área o semana) sí cambia la cuenta, y la cobertura nominal del 90% no está
+garantizada: la fórmula puede subestimar o sobrestimar la incertidumbre.
 
 **Supuestos del error estándar, declarados.** La fórmula es una aproximación para
 conteos y presupone: (1) independencia entre semanas una vez quitada la tendencia,
@@ -429,8 +430,8 @@ sin autocorrelación de los totales semanales; (2) φ como sobredispersión marg
 de esos totales, que no incorpora covarianzas entre semanas; (3) pesos de estrato
 de la base tratados como fijos, sin su variabilidad; y (4) la tendencia de la serie
 retrospectiva tratada como conocida, sin sumar la incertidumbre de su estimación.
-Si alguno falla, el intervalo de 90% es más angosto de lo que corresponde y su
-cobertura no está demostrada. **Comprobación:** el acta de viabilidad fija la
+Si alguno falla, la cobertura nominal del 90% no está garantizada: el intervalo
+puede quedar más angosto o más ancho de lo que corresponde. **Comprobación:** el acta de viabilidad fija la
 prueba y su umbral antes de la segunda liberación (como mínimo, la autocorrelación
 de los residuos semanales sin tendencia, y la sensibilidad de la lectura a los
 pesos y a la tendencia) y la corre sobre la serie retrospectiva; antes del gate del
