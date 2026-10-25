@@ -112,7 +112,17 @@ class BuildDeliveryTests(unittest.TestCase):
     def test_build_cli_rejects_private_source_before_rendering(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
-            (root / "deck.pdf").touch()
+            from pypdf import PdfWriter
+
+            deck = PdfWriter()
+            deck.add_blank_page(width=100, height=100)
+            with (root / "deck.pdf").open("wb") as handle:
+                deck.write(handle)
+            (root / "out").mkdir()
+            (root / "plan/slides.md").parent.mkdir(parents=True, exist_ok=True)
+            (root / "plan/slides.md").write_text(
+                "---\nowner: caio\nstatus: draft\nmarp: true\n---\n# Deck\n", encoding="utf-8"
+            )
             folder = root / "plan/annexes"
             folder.mkdir(parents=True)
             (folder / "a.md").write_text(
@@ -133,8 +143,9 @@ class BuildDeliveryTests(unittest.TestCase):
                 text=True,
             )
             self.assertNotEqual(result.returncode, 0)
+            self.assertFalse((root / builder.DRAFT_OUTPUT).exists())
+            self.assertFalse((root / builder.FINAL_OUTPUT).exists())
             self.assertIn("Enlace a private/", result.stderr)
-            self.assertFalse((root / "out/Grupo11-AcmeLabs-PlanMaestroCAIO.pdf").exists())
 
     def test_annex_html_preserves_anchors_references_and_unique_footnotes(self):
         with tempfile.TemporaryDirectory() as temp:

@@ -12,9 +12,10 @@ entrega (`build-deck.sh entrega --delivery`). El caso elegido es **Acme Labs**,
 confirmado por el equipo. El alcance acordado en comisión es la organización
 completa (IA en el producto y en la operación interna).
 
-Acuerdo informado por Martín el 20/10/2026 (seguimiento cerrado: [#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15)).
-Los [responsables](#responsables-del-equipo) están acordados y el seguimiento
-se hace en el [backlog de GitHub Issues](#backlog-y-seguimiento).
+Acuerdo informado por Martín el 20/10/2026 (seguimiento cerrado:
+[#15](https://github.com/lazynet/tp-caio-g11-2026/issues/15)). Los
+[responsables](#responsables-del-equipo) están acordados y el seguimiento se
+hace en el [backlog de GitHub Issues](#backlog-y-seguimiento).
 
 > **El repo es público.** Ningún dato interno de ninguna organización entra acá:
 > ver [Datos privados](#datos-privados) antes de escribir nada.
@@ -182,8 +183,10 @@ Estos responsables son del TP: no reemplazan a las autoridades de Acme Labs
 que deben validar datos, liberar agendas, aceptar riesgos o aprobar presupuesto.
 El reparto de slides se acuerda en la tarea de defensa.
 
-Rafa y Maxi no tienen assignee en GitHub ([#17](https://github.com/lazynet/tp-caio-g11-2026/issues/17),
-[#20](https://github.com/lazynet/tp-caio-g11-2026/issues/20)); su responsable figura en el texto.
+Rafa y Maxi no tienen assignee en GitHub
+([#17](https://github.com/lazynet/tp-caio-g11-2026/issues/17),
+[#20](https://github.com/lazynet/tp-caio-g11-2026/issues/20)); su responsable
+figura en el texto.
 
 `context/`, `material/` y `defense/evidence/` siguen el formato abierto
 [OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md):
@@ -260,21 +263,22 @@ consolidación. Nunca marques toda una fila como probada por haber listado roles
 
 ## Cómo trabajamos
 
-1. **Una sección, un dueño.** Coordiná con el responsable humano y registrá
-   el trabajo en su issue. Cada anexo declara su agente dueño (`owner:`) arriba;
+1. **Una sección, un dueño.** Coordiná con el responsable humano y registrá el
+   trabajo en su issue. Cada anexo declara su agente dueño (`owner:`) arriba;
    las slides las edita solo `caio`, y los demás le proponen cambios.
 2. **Todo número tiene fuente.** Si es un supuesto, se marca como supuesto. Una
    cifra entra a la entrega solo si una persona la verificó contra la fuente.
-3. **Nada interno de ninguna organización en el repo.** Ver [Datos privados](#datos-privados).
+3. **Nada interno de ninguna organización en el repo.** Ver [Datos
+   privados](#datos-privados).
 4. **Revisión a la medida.** Para compartir el borrador de una sección alcanza
    con una revisión focalizada y feedback humano; el `board-review` completo va
    antes del peer review y de la entrega.
 5. **Desacuerdos a la vista.** Si dos miradas chocan, se dejan las alternativas
    con su evidencia; no se inventa consenso.
-6. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se corrige
-   en `plan/slides.md` y se regenera.
-7. **Cambios a `main` por pull request.** El ruleset «main protegida» no
-   acepta push directo ni force-push a `main` y exige que pasen los chequeos
+6. **Las slides no se tocan en el pptx.** Si algo está mal en el deck, se
+   corrige en `plan/slides.md` y se regenera.
+7. **Cambios a `main` por pull request.** El ruleset «main protegida» no acepta
+   push directo ni force-push a `main` y exige que pasen los chequeos
    `leak-check` y `gitleaks`: trabajá en una rama y abrí un PR. El ruleset no
    exige aprobaciones (0 requeridas); por convención del equipo, Martin revisa
    cada PR (`.github/CODEOWNERS` se lo solicita). No uses `--admin` ni saltees
@@ -309,13 +313,13 @@ anonimizados y supuestos, nunca el dato real.
 | `leak-guard` en push | lo mismo en modo estricto: falla si falta la denylist. Detecta, no previene: el push ya es público | GitHub Actions |
 
 El chequeo combina patrones fijos (claves privadas, CUIT, archivos marcados
-confidenciales y cualquier cosa en `private/`) con una denylist privada que
-vive fuera del repo y lleva los nombres y los dominios de mail de la
-organización del caso. No uses nunca `git commit --no-verify`.
-Ninguna capa garantiza que no se filtre nada: la defensa principal es no
-escribir el dato. La protección de `main` exige que pasen `leak-check` y
-`gitleaks`, pero no exige aprobaciones. Que el secreto `LEAK_DENYLIST` esté
-configurado en GitHub no está verificado en este README.
+confidenciales y cualquier cosa en `private/`) con una denylist privada que vive
+fuera del repo y lleva los nombres y los dominios de mail de la organización del
+caso. No uses nunca `git commit --no-verify`. Ninguna capa garantiza que no se
+filtre nada: la defensa principal es no escribir el dato. La protección de
+`main` exige que pasen `leak-check` y `gitleaks`, pero no exige aprobaciones.
+Que el secreto `LEAK_DENYLIST` esté configurado en GitHub no está verificado en
+este README.
 
 `scripts/leak-check.sh` usa solo Python estándar y git:
 
@@ -387,15 +391,16 @@ duplicadas.
 ### La entrega y los anexos
 
 La consigna pide **un único PDF de menos de 10 MB** con la presentación y los
-anexos. `build-deck.sh entrega --delivery` lo arma en `out/Grupo11-AcmeLabs-PlanMaestroCAIO.pdf`, con título
-"Grupo 11 · Acme Labs — Plan Maestro CAIO" en sus metadatos: el deck de Marp y
-después cada anexo de `plan/annexes/` en orden de nombre (`01-diagnostico.md`,
-`02-arquitectura.md`...), en A4. Entre el deck y los anexos agrega una página
-de índice con títulos y links internos. Las páginas de anexos se numeran desde
-1 al pie; el índice usa esa numeración. Las filas de tablas se mantienen juntas
-si caben en una página, sin achicar la tipografía. El pie requiere un Chrome
-con soporte de cajas de margen CSS; verificá que aparezca en el PDF generado.
-Si pasa los 10 MB, el script falla y dice el peso.
+anexos. `build-deck.sh entrega --delivery` lo arma en
+`out/Grupo11-AcmeLabs-PlanMaestroCAIO.pdf`, con título "Grupo 11 · Acme Labs —
+Plan Maestro CAIO" en sus metadatos: el deck de Marp y después cada anexo de
+`plan/annexes/` en orden de nombre (`01-diagnostico.md`,
+`02-arquitectura.md`...), en A4. Entre el deck y los anexos agrega una página de
+índice con títulos y links internos. Las páginas de anexos se numeran desde 1 al
+pie; el índice usa esa numeración. Las filas de tablas se mantienen juntas si
+caben en una página, sin achicar la tipografía. El pie requiere un Chrome con
+soporte de cajas de margen CSS; verificá que aparezca en el PDF generado. Si
+pasa los 10 MB, el script falla y dice el peso.
 
 Un anexo no es un depósito de datos crudos: es la **evidencia procesada** que
 deja ver al CFO o al board de dónde salió cada número de una slide. Para
@@ -406,12 +411,12 @@ mitigación, y decisiones. `plan-check` exige esas secciones y el frontmatter
 que una slide lo enlace. Los archivos que empiezan con `_` no se validan ni se
 entregan.
 
-En el PDF de entrega, los links a slides y anexos incluidos navegan dentro del PDF,
-también hacia sus anclas. Los demás archivos del repo apuntan a GitHub, con
+En el PDF de entrega, los links a slides y anexos incluidos navegan dentro del
+PDF, también hacia sus anclas. Los demás archivos del repo apuntan a GitHub, con
 `CAIO_PUBLIC_REF=main` por defecto. Para fijar una versión auditable, usá un
-commit publicado: `CAIO_PUBLIC_REF=<sha> ./scripts/build-deck.sh entrega --delivery`.
-El build rechaza links a `private/`, destinos internos inexistentes y cualquier
-URI `file://` que sobreviva en el PDF final.
+commit publicado: `CAIO_PUBLIC_REF=<sha> ./scripts/build-deck.sh entrega
+--delivery`. El build rechaza links a `private/`, destinos internos inexistentes
+y cualquier URI `file://` que sobreviva en el PDF final.
 
 ## Validar
 
@@ -434,19 +439,21 @@ python3 scripts/plan-check.py --mode delivery             # el deck, como para e
   nueva declara `status`; una sin `status` se lee como `draft`.
 - **Aceptación documental** (`status: accepted`) declara que una persona acepta
   incorporar la ficha al corpus. Requiere `accepted: { by, at, scope }`, con
-  `by: human:<usuario-github>`, fecha ISO y alcance explícito. No acredita cotejo
-  primario, verificación del contenido ni vigencia normativa; conserva las cautelas.
+  `by: human:<usuario-github>`, fecha ISO y alcance explícito. No acredita
+  cotejo primario, verificación del contenido ni vigencia normativa; conserva
+  las cautelas.
 - **Entrega** (`--delivery`, con `--path` para las fichas que usa la entrega;
   `--mode delivery` para el deck) exige `status: verified` con el bloque
   `verified:` de una persona y un deck sin pendientes. `--path` acepta solo
-  archivos o carpetas de `context/`, `material/` y `defense/evidence/`: pasá
-  las fichas que de verdad cita la entrega. El ejemplo de arriba es una ficha
-  real que falla con fichas no verificadas: al 2026-10-25 no declara `status` y se lee como `draft`.
+  archivos o carpetas de `context/`, `material/` y `defense/evidence/`: pasá las
+  fichas que de verdad cita la entrega. El ejemplo de arriba es una ficha real
+  que falla con fichas no verificadas: al 2026-10-25 no declara `status` y se
+  lee como `draft`.
 - Al 2026-10-25 hay 20 fichas `accepted`, 10 `draft` y 74 sin `status`; el gate
   de entrega (`plan-check.py --mode delivery`) exige que el deck cite fichas
-  `verified`. Los chequeos de
-  entrega rechazan las fichas sin revisión declarada y los pendientes del deck;
-  no se resuelve cambiando etiquetas sin revisar las fuentes.
+  `verified`. Los chequeos de entrega rechazan las fichas sin revisión declarada
+  y los pendientes del deck; no se resuelve cambiando etiquetas sin revisar las
+  fuentes.
 - Los chequeos validan estructura y que la revisión humana esté declarada. No
   prueban que una cifra sea cierta ni que el plan esté completo: eso lo revisan
   personas.
@@ -475,15 +482,18 @@ entrega.
   en el PR o en su issue.
 - **Material de la cursada:** 20 fichas quedaron en `accepted` por instrucción
   expresa de Martín (21/10/2026). Eso no acredita verificación humana del
-  contenido; los cotejos externos de [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56)
-  se resolvieron con R-34 y el destino de la capacidad ([#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60)), con R-33.
+  contenido; los cotejos externos de
+  [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56) se resolvieron
+  con R-34 y el destino de la capacidad
+  ([#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60)), con R-33.
 - **Defensa** ([#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21)):
   sigue abierta, pero no condiciona la entrega. Falta acordar quién presenta
   cada slide (hay una propuesta en `defense/storyline.md`) y hacer el ensayo
   antes de la defensa (ver Fechas).
-- **Propuesta de Lucho** ([#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27)):
-  no se incorporó a la entrega; `defense/structure-pilot.md` es su piloto y queda
-  como referencia.
+- **Propuesta de Lucho**
+  ([#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27)): no se
+  incorporó a la entrega; `defense/structure-pilot.md` es su piloto y queda como
+  referencia.
 
 ## Backlog y seguimiento
 
