@@ -1,8 +1,8 @@
 # AGENTS.md — tp-caio-g11-2026
 
 `AGENTS.md` es el contrato portable para los agentes de IA y la fuente única de
-las reglas del repo. Claude y VS Code consumen los roles compartidos; los
-adaptadores de Codex se generan. Nunca se mantienen copias de las reglas a mano.
+las reglas del repo. Claude y VS Code leen los roles de `.claude/agents/` (soporte
+probado por runtime en `README.md`); los adaptadores de Codex se generan.
 
 ## Idioma
 
@@ -21,8 +21,8 @@ un **Plan Maestro del CAIO a 12 meses** para una organización, defendido ante u
 `README.md`; es su única fuente. No conviertas acuerdos pendientes en decisiones.
 
 **Entrega:** un único PDF de menos de 10 MB, con máximo diez slides (portada y
-equipo incluidas) y anexos. Generar el PDF no lo habilita para entrega: usá
-`scripts/build-deck.sh entrega --delivery` para exigir el gate de entrega.
+equipo incluidas) y anexos. Generar el PDF no lo habilita: usá
+`scripts/build-deck.sh entrega --delivery`, que exige el gate de entrega.
 
 El plan tiene que integrar:
 
@@ -40,7 +40,8 @@ lo *sustenta*, en anexos de evidencia procesada (`plan/annexes/_template.md`).
 **Todo se genera.** `plan/slides.md` (markdown compatible con Marp, slides
 separadas por `---` o `***` compactos; links locales en Markdown, no en HTML) es
 la única fuente del deck. `scripts/build-deck.sh` lo renderiza en `out/` (fuera
-de git) y arma `out/entrega.pdf` (deck + anexos), el único entregable. Nada
+de git) y arma `out/Grupo11-AcmeLabs-PlanMaestroCAIO.pdf` (deck + anexos), el único entregable
+(borrador: `-borrador`). Nada
 generado se edita: se corrige el markdown y se regenera. Requisitos (Python
 3.11+, PyYAML y pypdf en `.venv`, `CAIO_PYTHON`) y chequeos en `README.md`.
 
@@ -98,8 +99,7 @@ analice, sea cual sea el caso elegido:
   activa `scripts/setup.sh`) y en GitHub Actions (`leak-guard`). Revisa patrones
   fijos y una denylist privada (`.leak-denylist` local, secreto `LEAK_DENYLIST`
   en GitHub). Cubre solo texto UTF-8: lo que omite deja la revisión PARCIAL y
-  `--strict` la rechaza. Ni COMPLETA ni `--strict` certifican que no haya datos
-  privados. Nunca uses `git commit --no-verify` para saltearlo.
+  `--strict` la rechaza. Ni COMPLETA ni `--strict` certifican ausencia de datos privados. Nunca uses `git commit --no-verify` para saltearlo.
 
 ## Bases de conocimiento (OKF)
 
@@ -140,8 +140,7 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
 
 ## Reglas
 
-- **La audiencia es toda la cohorte** y cualquiera en internet: aplicá siempre
-  "Datos privados".
+- **La audiencia es toda la cohorte** y cualquiera en internet: aplicá "Datos privados".
 - **Todo número tiene fuente.** Una cifra en una slide se rastrea hasta un anexo,
   y el anexo dice el supuesto o la fuente. Los supuestos se marcan como tales.
 - **Los totales se recalculan.** Antes de commitear un anexo, recalculá cada total
@@ -157,15 +156,15 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   archivo: coordiná en el issue, con una rama o worktree por tarea. Dos sesiones
   del mismo rol no editan el mismo archivo en paralelo.
 - **Desacuerdos a la vista.** Si dos miradas chocan, se dejan explícitas con
-  alternativas y evidencia; nadie lo resuelve inventando consenso.
+  alternativas y evidencia, sin inventar consenso.
 - **Revisiones proporcionales.** Un borrador alcanza con una revisión focalizada
   (el agente de esa mirada o `board` sobre la sección) y feedback humano. El skill
   `board-review` completo se corre antes del peer review y de la entrega.
 - Que slides o PDF no desbordan se afirma tras abrir el render y describir lo
-  visto; conteo de páginas y estructura no son revisión visual.
+  visto; contar páginas no es revisión visual.
 - Commits: `tipo: descripción corta` en español, sin trailers.
-- Cambios a `main` por PR, con chequeos en verde y aprobación del code owner.
-  No uses `--admin` ni saltees hooks. No publiques sin autorización del pedido.
+- Cambios a `main` por PR y con chequeos en verde; por convención del equipo, el
+  code owner revisa. No uses `--admin` ni saltees hooks. No publiques sin autorización del pedido.
 
 ## Agentes
 
@@ -187,10 +186,6 @@ dependencias, costo (si corresponde), riesgo, responsable humano (pendiente o
 acordado), criterio de éxito y condición de abandono. Si falta información, el
 agente la marca como faltante o supuesto y sigue; no la inventa.
 
-**Multi harness.** Las instrucciones del rol son compartidas; descubrimiento,
-herramientas y permisos dependen del runtime. Leé la matriz y las condiciones de
-carga en `README.md`, sección "Los agentes". Si no podés invocar un
-rol nativo, leé `.claude/agents/<rol>.md` y adoptalo explícitamente. Su campo
-`tools` no configura permisos fuera de Claude: respetá los límites del texto y
-reportá qué controles puede aplicar el runtime. Listado, carga e invocación de
-punta a punta son evidencias distintas; nunca las des por equivalentes.
+**Multi harness.** El soporte por runtime está en `README.md`, "Los agentes". Sin
+rol nativo, leé `.claude/agents/<rol>.md` y adoptalo; su campo `tools` no
+configura permisos fuera de Claude. Listar, cargar e invocar son evidencias distintas.

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Renderiza plan/slides.md con cada renderer disponible para comparar alternativas,
-# y arma out/entrega.pdf (deck + anexos, menos de 10 MB), que es lo que se entrega.
+# y arma el PDF de entrega (deck + anexos, menos de 10 MB): con --delivery es
+# out/Grupo11-AcmeLabs-PlanMaestroCAIO.pdf, el que se entrega; sin él, el -borrador.pdf.
 # La salida va a out/ (fuera de git): los decks son artefactos generados, nunca se editan a mano.
 set -euo pipefail
 
@@ -41,7 +42,10 @@ if [[ "$renderer" == all || "$renderer" == marp ]]; then
   marp "$src" --pptx -o "$out/deck-marp.pptx"
 fi
 if [[ "$renderer" == all || "$renderer" == entrega ]]; then
-  "${CAIO_PYTHON:-python3}" "$root/scripts/build-delivery.py"
+  # El borrador lleva otro nombre para que un build sin --delivery no pise el final.
+  pdf_name=Grupo11-AcmeLabs-PlanMaestroCAIO
+  [[ "$mode" == delivery ]] || pdf_name=$pdf_name-borrador
+  "${CAIO_PYTHON:-python3}" "$root/scripts/build-delivery.py" --output "$out/$pdf_name.pdf"
 fi
 
 if [[ "$renderer" == all || "$renderer" == pandoc ]]; then
