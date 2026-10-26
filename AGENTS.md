@@ -127,7 +127,9 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
 - **Declaración humana.** `accepted` y `verified` requieren un bloque homónimo
   `{ by: human:<usuario-github>, at: <fecha ISO>, scope: "<fuente y alcance>" }`.
   Declaraciones humanas, registradas solo por instrucción expresa.
-  `accepted` admite material; toda cifra entregada exige `verified`.
+  `accepted` admite material; toda cifra entregada exige `verified`. Antes de
+  pasar una ficha de `context/` a `verified`, recalculá sus cifras derivadas con
+  sus insumos, retirá o acotá lo que la fuente no acredita y mostrá ese diff.
 - **Revisar no cambia el tipo.** Un `Supuesto` o una propuesta revisados siguen
   siendo supuesto o propuesta; no se convierten en `Hecho`.
 - **Draft y entrega.** Un borrador admite faltantes si están identificados (en
@@ -146,7 +148,9 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   privados".
 - **Todo número tiene fuente.** Una cifra en una slide se rastrea hasta un
   anexo, y el anexo dice el supuesto o la fuente. Los supuestos se marcan como
-  tales.
+  tales. Cada cifra, criterio, umbral o superlativo nuevo en slides o anexos se
+  cita con su línea del anexo fuente antes de commitear; si el anexo no lo dice,
+  queda como faltante y no se agrega.
 - **Los totales se recalculan.** Antes de commitear un anexo, recalculá cada
   total y promedio desde sus componentes y mostrá la comparación.
 - **Un editor por archivo.** `caio` es el único que edita `plan/slides.md`. Cada
@@ -166,6 +170,10 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
   skill `board-review` completo se corre antes del peer review y de la entrega.
 - Que slides o PDF no desbordan se afirma tras abrir el render y describir lo
   visto; contar páginas no es revisión visual.
+- En `plan/slides.md`, secciones y slides se citan por nombre ("ver Roadmap"),
+  no por número: los eyebrows y el paginador no coinciden.
+- Slides, anexos, fichas e índices se editan con Edit, no con scripts
+  (reemplazos masivos, `awk` seguido de `mv`); revisá `git diff` antes de reportar.
 - Commits: `tipo: descripción corta` en español, sin trailers.
 - Cambios a `main` por PR y con chequeos en verde; sin cupo fijo de
   aprobaciones, el ruleset pide una extra si hay cambios no atribuidos (agentes).
@@ -173,17 +181,9 @@ bundle (`/unidades/m1u2-portfolio-100-dias.md`) para que el grafo se pueda recor
 
 ## Agentes
 
-Copilotos sintéticos por rol, definidos en `.claude/agents/`. Cada uno es dueño
-de una mirada; `caio` integra y edita el deck.
-
-| Agente | Es dueño de | Foco en slides y anexos |
-|---|---|---|
-| `caio` | Storyline, integración, roadmap ajustado por riesgo, `plan/slides.md` | Resumen ejecutivo, roadmap, decisiones que se piden |
-| `architect` | Arquitectura objetivo, plataforma, datos, roadmap técnico | Arquitectura e hitos técnicos |
-| `governance` | Gobierno de IA, derechos de decisión, seguridad, compliance | Modelo operativo, políticas, controles |
-| `people` | Roles y capacidad de personas, cambio y roadmap cultural | Talento, adopción, hitos culturales |
-| `finance` | Business case, presupuesto, ROI, validación de cifras económicas | Financial storytelling, escenarios |
-| `board` | Revisión adversarial como board, CFO escéptico y corrector | Objeciones, brechas contra la consigna |
+Copilotos sintéticos por rol: `caio`, `architect`, `governance`, `people`,
+`finance` y `board`. Cada uno es dueño de la mirada que dice la `description`
+de `.claude/agents/<rol>.md`; `caio` integra y edita el deck.
 
 **Contrato común de salida.** Toda propuesta de un agente dice, en breve y
 adaptado a su rol: problema, evidencia o supuesto, alternativas, recomendación,
