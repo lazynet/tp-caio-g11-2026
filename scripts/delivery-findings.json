@@ -467,7 +467,7 @@
       "path": "plan/slides.md",
       "line": 109,
       "text": "| IA en pagos | Nueva función de producto | Habilitación externa y seguridad pendientes | Postergar |",
-      "sha256": "bf0308e664a725f4bfd40c0b121e8b6945087f657b1985cbe4527992e90c51be",
+      "sha256": "a038b0c792ad14a626fd282f7201a21e52b0a0d4edb2ee348941d7eff035fe25",
       "category": "future_decision",
       "blocking": false,
       "reason": "La matriz posterga una alternativa de producto fuera del alcance autorizado. Sus habilitaciones no se declaran realizadas ni son un requisito incumplido para ejecutar el mínimo; reactivarla exige decisión y estimación común del Directorio, con agendas y repositorios habilitados.",

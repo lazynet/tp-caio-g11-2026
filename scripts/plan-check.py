@@ -189,10 +189,16 @@ PROCESS_TEXT = re.compile(
     r"|\bversi[óo]n (?:anterior|previa|original)\b"
     r"|\b(?:pedido|paquete|programa|propuesta|alcance) anterior\b"
     r"|\breemplazad[oa] como\b|\bpeer review\b|\bdocentes?\b"
-    r"|\bfichas?\b|\bdraft\b|\bcodex\b|\bhuecos\b|\b(?:context|material|private)/"
+    r"|\bdraft\b|\bhuecos\b|\b(?:context|material|private)/"
     r"|\b(?:regla|referencia|versi[óo]n|recomendaci[óo]n)(?: \w+)? del borrador\b"
-    r"|`(?:caio|architect|governance|people|finance|board)`"
     r"|\bm\d+ ?u\d+\b",
+    re.IGNORECASE,
+)
+# El anexo de método describe cómo se armó el plan: puede nombrar sus
+# herramientas, pero no la historia de iteraciones ni la autoría de decisiones.
+METHOD_ANNEX = Path("plan/annexes/08-como-se-armo.md")
+METHOD_TEXT = re.compile(
+    r"\bfichas?\b|\bcodex\b|`(?:caio|architect|governance|people|finance|board)`",
     re.IGNORECASE,
 )
 
@@ -214,7 +220,9 @@ def process_text(name, body, offset=0):
         if re.match(r"\s{0,3}\[(?!\^)[^\]]+\]:\s*\S", line):
             continue
         line = re.sub(r"\]\([^)]*\)|\[\^[^\]]*\]", "]", line)
-        match = PROCESS_TEXT.search(line)
+        match = PROCESS_TEXT.search(line) or (
+            Path(name) != METHOD_ANNEX and METHOD_TEXT.search(line)
+        )
         if match:
             found.append(
                 f"{name}:{line_number}: texto de proceso en el informe: {match[0]!r}"
