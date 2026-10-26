@@ -358,6 +358,27 @@ def find_chrome():
     raise SystemExit("No encontré Chrome, Edge o Chromium: definí CHROME_PATH")
 
 
+def standalone_html(root, markup, css, html):
+    subprocess.run(
+        [
+            "pandoc",
+            "--from=html",
+            "--standalone",
+            # Pandoc relee las notas del HTML y, sin esto, las junta todas al
+            # final del último anexo.
+            "--reference-location=section",
+            "--embed-resources",
+            f"--resource-path={root / 'plan/annexes'}",
+            f"--css={css}",
+            "--metadata=pagetitle:Anexos",
+            f"--output={html}",
+        ],
+        input=markup,
+        text=True,
+        check=True,
+    )
+
+
 def render_annexes(root, markup, pdf, *, numbered=True):
     with tempfile.TemporaryDirectory() as temp:
         temp = Path(temp)
@@ -366,21 +387,7 @@ def render_annexes(root, markup, pdf, *, numbered=True):
             CSS if numbered else CSS + "\n@page { @bottom-center { content: none; } }",
             encoding="utf-8",
         )
-        subprocess.run(
-            [
-                "pandoc",
-                "--from=html",
-                "--standalone",
-                "--embed-resources",
-                f"--resource-path={root / 'plan/annexes'}",
-                f"--css={css}",
-                "--metadata=pagetitle:Anexos",
-                f"--output={html}",
-            ],
-            input=markup,
-            text=True,
-            check=True,
-        )
+        standalone_html(root, markup, css, html)
         pdf.unlink(missing_ok=True)
         chrome = subprocess.Popen(
             [
