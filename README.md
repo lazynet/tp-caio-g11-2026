@@ -153,7 +153,7 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 | `context/` | hechos **públicos** o anonimizados de Acme Labs y supuestos, uno por archivo, con su fuente y estado de revisión | — |
 | `private/` | datos internos reales — **solo local, nunca se versiona** | quien tenga el acceso |
 | `material/` | una ficha por unidad y por framework de la cursada, y qué sección del plan respalda cada uno | — |
-| `defense/` | storyline y objeciones; `structure-pilot.md` es el piloto de la propuesta de Lucho ([#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27)), no incorporada a la entrega | `caio`; `board` aporta desde `reviews/` |
+| `defense/` | storyline, objeciones y guion oral por slide (`guion.md`); `structure-pilot.md` es el piloto de la propuesta de Lucho ([#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27)), no incorporada a la entrega | `caio`; `board` aporta desde `reviews/` |
 | `defense/evidence/` | una ficha por evidencia: qué objeción responde y de dónde sale | `caio` |
 | `reviews/` | revisiones del board, de los docentes simulados y del setup, con fecha | `board` |
 | `plan/theme/` | `acme.css`, el tema de Marp del deck | `caio` |
