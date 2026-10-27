@@ -208,9 +208,68 @@ La decisión que pedimos tiene tres partes. Aprobar el plan y sus resoluciones; 
 
 **Respaldo:** guion V4, apartado 10; G R-01 a R-06; Anexo F, autoridad y decisiones.
 
+## Preparación del ensayo (propuesta)
+
+Esta sección recupera la operativa de [#68](https://github.com/lazynet/tp-caio-g11-2026/pull/68) y la adapta al orden de la V4. Reparto, respaldos, tiempos y recortes son propuestas para acordar en [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21); no registran un ensayo realizado.
+
+### Voces y respaldos
+
+Los códigos identifican voces propuestas, no personas designadas. El responsable de cada tema valida su mensaje; el equipo confirma quién lo presenta y quién lo respalda.
+
+| Bloque del relato | Voz | Rol de referencia | Respaldo propuesto |
+|---|---|---|---|
+| Rumbo y decisión solicitada | P1 | Coordinación de la defensa; abre y cierra | P7 |
+| Desafío del negocio | P2 | Diagnóstico | P3 |
+| Propuesta por etapas | P7 | Roadmap y riesgo | P8 |
+| Iniciativas | P3 | Material de la cursada y criterios de priorización | P4 |
+| Inicio con herramientas actuales | P4 | Arquitectura | P6 |
+| Personas y adopción | P5 | Personas y cultura | P8 |
+| Gobierno y seguridad | P6 | Gobierno y seguridad | P4 |
+| Recursos y valor buscado | P8 | Business case; presenta ambos bloques consecutivos | P7 |
+
+Durante las preguntas, P1 modera y deriva por tema. La voz a cargo propone una respuesta inicial de dos frases, señala el anexo y amplía si se lo piden. Si no puede responder, interviene el respaldo; una respuesta sin evidencia se registra como pendiente, sin estimarla en vivo.
+
+### Reloj de ensayo
+
+Primero se confirma la duración permitida y el margen para preguntas. **T** es el tiempo objetivo acordado para el relato principal, incluidos puentes, pausas y cambios de voz. No se trasladan los minutos del guion anterior como límite confirmado.
+
+Distribución propuesta para probar con cronómetro; se convierte a minutos cuando se acuerda T:
+
+| Bloque | Parte de T | Acumulado |
+|---|---:|---:|
+| Rumbo | 5% | 5% |
+| Desafío del negocio | 10% | 15% |
+| Propuesta por etapas | 15% | 30% |
+| Iniciativas | 10% | 40% |
+| Inicio con herramientas actuales | 10% | 50% |
+| Personas y adopción | 10% | 60% |
+| Gobierno y seguridad | 10% | 70% |
+| Recursos | 15% | 85% |
+| Valor buscado | 10% | 95% |
+| Decisión solicitada | 5% | 100% |
+
+**Control intermedio propuesto:** al terminar «Inicio con herramientas actuales», comparar el reloj con la mitad de T. Si se pasó, activar los recortes del relato restante y proteger el cierre. Después del primer ensayo se ajustan estas proporciones según los tiempos observados.
+
+### Versión corta si el tiempo aprieta
+
+Acortar el relato conservando los puntos de «No puede faltar». Las respuestas de «Si preguntan» quedan como reserva.
+
+| Bloque | Qué acortar | Qué conservar |
+|---|---|---|
+| Desafío del negocio | El desarrollo de los objetivos comerciales | Uso actual, aporte no demostrado y restricciones de clientes |
+| Iniciativas | La descripción de posibles soluciones de integración | Corrección candidata y estudio acotado; capacidad confirmada; sin producto aprobado |
+| Inicio con herramientas actuales | La explicación paso a paso del circuito | Base y entorno habilitado antes de la práctica; revisión humana |
+| Personas y adopción | Los ejemplos de destino de la capacidad, que pueden ir a preguntas | Formación evaluada, tiempo confirmado y alcance de la transición laboral |
+
+Recursos, valor buscado y decisión solicitada tienen prioridad sobre los ejemplos. Los recortes no eliminan condiciones de avance, espera o corte, controles ni la distinción entre caja, tiempo interno y techos.
+
+### Registro del primer ensayo
+
+Registrar en #21 la fecha, T acordado, voces y respaldos confirmados, tiempos reales por bloque y correcciones. Hasta contar con ese registro, presentadores, duración y resultado del ensayo siguen pendientes.
+
 ## Fuentes y alcance de esta guía
 
-Este documento deriva exclusivamente de la presentación V4 y de su guion de defensa ya aprobados. No modifica las diapositivas ni agrega decisiones, cifras o responsables humanos.
+El relato por diapositiva deriva de la presentación V4 y de su guion de defensa ya aprobados. La preparación del ensayo adapta la operativa propuesta en #68. No modifica las diapositivas ni agrega decisiones empresariales, cifras económicas o responsables humanos designados.
 
 - [Presentación: fuente única](../plan/slides.md).
 - [Storyline y guion de defensa](storyline.md).

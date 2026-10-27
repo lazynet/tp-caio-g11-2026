@@ -492,6 +492,8 @@ entrega.
 - **Defensa** ([#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21)):
   sigue abierta, pero no condiciona la entrega. El [storyline](defense/storyline.md)
   y el [speech por diapositiva](defense/speech-presentacion.md) usan la V4 de Lucho.
+  La [preparación del ensayo](defense/speech-presentacion.md#preparación-del-ensayo-propuesta)
+  recupera roles, respaldos, reloj y recortes de #68, adaptados como propuesta.
   Falta confirmar presentadores y responsables de respuestas, y registrar un
   ensayo con fecha, tiempos y feedback antes de la defensa (ver Fechas).
 - **Versión de Lucho adoptada como base**
