@@ -106,7 +106,7 @@ Base: [Anexo A — Diagnóstico](annexes/01-diagnostico.md). Las mejoras y oport
 
 <div class="ref">
 
-[Anexo F — Roadmap y riesgo](annexes/06-roadmap-riesgo.md). Estimación prudente: piso del intervalo del 90%. Medición no viable: beneficio 0, sin expansión; continuidad por adopción, calidad, costo y controles. Techos en slide 8, sin liberación automática. Q2–Q4 sin formación ampliada.
+[Anexo F — Roadmap y riesgo](annexes/06-roadmap-riesgo.md). Estimación prudente: piso del intervalo del 90%. Medición no viable: beneficio 0, sin expansión; continuidad por adopción, calidad, costo y controles. Techos en Recursos, sin liberación automática. Q2–Q4 sin formación ampliada.
 
 </div>
 
