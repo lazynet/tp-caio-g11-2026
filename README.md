@@ -153,7 +153,7 @@ pasa a privado (`scripts/make-private.sh`) y los que ya están conservan el acce
 | `context/` | hechos **públicos** o anonimizados de Acme Labs y supuestos, uno por archivo, con su fuente y estado de revisión | — |
 | `private/` | datos internos reales — **solo local, nunca se versiona** | quien tenga el acceso |
 | `material/` | una ficha por unidad y por framework de la cursada, y qué sección del plan respalda cada uno | — |
-| `defense/` | storyline y objeciones; `structure-pilot.md` es el piloto de la propuesta de Lucho ([#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27)), no incorporada a la entrega | `caio`; `board` aporta desde `reviews/` |
+| `defense/` | storyline, objeciones y speech de la V4 de Lucho, adoptada como base; `lucho-v4/` conserva su original y `structure-pilot.md`, el antecedente | `caio`; `board` aporta desde `reviews/` |
 | `defense/evidence/` | una ficha por evidencia: qué objeción responde y de dónde sale | `caio` |
 | `reviews/` | revisiones del board, de los docentes simulados y del setup, con fecha | `board` |
 | `plan/theme/` | `acme.css`, el tema de Marp del deck | `caio` |
@@ -490,13 +490,19 @@ entrega.
   con R-34 y el destino de la capacidad
   ([#60](https://github.com/lazynet/tp-caio-g11-2026/issues/60)), con R-33.
 - **Defensa** ([#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21)):
-  sigue abierta, pero no condiciona la entrega. Falta acordar quién presenta
-  cada slide (hay una propuesta en `defense/storyline.md`) y hacer el ensayo
-  antes de la defensa (ver Fechas).
-- **Propuesta de Lucho**
-  ([#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27)): no se
-  incorporó a la entrega; `defense/structure-pilot.md` es su piloto y queda como
-  referencia.
+  sigue abierta, pero no condiciona la entrega. El [storyline](defense/storyline.md)
+  y el [speech por diapositiva](defense/speech-presentacion.md) usan la V4 de Lucho.
+  Falta confirmar presentadores y responsables de respuestas, y registrar un
+  ensayo con fecha, tiempos y feedback antes de la defensa (ver Fechas).
+- **Versión de Lucho adoptada como base**
+  ([#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27),
+  [PR #71](https://github.com/lazynet/tp-caio-g11-2026/pull/71)):
+  Martín indicó usar la V4 el 27/10/2026. Se integran su relato, diez slides y
+  material de defensa en las fuentes canónicas, conservando el
+  [original](defense/lucho-v4/README.md) y los anexos vigentes A–H.
+  La instrucción no acredita acuerdo de los demás responsables ni la prueba de
+  lectura sin explicación oral; esos criterios siguen pendientes en #27.
+  `defense/structure-pilot.md` queda como antecedente.
 
 ## Backlog y seguimiento
 

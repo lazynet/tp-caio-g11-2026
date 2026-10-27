@@ -1,0 +1,18 @@
+{
+  "version": "V4",
+  "source_commit": "9c3a879c3f0f4d3225e5602b1b3bc1a5ab8efb91",
+  "purpose": "Alternativa ejecutiva para revisión del equipo; no modifica el deck canónico",
+  "files": {
+    "slides.md": "8a3e2461accdf42fe2b60216e7c468be53872c4b1c71cef8eca1c8d823801d8a",
+    "acme.css": "7d022a09b6c6aae3c506d154b663c243e417160ff9b8bcce931a26d8156f7374",
+    "guion-defensa.md": "e113e53b5983a345ea1a69ca74429b6570bf2df15475b6da5d65eaabe8505f85",
+    "speech-presentacion.md": "c2673edb3dc0b1bab22ec8a92d86fbf916b1ae26a069202fd7321d733dfc589a",
+    "board-review.md": "0ddea4ae39bc2a7a7ce2ead8947fe7077f05427234540f37612e44163679b3d7"
+  },
+  "integrated_pdf_sha256": "4e6758b00070defee22755fc062c15555ab0f79ce880f0ffb1dbe38155cecca5",
+  "review_scope": [
+    "slides.md",
+    "guion-defensa.md"
+  ],
+  "review_result": "4/4 en C1–C7; revisión interna focalizada, sin nota global"
+}

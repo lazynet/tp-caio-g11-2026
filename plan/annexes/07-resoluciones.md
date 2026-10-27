@@ -44,9 +44,9 @@ los roles por entregable.
 
 ## Desarrollo y fuentes
 
-Slides que sustenta: el cierre del [deck](../slides.md), "Aprobar el plan y sus
-resoluciones", y cada slide que cita una resolución R-xx en su recuadro de
-resolución. Montos en k USD (1k USD = 1.000 USD) salvo que se indique otra
+Slides que sustenta: el cierre del [deck](../slides.md), "Aprobar el plan y
+liberar solo su validación inicial", y las referencias al Anexo G en las slides
+de gobierno y seguridad y de recursos. Montos en k USD (1k USD = 1.000 USD) salvo que se indique otra
 unidad. Este anexo no agrega cifras: cada número viene del anexo que se cita al
 final de cada resolución.
 
