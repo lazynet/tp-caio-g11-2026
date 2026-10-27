@@ -16,7 +16,7 @@ enlaces a los anexos y sus secciones vigentes; las demás vienen de las
 revisiones del board y docentes del 2026-10-13 al 2026-10-21, actualizadas al
 pedido vigente. Montos en k USD (miles de dólares).
 Coordina la defensa Lucho (`README.md`); quién responde cada objeción **todavía
-no se acordó**; hay una propuesta al final de [la storyline](storyline.md).
+no se acordó**; hay una propuesta en la [preparación del ensayo](speech-presentacion.md#preparación-del-ensayo-propuesta).
 
 ## Respuestas para abrir la conversación
 

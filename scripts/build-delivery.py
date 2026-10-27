@@ -156,12 +156,22 @@ def portable_target(root, origin, destination, annexes, public_ref):
 
 
 def annexes_html(root, checker, public_ref):
-    annexes = checker.annex_files(root)
-    parts = []
-    for path in annexes:
-        _, body = checker.split_frontmatter(
-            path.read_text(encoding="utf-8"), checker.ANNEX_TYPES
+    documents = [
+        (
+            path,
+            checker.split_frontmatter(
+                path.read_text(encoding="utf-8"), checker.ANNEX_TYPES
+            )[1],
         )
+        for path in checker.annex_files(root)
+    ]
+    return documents_html(root, documents, public_ref)
+
+
+def documents_html(root, documents, public_ref, *, link_resolver=portable_target):
+    annexes = [path for path, _ in documents]
+    parts = []
+    for path, body in documents:
         document = json.loads(
             subprocess.run(
                 ["pandoc", "--from=markdown", "--to=json"],
@@ -180,7 +190,7 @@ def annexes_html(root, checker, public_ref):
                         attributes[0] = annex_id(path, annexes, attributes[0])
                 if node.get("t") == "Link":
                     destination = node["c"][2][0]
-                    node["c"][2][0] = portable_target(
+                    node["c"][2][0] = link_resolver(
                         root, path, destination, annexes, public_ref
                     )
                     if node["c"][2][0] == "https://caio.invalid/slides":
@@ -379,12 +389,15 @@ def standalone_html(root, markup, css, html):
     )
 
 
-def render_annexes(root, markup, pdf, *, numbered=True):
+def render_annexes(root, markup, pdf, *, numbered=True, css_text=None):
+    style = CSS if css_text is None else css_text
     with tempfile.TemporaryDirectory() as temp:
         temp = Path(temp)
         css, html = temp / "annexes.css", temp / "annexes.html"
         css.write_text(
-            CSS if numbered else CSS + "\n@page { @bottom-center { content: none; } }",
+            style
+            if numbered
+            else style + "\n@page { @bottom-center { content: none; } }",
             encoding="utf-8",
         )
         standalone_html(root, markup, css, html)

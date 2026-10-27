@@ -383,25 +383,25 @@
           "path": "plan/annexes/07-resoluciones.md",
           "line": 245,
           "text": "- **R-11 · Controles: clasificación y calendario.** Adopta la clasificación de\n  controles exigibles y opcionales del Anexo C: los exigibles rigen en las dos\n  ramas, las opciones se liberan solo por la señal del gate que las lee y cada\n  control nombra su motivo y su alternativa de menor costo. Toda superficie que se\n  use en M1-M3 prueba sus controles en M1-M3, dentro del techo de 59; si su prueba\n  no cabe en las horas validadas, esa superficie no se usa hasta M4-M6. Toda\n  afirmación comercial sobre seguridad o IA la valida el Responsable de seguridad\n  antes de salir.",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
+          "sha256": "d6d38485835b18c713f91590c89e65dcfb22a4d1c1176c80377505c2e205f965"
         },
         "authority": {
           "path": "plan/annexes/07-resoluciones.md",
           "line": 253,
           "text": "  *Autoridad:* Directorio (regla); el Responsable de seguridad decide por superficie\n  si está probada y el CFO verifica que cabe; pasar un control de exigible a opción\n  lo decide el Directorio en un gate, a propuesta del Responsable de seguridad con\n  el AI Council. *Hito:* hoy; dictamen de Legal externo en M1; matriz del mes 3.",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
+          "sha256": "d6d38485835b18c713f91590c89e65dcfb22a4d1c1176c80377505c2e205f965"
         },
         "decision": {
           "path": "plan/annexes/07-resoluciones.md",
           "line": 256,
           "text": "  el AI Council. *Hito:* hoy; dictamen de Legal externo en M1; matriz del mes 3.",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
+          "sha256": "d6d38485835b18c713f91590c89e65dcfb22a4d1c1176c80377505c2e205f965"
         },
         "consequence": {
           "path": "plan/annexes/07-resoluciones.md",
           "line": 257,
           "text": "  *Si no se cumple:* sin prueba no hay uso; si el dictamen o la matriz agregan un\n  requisito, el control sube a exigible en el gate siguiente con su costo\n  verificado por el CFO; una afirmación no respaldada se retira y se escala al\n  AI Council. *Tipo:* reversible.",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
+          "sha256": "d6d38485835b18c713f91590c89e65dcfb22a4d1c1176c80377505c2e205f965"
         }
       }
     },
@@ -464,41 +464,6 @@
       }
     },
     {
-      "path": "plan/slides.md",
-      "line": 109,
-      "text": "| IA en pagos | Nueva función de producto | Habilitación externa y seguridad pendientes | Postergar |",
-      "sha256": "a038b0c792ad14a626fd282f7201a21e52b0a0d4edb2ee348941d7eff035fe25",
-      "category": "future_decision",
-      "blocking": false,
-      "reason": "La matriz posterga una alternativa de producto fuera del alcance autorizado. Sus habilitaciones no se declaran realizadas ni son un requisito incumplido para ejecutar el mínimo; reactivarla exige decisión y estimación común del Directorio, con agendas y repositorios habilitados.",
-      "basis": {
-        "scope": {
-          "path": "plan/annexes/07-resoluciones.md",
-          "line": 559,
-          "text": "- **R-28 · Alcances no pedidos.** El paquete completo (33+6 / 72+7), su preparación,\n  la referencia anual del Anexo C y las alternativas de menor alcance ampliadas\n  quedan como antecedente: no se autorizan ni se suman al pedido. Los costos\n  publicados de alcances distintos (47 / 161 / ≈199 / 394 / ≈400 / 471) son\n  referencia, no comparación.",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
-        },
-        "authority": {
-          "path": "plan/annexes/07-resoluciones.md",
-          "line": 564,
-          "text": "  *Autoridad:* Directorio; si un gate propone ampliar o usar un renglón anual, el\n  CFO presenta antes una estimación común desde ese gate (gasto futuro evitable,\n  sin costos hundidos) y decide el Directorio. *Hito:* el gate que proponga ampliar.",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
-        },
-        "decision": {
-          "path": "plan/annexes/07-resoluciones.md",
-          "line": 566,
-          "text": "  sin costos hundidos) y decide el Directorio. *Hito:* el gate que proponga ampliar.",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
-        },
-        "consequence": {
-          "path": "plan/annexes/07-resoluciones.md",
-          "line": 567,
-          "text": "  *Si no se cumple:* sin estimación común no hay decisión de ampliación; una\n  alternativa reactivada no se ejecuta sin champions y agendas confirmados por\n  Personas y repositorios habilitados por el Responsable de seguridad.",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
-        }
-      }
-    },
-    {
       "path": "plan/annexes/02-arquitectura.md",
       "line": 367,
       "text": "**Elegibilidad pendiente.** Nico propuso al equipo del Cliente A como núcleo de",
@@ -517,19 +482,19 @@
           "path": "plan/annexes/07-resoluciones.md",
           "line": 197,
           "text": "  *Autoridad:* Directorio; Producto verifica la habilitación. *Hito:* hoy; la\n  habilitación, en el mes 6 (o el 9 si se difiere); reabrir el alcance, solo en el",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
+          "sha256": "d6d38485835b18c713f91590c89e65dcfb22a4d1c1176c80377505c2e205f965"
         },
         "decision": {
           "path": "plan/annexes/07-resoluciones.md",
           "line": 197,
           "text": "  *Autoridad:* Directorio; Producto verifica la habilitación. *Hito:* hoy; la\n  habilitación, en el mes 6 (o el 9 si se difiere); reabrir el alcance, solo en el\n  cierre del mes 12. *Si no se cumple:* un uso que no encaje no se habilita y, si ya",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
+          "sha256": "d6d38485835b18c713f91590c89e65dcfb22a4d1c1176c80377505c2e205f965"
         },
         "consequence": {
           "path": "plan/annexes/07-resoluciones.md",
           "line": 199,
           "text": "  cierre del mes 12. *Si no se cumple:* un uso que no encaje no se habilita y, si ya\n  corre, rige R-09; sin habilitación acreditada, el piloto usa otro producto o se\n  difiere. *Tipo:* reversible hasta firmar un compromiso con un cliente.",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
+          "sha256": "d6d38485835b18c713f91590c89e65dcfb22a4d1c1176c80377505c2e205f965"
         }
       }
     },
@@ -552,7 +517,7 @@
           "path": "plan/annexes/07-resoluciones.md",
           "line": 354,
           "text": "- **R-16 · Evidencia de plataforma para el mes 3.** La comparación configurar /\n  comprar / ensamblar se produce en M1-M3 y se lee en el mes 3: elige alternativa\n  el Responsable de Tecnología, habilita datos el Responsable de seguridad según la\n  matriz contractual, acepta o restringe el residual la autoridad de R-10 y libera\n  fondos el Directorio. El relevamiento técnico de capacidades (gateway,",
-          "sha256": "00c6e410a18f82bd294c348071493a3f0f01a4db1b2a77e92f0f4c1408e87243"
+          "sha256": "d6d38485835b18c713f91590c89e65dcfb22a4d1c1176c80377505c2e205f965"
         },
         "decision": {
           "path": "plan/annexes/02-arquitectura.md",

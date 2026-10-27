@@ -31,9 +31,9 @@ declaran fuentes verificadas y aprueban cada cambio a `main`.
 
 ## Desarrollo y fuentes
 
-Slide que sustenta: el cierre,
-[Aprobar el plan y sus resoluciones](../slides.md), en la línea "Plan elaborado
-con asistentes de IA por rol". Las reglas completas del repo están en
+Slide que sustenta: la portada del [deck](../slides.md), desde el enlace
+"Anexo H — Cómo se armó el plan". Describe el método de producción y los
+controles con que se elaboró el plan. Las reglas completas del repo están en
 [AGENTS.md](https://github.com/lazynet/tp-caio-g11-2026/blob/main/AGENTS.md) y
 el flujo de trabajo del equipo, en el
 [README](https://github.com/lazynet/tp-caio-g11-2026/blob/main/README.md).

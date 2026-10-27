@@ -5,6 +5,9 @@ title: "Propuesta narrativa para la defensa"
 generated: { by: codex/gpt-6.1-sol, at: 2026-10-21 }
 ---
 
+> Antecedente de la propuesta inicial. Desde el 27/10/2026, por instrucción de Martín, la base adoptada es la V4 de Lucho: [deck canónico](../plan/slides.md), [storyline](storyline.md) y [speech](speech-presentacion.md). Este piloto conserva el registro anterior; no describe la versión vigente.
+
+
 # Propuesta narrativa para la defensa
 
 Propuesta de Luciano De Corso, responsable de preparación de la defensa, preparada con asistencia del rol CAIO. Seguimiento: [#27](https://github.com/lazynet/tp-caio-g11-2026/issues/27) y [#21](https://github.com/lazynet/tp-caio-g11-2026/issues/21). Es una alternativa para revisión del equipo, no un reemplazo aprobado. La única fuente del deck es `plan/slides.md`; este documento explica su argumento.
