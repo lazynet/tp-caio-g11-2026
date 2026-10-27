@@ -12,13 +12,13 @@ out="$root/out"
 renderer="${1:-all}"
 mode=draft
 if [[ $# -gt 2 || ( $# -eq 2 && ( "$renderer" != entrega || "$2" != --delivery ) ) ]]; then
-  echo "Uso: $0 [all|entrega|marp|pandoc|html] [--delivery solo con entrega]" >&2
+  echo "Uso: $0 [all|entrega|defensa|marp|pandoc|html] [--delivery solo con entrega]" >&2
   exit 2
 fi
 if [[ $# -eq 2 ]]; then mode=delivery; fi
 case "$renderer" in
-  all|entrega|marp|pandoc|html) ;;
-  *) echo "Renderer inválido: $renderer. Usá all, entrega, marp, pandoc o html." >&2; exit 2 ;;
+  all|entrega|defensa|marp|pandoc|html) ;;
+  *) echo "Renderer inválido: $renderer. Usá all, entrega, defensa, marp, pandoc o html." >&2; exit 2 ;;
 esac
 # CAIO_PYTHON elige el intérprete: en Windows suele ser python, no python3.
 "${CAIO_PYTHON:-python3}" "$root/scripts/plan-check.py" --mode "$mode"
@@ -51,6 +51,10 @@ fi
 if [[ "$renderer" == all || "$renderer" == pandoc ]]; then
   # El pptx de pandoc deja el texto editable; el de Marp exporta las slides como imagen.
   pandoc "$src" -o "$out/deck-pandoc.pptx"
+fi
+
+if [[ "$renderer" == all || "$renderer" == entrega || "$renderer" == defensa ]]; then
+  "${CAIO_PYTHON:-python3}" "$root/scripts/build-defense.py"
 fi
 
 ls -1 "$out"

@@ -370,6 +370,7 @@ Separa por NUL, así que funciona aunque el nombre tenga espacios o saltos de l�
 ./scripts/build-deck.sh          # todos los formatos y el PDF de borrador
 ./scripts/build-deck.sh entrega  # PDF de borrador (-borrador.pdf): deck + anexos
 ./scripts/build-deck.sh entrega --delivery  # el PDF final; exige ready y fuentes verificadas
+./scripts/build-deck.sh defensa  # solo la guía de defensa, en un PDF aparte
 ./scripts/build-deck.sh marp     # solo Marp: html, pdf, pptx
 ./scripts/build-deck.sh pandoc   # solo pandoc: pptx
 ./scripts/build-deck.sh html     # solo el html de Marp, lo más rápido
@@ -387,6 +388,7 @@ duplicadas.
 |---|---|
 | `Grupo11-AcmeLabs-PlanMaestroCAIO.pdf` | deck, índice y anexos en un PDF; es el que se entrega y solo lo escribe `entrega --delivery`; revisá el render |
 | `Grupo11-AcmeLabs-PlanMaestroCAIO-borrador.pdf` | el mismo PDF en modo borrador (`all` y `entrega` sin `--delivery`); nunca pisa el final |
+| `Grupo11-AcmeLabs-Defensa.pdf` | guion, speech, preparación del ensayo y objeciones; apoyo separado para exponer |
 | `deck-marp.html` / `.pdf` | revisar y presentar; el mejor diseño |
 | `deck-marp.pptx` | entregar si piden pptx (las slides van como imagen) |
 | `deck-pandoc.pptx` | pptx con texto editable, diseño básico |
@@ -420,6 +422,20 @@ PDF, también hacia sus anclas. Los demás archivos del repo apuntan a GitHub, c
 commit publicado: `CAIO_PUBLIC_REF=<sha> ./scripts/build-deck.sh entrega
 --delivery`. El build rechaza links a `private/`, destinos internos inexistentes
 y cualquier URI `file://` que sobreviva en el PDF final.
+
+### La guía de defensa
+
+`all`, `entrega` y `entrega --delivery` generan también
+`out/Grupo11-AcmeLabs-Defensa.pdf`. Para regenerar solo esa guía, usá
+`./scripts/build-deck.sh defensa`. Requiere las mismas herramientas que los
+anexos: Pandoc, Chrome/Edge/Chromium y pypdf.
+
+La guía reúne `defense/storyline.md`, `defense/speech-presentacion.md` y
+`defense/objeciones.md`, con índice navegable y marcadores para guion, speech,
+ensayo y objeciones. Los links entre esos documentos quedan dentro del PDF;
+las otras fuentes apuntan al repo usando `CAIO_PUBLIC_REF`, igual que la entrega.
+El PDF de entrega conserva únicamente las diez slides, el índice y los anexos A–H.
+La guía no acredita acuerdo de presentadores ni un ensayo realizado: se sigue en #21.
 
 ## Validar
 
