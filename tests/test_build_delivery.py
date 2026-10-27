@@ -121,7 +121,8 @@ class BuildDeliveryTests(unittest.TestCase):
             (root / "out").mkdir()
             (root / "plan/slides.md").parent.mkdir(parents=True, exist_ok=True)
             (root / "plan/slides.md").write_text(
-                "---\nowner: caio\nstatus: draft\nmarp: true\n---\n# Deck\n", encoding="utf-8"
+                "---\nowner: caio\nstatus: draft\nmarp: true\n---\n# Deck\n",
+                encoding="utf-8",
             )
             folder = root / "plan/annexes"
             folder.mkdir(parents=True)
@@ -175,6 +176,25 @@ class BuildDeliveryTests(unittest.TestCase):
             self.assertIn('<a class="annex-start" href="#annex-0"', markup)
             self.assertIn("https://caio.invalid/slides#page-3", markup)
             self.assertIn("blob/v1/context/source.md#fuente", markup)
+
+    def test_footnotes_stay_inside_their_annex(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            folder = root / "plan/annexes"
+            folder.mkdir(parents=True)
+            for name, note in (("a.md", "Nota de A"), ("b.md", "Nota de B")):
+                (folder / name).write_text(
+                    "---\nowner: finance\nstatus: draft\ntitle: T\n---\n"
+                    f"# Anexo {name}\n\nTexto[^note].\n\n[^note]: {note}.\n",
+                    encoding="utf-8",
+                )
+            markup = builder.annexes_html(root, builder.load_plan_check(), "v1")
+            css, html = root / "a.css", root / "a.html"
+            css.write_text("", encoding="utf-8")
+            builder.standalone_html(root, markup, css, html)
+            text = html.read_text(encoding="utf-8")
+            self.assertLess(text.index("Nota de A"), text.index("Anexo b.md"))
+            self.assertLess(text.index("Anexo b.md"), text.index("Nota de B"))
 
     def test_portable_targets_and_private_rejection(self):
         root = Path("/example/repo")

@@ -27,6 +27,8 @@ caso en `README.md`; no des por resueltos los acuerdos que sigan pendientes.
   diagnóstico integrado y sustento del roadmap.
 - `plan/annexes/07-resoluciones.md`: registro único de las resoluciones del
   Directorio, con autoridad, hito y consecuencia; rige en autoridad y condiciones.
+- `plan/annexes/08-como-se-armo.md`: el método con que se armó el plan (agentes,
+  fichas OKF, chequeos), sin historia de iteraciones ni autoría de decisiones.
 
 ## Entradas
 

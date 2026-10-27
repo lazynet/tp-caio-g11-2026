@@ -758,6 +758,21 @@ class PlanCheckTests(unittest.TestCase):
         self.annex(body="Ver el reporte de esta ronda")
         self.assertTrue(any("texto de proceso" in e for e in self.result()["errors"]))
 
+    def test_method_annex_may_name_its_method_but_not_process(self):
+        method = "Las fichas OKF las revisa `board`; Codex usa los mismos roles"
+        self.write()
+        self.annex(name=checker.METHOD_ANNEX.name, body=method, owner="caio")
+        self.assertEqual(self.result()["errors"], [])
+        self.annex(name="finance.md", body=method)
+        self.assertTrue(any("texto de proceso" in e for e in self.result()["errors"]))
+        (self.root / "plan/annexes/finance.md").unlink()
+        for phrase in ("Lo decidió lazynet", "Ver esta ronda", "Para el peer review"):
+            with self.subTest(phrase=phrase):
+                self.annex(name=checker.METHOD_ANNEX.name, body=phrase, owner="caio")
+                self.assertTrue(
+                    any("texto de proceso" in e for e in self.result()["errors"])
+                )
+
     def test_business_text_is_not_process_text(self):
         self.concept("material/unidades/m1u1-x.md")
         self.write(

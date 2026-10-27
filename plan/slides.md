@@ -350,5 +350,9 @@ Sin aprobación de plataforma ni construcción de producto. Todo exceso de tramo
 <div style="margin-top:auto;position:relative">
 <p class="eyebrow">Equipo · Grupo 11</p>
 <p style="font-size:20px;max-width:1100px">Gabriela Temporale · Martin Vago · Pablo Ces · Eduardo Chaparro · Rafael Cioffi · Nicolás Tanos · Luciano De Corso · Maximiliano Zerr Morinigo</p>
-<p class="fine">Plan elaborado con asistentes de IA por rol, revisión adversarial simulada y chequeos automáticos.</p>
+<div class="fine">
+
+Plan elaborado con asistentes de IA por rol, revisión adversarial simulada y chequeos automáticos: [Anexo H](annexes/08-como-se-armo.md).
+
+</div>
 </div>
