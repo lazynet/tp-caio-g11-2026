@@ -1,0 +1,267 @@
+/* @theme acme */
+/* Tema del deck, portado del diseño de Claude Design (2026-10-14). Caprasimo y
+   Figtree son de Google Fonts (OFL); sin red, el deck cae a serif y sans. */
+
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@400;600;700&display=swap");
+@import "default";
+
+:root {
+  --cream: #f5ead8;
+  --sand: #eadbc6;
+  --rose: #fbe3d6;
+  --green-dark: #3d472b;
+  --green: #556640;
+  --green-soft: #8fa070;
+  --mint: #e1ecc9;
+  --orange: #c8703a;
+  --rust: #9a4a1c;
+  --ink: #1f1d1a;
+  --muted: #6b6359;
+}
+
+section {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  padding: 44px 64px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+section::after {
+  color: var(--muted);
+  font-size: 13px;
+  right: 28px;
+  bottom: 18px;
+}
+
+h1 {
+  font-family: "Caprasimo", Georgia, serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.12;
+  color: var(--ink);
+  margin: 2px 0 18px;
+  border: 0;
+  padding: 0;
+}
+
+p { margin: 0 0 10px; }
+strong { font-weight: 700; }
+a { color: var(--green-dark); font-weight: 700; text-decoration: none; }
+
+.eyebrow {
+  color: var(--rust);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.grid { display: grid; gap: 16px; }
+.g2 { grid-template-columns: 1fr 1fr; }
+.g3 { grid-template-columns: 1fr 1fr 1fr; }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.main-side { grid-template-columns: 1.85fr 1fr; align-items: start; }
+
+.card {
+  background: var(--sand);
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 17px;
+}
+.card p { margin: 0 0 6px; }
+.card.dark { background: var(--green); color: #f3efe4; }
+.card.dark a { color: #fff; }
+.card.dashed { background: transparent; border: 2px dashed #c9b9a1; color: var(--muted); }
+.card.rose { background: var(--rose); }
+.card h3 {
+  font-family: "Caprasimo", Georgia, serif;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 4px 0 6px;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 3px 10px;
+  background: var(--rose);
+  color: var(--rust);
+}
+.card.dark .tag { background: var(--mint); color: var(--green-dark); }
+.card.dashed .tag { background: var(--sand); color: var(--muted); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.chips span {
+  background: var(--sand);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 15px;
+}
+.chips span.hot { background: var(--rose); color: var(--rust); font-weight: 600; }
+.chips.outline span { background: transparent; border: 1.5px solid var(--orange); }
+
+.kpi .num {
+  font-family: "Caprasimo", Georgia, serif;
+  font-size: 40px;
+  line-height: 1.05;
+  color: var(--rust);
+}
+.kpi .lbl { font-size: 16px; color: var(--ink); }
+.kpi.small .num { font-size: 30px; }
+
+.dots { letter-spacing: 3px; font-size: 20px; white-space: nowrap; }
+.dots .on { color: var(--orange); }
+.dots .half { color: #f5b893; }
+.dots .off { color: #ddd3c4; }
+
+.decision {
+  margin-top: auto;
+  background: var(--mint);
+  border-radius: 14px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 17px;
+}
+.decision > p { margin: 0; }
+.decision .pill, .decision-head .pill {
+  font-family: "Caprasimo", Georgia, serif;
+  background: var(--green);
+  color: #fff;
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.decision .body { flex: 1; }
+.decision .ref { white-space: nowrap; font-size: 15px; }
+.decision.block { display: block; }
+.decision-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.decision ol { margin: 0; padding-left: 20px; }
+.decision li { margin-bottom: 3px; }
+.decision.block .grid { gap: 6px 22px; font-size: 15.5px; }
+
+ul { margin: 0 0 10px; padding-left: 0; list-style: none; }
+ul li { position: relative; padding-left: 20px; margin-bottom: 6px; }
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 5px 5px;
+  font-size: 15px;
+  width: 100%;
+  margin: 0 0 8px;
+}
+th, td { border: 0; padding: 6px 10px; text-align: left; vertical-align: top; }
+th {
+  background: var(--green-soft);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+}
+td { background: var(--sand); border-radius: 8px; }
+td:first-child, th:first-child:empty { background: transparent; font-weight: 700; }
+tr:nth-child(even) td { background: var(--sand); }
+table tr { background: transparent !important; }
+
+.plain table { border-spacing: 0 4px; }
+.plain th { background: transparent; color: var(--muted); border-radius: 0; text-transform: uppercase; font-size: 13px; }
+.plain td { border-radius: 0; }
+.plain td:first-child { background: var(--sand); border-radius: 8px 0 0 8px; }
+.plain td:last-child { border-radius: 0 8px 8px 0; }
+.plain td:first-child, .plain td { background: var(--sand); }
+
+.note { font-size: 14.5px; color: var(--muted); margin: 0 0 8px; }
+
+/* Portada y cierre */
+section.cover, section.closing {
+  background: var(--green-dark);
+  color: #f3efe4;
+  overflow: hidden;
+}
+section.cover h1, section.closing h1 { color: #fbf6ec; }
+section.cover::after, section.closing::after { color: #a9b18f; }
+section.cover::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -110px;
+  top: -150px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: inset 0 0 0 0 transparent;
+}
+section.cover .sun {
+  position: absolute;
+  right: 120px;
+  top: 150px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+section.cover h1 { font-size: 64px; max-width: 760px; margin-top: 18px; position: relative; }
+section.cover .chip {
+  display: inline-block;
+  background: var(--green);
+  color: #e9e4d6;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+section.cover .sub { font-size: 21px; max-width: 760px; color: #e9e4d6; }
+section.cover .eyebrow, section.closing .eyebrow { color: #f0a46f; margin-top: 14px; }
+section.cover .card { background: var(--green); color: #f3efe4; }
+section.cover .kpi .num { color: #fff; font-size: 30px; }
+section.cover .kpi .lbl { color: #dcd8c9; font-size: 14.5px; }
+section.cover .fine, section.closing .fine { font-size: 14px; color: #b9bda5; }
+section.closing::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -140px;
+  bottom: -190px;
+  border-radius: 50%;
+  background: var(--green);
+}
+section.closing h1 {
+  font-size: 30px;
+  line-height: 1.28;
+  max-width: 1080px;
+  margin-top: 8px;
+}
+section.cover a, section.closing a { color: #f0a46f; }
+
+/* El tema default pone bordes y fondos en las tablas: se pisan con más especificidad. */
+section table, section table th, section table td, section table tr { border: 0 !important; }
+section table tr { background: transparent !important; }
+section table th { background: var(--green-soft); }
+section table td { background: var(--sand); }
+section table td:first-child { background: transparent; }
+section .plain table th { background: transparent; color: var(--muted); }
+section .plain table td, section .plain table td:first-child { background: var(--sand); padding: 9px 12px; }
+section .plain table { font-size: 16px; }
+section table thead tr th:first-child:empty { background: transparent; }
+section .dots { font-size: 26px; letter-spacing: 1px; vertical-align: -3px; }
+section .decision .ref p, section .decision-head .ref p { margin: 0; }
