@@ -78,10 +78,51 @@ class BuildDeliveryTests(unittest.TestCase):
         self.assertIn("@bottom-center", builder.CSS)
         self.assertIn('content: "Anexos · página " counter(page)', builder.CSS)
 
+    def test_executive_summary_prints_before_linked_detail(self):
+        from pypdf import PdfReader
+
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            folder = root / "plan/annexes"
+            folder.mkdir(parents=True)
+            (folder / "01-a.md").write_text(
+                "---\nowner: finance\nstatus: draft\ntitle: Anexo A\n---\n"
+                "# Anexo A\n\n::: {.annex-summary}\n\n## Síntesis ejecutiva\n\n"
+                "Resumen visible para decidir.\n\n"
+                "| Decisión | Condición |\n|---|---|\n| Continuar | Evidencia |\n\n"
+                "[Ver respaldo](#desarrollo-y-fuentes).\n\n:::\n\n"
+                "## Desarrollo y fuentes\n\nDetalle que amplía la decisión.\n",
+                encoding="utf-8",
+            )
+            markup = builder.annexes_html(root, builder.load_plan_check(), "main")
+            pdf = root / "annex.pdf"
+            builder.render_annexes(root, markup, pdf)
+            document = PdfReader(pdf)
+            self.assertEqual(len(document.pages), 2)
+            self.assertIn("Resumen visible", document.pages[0].extract_text())
+            self.assertNotIn("Detalle que amplía", document.pages[0].extract_text())
+            self.assertIn("Detalle que amplía", document.pages[1].extract_text())
+            destinations = {
+                name.lstrip("/"): target
+                for name, target in document.named_destinations.items()
+            }
+            target = destinations["annex-0-desarrollo-y-fuentes"]
+            self.assertEqual(document.get_destination_page_number(target), 1)
+
     def test_build_cli_rejects_private_source_before_rendering(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
-            (root / "deck.pdf").touch()
+            from pypdf import PdfWriter
+
+            deck = PdfWriter()
+            deck.add_blank_page(width=100, height=100)
+            with (root / "deck.pdf").open("wb") as handle:
+                deck.write(handle)
+            (root / "out").mkdir()
+            (root / "plan/slides.md").parent.mkdir(parents=True, exist_ok=True)
+            (root / "plan/slides.md").write_text(
+                "---\nowner: caio\nstatus: draft\nmarp: true\n---\n# Deck\n", encoding="utf-8"
+            )
             folder = root / "plan/annexes"
             folder.mkdir(parents=True)
             (folder / "a.md").write_text(
@@ -102,8 +143,9 @@ class BuildDeliveryTests(unittest.TestCase):
                 text=True,
             )
             self.assertNotEqual(result.returncode, 0)
+            self.assertFalse((root / builder.DRAFT_OUTPUT).exists())
+            self.assertFalse((root / builder.FINAL_OUTPUT).exists())
             self.assertIn("Enlace a private/", result.stderr)
-            self.assertFalse((root / "out/entrega.pdf").exists())
 
     def test_annex_html_preserves_anchors_references_and_unique_footnotes(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -202,6 +244,28 @@ class BuildDeliveryTests(unittest.TestCase):
         self.assertEqual(
             annotations[3]["/A"]["/D"][0], writer.pages[0].indirect_reference
         )
+
+    def test_final_pdf_has_title_and_author_metadata(self):
+        from pypdf import PdfReader, PdfWriter
+
+        writer = PdfWriter()
+        writer.add_blank_page(width=100, height=100)
+        builder.set_pdf_metadata(writer)
+        buffer = BytesIO()
+        writer.write(buffer)
+        buffer.seek(0)
+        meta = PdfReader(buffer).metadata
+        self.assertEqual(meta.title, "Grupo 11 · Acme Labs — Plan Maestro CAIO")
+        self.assertEqual(meta.author, "Grupo 11 · Diplomatura CAIO UTN BA")
+
+    def test_default_output_is_draft_and_never_the_final_name(self):
+        self.assertEqual(
+            builder.FINAL_OUTPUT.name, "Grupo11-AcmeLabs-PlanMaestroCAIO.pdf"
+        )
+        self.assertEqual(
+            builder.DRAFT_OUTPUT.name, "Grupo11-AcmeLabs-PlanMaestroCAIO-borrador.pdf"
+        )
+        self.assertNotEqual(builder.DRAFT_OUTPUT, builder.FINAL_OUTPUT)
 
     def test_size_limit(self):
         self.assertIsNone(builder.size_error(builder.MAX_BYTES - 1))

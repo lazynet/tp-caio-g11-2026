@@ -5,8 +5,8 @@ description: "Composición propuesta de alternativas de gobierno y formación, p
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó la composición de las tres alternativas como comparación separada del paquete mínimo vigente: medición anual de 0,2 FTE y telemetría de 500-1.500 USD por trimestre; formación de 15-20 personas por 12 h; champions del piloto por 384 h anuales; y prueba con 40-80 h de diseño, 64 h de champions y 16-24 h de lectura. Incluye no presumir equivalencia de controles o resultados, revisar y costear legal antes de habilitar el piloto, conciliar capacidad y solapes antes de extender sin costo adicional, condicionar inicio en semana 5 o 9 a la base congelada y distinguir la rama de 199.000 USD del mínimo vigente. Productividad como hipótesis y prueba inicial de aprendizaje. Confirmado en esta conversación; no acredita disponibilidad, ejecución ni aprobación empresarial."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Alternativas de comparación separadas del mínimo vigente, sus horas y costos supuestos y protocolo común, sin equivalencia demostrada de resultados. R-28 delega en Personas la confirmación de champions y agendas y en Seguridad la habilitación de repositorios antes de reactivarlas; sin esas condiciones no se ejecutan. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, alternativas]
 sources:
   - id: finanzas
@@ -33,6 +33,9 @@ sources:
   - id: datos
     resource: "context/supuestos/disponibilidad-de-datos.md"
     title: "Disponibilidad de datos y habilitación de repositorios como supuestos"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -80,6 +83,12 @@ El piloto acotado trabaja solo sobre repositorios que la matriz habilite: sin da
 clientes ([disponibilidad de datos](/supuestos/disponibilidad-de-datos.md)).
 Esa habilitación y los controles deben comprobarse antes de usarlo.[^datos][^gobierno]
 
+Las alternativas ampliadas no se piden: quedan como antecedente. Si una se
+reactivara, decide el Directorio con una estimación común del CFO; antes de
+iniciarla, Personas confirma champions y agendas y el Responsable de seguridad
+habilita repositorios según la matriz. Sin esas dos confirmaciones, no se
+ejecuta (R-28).[^resoluciones]
+
 # Por qué es razonable
 
 - Se propone reutilizar el agente de código informado en uso en Tecnología
@@ -115,9 +124,10 @@ Esa habilitación y los controles deben comprobarse antes de usarlo.[^datos][^go
 
 [^finanzas]: Anexo E, composición de las tres opciones originales, prueba chica y secuencia condicionada a la base; rama sin señal de aproximadamente 199.000 USD, separada del mínimo vigente y sin equivalencia demostrada de alcances.
 [^gobierno]: Anexo C, controles aplicables y compensatorios por superficie; su necesidad y costo deben conciliarse antes de habilitar usos o extender la prueba.
-[^personas]: Anexo D, formación completa y champions de las alternativas de mayor alcance, con disponibilidad pendiente de confirmar.
+[^personas]: Anexo D, formación completa y champions de las alternativas de mayor alcance; si una alternativa se reactivara, Personas confirma champions y agendas antes de iniciarla y, sin esa confirmación, no se ejecuta (R-28).
 [^costo-rol]: Costo cargado por rol, rangos supuestos y convención de 160 h mensuales para costear.
 [^cohorte]: Cohorte supuesta de 15-20 desarrolladores de equipos propios; el punto medio 17,5 es una convención de cálculo, no una cantidad observada.
 [^ganancia]: Ganancia de productividad como hipótesis no medida, sin beneficio atribuible demostrado por el piloto.
 [^uso-ia]: Uso informado de herramientas actuales, con las cautelas de población y capacidad de la ficha.
-[^datos]: Disponibilidad de datos y repositorios como supuesto de habilitación, pendiente de verificar restricciones y controles.
+[^datos]: Disponibilidad de datos y repositorios como supuesto de habilitación; el Responsable de seguridad habilita los repositorios según la matriz de restricciones antes de iniciar y, sin habilitación, no se usan (R-28).
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.

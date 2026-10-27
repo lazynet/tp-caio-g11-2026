@@ -32,6 +32,7 @@ class HarnessTests(unittest.TestCase):
             ("04-personas-cultura", "people"),
             ("05-business-case", "finance"),
             ("06-roadmap-riesgo", "caio"),
+            ("07-resoluciones", "caio"),
         ):
             self.write(f"plan/annexes/{name}.md", f"---\nowner: {owner}\n---\n")
         for name in ("plan/slides.md", "defense/storyline.md", "defense/objeciones.md"):

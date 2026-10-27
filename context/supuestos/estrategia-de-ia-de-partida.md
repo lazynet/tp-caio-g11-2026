@@ -5,8 +5,8 @@ description: "El escenario del TP parte sin una estrategia de IA formal aprobada
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Supuesto de diseño del escenario confirmado por Martín: partir sin una estrategia de IA formal aprobada, con iniciativas y objetivos propuestos y nivel 2 provisional sujeto a validación. Se conserva el tipo Supuesto, la condición que obliga a revisar brecha y puntaje al incorporar una estrategia previa aprobada y la revisión humana pendiente de la ficha del método de diagnóstico de la cursada. Incluye actualizar la cautela sobre los antecedentes de OKR e IA en producto ya verificados. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Escenario del TP sin estrategia de IA formal previa aprobada, con iniciativas y objetivos propuestos y nivel 2 provisional del diagnóstico. Se conserva el tipo Supuesto; incorporar una estrategia previa aprobada obliga a revisar la brecha y el puntaje. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, estrategia, diagnostico]
 sources:
   - id: escenario-tp-2026-10-20
@@ -53,9 +53,9 @@ responsable, y contrastar sus objetivos con los criterios del diagnóstico.
 - Es una elección del escenario del TP; no se presenta como evidencia de que
   una organización real carezca de estrategia.
 - La definición del escenario no valida el puntaje ni las fuentes del caso.
-- Las fichas de antecedentes de OKR e IA en producto ya tienen revisión humana
-  declarada; la ficha del método de diagnóstico de la cursada sigue pendiente
-  de revisión humana.
+- Las fichas de antecedentes de OKR e IA en producto y la del método de
+  diagnóstico de la cursada tienen revisión humana declarada (método: M1U1 corta
+  pp. 6-10 y extendida pp. 8-10).
 
 [^escenario-tp-2026-10-20]: Definición del escenario del TP informada por Martín el 20/10/2026: partir sin estrategia de IA previa formal aprobada.
-[^diagnostico-madurez]: `material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md`, escala y criterios de Estrategia y liderazgo; material de la cursada pendiente de revisión humana.
+[^diagnostico-madurez]: `material/conceptos/m1u1-diagnostico-madurez-5-dimensiones.md`, escala y criterios de Estrategia y liderazgo; cotejada contra el PDF de la cursada, con revisión humana declarada el 2026-10-20.

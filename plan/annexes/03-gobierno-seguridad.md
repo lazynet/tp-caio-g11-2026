@@ -1,10 +1,50 @@
 ---
 owner: governance
-status: draft
+status: ready
 title: "Anexo C — Gobierno, seguridad y compliance"
 ---
 
 # Anexo C — Gobierno, seguridad y compliance
+
+::: {.annex-summary}
+## Síntesis ejecutiva
+
+**Qué habilita:** entregar IA con fuentes, permisos y controles probados. La política informada como aprobada no acredita implementación.
+
+### Autoridad
+
+| Función | Responsable y límite |
+|---|---|
+| Producir | Ingeniería prueba controles; Tecnología produce indicadores; CAIO arma el paquete del gate. |
+| Verificar | Seguridad verifica controles; un senior independiente, indicadores; CFO, cifras, caja y reservas. Nadie verifica lo que produjo. |
+| Dictaminar y aceptar riesgo | Council dictamina; el residual lo acepta su autoridad según la matriz. Productores y verificadores se abstienen. |
+| Firmar fondos | Directorio: primera liberación, ampliaciones y excesos de techo. CEO: segunda liberación y gates dentro de lo delegado. |
+| Suspender | Seguridad puede contener de inmediato; Tecnología la suple solo para contener. El Council también puede frenar un frente. |
+
+Titulares y suplentes, en acta habilitante. [Derechos y reanudación](#derechos-de-decisión-una-sola-a-por-decisión).
+
+### Semáforo de usos
+
+| Estado | Alcance |
+|---|---|
+| **Verde · permitido** | Asistencia con datos Públicos o Internos y herramienta aprobada: registro y controles aplicables probados. |
+| **Ámbar · condicionado** | Confidenciales, agentes internos y producto: aprobación según riesgo y autonomía. Cliente: matriz verificada, entorno del cliente y permiso escrito; código existente sin NDA, transitorio R-09. |
+| **Rojo · prohibido** | Crédito o scoring sobre personas, categoría especial, «autónomo dentro de límites» en producción y salida externa de código o datos de cliente fuera de las excepciones. |
+
+[Alcances y excepciones completos](#intake-y-clasificación-de-riesgo).
+
+### Probar → habilitar → vigilar
+
+| Paso | Condición |
+|---|---|
+| Probar | Evidencia por superficie, verificación independiente y residual aceptado; sin prueba, se excluye ese uso. |
+| Habilitar | Cada dueño aprueba su decisión de uso o producto; liberar fondos es otra decisión. |
+| Vigilar | Revisión mensual del Council. Incidente, control incumplido o residual no aceptado cortan el uso afectado; reanudar exige prueba corregida y aceptación. |
+
+**Costo en velocidad:** probar demora ese alcance; sin evidencia, se excluye. Compensatorios para el mínimo; plataforma sujeta a señal. [Riesgos y cortes](#riesgos-y-mitigación).
+:::
+
+## Desarrollo y fuentes
 
 Slides que sustenta: [Gobierno y seguridad](../slides.md).
 
@@ -13,12 +53,16 @@ Slides que sustenta: [Gobierno y seguridad](../slides.md).
 Sustentar las tres decisiones de gobierno y seguridad que la slide «Gobierno y seguridad» le pide al
 Directorio, y el modelo que las sostiene:
 
-1. **Política de IA:** aplicar la que el responsable del caso informó aprobada el
-   20/10/2026, después de revisar versión, alcance y constancia de aprobación.
-2. **Alcance y topes:** sin crédito ni scoring en 12 meses, y la escala de autonomía.
-3. **Controles:** ningún uso nuevo sin prueba previa. El pedido vigente es el paquete
-   mínimo M1-M3 que consolida el [Anexo E](05-business-case.md), en dos autorizaciones
-   (preparación 2026 y, después de la validación inicial, M1-M3). Los controles técnicos
+1. **Política de IA:** el Directorio ratifica la política vigente, de aprobación
+   informada, como política del plan; la preparación 2026 deja constancia de versión y
+   alcance ([R-07](07-resoluciones.md#gobierno-y-seguridad)).
+2. **Alcance y topes:** sin crédito ni scoring en 12 meses, y la escala de autonomía
+   ([R-08](07-resoluciones.md#gobierno-y-seguridad)).
+3. **Controles:** ningún uso nuevo sin prueba previa ([R-11](07-resoluciones.md#gobierno-y-seguridad)).
+   El pedido vigente es el paquete mínimo M1-M3 que consolida el [Anexo E](05-business-case.md),
+   en dos liberaciones: la primera la aprueba el Directorio (preparación 2026) y la segunda,
+   después de la validación inicial, la firma el CEO por delegación
+   ([R-02 a R-05](07-resoluciones.md#autoridad-y-liberaciones)). Los controles técnicos
    de plataforma y la demostración externa son opciones que se liberan por señal en los
    meses 3 y 9; los montos anuales de este anexo son referencia, no un pedido de hoy.
 
@@ -27,7 +71,8 @@ tecnología, sin gatekeeper, con derechos de decisión por rol.
 
 Hoy la organización tiene una política informada como aprobada, tres herramientas
 aprobadas y ninguna evidencia de controles específicos de IA más allá de la política. Todo lo demás de este anexo es
-propuesta del plan y empieza solo con esas autorizaciones. Los gates son los meses 3,
+diseño del plan, adoptado por las resoluciones del [Anexo G](07-resoluciones.md), y empieza
+solo con esas liberaciones. Los gates son los meses 3,
 6, 9 y 12; los tramos, los meses 1-3 (enero-marzo de 2027), 4-6, 7-9 y 10-12. Cada
 control declara cuánta velocidad cuesta y cuándo se abandona.
 
@@ -44,14 +89,14 @@ así que el gobierno se construye antes del primer caso, no después del primer 
 | Supuesto | Valor | Fuente o tipo |
 |---|---|---|
 | Tamaño de la organización | 60-70 personas, ~80% en Operaciones y Tecnología | [Fuente](../../context/hechos/tamano-y-estructura.md) |
-| Política de IA | Aprobada según confirmación del responsable del caso del 20/10/2026; versión, alcance y aprobación documentada por revisar. El borrador v1.0 y sus pendientes de abril son antecedentes históricos, salvo la aprobación informada | [Fuente y cautelas](../../context/hechos/gobierno-y-politica-ia.md) |
+| Política de IA | Aprobación informada en octubre de 2026; el Directorio la ratifica como política del plan y la preparación 2026 deja constancia de versión y alcance ([R-07](07-resoluciones.md#gobierno-y-seguridad)). El borrador v1.0 y sus pendientes de abril son antecedentes históricos, salvo la aprobación informada | [Fuente y cautelas](../../context/hechos/gobierno-y-politica-ia.md) |
 | Inventario de casos de uso y registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar. La aprobación de la política no los acredita | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |
 | Herramientas aprobadas | 3 (Claude Team, GitHub Copilot, Gemini en Workspace); 40-45 seats de Claude | [Fuente](../../context/hechos/uso-ia-interno.md) |
 | Certificación de seguridad | ISO/IEC 27001 de la organización; un producto propio no tiene la suya | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |
-| Controles específicos de IA (red teaming, DLP sobre prompts) | Sin evidencia | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |
+| Controles específicos de IA (red teaming, DLP sobre prompts) | Sin evidencia en el registro de partida (abril de 2026) ni en el alcance de la ISO 27001 vigente; estado actual por contrastar en la preparación 2026 | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |
 | Concentración de capacidad | Gobierno y seguridad dependen de pocas personas | [Fuente](../../context/hechos/tamano-y-estructura.md) |
 | Apetito de riesgo de los clientes | Prohíben por defecto modelos externos sobre su código y datos, salvo cláusula y controles demostrables. La evidencia contractual se junta en los meses 1-3 y se lee en la decisión del mes 3 (ver "Licencia para vender") | [Supuesto](../../context/supuestos/apetito-de-riesgo-de-clientes.md) |
-| Datos disponibles para IA | Internos; los datos productivos de clientes no | [Supuesto](../../context/supuestos/disponibilidad-de-datos.md) |
+| Datos disponibles para IA | Internos; los datos productivos de clientes no (excepción: R-08) | [Supuesto](../../context/supuestos/disponibilidad-de-datos.md) |
 | Inversión incremental del plan | 1%-3% de la facturación anual, más 10%-15% del tiempo de personas clave | [Supuesto](../../context/supuestos/capacidad-de-inversion.md) |
 | Costo cargado por rol | Tech lead 4.500-10.000 USD/mes; senior DevOps 3.000-7.500; analista funcional 2.000-5.500; staff 1.500-5.000. Rangos amplios, no calibrados contra la nómina | [Supuesto](../../context/supuestos/costo-cargado-por-rol.md) |
 | Costo horario por rol | Tech lead 28,125-62,5 USD/h; senior DevOps 18,75-46,875; analista funcional 12,5-34,375; staff 9,375-31,25. Es el costo mensual dividido 160 h; cada actividad usa el rol que la hace, sin promedios de la empresa. Donde el anexo muestra la tasa redondeada a la unidad (por ejemplo, 13-34 USD/h), es solo para leer: las cuentas usan estos valores exactos | Supuesto, derivado del costo cargado por rol |
@@ -64,11 +109,11 @@ así que el gobierno se construye antes del primer caso, no después del primer 
 
 | Métrica | Hoy | Esperado a los 12 meses | Fuente |
 |---|---|---|---|
-| Política de IA | Aprobación informada el 20/10/2026; documentación e implementación por revisar | Versión, alcance y aprobación documentados; política aplicada, con revisión anual y onboarding | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |
+| Política de IA | Aprobación informada en octubre de 2026; documentación e implementación por revisar | Versión, alcance y aprobación documentados; política aplicada, con revisión anual y onboarding | [Fuente](../../context/hechos/gobierno-y-politica-ia.md) |
 | Inventario de usos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | 100% de las herramientas, servidores MCP, funciones de IA embebidas y casos de producto | Objetivo propuesto por el equipo |
 | Matriz de restricciones por cliente | Pendiente en abril; se validaba a mano. Estado actual por contrastar | Cubre los clientes que concentran la mayor parte de la facturación (la fuente da el alcance) | [Antecedente](../../context/hechos/gobierno-y-politica-ia.md) y [alcance](../../context/hechos/cartera-y-concentracion.md) |
 | Registro de riesgos de IA | Sin evidencia en el registro de partida; estado actual por contrastar | Vivo, revisado cada mes por el Council | Objetivo propuesto por el equipo |
-| Controles técnicos de IA | Sin evidencia | Con señal en el mes 3: pasarela de salida y DLP, logs de acciones, red team interno; el externo, si se financia la demostración externa. Sin señal: *hooks* y escaneo de secretos en el equipo y red team acotado (ver "Controles según la decisión del mes 3") | Objetivo propuesto por el equipo |
+| Controles técnicos de IA | Sin evidencia en el registro de partida (abril de 2026) ni en el alcance de la ISO 27001 vigente; estado actual por contrastar en la preparación 2026 | Con señal en el mes 3: pasarela de salida y DLP, logs de acciones, red team interno; el externo, si se financia la demostración externa. Sin señal: *hooks* y escaneo de secretos en el equipo y red team acotado (ver "Controles según la decisión del mes 3") | Objetivo propuesto por el equipo |
 | Certificación | ISO 27001 vigente | ISO 27001 con alcance extendido a IA; ISO 42001 como decisión de los meses 10-12, no como meta | [Fuente](../../context/hechos/seguridad-y-certificaciones.md) |
 
 Las metas son objetivos del equipo, no benchmarks: se calibran con la línea base que
@@ -87,20 +132,35 @@ anti-patrón del *governance perfecto*, [Council vs CoE](../../material/concepto
 
 En el escenario del plan, Acme Labs actúa como **proveedor tecnológico** de bancos y PSP
 ([fuente](../../context/hechos/regulacion-clientes-financieros.md), cotejada con los
-textos ordenados del BCRA y las leyes actualizadas). Se separa lo que obliga a Acme Labs
-de lo que le llega por contrato, según el sujeto y la actividad.
+textos ordenados del BCRA en las versiones que indica y con las leyes actualizadas). Se separa
+lo que obliga a Acme Labs de lo que le llega por contrato, según el sujeto y la actividad.
+Las filas del BCRA describen lo que dicen esos textos a su fecha; que alcancen a un cliente
+concreto, que sigan vigentes sin cambios y que el cliente las traslade a Acme Labs son
+**supuestos**. Ninguna decisión de este anexo ni del deck depende de ellos: las decisiones
+se apoyan en la evidencia contractual de los meses 1-3 (ver "Licencia para vender"), y el
+alcance jurídico lo revisa el dictamen focalizado de Legal externo de M1 (cautela 4 de
+"Controles por tramo").
 
 | Norma o marco | Quién está obligado | Cómo llega a Acme Labs | Estado de verificación |
 |---|---|---|---|
-| BCRA, requisitos mínimos de tecnología y seguridad (texto ordenado al 13/02/2026, Com. "A" 8401): sección 4.6 (IA propia o de terceros) y sección 10 (terceros) | Entidades financieras y PSP registrados (sección 1.1) | **Heredada**: como proveedor tecnológico, los servicios de IA de Acme Labs entran en la evaluación y las condiciones de tercerización del cliente | Cotejado con el texto ordenado oficial. La 4.6 exige a la entidad documentar objetivos de uso de IA propia o de terceros; definir responsables, modelos, datos, métricas y umbrales; evaluar riesgos; prevenir sesgos, documentar explicabilidad, revisar resultados e informar al cliente. La 10 exige evaluar y formalizar la relación con terceros, y la entidad conserva la responsabilidad. **No respalda** que un cliente le exija a Acme Labs controles concretos ni que le compre IA: eso, si existe, llega por contrato (ver "Licencia para vender"). Cambios posteriores, a revisar antes de la entrega |
-| BCRA, proveedores de servicios de pago (texto ordenado al 02/10/2026, Com. "A" 8488), secciones 1 y 2 | Quien debe inscribirse como PSP según la función que desempeña, incluidos quienes ofrecen cuentas de pago | **Según la entidad operadora** del producto propio de pagos y su función y registro como PSP. Desarrollar el software no vuelve obligada a Acme Labs por sí solo | Cotejado con el texto ordenado oficial. Los requisitos específicos de habilitación del producto no se verificaron |
+| BCRA, requisitos mínimos de tecnología y seguridad (texto ordenado al 13/02/2026, Com. "A" 8401): sección 4.6 (IA propia o de terceros) y sección 10 (terceros) | Entidades financieras y PSP registrados (sección 1.1) | **Heredada**: como proveedor tecnológico, los servicios de IA de Acme Labs entran en la evaluación y las condiciones de tercerización del cliente | Cotejado con el texto ordenado oficial. La 4.6 exige a la entidad documentar objetivos de uso de IA propia o de terceros; definir responsables, modelos, datos, métricas y umbrales; evaluar riesgos; prevenir sesgos, documentar explicabilidad, revisar resultados e informar al cliente. La 10 exige evaluar y formalizar la relación con terceros, y la entidad conserva la responsabilidad. **No respalda** que un cliente le exija a Acme Labs controles concretos ni que le compre IA: eso, si existe, llega por contrato (ver "Licencia para vender"). Vigencia posterior a esa versión y alcance sobre cada cliente: supuesto, sin uso decisorio; los revisa Legal externo en ejecución (M1) |
+| BCRA, proveedores de servicios de pago (texto ordenado al 02/10/2026, Com. "A" 8488), secciones 1 y 2 | Quien debe inscribirse como PSP según la función que desempeña, incluidos quienes ofrecen cuentas de pago | **Según la entidad operadora** del producto propio de pagos y su función y registro como PSP. Desarrollar el software no vuelve obligada a Acme Labs por sí solo | Cotejado con el texto ordenado oficial a esa fecha. Los requisitos específicos de habilitación del producto no se verificaron; no se presumen (R-08, abajo) |
 | Ley 21.526, arts. 39-40 (secreto financiero) | Entidades alcanzadas y su personal. El art. 39 protege sus **operaciones pasivas**, con las excepciones legales; el art. 40 regula la información que recibe el BCRA | **Heredada** de los clientes que sean entidades alcanzadas: condiciona qué información de esas operaciones puede salir hacia un modelo. Un PSP no se equipara a un banco | Cotejada con el texto actualizado |
 | Ley 25.326 e información de la AAIP (datos personales y sensibles; el art. 12 restringe transferencias internacionales sin protección adecuada, con excepciones) | Quien trata datos personales | **Propia** cuando Acme Labs trata datos personales: enviar datos a un modelo alojado en el exterior exige evaluar destino, datos y mecanismo aplicable (la AAIP describe cláusulas contractuales modelo y normas corporativas vinculantes) | Cotejada con el texto actualizado y la AAIP. El rol de Acme Labs (responsable o encargado) lo confirma asesoría legal |
-| EU AI Act (Reg. 2024/1689, modificado por el Omnibus 2026/1744) | Proveedores y desplegadores con sistemas o resultados usados en la UE (art. 2.1.c) | **No aplica por defecto**; se activa si un cliente opera en la UE o el resultado se usa allá | Fechas leídas de una copia del DOUE; falta cotejar con EUR-Lex ([fuentes faltantes](../../material/huecos.md)) |
-| NIST AI RMF 1.0 | Nadie (voluntario) | **Voluntaria**: cada riesgo del registro lleva su función (Govern, Map, Measure, Manage) y su evidencia; se declara alineación, no cumplimiento | Confirmado en la página de NIST; el mapeo es por función, las subcategorías (por ejemplo GOVERN 1.6) no se verificaron |
-| ISO/IEC 42001:2023 | Nadie (certificación voluntaria) | **Voluntaria**: se alinea con brecha documentada, no se certifica en el año | Confirmada la edición; ver el mapeo en Riesgos y en "Compliance: alcance explícito" |
+| EU AI Act (Reg. 2024/1689, modificado por el Omnibus 2026/1744) | Proveedores y desplegadores con sistemas o resultados usados en la UE (art. 2.1.c) | **No aplica por defecto**; se activa si un cliente opera en la UE o el resultado se usa allá | Fechas cotejadas contra el texto español del DOUE (Reg. 2026/1744, art. 113 modificado) en el [calendario](../../material/frameworks/eu-ai-act-calendario-sanciones.md) y la [fuente del Omnibus](../../material/conceptos/m1u4-ai-omnibus-sigen.md); cotejo confirmado por revisión humana el 22/10/2026. La aplicabilidad al caso (art. 2.1.c) y la lectura operativa de los arts. 43 y 49 quedan como supuesto, sin uso decisorio |
+| NIST AI RMF 1.0 | Nadie (voluntario) | **Voluntaria**: cada riesgo del registro lleva su función (Govern, Map, Measure, Manage) y su evidencia; se declara alineación, no cumplimiento | Confirmado en la página de NIST ([fuente](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md)); el mapeo es por función, las subcategorías (por ejemplo GOVERN 1.6) no se verificaron |
+| ISO/IEC 42001:2023 | Nadie (certificación voluntaria) | **Voluntaria**: se alinea con brecha documentada, no se certifica en el año | Edición 2023 según la [fuente de los tres marcos](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md); la página de ISO no se recotejó ([fuentes faltantes](../../material/huecos.md)). Ver el mapeo en Riesgos y en "Compliance: alcance explícito" |
 | Guía SIGEN 197/2026 | Sector público nacional | **No aplica**; solo si un cliente es un organismo público | Existe; el anexo no se leyó |
-| UIF y comunicaciones del producto de medios de pago | Sujetos obligados | Sin evaluar | **Hueco**: no se verificó |
+| UIF y comunicaciones del producto de medios de pago | Sujetos obligados | No se evalúa en el plan: sin habilitación no hay IA en ese producto (R-08, abajo) | Si un gate libera IA en ese producto, Producto lo evalúa con Legal externo en esa misma lectura (mes 6 o 9); sin evaluación, no se libera |
+
+**Producto propio de medios de pago: habilitación regulatoria** ([R-08](07-resoluciones.md#gobierno-y-seguridad)).
+Alcance: el plan no presume la habilitación; ninguna función de IA se asienta en ese producto
+hasta que su entidad operadora acredite la habilitación o inscripción que corresponda.
+Autoridad: el Directorio fija la regla al aprobar el plan; Producto verifica la habilitación, con Legal externo.
+Hito: la lectura del mes 6, que libera el piloto de producto, o la del mes 9 si se difiere.
+Consecuencia: sin habilitación acreditada en ese hito, el piloto usa otro producto o se difiere,
+y no hay IA en ese producto dentro del horizonte; el plan no cuenta ingresos de ese producto,
+así que el caso económico no cambia.
 
 **Rol proveedor frente a desplegador.** Cuando la IA va dentro de un producto que se
 vende al banco, Acme Labs es **proveedor** (art. 3.3 del AI Act) y el banco es
@@ -110,70 +170,92 @@ con marca propia un motor de terceros, o cuando oriente un modelo genérico a un
 alto riesgo ([fuente](../../material/frameworks/eu-ai-act-proveedor-desplegador.md)). La
 consecuencia práctica es una **hipótesis**: aun fuera del alcance de la UE, algunos
 clientes podrían pedirle por contrato esa disciplina de proveedor. Hay que separar dos
-cosas que la hipótesis mezcla. Lo que el regulador le exige al **banco** (el texto ordenado de
-tecnología del BCRA lo obliga a gestionar la IA propia o de terceros y a formalizar la
-relación con sus terceros) es un requisito regulatorio del cliente;
+cosas que la hipótesis mezcla. Lo que el regulador le exige al **banco** (según la fuente
+verificada, el texto ordenado de tecnología del BCRA al 13/02/2026 le pide gestionar la IA
+propia o de terceros y formalizar la relación con sus terceros) es un requisito regulatorio
+del cliente;
 que el banco se lo traslade a Acme Labs como condición de compra o de renovación es una
 **exigencia comercial al proveedor**, y eso no está probado. Solo la evidencia
 contractual de los meses 1-3 (ver "Licencia para vender") la confirma o la descarta.
 
-**Calendario.** Según la fuente sobre el Omnibus, el alto riesgo del Anexo III (que incluye el
-scoring crediticio) rige desde el 2027-12-02 ([fuente](../../material/conceptos/m1u4-ai-omnibus-sigen.md)),
-que **cae dentro de la ventana**: los meses 10-12 terminan en diciembre de 2027. La Comisión Europea
-[publica esa fecha](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
-y enumera otros usos de alto riesgo además del crédito (empleo y educación, por ejemplo).
-Eso confirma el calendario, no que aplique a Acme Labs. EUR-Lex pidió verificación
-antirrobot y no se cotejó el texto consolidado: la fecha no va a una slide sin chequearla.
+**Calendario.** Con el Omnibus, las secciones 1 a 3 del capítulo III (alto riesgo: requisitos
+y obligaciones) rigen para los usos del Anexo III desde el 2027-12-02 (art. 113, letra c),
+inciso i), en la redacción del Reg. 2026/1744); antes del Omnibus regían el 2026-08-02. El
+Anexo III incluye la evaluación de solvencia de personas físicas (punto 5.b) y otros usos,
+como empleo y educación. El alto riesgo de productos regulados (Anexo I) pasa al 2028-08-02
+(inciso ii). Fechas cotejadas contra el texto español del DOUE en el
+[calendario](../../material/frameworks/eu-ai-act-calendario-sanciones.md) y la
+[fuente del Omnibus](../../material/conceptos/m1u4-ai-omnibus-sigen.md). El 2027-12-02 **cae
+dentro de la ventana**: los meses 10-12 terminan en diciembre de 2027.
+Ni la fecha ni la lista prueban que aplique a Acme Labs: la aplicabilidad depende del
+art. 2.1.c y se pregunta por cliente (ver "Compliance: alcance explícito"). También queda
+abierta la lectura operativa de la evaluación de conformidad y el registro (arts. 43 y 49),
+que el art. 113 deja en la fecha general mientras difiere los requisitos; es supuesto y no
+sostiene ninguna decisión. El cotejo de las fechas tiene revisión humana del 22/10/2026;
+ni la fecha ni la lista prueban que la norma aplique al caso.
 
 ## Riesgos y mitigación
 
 Registro de riesgos inicial. Probabilidad e impacto son **inherentes**: se valoran antes
 del control, son cualitativos y siguen el criterio del equipo hasta tener la línea base de
 los meses 1-3. El rol dueño de cada riesgo, su prueba y su **residual** están en la tabla
-siguiente; las personas están a designar. La aceptación siempre se decide sobre el residual.
+siguiente; las personas se nombran en el acta de la liberación que habilita el entregable
+([R-06](07-resoluciones.md#autoridad-y-liberaciones)). La aceptación siempre se decide sobre
+el residual. Este registro es el de referencia del plan ([R-10](07-resoluciones.md#gobierno-y-seguridad)):
+lo mantiene el Responsable de seguridad y el AI Council lo revisa cada mes.
 
 | Riesgo | Prob. inherente | Impacto inherente | Mitigación (control) | Disparador de abandono o escalamiento |
 |---|---|---|---|---|
-| **Datos de cliente en un modelo externo.** Datos o código de un cliente pasan por un modelo externo sin cláusula | Media | Alto: incumplimiento contractual y secreto financiero, con clientes muy concentrados | Matriz de restricciones por cliente (meses 1-3), default-deny sobre código de cliente; con señal en el mes 3, pasarela con allowlist (meses 4-6) | Un solo incidente confirmado: el responsable de seguridad suspende el uso de IA sobre ese cliente hasta cerrar el análisis de causa (ver "Derechos de decisión"); el Council lo revisa en su revisión mensual |
+| **Datos de cliente en un modelo externo.** Datos o código de un cliente pasan por un modelo externo sin cláusula | Media | Alto: incumplimiento contractual y secreto financiero, con clientes muy concentrados | Matriz de restricciones por cliente (meses 1-3), *default-deny* sobre código o datos de un cliente sin fila; con señal en el mes 3, pasarela con allowlist (meses 4-6) | Un solo incidente confirmado: el responsable de seguridad suspende el uso de IA sobre ese cliente hasta cerrar el análisis de causa (ver "Derechos de decisión"); el Council lo revisa en su revisión mensual |
 | **Inyección indirecta de prompts.** Prompt injection indirecta en un agente de código (repositorios, tickets, comentarios de PR, servidores MCP) | Media | Alto | Mínimo privilegio en credenciales, aprobación humana en el nivel "actúa con aprobación", entorno sin credenciales productivas, validación de salida con código determinístico | Un agente ejecuta una acción fuera de su alcance en pruebas: baja a "prepara, no ejecuta" hasta corregir |
 | **Agencia excesiva.** Un agente con permisos de escritura sobre sistemas productivos | Baja | Muy alto | Tope de autonomía por nivel de riesgo (ver "Escala de autonomía"); "autónomo dentro de límites" solo en sandbox | Cualquier pedido de "autónomo dentro de límites" con acceso a producción pasa a decisión del Council |
 | **Fuga de secretos.** Secretos en prompts o contexto | Media | Medio-alto | Escaneo de secretos antes del envío, lista cerrada de lo que nunca se envía (definida en el antecedente de abril; vigencia en la versión aprobada por contrastar), rotación | **Primer secreto expuesto confirmado**: se revoca y rota, se contiene el canal afectado y el responsable de seguridad decide con evidencia si se reanuda. **Recurrencia** (más de uno por tramo de tres meses): se bloquea el envío automático y se pasa a revisión previa |
 | **IA embebida sin aprobar.** IA embebida en software de terceros activada sin aprobación (por ejemplo, funciones nuevas en la suite ofimática) | Alta | Medio | Inventario que incluye IA embebida; revisión de cambios de proveedor cada mes | Función de IA activa con datos Restringidos: se desactiva y se registra como incidente |
-| **Un gobierno que frena.** Cuello de botella: el gobierno frena la entrega y la adopción migra por fuera | Media | Alto | Intake en niveles, SLA de 5 días hábiles para riesgo medio, autoservicio para riesgo bajo | Más del 20% de las solicitudes supera el SLA dos meses seguidos: se simplifica el proceso, no se agrega personal |
-| **Capacidad concentrada.** Gobierno y seguridad dependen de pocas personas | Alta | Alto | Dos suplentes con runbooks; documentación de decisiones en el inventario | Una persona clave se va y no hay suplente entrenado: congelar altas de casos de riesgo alto |
+| **Un gobierno que frena.** Cuello de botella: el gobierno frena la entrega y la adopción migra por fuera | Media | Alto | Intake en niveles, objetivo de 5 días hábiles para riesgo medio (cambio de política, R-07), autoservicio para riesgo bajo | Más del 20% de las solicitudes supera el SLA dos meses seguidos: se simplifica el proceso, no se agrega personal |
+| **Capacidad concentrada.** Gobierno y seguridad dependen de pocas personas | Alta | Alto | Dos suplentes con runbooks, nombrados en el acta de la segunda liberación: el Responsable de Tecnología, suplente de la suspensión solo para contener, y un senior de arquitectura distinto de quien produce los controles, suplente del tech lead de gobierno para operar el intake y convocar el Council, sin verificar ni votar controles que produjo ([Anexo D](04-personas-cultura.md)); documentación de decisiones en el inventario | Una persona clave se va y no hay suplente entrenado: congelar altas de casos de riesgo alto |
 | **Depender de un proveedor.** Dependencia de un solo proveedor de modelos y cambio de precio o límites | Media | Medio | Diseño neutral al modelo; ver [supuesto](../../context/supuestos/precio-y-dependencia-de-modelos.md) | Aumento de precio o recorte de límites que rompa el presupuesto: revisar proveedor en el Council |
-| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin evidencia aparece en una propuesta: se retira y se corrige el procedimiento |
+| **Declarar controles que no existen.** Certificación de un producto propio, cumplimiento de IA | Baja | Muy alto: pérdida de confianza | Toda afirmación comercial sobre seguridad o IA la valida el responsable de seguridad; ningún producto propio se presenta como certificado | Una afirmación sin validación del Responsable de seguridad aparece en una propuesta: se retira, se escala al AI Council (R-11) y se corrige el procedimiento |
 
 ### Criterio de aceptación del riesgo residual
 
-Propuesta que se integra como regla de los gates. El residual se
-valora después de probar el control, no antes.
+Apetito de riesgo del plan, adoptado por el Directorio como regla de los gates
+([R-10](07-resoluciones.md#gobierno-y-seguridad)). El residual se valora después de probar
+el control, no antes. Se completa por dominancia: más probabilidad o más impacto nunca
+bajan la autoridad.
 
 | Residual (prob. / impacto) | Quién lo acepta | Condición |
 |---|---|---|
-| Baja con impacto hasta Alto, o Media con impacto Medio | Dueño del riesgo | Queda en el registro; el Council lo ve en la revisión mensual |
-| Media con impacto Medio-alto o Alto, o Baja con Muy alto | Council, con informe al CEO | Control compensatorio nombrado y fecha de revisión, como máximo la siguiente decisión de tramo (meses 3, 6, 9 o 12) |
-| Alta con impacto Alto o mayor | Nadie | Se reduce o se suspende el uso; no hay excepción (ver "Catálogo de decisiones del Anexo C") |
+| Baja con impacto hasta Alto; Media o Alta con Bajo; Media con Medio | Dueño del riesgo | Queda en el registro; el Council lo ve en la revisión mensual |
+| Media con Medio-alto o Alto; Alta con Medio o Medio-alto; Baja con Muy alto | Council, con informe al CEO | Control compensatorio nombrado y fecha de revisión, como máximo la siguiente decisión de tramo (meses 3, 6, 9 o 12) |
+| Alta con Alto o mayor; Media con Muy alto | Nadie | Se reduce o se suspende el uso; no hay excepción (ver "Catálogo de decisiones del Anexo C") |
 
-**Combinaciones sin fila.** Media / Bajo, Media / Muy alto, Alta / Bajo, Alta / Medio y
-Alta / Medio-alto no están en la tabla. No se aceptan por omisión: cuentan como residual no
-aceptado, el uso afectado no se habilita ni se amplía, y si ya corre rige la suspensión
-preventiva de Seguridad (ver "Derechos de decisión"). Agregar esas filas queda pendiente de decisión
-del responsable humano de este anexo.
+**Toda combinación tiene fila.** Las tres probabilidades por los cinco impactos (Bajo, Medio,
+Medio-alto, Alto, Muy alto) caen en una de las tres filas. Una calificación fuera de la
+escala no se acepta: el uso afectado no se habilita ni se amplía y, si ya corre, rige la
+suspensión preventiva de Seguridad (ver "Derechos de decisión"). Ningún residual objetivo
+vigente de este anexo cae en las combinaciones que la ampliación deja en "Nadie".
+
+**Residual transitorio** ([R-10](07-resoluciones.md#gobierno-y-seguridad)). Hasta probar el
+control rige el inherente, y lo acepta la autoridad que le corresponde por esta tabla, con la
+fecha de la prueba. IA embebida sin aprobar (Alta / Medio): el Council, hasta el primer cruce
+mensual de M1. Capacidad concentrada (Alta / Alto) cae en "Nadie": hasta que el suplente corra
+el runbook en el ejercicio de mesa de M4-M6, no se dan de alta casos nuevos de nivel 3 del
+intake; el uso existente sigue con R-09. Costo en velocidad: los casos nuevos de cliente o de
+producto esperan ese ejercicio; ninguno está en el mínimo M1-M3.
 
 ### Prueba, evidencia y residual de cada riesgo
 
 Cada riesgo lleva su función del NIST AI RMF, un dueño por rol (sale de "Derechos de
-decisión"; la persona está a designar), cómo se prueba el control y qué evidencia deja.
+decisión"; la persona se nombra en el acta de la liberación, según R-06), cómo se prueba el control y qué evidencia deja.
 El residual es un **objetivo propuesto**, no una medición: se confirma o se corrige con
 la prueba.
 
 | Riesgo | Función NIST | Dueño del riesgo | Prueba del control | Evidencia esperada | Residual objetivo | Acepta |
 |---|---|---|---|---|---|---|
-| Datos de cliente en un modelo externo | Map, Manage | Responsable comercial del cliente | Revisión cruzada de la matriz contra los contratos; dato sintético marcado enviado por cada superficie (meses 4-6) | Matriz versionada con aprobador; informe de *bypass* por superficie; bloqueos en la pasarela | Baja / Alto en lo que pasa por la pasarela (casos propios y, si su régimen lo permite, el agente de código); Media / Alto en el resto | Council |
-| Inyección indirecta de prompts | Measure, Manage | Dueño de negocio del caso | Red team interno (meses 4-6) y externo (meses 10-12) con inyección indirecta en repos y tickets sintéticos | Informe de red team con hallazgos y cierre; logs de acciones del agente | Baja / Alto | Dueño |
+| Datos de cliente en un modelo externo | Map, Manage | Responsable comercial del cliente | Revisión cruzada de la matriz contra los contratos; dato sintético marcado enviado por cada superficie en uso, antes de habilitarla (M1-M3, R-11), y por la pasarela (M4-M6, solo con plataforma) | Matriz versionada con aprobador; informe de *bypass* por superficie; bloqueos en la pasarela | Baja / Alto en lo que pasa por la pasarela (casos propios y, si su régimen lo permite, el agente de código); Media / Alto en el resto | Council |
+| Inyección indirecta de prompts | Measure, Manage | Dueño de negocio del caso | Red team interno acotado al agente de código antes de habilitarlo (M1-M3), de la pasarela (M4-M6, con plataforma) y externo (M10-M12, con señal) con inyección indirecta en repos y tickets sintéticos | Informe de red team con hallazgos y cierre; logs de acciones del agente | Baja / Alto | Dueño |
 | Agencia excesiva | Govern, Manage | Dueño de negocio del caso | Revisión por tramo de tres meses de los permisos efectivos de cada agente contra su nivel de autonomía | Inventario con nivel por agente; exportación de permisos; acta | Baja / Muy alto | Council |
-| Fuga de secretos | Measure, Manage | Responsable de seguridad | Secreto sintético por superficie (ejemplo abajo) | Bloqueo y alerta en la pasarela o en el equipo, según la superficie; ticket del ejercicio de mesa | Baja / Medio-alto donde hay bloqueo técnico; Media / Medio-alto donde solo hay control compensatorio | Dueño; Council si no hay bloqueo técnico |
+| Fuga de secretos | Measure, Manage | Responsable de seguridad | Secreto sintético por superficie (ejemplo abajo) | Bloqueo y alerta en la pasarela o en el equipo, según la superficie; ticket del ejercicio de mesa | Baja / Medio-alto donde hay bloqueo técnico; Media / Medio-alto donde solo hay control compensatorio | Council: el dueño verifica la prueba y se abstiene |
 | IA embebida sin aprobar | Govern, Map | Responsable de Tecnología | Cruce mensual de las novedades del proveedor contra el inventario | Inventario con fecha de revisión; configuración exportada | Media / Medio | Dueño |
 | Un gobierno que frena | Govern, Measure | Responsable de Tecnología | Porcentaje de solicitudes fuera de SLA, desde el registro del intake | Reporte mensual del intake | Baja / Alto | Dueño |
 | Capacidad concentrada | Govern | Responsable de Tecnología | El suplente corre el runbook sin el titular en el ejercicio de mesa (meses 4-6 y 10-12) | Runbooks versionados; acta del ejercicio | Media / Alto: baja poco en el año | Council |
@@ -186,9 +268,9 @@ la prueba.
 |---|---|
 | Riesgo | Una credencial (clave de nube, token de repositorio, cadena de conexión) sale en un prompt hacia un modelo externo. Inherente: Media / Medio-alto |
 | Control | Escaneo de secretos en la pasarela antes del envío (previene), alerta al responsable de seguridad (detecta) y runbook de revocación y rotación (corrige). Dueño del control: ingeniería de seguridad |
-| Prueba (meses 4-6) | Un juego de secretos **sintéticos** de formatos distintos, enviado por cada superficie de la matriz superficie→control→telemetría (ver "Seguridad"); nunca una credencial real. Criterio propuesto: donde hay bloqueo técnico (casos propios por la pasarela; el agente de código con *hooks* y escaneo en el equipo, y por la pasarela si su régimen la permite), todos bloqueados y alertados; en las superficies sin bloqueo técnico se registra que no hay bloqueo, como resultado esperado y no como falla oculta. En el ejercicio de mesa se mide el tiempo de alerta a revocación; el umbral lo propone seguridad y no está medido |
+| Prueba (M1-M3 en cada superficie en uso, con escaneo local; M4-M6 por la pasarela, solo con plataforma) | Un juego de secretos **sintéticos** de formatos distintos, enviado por cada superficie de la matriz superficie→control→telemetría (ver "Seguridad"); nunca una credencial real. Criterio propuesto: donde hay bloqueo técnico (casos propios por la pasarela; el agente de código con *hooks* y escaneo en el equipo, y por la pasarela si su régimen la permite), todos bloqueados y alertados; en las superficies sin bloqueo técnico se registra que no hay bloqueo, como resultado esperado y no como falla oculta. En el ejercicio de mesa se mide el tiempo de alerta a revocación; el umbral lo propone seguridad y no está medido |
 | Evidencia | Informe de la prueba por superficie y formato, logs de la pasarela con los bloqueos, ticket del ejercicio con sus tiempos y acta del Council. Es la misma evidencia que pediría la auditoría de la ISO 27001 con alcance extendido |
-| Residual | Formatos que el escaneo no reconoce (Baja / Medio-alto): lo acepta el responsable de seguridad. Superficies sin bloqueo técnico (chat y escritorio, IDE y suite ofimática; y, en el régimen de suscripción que no permite gateway, lo que los *hooks* y el escaneo del equipo no reconocen del agente de código) (Media / Medio-alto): lo acepta el Council con control compensatorio (cuentas corporativas, consola de administración, rotación periódica) y revisión en la siguiente decisión de tramo |
+| Residual | Formatos que el escaneo no reconoce (Baja / Medio-alto): lo acepta el Council, porque el Responsable de seguridad verificó la prueba y se abstiene. Superficies sin bloqueo técnico (chat y escritorio, IDE y suite ofimática; y, en el régimen de suscripción que no permite gateway, lo que los *hooks* y el escaneo del equipo no reconocen del agente de código) (Media / Medio-alto): lo acepta el Council con control compensatorio (cuentas corporativas, consola de administración, rotación periódica) y revisión en la siguiente decisión de tramo |
 | Cuándo vence la aceptación | El primer secreto expuesto por una superficie aceptada reabre la decisión (disparador del riesgo de fuga de secretos). El bloqueo de secretos no se relaja nunca (ver "Controles por tramo") |
 
 ### NIST y la ISO 42001: mapeo, evidencia y qué no se afirma
@@ -225,7 +307,8 @@ antecedente de abril define como aprobador de herramientas
 burocracia paralela: responsable de Tecnología (preside), responsable de seguridad,
 responsable de Operaciones (delivery, que es quien conoce las restricciones de cada
 cliente), responsable de Experiencia de cliente y comercial, y responsable de Finanzas.
-Talento participa cuando hay temas de personas; el CEO es sponsor y última instancia.
+Personas participa cuando hay temas de personas; el CEO es sponsor y firma por delegación
+lo que el Directorio le delega (R-04).
 Legal: la estructura no muestra un área interna ([fuente](../../context/hechos/tamano-y-estructura.md)),
 así que se asume asesoría externa a demanda (ver Cautelas).
 
@@ -238,78 +321,150 @@ función es habilitar; no aprueba nada que el Council no le delegó.
 
 | Decisión | A (decide) | R | C | I |
 |---|---|---|---|---|
-| Autorizar la validación inicial en preparación de 2026 | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |
-| Liberar M1-M3 tras la validación inicial | Directorio o autoridad formalmente delegada | CAIO | Operaciones y managers, Finanzas, Seguridad | Council |
-| Política de IA y sus cambios | Directorio (ratifica) | Responsable de seguridad | Council, CEO | Toda la organización |
+| Aprobar el plan, los techos y la primera liberación (validación inicial en preparación de 2026) | Directorio, al aprobar el plan ([R-02, R-03](07-resoluciones.md#autoridad-y-liberaciones)) | CAIO | CFO (verifica), Operaciones y managers, Seguridad | Council |
+| Segunda liberación: M1-M3 tras la validación inicial, hasta 71k USD | CEO, por delegación del Directorio dentro de los techos ([R-04, R-05](07-resoluciones.md#autoridad-y-liberaciones)) | CAIO | CFO y Responsable de seguridad (verifican), Council (dictamina), Operaciones y managers | Directorio |
+| Gates de los meses 3, 6, 9 y 12 dentro del techo de cada tramo (liberación de fondos) | CEO, por delegación del Directorio (R-04) | CAIO; el Responsable de Tecnología produce los indicadores | CFO (techos y reservas), verificador senior independiente (indicadores) y Responsable de seguridad (controles, incidentes) verifican; Council dictamina | Directorio |
+| Superar el techo de un tramo o la suma de 121k USD (incluidas las esperas), ampliar alcance (plataforma, producto, exploración comercial costeada), compromisos a más de 12 meses y decisiones irreversibles | Directorio (R-04; [R-32](07-resoluciones.md#roadmap-y-comercial)) | CAIO, con el dueño del dominio | CFO (verifica), Council (dictamina) | CEO |
+| Política de IA y sus cambios | Directorio (ratifica y aprueba cambios; [R-07](07-resoluciones.md#gobierno-y-seguridad)) | Responsable de seguridad | Council, CEO | Toda la organización |
+| Ratificar el método de medición | AI Council, sin el voto del Responsable de Tecnología, que produce ([R-14](07-resoluciones.md#arquitectura-y-medición)) | Responsable de Tecnología | Verificador senior independiente, Responsable de seguridad | CEO |
+| Tratamiento y retención de eventos de uso por persona y de trazas | Responsable de seguridad ([R-13](07-resoluciones.md#gobierno-y-seguridad)) | Ingeniería | Personas, Legal externo, CAIO (qué indicador necesita) | Council |
 | Aprobar una herramienta o modelo nuevo | Responsable de Tecnología | Administrador de licencias | Seguridad, Finanzas | Council |
 | Qué datos puede usar un caso | Dueño del dato | Seguridad | Legal externo, Operaciones | Council |
-| Usar IA sobre el código o los datos de un cliente (en el horizonte: solo lo que el cliente permite en su entorno; enviarlos a un modelo externo, no antes del cierre del mes 12) | Responsable comercial del cliente | Operaciones | Seguridad, Legal externo | Council |
+| Usar IA sobre el código o los datos de un cliente (en el horizonte: solo dentro del entorno del propio cliente y con su permiso escrito, con la fila de la matriz verificada, [R-08](07-resoluciones.md#gobierno-y-seguridad); enviarlos a un modelo externo fuera de ese entorno es una decisión irreversible del Directorio en el cierre del mes 12, R-32) | Responsable comercial del cliente | Operaciones | Seguridad, Legal externo | Council |
 | Nivel de autonomía de un agente | Dueño de negocio del caso | Ingeniería | Seguridad | Council |
 | Salida a producción de una función de IA en el producto | Dueño de producto | Ingeniería | Seguridad, Operaciones | Council |
 | Excepción a una política de riesgo alto | Council | Responsable de seguridad | Dueño del caso | CEO |
 | Incidente de IA (contención y comunicación al cliente) | Responsable de seguridad | Ingeniería | Comercial, Legal externo | CEO, Council |
-| Suspensión preventiva de un uso por control incumplido, incidente o residual no aceptado | Responsable de seguridad | Ingeniería y dueño del caso | Dueño del riesgo | Council, CEO y autoridad del gate |
-| Gasto de IA fuera del presupuesto | Responsable de Finanzas | Tecnología | Council | CEO |
+| Suspensión preventiva de un uso por control incumplido, incidente o residual no aceptado | Responsable de seguridad; suplente para contener: Responsable de Tecnología, que no reanuda ni acepta residuales | Ingeniería y dueño del caso | Dueño del riesgo | Council y CEO; el titular, de inmediato, si actuó el suplente |
+| Tope de costo de IA por PR o por consumo (parámetro de control) | CFO | Tecnología | Council | CEO |
+| Gasto de IA fuera del presupuesto | CEO dentro del techo del tramo; Directorio por encima (R-04) | Tecnología | CFO (verifica), Council | Directorio |
 
 Regla de gobierno: la IA cambia el proceso, no elimina a su dueño
-([RACI](../../material/conceptos/m1u4-raci-ownership.md)). El responsable de cada
-rol está **a designar**; Personas desarrolla los roles y su capacidad.
+([RACI](../../material/conceptos/m1u4-raci-ownership.md)). El plan publica roles: las
+personas que ocupan cada uno se nombran en el acta de la liberación que habilita el
+entregable, y el CEO valida los nombres en la segunda liberación
+([R-06](07-resoluciones.md#autoridad-y-liberaciones)); sin nombres no hay segunda
+liberación. Personas desarrolla los roles y su capacidad. El CAIO produce el paquete de
+cada gate; el CFO verifica cifras, caja y reservas y no libera fondos; el AI Council
+dictamina antes de cada gate y tampoco libera fondos (R-04).
+
+**Abstención** ([R-06](07-resoluciones.md#autoridad-y-liberaciones)). Quien produce o verifica
+un entregable no vota su aceptación. Rige para aceptar un residual y para ratificar el método
+de medición: en el Council, ese asiento se abstiene (por ejemplo, el Responsable de seguridad
+cuando verificó los compensatorios cuyo residual se acepta, o el Responsable de Tecnología
+al ratificar el método cuyos indicadores produce). Cuando el dueño del riesgo produjo o
+verificó la prueba de su propio control, el residual lo acepta el Council. Quórum: tres
+asientos con voto; si no se alcanza, el residual no se acepta y rige la suspensión preventiva.
+Los dictámenes y la declaración de una señal los emite el Council completo, y el acta registra
+quién produjo y quién verificó. Costo en velocidad: ninguno, porque se resuelve en la misma
+sesión.
+
+**Catálogo de roles.** Este anexo usa los roles de la línea de roles del [Anexo G](07-resoluciones.md) y
+cuatro roles por caso, que ocupa una persona de un rol existente, nombrada en el acta (R-06):
+
+| Rol por caso | Quién lo ocupa |
+|---|---|
+| Dueño del dato | El responsable del área que custodia el dato: Operaciones para datos de proyectos de clientes, Tecnología para repositorios y sistemas internos, Personas para datos de personas |
+| Dueño de negocio del caso | El responsable del área que pide el caso y responde por su resultado (Operaciones, Producto o el área interna que lo use) |
+| Dueño de producto | Producto |
+| Responsable comercial del cliente | Comercial, por cuenta (el titular de la relación con ese cliente) |
+
+Ingeniería es el senior DevOps bajo el Responsable de Tecnología; el Administrador de
+licencias, un rol de Tecnología. No hay un rol de Delivery manager con autoridad propia.
+
+**Eventos de uso por persona y datos de categoría especial**
+([R-13](07-resoluciones.md#gobierno-y-seguridad), [R-08](07-resoluciones.md#gobierno-y-seguridad)).
+Alcance: tratamiento y retención de los eventos de uso de IA por persona y de las trazas del harness.
+Autoridad: el Responsable de seguridad decide; Personas y Legal externo son consultados
+(revisión laboral y Ley 25.326); el CAIO decide solo qué indicador agregado se reporta.
+Regla por defecto: agregados por área desde las consolas existentes; ningún evento por persona
+se extrae ni se retiene fuera de las consolas; ninguna métrica evalúa desempeño individual;
+el harness no persiste trazas hasta aprobar clasificación, ubicación y plazo.
+Hito: tratamiento aprobado y comunicado en la preparación 2026, antes de extraer cualquier
+serie; trazas, antes del harness v1 (M4-M6, solo con plataforma). La regla por defecto no
+necesita dictamen legal; un tratamiento por persona espera el dictamen de M1.
+Consecuencia: sin esa aprobación no se extrae ninguna serie, la fuente se publica "sin medir"
+y la lectura usa agregados; si no alcanzan, el indicador se reformula en el gate del mes 3,
+sin ampliar la captura.
+Datos de categoría especial: el producto que los maneja no tiene excepción en el horizonte y
+esos datos siguen prohibidos en el intake; reabrirlo lo decide el Directorio en el cierre
+del mes 12, con Legal externo, y rige para el plan siguiente.
 
 **Seguridad precede a valor, gasto y adopción.** El responsable de seguridad puede
 suspender preventivamente el uso o la superficie afectados aunque los indicadores
 económicos y de adopción cumplan. El Council también puede frenar un frente en su revisión
-mensual. La contención no espera la siguiente reunión ni habilita gasto nuevo. Una
-suspensión preventiva solo se levanta por el procedimiento de reanudación que sigue; un
-desacuerdo con ella escala al CEO, última instancia del Council.
+mensual. La contención no espera la siguiente reunión ni habilita gasto nuevo. Si el
+Responsable de seguridad no está disponible, lo suple el Responsable de Tecnología, solo para
+contener: suspende, pero no reanuda ni acepta residuales. La suspensión es contención
+unilateral y reversible: no tiene productor ni verificador previos; la revisa el Council en su
+revisión mensual. Solo se levanta por el procedimiento
+de reanudación que sigue y con el residual aceptado según R-10; un desacuerdo se lleva al
+CEO, que puede pedir esa revisión antes, pero no levantar la suspensión fuera de ese
+procedimiento. Costo en velocidad: el uso suspendido queda parado hasta la reanudación; vale
+porque la contención es reversible y el incidente no siempre lo es.
 
-**Incidentes antes del plan de M1-M3.** El plan de incidentes es un entregable de los meses
-1-3 (la ruta de incidentes y suspensión de la fila «Política e intake» del insumo del
-paquete mínimo), y el ejercicio de mesa de los meses 4-6 lo prueba ya escrito. Quedan
-pendientes de diseño y decisión humana la definición de incidente de IA, las severidades,
-los plazos de contención y de aviso al cliente y la preservación de evidencia; este anexo
-no les fija valores. Ningún uso del paquete mínimo se habilita sin esa ruta de incidentes y
-suspensión escrita. Mientras tanto rigen la A del responsable de seguridad para contener y
-comunicar, la suspensión preventiva y el aviso al cliente que pida su contrato.
+**Incidentes de IA** ([R-12](07-resoluciones.md#gobierno-y-seguridad)). Es incidente de
+IA el evento confirmado de cualquier disparador del registro de riesgos: código o datos de
+un cliente en un modelo externo fuera de lo que permite R-08, secreto expuesto, acción de un agente fuera de
+su alcance, IA embebida activa con datos Restringidos, afirmación comercial sin respaldo
+o control obligatorio incumplido en un uso habilitado.
 
-Para reanudar, ingeniería produce la prueba corregida y una persona distinta la verifica;
-la autoridad del residual lo acepta según la tabla de este anexo. La autoridad del gate
-registra la reanudación y decide los fondos, si corresponden. Productor, verificador y
-persona que firma el gate se asignan por separado y quedan a designar; quien produce la
-evidencia no verifica su propio trabajo ni autoriza su propio pase.
+- **Severidad 1:** toca código o datos de un cliente, producción o una afirmación hecha a un
+  cliente. **Severidad 2:** el resto (interno, sin dato de cliente).
+- **Plazos, sobre cadencias existentes:** contención inmediata por el Responsable de
+  seguridad, sin esperar reunión; aviso al cliente en severidad 1 según su contrato o, si
+  el contrato no fija plazo, antes de la reunión semanal siguiente, lo decide el
+  Responsable de seguridad con Comercial; revisión de causa en la revisión mensual del
+  Council; informe al CEO en toda severidad 1.
+- **Evidencia que se preserva:** ticket, logs de la herramienta o la pasarela, prompts y
+  acciones involucrados, decisión de contención y acta de reanudación.
+- **Costo:** la ruta se monta sobre el circuito de incidentes del SGSI ISO 27001 existente,
+  dentro de las horas de «Política e intake»: 0 USD adicionales en M1-M3. Que ese circuito
+  sea reutilizable se confirma en la preparación 2026; si no lo es, la ruta se escribe igual
+  dentro de las mismas horas. Se conservan los dos ejercicios de mesa (M4-M6 y M10-M12).
 
-**Verificador independiente: actividad costeada y salida sin perfil.** Identificar al
-verificador es un entregable de la validación inicial, con horas de verificador senior
-costeadas en el [Anexo E](05-business-case.md); en M1-M3 la verificación de los
-compensatorios tiene 8-16 h propias (ver "Insumos para Finanzas"). Hoy la regla escrita
-para cuando no hay una persona independiente es no declarar probado el control y
-suspender o reducir el uso. Como la capacidad de seguridad está concentrada en pocas
-personas, falta decidir cómo se reduce. Propuesta de Gobierno, sin confirmar todavía
-por el responsable humano de este anexo:
+Autoridad: el Directorio adopta la estructura; el Responsable de seguridad es la A de
+contención y comunicación. Hito: la ruta escrita es entregable de M1-M3 y condición previa
+de cualquier uso del paquete mínimo; el ejercicio de mesa de M4-M6 la prueba. Consecuencia:
+sin ruta escrita no se habilita ningún uso nuevo y los existentes quedan bajo la suspensión
+preventiva de Seguridad.
 
-| Alternativa | Costo | Riesgo | Abandono |
+Para reanudar, Ingeniería produce la prueba corregida y la verifica el Responsable de
+seguridad, o el verificador senior independiente si Seguridad produjo parte de la evidencia;
+la autoridad del residual lo acepta según la tabla de este anexo, con la regla de abstención.
+El CEO, como autoridad del gate, registra la reanudación y decide los fondos dentro del techo
+del tramo, si corresponden. Así, en la reanudación productor, verificador y quien acepta son
+personas distintas ([R-06](07-resoluciones.md#autoridad-y-liberaciones)); la suspensión, que
+solo contiene, no lleva esa separación.
+
+**Verificador independiente: actividad costeada y salida sin perfil**
+([R-06](07-resoluciones.md#autoridad-y-liberaciones)). Identificar al verificador es un
+entregable de la validación inicial, con horas de verificador senior costeadas en el
+[Anexo E](05-business-case.md); en M1-M3 la verificación de los compensatorios tiene
+8-16 h propias (ver "Insumos para Finanzas"). Como la capacidad de seguridad está
+concentrada en pocas personas, la regla fija el orden de salida:
+
+| Regla | Costo | Riesgo | Abandono |
 |---|---|---|---|
-| (a) Excluir la superficie sin verificador hasta tener uno | Sin contratación externa prevista. No recupera lo ya incurrido; el ajuste de alcance y sus horas se confirman dentro del techo o se recostea | Achica la prueba y la medición de la cohorte | Si la exclusión deja sin superficies a la cohorte, se reduce o se detiene el tramo y se vuelve al autorizante |
-| (b) Verificador externo acotado | Sin cotizar: no está en ningún techo | Dependencia y plazo de contratación; exige recosteo y autorización antes de comprometerlo | Si la cotización no entra en el techo autorizado, no se contrata y rige (a) |
+| (a) Primero: excluir la superficie sin verificador hasta tener uno | Sin contratación externa. No recupera lo ya incurrido; el ajuste de alcance y sus horas se confirman dentro del techo o se recostea | Achica la prueba y la medición de la cohorte | Si la exclusión deja sin superficies a la cohorte, el tramo se reduce o se detiene y vuelve al CEO |
+| (b) Solo si está cotizado, cabe en el techo y lo autoriza el CEO: verificador externo acotado | Sin cotizar: no está en ningún techo | Dependencia y plazo de contratación | Si la cotización no entra en el techo autorizado, no se contrata y rige (a) |
 
-Recomendación de Gobierno: (a) mientras (b) no esté cotizada y autorizada. Ninguna
-de las dos permite declarar probado un control que verificó su productor.
+Ninguna de las dos permite declarar probado un control que verificó su productor.
 
-### Validación inicial: dos autorizaciones antes de M1
+### Validación inicial: dos liberaciones antes de M1
 
-**Propuesta en borrador.** El diseño se detalla en la
-[fuente de horas y techos](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial)
-y en el [Anexo F](06-roadmap-riesgo.md).
+El diseño se detalla en la
+[fuente de horas y techos](../../context/supuestos/paquete-minimo-de-aprendizaje.md#validación-inicial),
+en el [Anexo F](06-roadmap-riesgo.md) y en las resoluciones
+[R-02 a R-06](07-resoluciones.md#autoridad-y-liberaciones).
 
-El aval para incorporar la propuesta al borrador no acredita acuerdo del equipo
-ni autorización empresarial.
-
-**Primera autorización.** El Directorio o su autoridad formalmente delegada autoriza
-una preparación de diez días hábiles en 2026: 60-96 h organizativas más las 20-40 h
+**Primera liberación** (R-02). El Directorio la aprueba al aprobar el plan: una
+preparación de diez días hábiles en 2026, con 60-96 h organizativas más las 20-40 h
 técnicas existentes, total 80-136 h.
 
 El techo es 8k USD de tiempo valorizado y cero caja incremental. Operaciones y
 managers liberan las agendas y explicitan el trabajo desplazado antes de empezar;
-CAIO coordina y Finanzas concilia costo y solapes.
+el CAIO produce y el CFO verifica costo y solapes.
 
 Se contrasta el diagnóstico, concilia la capacidad semanal y revisa la versión,
 el alcance y la aprobación documentada de la política, además del estado de las
@@ -319,15 +474,18 @@ no ejecuta el dictamen externo ni habilita nuevos despliegues o contratos.
 Su verificador independiente valida evidencia organizativa; no sustituye las
 pruebas técnicas de C.
 
-**Segunda autorización, antes de M1.** La misma autoridad decide continuar, reducir o
-resecuenciar, o detener, con diagnóstico revisado, capacidad aceptada, acta de viabilidad
-técnica y presupuesto 2027 comprobado.
+**Segunda liberación, antes de M1** ([R-04, R-05](07-resoluciones.md#autoridad-y-liberaciones)).
+El CEO, por delegación del Directorio, decide continuar, reducir o resecuenciar, o detener,
+con diagnóstico revisado, capacidad aceptada, acta de viabilidad técnica con método
+ratificado por el AI Council y presupuesto 2027 comprobado.
 
-Puede liberar hasta los 71k USD restantes del pedido: el acumulado propuesto
-es 79k USD (10k USD de caja y 69k USD de tiempo), no 79k USD nuevos.
+Puede liberar hasta los 71k USD restantes del pedido: el acumulado es 79k USD (10k USD
+de caja y 69k USD de tiempo), no 79k USD nuevos. Sin acta de delegación, la segunda
+liberación la decide el Directorio en sesión y M1 no empieza hasta entonces.
 
-Productor, verificador y firmante son personas distintas, con designaciones empresariales
-pendientes; el Council recomienda y revisa riesgos, sin liberar fondos.
+Productor, verificador y firmante son personas distintas, nombradas por su rol en el acta
+de cada liberación (R-06); el CFO verifica cifras, caja y reservas, y el Council
+dictamina; ninguno de los dos libera fondos.
 
 El pase económico no habilita prácticas ni superficies. El dictamen externo de 8-16 h
 ya presupuestado permanece en M1; política, matriz y controles aplicables deben estar
@@ -337,12 +495,12 @@ La base prospectiva ocupa semanas 1-4, con extensión hasta la 8; formación y p
 empiezan después de congelarla. Los controles urgentes y la suspensión preventiva de
 Seguridad no esperan a la base.
 
-Si faltan evidencia, independencia o agendas, o se excede el techo, se reduce o detiene
-y se vuelve al autorizante antes de ampliar el alcance.
+Si faltan evidencia, independencia o agendas, se reduce o detiene y vuelve al CEO;
+superar el techo de 71k USD o ampliar el alcance vuelve al Directorio.
 
 ### Ritmo operativo
 
-**El riesgo se mira cada mes.** Después de las dos autorizaciones iniciales, la
+**El riesgo se mira cada mes.** Después de las dos liberaciones iniciales, la
 liberación de fondos sigue las decisiones trimestrales. Hay tres cadencias:
 
 | Cadencia | Qué se revisa | Dónde se hace |
@@ -353,8 +511,10 @@ liberación de fondos sigue las decisiones trimestrales. Hay tres cadencias:
 
 **Qué puede hacer la revisión mensual:** frenar o cortar un frente, activar una
 contingencia, registrar una señal en el mes en que llega y escalarla al Directorio.
-**No libera fondos:** eso queda en las autorizaciones iniciales y en las decisiones
-de los meses 3, 6, 9 y 12, a cargo del Directorio o autoridad formalmente delegada.
+**No libera fondos:** la primera liberación la aprueba el Directorio; la segunda y las
+decisiones de los meses 3, 6, 9 y 12 las firma el CEO por delegación, dentro del techo de
+cada tramo; lo que supera el techo de un tramo o la suma de 121k USD, o amplía alcance,
+vuelve al Directorio ([R-04](07-resoluciones.md#autoridad-y-liberaciones)).
 
 **Qué no cambia.** Las esperas de 6 semanas y los métodos de medición (intervalo de
 throughput, base congelada) siguen igual: el throughput necesita semanas de datos y una
@@ -381,7 +541,7 @@ ve en la revisión mensual solo como estado del tablero.
 | Capa | Qué existe | Qué se hace | Tramo |
 |---|---|---|---|
 | Principios | 4 principios documentados en el antecedente de abril (herramientas corporativas, desconfiar del output, responsable humano, lo que no se mide no se justifica) | Se propone mantenerlos, contrastando con la versión aprobada | Meses 1-3 |
-| Política | Aprobada según confirmación del responsable del caso del 20/10/2026; versión y alcance por revisar | Revisar aprobación documentada y aplicar la política; proponer tres alcances: uso interno, IA en el producto y proveedores o modelos. Los cambios requieren decisión empresarial | Meses 1-6 |
+| Política | Aprobación informada en octubre de 2026; el Directorio la ratifica como política del plan ([R-07](07-resoluciones.md#gobierno-y-seguridad)) | Dejar constancia de versión y alcance en la preparación 2026 y verificar su aplicación en el mes 3; proponer tres alcances: uso interno, IA en el producto y proveedores o modelos. Los cambios los aprueba el Directorio | Meses 1-6 |
 | Estándares | Clasificación de datos en 4 niveles y lista de lo que nunca se envía en el antecedente de abril; vigencia por contrastar | Se suma la matriz de restricciones por cliente, la escala de autonomía (niveles 0 a 4) y la de riesgo | Meses 1-3 |
 | Controles | El antecedente de abril define revisión del output, aprobación por el comité y reporte de incidentes sin sanción; implementación por probar | Se suman pasarela de salida, DLP, escaneo de secretos y logs de acciones | Meses 4-9 |
 | Evidencia | Auditoría mensual de uso prevista en el antecedente; ejecución por contrastar | Inventario, registro de riesgos, logs y actas del Council: la evidencia sale del trabajo normal | Meses 1-12 |
@@ -397,46 +557,66 @@ intake (1 a 3) miden riesgo; no son los niveles de autonomía de la escala de m�
 |---|---|---|---|
 | 1. Bajo | Autonomía "sin IA" o "asiste", datos Público o Interno, herramienta ya aprobada | Autoservicio: se registra en el inventario | Inmediato |
 | 2. Medio | Autonomía "prepara, no ejecuta" o "actúa con aprobación" sobre sistemas internos, o datos Confidenciales con herramienta aprobada | Dueño del caso y responsable de seguridad | 5 días hábiles |
-| 3. Alto | Toca código o datos de un cliente, o va dentro del producto que se vende | Cada decisión con su A de "Derechos de decisión": el uso sobre un cliente, el Responsable comercial del cliente, con la matriz verificada; la salida a producción, el Dueño de producto. El residual lo acepta quien fija el "Criterio de aceptación del riesgo residual" (por ejemplo, el Council en Media / Alto). Los datos productivos de un cliente no salen hacia un modelo externo durante el horizonte | Hasta el siguiente Council (30 días como máximo), si el residual le corresponde al Council |
-| Prohibido en el plan | Decisiones de crédito o scoring sobre personas, datos de categoría especial, autonomía "autónomo dentro de límites" con acceso a producción, datos productivos de clientes hacia un modelo externo | No se aprueba en el horizonte; reabrirlo es una decisión del cierre del mes 12 que rige después (ver "Catálogo de decisiones del Anexo C") | Ver "Escala de autonomía" |
+| 3. Alto | Toca código o datos de un cliente, o va dentro del producto que se vende | Cada decisión con su A de "Derechos de decisión": el uso sobre un cliente, el Responsable comercial del cliente, con la matriz verificada; la salida a producción, el Dueño de producto. El residual lo acepta quien fija el "Criterio de aceptación del riesgo residual" (por ejemplo, el Council en Media / Alto). Ni código ni datos de un cliente salen hacia un modelo externo durante el horizonte, salvo dentro del entorno del propio cliente y con su permiso escrito (R-08) | Hasta el siguiente Council (30 días como máximo), si el residual le corresponde al Council |
+| Prohibido en el plan | Decisiones de crédito o scoring sobre personas, datos de categoría especial, autonomía "autónomo dentro de límites" con acceso a producción, código o datos de un cliente hacia un modelo externo, salvo dentro del entorno del propio cliente y con su permiso escrito ([R-08](07-resoluciones.md#gobierno-y-seguridad)); el uso existente sobre código sin NDA sigue solo hasta el gate del mes 3 (R-09) | No se aprueba en el horizonte; reabrirlo lo decide el Directorio en el cierre del mes 12 y rige después (ver "Catálogo de decisiones del Anexo C") | Ver "Escala de autonomía" |
 
 **Cuatro decisiones que no se mezclan.** En un caso de cliente o de producto, usar IA
 sobre un cliente, salir a producción, aceptar el residual y liberar fondos tienen cada una
 su A (ver "Derechos de decisión" y "Criterio de aceptación del riesgo residual"). El Council
 revisa el caso y acepta el residual que le toca; no es una segunda A del uso ni de la
-salida a producción. Los fondos los liberan las autorizaciones iniciales y las decisiones
-de los meses 3, 6, 9 y 12; el gasto fuera del presupuesto, Finanzas.
+salida a producción. Los fondos los liberan el Directorio (primera liberación y lo que
+supere un techo) y el CEO por delegación (segunda liberación y gates de los meses 3, 6, 9
+y 12); el gasto de IA fuera del presupuesto, el CEO dentro del techo del tramo y el
+Directorio por encima, con el CFO que verifica.
 
 **Regla transitoria hasta que exista la matriz de un cliente.** Junta lo que el plan ya fija,
-para usos nuevos y existentes:
+para usos nuevos y existentes. **Código o datos de un cliente**, en todo el anexo: el código,
+la documentación, los tickets y los datos, productivos o no, que un cliente entrega o que se
+producen para él bajo contrato. Es el único término; "datos de cliente" en una tabla quiere
+decir lo mismo.
 
 - Lo que el contrato de un cliente prohíbe queda afuera, sea un uso nuevo o uno que ya
   existe (slide «Gobierno y seguridad», decisión 3). Si ya corre, lo suspende Seguridad
   como control incumplido (ver "Derechos de decisión").
-- La restricción de "Derechos de decisión" rige sin cambios: en el horizonte, IA sobre el
-  código o los datos de un cliente solo en lo que el cliente permite en su entorno, y
-  enviarlos a un modelo externo, no antes del cierre del mes 12. Donde la superficie no
-  tiene bloqueo técnico, la cubre un control compensatorio (ver "Tres cosas que no se
-  confunden").
-- **Tensión pendiente:** el intake (fila de prohibidos) y el catálogo nombran solo los
-  *datos productivos* hacia un modelo externo; la restricción de arriba alcanza al código y
-  a los datos. Hasta que el responsable humano de este anexo lo concilie, rige la restricción
-  más estricta y no se habilita ningún alcance nuevo por la redacción más corta.
-- Un uso nuevo o ampliado sobre un cliente no se habilita sin la lectura de su contrato: la
-  matriz frena los casos de cliente hasta completarse, mientras tanto cada caso se valida a
-  mano ([Anexo D](04-personas-cultura.md), "Staffing") con el Responsable comercial del
-  cliente como A, y lo ambiguo queda afuera (*default-deny*).
-- Un uso existente que toque código o datos de un cliente no se acepta automáticamente por
-  ser una herramienta aprobada: entra en la revisión del residual de usos existentes (ver
-  "Calendario del mínimo propuesto"). Este anexo no dispone detenerlo, salvo la suspensión
-  preventiva de Seguridad. Queda pendiente de decisión humana qué rige para ese uso hasta
-  tener la matriz (pausarlo o aceptarlo como residual) y si encaja en la restricción de
-  arriba; si se acepta, lo hace la autoridad que fija el criterio de aceptación (el Council,
-  con informe al CEO, si el residual es Media / Alto).
+- **Regla del horizonte** ([R-08](07-resoluciones.md#gobierno-y-seguridad)): el código o los
+  datos de un cliente no salen hacia un modelo externo, salvo dentro del entorno del propio
+  cliente y con su permiso escrito. La única excepción es la transitoria de R-09, de abajo.
+  Autoridad: el Directorio, al aprobar el plan. Hito: rige desde hoy; reabrirla es una
+  decisión del cierre del mes 12. Consecuencia: un uso que no encaje no se habilita y, si ya
+  corre, rige R-09. Donde la superficie no tiene bloqueo técnico, la cubre un control
+  compensatorio (ver "Tres cosas que no se confunden").
+- **Uso nuevo o ampliado sobre un cliente:** no se habilita sin la fila de ese cliente en la
+  matriz, con el contrato leído y verificado y el permiso escrito del cliente. Sin fila rige
+  *default-deny*: no hay validación caso por caso ni excepción comercial mientras la matriz
+  se completa. Con fila, decide el Responsable comercial del cliente (ver "Derechos de decisión").
+- **Uso existente** ([R-09](07-resoluciones.md#gobierno-y-seguridad)), en dos partes:
+  - *Código bajo NDA:* se suspende desde la aprobación del plan. Es Restringido en la
+    clasificación de datos del [antecedente de la política](../../context/hechos/gobierno-y-politica-ia.md)
+    que R-07 ratifica; si la versión ratificada difiere, rige la más restrictiva hasta la
+    constancia de la preparación. Lo ejecuta el Responsable de seguridad.
+  - *Código sin NDA:* sigue, sin ampliarse, como residual transitorio Media / Alto que acepta
+    el AI Council con informe al CEO, hasta el gate del mes 3. Se acepta el inherente, no un
+    residual mejorado sin prueba; corren los compensatorios del agente de código en cuanto
+    estén probados en M1-M3. Los datos de un cliente no entran en esta excepción.
+  - Comercial completa la matriz de los clientes principales al cierre de M1-M3 (produce
+    Operaciones, verifica Seguridad). Hito: la aceptación vence en el gate del mes 3.
+    Consecuencia: a partir de ahí el uso sigue solo si encaja en R-08 (entorno del cliente y
+    permiso escrito); prohibitivo, ambiguo o no leído, *default-deny* sobre el código de ese
+    cliente; con más de 30% ambiguo al mes 4, *default-deny* con revisión legal (ver "Legal
+    externo después de M1") y sin piloto con ese cliente. Un incidente confirmado revoca la
+    aceptación para ese cliente antes del vencimiento, y la suspensión la ejecuta el
+    Responsable de seguridad.
+  - Costo en velocidad: el uso actual sobre código de cliente fuera del entorno del cliente
+    termina en el mes 3, salvo decisión en contrario. El mínimo no depende de él (su cohorte
+    trabaja sobre repositorios propios o sintéticos). Si el Directorio quiere sostenerlo con
+    un permiso escrito que cubra la herramienta corporativa, es una ampliación de R-08 que
+    decide en el gate del mes 3, con la matriz a la vista.
 
-El plazo de 5 días hábiles es un objetivo del equipo, más rápido que las 2 a 4 semanas
-del antecedente de la política de abril, cuyo plazo vigente está por contrastar, para
-que el control no empuje el uso fuera del sistema oficial. El cambio requiere decisión empresarial.
+El plazo de 5 días hábiles es más rápido que las 2 a 4 semanas del antecedente de la
+política de abril, cuyo plazo vigente está por contrastar, para que el control no empuje
+el uso fuera del sistema oficial. Es un cambio de política: lo aprueba el Directorio
+(R-07) junto con los cambios de alcance de la política en M1-M3; hasta entonces rige el
+plazo de la versión ratificada.
 
 ### Escala de autonomía: topes para los 12 meses
 
@@ -455,7 +635,7 @@ La escala tiene cinco niveles, con el nombre fijo que se usa en todo el anexo:
 | Agentes de código internos con Claude Code, Copilot | Nivel 3 (actúa con aprobación) y *hooks* de permisos | Sí |
 | Agentes de código con credenciales productivas | Nivel 2 (prepara, no ejecuta) | Sí |
 | Nivel 4 (autónomo dentro de límites) | Solo en *sandbox*, sin credenciales productivas ni acceso a datos de cliente. Con efectos externos, no en el horizonte | Sí |
-| Funciones de IA dentro del producto que se vende | Niveles 1-2 ("asiste" y "prepara, no ejecuta") durante todo el horizonte. Subir al nivel 3 es una decisión del cierre del mes 12 (efecto externo), que rige después | Sí hasta que se activa; luego es irreversible (ver "Catálogo de decisiones del Anexo C") |
+| Funciones de IA dentro del producto que se vende | Niveles 1-2 ("asiste" y "prepara, no ejecuta") durante todo el horizonte. Subir al nivel 3 es una decisión irreversible que toma el Directorio, con dictamen del AI Council, en el cierre del mes 12, y rige después ([R-32](07-resoluciones.md#roadmap-y-comercial)) | Sí hasta que se activa; luego es irreversible (ver "Catálogo de decisiones del Anexo C") |
 
 La escala de autonomía es un marco de referencia, no un estándar oficial.
 
@@ -466,54 +646,68 @@ La escala de autonomía es un marco de referencia, no un estándar oficial.
   y fintechs no vuelve por sí solo de alto riesgo un uso, y la fuente regulatoria de este
   anexo no acredita un régimen específico del BCRA para crédito o scoring. La exclusión evita
   cargar con los deberes de proveedor de un caso crediticio del Anexo III si un cliente opera
-  en la UE (disparador, ver más abajo) mientras los controles maduran. Es **reversible**: el cierre del mes 12 decide si se reabre
-  para el plan siguiente, si un cliente lo pide y el Council aprueba el costo de proveedor de
-  alto riesgo; no se ejecuta dentro del horizonte.
+  en la UE (disparador, ver más abajo) mientras los controles maduran. Es **reversible**: el
+  Directorio decide en el cierre del mes 12 si se reabre para el plan siguiente
+  ([R-08](07-resoluciones.md#gobierno-y-seguridad)), si un cliente lo pide, con Legal
+  externo y dictamen del Council sobre el costo de proveedor de alto riesgo; no se ejecuta
+  dentro del horizonte.
   Excluir el crédito no demuestra por sí solo que no haya otros usos de alto riesgo (empleo,
   educación): el intake pregunta por cada categoría del Anexo III y un sí pasa el caso a
   Nivel 3 con Legal externo.
-- **ISO/IEC 42001: alinear, no certificar en el año.** Se extiende el alcance de la ISO
+- **ISO/IEC 42001: alinear, no certificar en el año** ([fuente](../../material/conceptos/m1u4-eu-ai-act-nist-iso.md)). Se extiende el alcance de la ISO
   27001 existente con los controles de IA y se registra la brecha frente a 42001. Alternativa
   descartada por ahora: certificar 42001, que suma costo de auditoría y carga documental sin
   que haya hoy un cliente que lo exija ([supuesto](../../context/supuestos/apetito-de-riesgo-de-clientes.md)).
-  La decisión de certificar se toma en el cierre del mes 12 y es **reversible**.
+  La decisión de certificar la toma el Directorio en el cierre del mes 12, con el costeo del
+  año 2 ([R-32](07-resoluciones.md#roadmap-y-comercial)), y es **reversible**.
 - **EU AI Act: tratarlo como disparador, no como obligación.** Se pregunta a cada cliente
   si opera en la UE o usa resultados allá. Si la respuesta es sí, el caso pasa a Nivel 3.
 - **El NIST AI RMF organiza el registro de riesgos** (Govern, Map, Measure, Manage):
   cada riesgo lleva su función, su prueba y su evidencia (ver Riesgos). Se declara
   alineación, sin buscar cumplimiento formal.
-- **La política aprobada se documenta y aplica (meses 1-3).** Se revisan versión,
-  alcance y constancia de aprobación; no se pide aprobarla de nuevo. Los cambios
-  propuestos siguen el derecho de decisión del Directorio y son compromisos internos
-  enmendables: no firman nada con un cliente. Se propone revisión anual y revisión
-  extraordinaria en la lectura del mes 6.
+- **La política ratificada se documenta y aplica (meses 1-3)**
+  ([R-07](07-resoluciones.md#gobierno-y-seguridad)). El Directorio la ratifica al aprobar el
+  plan; la preparación 2026 deja constancia de versión y alcance, y el mes 3 verifica que se
+  aplique y su alcance aplicable al producto. La mantiene el Responsable de seguridad. Sin
+  constancia al cierre de la preparación, la segunda liberación no se firma hasta que el
+  Directorio la deje asentada. Si en el mes 3 la aplicación o la cobertura aplicable al
+  producto no están demostradas, hay 6 semanas para completarlas, sin casos nuevos (es la
+  espera de R-07 en el mes 3, distinta de la espera única de los meses 6 y 9 de R-27); al vencer sin
+  demostrarlas, no hay frente producto en el año. Los cambios los aprueba el Directorio y
+  son compromisos internos enmendables: no firman nada con un cliente. Revisión anual y
+  revisión extraordinaria en la lectura del mes 6.
 
 ### Catálogo de decisiones del Anexo C: ámbito, fecha y compromiso
 
 Tres pasos que no se confunden: **aprobación interna** (Council o Directorio),
 **negociación no vinculante** con un cliente y **firma** de un compromiso. Ninguna
-excepción puede contradecir una prohibición del horizonte.
+excepción puede contradecir una prohibición del horizonte. Las puertas de un solo sentido
+las decide el Directorio, con dictamen del AI Council, en el cierre del mes 12, y rigen
+para el plan siguiente ([R-32](07-resoluciones.md#roadmap-y-comercial)); sin esa
+resolución, ninguna se ejecuta y el año 2 no se financia por defecto.
 
 | Decisión | Ámbito | Fecha mínima | Autoridad | Condición | Compromiso exacto |
 |---|---|---|---|---|---|
-| Decidir cambios de alcance de la política aprobada | Interno | Meses 1-3 | Directorio | Segunda autorización: M1-M3 tras la validación inicial; versión, alcance y aprobación documentada revisados | Compromiso interno enmendable; sin firma con clientes; no es una nueva aprobación de la política existente |
+| Decidir cambios de alcance de la política ratificada | Interno | Meses 1-3 | Directorio ([R-07](07-resoluciones.md#gobierno-y-seguridad)) | Segunda liberación: M1-M3 tras la validación inicial; versión y alcance con constancia | Compromiso interno enmendable; sin firma con clientes |
 | Cláusula tipo de IA para contratos | Interno y negociación | Meses 7-9 | Council | Una función de IA con documentación técnica y supervisión humana | Texto listo y negociación no vinculante |
-| Firma de un compromiso contractual de IA con un cliente | Externo | Cierre del mes 12 | Council | Cláusula tipo, matriz del cliente y red team sin críticos | Irreversible: el compromiso queda firmado |
-| Enviar datos productivos de un cliente a un modelo externo | Externo | No antes del cierre del mes 12 | Responsable comercial del cliente (A del uso); el residual lo acepta el Council según el criterio de aceptación | Cláusula firmada, matriz y controles demostrados | Irreversible |
-| Subir una función de IA del producto al nivel 3 (actúa con aprobación) | Externo | Cierre del mes 12 | Council | Evidencia del piloto y red team externo sin críticos | Rige después del horizonte |
-| Nivel 4 (autónomo dentro de límites) con efectos externos o acceso a producción | Externo | Fuera del horizonte | Council | Decisión del cierre del mes 12 para el plan siguiente | Prohibido hasta entonces |
-| Reabrir crédito o scoring | Producto | Cierre del mes 12 (decisión) | Council con Legal externo | Pedido de un cliente y costo de proveedor de alto riesgo aprobado | Rige después del horizonte |
+| Firma de un compromiso contractual de IA con un cliente | Externo | Cierre del mes 12 | Directorio, con dictamen del AI Council (R-32) | Cláusula tipo, matriz del cliente y red team sin críticos | Irreversible: el compromiso queda firmado |
+| Enviar código o datos de un cliente a un modelo externo, fuera del entorno del cliente | Externo | No antes del cierre del mes 12 | Directorio, con dictamen del AI Council (R-32); propone el Responsable comercial del cliente y el residual lo valora el Council según el criterio de aceptación | Cláusula firmada, matriz y controles demostrados | Irreversible |
+| Subir una función de IA del producto al nivel 3 (actúa con aprobación) | Externo | Cierre del mes 12 | Directorio, con dictamen del AI Council (R-32) | Evidencia del piloto y red team externo sin críticos | Irreversible; rige después del horizonte |
+| Hardware propio o consumo comprometido a más de 12 meses | Externo | Cierre del mes 12 | Directorio, con dictamen del AI Council (R-32) | Año 2 costeado aparte | Irreversible |
+| Ajustar un modelo con datos de cliente | Externo | Fuera del horizonte | Directorio (R-32) | Ninguna dentro del plan | Prohibido en el horizonte |
+| Nivel 4 (autónomo dentro de límites) con efectos externos o acceso a producción | Externo | Fuera del horizonte | Directorio, con dictamen del AI Council, en el cierre del mes 12 para el plan siguiente | Escala de autonomía del plan siguiente | Prohibido hasta entonces |
+| Reabrir crédito o scoring | Producto | Cierre del mes 12 (decisión) | Directorio, con Legal externo y dictamen del AI Council ([R-08](07-resoluciones.md#gobierno-y-seguridad)) | Pedido de un cliente y costo de proveedor de alto riesgo costeado | Rige después del horizonte |
 
 ### Seguridad: modelo de amenazas y controles
 
-Las amenazas siguen el OWASP Top 10 for LLM Applications 2025 (LLM01 inyección de
+Las amenazas siguen el OWASP Top 10 for LLM Applications 2025 ([identificadores cotejados en la fuente de la unidad](../../material/unidades/m3u1-seguridad.md): LLM01 inyección de
 prompts, LLM02 divulgación de información sensible, LLM06 agencia excesiva, LLM07 filtración
-del prompt del sistema), que complementa el marco de seguridad de sistemas de IA (ataques y defensa, de prompt
-injection a red teaming; [unidad](../../material/unidades/m3u1-seguridad.md)).
+del prompt del sistema), que complementa el marco de seguridad de sistemas de IA de esa unidad
+(ataques y defensa, de prompt injection a red teaming).
 
 | Amenaza | Prevención | Detección | Respuesta | Conexión con lo existente |
 |---|---|---|---|---|
-| Inyección de prompts directa e indirecta | Mínimo privilegio, contenido no confiable segregado, validación de salida con código | Logs de acciones de agentes y alertas de desvío | Red teaming interno (meses 4-6) y externo (meses 10-12) | Revisión de PR obligatoria para código con IA ([fuente](../../context/hechos/stack-y-plataforma.md)) |
+| Inyección de prompts directa e indirecta | Mínimo privilegio, contenido no confiable segregado, validación de salida con código | Logs de acciones de agentes y alertas de desvío | Red team interno acotado antes de habilitar (M1-M3), de la pasarela (M4-M6, con plataforma) y externo (M10-M12, con señal) | Revisión de PR obligatoria para código con IA ([fuente](../../context/hechos/stack-y-plataforma.md)) |
 | Fuga de datos (DLP) | Clasificación de 4 niveles, anonimización, cifrado, control de acceso | Escaneo de secretos y PII en prompts | Plan de incidentes con aviso al cliente | Política con aprobación informada, definiciones de abril por contrastar y controles por probar; cuentas AWS separadas por proyecto |
 | Aislamiento de datos de clientes | Entornos y credenciales por cliente; la IA no cruza datos entre proyectos | Auditoría del acceso por proyecto | Suspensión por cliente | Staffing opera con las herramientas de cada cliente, fuera del alcance del control |
 | Cadena de suministro (modelos, servidores MCP, proveedores) | Lista cerrada de servidores MCP, contrato sin entrenamiento, revisión de cambios del proveedor | Revisión mensual de proveedores y subprocesadores | Retiro del proveedor | Contrato organizacional de agentes de código |
@@ -521,26 +715,27 @@ injection a red teaming; [unidad](../../material/unidades/m3u1-seguridad.md)).
 
 **Matriz superficie → control → telemetría.** La pasarela enruta llamadas a modelos; los tres
 productos corporativos tienen superficies que quizá no pasen por ella
-([fuente](../../context/hechos/uso-ia-interno.md)). Lo siguiente es el diseño a probar en los
-meses 4-6, no una capacidad demostrada: ningún control de esta tabla se verificó contra el
-producto real.
+([fuente](../../context/hechos/uso-ia-interno.md)). Lo siguiente es diseño, no una capacidad
+demostrada: ningún control de esta tabla se verificó contra el producto real. Toda superficie
+que se use en M1-M3 prueba sus controles locales en M1-M3, antes de habilitarse (R-11); la
+pasarela y su cobertura se prueban en M4-M6, solo en la rama con plataforma.
 
 **Tres cosas que no se confunden.** *Prohibición*: lo que la política dice que no se hace;
 rige en todas las superficies, pero por sí sola no impide nada. *Bloqueo técnico*: un control
 que detiene el envío (pasarela con DLP, escaneo de secretos antes del envío); solo existe donde
-la superficie lo admite y se prueba en los meses 4-6. *Control compensatorio*: lo que reemplaza al
+la superficie lo admite y se prueba antes de habilitarla: el local en M1-M3 y la pasarela en M4-M6. *Control compensatorio*: lo que reemplaza al
 bloqueo donde no se puede bloquear (cuentas corporativas, consola de administración, rotación,
 auditoría); detecta o reduce, no previene. Donde hay prohibición sin bloqueo técnico queda un
-**residual** que acepta el Council (criterio de aceptación) y que se informa al board.
+**residual** que acepta el Council (criterio de aceptación) y que se informa al Directorio.
 
 | Superficie | Prohibición (política) | Bloqueo técnico | Control compensatorio | Telemetría | Riesgo de *bypass* | Estado |
 |---|---|---|---|---|---|---|
-| Casos propios (producto y agentes internos nuevos) | Datos prohibidos y secretos | Solo por la pasarela, 100%: DLP y escaneo de secretos | No hace falta: no tienen otra ruta | Logs de la pasarela | Bajo: sin ruta alternativa por diseño | Por diseño; a probar en los meses 4-6 |
-| Agente de código en terminal (~90% de los eventos de ese agente) | Secretos y datos de cliente | *Hooks* de permisos y escaneo de secretos en el equipo y el repositorio, siempre. DLP sobre prompts en la pasarela **solo si el régimen comercial permite enrutarlo** (suscripción que permite gateway o pago por consumo; [Anexo B](02-arquitectura.md), "Política de ruteo") | Suscripción que no permite gateway (la suscripción plana se rompería): lista cerrada de MCP, telemetría existente y ruteo ensayado, listo para activarse | Consola del proveedor; logs de la pasarela si se enruta | Uso con una cuenta o configuración personal | A probar en los meses 4-6 |
-| Asistente de código en el IDE | Secretos y datos de cliente | Ninguno demostrado: no pasa por la pasarela hasta probar lo contrario | Política de la organización del proveedor y lista de repos permitidos | Consola de administración del proveedor | Alto: sin ruta por la pasarela | A probar en los meses 4-6; si no hay control técnico, rige la política y se reporta aparte |
-| Chat y escritorio del asistente general | Datos Restringidos y de cliente | Bloqueo en navegador o equipo, solo si el parque lo permite (a probar) | Cuentas corporativas, ajustes de retención y conectores | Consola de administración | Alto: cuentas personales | A probar en los meses 4-6 |
-| Asistente de la suite ofimática | Datos Restringidos y de cliente | Ninguno de la organización: lo da la configuración del administrador | Revisión mensual de funciones nuevas (riesgo de IA embebida sin aprobar) | Registros de auditoría de la suite | Medio: activación por defecto del proveedor | A probar en los meses 4-6 |
-| Servidores MCP y conectores | Servidores fuera de la lista | Lista cerrada (allowlist) donde se pueda imponer | Revisión de cambios e inventario | Inventario y logs de la pasarela | Medio: instalación local por una persona | A probar en los meses 4-6 |
+| Casos propios (producto y agentes internos nuevos) | Datos prohibidos y secretos | Solo por la pasarela, 100%: DLP y escaneo de secretos | No hace falta: no tienen otra ruta | Logs de la pasarela | Bajo: sin ruta alternativa por diseño | Por diseño; solo con plataforma, a probar en M4-M6 |
+| Agente de código en terminal (~90% de los eventos de ese agente) | Secretos y datos de cliente | *Hooks* de permisos y escaneo de secretos en el equipo y el repositorio, siempre. DLP sobre prompts en la pasarela **solo si el régimen comercial permite enrutarlo** (suscripción que permite gateway o pago por consumo; [Anexo B](02-arquitectura.md), "Política de ruteo") | Suscripción que no permite gateway (la suscripción plana se rompería): lista cerrada de MCP, telemetría existente y ruteo ensayado, listo para activarse | Consola del proveedor; logs de la pasarela si se enruta | Uso con una cuenta o configuración personal | Local: M1-M3 si se usa en el mínimo (R-11); pasarela: M4-M6, solo con plataforma |
+| Asistente de código en el IDE | Secretos y datos de cliente | Ninguno demostrado: no pasa por la pasarela hasta probar lo contrario | Política de la organización del proveedor y lista de repos permitidos | Consola de administración del proveedor | Alto: sin ruta por la pasarela | M1-M3 si se usa en el mínimo (R-11), si no M4-M6; si no hay control técnico, rige la política y se reporta aparte |
+| Chat y escritorio del asistente general | Datos Restringidos y de cliente | Bloqueo en navegador o equipo, solo si el parque lo permite (a probar) | Cuentas corporativas, ajustes de retención y conectores | Consola de administración | Alto: cuentas personales | M1-M3 si se usa en el mínimo (R-11), si no M4-M6 |
+| Asistente de la suite ofimática | Datos Restringidos y de cliente | Ninguno de la organización: lo da la configuración del administrador | Revisión mensual de funciones nuevas (riesgo de IA embebida sin aprobar) | Registros de auditoría de la suite | Medio: activación por defecto del proveedor | M1-M3 si se usa en el mínimo (R-11), si no M4-M6 |
+| Servidores MCP y conectores | Servidores fuera de la lista | Lista cerrada (allowlist) donde se pueda imponer | Revisión de cambios e inventario | Inventario y logs de la pasarela | Medio: instalación local por una persona | M1-M3 si se usa en el mínimo (R-11), si no M4-M6 |
 
 **Denominador del 90%.** Eventos del agente de código en terminal que la telemetría de la
 pasarela cuenta sobre el total de eventos del agente (según la consola del proveedor). El 90%
@@ -568,17 +763,19 @@ tienen cotización y sus montos son los supuestos ya publicados ([precios sin co
 
 | Ejercicio | Qué prueba | Cuándo y condición | Costo | Dueño |
 |---|---|---|---|---|
-| Interno acotado al agente de código | Inyección indirecta y acciones no autorizadas con repositorios y tickets sintéticos | Las dos ramas; antes de habilitar cada uso del mínimo M1-M3 | Tiempo, dentro de la prueba previa por superficie de este anexo y del aporte de seguridad del [Anexo B](02-arquitectura.md) | Gobierno |
-| Interno de la pasarela y las superficies | Bloqueo, registro y *bypass* con la plataforma | Meses 4-6, solo con señal en el mes 3 | 40-80 h: 750-3.750 USD de tiempo | Gobierno |
-| Del piloto de producto | La primera función de IA antes de salir | Meses 7-9, solo con señal de cliente en el mes 6 | 5.000-15.000 USD de caja | Arquitectura, con Gobierno |
-| Externo | Evidencia de un tercero para clientes y para la firma del mes 12 | Meses 10-12, solo con señal contractual o producto en el mes 9 | 10.000-25.000 USD de caja | Gobierno |
+| Interno acotado al agente de código | Inyección indirecta y acciones no autorizadas con repositorios y tickets sintéticos | Las dos ramas; antes de habilitar cada uso del mínimo M1-M3 | Tiempo, dentro de la prueba previa por superficie de este anexo y del aporte de seguridad del [Anexo B](02-arquitectura.md) | Responsable de seguridad |
+| Interno de la pasarela y las superficies | Bloqueo, registro y *bypass* con la plataforma | Meses 4-6, solo con señal en el mes 3 | 40-80 h: 750-3.750 USD de tiempo | Responsable de seguridad |
+| Del piloto de producto | La primera función de IA antes de salir | Meses 7-9, solo con señal de cliente en el mes 6 | 5.000-15.000 USD de caja | Responsable de Tecnología, con el Responsable de seguridad |
+| Externo | Evidencia de un tercero para clientes y para la firma del mes 12 | Meses 10-12, solo con señal contractual o producto en el mes 9 | 10.000-25.000 USD de caja | Responsable de seguridad |
 
-**Desacuerdo a la vista (piloto y externo).** Cubren alcances distintos y no se suman ni
-se sustituyen automáticamente. El [Anexo E](05-business-case.md) estima un ahorro de
-5.000-15.000 USD si el producto se libera y un mismo contrato cubre el piloto y la
-reprueba. Criterio de Gobierno: el ejercicio del piloto reemplaza al externo solo si su
-alcance incluye las superficies y controles que pida el cliente, no solo el producto.
-Lo concilian Arquitectura, Gobierno y Finanzas; si no hay producto, no hay solape.
+**Piloto y externo: un solo contrato si se libera el producto**
+([R-30](07-resoluciones.md#roadmap-y-comercial)). Cubren alcances distintos y no se suman
+dos veces. Si el Directorio libera la construcción del producto en el gate del mes 6, un
+único contrato de red team cubre piloto, reprueba y las superficies y controles que pida el
+cliente; el [Anexo E](05-business-case.md) estima en eso un ahorro de 5.000-15.000 USD.
+El Responsable de seguridad define el alcance con el Responsable de Tecnología y el CFO
+verifica la cotización. Sin cotización verificada, el piloto no sale a clientes; si no hay
+producto, no hay solape y el externo sigue su propia condición del mes 9.
 
 ### Controles por tramo
 
@@ -600,22 +797,30 @@ alternativa de gobierno mínimo y formación del [Anexo E](05-business-case.md),
 1. La función legal es externa y su costo es un supuesto sin cotización.
 2. El rol de Acme Labs frente a la Ley 25.326 (responsable o encargado del tratamiento)
    necesita asesoría.
-3. Los textos ordenados del BCRA de tecnología (13/02/2026) y de PSP (02/10/2026) obligan a la
-   entidad respecto de la IA y de sus terceros (ver la tabla del marco), pero no prueban que un
-   cliente le exija controles de IA a Acme Labs; eso lo prueba, o no, la evidencia contractual
-   (ver "Licencia para vender"). Los cambios posteriores a esas fechas se revisan antes de la entrega.
-4. Legal externo debe confirmar alcance, versión vigente, rol y excepciones de BCRA, AI Act y Ley 25.326; esta lectura no valida ninguna de esas obligaciones.
+3. Según la fuente verificada, los textos ordenados del BCRA de tecnología (13/02/2026) y de PSP
+   (02/10/2026) se dirigen a la entidad respecto de la IA y de sus terceros (ver la tabla del
+   marco). No prueban que un cliente le exija controles de IA a Acme Labs; eso lo prueba, o no,
+   la evidencia contractual (ver "Licencia para vender"). Su vigencia posterior a esas fechas y
+   su alcance sobre cada cliente son supuestos sin uso decisorio: el plan no cuenta con ellos
+   para ninguna decisión ni compromete un recotejo antes de la entrega.
+4. El alcance, la versión vigente, el rol y las excepciones de BCRA, AI Act y Ley 25.326 los
+   revisa Legal externo en el dictamen focalizado de M1 (ver "Insumos para Finanzas"), como
+   actividad de ejecución. Esta lectura no valida ninguna de esas obligaciones; si el dictamen
+   agrega un requisito, el control sube a exigible en el gate siguiente (R-11).
 5. La matriz de restricciones de clientes depende del área comercial y no existe todavía
    ([fuente](../../context/hechos/gobierno-y-politica-ia.md)).
-6. Los residuales del registro y los umbrales de señal son propuestas del equipo: se
-   confirman con las pruebas de los meses 4-6 y con la evidencia contractual de los meses 1-3.
+6. Los residuales del registro son objetivos que se confirman con las pruebas de los meses
+   4-6 (R-10); los umbrales de señal son la calibración de una regla ratificada (R-15), que
+   se contrasta con la evidencia contractual de los meses 1-3.
 
 ### Licencia para vender: qué evidencia la sostiene y qué cuesta el gobierno mínimo
 
 **Problema.** El deck dice que la base compra "licencia para venderles a bancos". Hoy eso
 se apoya en un [supuesto](../../context/supuestos/apetito-de-riesgo-de-clientes.md), no
-en contratos. El BCRA obliga al banco a gestionar la IA de sus terceros y a formalizar esa
-relación; eso no prueba que le exija controles a Acme Labs ni que le compre IA. Pedir controles tampoco es
+en contratos. El texto ordenado del BCRA al 13/02/2026 le pide al banco gestionar la IA de
+sus terceros y formalizar esa relación ([fuente verificada](../../context/hechos/regulacion-clientes-financieros.md));
+eso no prueba que le exija controles a Acme Labs ni que le compre IA, y la decisión del mes 3
+no se apoya en esa norma sino en la evidencia contractual. Pedir controles tampoco es
 pedir IA: son dos señales distintas.
 
 **Tres paquetes, con los renglones de "Insumos para Finanzas".** El paquete se parte según
@@ -641,13 +846,13 @@ año corre como la alternativa de gobierno mínimo y formación del Anexo E y cu
 más hasta 1.875-9.375 USD de tiempo de los controles compensatorios (ver "Controles según la
 decisión del mes 3"; el Anexo E los suma a esa rama, que en todo el plan da ≈ 199k USD en el año). Ahorra
 la caja de los controles técnicos (4.500-18.000 USD) y la de la demostración externa
-(11.600-31.000 USD). **Desacuerdo a la vista:** una
-alternativa financia los controles técnicos por riesgo propio, porque los riesgos de datos de
+(11.600-31.000 USD). **Alternativa descartada:** financiar los controles técnicos por riesgo propio, porque los riesgos de datos de
 cliente en un modelo externo y de fuga de secretos exponen a Acme Labs aunque no venda
-IA, y eso es cierto. En la rama sin plataforma ese riesgo no se mitiga con
-pasarela: se acepta como residual con controles compensatorios. Quien quiera los controles
-técnicos sin señal tiene que pedir una excepción al board, con su caja. Las cuatro
-condiciones propuestas más abajo requieren ratificación del Council o del Directorio; no se dan por aprobadas.
+IA, y eso es cierto. Quedó descartada por la regla de plataforma
+([R-15](07-resoluciones.md#arquitectura-y-medición)): en la rama sin plataforma ese riesgo
+no se mitiga con pasarela, se acepta como residual con controles compensatorios. Financiar
+los controles técnicos sin señal amplía el alcance y lo decide el Directorio, con su caja.
+Las cuatro condiciones de más abajo las ratifica el Directorio al aprobar el plan (R-15).
 
 **Qué evidencia se pide (meses 1-3).** No se inventan clientes ni cláusulas: se leen los
 documentos que ya existen, con la misma lectura que arma la matriz.
@@ -663,9 +868,10 @@ documentos que ya existen, con la misma lectura que arma la matriz.
 (los de la fuente de cartera, sin segmento), tipo de documento, fecha, texto del requisito, clasificación
 (prohíbe, condiciona, pide evidencia de controles, pide IA, silencio), si es condición o
 pregunta, y horizonte (vigente o renovación con fecha). Fuera de ese registro sale solo el
-agregado, sin alias ni textos, como agregado anonimizado que valida una persona designada.
+agregado, sin alias ni textos, como agregado anonimizado que verifica el Responsable de Tecnología.
 
-**Umbral que la convierte en señal** (propuesta,
+**Umbral que la convierte en señal** (regla ratificada por el Directorio,
+[R-15](07-resoluciones.md#arquitectura-y-medición); la calibración sigue siendo
 [supuesto](../../context/supuestos/umbral-de-evidencia-contractual.md)). La señal
 contractual es una de las tres que puede liberar la plataforma en el mes 3; se lee al fin de
 los meses 1-3 y se vuelve a leer en los meses 6 y 9.
@@ -673,7 +879,7 @@ los meses 1-3 y se vuelve a leer en los meses 6 y 9.
 | Señal | Umbral | Cuenta en el mes 3 | Qué decide |
 |---|---|---|---|
 | Restricción | Al menos un contrato de los cinco primeros prohíbe o condiciona la IA de terceros | Sí: prohibición y condicionamiento cuentan como restricción, igual que en la fuente del umbral. Registrar cuál de las dos aplica | La prohibición pura se cumple excluyendo el uso afectado; no libera plataforma. Si condiciona, documentar los controles exigidos y evaluar la respuesta |
-| Licencia para vender | Uno de los dos primeros clientes, o dos de los cinco primeros, piden evidencia de controles de IA como condición o puntaje de contratación o renovación dentro de 18 meses. Las preguntas sin consecuencia no cuentan | Sí | Bajo la regla vigente, habilita liberar los controles técnicos en el mes 3, solos o con otra señal; la demostración externa se decide en el mes 9. Ver propuesta de condiciones adicionales |
+| Licencia para vender | Uno de los dos primeros clientes, o dos de los cinco primeros, piden evidencia de controles de IA como condición o puntaje de contratación o renovación dentro de 18 meses. Las preguntas sin consecuencia no cuentan | Sí | Con las cuatro condiciones de R-15, habilita que el Directorio libere los controles técnicos en el mes 3, solos o con otra señal; la demostración externa se decide en el mes 9 |
 | Demanda | Un cliente pide una función de IA | No es esta señal: es la de cliente para el producto, que define el [Anexo F](06-roadmap-riesgo.md) | Libera el piloto de producto en el mes 6 |
 | Sin señal | Ninguna de las anteriores | Sin señal contractual en el mes 3 | Meses 4-12 como la alternativa de gobierno mínimo y formación (ver "Controles según la decisión del mes 3"); los meses 6 y 9 releen |
 
@@ -683,14 +889,15 @@ condicionamiento como la prohibición, como la
 autoriza el uso prohibido ni justifica comprar plataforma. La exclusión del uso afectado
 es la respuesta a una prohibición pura; el Council registra su cumplimiento.
 
-**Regla vigente y condiciones adicionales propuestas.** El [Anexo E](05-business-case.md) y el
-[Anexo F](06-roadmap-riesgo.md) liberan plataforma ante al menos una de las señales de
-contrato, precio por consumo o cliente. La redacción "restricción o licencia" tiene que
-alinearse con la exclusión de la prohibición pura. Los umbrales contractuales siguen siendo supuestos
-sin ratificar; este anexo no presupone una decisión nueva del board.
+**Regla de gate: señal más cuatro condiciones** ([R-15](07-resoluciones.md#arquitectura-y-medición)).
+Liberar plataforma en el mes 3, 6 o 9 exige al menos una señal (contractual, de precio por
+consumo o de cliente, con los umbrales de la tabla) y además las cuatro condiciones de
+abajo. Una prohibición pura excluye el uso y no libera plataforma. El Directorio ratifica
+la regla al aprobar el plan, libera los fondos de plataforma y es el único que acepta la
+pérdida de aprendizaje; recalibrar los umbrales también es suyo, en un gate, a propuesta
+del AI Council. La ratificación es del criterio, no de que exista una señal.
 
-**Cuatro condiciones adicionales propuestas, pendientes de ratificación por el
-Council o el Directorio.** Ante una señal, se recomienda evaluar la respuesta mínima y exigir:
+**Cuatro condiciones ratificadas.** Ante una señal, se evalúa la respuesta mínima y se exige:
 
 1. **Brecha documentada:** requisito y superficie afectados, control actual probado y
    residual; explicar qué falta y por qué excluir el uso o configurar lo existente no alcanza.
@@ -702,12 +909,13 @@ Council o el Directorio.** Ante una señal, se recomienda evaluar la respuesta m
 4. **Capacidad demostrada:** horas por rol liberadas, operación y mantenimiento asignables,
    dependencia comercial validada y controles aplicables probados antes de ampliar.
 
-El Council recomienda con evidencia; una persona designada por el Directorio firma la
-decisión del gate y el presupuesto, con nombre y alcance de autoridad en el acta
-**a designar**. No decide un sistema de IA ni un indicador automático. Estas cuatro
-condiciones no sustituyen la regla vigente hasta su ratificación. Si se ratifican y falta
-brecha incremental, se difiere plataforma y se reevalúa en los meses 6 y 9; no se la pasa por defecto
-al año 2. Un control obligatorio incumplido suspende el uso afectado.
+Producen la evidencia el Responsable de Tecnología (1, 2 y la parte técnica de 4), Personas
+(horas de 4) y el CFO (3); el Responsable de seguridad verifica los controles de 1 y 4; el
+AI Council dictamina, con el acta que registra quién produjo y quién verificó. El CEO firma
+el gate dentro del techo del tramo; la plataforma la libera el Directorio. No decide un sistema de IA ni un indicador automático. Hito: regla desde hoy;
+aplicación en los meses 3, 6 y 9. Consecuencia: si falta una condición, no se libera
+plataforma, sigue el mínimo costeado y se relee en los meses 6 y 9; no pasa al año 2 por
+defecto. Un control obligatorio incumplido suspende el uso afectado.
 
 **Cómo se lee en el mes 3.** La evidencia de los meses 1-3 son los mismos contratos de la
 matriz, que ya es condición de la decisión del mes 3; los cuestionarios, RFP y auditorías
@@ -715,13 +923,14 @@ pueden llegar después.
 
 - **Quién produce:** los roles de la tabla de fuentes; seguridad consolida el agregado
   (cuántos de los cinco primeros, qué clasificación, sin alias ni textos). **Quién verifica:**
-  una persona del equipo distinta del productor, con Legal externo para los textos ambiguos.
-  **Quién declara la señal:** el Council sobre esa verificación. **Quién firma el gate:**
-  la persona designada por el Directorio, con autoridad y límites asentados. Las tres
-  personas (productor, verificador y autoridad del gate) están a designar.
-- **Cuándo:** el agregado llega al Council al menos dos semanas antes de la decisión del mes 3
-  (propuesta, a fijar antes de la segunda liberación). El agregado anonimizado lo valida una persona
-  designada antes; hasta entonces es supuesto y no sustenta la decisión.
+  el Responsable de Tecnología, distinto de quien consolida, con Legal externo para los
+  textos ambiguos. **Quién declara la señal:** el Council sobre esa verificación. **Quién
+  firma el gate:** el CEO, por delegación del Directorio; la plataforma la libera el
+  Directorio ([R-06](07-resoluciones.md#autoridad-y-liberaciones), R-15). Las personas se
+  nombran en el acta de la segunda liberación.
+- **Cuándo:** el agregado llega al Council al menos dos semanas antes de la decisión del mes 3.
+  Sin la verificación del Responsable de Tecnología, el agregado no sustenta la decisión y
+  el resultado es "sin señal por lectura incompleta".
 - **Qué cuenta:** solo el documento leído y clasificado. El ambiguo o no leído no cuenta;
   si por eso no se llega al umbral, el resultado es "sin señal por lectura incompleta" y no
   "señal no probada", se completa en los meses 4-6 (como dice el Anexo E) y se relee en la
@@ -730,7 +939,7 @@ pueden llegar después.
   cuestionarios) y la lectura que faltaba. Una señal que aparece en el mes 6 libera los
   controles técnicos desde los meses 7-9; una que aparece en el mes 9, desde los meses 10-12
   (ver "Controles según la decisión del mes 3"). La prohibición pura sigue excluyendo el
-  uso; las cuatro condiciones adicionales solo rigen si fueron ratificadas.
+  uso; las cuatro condiciones de R-15 rigen en cada lectura.
 
 La lectura cabe en las horas de la matriz porque son los mismos contratos. Si no
 alcanza, el faltante es de 20-40 h de analista funcional (250-1.375 USD: 12,5-34,375 USD/h,
@@ -742,7 +951,7 @@ Cada control dice si rige desde la decisión del mes 3 en las dos ramas o solo s
 decisión libera la plataforma. La velocidad que cuesta es la de "Controles por tramo"; los
 compensatorios son tiempo, sin caja.
 
-**Requisito previo por superficie (propuesta del equipo).** Antes de ejecutar una prueba
+**Requisito previo por superficie** ([R-11](07-resoluciones.md#gobierno-y-seguridad)). Antes de ejecutar una prueba
 o ampliar un uso, completar y probar el registro requisito→superficie→control→evidencia→residual.
 Debe declarar fuentes y repositorios habilitados por política y matriz, datos propios o
 sintéticos permitidos, permisos y MCP acotados, ausencia de credenciales productivas,
@@ -756,18 +965,21 @@ escaneo local aplicable, prueba adversarial y revisión humana del resultado.
 | Suite ofimática | Permisos efectivos de documentos y conectores; revisión de funciones embebidas; escaneo local de archivos que se incorporan; prueba sintética de acceso indebido e instrucción indirecta; revisión humana | Si no se puede acotar el contexto a fuentes permitidas, no habilitar esa función sobre el conjunto afectado |
 | MCP y conectores | Lista cerrada de servidores y acciones, permisos mínimos probados y sin credenciales productivas; prueba de lectura y acción no autorizadas con fuentes sintéticas; revisión humana de acciones | Deshabilitar el servidor o la acción que no pueda acotarse; probar también la superficie desde la que se invoca |
 
-Ingeniería produce la evidencia por superficie; un verificador distinto la revisa. El dueño
-del riesgo o el Council acepta el residual según su autoridad, con vencimiento; las personas
-están a designar. Gasto dentro del techo o buena adopción no reemplazan esta
-aceptación. Seguridad puede suspender el uso afectado según "Derechos de decisión".
+Ingeniería (senior DevOps) produce la evidencia por superficie; el Responsable de seguridad
+la verifica y no la produce ([R-06](07-resoluciones.md#autoridad-y-liberaciones)). El dueño
+del riesgo o el Council acepta el residual según su autoridad
+([R-10](07-resoluciones.md#gobierno-y-seguridad)), con vencimiento, y el CEO lo registra en
+el gate. Gasto dentro del techo o buena adopción no reemplazan esta aceptación. Seguridad
+puede suspender el uso afectado según "Derechos de decisión".
 
-**Calendario del mínimo propuesto.** Para los usos del paquete mínimo, las pruebas por
-superficie se ejecutan en M1-M3 antes de habilitar, con las horas del Anexo E; el resto de las
-tablas sigue en M4-M6. La ejecución queda **condicionada a validar horas, costo y capacidad**
-del "Insumo para el paquete mínimo M1-M3", consolidado en el [Anexo E](05-business-case.md).
-No se declaran controles instalados. Sin esa validación, prueba y aceptación, el uso
-afectado no se inicia ni se amplía. El residual de usos existentes también debe revisarse:
-no hay aceptación automática por ser una herramienta ya aprobada.
+**Calendario del mínimo** ([R-11](07-resoluciones.md#gobierno-y-seguridad)). Toda superficie
+que se use en M1-M3 prueba sus controles en M1-M3, antes de habilitar, dentro del techo de
+tiempo de 59k USD; el resto de las tablas sigue en M4-M6. El Responsable de seguridad decide
+por superficie si está probada y el CFO verifica que cabe. Si su prueba no cabe en las horas
+validadas, esa superficie no se usa hasta M4-M6. No se declaran controles instalados. Sin
+prueba y aceptación, el uso afectado no se inicia ni se amplía. Los usos existentes siguen
+la regla de [R-09](07-resoluciones.md#gobierno-y-seguridad): no hay aceptación automática
+por ser una herramienta ya aprobada.
 
 | Control | Rige en las dos ramas | Solo con señal en el mes 3 |
 |---|---|---|
@@ -780,13 +992,16 @@ no hay aceptación automática por ser una herramienta ya aprobada.
 | Piloto de producto en autonomía niveles 1-2, modelo de amenazas del producto, *evals* y cláusula tipo | No | Solo con señal de cliente en el mes 6 |
 | Red team externo y extensión de la ISO 27001 (la demostración externa) | No | Señal contractual o producto en el mes 9 (meses 10-12) |
 
-**Qué control es exigible y cuál es opción.** Criterio propuesto: un control es
-**exigible** cuando este anexo lo motiva con una restricción contractual, un riesgo del
-registro o una necesidad de evidencia, y rige en las dos ramas; es **opción** cuando se
-libera solo por una señal. Ningún control es exigible hoy por una norma verificada: lo
-confirma Legal externo (cautela 4), y el motivo contractual depende de la matriz, que
-todavía no existe. La clasificación la preparó Gobierno a partir de las tablas de este
-anexo; no agrega controles ni cifras y la confirma o corrige su responsable humano.
+**Qué control es exigible y cuál es opción** ([R-11](07-resoluciones.md#gobierno-y-seguridad)).
+Un control es **exigible** cuando este anexo lo motiva con una restricción contractual, un
+riesgo del registro o una necesidad de evidencia, y rige en las dos ramas; es **opción**
+cuando se libera solo por la señal del gate que la lee. Cada control nombra su motivo y su
+alternativa de menor costo. La clasificación la adopta el Directorio al aprobar el plan; no
+agrega controles ni cifras. Ningún control se declara exigible por norma verificada hasta el
+dictamen de Legal externo de M1 (cautela 4), y el motivo contractual depende de la matriz
+del mes 3. Si el dictamen o la matriz agregan un requisito, el control sube a exigible en el
+gate siguiente, con su costo verificado por el CFO. Pasar un control de exigible a opción lo
+decide el Directorio en un gate, a propuesta del Responsable de seguridad con el AI Council.
 
 | Control | Motivo | Exigible u opción | Alternativa de menor costo |
 |---|---|---|---|
@@ -796,12 +1011,12 @@ anexo; no agrega controles ni cifras y la confirma o corrige su responsable huma
 | Inventario con IA embebida | Riesgo de IA embebida sin aprobar | Exigible | Reutilizar registros y consolas; 0 USD |
 | Revisión legal focalizada | Evidencia: alcance normativo sin confirmar y textos ambiguos de la matriz | Exigible | Dictamen de 8-16 h en vez de la revisión normativa completa |
 | Council liviano | Derecho de decisión para aceptar el residual | Exigible | Dentro del comité de tecnología, sin reunión adicional |
-| Plan de incidentes y ejercicios de mesa | Riesgos de fuga de secretos (ruta de primera exposición) y de capacidad concentrada (el suplente corre el runbook) | Exigible | Candidata, no adoptada: montar la ruta de IA sobre el circuito de reporte de incidentes del antecedente de abril (vigencia por contrastar) y acotar los ejercicios de mesa. Su efecto en horas y costo no está estimado; si se acota a un solo ejercicio, el suplente se prueba una sola vez |
+| Plan de incidentes y ejercicios de mesa | Riesgos de fuga de secretos (ruta de primera exposición) y de capacidad concentrada (el suplente corre el runbook) | Exigible | Adoptada ([R-12](07-resoluciones.md#gobierno-y-seguridad)): la ruta de IA va sobre el circuito de incidentes existente, dentro de «Política e intake» (0 USD adicionales en M1-M3); se conservan los dos ejercicios de mesa porque prueban al suplente dos veces |
 | Topes de la escala de autonomía | Riesgo de agencia excesiva | Exigible | Hasta el nivel 3 con revisión humana; el nivel 4, solo en *sandbox* |
 | *Hooks*, escaneo local de secretos y MCP cerrados en el agente de código | Riesgos de fuga de secretos y de datos de cliente sin pasarela | Exigible, compensatorio | Ya es la alternativa barata a la pasarela: tiempo, sin caja |
 | Red team interno acotado al agente de código | Riesgo de inyección indirecta de prompts | Exigible, compensatorio | Repositorios y tickets sintéticos |
 | Prueba previa por superficie con verificador independiente | Evidencia: sin independencia no se declara probado | Exigible antes de habilitar cada uso | Excluir la superficie o la función que no se pueda probar |
-| Pasarela con allowlist, DLP y logs; *bypass* en todas las superficies | Riesgos de datos de cliente y de fuga de secretos, con bloqueo central | Opción: señal en el mes 3 | Compensatorios con residual aceptado. Desacuerdo a la vista: financiarla por riesgo propio (ver "Licencia para vender") |
+| Pasarela con allowlist, DLP y logs; *bypass* en todas las superficies | Riesgos de datos de cliente y de fuga de secretos, con bloqueo central | Opción: señal en el mes 3 | Compensatorios con residual aceptado. Financiarla por riesgo propio amplía alcance y lo decide el Directorio (ver "Licencia para vender") |
 | Piloto de producto, modelo de amenazas, *evals* y cláusula tipo | Señal de cliente | Opción: lectura del mes 6 | No hacerlo; el producto se difiere |
 | Red team externo y extensión de la ISO 27001 | Evidencia de un tercero | Opción: lectura del mes 9 | Diferir; el red team interno queda como evidencia propia |
 | Certificación ISO 42001 | Solo si un cliente la exige | Opción: cierre del mes 12 | Brecha documentada, sin certificar |
@@ -813,8 +1028,8 @@ controles técnicos cerraron. Si la señal llega en el mes 9, los controles téc
 en los meses 10-12 y la demostración externa queda para el año siguiente. Es consecuencia
 de la secuencia del [Anexo B](02-arquitectura.md), no un costo medido.
 
-**Condiciones de las lecturas de los meses 6 y 9 sin señal** (propuesta para el
-Anexo F): matriz al 100% de los clientes principales; compensatorios probados y críticos del
+**Condiciones de las lecturas de los meses 6 y 9 sin señal** (R-10 y R-11, que el
+Anexo F aplica): matriz al 100% de los clientes principales; compensatorios probados y críticos del
 red team cerrados; residual de los riesgos de datos de cliente en un modelo externo, de
 inyección indirecta y de fuga de secretos aceptado por el Council con fecha de revisión;
 lectura de la señal contractual hecha. No se piden cobertura por pasarela ni bypass de todas
@@ -825,7 +1040,7 @@ indirecta y la fuga de secretos no tienen bloqueo ni registro centrales. El gobi
 solo no alcanza: la rama operativa sin señal exige los compensatorios probados de la
 tabla, porque la rama sin señal no agrega superficie: no hay casos propios ni agentes nuevos,
 y la prueba extendida corre sobre los repositorios que la matriz habilita, sin datos de
-cliente. Propuesta: aceptar el residual solo después de esas pruebas. Hoy hay 40-45 seats
+cliente. Regla (R-11): el residual se acepta solo después de esas pruebas. Hoy hay 40-45 seats
 de Claude y no hay evidencia de controles específicos de IA.
 
 | Riesgo | Residual objetivo sin controles técnicos | Acepta | Vence |
@@ -841,9 +1056,11 @@ humana, sin credenciales productivas, escaneo local y prueba adversarial con com
 probados y residual aceptado por la autoridad correspondiente. Si falta una condición, la
 prueba no se inicia ni se extiende. Un incidente confirmado de datos de cliente en un
 modelo externo, de inyección
-indirecta o de fuga de secretos la revoca: se suspende la extensión y el Council le pide al
-board reabrir los controles técnicos como decisión de seguridad, fuera de las tres señales
-(propuesta). El responsable de la aceptación está a designar.
+indirecta o de fuga de secretos la revoca: el Responsable de seguridad suspende la extensión
+y el Council le pide al Directorio reabrir los controles técnicos como decisión de
+seguridad, fuera de las tres señales; financiarlos amplía alcance y lo decide el Directorio
+([R-04](07-resoluciones.md#autoridad-y-liberaciones)). Acepta el residual el Council, con
+informe al CEO ([R-10](07-resoluciones.md#gobierno-y-seguridad)).
 
 **Alternativas.** (i) Financiar los controles técnicos sin señal: 4.500-18.000 USD de caja,
 como excepción a la regla vigente. (ii) No extender la prueba a la cohorte: reduce el riesgo,
@@ -861,7 +1078,7 @@ condición incumplida.
 ### Tensiones con otras áreas
 
 - **Con Arquitectura:** la pasarela de salida y la lista de servidores MCP condicionan el
-  diseño de la plataforma. Alternativa: Gobierno define el requisito (allowlist, registro,
+  diseño de la plataforma. Alternativa: el Responsable de seguridad define el requisito (allowlist, registro,
   sin entrenamiento) y Arquitectura elige la herramienta; el costo de los meses 4-6 es un
   rango hasta que lo confirme.
 - **Con Arquitectura (ruteo del agente de código):** la política del Anexo B rige: se enruta
@@ -872,31 +1089,35 @@ condición incumplida.
   modelo externo, de inyección indirecta y de fuga de secretos sin pasarela lo asume el
   Council (ver "Controles según la decisión del mes 3").
 - **Con Finanzas:** alrededor de la mitad (51%-52%) del costo de este anexo es tiempo reasignado, no caja, pero el
-  tiempo compite con horas facturables (utilización ~83%). Finanzas decide si lo trata
+  tiempo compite con horas facturables (utilización ~83%). el CFO decide si lo trata
   como costo de oportunidad o lo ignora.
 - **Con Personas:** la alfabetización en IA es un control débil por sí solo (el piloto
   mostró 17% de cursos completos); se propone medirla por conducta (uso de la pasarela,
   revisión de output) y no por cursos terminados.
-- **Con Personas (medición del uso):** qué se mide del uso de las personas y cuánto se
-  retiene no tiene una A en este anexo. El [Anexo D](04-personas-cultura.md) pone al CAIO
-  como A de las métricas de adopción y deja alcance y retención de la telemetría a Gobierno
-  con Talento. Elegir la A, y si la medición pide revisión laboral y de datos de empleados,
-  queda pendiente de decisión entre los responsables humanos de C y D.
-- **Con el Anexo F (calificación de riesgos):** los dos registros califican el riesgo
-  inherente, antes del control, y en ambos la aceptación se decide sobre el residual con el
-  "Criterio de aceptación del riesgo residual" de este anexo. Dos valores inherentes no
-  coinciden: datos de cliente en un modelo externo es Media / Alto acá y Media / Muy alto
-  en el [Anexo F](06-roadmap-riesgo.md), y las superficies sin control técnico central
-  (Alta / Alto en F) no son una fila de este registro. La conciliación queda pendiente entre
-  los responsables humanos de C y F, sin elegir valores por consenso.
-- **Con CAIO:** si el board prioriza velocidad, se puede relajar el SLA del Nivel 2, pero
+- **Con Personas (medición del uso):** resuelto por
+  [R-13](07-resoluciones.md#gobierno-y-seguridad). El Responsable de seguridad es la A del
+  tratamiento y la retención; Personas y Legal externo son consultados; el CAIO sigue siendo
+  la A de qué indicador de adopción se reporta (ver "Eventos de uso por persona y datos de
+  categoría especial", en "Derechos de decisión").
+- **Con el Anexo F (calificación de riesgos):** conciliado por
+  [R-10](07-resoluciones.md#gobierno-y-seguridad). El registro de este anexo es el de
+  referencia: datos de cliente en un modelo externo queda Media / Alto, y "superficies sin
+  control técnico central" es un atributo de las filas de datos de cliente y fuga de
+  secretos, sin calificación propia. Así no se mueven los residuales objetivo ni la
+  aceptación del Council. Autoridad: el Directorio adopta el registro; el Responsable de
+  seguridad lo mantiene y el AI Council lo revisa cada mes. Hito: recalibración con la base
+  de M1-M3. Consecuencia: si la prueba de una superficie no alcanza su residual objetivo, su
+  uso sobre clientes se suspende hasta lograrlo.
+- **Con CAIO:** si el Directorio prioriza velocidad, se puede relajar el SLA del Nivel 2, pero
   no la matriz de clientes ni la prohibición de crédito.
 
 ## Insumos para Finanzas
 
 ### Insumo para el paquete mínimo M1-M3: controles aplicables equivalentes
 
-**Propuesta de alcance, no presupuesto aprobado.** Para operar sobre herramientas
+**Alcance del paquete mínimo** ([R-01, R-03](07-resoluciones.md#autoridad-y-liberaciones)):
+el Directorio aprueba techos, no gasto esperado; estas horas entran en el techo de tiempo de
+59k USD de M1-M3. Para operar sobre herramientas
 corporativas existentes sin plataforma central, se mantienen los mismos requisitos de
 datos, permisos, prueba, revisión y aceptación; cambia la implementación y se excluyen
 superficies que no puedan cumplirlos. No se promete cobertura de pasarela ni producto nuevo.
@@ -906,21 +1127,24 @@ ni cotización. Suponen reutilizar política, consolas, escáner local y contrat
 una cohorte acotada a repositorios propios o sintéticos, sin datos de cliente, y una primera
 prueba con corrección y repetición. No presuponen disponibilidad de agendas ni controles
 ya funcionando. Si hace falta compra, integración nueva o más ciclos, reducir alcance o
-volver a costear antes de iniciar. El responsable de cada rol está a designar.
+volver a costear antes de iniciar. Las personas de cada rol se nombran en el acta de la
+segunda liberación (R-06).
 
 | Control mínimo | Entregable verificable | Horas por rol en M1-M3 (supuesto) | Pago externo incremental (supuesto) |
 |---|---|---|---|
-| Política e intake | Versión, alcance y aprobación documentada revisados; aplicación de la política aprobada, datos permitidos/prohibidos, revisión humana y ruta de incidentes y suspensión; cambios propuestos sujetos a decisión empresarial | Tech lead de gobierno: 8-16 h; seguridad: 4-8 h; staff de Operaciones/comercial: 2-4 h | 0 USD adicionales; revisión legal en su fila |
+| Política e intake | Versión, alcance y aprobación documentada revisados; aplicación de la política aprobada, datos permitidos/prohibidos, revisión humana y ruta de incidentes y suspensión; cambios de política sujetos al Directorio (R-07) | Tech lead de gobierno: 8-16 h; seguridad: 4-8 h; staff de Operaciones/comercial: 2-4 h | 0 USD adicionales; revisión legal en su fila |
 | Matriz habilitante | Restricciones de los clientes principales clasificadas, fuentes/repositorios habilitados y excluidos, ambigüedades con *default-deny*; agregado verificado por otra persona | Analista funcional: 32-48 h; seguridad: 4-8 h; staff de Operaciones/comercial: 4-8 h | 0 USD adicionales; revisión legal en su fila |
 | Inventario y riesgo | Herramientas, funciones embebidas, repositorios, MCP, permisos, superficie→control→telemetría, responsables por rol y registro de residuales con vencimiento | Analista funcional: 16-24 h; senior DevOps: 4-8 h | 0 USD; se reutilizan registros y consolas disponibles |
-| Revisión legal focalizada | Dictamen de alcance y textos ambiguos, límites de uso/no entrenamiento y tratamiento de datos; no reemplaza la revisión normativa completa posterior | Tech lead de gobierno: 2-4 h; analista funcional: 4-8 h; asesor externo: 8-16 h | 2.000-6.000 USD; supuesto de 250-375 USD/h × 8-16 h, sin cotización; sustituye la porción inicial del renglón anual, no se suma dos veces |
+| Revisión legal focalizada | Dictamen de alcance y textos ambiguos, límites de uso/no entrenamiento y tratamiento de datos; no reemplaza la revisión normativa completa posterior | Tech lead de gobierno: 2-4 h; analista funcional: 4-8 h; asesor externo: 8-16 h | 2.000-6.000 USD; supuesto de 250-375 USD/h × 8-16 h, sin cotización ([paquete mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md), [precios sin cotizar](../../context/supuestos/precios-externos-sin-cotizar.md)); sustituye la porción inicial del renglón anual, no se suma dos veces |
 | Compensatorios y prueba previa por superficie habilitada | Configuración y escaneo local, permisos/MCP acotados, sin credenciales productivas; secreto e instrucción sintéticos, intentos de acceso/acción indebidos, corrección y repetición; verificación independiente, revisión humana y acta de aceptación o exclusión | Senior DevOps productor: 40-64 h; seguridad verificadora independiente: 8-16 h; analista funcional: 8-16 h para fuentes, casos de prueba y registro | 0 USD si las herramientas existentes alcanzan; no incluye compra ni red team externo |
 
 **Decisión y seguimiento incluidos en el alcance.** Conservar la cadencia existente del
 Council: por M1-M3, cinco asientos × 6 h por asiento, distribuidos en 12 h de tech lead,
 6 h de senior DevOps/seguridad y 12 h de staff (supuesto ya usado en el renglón anual).
 Incluye lectura, aceptación o rechazo del residual y revisión mensual; no es una reunión
-adicional. Si esas horas no alcanzan, Finanzas debe volver a costearlas antes de comprometerlas.
+adicional. Si esas horas no alcanzan, el CFO las recostea antes de comprometerlas y el CEO
+firma dentro de 71k USD; superar 71k USD vuelve al Directorio
+([R-26](07-resoluciones.md#finanzas)).
 
 **Regla de costeo para Finanzas.** Las horas por entregable son partidas disjuntas: no
 sumar además los porcentajes anuales de líder y seguridad sobre esas mismas actividades;
@@ -930,26 +1154,19 @@ independencia disponible, no se declara probado el control. Los USD de tiempo sa
 [supuesto de costo cargado por rol](../../context/supuestos/costo-cargado-por-rol.md);
 las licencias existentes y la capacitación las concilian Arquitectura y Personas.
 
-**Seguridad: política fuera del aporte técnico de B.** Las 24-40 h técnicas del
-[Anexo B](02-arquitectura.md) pueden reutilizarse para matriz y pruebas solo con confirmación
-de alcance. Las 4-8 h de política de este anexo no están incluidas en B: se suman aparte,
-más 6 h de Council; total provisional de Seguridad: 34-54 h. No se absorbe la política
-en el aporte técnico ni se presume confirmado el solape de matriz y pruebas; Finanzas
-debe conciliarlo y volver a costear el mínimo antes de comprometer horas.
+**Seguridad: política fuera del aporte técnico de B** ([R-26](07-resoluciones.md#finanzas)).
+La matriz y la verificación de seguridad entran en las 24-40 h técnicas del
+[Anexo B](02-arquitectura.md), con Seguridad que verifica y no produce los compensatorios.
+Las 4-8 h de política de este anexo no están incluidas en B: se suman aparte, más 6 h de
+Council. Total de Seguridad en M1-M3: 24-40 + 4-8 + 6 = 34-54 h.
 
-**Tres diferencias con el [supuesto del paquete mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md), sin acuerdo.**
-Ese supuesto está revisado como base de planificación y deja sus solapes «a validar por
-sus dueños». Lo que sigue es la lectura de Gobierno; ningún responsable humano de B o
-de C la confirmó todavía, y este anexo no cambia el supuesto.
+**Tres puntos de conciliación con el [supuesto del paquete mínimo](../../context/supuestos/paquete-minimo-de-aprendizaje.md), resueltos.**
 
-| Punto | Supuesto del mínimo | Lectura de C | Diferencia | Quién lo resuelve |
-|---|---|---|---|---|
-| Tech lead de gobierno en M1-M3 | C 22-36 h | Las filas de C suman 22-32 h: política 8-16, legal 2-4 y Council 12; no hay otra fila de tech lead | 0-4 h, hasta 250 USD al costo alto; el techo de 59k USD y el acumulado de 79k USD no cambian | Responsable humano de C; después Finanzas corrige el supuesto y el Anexo E |
-| Seguridad: matriz y verificación dentro de las 24-40 h de B | Dentro, con confirmación de alcance | Matriz, sí. Verificación, solo si B aclara que en los compensatorios seguridad verifica y no produce: si produce pruebas en B y las verifica en C, verifica su propio trabajo | Sin cambio de horas si B lo aclara | Responsables de B y C |
-| DevOps: configuración de B y de C como una sola tarea | Unión 40-64 h; total 44-72 con inventario | B no declara compartida esa fila y el contenido difiere en parte (B suma exportaciones; C, pruebas sintéticas, corrección y repetición) | Sin unión, 76-128 h: +32-56 h, +600-2.625 USD | Responsable de B, desagregando su fila |
-
-Hasta que se resuelvan, la unión de DevOps sigue como supuesto y no como ahorro: si no
-se confirma, Finanzas recostea el tramo antes de comprometerlo.
+| Punto | Resolución | Cuenta | Autoridad |
+|---|---|---|---|
+| Tech lead de gobierno en M1-M3 | 22-32 h, la suma de las filas de C; no hay otra fila de tech lead ([R-25](07-resoluciones.md#finanzas)) | 8-16 + 2-4 + 12 = 22-32 h. Demanda interna M1-M3: 970-1.346 h (1.346 / 480 = 2,8042 FTE); máximo de tiempo 58,03k USD, debajo del techo de 59k USD; margen de 34 h sobre la reserva clave (720 − 686). Los techos de 8, 71, 79, 59, 118 y 121k USD no cambian | Directorio, a propuesta del Responsable de seguridad; el CFO verifica y propaga |
+| Seguridad: matriz y verificación dentro de las 24-40 h de B | Dentro: en los compensatorios Seguridad verifica y no produce, así no verifica su propio trabajo (R-26) | Sin cambio de horas | Confirma el Responsable de seguridad; el CFO verifica |
+| DevOps: configuración de B y de C como una sola tarea | 40-64 h es el tope de configuración, prueba, corrección y exportaciones de consolas: un límite de alcance, no un ahorro (R-26) | Si las exportaciones no caben, se reportan como uso estimado, sin sumar horas; si aun así no cabe, el CFO recostea antes de M1 dentro de 71k USD y firma el CEO | Confirma el Responsable de Tecnología; superar 71k USD vuelve al Directorio; el techo de 59k USD no sube |
 
 **Criterio de éxito:** cada superficie habilitada tiene prueba reproducible, hallazgos
 críticos cerrados y residual firmado por su autoridad antes de operar. **Abandono:** control
@@ -958,7 +1175,14 @@ el uso afectado, reducir alcance y volver a costear. La ejecución de estos entr
 queda condicionada a validar horas, costo y capacidad; el resto de las tablas conserva
 su calendario.
 
-### Referencia anual, pendiente de conciliación con el pedido mínimo
+### Referencia anual del paquete completo (otro alcance; no se suma al pedido mínimo)
+
+La referencia anual no se autoriza ni se suma al pedido
+([R-28](07-resoluciones.md#finanzas)): es la base de otro alcance y se usa una u otra,
+nunca la suma; las reglas de no duplicación de abajo son la conciliación. Si un gate
+propone ampliar o usar un renglón anual, el CFO presenta antes una estimación común desde
+ese gate (gasto futuro evitable, sin costos hundidos) y decide el Directorio. Sin esa
+estimación no hay decisión de ampliación y el renglón no se libera.
 
 Todas las cifras son rangos en USD, supuestos sin cotización, salvo donde se
 cita una fuente. Cada costo de tiempo se calcula por actividad y por rol con el supuesto de
@@ -970,26 +1194,32 @@ costo cargado, ya ampliado; los rangos son amplios a propósito. "Tiempo" es cos
 | Ingeniería de seguridad: 20% de un senior DevOps o seguridad | Meses 1-12 | Tiempo | 7.200-18.000 | 3.000-7.500 por mes × 20% × 12 |
 | AI Council: 5 personas × 2 h por mes × 12 (la revisión mensual del Council; sin costo adicional por el tablero) | Meses 1-12 | Tiempo | 2.250-5.625 | 24 h de sesión × 5 asientos: 2 a costo de tech lead, 1 de senior DevOps y 2 de staff (9-63 USD/h según el rol), supuesto: 24 × (2 × 28,125 + 18,75 + 2 × 9,375) a 24 × (2 × 62,5 + 46,875 + 2 × 31,25). Equivale a 5 asientos × 6 h por tramo de tres meses |
 | Matriz de restricciones por cliente e inventario v1 | Meses 1-3 | Tiempo | 1.250-5.500 | 100-160 h de analista funcional (13-34 USD/h), supuesto |
-| Asesoría legal externa (BCRA, Ley 25.326, cláusulas tipo) | Meses 1-6 | Caja | 8.000-20.000 | Supuesto, sin cotización |
-| Pasarela de salida, DLP y logs de acciones | Meses 4-12 | Caja | 4.500-18.000 | 500-2.000 por mes × 9, supuesto; lo confirma Arquitectura |
+| Asesoría legal externa (BCRA, Ley 25.326, cláusulas tipo) | Meses 1-6 | Caja | 8.000-20.000 | [Supuesto sin cotización](../../context/supuestos/precios-externos-sin-cotizar.md) |
+| Pasarela de salida, DLP y logs de acciones | Meses 4-12 | Caja | 4.500-18.000 | 500-2.000 por mes × 9 ([supuesto sin cotización](../../context/supuestos/precios-externos-sin-cotizar.md)); lo confirma Arquitectura |
 | Prueba de integración y de *bypass* por herramienta, y migración de la configuración de la pasarela (60-120 h) | Meses 4-6 | Tiempo | 1.125-5.625 | 60-120 h de senior DevOps o seguridad (19-47 USD/h), supuesto; lo confirma Arquitectura |
 | Red team interno (40-80 h) | Meses 4-6 | Tiempo | 750-3.750 | 40-80 h de senior DevOps o seguridad (19-47 USD/h) |
-| Red team externo | Meses 10-12 | Caja | 10.000-25.000 | Supuesto, sin cotización |
-| Extensión del alcance de ISO 27001 a IA (2-4 jornadas de auditoría) | Meses 10-12 | Caja | 1.600-6.000 | 800-1.500 por jornada, supuesto; depende del calendario de la auditoría externa prevista para 2027 |
+| Red team externo | Meses 10-12 | Caja | 10.000-25.000 | [Supuesto sin cotización](../../context/supuestos/precios-externos-sin-cotizar.md), con el desacuerdo de alcance con el Anexo B a la vista en esa fuente |
+| Extensión del alcance de ISO 27001 a IA (2-4 jornadas de auditoría) | Meses 10-12 | Caja | 1.600-6.000 | 800-1.500 por jornada ([supuesto sin cotización](../../context/supuestos/precios-externos-sin-cotizar.md)); depende del calendario de la auditoría externa prevista para 2027 |
 | Ejercicios de mesa de incidentes (2 × 8 personas × 3 h) | Meses 4-6 y 10-12 | Tiempo | 450-3.000 | 48 h entre el costo de staff y de tech lead (9-63 USD/h) |
 | **Total** | Meses 1-12 | | **50.625-140.500** | Caja: 24.100-69.000; tiempo: 26.525-71.500 |
 
 No incluye licencias de las herramientas de IA ni capacitación (las cubren Arquitectura y
-Personas), ni una certificación ISO 42001 (decisión de los meses 10-12). Finanzas debe contrastar el
+Personas), ni una certificación ISO 42001 (decisión de los meses 10-12). El CFO contrasta el
 total con la franja del 1%-3% de la facturación del [supuesto](../../context/supuestos/capacidad-de-inversion.md).
+
+**Sensibilidad del Council.** Dos asientos de negocio se valorizan a costo de staff por
+supuesto. Si se valorizan a costo de tech lead, el renglón anual pasa de 2.250-5.625 a
+3.150-7.125 USD (24 × (4 × 28,125 + 18,75) a 24 × (4 × 62,5 + 46,875)), 900-1.500 más. En
+M1-M3 son 12 h que pasan de staff a tech lead: 225-375 USD más, con lo que el máximo de
+tiempo iría de 58,03k a 58,41k USD, todavía debajo del techo de 59k USD; lo verifica el CFO.
 
 **Cómo lo usa el [Anexo E](05-business-case.md).** Los renglones coinciden con su cuadro
 de inversión, en k USD (legal 8k-20k, pasarela 4,5k-18k, red team externo e ISO 11,6k-31k,
 tiempo 27k-72k redondeado). Tres lecturas de gobierno sobre esas cifras:
 
-- **Techo de los meses 1-3.** Legal aparece en tres autorizaciones distintas. La preparación
+- **Techo de los meses 1-3.** Legal aparece en tres lugares distintos. La preparación
   de 2026 no lleva caja: prepara el alcance y pide cotización. M1-M3 lleva el legal focalizado,
-  2.000-6.000 USD de caja (8-16 h × 250-375 USD/h, fila «Revisión legal focalizada» del
+  2.000-6.000 USD de caja (8-16 h × 250-375 USD/h, [supuesto sin cotización](../../context/supuestos/precios-externos-sin-cotizar.md), fila «Revisión legal focalizada» del
   insumo del paquete mínimo). El renglón anual de 8.000-20.000 USD es la referencia del
   paquete completo, que no se autoriza hoy, y el focalizado sustituye su porción inicial sin
   sumarse dos veces. Además, los meses 1-3 llevan el tiempo del líder, de seguridad, del
@@ -1002,41 +1232,83 @@ tiempo 27k-72k redondeado). Tres lecturas de gobierno sobre esas cifras:
   la decisión del mes 3. La pasarela se suma solo si ya está instalada ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md)).
   El pedido vigente es el paquete mínimo, con otro núcleo: después del mes 3, 108 h
   (36 por tramo: 12 de tech lead, 12 de seguridad y 12 de staff), caja 0 y tiempo hasta 6k
-  USD, con aprobación explícita en el gate de salida ([Anexo E](05-business-case.md),
+  USD, que firma el CEO en el gate de salida, dentro de 85k USD y con verificación del CFO
+  ([R-03](07-resoluciones.md#autoridad-y-liberaciones); [Anexo E](05-business-case.md),
   "Segunda autorización: inicio M1-M3 y reservas de salida"). Son núcleos de alcances
   distintos: se usa uno u otro según el alcance, nunca la suma.
+  **Quién supervisa y quién pausa tras el corte.** El Council sesiona una vez por tramo, 2 h
+  con sus cinco asientos (10 h dentro de las 36 h del núcleo); la cadencia mensual, 30 h por
+  tramo (5 asientos × 6 h), no cabe ([base mínima](../../context/supuestos/base-minima-tras-un-corte.md)).
+  Entre sesiones supervisa el Responsable de Tecnología, con las horas de tech lead; pausa el
+  Responsable de seguridad, con las suyas, y el Responsable de Tecnología lo suple solo para
+  contener. En la sesión del tramo, el Council revisa las suspensiones y puede aceptar el
+  residual de un uso ya habilitado según R-10; no habilita un uso nuevo: reabrirlo es una
+  decisión del Directorio. El CEO recibe un informe por tramo. Otra cadencia exige que el CFO
+  recostee antes del gate de salida y, si no entra en el techo, vuelve al Directorio. Costo en velocidad: el
+  que ya trae el corte; es la opción más reversible porque no compromete horas fuera del núcleo.
 - **Controles técnicos y demostración externa, condicionales** (ver "Licencia para vender" y
   "Controles según la decisión del mes 3"). Los renglones de los controles técnicos (pasarela,
   4.500-18.000 USD de caja) y de la demostración externa (11.600-31.000 USD) no se gastan sin señal; el
   Anexo E ya condiciona la demostración externa a la lectura del mes 9 y los controles técnicos
   a la decisión del mes 3.
 
-## Insumos para el deck
+### Legal externo después de M1: qué consulta, en qué tramo y de qué caja
+
+El dictamen focalizado de M1 (2.000-6.000 USD) es la única caja legal dentro de 79k USD.
+Después de M1, la caja de cada tramo M4-M12 tiene techo de 2k USD y hoy es provisión de
+herramientas (0-1,725k USD calculados en el [Anexo E](05-business-case.md)); si esa provisión
+no se usa, el techo neto de la contingencia del 15% (2.000 / 1,15 ≈ 1.739 USD) alcanza para
+4,6-7,0 h de asesor (1.739 / 375 a 1.739 / 250). Las horas son supuestos de planificación,
+sin cotización, a la tarifa del dictamen de M1 ([supuesto sin cotización](../../context/supuestos/precios-externos-sin-cotizar.md)).
+
+| Tramo | Consulta | Disparador | Horas (supuesto) | Caja (USD) |
+|---|---|---|---|---|
+| M4-M6 | Contratos ambiguos de la matriz | Más de 30% ambiguo al mes 4 (R-09) | 4-8 | 1.000-3.000 |
+| M4-M6 o M7-M9 | Habilitación del producto de medios de pago | Lectura del mes 6, o la del 9 si se difiere (R-08) | 2-4 | 500-1.500 |
+| Cualquiera | Caso con un sí en una categoría del Anexo III | Intake (ver "Compliance: alcance explícito") | 2-4 por caso | 500-1.500 por caso |
+| Cualquiera | Incidente de severidad 1 con aviso al cliente | Ruta de incidentes (R-12) | 2-4 por incidente | 500-1.500 por incidente |
+| M7-M9 | Cláusula tipo de IA | Solo si se libera el producto en el mes 6 | Entra en el costeo de esa ampliación | — |
+| Preparación 2026 | Tratamiento de eventos de uso (R-13) | La regla por defecto (agregados por área) no extrae datos personales | 0: sin dictamen; un tratamiento por persona espera el dictamen de M1 | 0 |
+
+**Regla de caja.** Una consulta sale de la caja del tramo solo si el CFO verifica antes de
+comprometerla que cabe en el techo de ese tramo, y la firma el CEO. Si no cabe, queda fuera de
+los techos y la decide el Directorio en el gate, o en sesión si no puede esperar; mientras
+tanto rige lo más restrictivo: *default-deny* sobre el contrato ambiguo, sin IA en el producto
+o el caso del Anexo III fuera del intake. La contención y el aviso de un incidente no esperan
+la consulta: se rigen por el contrato. Las horas internas de preparación salen de las del
+tramo o se recostean. Costo en velocidad: un contrato ambiguo puede quedar en *default-deny*
+hasta el gate; vale porque evita comprometer caja que ningún techo cubre.
 
 - **Mensaje de la slide:** "Gobierno que habilita": un Council de 5 asientos dentro del
-  comité de tecnología, intake en 3 niveles con respuesta en 5 días hábiles para el riesgo
-  medio, y control técnico de la salida de datos donde la superficie lo admite; en el resto,
+  comité de tecnología, intake en 3 niveles con un objetivo de 5 días hábiles para el riesgo
+  medio (cambio de política que aprueba el Directorio en M1-M3, R-07; hasta entonces rige el
+  plazo de la versión ratificada), y control técnico de la salida de datos donde la superficie lo admite; en el resto,
   política y control compensatorio con residual aceptado por el Council, no una garantía
   de bloqueo.
 - **Revisión mensual:** el Council mira el riesgo cada mes (2 h, con tablero) y puede frenar,
-  cortar o escalar; no libera fondos. Las dos autorizaciones iniciales y las decisiones
-  de los meses 3, 6, 9 y 12 corresponden al Directorio o autoridad formalmente delegada.
-  La revisión mensual no suma costo.
+  cortar o escalar; no libera fondos. La primera liberación la aprueba el Directorio; la
+  segunda y las decisiones de los meses 3, 6, 9 y 12 las firma el CEO por delegación,
+  dentro del techo de cada tramo; superar el techo de un tramo o la suma de 121k USD vuelve
+  al Directorio (R-03, R-04). La revisión mensual no suma costo.
 - **Slide «Gobierno y seguridad» (propuesta para el deck):** este anexo exige la prueba antes
   de habilitar o ampliar un uso, y la revisión del residual de los usos existentes; no
   dispone detener el uso actual de las herramientas aprobadas, salvo la suspensión
   preventiva de Seguridad. Un título como «Ningún uso nuevo
   o ampliado sin probar antes sus controles» lo dice sin sobreprometer. Sin plataforma
   hay bloqueo local en el agente de código, no en una pasarela.
-- **Pedido al board 1:** aplicar la política de IA cuya aprobación informó el responsable
-  del caso el 20/10/2026, revisando versión, alcance y aprobación documentada. Los cambios
-  propuestos requieren decisión empresarial; no se solicita aprobar la política de nuevo.
-- **Pedido al board 2:** aprobar el alcance explícito (sin decisiones de crédito ni
-  scoring en 12 meses) y los topes de la escala de autonomía del plan (niveles 0 a 4).
-- **Pedido al board 3:** pedido vigente de controles: insumo M1-M3 de este anexo,
+- **Pedido al Directorio 1:** ratificar la política de IA vigente, de aprobación informada,
+  como política del plan; la preparación 2026 deja constancia de versión y alcance, y los
+  cambios los aprueba el Directorio ([R-07](07-resoluciones.md#gobierno-y-seguridad)).
+- **Pedido al Directorio 2:** aprobar el alcance explícito (sin decisiones de crédito ni
+  scoring en 12 meses; ni código ni datos de un cliente hacia un modelo externo, salvo dentro
+  del entorno del propio cliente y con su permiso escrito) y los topes
+  de la escala de autonomía del plan, niveles 0 a 4 (R-08 y
+  [R-32](07-resoluciones.md#roadmap-y-comercial)).
+- **Pedido al Directorio 3:** pedido vigente de controles: insumo M1-M3 de este anexo,
   consolidado en el [Anexo E](05-business-case.md), sección "Pedido inicial: paquete mínimo".
-  La validación inicial se autoriza primero; M1-M3 requiere el segundo pase y conserva
-  las condiciones de habilitación por superficie de este anexo.
+  El Directorio aprueba la primera liberación; M1-M3 requiere la segunda, que firma el CEO
+  por delegación, y conserva las condiciones de habilitación por superficie de este anexo
+  ([R-02 a R-05](07-resoluciones.md#autoridad-y-liberaciones), R-11).
   Los tres paquetes y montos anuales del paquete completo son referencia de otro alcance; no se
   autorizan hoy ni se trasladan a la continuación del mínimo.
 - **Mensaje sobre la licencia para vender:** hoy es un supuesto; los meses 1-3 juntan la

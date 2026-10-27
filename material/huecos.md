@@ -1,33 +1,66 @@
 ---
 type: Hueco
 title: Huecos del material
-description: Qué falta en el material de la cursada, qué quedó sin verificar y qué cifras no pueden ir a una slide.
+description: Alcance aceptado del material oficial, cautelas de sus fuentes y cotejos externos necesarios para la entrega.
 tags: [pendiente, cursada, cautelas]
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Estado del corpus al 2026-10-20 tras el cotejo de las 44 fichas exigidas por la entrega; describe faltantes y cautelas, no acredita su contenido. Cotejo del agente revisado y confirmado por Martín en esta conversación."
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
+  at: 2026-10-22
+  scope: "Martín acepta el 21/10/2026 las presentaciones disponibles como material oficial suficiente para cerrar la recopilación de #22, tras aportar M2U1/M2U2 y otros documentos. Declara que el prompt base del Corrector IA no está disponible y no será un requisito. Por instrucción expresa de la misma sesión, acepta la incorporación al corpus de las 20 fichas nuevas de #50, #53 y #57 con estado accepted. La confirmación cubre este estado del corpus y la decisión de alcance; conserva la revisión anterior como antecedente, sin acreditar contenido de fichas nuevas, vigencia normativa ni cotejo jurídico externo. Los cotejos regulatorios usados por la entrega se siguen en #56. El 22/10/2026 Martín confirma la sección de cotejos externos de #56: calendario y art. 4 cotejados contra el DOUE; BCRA y aplicabilidad del AI Act como supuestos sin uso decisorio (R-34)."
+generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
 
-# Unidades y clases sin material
+# Alcance del material aceptado
 
-* No hay material de M2U1 (vibe coding) ni M2U2 (agentes y arquitecturas).
-* M3U3 y M3U4 tienen solo slides, de nivel alto. M3U3 no desarrolla evaluación de
+Martín confirmó el 21/10/2026 que las presentaciones disponibles son el material
+oficial y suficientes para cerrar la recopilación de #22. El prompt base del
+Corrector IA no está disponible y se acepta esa ausencia, sin exigir obtenerlo.
+Esta decisión no declara verificación humana de todas las fichas derivadas ni
+revisión jurídica de las referencias externas.
+
+La búsqueda local posterior a la descarga identificó estos ocho PDF nuevos;
+los originales se mantienen en la carpeta de fuentes, fuera del repo:
+
+| Unidad | Material localizado |
+|---|---|
+| M2U1 / Unidad 5 | Presentación de Vibe Coding, 20 páginas; [ficha](/unidades/m2u1-vibe-coding.md) |
+| M2U2 / Unidad 6 | Documento de lectura de 10 páginas y presentación de 15; [ficha](/unidades/m2u2-agentes-arquitecturas.md) |
+| M2U3 / Unidad 7 | Documento de lectura de 9 páginas, además de la presentación ya disponible |
+| M2U4 / Unidad 8 | Documento de lectura de 12 páginas, además de la presentación ya disponible |
+| M3U2 / Unidad 10 | Documento de lectura de 10 páginas; [ficha](/unidades/m3u2-documento-u10.md) |
+| M3U3 / Unidad 11 | Documento de lectura de 10 páginas; [ficha](/unidades/m3u3-documento-u11.md) |
+| M3U4 / Unidad 12 | Documento de lectura de 9 páginas, con nombre real terminado en `Unidad_12pdf.pdf`; [ficha](/unidades/m3u4-documento-u12.md) |
+
+Las 20 fichas nuevas de #50, #53 y #57, incluidas M2U1/M2U2 y las derivadas de
+documentos de U9-U12, están en `accepted` por instrucción expresa de Martín del
+21/10/2026. Cada una declara la aceptación humana y su alcance documental.
+
+La aceptación cubre su incorporación al corpus y conserva las cautelas; no
+acredita verificación humana del contenido. U9 y «Hoy atacamos» conservan sus
+originales no localizados. La lectura y el cotejo del agente son antecedentes.
+Las presentaciones oficiales de U9-U12 ya estaban disponibles. No se exige
+conseguir el documento U9, la presentación adicional «Hoy atacamos» ni un `.md`
+separado de M3-U4 para cerrar esta recopilación.
+
+# Límites del corpus aceptado
+
+* M2U1 y M2U2 ya tienen material localizado. M3U3 y M3U4 tienen presentaciones
+  y documentos de lectura. M3U3 no desarrolla evaluación de
   desempeño en humanos aumentados, Physical AI, Human-Agent Trust ni fronteras
   2026-2030, que el programa lista. M3U4 no desarrolla el roadmap ajustado por
   riesgo (contingencias, reversibilidad) ni la storyline, el banco de objeciones o
-  la rúbrica del panel. Esos temas hay que buscarlos en el notebook o en el aula.
+  la rúbrica del panel; el documento sí suma fases, storytelling y preguntas por
+  rol. Los límites de desarrollo se conservan como cautelas del corpus aceptado.
 * El programa no publica una rúbrica de evaluación del TIF (ver [evaluación del
   programa](/conceptos/programa-evaluacion.md)). La guía docente del Corrector IA
   propone una rúbrica formativa, no oficial: [rúbrica del Corrector IA](/frameworks/rubrica-corrector-caio.md).
-* Falta el prompt base del Corrector IA (`Prompt_base_Revisor_CAIO.txt`), que según
-  la guía docente conserva los controles críticos y el formato de respuesta. No está
-  visible en el aula.
+* El prompt base del Corrector IA (`Prompt_base_Revisor_CAIO.txt`) no está
+  disponible. Martín decidió que no sea un requisito para cerrar #22 ni habilitar
+  la preparación de la entrega; no se presume conocer sus instrucciones.
 * El Corrector IA cita "M3-U4 Fundamentos para la Presentación de un Plan Maestro"
   como referencia. Según el equipo, es el material de [M3U4](/unidades/m3u4-plan-maestro.md)
-  que ya está incluido (`..._Modulo_3_Unidad_12.pdf`); no se cotejó el `.md` del aula.
+  oficial ya incluido. Se acepta usar esa presentación; no se exige el `.md` del aula.
 * Sin apuntes de las clases del 2026-08-25, 2026-09-01, 2026-09-08 y 2026-09-15: las
   notas están vacías.
 * `Video Clase 1.mp4` no está indexado.
@@ -62,23 +95,42 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
 * **AIMM:** el PDF es una elaboración independiente, no el informe de Gartner. Queda en
   `draft`.
 
-# Pendiente de verificar
+# Cotejos externos de la entrega (#56)
+
+La aceptación del material no resolvía los cotejos externos; se separaron de #22
+en [#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56). Estado al 2026-10-22,
+por decisión de Martín:
+
+* **Calendario y art. 4 del AI Act, cotejados contra el DOUE.** El PR #55 cotejó el
+  texto español del DOUE (Reg. 2026/1744 y 2024/1689); el 2026-10-22 se recotejó contra
+  el texto obtenido de Cellar lo que usa la entrega: art. 113, letra c (2027-12-02 para el
+  Anexo III y 2028-08-02 para el Anexo I), art. 4.1 y considerando (8), art. 3.3, art. 25.1
+  y Anexo III. Martín lo declaró con alcance acotado en el
+  [calendario](/frameworks/eu-ai-act-calendario-sanciones.md), la
+  [ficha del Omnibus](/conceptos/m1u4-ai-omnibus-sigen.md) y la de
+  [proveedor y desplegador](/frameworks/eu-ai-act-proveedor-desplegador.md). Los anexos
+  C, D y F citan esas fichas. El [overview](/frameworks/eu-ai-act.md) y el régimen de
+  sanciones quedan fuera de esa declaración y no se usan en la entrega.
+* **Queda abierto, como supuesto sin uso decisorio:** la aplicabilidad del AI Act a Acme
+  Labs y a cada cliente (art. 2.1.c; el plan lo trata como disparador del intake), la
+  lectura operativa de la fecha de los arts. 43 y 49, las guidelines de transparencia del
+  2026-07-20 y las reglas para entidades financieras (abajo).
+* **BCRA, fuera del uso decisorio (R-34).** No se recoteja el texto ordenado. La ficha
+  `context/hechos/regulacion-clientes-financieros.md` (`verified`) sostiene lo
+  que dicen los textos ordenados a su fecha (13/02/2026 y 02/10/2026); su vigencia
+  posterior, su alcance sobre cada cliente y su traslado a Acme Labs quedan como supuesto
+  en el Anexo C. Ninguna decisión del deck depende de ellos: la revisión jurídica es una
+  actividad de ejecución (dictamen focalizado de Legal externo en M1), no una condición de
+  entrega.
 
 * **M3U4:** el roadmap técnico habla de MLOps clásico y no de agentes ni LLMOps; no trae metas ni umbrales para los KPIs. **M3U3:** el programa describe el Deep Research con un plan a 18 meses y las slides no dan plazo.
 
-* **EU AI Act tras el Omnibus:** las fechas y el nuevo art. 4 (AI literacy: "apoyar
-  el desarrollo", más liviano que el "exige" del curso) solo se contrastaron con
-  fuentes secundarias (Cooley, Abreu, ERTICO). El cotejo del 2026-10-20 no pudo abrir
-  el Reg. 2026/1744 en EUR-Lex (página vacía): falta cotejarlo contra el ELI oficial,
-  junto con las guidelines del 2026-07-20 y la fecha de los arts. 43 y 49.
 * **EU AI Act, entidades financieras:** la [ficha del framework](/frameworks/eu-ai-act-proveedor-desplegador.md)
   no releva las reglas específicas (arts. 17.4, 18.3, 19.2, 26.5, 26.6 y 72.4).
 * **ISO/IEC 42001:** la página de ISO devolvió 403 en el cotejo del 2026-10-20; la
   edición vigente queda como cotejo previo no repetido.
 * **M1U2:** el "inventario que exige el AI Act" y la clasificación de alto riesgo de
   la detección de anomalías son afirmaciones del curso sin cotejar contra el articulado.
-* **Alcance del AI Act sobre Acme Labs:** decidir con el equipo si alcanza a sus
-  clientes (art. 2.1.c).
 * **SIGEN 197/2026:** no se leyó el anexo.
 * **AIMM:** el informe de Gartner es de pago; sin acceso no se puede salir de `draft`.
 * **CAIE:** falta validación externa, el cuestionario del piloto y confirmar la
@@ -101,8 +153,11 @@ generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
   clasificación de productos; los 3 labs de la p. 13 son solo capturas.
 * **M2U3:** no trae un proceso de ejemplo con nodos y arcos, ni casos de gemelos
   digitales.
-* **Seguridad:** el curso no cita un estándar; se sumó OWASP LLM Top 10. Si el plan
-  los necesita, faltan NIST AI RMF (perfil GenAI) y MITRE ATLAS.
+* **Seguridad:** la presentación oficial de 20 slides no cita un estándar; la
+  ficha de la clase adicional [«Hoy atacamos»](/unidades/m3u1-clase-9.md), en
+  `accepted` y con original no localizado, sí atribuye marcos. Antes de usarlos como
+  respaldo propio se cotejan sus publicaciones, sin generalizar la ausencia a
+  todo el curso.
 * **Apuntes:** "PromptFoo" y "millones de tokens" son lecturas supuestas de las notas.
   La nota del 2026-09-29 es un resumen automático con la transcripción vacía: no hay
   contra qué verificar el resumen mismo.

@@ -3,12 +3,37 @@ type: Mapa
 title: Sección del plan → fuentes
 description: Qué unidad de la cursada, framework, ficha de concepto o apunte de clase respalda cada sección del Plan Maestro.
 tags: [plan, trazabilidad]
-generated: { by: claude-code/claude-sonnet-5-5, at: 2026-10-20T19:40:00Z }
+generated: { by: codex/gpt-6, at: 2026-10-21 }
 ---
+
+## Lecturas de las unidades 10, 11 y 12
+
+Estas fichas nuevas están en `accepted` por instrucción expresa de Martín del
+21/10/2026: su incorporación al corpus queda aceptada. Conservan las cautelas y no
+reemplazan las fuentes verificadas de la entrega.
+
+La recopilación de [#22](https://github.com/lazynet/tp-caio-g11-2026/issues/22)
+está cerrada. Los cotejos externos pendientes se siguen en
+[#56](https://github.com/lazynet/tp-caio-g11-2026/issues/56).
+
+| Sección del plan | Lecturas complementarias |
+|---|---|
+| Personas y cambio | [Documento U10](/unidades/m3u2-documento-u10.md), [caso contabilidad](/casos/m3u2-caso-contabilidad.md), [Documento U11](/unidades/m3u3-documento-u11.md), [escenarios laborales](/conceptos/m3u3-escenarios-impacto-laboral.md), [compensación](/conceptos/m3u3-enfoques-compensacion.md), [caso marketing](/casos/m3u3-caso-gerente-marketing.md), [caso analistas de riesgo](/casos/m3u3-caso-analistas-riesgo-banco.md) |
+| Roadmap | [Documento U12](/unidades/m3u4-documento-u12.md), [plan trimestral](/conceptos/m3u4-plan-trimestral.md) |
+| Finanzas y defensa | [Storytelling en cuatro partes](/conceptos/m3u4-storytelling-cuatro-partes.md), [preguntas del panel por rol](/conceptos/m3u4-panel-preguntas-por-rol.md) |
 
 Cada sección del plan, con su fuente principal, sus complementos y las fichas
 concretas que conviene citar. Antes de llevar una cifra a una slide, revisá la
 sección `# Cautelas` de la ficha y los [huecos](/huecos.md).
+
+Como complementos en `accepted`, [M2U1 Vibe Coding y prototipado ejecutivo](/unidades/m2u1-vibe-coding.md)
+aporta al roadmap técnico y al paso de prototipo a producción;
+[M2U2 Agentes de IA y arquitecturas modernas](/unidades/m2u2-agentes-arquitecturas.md)
+aporta a arquitectura, integración con herramientas y evaluación de agentes.
+
+Como referencia terminológica transversal a todas las secciones, el
+[Diccionario de Chief AI Officer (CAIO)](/diccionario-caio.md) unifica el vocabulario
+y enlaza cada término con su ficha; no es fuente de cifras.
 
 | Sección | Fuente principal | Complementos | Fichas para citar |
 |---|---|---|---|
@@ -17,7 +42,7 @@ sección `# Cautelas` de la ficha y los [huecos](/huecos.md).
 | Build / buy / partner | [M1U2](/unidades/m1u2-portfolio-100-dias.md): build / buy / agentificar | [BAIC](/frameworks/baic-guia-genai.md) | [Build / Buy / Agentificar](/conceptos/m1u2-build-buy-agentificar.md), [perfiles y tecnología BAIC](/frameworks/baic-perfiles-tecnologia.md), [7 pasos BAIC](/frameworks/baic-metodologia-7-pasos.md) |
 | Gobierno | [M1U4](/unidades/m1u4-rol-gobernanza.md): decision rights, Council vs CoE, Governance Stack | [Microsoft RAI](/frameworks/microsoft-rai-maturity.md), [programa](/programa.md) (AI Constitution, Risk Register) | [Decision rights](/conceptos/m1u4-decision-rights.md), [Council vs CoE](/conceptos/m1u4-council-vs-coe.md), [Governance Stack](/conceptos/m1u4-governance-stack.md), [inventario y operating rhythm](/conceptos/m1u4-inventario-y-operating-rhythm.md), [RACI](/conceptos/m1u4-raci-ownership.md), [niveles RAI](/frameworks/microsoft-rai-niveles.md), [uso RAI](/frameworks/microsoft-rai-uso.md), [artefactos del programa](/conceptos/programa-artefactos.md) |
 | Compliance | [M1U4](/unidades/m1u4-rol-gobernanza.md): EU AI Act + NIST AI RMF + ISO/IEC 42001 | [EU AI Act](/frameworks/eu-ai-act.md) | [EU AI Act, NIST e ISO](/conceptos/m1u4-eu-ai-act-nist-iso.md), [AI Omnibus y SIGEN](/conceptos/m1u4-ai-omnibus-sigen.md), [niveles de riesgo](/frameworks/eu-ai-act-niveles-riesgo.md), [Anexo III](/frameworks/eu-ai-act-anexo-iii.md), [proveedor y desplegador](/frameworks/eu-ai-act-proveedor-desplegador.md), [calendario y sanciones](/frameworks/eu-ai-act-calendario-sanciones.md) |
-| Seguridad | [M3U1](/unidades/m3u1-seguridad.md): prompt injection, DLP, red teaming | [Harness](/unidades/memoria-contexto-harness.md), [M1U3](/unidades/m1u3-datos-contexto.md) | [Prompt injection y jailbreaks](/conceptos/m3u1-prompt-injection-jailbreaks.md), [DLP](/conceptos/m3u1-dlp-datos-en-riesgo.md), [pipeline seguro](/conceptos/m3u1-pipeline-datos-seguro.md), [red teaming](/conceptos/m3u1-proceso-red-teaming.md), [capas de seguridad](/conceptos/m3u1-capas-seguridad.md), [diez fallas de contexto](/conceptos/harness-diez-fallas-contexto.md), [anonimización de PII](/conceptos/m1u3-anonimizacion-inferencia.md), [apunte 6/10](/apuntes/2026-10-06-seguridad-agentes.md) |
+| Seguridad | [M3U1](/unidades/m3u1-seguridad.md): prompt injection, DLP, red teaming; [documento U9](/unidades/m3u1-documento-u9.md) y [Clase 9](/unidades/m3u1-clase-9.md) | [Harness](/unidades/memoria-contexto-harness.md), [M1U3](/unidades/m1u3-datos-contexto.md) | [Prompt injection y jailbreaks](/conceptos/m3u1-prompt-injection-jailbreaks.md), [DLP](/conceptos/m3u1-dlp-datos-en-riesgo.md), [pipeline seguro](/conceptos/m3u1-pipeline-datos-seguro.md), [red teaming](/conceptos/m3u1-proceso-red-teaming.md), [capas de seguridad](/conceptos/m3u1-capas-seguridad.md), [diez fallas de contexto](/conceptos/harness-diez-fallas-contexto.md), [anonimización de PII](/conceptos/m1u3-anonimizacion-inferencia.md), [apunte 6/10](/apuntes/2026-10-06-seguridad-agentes.md), [regla de dos de tres](/conceptos/m3u1-regla-dos-de-tres.md), [fugas y destinos de datos](/conceptos/m3u1-fugas-y-destinos-de-datos.md), [marcos de seguridad](/conceptos/m3u1-marcos-seguridad.md), [scorecard para el directorio](/conceptos/m3u1-scorecard-seguridad-directorio.md), [caso FinBot](/casos/m3u1-finbot.md) |
 | People plan | [M3U2](/unidades/m3u2-cambio-literacy.md): AI Literacy por rol, AI Champions | [M3U3](/unidades/m3u3-talento.md) (talento y transición), [M2U3](/unidades/m2u3-fuerza-laboral.md), [BAIC](/frameworks/baic-guia-genai.md), [M1U4](/unidades/m1u4-rol-gobernanza.md) | [AI literacy por niveles](/conceptos/m3u2-ai-literacy-niveles.md), [programa de champions](/conceptos/m3u2-programa-champions.md), [perfil de talento AI-ready](/conceptos/m3u3-perfil-talento-ai-ready.md), [transición responsable](/conceptos/m3u3-transicion-responsable.md), [compensación futura](/conceptos/m3u3-compensacion-futuro-sintetico.md), [Deep Research de un rol](/conceptos/m3u3-deep-research-rol-critico.md), [champions y literacy en M1U4](/conceptos/m1u4-champions-y-literacy.md), [grafo humano-agente](/conceptos/m2u3-grafo-humano-agente.md), [tres modos de la IA](/conceptos/m2u3-tres-modos-ia.md), [art. 4 del AI Act](/frameworks/eu-ai-act-proveedor-desplegador.md), [apunte 22/9](/apuntes/2026-09-22-fuerza-laboral.md) |
 | Roadmap cultural | [M3U2](/unidades/m3u2-cambio-literacy.md): frenos a la adopción, Prompt Challenge | [M3U4](/unidades/m3u4-plan-maestro.md) (cuatro frentes culturales), [M1U1](/unidades/m1u1-mentalidad-caio.md) (anti-patterns del líder) | [Roadmap tridimensional](/conceptos/m3u4-roadmap-tridimensional.md), [Frenos y transición](/conceptos/m3u2-frenos-y-transicion.md), [Prompt Challenge](/conceptos/m3u2-prompt-challenge.md), [anti-patterns del líder](/conceptos/m1u1-anti-patterns-lider.md) |
 | Roadmap técnico / 100 días | [M1U2](/unidades/m1u2-portfolio-100-dias.md): 100 días en 3 fases | [M3U4](/unidades/m3u4-plan-maestro.md) (estructura de 12 meses; MLOps clásico), [M1U1](/unidades/m1u1-mentalidad-caio.md), [M2U4](/unidades/m2u4-aiops.md) | [Estrategia a 12 meses](/conceptos/m3u4-estrategia-12-meses.md), [Roadmap tridimensional](/conceptos/m3u4-roadmap-tridimensional.md), [Plan de 100 días](/conceptos/m1u2-plan-100-dias.md), [plan de 30 días](/conceptos/m1u1-plan-30-dias.md), [de la demo a producción](/conceptos/m1u4-demo-a-produccion.md), [ciclo de evals](/conceptos/m2u4-ciclo-evals-observabilidad.md), [apunte 18/8](/apuntes/2026-08-18-portfolio-100-dias.md) |

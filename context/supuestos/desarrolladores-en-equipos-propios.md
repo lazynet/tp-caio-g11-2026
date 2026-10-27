@@ -5,8 +5,8 @@ description: "El caso de negocio supone entre 15 y 20 desarrolladores en equipos
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Supuestos de diseño confirmados por Martín: 15-20 desarrolladores en equipos propios con punto medio 17,5, costo cargado mensual de USD 2.500-7.000 con punto medio 4.750 y mínimo propuesto de 15 personas activas para gates de valor. Se conserva pendiente la validación de cohorte, costos y precisión; N no se deduce del peso de Tecnología ni está calibrado contra la nómina. El mínimo requiere además semiancho de intervalo de hasta 3 puntos porcentuales; si la preparación muestra precisión insuficiente, se reformula el gate antes de la segunda liberación. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Cohorte supuesta de 15-20 personas, punto medio 17,5 y costo cargado mensual de USD 2.500-7.000, punto medio 4.750. Se adopta el protocolo agregado por área del Anexo B. Se mantiene el piso propuesto de 15 personas de la cohorte; ese N no garantiza precisión ni paso del gate, y se retira el semiancho fijo de 3 puntos como criterio de precisión. R-14 exige ratificación del método y cohorte por el AI Council antes de la segunda liberación. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, productividad]
 sources:
   - id: tamano-estructura
@@ -21,7 +21,10 @@ sources:
   - id: umbrales-tecnicos
     resource: "context/supuestos/umbrales-tecnicos-propuestos.md"
     title: "Muestra y precisión propuestas para los gates de impacto"
-generated: { by: codex/gpt-6, at: 2026-10-20 }
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, R-14 (método de medición) y R-06 (quién produce, verifica y firma)"
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21 }
 ---
 # Supuesto
 
@@ -35,9 +38,14 @@ Equipos propios son los que trabajan en modo producto, donde la organización
 controla las herramientas; el staffing no se cuenta, porque el uso de IA ahí
 depende de cada cliente (ver [ganancia de productividad](/supuestos/ganancia-de-productividad.md)).[^ganancia-productividad]
 
-El mínimo propuesto de 15 es el piso de la cohorte y requiere además un
-semiancho del intervalo de hasta 3 puntos porcentuales. La precisión se valida
-durante la preparación, antes de la segunda liberación.[^umbrales-tecnicos]
+El mínimo propuesto de 15 es el piso de la cohorte para que una lectura decida
+por valor. No garantiza precisión: con 15-20 personas, la lectura del mes 9 solo
+distingue de cero, con buena probabilidad, una mejora cercana al techo del rango
+de la ganancia supuesta; la cuenta de potencia y el gate de valor están en la
+ficha de umbrales técnicos.[^umbrales-tecnicos] La cohorte la identifica el Responsable de Tecnología en el acta de la validación
+inicial; el CFO verifica el costo, y la precisión y el método los ratifica el AI
+Council antes de la segunda liberación (R-14). Sin ratificación no se libera
+M1-M3.[^resoluciones]
 
 # Por qué es razonable
 
@@ -52,8 +60,10 @@ durante la preparación, antes de la segunda liberación.[^umbrales-tecnicos]
 
 - Un inventario por equipo que dé menos de 15 desarrolladores en equipos propios.
 - Una mezcla de seniority muy distinta de la supuesta.
-- Que la serie de la preparación previa muestre que con 15 personas el semiancho supera 3 puntos:
-  entonces el mínimo no alcanza y el gate se reformula antes de la segunda liberación, previa a M1.
+- Que la serie de la preparación previa muestre que, con la cohorte real, ni con
+  base de 8 semanas la lectura del mes 9 distingue el techo del rango: el AI
+  Council ratifica antes de la segunda liberación, previa a M1, que ninguna lectura
+  decida por valor (R-14).[^resoluciones]
 
 # Cautelas
 
@@ -65,4 +75,5 @@ durante la preparación, antes de la segunda liberación.[^umbrales-tecnicos]
 [^tamano-estructura]: Tamaño y estructura de la organización, dotación y peso aproximado de Tecnología al corte de septiembre de 2026.
 [^ganancia-productividad]: Ganancia de productividad con agentes de código, alcance en equipos propios y exclusión de staffing.
 [^costo-rol]: Costo mensual cargado por rol, rangos supuestos sin calibración contra nómina.
-[^umbrales-tecnicos]: Umbrales técnicos propuestos, muestra mínima de 15 personas activas y semiancho máximo de 3 puntos porcentuales, sujetos a validación previa.
+[^resoluciones]: Anexo G, R-14 (el AI Council ratifica estimador, muestra mínima, cohorte elegible y reformulación antes de la segunda liberación) y R-06 (el CFO responde por cada cifra del business case).
+[^umbrales-tecnicos]: Umbrales técnicos propuestos, muestra mínima de 15 personas activas, cuenta de potencia y gate de valor, sujetos a validación previa.

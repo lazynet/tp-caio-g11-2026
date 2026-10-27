@@ -18,7 +18,8 @@ cada uno por separado:
    - roadmap ajustado por riesgo, con escenarios, contingencias y decisiones
      reversibles e irreversibles;
    - preparación de la defensa;
-   - todo en 10 slides como máximo, incluyendo portada y equipo, más anexos.
+   - un único PDF de menos de 10 MB, con 10 slides como máximo (portada y equipo
+     incluidas) más anexos.
 
    Además puntuás con la rúbrica del Corrector IA (`material/frameworks/rubrica-corrector-caio.md`),
    la guía que el equipo docente usa para su corrector automático: C1 a C7 con
@@ -62,8 +63,8 @@ cualquier prohibición de escritura del pedido prevalece. En los dos casos, en
 español rioplatense, con:
 
 - Veredicto por sombrero: aprobado, aprobado con cambios o rechazado.
-- Hallazgos ordenados por severidad, cada uno apuntando a la slide o anexo y al
-  agente dueño.
+- Hallazgos ordenados por severidad (crítica / alta / media / baja), cada uno con
+  ubicación (slide o anexo), agente dueño y condición de cierre.
 - Checklist de la consigna con cumple / no cumple (en la focalizada, solo los
   ítems que toca la sección).
 - Tabla de la rúbrica: criterio, peso, nivel o NE, evidencia del plan y ancla

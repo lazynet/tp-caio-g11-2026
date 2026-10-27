@@ -5,8 +5,8 @@ description: "Umbrales que propone el anexo de arquitectura sin medición previa
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Martín confirmó en esta conversación los cuatro bloques como propuestas de diseño: evaluación del asistente; ruteo, portabilidad y costo; medición de productividad y calidad; y capacidad M4-M6 del paquete completo. Incluye objetivos sin medir, ceros observados sin garantía de ausencia de riesgo, denominadores previos, costo del gateway calculado sin redondear y sin prometer repago del programa, viabilidad estadística pendiente y calidad con precedencia sobre throughput. Confirma la conciliación de 2,225 FTE y 0,025 FTE de holgura, documentación imputada a cada fracción y excepción de capacidad sujeta a autorización. No acredita resultados, disponibilidad, contratación, validación contractual ni aprobación empresarial; las alternativas ampliadas no se incorporan al paquete mínimo."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Cuatro bloques de diseño: evaluación del asistente; ruteo, portabilidad y costo; productividad y calidad agregadas por área; capacidad del paquete completo. R-13/R-14 fijan agregados y ratificación previa del método. Intervalo bilateral de 90% por conteos logarítmicos y sobredispersión; M6 no lee valor, M9 y M12 exigen límite inferior mayor que cero sin daño; respaldo de base de 8 semanas según R-18. R-15/R-17 condicionan plataforma y rutas a señal, pruebas, recursos y autorización. Se conserva la cuenta de 2,225 FTE y 0,025 FTE de holgura para el alcance que corresponde. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, arquitectura, evals, finops]
 sources:
   - id: arquitectura
@@ -27,7 +27,13 @@ sources:
   - id: politica
     resource: "context/hechos/gobierno-y-politica-ia.md"
     title: "Política de IA informada por el responsable del caso y sus cautelas"
-generated: { by: codex/gpt-6, at: 2026-10-20 }
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones R-13 (datos de uso), R-14 (método de medición), R-15 (plataforma), R-17 (rama con plataforma) y R-18 (calendario de la base)"
+  - id: ganancia
+    resource: "context/supuestos/ganancia-de-productividad.md"
+    title: "Rango supuesto de ganancia de throughput, +10% a +25%"
+generated: { by: claude-code/claude-opus-5-5, at: 2026-10-21 }
 ---
 # Supuesto
 
@@ -56,9 +62,13 @@ ausencia de daño ni valor económico.
 
 ## Política de ruteo y prueba de portabilidad y costo del gateway
 
-Este bloque corresponde a alternativas con plataforma central, no al paquete
-mínimo de aprendizaje. Son propuestas pendientes de prueba y validación
-contractual; no acredita que el proveedor admita hoy ninguna de las rutas.[^arquitectura]
+Este bloque rige solo si el Directorio libera plataforma bajo la regla de señal
+y cuatro condiciones (R-15); no es parte del paquete mínimo de aprendizaje. Cada
+ruta la habilita el Responsable de Tecnología tras la prueba de portabilidad y
+costo, con el régimen comercial confirmado por escrito con el proveedor y
+verificado por el CFO (R-17); sin esa confirmación, la ruta queda en laboratorio
+con tráfico sintético. No acredita que el proveedor admita hoy ninguna de las
+rutas.[^arquitectura][^resoluciones]
 
 - El agente de código se enruta según su régimen comercial: con la
   suscripción que permite gateway (plana, y enrutar la preserva), sí; con la
@@ -92,52 +102,56 @@ telemetría, sin ahorro de precio. El ahorro por ruteo solo se evalúa bajo pago
 por consumo. El umbral cubre la infraestructura modelada del gateway; no
 demuestra repago del programa completo ni ahorro observado.[^finanzas]
 
-## Método del intervalo de throughput (para las lecturas de los meses 6 y 9)
+## Método del intervalo de throughput (gate de valor de los meses 6, 9 y 12)
 
-Protocolo propuesto, pendiente de comprobar viabilidad y ratificar antes de la
-segunda liberación, previa a M1. La autoridad que lo ratifica está a designar.
-La base prospectiva se recoge en las semanas 1-4 antes del tratamiento; la
-serie retrospectiva solo estima tendencia y ruido.[^arquitectura]
+Protocolo propuesto. Lo produce QA/análisis de datos bajo el Responsable de
+Tecnología, el verificador senior independiente verifica el acta de viabilidad y
+los indicadores de cada lectura, y el AI Council ratifica el método antes de la
+segunda liberación, previa a M1, sobre la tabla de operación del acta (R-14); la
+autoridad del gate no lo ratifica. Sin ratificación no se libera M1-M3.[^resoluciones]
+La base prospectiva se recoge en las semanas 1-4 (u 8) antes del tratamiento; la
+serie retrospectiva solo estima tendencia y ruido. Todos los conteos son totales
+por área y semana: ningún dato por persona se extrae ni se retiene (R-13).[^arquitectura][^resoluciones]
 
 | Elemento | Propuesta |
 |---|---|
-| Estimador | Cambio relativo apareado de PR aceptados por semana de cada persona activa contra su base prospectiva congelada, con pesos de estrato fijados en la base; menos el cambio de un grupo que no adopta o, si no existe, la tendencia de la serie de la preparación previa |
-| Intervalo | *Bootstrap* percentil por persona, 2.000 réplicas, 90% bilateral; pasa productividad si el límite inferior ≥ +3% en M6 y ≥ +8% en M9, con calidad resuelta primero |
-| Precisión exigida | Semiancho ≤ 3 puntos porcentuales; es un requisito propuesto, sin garantizar que permita discriminar ni pasar el gate |
-| Muestra mínima | 15 personas activas (piso del supuesto de 15-20), con base congelada propia de tasa positiva y PR en al menos 6 de 8 semanas de la ventana; el piso no garantiza precisión suficiente |
-| Muestra insuficiente | Menos de 8 semanas o semiancho > 3 puntos con N ≥ 15: "espera" (6 semanas más, que suman semanas y no personas); vencida, rige la regla del gate. Con N < 15 no se espera: la viabilidad se evalúa durante la primera autorización y el gate se reformula antes de la segunda liberación, previa a M1 |
-| Calidad | Mismo método sobre el aumento relativo de incidentes y retrabajo por cada 100 PR, evaluados por separado, con margen de no inferioridad δ = +10% relativo (supuesto sin dato; el acta y el protocolo se producen durante la primera autorización y se ratifican, incluido este margen, antes de la segunda liberación, previa a M1). **Primero, daño:** si algún límite inferior > 0, la ganancia no cuenta y el gate corta, incluso con límite superior ≤ δ. **Luego, incierto:** sin daño demostrado, si algún límite superior > δ, el throughput no puede pasar; cuenta como espera, una vez, y vencida sin resolver como no pasa. **Solo con ambos indicadores resueltos:** sin daño y con ambos límites superiores ≤ δ, decide el throughput |
-| Respaldo | La serie retrospectiva de la preparación previa estima tendencia y ruido; no es base de atribución. Usada como base, es solo una lectura contra tendencia, sin atribuir ganancia: no libera capital y puede producir espera o corte, no paso. El protocolo completo está en el anexo B |
+| Estimador | Razón de tasas de PR aceptados por persona-semana activa, ventana contra base congelada, con pesos de estrato fijados en la base y ajuste por la tendencia de la serie de la preparación previa |
+| Intervalo | 90% bilateral por conteos en escala logarítmica, ampliado por la sobredispersión φ estimada en la serie retrospectiva |
+| Cuenta de potencia | SE = √(φ × (1/P_b + 1/P_v)), con P_b y P_v los PR de la base y de la ventana; semiancho = 1,645 × SE; mejora distinguible de cero con 80% de probabilidad ≈ 2,49 × SE. λ (PR por persona y semana) y φ no tienen dato: el acta los mide |
+| Precisión | No se exige semiancho ≤ 3 puntos porcentuales: con ventana del doble de la base requiere ≈ 4.509 PR en la base (unas 564 personas con 2 PR por semana) |
+| Muestra mínima | 15 personas del padrón con PR en la base, como conteo; con menos, ninguna lectura decide por valor |
+| Gate de valor | Mes 6: no lee valor; decide por adopción, calidad, costo y controles, y corta solo por daño de calidad o caída demostrada del throughput. Mes 9: pasa si el peor caso es mayor que 0, sin daño (se acredita el peor caso); espera única con estimado ≥ +5% sin pasar; corta con estimado < +5% o daño. Mes 12: peor caso mayor que 0, sin daño, como evidencia para el año 2 |
+| Calidad | Guardia de daño: hay daño si el límite inferior del aumento de incidentes o de retrabajo es mayor que 0, y corta aunque el throughput pase. No se exige no inferioridad con δ = +10%: requiere ≥ 447 eventos en la base, y cada PR aporta a lo sumo uno |
+| Respaldo | En la semana 4, con λ y φ observados, si la lectura del mes 9 no distingue con 80% de potencia una ganancia de +25% (techo del rango supuesto) con base de 4 semanas y sí con 8, la base se extiende a la semana 8 (R-18). La retrospectiva no es base de atribución[^ganancia] |
 
-Los umbrales y las salidas de espera o corte remiten al anexo F.[^roadmap]
-El margen de calidad es relativo, no puntos porcentuales: una tasa base de
-2 incidentes por 100 PR tendría un margen de 2,2 por 100 PR con δ = +10%.
+Los umbrales y las salidas de espera o corte remiten al anexo F, que adopta este
+gate.[^roadmap] Con n = 18 y λ = 2, ilustrativos, el gate anterior (límite inferior
+≥ +3% en M6 y ≥ +8% en M9) pasaba con ≈ 6% de probabilidad en el escenario base;
+el del mes 9 propuesto pasa con ≈ 21% en el base y ≈ 56% en el optimista, y corta
+con ≈ 68% sin mejora real. Son cuentas de planificación, no resultados
+observados.[^arquitectura]
 
-La cuenta simétrica de planificación muestra el límite de exigir solo ±3 pp:
-en M6, +3,75% − 3 pp = +0,75%, por debajo de +3%; en M9,
-+9% − 3 pp = +6%, por debajo de +8%. Para esos estimados se necesitarían
-semianchos ≤ 0,75 pp y ≤ 1 pp, respectivamente. No son resultados observados:
-el bootstrap puede ser asimétrico y decide su límite inferior real.[^arquitectura]
-
-Una tasa base cero no permite calcular variación relativa. En throughput se
-documenta la exclusión y su efecto sobre N; en calidad se informan conteos y
-diferencias absolutas como descripción, sin declarar no inferioridad ni paso
-por valor. Sin denominador, el indicador es no estimable, no cero. El método
-debe reformularse y ratificarse antes del tratamiento o aplicar las salidas
-del gate si el problema aparece en una lectura.[^arquitectura]
+Una tasa base cero no permite calcular variación relativa: en calidad se
+informan conteos, exposición y diferencia absoluta por 100 PR, sin declarar
+ausencia de daño. Sin denominador, el indicador es no estimable, no cero. El
+método debe reformularse y ratificarlo el AI Council antes del tratamiento o
+aplicar las salidas del gate si el problema aparece en una lectura.[^arquitectura]
 
 ## Replan de capacidad de los meses 4-6 con el producto diferido
 
-Alternativa del paquete completo, pendiente de capacidad, contratación y nueva
-autorización con alcance, calendario y costeo. No forma parte del paquete
-mínimo.[^arquitectura][^personas]
+Alternativa del paquete completo: rige solo si el Directorio libera plataforma
+en el mes 3 (o en el 6 o el 9) bajo R-15. Personas confirma el 0,2 del
+contractor en su contrato y la excepción de 0,3 FTE requiere aprobación previa
+del Directorio (R-17). Sin contractor ni perfil interno demostrado al inicio de
+M4, no se inician los hitos de IA aplicada. No forma parte del paquete
+mínimo.[^arquitectura][^personas][^resoluciones]
 
 - Se propone bajar Arquitectura de 0,5 a 0,4 FTE al diferir el diseño del
   producto, y DevOps/QA de 1,0 a 0,8 FTE al trasladar tareas al contractor.
   Una persona al 100% cubriría 0,8 FTE de IA aplicada más 0,2 FTE para esas
   tareas, sujeto a confirmar alcance y disponibilidad.[^arquitectura][^personas]
 - Si existe contractor, pero no dispone de ese 0,2, se propone la excepción
-  acotada de 0,3 FTE internos, con autorización antes de activarla. Sin
+  acotada de 0,3 FTE internos, con aprobación previa del Directorio. Sin
   contractor ni perfil interno demostrado no se inician los hitos de IA
   aplicada: la excepción no reemplaza al especialista. La alternativa con
   fracción interna requiere ~3,3 FTE clave en M4-M6, no la capacidad del
@@ -148,9 +162,9 @@ mínimo.[^arquitectura][^personas]
 La conciliación del anexo E para el replan suma 576 h de Arquitectura y
 DevOps/QA, 216 h de gobierno y seguridad, 96 h del líder y 180 h de Council,
 bypass y red team interno: 1.068 h / 480 = 2,225 FTE clave. Frente al techo
-supuesto de 2,25, quedan 0,025 FTE, equivalentes a 12 h trimestrales. La tabla
-del anexo B declara 0,05 de holgura; esta ficha adopta la cuenta conciliada del
-anexo E y deja explícita esa diferencia, pendiente de alinear el anexo B.[^finanzas][^arquitectura]
+supuesto de 2,25, quedan 0,025 FTE, equivalentes a 12 h trimestrales. El anexo B
+usa la misma cuenta conciliada; el 0,05 que menciona corresponde a la holgura de
+los meses 7-9.[^finanzas][^arquitectura]
 
 La documentación mínima reproducible de los cuatro entregables incluye tupla
 de versión, instrucciones de ejecución, ADR corto y corrida fechada. Se
@@ -163,7 +177,7 @@ presupuestado por fuera de esas fracciones.[^arquitectura]
 Manuales y traspaso se difieren a M7-M12. En la semana 7 del tramo M4-M6 se
 revisan documentación y reproducción de los entregables cerrados; un
 entregable sin documentación reproducible no cuenta para la lectura de M6.
-Si falta capacidad, la excepción requiere aprobación antes de activarse;
+Si falta capacidad, la excepción requiere aprobación previa del Directorio;
 esta revisión humana no la autoriza.[^arquitectura][^personas]
 
 # Por qué es razonable
@@ -177,10 +191,11 @@ esta revisión humana no la autoriza.[^arquitectura][^personas]
   que el reporte mensual con el escenario de consumo alimenta en el tablero mensual del Council.
 - Condicionar el ruteo al régimen evita que un gate de control obligue a un
   cambio que encarece el servicio.
-- El intervalo propuesto remuestrea personas porque la unidad de decisión es
-  la persona activa. La precisión y el tamaño efectivo de cohorte deben
-  comprobarse antes de ratificar el método; ±3 pp no garantiza separar bandas
-  ni que el ejemplo base pase.
+- El intervalo usa totales por área y semana porque el tratamiento por defecto
+  de los datos de uso son los agregados (R-13), y porque la precisión la fija el
+  total de PR, no la cantidad de personas: agrupar no la cambia. Con 15-20
+  personas solo se distingue con buena probabilidad una mejora cercana al techo
+  del rango, y el plan lo declara.
 - El gate de impacto combina adopción y errores reportados para decidir
   extensión; no demuestra ausencia de daño. El caso de referencia no tiene
   valor económico asignado: es un piloto de aprendizaje.
@@ -199,23 +214,25 @@ esta revisión humana no la autoriza.[^arquitectura][^personas]
   El modo control también requiere alcance, capacidad y presupuesto autorizados.
 - Que la cohorte real tenga menos de 15 personas activas, o que la
   documentación mínima de un entregable lleve más de 2 días-persona.
+- Que λ o φ medidos en la serie retrospectiva den una potencia distinta de la
+  ilustrativa: la tabla de operación se rehace con esos valores antes de
+  ratificar el método.
 - Que el proveedor confirme que enrutar el agente de código obliga a facturar
   por API: la cobertura de precio no aplica mientras la suscripción sea plana.
-- Que la serie de la preparación previa muestre precisión insuficiente con
-  la cohorte real: se evalúa durante la primera autorización y se reformula
-  antes de la segunda liberación, previa a M1. Cumplir el máximo de 3 pp no
-  garantiza que los estimados del ejemplo base superen los umbrales.
+- Que la serie de la preparación previa muestre que ni con base de 8 semanas
+  la lectura del mes 9 distingue el techo del rango: el acta lo declara y el AI
+  Council ratifica, antes de la segunda liberación, que ninguna lectura decida
+  por valor.
 - La medición en sombra de los meses 4-6: si el uso o la tasa de error quedan lejos de los
   umbrales de impacto, se recalibran en la lectura del mes 6.
 
 # Cautelas
 
-- Los cuatro bloques fueron revisados por Martín como propuestas de diseño,
-  sin medición ni aprobación empresarial. La declaración de verificación no
+- Los cuatro bloques fueron revisados en la verificación humana como propuestas
+  de diseño, sin medición ni aprobación empresarial. La declaración de verificación no
   acredita consenso del equipo ni ejecución de controles o contratos.
-- El anexo D todavía imputa toda la documentación mínima al 0,8; esta ficha
-  adopta la imputación por entregable del anexo B (0,8 o 0,2). Queda pendiente
-  alinear el anexo D, además de la holgura de capacidad del anexo B.
+- El anexo D y el anexo B imputan la documentación mínima por entregable a la
+  fracción que lo produce (0,8 o 0,2).
 - El tamaño del dataset no tiene cálculo de potencia estadística.
 - El caso de referencia es ilustrativo; si el portfolio elige otro caso, los
   umbrales se rehacen.
@@ -223,6 +240,8 @@ esta revisión humana no la autoriza.[^arquitectura][^personas]
 [^arquitectura]: Anexo B, protocolos propuestos de evaluación, ruteo, medición, capacidad y documentación reproducible; objetivos sin medición previa y sujetos a prueba y autorización según su alcance.
 [^finanzas]: Anexo E, "Gateway: suscripción contra consumo": infraestructura anual a régimen sin piloto de 18.000-48.000 USD (centro 33.000) y gasto base anual de 19.000-24.000 USD (centro 21.500), sin acreditar ahorro ni repago del programa; "Conciliación de los meses 4-6": 1.068 h / 480 = 2,225 FTE clave y 0,025 FTE de holgura frente a 2,25.
 [^gobierno]: Anexo C, cobertura de ruteo medida sobre eventos del agente según la consola del proveedor, separada de cobertura de controles de otras superficies y del gasto elegible.
-[^roadmap]: Anexo F, lecturas M6 y M9, umbrales de productividad +3% y +8%, precedencia de calidad y salidas de espera o corte.
+[^roadmap]: Anexo F, lecturas M6, M9 y M12, bandas de espera y corte por estimado (+5% en M9) y precedencia de calidad; adopta el gate de valor propuesto por el anexo B.
 [^personas]: Anexo D, contractor como excepción propuesta, disponibilidad y alcance por confirmar; documentación mínima por entregable y manuales y traspaso diferidos.
 [^politica]: Política de IA informada por el responsable del caso; su aprobación y alcance se leen con las cautelas de la ficha, sin acreditar aplicación operativa.
+[^resoluciones]: Anexo G, R-13 (agregados por área por defecto), R-14 (produce QA bajo el Responsable de Tecnología, verifica el verificador senior independiente, ratifica el AI Council antes de la segunda liberación), R-18 (extensión de la base), R-15 (señal más cuatro condiciones; libera el Directorio) y R-17 (replan, excepción de 0,3 FTE y habilitación de rutas).
+[^ganancia]: Ganancia de productividad supuesta de +10% a +25% en equipos propios; el techo del rango es la referencia de potencia del gate de valor.

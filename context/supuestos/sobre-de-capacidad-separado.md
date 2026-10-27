@@ -5,8 +5,8 @@ description: "Propuesta de separar el tiempo clave de 1 a 2,25 FTE y las horas d
 status: verified
 verified:
   by: human:lazynet
-  at: 2026-10-20
-  scope: "Propuesta de diseño confirmada por Martín: separar tiempo clave de 1-2,25 FTE y tiempo distribuido para capacitación, champions y ejercicios de mesa, manteniendo la alternativa estricta. Incluye la clasificación de actividades, las 48 horas-persona anuales propuestas de ejercicios de mesa y la conciliación de las horas reales. Se conserva pendiente la aprobación organizacional; se reemplaza la aprobación de hoy por una propuesta y se retiran las conclusiones generales basadas en 9 horas por persona y pisos de 1,6-1,8 FTE, para calcular cada alcance por separado. Confirmado en esta conversación."
+  at: 2026-10-21
+  scope: "Revalidación registrada por instrucción expresa de Martín en la sesión del 21/10/2026 sobre el contenido vigente del PR #52. Separación de tiempo clave de 1-2,25 FTE y tiempo distribuido de capacitación y ejercicios. R-05 exige a Operaciones y managers conciliar agendas y capacidad por persona antes de la segunda liberación; sin encaje se reduce o resecuencia con recosteo y no se libera M1-M3. Cada alcance conserva su propia cuenta y los alcances ampliados requieren autorización separada. Se mantiene como Supuesto de diseño: esta declaración no acredita mediciones, contratos, disponibilidad ni ejecución de decisiones futuras."
 tags: [supuesto, finanzas, capacidad, propuesta]
 sources:
   - id: capacidad-inversion
@@ -21,6 +21,9 @@ sources:
   - id: poblaciones-capacitacion
     resource: "context/supuestos/poblaciones-de-capacitacion.md"
     title: "Supuestos de poblaciones y dedicaciones de formación y champions"
+  - id: resoluciones
+    resource: "plan/annexes/07-resoluciones.md"
+    title: "Anexo G, resoluciones del Directorio con autoridad, hito y consecuencia"
 generated: { by: codex/gpt-6, at: 2026-10-20 }
 ---
 # Supuesto
@@ -60,8 +63,12 @@ capacitación, como distribuido, aunque participe alguna persona clave.
 
 # Cautelas
 
-- **Es una propuesta de diseño sujeta a aprobación organizacional.** Elegir
-  entre lectura estricta y separada requiere una decisión explícita del board.
+- **Para el paquete mínimo rige la lectura separada**, adoptada por el
+  Directorio: la reserva de soporte clave (hasta 720 h) y la de formación
+  (540-660 h) se confirman por separado en la segunda liberación, antes de M1,
+  que firma el CEO con verificación del CFO. Sin agendas confirmadas, se reduce
+  o resecuencia con recosteo y no se libera M1-M3 (R-05)[^resoluciones]. En otros alcances, la
+  lectura se decide con ese alcance.
 - Leerlo separado no agranda la capacidad real: las horas igual salen de horas
   facturables. Solo hace visible un segundo sobre que hay que aprobar.
 - Cada alcance usa su propio cálculo de horas y requerimientos; no se trasladan
@@ -73,3 +80,4 @@ capacitación, como distribuido, aunque participe alguna persona clave.
 [^personas-clave]: Número de personas clave del sobre de capacidad, extremos de 1 y 2,25 FTE y validación por rol.
 [^capacidad-utilizacion]: Capacidad, utilización y bench, utilización facturable y restricciones del proyecto de adopción.
 [^poblaciones-capacitacion]: Poblaciones y horas de capacitación por nivel, supuestos de diseño de formación y champions.
+[^resoluciones]: Anexo G, registro único de resoluciones del Directorio: qué se decide, autoridad, hito, consecuencia y tipo de cada R-xx.
