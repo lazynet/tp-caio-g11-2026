@@ -6,9 +6,13 @@ Con el material accesible, los tres votos recomendados son **Grupo 21
 (Farmacity), Grupo 4 (Synthetic Corp) y Grupo 1 (Alimentos Meridiana)**.
 El siguiente candidato es el **Grupo 15, Colegio CGC**.
 
-Se revisaron las 29 entregas del ZIP: 28 tienen nota global y el Grupo 16 queda
-sin posición por anexos inaccesibles. El Grupo 11 no está incluido. Tampoco
+Se revisaron las 29 entregas del ZIP y el trabajo del Grupo 11: **30 trabajos,
+29 notas globales y el Grupo 16 sin posición por anexos inaccesibles**. No
 aparecen los grupos 17 y 22; Ualá figura como entrega sin número.
+
+**Nuestro Grupo 11 queda segundo compartido con Synthetic Corp:** 9,50 académico
+y 6,85 en negocio. Se evaluaron solo los slides y anexos adjuntados, sin la guía
+de defensa. El ranking general lo incluye; la columna para votar lo excluye.
 
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
@@ -36,41 +40,46 @@ resultados, precios, datos internos o cumplimiento normativo.
 
 ## Ranking académico
 
-| Puesto | Grupo y trabajo · informe completo | Académica /10 | Negocio /10 |
-|---:|---|---:|---:|
-| 1 | [21 · Farmacity](reports/grupo-21-farmacity.md) | 9,75 | 6,85 |
-| 2 | [4 · Synthetic Corp](reports/grupo-04-synthetic-corp.md) | 9,50 | 6,85 |
-| 3 | [1 · Alimentos Meridiana](reports/grupo-01-alimentos-meridiana.md) | 9,38 | 7,08 |
-| 4 | [15 · Colegio CGC](reports/grupo-15-colegio-cgc.md) | 9,13 | 6,85 |
-| 5 | [25 · CAIO Insurance](reports/grupo-25-caio-insurance.md) | 8,50 | 7,19 |
-| 6 | [2 · Bisagra Tecnología](reports/grupo-02-bisagra-tecnologia.md) | 8,50 | 6,96 |
-| 7 | [29 · The Company](reports/grupo-29-the-company.md) | 8,50 | 6,85 |
-| 8 | [6 · Grupo Vértice](reports/grupo-06-grupo-vertice.md) | 8,38 | 6,85 |
-| 9 | [27 · NEXA](reports/grupo-27-nexa.md) | 8,38 | 5,95 |
-| 10 | [9 · Celeste](reports/grupo-09-celeste.md) | 8,25 | 8,31 |
-| 11 | [10 · Salud Integrada / HealthOps360](reports/grupo-10-salud-integrada.md) | 8,25 | 6,85 |
-| 12 | [7 · Alba Industrial](reports/grupo-07-alba-industrial.md) | 8,25 | 6,85 |
-| 13 | [19 · BNA Inteligente](reports/grupo-19-bna.md) | 8,25 | 6,40 |
-| 14 | [24 · Apeiron Academy](reports/grupo-24-apeiron-academy.md) | 8,00 | 6,85 |
-| 15 | [Sin número · Ualá](reports/sin-grupo-uala.md) | 8,00 | 6,85 |
-| 16 | [30 · Grupo Rosmi](reports/grupo-30-grupo-rosmi.md) | 8,00 | 6,51 |
-| 17 | [23 · Cashea](reports/grupo-23-cashea.md) | 7,88 | 7,19 |
-| 18 | [18 · Telefónica TMA](reports/grupo-18-telefonica-tma.md) | 7,63 | 6,85 |
-| 19 | [12 · NodoSur](reports/grupo-12-nodosur.md) | 7,38 | 6,85 |
-| 20 | [14 · FlyTrics](reports/grupo-14-flytrics.md) | 7,38 | 6,06 |
-| 21 | [3 · SolnIA](reports/grupo-03-solnia.md) | 7,25 | 6,40 |
-| 22 | [8 · INMO-IA](reports/grupo-08-inmo-ia.md) | 6,88 | 6,51 |
-| 23 | [5 · Retail SA](reports/grupo-05-retail-sa.md) | 6,88 | 6,40 |
-| 24 | [31 · Otamendi Cerca IA](reports/grupo-31-sanatorio-otamendi.md) | 6,63 | 6,06 |
-| 25 | [26 · Casa Norte](reports/grupo-26-casa-norte.md) | 6,63 | 6,06 |
-| 26 | [13 · SatLink DTH](reports/grupo-13-satlink-dth.md) | 6,50 | 6,40 |
-| 27 | [20 · IA Soberana Municipal](reports/grupo-20-ia-soberana-municipal.md) | 6,50 | 5,84 |
-| 28 | [28 · KUA / OXY](reports/grupo-28-kua.md) | 5,88 | 5,50 |
-| — | [16 · Seguridad de Data Center](reports/grupo-16-seguridad-data-center.md) | NE | 6,85* |
+| Puesto general | Para votar | Grupo y trabajo · reseña | Académica /10 | Negocio /10 |
+|---:|---:|---|---:|---:|
+| 1 | 1 | [21 · Farmacity](reports/grupo-21-farmacity.md) | 9,75 | 6,85 |
+| 2= | 2 | [4 · Synthetic Corp](reports/grupo-04-synthetic-corp.md) | 9,50 | 6,85 |
+| 2= | — | [11 · Acme Labs · nuestro grupo](reports/grupo-11-acme-labs.md) | 9,50 | 6,85 |
+| 4 | 3 | [1 · Alimentos Meridiana](reports/grupo-01-alimentos-meridiana.md) | 9,38 | 7,08 |
+| 5 | 4 | [15 · Colegio CGC](reports/grupo-15-colegio-cgc.md) | 9,13 | 6,85 |
+| 6 | 5 | [25 · CAIO Insurance](reports/grupo-25-caio-insurance.md) | 8,50 | 7,19 |
+| 7 | 6 | [2 · Bisagra Tecnología](reports/grupo-02-bisagra-tecnologia.md) | 8,50 | 6,96 |
+| 8 | 7 | [29 · The Company](reports/grupo-29-the-company.md) | 8,50 | 6,85 |
+| 9 | 8 | [6 · Grupo Vértice](reports/grupo-06-grupo-vertice.md) | 8,38 | 6,85 |
+| 10 | 9 | [27 · NEXA](reports/grupo-27-nexa.md) | 8,38 | 5,95 |
+| 11 | 10 | [9 · Celeste](reports/grupo-09-celeste.md) | 8,25 | 8,31 |
+| 12 | 11 | [10 · Salud Integrada / HealthOps360](reports/grupo-10-salud-integrada.md) | 8,25 | 6,85 |
+| 13 | 12 | [7 · Alba Industrial](reports/grupo-07-alba-industrial.md) | 8,25 | 6,85 |
+| 14 | 13 | [19 · BNA Inteligente](reports/grupo-19-bna.md) | 8,25 | 6,40 |
+| 15 | 14 | [24 · Apeiron Academy](reports/grupo-24-apeiron-academy.md) | 8,00 | 6,85 |
+| 16 | 15 | [Sin número · Ualá](reports/sin-grupo-uala.md) | 8,00 | 6,85 |
+| 17 | 16 | [30 · Grupo Rosmi](reports/grupo-30-grupo-rosmi.md) | 8,00 | 6,51 |
+| 18 | 17 | [23 · Cashea](reports/grupo-23-cashea.md) | 7,88 | 7,19 |
+| 19 | 18 | [18 · Telefónica TMA](reports/grupo-18-telefonica-tma.md) | 7,63 | 6,85 |
+| 20 | 19 | [12 · NodoSur](reports/grupo-12-nodosur.md) | 7,38 | 6,85 |
+| 21 | 20 | [14 · FlyTrics](reports/grupo-14-flytrics.md) | 7,38 | 6,06 |
+| 22 | 21 | [3 · SolnIA](reports/grupo-03-solnia.md) | 7,25 | 6,40 |
+| 23 | 22 | [8 · INMO-IA](reports/grupo-08-inmo-ia.md) | 6,88 | 6,51 |
+| 24 | 23 | [5 · Retail SA](reports/grupo-05-retail-sa.md) | 6,88 | 6,40 |
+| 25 | 24 | [31 · Otamendi Cerca IA](reports/grupo-31-sanatorio-otamendi.md) | 6,63 | 6,06 |
+| 26 | 25 | [26 · Casa Norte](reports/grupo-26-casa-norte.md) | 6,63 | 6,06 |
+| 27 | 26 | [13 · SatLink DTH](reports/grupo-13-satlink-dth.md) | 6,50 | 6,40 |
+| 28 | 27 | [20 · IA Soberana Municipal](reports/grupo-20-ia-soberana-municipal.md) | 6,50 | 5,84 |
+| 29 | 28 | [28 · KUA / OXY](reports/grupo-28-kua.md) | 5,88 | 5,50 |
+| — | — | [16 · Seguridad de Data Center](reports/grupo-16-seguridad-data-center.md) | NE | 6,85* |
 
 Igual nota académica no implica igual posición: por ejemplo, Insurance supera a
 Bisagra por negocio, y HealthOps360 supera a Alba por C4 después de igualar ambas
 notas. Otamendi y Casa Norte se distinguen por ese mismo tercer criterio.
+
+Synthetic y Acme empatan también en negocio y C4, por eso comparten el segundo
+puesto general. «Para votar» conserva las posiciones excluyendo al Grupo 11;
+las posiciones de las reseñas individuales ajenas se refieren a esa columna.
 
 ## Por qué estos tres votos
 
@@ -187,6 +196,16 @@ del día de entrega y no genera descuentos de nota por sí misma.
 
 Es el archivo más útil para estudiar una simulación aritméticamente reproducible
 cuyas probabilidades y ejecución condicionada por gates siguen siendo supuestos.
+
+### Grupo 11 · Acme Labs · nuestro grupo
+
+- **Fortaleza:** inversión por etapas e integración entre arquitectura, controles, personas y medición, con salidas explícitas.
+- **Debilidad:** captura económica y factibilidad de medición pendientes; la defensa requiere reconstruir respuestas dispersas y las slides separadas perdieron sus enlaces.
+- **Mirá:** anexos físicos 172–181 y 187–189, después 199–206 y 226–229; decidir sin fabricar ROI y ajustar recursos según la evidencia. Curso: [financial storytelling](../../material/conceptos/m3u4-financial-storytelling.md).
+
+La [evaluación del Grupo 11](reports/grupo-11-acme-labs.md) coincide en dos
+revisiones: C1–C5 en 4/4 y C6–C7 en 3/4. Su nota de negocio es independiente.
+El grupo está incluido en la comparación, pero no en los votos propios.
 
 ### Grupo 12 · NodoSur
 
@@ -315,7 +334,7 @@ elegibilidad ni inventar un número para la votación.
 
 | Para estudiar | Empezá por | Prestá atención a |
 |---|---|---|
-| Financial storytelling | 21, 4 y 1 | Decisión financiable, límites, caja/capacidad y opciones |
+| Financial storytelling | 21, 4, 1 y 11 | Decisión financiable, límites, caja/capacidad y opciones |
 | Modelos y sensibilidad | 10 y 25 | Flujos reproducibles, simulación, rampa y dependencia de recuperos |
 | Evals y supervisión efectiva | 15 y 7 | Comparación, aprobación mecánica, permisos y pruebas negativas |
 | Gobierno agéntico | 1, 13 y 21 | Autoridad fuera del LLM, límites por acción, reversión y reparación |
@@ -331,7 +350,7 @@ Versión publicable de la revisión: conserva notas, juicio evaluativo y recorri
 
 Se revisaron 29 entregas ajenas y, por separado, los slides y anexos del
 [Grupo 11](reports/grupo-11-acme-labs.md). Este último queda segundo compartido
-con Synthetic al incorporarlo a la comparación: 9,50 académico y 6,85 negocio.
+con Synthetic en el ranking general: 9,50 académico y 6,85 negocio.
 La guía de defensa no adjuntada quedó excluida. Los votos no incluyen al propio grupo.
 
 Se usaron los mismos pesos y anclas; el runtime comparte memoria de proyecto,

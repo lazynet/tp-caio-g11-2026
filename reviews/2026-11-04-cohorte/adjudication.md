@@ -2,6 +2,8 @@
 
 El contraste de los cinco primeros iniciales sostiene los niveles de los grupos
 21, 4, 1 y 15, y ajusta NEXA. Los votos permanecen **21, 4 y 1**.
+Las posiciones citadas en este contraste corresponden al ranking para votar,
+que excluye al Grupo 11; la tabla general incorpora también nuestro trabajo.
 
 | Grupo | Niveles C1–C7 iniciales | Adoptados | Nota final exacta |
 |---|---|---|---:|

@@ -10,7 +10,7 @@ business_levels: [3,2,3,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 9,50/10. Negocio: 6,85/10.** Dos revisiones independientes coinciden.
-Segundo compartido con Synthetic al incorporarlo a la comparación; fuera del voto propio.
+Segundo compartido con Synthetic en el ranking general; fuera del voto propio.
 
 Se evaluaron únicamente las diez slides y los anexos adjuntados. La guía de
 defensa quedó excluida por confirmación de Martín. El combinado solo permitió

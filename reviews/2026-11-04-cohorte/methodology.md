@@ -35,6 +35,10 @@ El orden principal usa nota académica exacta, luego negocio y C4; un empate
 completo permanece compartido. Las tablas muestran dos decimales con
 ROUND_HALF_UP. El mix 80% académico / 20% negocio no altera los tres votos.
 
+El ranking general incluye al Grupo 11. La columna «Para votar» calcula las
+posiciones excluyéndolo; las posiciones de las reseñas de otros grupos remiten
+a esa columna. El Grupo 16 no tiene posición en ninguna de las dos.
+
 Se usó una sesión nueva por entrega, criterios comunes y contraste de los cinco
 primeros iniciales. Los evaluadores no recibieron las otras revisiones; el
 runtime comparte memoria, por lo que no se afirma aislamiento ciego formal.
