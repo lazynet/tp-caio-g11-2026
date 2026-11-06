@@ -10,7 +10,7 @@ business_levels: [3,2,3,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 8,38/10. Negocio: 6,85/10.**
-Puesto 8 en el ranking que excluye al Grupo 11.
+Puesto 9 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** reversión concreta con cola manual, capacitación, responsable y plazo.
 - **Debilidad:** los gates no sostienen la pérdida máxima prometida; falta justificar recurrencia y evitar superposición de beneficios.

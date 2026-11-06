@@ -10,7 +10,7 @@ business_levels: [3,2,2,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 8,25/10. Negocio: 6,40/10.**
-Puesto 13 en el ranking que excluye al Grupo 11.
+Puesto 14 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** adopción lenta modifica contrataciones, consultoría, plazos y presupuesto.
 - **Debilidad:** retorno dominado por capacidad valorizada; atribución de Cognos y su fecha de sustitución requieren conciliación.

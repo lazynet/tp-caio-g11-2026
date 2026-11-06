@@ -10,7 +10,7 @@ business_levels: [3,2,3,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 7,38/10. Negocio: 6,85/10.**
-Puesto 19 en el ranking que excluye al Grupo 11.
+Puesto 21 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** corta un proveedor sin abandonar el objetivo y reserva financiación para el plan B.
 - **Debilidad:** beneficios agregados, VAN y recupero no llegan a un modelo mensual reconstruible.

@@ -10,7 +10,7 @@ business_levels: [3,2,2,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 6,50/10. Negocio: 6,40/10.**
-Puesto 26 en el ranking que excluye al Grupo 11.
+Puesto 29 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** límites determinísticos de identidad, descuentos y comandos, fuera del razonamiento del LLM.
 - **Debilidad:** rampas de dotación y ahorro incompatibles; estrés con períodos mezclados y cobertura residual sin cerrar.

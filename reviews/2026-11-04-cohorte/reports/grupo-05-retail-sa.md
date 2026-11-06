@@ -10,7 +10,7 @@ business_levels: [3,2,2,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 6,88/10. Negocio: 6,40/10.**
-Puesto 23 en el ranking que excluye al Grupo 11.
+Puesto 26 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** rediseño del SDLC con perfiles de destino, formación por olas y financiación por fases.
 - **Debilidad:** llama autofinanciación a valor por capacidad y no concilia todos los gates financieros.

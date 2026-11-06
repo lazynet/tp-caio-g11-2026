@@ -10,7 +10,7 @@ business_levels: [3,2,3,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 8,50/10. Negocio: 6,85/10.**
-Puesto 7 en el ranking que excluye al Grupo 11.
+Puesto 8 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** reconversión de capacidad condicionada a horas vendidas y protocolos ante resistencia de PMs.
 - **Debilidad:** beneficios y escenarios financieros sin puente reproducible desde los supuestos operativos.

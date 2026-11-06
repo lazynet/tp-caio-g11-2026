@@ -10,7 +10,7 @@ business_levels: [3,2,3,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 7,63/10. Negocio: 6,85/10.**
-Puesto 18 en el ranking que excluye al Grupo 11.
+Puesto 19 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** SLO, formación, control de beneficios y riesgo condicionan desembolsos concretos.
 - **Debilidad:** costos sin partidas y rampa sin construcción operativa; una respuesta de recupero remite a secciones insuficientes.

@@ -10,7 +10,7 @@ business_levels: [3,2,3,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 8,25/10. Negocio: 6,85/10.**
-Puesto 11 en el ranking que excluye al Grupo 11.
+Puesto 12 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** modelo reproducible, simulaciones y gates con caja expuesta y alternativa de reglas sin IA generativa.
 - **Debilidad:** versiones de autonomía, producción y dotación no coinciden; falta conciliar caja incremental del CoE.

@@ -10,7 +10,7 @@ business_levels: [3,2,3,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 8,00/10. Negocio: 6,85/10.**
-Puesto 15 en el ranking que excluye al Grupo 11.
+Puesto 16 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** gobierno, FinOps y adopción sobre soluciones existentes, con inversión y contratación condicionadas.
 - **Debilidad:** beneficios, costos recurrentes y paybacks sin insumos mensuales suficientes para reconstruirlos.

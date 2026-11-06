@@ -10,7 +10,7 @@ business_levels: [3,2,3,1,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 6,88/10. Negocio: 6,51/10.**
-Puesto 22 en el ranking que excluye al Grupo 11.
+Puesto 25 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** autonomía limitada y adopción del vendedor condicionan el desembolso.
 - **Debilidad:** el PDF no concilia resultados anuales, acumulados y calendario; exposición y cobertura humana quedan abiertas.

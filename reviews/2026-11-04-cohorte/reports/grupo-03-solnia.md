@@ -10,7 +10,7 @@ business_levels: [3,2,2,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 7,25/10. Negocio: 6,40/10.**
-Puesto 21 en el ranking que excluye al Grupo 11.
+Puesto 24 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** justifica RAG temprano, compra de copilotos y postergación de autonomía transaccional.
 - **Debilidad:** el tramo inicial mezcla gasto con déficit neto; productividad incorporada al flujo llamado de caja.

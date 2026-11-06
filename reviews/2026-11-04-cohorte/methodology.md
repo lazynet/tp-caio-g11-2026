@@ -1,8 +1,8 @@
 # Metodología y alcance
 
-Evaluación orientativa del 4/11/2026: 29 entregas de otros equipos y una revisión
-separada del Grupo 11. Este queda excluido de los votos propios. Las fuentes y
-la evidencia detallada permanecen privadas; esta carpeta conserva la versión
+Evaluación inicial del 4/11/2026, actualizada el 6/11: 32 entregas de otros
+equipos y una revisión separada del Grupo 11, excluido de los votos propios.
+Las fuentes y la evidencia detallada permanecen privadas; esta carpeta conserva la versión
 publicable de los juicios, niveles, ranking y guía de lectura.
 
 ## Calidad académica
@@ -37,7 +37,8 @@ ROUND_HALF_UP. El mix 80% académico / 20% negocio no altera los tres votos.
 
 El ranking general incluye al Grupo 11. La columna «Para votar» calcula las
 posiciones excluyéndolo; las posiciones de las reseñas de otros grupos remiten
-a esa columna. El Grupo 16 no tiene posición en ninguna de las dos.
+a esa columna. El Grupo 16, antes NE, ya tiene posición en ambas. Las entregas
+sin número se comparan, sin certificar su elegibilidad para votar.
 
 Se usó una sesión nueva por entrega, criterios comunes y contraste de los cinco
 primeros iniciales. Los evaluadores no recibieron las otras revisiones; el
@@ -49,6 +50,18 @@ en imágenes y se reconstruyó el argumento financiero principal. Una web mutabl
 no acredita el contenido de la entrega histórica. Error, contradicción, evidencia
 insuficiente y sugerencia se distinguen; los originales no se incorporan a Git.
 
-Los anexos del Grupo 16 no estuvieron accesibles. C4/C7 son NE y no se emite
-nota global; la calificación de negocio es provisional. En el Grupo 11 solo
-entran slides y anexos: la guía de defensa no adjuntada quedó excluida.
+La actualización agrega tres revisiones completas y una nueva lectura del
+Grupo 16. Su presentación V6.2 conserva el texto y recupera enlaces activos a
+once respaldos, que se capturaron por URL, fecha y hash antes de evaluar.
+C4/C7 dejan de ser NE; no se afirma identidad de esos archivos remotos con una
+entrega anterior. Se verificó el corpus completo y se contrastaron las finanzas.
+
+Los HTML del Grupo 16 se leyeron y recalcularon desde su código y configuración;
+no se certifica la interfaz interactiva porque falló la inspección del navegador.
+La limitación del entorno no se atribuye al autor. Las otras notas anteriores
+se conservaron; no se presenta una nueva lectura integral de toda la cohorte.
+
+Las incorporaciones se identifican con rótulos de caso anonimizados. No se
+publican nombres de personas, identificadores de archivos remotos ni datos
+económicos u operativos internos. Las notas y niveles son juicios propios.
+En el Grupo 11 solo entran slides y anexos: la guía de defensa no adjuntada quedó excluida.

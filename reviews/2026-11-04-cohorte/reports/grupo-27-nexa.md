@@ -10,7 +10,7 @@ business_levels: [2,2,3,2,2]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 8,38/10. Negocio: 5,95/10.**
-Puesto 9 en el ranking que excluye al Grupo 11.
+Puesto 10 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** permiso del cliente, sombra, roles y fondos por etapa; reconoce que el dolor puede ser moderado.
 - **Debilidad:** costo por revisión, ahorro y repago no concilian; la calidad tampoco tiene un protocolo independiente completo.

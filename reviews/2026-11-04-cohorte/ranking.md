@@ -1,14 +1,15 @@
 # Evaluación de trabajos CAIO · cohorte 2026
 
-**Recomendación consolidada el 4/11/2026, tras contrastar cinco finalistas de la primera ronda.**
+**Actualizado el 6/11/2026: tres entregas nuevas y reevaluación del Grupo 16 con los anexos recuperados.**
 
 Con el material accesible, los tres votos recomendados son **Grupo 21
 (Farmacity), Grupo 4 (Synthetic Corp) y Grupo 1 (Alimentos Meridiana)**.
 El siguiente candidato es el **Grupo 15, Colegio CGC**.
 
-Se revisaron las 29 entregas del ZIP y el trabajo del Grupo 11: **30 trabajos,
-29 notas globales y el Grupo 16 sin posición por anexos inaccesibles**. No
-aparecen los grupos 17 y 22; Ualá figura como entrega sin número.
+La comparación reúne **33 trabajos, todos con nota global**: los 30 anteriores
+y tres incorporaciones. El Grupo 16 deja de estar NE y queda sexto general,
+quinto para votar. Se conserva la recomendación anterior; no se repitió la
+lectura completa de los otros trabajos. El Grupo 17 sigue sin aparecer.
 
 **Nuestro Grupo 11 queda segundo compartido con Synthetic Corp:** 9,50 académico
 y 6,85 en negocio. Se evaluaron solo los slides y anexos adjuntados, sin la guía
@@ -47,31 +48,34 @@ resultados, precios, datos internos o cumplimiento normativo.
 | 2= | — | [11 · Acme Labs · nuestro grupo](reports/grupo-11-acme-labs.md) | 9,50 | 6,85 |
 | 4 | 3 | [1 · Alimentos Meridiana](reports/grupo-01-alimentos-meridiana.md) | 9,38 | 7,08 |
 | 5 | 4 | [15 · Colegio CGC](reports/grupo-15-colegio-cgc.md) | 9,13 | 6,85 |
-| 6 | 5 | [25 · CAIO Insurance](reports/grupo-25-caio-insurance.md) | 8,50 | 7,19 |
-| 7 | 6 | [2 · Bisagra Tecnología](reports/grupo-02-bisagra-tecnologia.md) | 8,50 | 6,96 |
-| 8 | 7 | [29 · The Company](reports/grupo-29-the-company.md) | 8,50 | 6,85 |
-| 9 | 8 | [6 · Grupo Vértice](reports/grupo-06-grupo-vertice.md) | 8,38 | 6,85 |
-| 10 | 9 | [27 · NEXA](reports/grupo-27-nexa.md) | 8,38 | 5,95 |
-| 11 | 10 | [9 · Celeste](reports/grupo-09-celeste.md) | 8,25 | 8,31 |
-| 12 | 11 | [10 · Salud Integrada / HealthOps360](reports/grupo-10-salud-integrada.md) | 8,25 | 6,85 |
-| 13 | 12 | [7 · Alba Industrial](reports/grupo-07-alba-industrial.md) | 8,25 | 6,85 |
-| 14 | 13 | [19 · BNA Inteligente](reports/grupo-19-bna.md) | 8,25 | 6,40 |
-| 15 | 14 | [24 · Apeiron Academy](reports/grupo-24-apeiron-academy.md) | 8,00 | 6,85 |
-| 16 | 15 | [Sin número · Ualá](reports/sin-grupo-uala.md) | 8,00 | 6,85 |
-| 17 | 16 | [30 · Grupo Rosmi](reports/grupo-30-grupo-rosmi.md) | 8,00 | 6,51 |
-| 18 | 17 | [23 · Cashea](reports/grupo-23-cashea.md) | 7,88 | 7,19 |
-| 19 | 18 | [18 · Telefónica TMA](reports/grupo-18-telefonica-tma.md) | 7,63 | 6,85 |
-| 20 | 19 | [12 · NodoSur](reports/grupo-12-nodosur.md) | 7,38 | 6,85 |
-| 21 | 20 | [14 · FlyTrics](reports/grupo-14-flytrics.md) | 7,38 | 6,06 |
-| 22 | 21 | [3 · SolnIA](reports/grupo-03-solnia.md) | 7,25 | 6,40 |
-| 23 | 22 | [8 · INMO-IA](reports/grupo-08-inmo-ia.md) | 6,88 | 6,51 |
-| 24 | 23 | [5 · Retail SA](reports/grupo-05-retail-sa.md) | 6,88 | 6,40 |
-| 25 | 24 | [31 · Otamendi Cerca IA](reports/grupo-31-sanatorio-otamendi.md) | 6,63 | 6,06 |
-| 26 | 25 | [26 · Casa Norte](reports/grupo-26-casa-norte.md) | 6,63 | 6,06 |
-| 27 | 26 | [13 · SatLink DTH](reports/grupo-13-satlink-dth.md) | 6,50 | 6,40 |
-| 28 | 27 | [20 · IA Soberana Municipal](reports/grupo-20-ia-soberana-municipal.md) | 6,50 | 5,84 |
-| 29 | 28 | [28 · KUA / OXY](reports/grupo-28-kua.md) | 5,88 | 5,50 |
-| — | — | [16 · Seguridad de Data Center](reports/grupo-16-seguridad-data-center.md) | NE | 6,85* |
+| 6 | 5 | [16 · Seguridad de Data Center](reports/grupo-16-seguridad-data-center.md) | 8,88 | 6,85 |
+| 7 | 6 | [25 · CAIO Insurance](reports/grupo-25-caio-insurance.md) | 8,50 | 7,19 |
+| 8 | 7 | [2 · Bisagra Tecnología](reports/grupo-02-bisagra-tecnologia.md) | 8,50 | 6,96 |
+| 9 | 8 | [29 · The Company](reports/grupo-29-the-company.md) | 8,50 | 6,85 |
+| 10 | 9 | [6 · Grupo Vértice](reports/grupo-06-grupo-vertice.md) | 8,38 | 6,85 |
+| 11 | 10 | [27 · NEXA](reports/grupo-27-nexa.md) | 8,38 | 5,95 |
+| 12 | 11 | [9 · Celeste](reports/grupo-09-celeste.md) | 8,25 | 8,31 |
+| 13 | 12 | [10 · Salud Integrada / HealthOps360](reports/grupo-10-salud-integrada.md) | 8,25 | 6,85 |
+| 14 | 13 | [7 · Alba Industrial](reports/grupo-07-alba-industrial.md) | 8,25 | 6,85 |
+| 15 | 14 | [19 · BNA Inteligente](reports/grupo-19-bna.md) | 8,25 | 6,40 |
+| 16 | 15 | [24 · Apeiron Academy](reports/grupo-24-apeiron-academy.md) | 8,00 | 6,85 |
+| 17 | 16 | [Sin número · Ualá](reports/sin-grupo-uala.md) | 8,00 | 6,85 |
+| 18 | 17 | [30 · Grupo Rosmi](reports/grupo-30-grupo-rosmi.md) | 8,00 | 6,51 |
+| 19 | 18 | [23 · Cashea](reports/grupo-23-cashea.md) | 7,88 | 7,19 |
+| 20 | 19 | [18 · Telefónica TMA](reports/grupo-18-telefonica-tma.md) | 7,63 | 6,85 |
+| 21 | 20 | [22 · Operación de campo](reports/grupo-22-operacion-campo.md) | 7,63 | 6,74 |
+| 22= | 21= | [12 · NodoSur](reports/grupo-12-nodosur.md) | 7,38 | 6,85 |
+| 22= | 21= | [Sin número · Gastronomía](reports/sin-grupo-gastronomia.md) | 7,38 | 6,85 |
+| 24 | 23 | [14 · FlyTrics](reports/grupo-14-flytrics.md) | 7,38 | 6,06 |
+| 25 | 24 | [3 · SolnIA](reports/grupo-03-solnia.md) | 7,25 | 6,40 |
+| 26 | 25 | [8 · INMO-IA](reports/grupo-08-inmo-ia.md) | 6,88 | 6,51 |
+| 27 | 26 | [5 · Retail SA](reports/grupo-05-retail-sa.md) | 6,88 | 6,40 |
+| 28 | 27 | [31 · Otamendi Cerca IA](reports/grupo-31-sanatorio-otamendi.md) | 6,63 | 6,06 |
+| 29 | 28 | [26 · Casa Norte](reports/grupo-26-casa-norte.md) | 6,63 | 6,06 |
+| 30 | 29 | [13 · SatLink DTH](reports/grupo-13-satlink-dth.md) | 6,50 | 6,40 |
+| 31 | 30 | [20 · IA Soberana Municipal](reports/grupo-20-ia-soberana-municipal.md) | 6,50 | 5,84 |
+| 32 | 31 | [Sin número · Energía](reports/sin-grupo-energia.md) | 6,00 | 6,40 |
+| 33 | 32 | [28 · KUA / OXY](reports/grupo-28-kua.md) | 5,88 | 5,50 |
 
 Igual nota académica no implica igual posición: por ejemplo, Insurance supera a
 Bisagra por negocio, y HealthOps360 supera a Alba por C4 después de igualar ambas
@@ -80,6 +84,8 @@ notas. Otamendi y Casa Norte se distinguen por ese mismo tercer criterio.
 Synthetic y Acme empatan también en negocio y C4, por eso comparten el segundo
 puesto general. «Para votar» conserva las posiciones excluyendo al Grupo 11;
 las posiciones de las reseñas individuales ajenas se refieren a esa columna.
+Las tres entregas sin número se comparan, sin certificar su elegibilidad para
+la votación. Las incorporaciones se publican con rótulos de caso anonimizados.
 
 ## Por qué estos tres votos
 
@@ -231,17 +237,16 @@ El grupo está incluido en la comparación, pero no en los votos propios.
 - **Debilidad:** retorno de capacidad sin conciliar formación y costo de oportunidad; clasificación de datos y autoridad inconsistentes.
 - **Mirá:** anexos A3 pp. 11–13 y A9 pp. 41–43; evaluar el flujo humano completo. Curso: [ciclo de evals](../../material/conceptos/m2u4-ciclo-evals-observabilidad.md).
 
-### Grupo 16 · Seguridad de Data Center · sin nota global
+### Grupo 16 · Seguridad de Data Center
 
 - **Fortaleza:** agentes de solo lectura, capacitación previa, pruebas negativas y compromiso inicial limitado.
-- **Límite:** faltan los anexos declarados fuera del ZIP; C4 y C7 son NE. La nota de negocio es provisional.
-- **Mirá:** alcance pp. 4–10 y presentación pp. 5–10; comprar evidencia antes de escalar autonomía. Curso: [kill/scale gates](../../material/conceptos/m1u2-kill-scale-gates.md).
+- **Debilidad:** la compuerta técnica no define cómo actualizar la hipótesis económica; hay reglas desfasadas y falta aclarar el costo de extender el piloto.
+- **Mirá:** presentación pp. 5–10; Anexo A §§9–10, C hojas Escenarios y Chequeos, F §F.5 e I tablas 1–3; controlar la autonomía y comprar evidencia antes de expandir. Curso: [kill/scale gates](../../material/conceptos/m1u2-kill-scale-gates.md).
 
-Los anexos remitidos por otro canal no estuvieron accesibles para esta revisión.
-
-No se supone que el equipo omitió esos anexos: **faltan en el material al que
-esta evaluación tuvo acceso**. No se convierte ese límite en cero ni en última
-posición. Los niveles evaluables representan el 75% del peso, sin renormalizar.
+La V6.2 recuperada el 6/11 conserva el texto del deck y agrega enlaces activos.
+Se leyó todo el corpus vinculado y se reconstruyeron sus finanzas. C4/C7 pasan
+de NE a 3; el respaldo del roadmap sostiene C3=4. La nota es **8,88/6,85**.
+No se afirma que los anexos remotos actuales sean idénticos a una entrega histórica.
 
 ### Grupo 18 · Telefónica TMA
 
@@ -266,6 +271,15 @@ posición. Los niveles evaluables representan el 75% del peso, sin renormalizar.
 - **Fortaleza:** operación, derechos por acción, reparación, adopción y financiación integrados; capacidad separada de caja.
 - **Debilidad:** el valor de reutilizar siete agentes no demuestra todavía superioridad frente al autoservicio mejorado.
 - **Mirá:** sustento pp. 7–13 y 19–22 y slides 8 y 10; una inversión de aprendizaje con retorno negativo explícito. Curso: [financial storytelling](../../material/conceptos/m3u4-financial-storytelling.md).
+
+### Grupo 22 · Operación de campo
+
+- **Fortaleza:** separa ahorro en facturas variables de capacidad propia y conecta gobierno, personas y presupuesto.
+- **Debilidad:** la incorporación de terceros no coincide con la captura prevista; recupero fiscal y exposición al corte requieren corrección.
+- **Mirá:** anexos B pp. 9–11 y G pp. 21–22; distinguir aritmética del retorno y coherencia de la rampa operativa. Curso: [financial storytelling](../../material/conceptos/m3u4-financial-storytelling.md).
+
+La [reseña](reports/grupo-22-operacion-campo.md) registra el ajuste de C3/C5
+tras el contraste adicional, con el desacuerdo conservado en la evidencia privada.
 
 ### Grupo 23 · Cashea
 
@@ -330,6 +344,21 @@ posición. Los niveles evaluables representan el 75% del peso, sin renormalizar.
 El ZIP no identifica número de grupo. Se evalúa el trabajo, sin asumir su
 elegibilidad ni inventar un número para la votación.
 
+### Sin número · Caso de gastronomía
+
+- **Fortaleza:** observación operativa, adopción y desembolsos condicionados; caja y capacidad separadas.
+- **Debilidad:** el flujo mensual no respalda todos los retornos y el gate inicial tiene población ambigua; excede el máximo de slides.
+- **Mirá:** PDF pp. 8–9, 20–24 y 27; medir antes de expandir y trabajar la resistencia desde el diseño del proceso. Curso: [programa de champions](../../material/conceptos/m3u2-programa-champions.md).
+
+### Sin número · Proyectos de capital en energía
+
+- **Fortaleza:** prioriza detectar brechas críticas con citas y firma humana.
+- **Debilidad:** error de denominador financiero, retorno sin puente temporal/causal y compromiso inicial poco definido.
+- **Mirá:** plan pp. 2–4, 7, 9 y 12; separar consenso entre modelos, calidad contra referencia y captura económica. Curso: [evals](../../material/conceptos/m2u4-evals.md).
+
+Estas dos entregas no identifican número de grupo; se comparan sin asumir
+elegibilidad ni inventar un número para el voto.
+
 ## Recorridos cortos según el contenido del curso
 
 | Para estudiar | Empezá por | Prestá atención a |
@@ -338,9 +367,9 @@ elegibilidad ni inventar un número para la votación.
 | Modelos y sensibilidad | 10 y 25 | Flujos reproducibles, simulación, rampa y dependencia de recuperos |
 | Evals y supervisión efectiva | 15 y 7 | Comparación, aprobación mecánica, permisos y pruebas negativas |
 | Gobierno agéntico | 1, 13 y 21 | Autoridad fuera del LLM, límites por acción, reversión y reparación |
-| People plan | 5, 24 y 19 | Roles de destino, horas protegidas y señales correctivas |
+| People plan | 5, 24, 19 y gastronomía | Roles de destino, horas protegidas y señales correctivas |
 | Portfolio y decisiones de construcción | 3, 12 y 14 | Comprar, construir, postergar o abandonar un proveedor |
-| Roadmap ajustado por riesgo | 4, 6 y 29 | Señales que cambian alcance, recursos y calendario |
+| Roadmap ajustado por riesgo | 4, 6, 16 y 29 | Señales que cambian alcance, recursos y calendario |
 | Economía de inferencia | 30 | Cuándo importan más infraestructura y operación que la tarifa del modelo |
 | Valor público e institucional | 20, 15 y 19 | Beneficio útil sin fingir que todo se convierte en ingreso |
 
@@ -348,18 +377,20 @@ elegibilidad ni inventar un número para la votación.
 
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
-Se revisaron 29 entregas ajenas y, por separado, los slides y anexos del
+Se comparan 32 entregas ajenas y, por separado, los slides y anexos del
 [Grupo 11](reports/grupo-11-acme-labs.md). Este último queda segundo compartido
 con Synthetic en el ranking general: 9,50 académico y 6,85 negocio.
 La guía de defensa no adjuntada quedó excluida. Los votos no incluyen al propio grupo.
 
 Se usaron los mismos pesos y anclas; el runtime comparte memoria de proyecto,
 por lo que no se presenta como un experimento ciego. No se evaluó desempeño oral.
-El Grupo 16 permanece sin nota global por anexos inaccesibles, sin atribuirle
-una omisión ni asignarle cero. Las notas no son una evaluación oficial docente.
+Las tres incorporaciones recibieron revisión completa y contraste. El Grupo 16
+fue reevaluado al recuperar su respaldo; las demás notas se conservaron.
+Sus HTML se leyeron y recalcularon desde el código, sin certificar la interfaz
+interactiva porque falló la inspección del navegador. Las notas no son oficiales.
 
 Ver [metodología](methodology.md) y [resolución del contraste](adjudication.md).
-No se publicaron reseñas en servicios externos ni se emitieron votos.
+No se emitieron votos ni se publicaron fuentes o datos internos de los casos.
 
 ## Key Learnings:
 

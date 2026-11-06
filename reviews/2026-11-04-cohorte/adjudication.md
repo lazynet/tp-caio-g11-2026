@@ -38,3 +38,24 @@ no se afirma que haya recibido el segundo contraste de finalistas.
 Dos revisiones separadas coinciden en [4,4,4,4,4,3,3] y negocio [3,2,3,2,3].
 Da 9,50 y 6,85: segundo compartido con Synthetic si se incorpora a la comparación.
 La guía de defensa no entregada no entra en C6. El Grupo 11 sigue fuera del voto.
+
+## Actualización del 6/11/2026
+
+Se incorporaron tres entregas y se completó la evaluación del Grupo 16 con
+once respaldos recuperados desde la presentación V6.2. Los 33 trabajos ya
+tienen nota global; los votos recomendados siguen siendo 21, 4 y 1.
+
+En el Grupo 22, el primer revisor propuso C3/C5=2. El contraste adicional y la
+consolidación adoptaron 3: existen recorridos integrados, dependencias y
+respuestas aplicadas, aunque deben conciliarse adopción, captura y exposición.
+No se exige un flujo de abandono para reconocer el ancla 3. El desacuerdo y
+sus evidencias se conservan, sin inventar consenso.
+
+El Grupo 16 recibe `[4,4,4,3,3,3,3]`: **8,88 académico y 6,85 negocio**,
+sexto general y quinto sin el Grupo 11. C4/C7 dejan de ser NE al poder revisar
+las fuentes. La aritmética financiera cierra; la atribución del beneficio y
+las reglas de continuidad limitan los niveles superiores.
+
+Se conserva el alcance histórico de la primera evaluación: la recuperación
+actual no demuestra que los archivos remotos fueran idénticos a los de la
+entrega original. Las demás notas anteriores no se reabrieron.

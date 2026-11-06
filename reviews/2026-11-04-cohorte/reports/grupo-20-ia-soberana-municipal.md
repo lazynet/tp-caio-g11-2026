@@ -10,7 +10,7 @@ business_levels: [2,2,2,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 6,50/10. Negocio: 5,84/10.**
-Puesto 27 en el ranking que excluye al Grupo 11.
+Puesto 30 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** piloto asistivo acotado y reconocimiento de que ahorro de inferencia no paga el escalado de hardware.
 - **Debilidad:** subsidio, igualdad de esfuerzo operativo y escalamiento sin presupuesto ni gates suficientes.

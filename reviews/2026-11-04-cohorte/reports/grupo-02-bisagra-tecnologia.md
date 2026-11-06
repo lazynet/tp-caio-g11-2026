@@ -10,7 +10,7 @@ business_levels: [3,3,2,2,3]
 Versión publicable de la revisión: conserva notas, juicio evaluativo y recorridos de lectura. Las fuentes recibidas, datos del caso, cálculos detallados y registros de ejecución se conservan fuera de Git.
 
 **Académica: 8,50/10. Negocio: 6,96/10.**
-Puesto 6 en el ranking que excluye al Grupo 11.
+Puesto 7 en el ranking que excluye al Grupo 11.
 
 - **Fortaleza:** los escenarios cambian alcance y gasto; conserva low-code como alternativa real.
 - **Debilidad:** capacidad insuficientemente dimensionada para nueve frentes y payback mensual no reproducible.
