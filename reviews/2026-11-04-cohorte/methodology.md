@@ -1,0 +1,67 @@
+# Metodología y alcance
+
+Evaluación inicial del 4/11/2026, actualizada el 6/11: 32 entregas de otros
+equipos y una revisión separada del Grupo 11, excluido de los votos propios.
+Las fuentes y la evidencia detallada permanecen privadas; esta carpeta conserva la versión
+publicable de los juicios, niveles, ranking y guía de lectura.
+
+## Calidad académica
+
+La [rúbrica formativa docente](../../material/frameworks/rubrica-corrector-caio.md)
+usa siete niveles enteros 0–4: estrategia 20%; arquitectura, gobierno, seguridad
+y personas 20%; roadmap 15%; finanzas 15%; escenarios y reversibilidad 10%;
+defensa documental 10%; síntesis y trazabilidad 10%.
+
+La escala distingue ausencia verificada (0), inicial (1), en desarrollo (2),
+logrado (3) e integrado con alternativas, restricciones y consecuencias (4).
+NE corresponde a material inaccesible: no vale cero ni se renormaliza.
+
+Nota académica = suma(peso × nivel) / 40. Solo se emite tras revisión completa.
+No se exige tooling ni OKF, no se premia extensión y se admiten supuestos
+explícitos. No se evalúa actuación oral. No es una nota oficial de los docentes.
+
+## Negocio
+
+Dimensiones propias, separadas de la rúbrica: dolor/demanda 25%, captura 25%,
+viabilidad 20%, defensibilidad 15% y escala/impacto 15%. Niveles 0–4 según el
+respaldo de la oportunidad, sus alternativas y restricciones.
+
+Nota negocio = 1 + 9 × suma(peso × nivel) / 400. No certifica resultados
+prometidos ni confunde capacidad liberada con caja. Se admite valor institucional.
+
+## Orden y contraste
+
+El orden principal usa nota académica exacta, luego negocio y C4; un empate
+completo permanece compartido. Las tablas muestran dos decimales con
+ROUND_HALF_UP. El mix 80% académico / 20% negocio no altera los tres votos.
+
+El ranking general incluye al Grupo 11. La columna «Para votar» calcula las
+posiciones excluyéndolo; las posiciones de las reseñas de otros grupos remiten
+a esa columna. El Grupo 16, antes NE, ya tiene posición en ambas. Las entregas
+sin número se comparan, sin certificar su elegibilidad para votar.
+
+Se usó una sesión nueva por entrega, criterios comunes y contraste de los cinco
+primeros iniciales. Los evaluadores no recibieron las otras revisiones; el
+runtime comparte memoria, por lo que no se afirma aislamiento ciego formal.
+El Grupo 11 recibió dos lecturas independientes con idénticos niveles.
+
+Se leyeron los documentos completos, se inspeccionaron slides y páginas clave
+en imágenes y se reconstruyó el argumento financiero principal. Una web mutable
+no acredita el contenido de la entrega histórica. Error, contradicción, evidencia
+insuficiente y sugerencia se distinguen; los originales no se incorporan a Git.
+
+La actualización agrega tres revisiones completas y una nueva lectura del
+Grupo 16. Su presentación V6.2 conserva el texto y recupera enlaces activos a
+once respaldos, que se capturaron por URL, fecha y hash antes de evaluar.
+C4/C7 dejan de ser NE; no se afirma identidad de esos archivos remotos con una
+entrega anterior. Se verificó el corpus completo y se contrastaron las finanzas.
+
+Los HTML del Grupo 16 se leyeron y recalcularon desde su código y configuración;
+no se certifica la interfaz interactiva porque falló la inspección del navegador.
+La limitación del entorno no se atribuye al autor. Las otras notas anteriores
+se conservaron; no se presenta una nueva lectura integral de toda la cohorte.
+
+Las incorporaciones se identifican con rótulos de caso anonimizados. No se
+publican nombres de personas, identificadores de archivos remotos ni datos
+económicos u operativos internos. Las notas y niveles son juicios propios.
+En el Grupo 11 solo entran slides y anexos: la guía de defensa no adjuntada quedó excluida.
