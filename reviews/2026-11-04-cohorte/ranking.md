@@ -2,6 +2,9 @@
 
 **Actualizado el 6/11/2026: tres entregas nuevas y reevaluación del Grupo 16 con los anexos recuperados.**
 
+**Ampliación del 8/11/2026:** orden completo por atractivo de negocio y
+comparación con el recuento final informado de la votación.
+
 Con el material accesible, los tres votos recomendados son **Grupo 21
 (Farmacity), Grupo 4 (Synthetic Corp) y Grupo 1 (Alimentos Meridiana)**.
 El siguiente candidato es el **Grupo 15, Colegio CGC**.
@@ -122,6 +125,35 @@ evaluación pedagógica y sus condiciones de escalamiento.
 | 4 | 1 · Alimentos Meridiana | 7,08 | Recuperar pérdidas operativas con alcance y decisión acotados | Recupero adicional efectivamente cobrado |
 | 5 | 2 · Bisagra Tecnología | 6,96 | Varias palancas comerciales y administrativas reutilizando herramientas | Capacidad para nueve frentes y captura sin superposición |
 
+### Orden completo por negocio
+
+Las notas existentes se ordenan solo por atractivo de negocio, sin desempatar
+por calidad académica. Se recalcularon desde los niveles de las 33 reseñas con
+los pesos ya definidos; coinciden con la tabla general dentro del redondeo.
+Se ordena por el valor exacto y se muestran dos decimales.
+
+| Puesto por negocio | Grupo y trabajo | Nota /10 |
+|---:|---|---:|
+| 1 | 9 · Celeste | 8,31 |
+| 2= | 25 · CAIO Insurance; 23 · Cashea | 7,19 |
+| 4 | 1 · Alimentos Meridiana | 7,08 |
+| 5 | 2 · Bisagra Tecnología | 6,96 |
+| 6= | 4 · Synthetic Corp; 6 · Grupo Vértice; 7 · Alba Industrial; 10 · Salud Integrada; 11 · Acme Labs; 12 · NodoSur; 15 · Colegio CGC; 16 · Seguridad de Data Center; 18 · Telefónica TMA; 21 · Farmacity; 24 · Apeiron Academy; 29 · The Company; Sin número · Ualá; Sin número · Gastronomía | 6,85 |
+| 20 | 22 · Operación de campo | 6,74 |
+| 21= | 8 · INMO-IA; 30 · Grupo Rosmi | 6,51 |
+| 23= | 3 · SolnIA; 5 · Retail SA; 13 · SatLink DTH; 19 · BNA Inteligente; Sin número · Energía | 6,40 |
+| 28= | 14 · FlyTrics; 26 · Casa Norte; 31 · Otamendi Cerca IA | 6,06 |
+| 31 | 27 · NEXA | 5,95 |
+| 32 | 20 · IA Soberana Municipal | 5,84 |
+| 33 | 28 · KUA / OXY | 5,50 |
+
+El signo `=` indica puesto compartido; el siguiente puesto cuenta todos los
+trabajos anteriores. Hay 14 trabajos empatados en 6,85, incluidos Acme y Salud
+Integrada: la escala no permite distinguir posiciones dentro de ese tramo.
+El Grupo 11 se incluye para comparar; sigue excluido del voto propio.
+
+### Sensibilidad de la recomendación
+
 El mix predefinido **80% académico / 20% negocio** conserva los tres votos:
 Farmacity 9,17; Synthetic 8,97; Meridiana 8,92. Celeste sube dentro del grupo
 siguiente: vale leerlo por negocio aunque no integre este podio académico.
@@ -130,6 +162,26 @@ Las diferencias entre finalistas expresan juicio, no una medición estadística.
 Los informes muestran qué cambio de un nivel alteraría cada nota. El contraste
 sostuvo Farmacity, Synthetic, Meridiana y CGC; NEXA pasó de 8,75 a 8,38 sin
 cambiar los tres votos. Ver la [resolución y sus fuentes](adjudication.md).
+
+### Comparación con la votación final informada
+
+Fuente: recuento final de la cohorte compartido por Martín, con verificación
+declarada al 8/11/2026 a las 22:06 (UTC-3): 60 personas y 153 votos. No se
+contrastó con los votos individuales; se reproducen los seis puestos informados.
+
+| Puesto en la votación | Grupo | Votos informados | Puesto en nuestra evaluación por negocio | Nota de negocio /10 |
+|---:|---|---:|---:|---:|
+| 1 | 9 · Celeste | 23 | 1 | 8,31 |
+| 2 | 19 · BNA Inteligente | 16 | 23= | 6,40 |
+| 3 | 23 · Cashea | 12 | 2= | 7,19 |
+| 4 | 10 · Salud Integrada | 10 | 6= | 6,85 |
+| 5 | 11 · Acme Labs | 9 | 6= | 6,85 |
+| 6 | 22 · Operación de campo | 8 | 20 | 6,74 |
+
+Celeste y Cashea aparecen entre los primeros por negocio y en la votación.
+BNA es la diferencia más marcada entre ambos órdenes dentro del podio electoral.
+La coincidencia parcial no demuestra qué motivó los votos: nuestra evaluación
+se limita al material recibido y no califica la actuación oral.
 
 ## Fortalezas, debilidades y qué mirar en cada trabajo
 
